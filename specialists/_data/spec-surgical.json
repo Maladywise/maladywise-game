@@ -336,66 +336,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/newcastle-eye-hospital/ophthalmology/187bc62b-1da0-0963-ab91-0d6338be4629",
      "https://doccy.com.au/specialist/newcastle/ophthalmologist"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital Eye Clinic",
-    "specialty": "Ophthalmology (public outpatients)",
-    "practice": "Hunter New England Health",
-    "address": "John Hunter Hospital, Lookout Rd/156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton Heights",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "yes",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/john-hunter-hospital-eye-clinic/ophthalmology/8c29a852-5f14-456c-b735-8d735b577946"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Valley Eye Centre",
-    "specialty": "Ophthalmology (clinic)",
-    "practice": "Hunter Valley Eye Centre",
-    "address": "213 High Street, Maitland NSW 2320",
-    "suburb": "Maitland",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "new_patients": null,
-     "np_note": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/hunter-valley-eye-centre/ophthalmology/113535b1-0024-cda7-8c03-c834fbae2456"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1047,36 +988,6 @@
     "ahpra": "not checked"
    },
    {
-    "name": "Dr Glenn Lowe",
-    "specialty": "Obstetrics and gynaecology",
-    "practice": "Dr Glenn Lowe Obstetrics & Gynaecology",
-    "address": "Suite G1, 26 Lookout Road, New Lambton Heights NSW 2305",
-    "suburb": "New Lambton Heights",
-    "phone": "02 4957 1733",
-    "fax": "02 4957 3907",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "no",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "new_patients": null,
-     "np_note": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/dr-glenn-lowe-obstetrics-gynaecology/obstetrics-and-gynaecology/f3be082f-fa11-657b-e7d6-dd4ab8ba04b3"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
     "name": "Dr Matthew Holland",
     "specialty": "Fertility, gynaecology and obstetrics",
     "practice": "Dr Matthew Holland",
@@ -1480,8 +1391,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.ivf.com.au/clinics/hunter-ivf",
-     "https://www.healthdirect.gov.au/australian-health-services/20150695/hunter-ivf-dr-denise-nesbitt/services/new-lambton-heights-2305-lookout"
+     "https://www.ivf.com.au/clinics/hunter-ivf"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -5420,8 +5330,7 @@
      "Directory listing states interpreter services available and wheelchair accessible"
     ],
     "sources": [
-     "https://directory.wayahead.org.au/service/1369/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/nexus-child-and-adolescent-mental-health-service/acute-mental-health-inpatient-service/f89df7a3-dee5-b3d5-9279-8082c9c226f8"
+     "https://directory.wayahead.org.au/service/1369/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -5963,8 +5872,7 @@
     "sources": [
      "https://hunterchildrensclinics.com.au/",
      "https://hunterchildrensclinics.com.au/services/adhd/",
-     "https://hunterchildrensclinics.com.au/services/autism-assessment/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-children-s-clinics/children-s-medical-service/aedb108b-4804-4473-9cb0-a68e7b2b5e16"
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -6004,8 +5912,7 @@
     "sources": [
      "https://hunterchildrensclinics.com.au/",
      "https://hunterchildrensclinics.com.au/services/adhd/",
-     "https://hunterchildrensclinics.com.au/services/autism-assessment/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-children-s-clinics/children-s-medical-service/aedb108b-4804-4473-9cb0-a68e7b2b5e16"
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -6045,8 +5952,7 @@
     "sources": [
      "https://hunterchildrensclinics.com.au/",
      "https://hunterchildrensclinics.com.au/services/adhd/",
-     "https://hunterchildrensclinics.com.au/services/autism-assessment/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-children-s-clinics/children-s-medical-service/aedb108b-4804-4473-9cb0-a68e7b2b5e16"
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -6123,8 +6029,7 @@
     "sources": [
      "https://hunterchildrensclinics.com.au/",
      "https://hunterchildrensclinics.com.au/services/adhd/",
-     "https://hunterchildrensclinics.com.au/services/autism-assessment/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-children-s-clinics/children-s-medical-service/aedb108b-4804-4473-9cb0-a68e7b2b5e16"
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -6204,38 +6109,7 @@
     "sources": [
      "https://hunterchildrensclinics.com.au/",
      "https://hunterchildrensclinics.com.au/services/adhd/",
-     "https://hunterchildrensclinics.com.au/services/autism-assessment/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-children-s-clinics/children-s-medical-service/aedb108b-4804-4473-9cb0-a68e7b2b5e16"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Lake Macquarie Paediatrics",
-    "specialty": "Paediatrics (clinic)",
-    "practice": "Lake Macquarie Paediatrics",
-    "address": "Level 1, Suite 11, 472 The Esplanade, Warners Bay NSW 2282",
-    "suburb": "Warners Bay",
-    "phone": "02 4910 0805",
-    "fax": "02 4910 0848",
-    "email": "admin@lakemacpaediatrics.com.au",
-    "ereferral": "",
-    "website": "https://www.lakemacpaediatrics.com.au/",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "no",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "new_patients": null,
-     "np_note": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/lake-macquarie-paediatrics/children-s-medical-service/163a1084-d00a-ae9b-e4c4-4f04cd39bf64"
+     "https://hunterchildrensclinics.com.au/services/autism-assessment/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -6699,8 +6573,7 @@
     "sources": [
      "https://hunterchildrensclinics.com.au/services/adhd/",
      "https://hunterchildrensclinics.com.au/services/autism-assessment/",
-     "https://hunterchildrensclinics.com.au/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/merewether-2291-nsw/hunter-children-s-clinics/children-s-medical-service/aedb108b-4804-4473-9cb0-a68e7b2b5e16"
+     "https://hunterchildrensclinics.com.au/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"

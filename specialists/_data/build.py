@@ -390,7 +390,7 @@ SPJS = '<script src="/specialists/sp.js?v=10"></script>'
 if "<script>MW.page();</script>" in foot: foot = foot.replace("<script>MW.page();</script>", "<script>MW.page();</script>\n" + SPJS)
 else: foot = foot.replace("</body>", SPJS.replace("<script ", "<script defer ") + "\n</body>", 1)  # template already deferred by headkit
 DISC_SVC = '<p class="callout"><b>A directory, not a recommendation.</b> Community, primary care and hospital services, from each service’s own official pages or government directories. Details and eligibility change: confirm with the service. Spot an error? <a href="/contact/">Tell us</a>.</p>'
-DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, Healthdirect, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
+DISC = '<p class="callout"><b>A directory, not a recommendation.</b> Private practices only, built from public sources (practice websites, hospital profiles, professional directories). Details change: confirm with the practice. Specialists need a GP referral. Inclusive-practice notes only quote what a practice says publicly. Spot an error? <a href="/contact/">Tell us</a>.</p>'
 for d in glob.glob("specialists/*/"):
     if not d.rstrip("/").endswith("_data"):
         import shutil; shutil.rmtree(d)

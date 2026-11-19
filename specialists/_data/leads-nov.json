@@ -2231,8 +2231,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.fixitphysio.com.au",
-     "https://www.healthdirect.gov.au/australian-health-services/20150107/fix-it-physiotherapy-wallsend/services/wallsend-2287-cowper"
+     "https://www.fixitphysio.com.au"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
@@ -2404,7 +2403,7 @@
     "fax": "",
     "email": "",
     "ereferral": "",
-    "website": "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/macquarie-exercise-centre/exercise-physiology/394ecda0-9e33-4895-889e-469a882db39a",
+    "website": "",
     "interests": [
      "chronic disease management",
      "injury rehab",
@@ -2427,7 +2426,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/macquarie-exercise-centre/exercise-physiology/394ecda0-9e33-4895-889e-469a882db39a",
      "https://macquariephysiotherapy.com.au/"
     ],
     "checked": "2026-11-10",
@@ -2634,8 +2632,7 @@
     "inclusive": [],
     "sources": [
      "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardio-thoracic-surgery/108694/dr-pankaj-saxena",
-     "https://lingardprivate.com.au/specialists/dr-pankaj-saxena",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
+     "https://lingardprivate.com.au/specialists/dr-pankaj-saxena"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -2674,7 +2671,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/newcastle-cardiothoracic-surgery/cardiothoracic-surgery/fb1508d7-3393-4b74-81ac-6e05bd4443c7",
      "https://www.surgeons.org/Profile/mr-peng-seah",
      "https://specialists.healthscope.com.au/specialist/peng-seah-med0001142979"
     ],
@@ -2779,7 +2775,7 @@
     "fax": "02 4961 6550",
     "email": "",
     "ereferral": "",
-    "website": "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
+    "website": "",
     "interests": [],
     "practical": {
      "telehealth": null,
@@ -2798,42 +2794,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
      "https://www.gmhc.com.au"
-    ],
-    "checked": "2026-11-10",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Newcastle Audiology Centre",
-    "specialty": "Audiology",
-    "practice": "Newcastle Audiology Centre",
-    "address": "Suite 1, 102 Glebe Road",
-    "suburb": "The Junction",
-    "phone": "02 4969 1062",
-    "fax": "02 4961 6530",
-    "email": "",
-    "ereferral": "",
-    "website": "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
@@ -2848,7 +2809,7 @@
     "fax": "",
     "email": "",
     "ereferral": "",
-    "website": "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
+    "website": "",
     "interests": [],
     "practical": {
      "telehealth": null,
@@ -2867,86 +2828,9 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004",
      "https://www.hearing.com.au"
     ],
     "checked": "2026-11-10",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Port Stephens Audiology",
-    "specialty": "Audiology clinic",
-    "practice": "Port Stephens Audiology",
-    "address": "Suite 4, 29 Stockton Street, Nelson Bay NSW 2315",
-    "suburb": "Nelson Bay",
-    "phone": "02 4033 2729",
-    "fax": "",
-    "email": "reception@portstephensaudiology.com",
-    "ereferral": "",
-    "website": "https://portstephensaudiology.com",
-    "interests": [
-     "Hearing tests",
-     "Hearing aids and fittings",
-     "Earwax removal",
-     "WorkCover and pre-employment hearing assessments",
-     "Hearing aid maintenance and servicing",
-     "TV headphones",
-     "Home visits",
-     "Second clinic: Shop 11-12, 37 Ferodale Road, Medowie NSW 2318"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "Bulk billing available with conditions, fees may apply",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/nelson-bay-2315-nsw/port-stephens-audiology/hearing-clinic/4ae6a7a8-da54-4b0b-be49-67340d85b9b3"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Valley Audiology",
-    "specialty": "Audiology clinic",
-    "practice": "Hunter Valley Audiology",
-    "address": "18 East Mall, Rutherford NSW 2320",
-    "suburb": "Rutherford",
-    "phone": "0448 187 960",
-    "fax": "",
-    "email": "info@huntervalleyaudiology.com.au",
-    "ereferral": "",
-    "website": "https://www.huntervalleyaudiology.com.au/",
-    "interests": [
-     "Hearing tests",
-     "Hearing aid fitting",
-     "Ear wax removal",
-     "Tinnitus care"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "Fees apply",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/rutherford-2320-nsw/hunter-valley-audiology/hearing-clinic/4bcb9d8e-d854-487f-9f8e-d80a83d73f55"
-    ],
-    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -3793,8 +3677,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.doctify.com/au/practice/broadmeadow-neurology",
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/dr-andre-loiselle-s-rooms/neurology/05f737c4-688a-9cf1-5872-6ec8939e2fb5"
+     "https://www.doctify.com/au/practice/broadmeadow-neurology"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
@@ -4155,8 +4038,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.beyondpodiatry.com.au",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/beyond-podiatry-warners-bay/podiatry/6b412bdc-b9ba-a45d-ce56-d7c5aed8532e"
+     "https://www.beyondpodiatry.com.au"
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"

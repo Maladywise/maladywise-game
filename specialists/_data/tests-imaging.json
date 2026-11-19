@@ -566,286 +566,6 @@
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Imaging Group Charlestown",
-    "specialty": "Radiology and imaging",
-    "practice": "Hunter Imaging Group",
-    "address": "Ground Floor, Suite 103, 99 Pacific Highway, Charlestown NSW 2290",
-    "suburb": "Charlestown",
-    "phone": "13 23 36",
-    "fax": "1300 297 710",
-    "email": "",
-    "ereferral": "",
-    "website": "http://www.hunterimaging.com.au/",
-    "interests": [
-     "X-ray",
-     "CT",
-     "Interventional CT",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
-     "Mon–Fri 8:30am–5pm (as stated)"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/hunter-imaging-charlestown/radiology-service/b37f0491-be29-43b3-be43-e0df4c3bd53f"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Imaging Group Adamstown",
-    "specialty": "Radiology and imaging",
-    "practice": "Hunter Imaging Group",
-    "address": "Suite 2A, 282 Brunker Road, Adamstown NSW 2289",
-    "suburb": "Adamstown",
-    "phone": "13 23 36",
-    "fax": "1300 297 710",
-    "email": "",
-    "ereferral": "",
-    "website": "http://www.hunterimaging.com.au/",
-    "interests": [
-     "Ultrasound",
-     "Interventional ultrasound",
-     "Vascular laboratory",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
-     "Tue–Fri 8:30am–5pm (as stated)"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/adamstown-2289-nsw/hunter-imaging-adamstown/ultrasound-scan/36f689b4-7714-4b17-b0fe-7c79b9ff596a"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Imaging Group Rutherford",
-    "specialty": "Radiology and imaging",
-    "practice": "Hunter Imaging Group",
-    "address": "Shop 1, 9 North Mall, Rutherford NSW 2320",
-    "suburb": "Rutherford",
-    "phone": "13 23 36",
-    "fax": "1300 297 710",
-    "email": "",
-    "ereferral": "",
-    "website": "http://www.hunterimaging.com.au/",
-    "interests": [
-     "X-ray and OPG (no appointment needed, as stated)",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
-     "Mon–Fri 9am–4:30pm (as stated)"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/rutherford-2320-nsw/hunter-imaging-rutherford/radiology-service/9dff56ef-1981-4d8c-8def-24f55b89dae0"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Imaging Group Toronto",
-    "specialty": "Radiology and imaging",
-    "practice": "Hunter Imaging Group",
-    "address": "132 Brighton Avenue, Toronto NSW 2283",
-    "suburb": "Toronto",
-    "phone": "13 23 36",
-    "fax": "1300 297 710",
-    "email": "",
-    "ereferral": "",
-    "website": "http://www.hunterimaging.com.au/",
-    "interests": [
-     "X-ray",
-     "CT",
-     "Interventional CT",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
-     "Mon–Fri 9am–5pm (as stated)"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/toronto-2283-nsw/hunter-imaging-toronto/radiology-service/c8b74718-feba-438f-ad33-a046c3874714"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Imaging Group Salamander Bay",
-    "specialty": "Radiology and imaging",
-    "practice": "Hunter Imaging Group",
-    "address": "Suite 2, 6 Central Avenue, Salamander Bay NSW 2317",
-    "suburb": "Salamander Bay",
-    "phone": "13 23 36",
-    "fax": "1300 297 710",
-    "email": "",
-    "ereferral": "",
-    "website": "http://www.hunterimaging.com.au/",
-    "interests": [
-     "X-ray",
-     "CT",
-     "Interventional CT",
-     "Mammography (mammogram)",
-     "DEXA bone density (BMD)",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
-     "Mon–Fri 8am–5pm (as stated)"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/salamander-bay-2317-nsw/hunter-imaging-salamander-bay/radiology-service/0abf3bff-bb81-4086-a30e-8359398d45b2"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Hunter Imaging Group Williamtown",
-    "specialty": "Radiology and imaging",
-    "practice": "Hunter Imaging Group",
-    "address": "Williamtown Aerospace Centre, Building A, Suite 4, 2 Technology Place, Williamtown NSW 2318",
-    "suburb": "Williamtown",
-    "phone": "13 23 36",
-    "fax": "1300 297 710",
-    "email": "",
-    "ereferral": "",
-    "website": "http://www.hunterimaging.com.au/",
-    "interests": [
-     "X-ray (no appointment needed, as stated)",
-     "CT",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
-     "Tue–Fri 9am–5pm (as stated)"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/williamtown-2318-nsw/hunter-imaging-williamtown/radiology-service/a2e5f3d3-4789-4a7a-abfb-49041c20ee99",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/williamtown-2318-nsw/hunter-imaging-williamtown/ultrasound-scan/d0d72a5c-f666-4d4a-b5dc-e17a4c16e323"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Alpenglow Australia Muswellbrook Diagnostic Imaging",
-    "specialty": "Radiology and imaging",
-    "practice": "Alpenglow Australia",
-    "address": "64 Brook Street, Muswellbrook NSW 2333",
-    "suburb": "Muswellbrook",
-    "phone": "02 6543 3427",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "https://alpenglow.com.au",
-    "interests": [
-     "X-ray",
-     "Ultrasound",
-     "CT",
-     "Saturday 9am–5pm (as stated on Healthdirect)",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "weekend": true,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/muswellbrook-2333-nsw/alpenglow-australia-muswellbrook-diagnostic-imaging/radiology-service/06772589-ee46-4329-e3c8-00b771975bdb"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
    }
   ]
  },
@@ -975,8 +695,7 @@
     "sources": [
      "https://pacificneurology.com.au/public/find-us/",
      "https://pacificneurology.com.au/public/about-us/",
-     "https://pacificneurology.com.au/public/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/belmont-2280-nsw/pacific-neurology"
+     "https://pacificneurology.com.au/public/"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
@@ -1056,7 +775,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/cooks-hill-2300-nsw/seer-medical-newcastle/neurology/48410677-fcbf-4b68-87eb-f3d045f958b9",
      "https://seermedical.com/au/patients/home-video-eeg/"
     ],
     "checked": "9 November 2026",
@@ -1293,7 +1011,6 @@
     "website": "https://www.newlung.com.au/newcastle-pulmonary-function-laboratory/",
     "interests": [
      "Lung function testing (pulmonary function, spirometry)",
-     "Bulk billing available with conditions, fees may apply (as stated on Healthdirect)",
      "Tue–Fri 9am–4pm (as stated)",
      "Asthma Australia's lab list shows a Broadmeadow address: check when booking"
     ],
@@ -1314,9 +1031,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/newcastle-pulmonary-function-laboratory/pulmonary-medicine-service/887b039c-30b3-4f03-8947-62602a6c0bc3",
-     "https://asthma.org.au/respiratorylabs/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/newcastle-pulmonary-function-laboratory/pulmonary-medicine-service/887b039c-30b3-4f03-8947-62602a6c0bc3"
+     "https://asthma.org.au/respiratorylabs/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"

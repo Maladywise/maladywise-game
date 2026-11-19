@@ -44,34 +44,6 @@
     "ahpra": "not checked"
    },
    {
-    "name": "Dr Michael Katekar",
-    "specialty": "Neurology",
-    "practice": "Dr Michael Katekar",
-    "address": "13 Canberra Street, Charlestown NSW 2290",
-    "suburb": "Charlestown",
-    "phone": "(02) 4942 3944",
-    "fax": "(02) 4942 3945",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/dr-michael-katekar/neurology/4ea7d83d-95ce-4df4-68ce-c409949f925f"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
     "name": "Dr Carlos Garcia-Esperon",
     "specialty": "Neurology (vascular neurology/stroke)",
     "practice": "Newcastle Brain Centre",
@@ -192,7 +164,6 @@
     "inclusive": [],
     "sources": [
      "https://specialists.healthscope.com.au/specialist/albert-tiu-med0001184007",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/dr-albert-tiu-urology/urology/ee1e1027-d6ed-4bd0-cb6f-e95e5c365f2f",
      "https://lingardprivate.com.au/specialties/urology",
      "https://lingardprivate.com.au/specialists/dr-albert-tiu"
     ],
@@ -603,8 +574,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.yellowpages.com.au/broadmeadow-nsw/bpp/dr-c-padmakumar-specialist-geriatrician-574403364",
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/the-older-person-s-medical-clinic/geriatric-medicine/5c332292-f2ad-1813-df98-50b32177bf15"
+     "https://www.yellowpages.com.au/broadmeadow-nsw/bpp/dr-c-padmakumar-specialist-geriatrician-574403364"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"

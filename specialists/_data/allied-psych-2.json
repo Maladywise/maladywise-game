@@ -42,7 +42,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/canny-psychological-services/clinical-psychology/4d89006d-610d-49de-9df0-3a6593ea9185",
      "https://www.cannypsychologicalservices.com/"
     ],
     "checked": "9 November 2026",
@@ -86,7 +85,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/sage-minds-psychology/clinical-psychology/d9625ed9-b259-43c2-affe-6180b284f1f6",
      "https://sageminds.com.au/about"
     ],
     "checked": "9 November 2026",
@@ -139,46 +137,7 @@
      "States she is “neurodiversity-affirming and affirming of all abilities as well as gender and sexualities”"
     ],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/good-egg-psychology/clinical-psychology/05b6d958-f9b9-408a-b3b7-3c07c64b7a88",
      "https://goodeggpsychology.com.au/about/"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Kara Thomson Psychology",
-    "specialty": "Psychology (Clinical and forensic)",
-    "practice": "Kara Thomson Psychology",
-    "address": "54 Ridley Street, Charlestown NSW 2290",
-    "suburb": "Charlestown",
-    "phone": "0493 190 272",
-    "fax": "",
-    "email": "admin@karathomsonpsychology.com.au",
-    "ereferral": "",
-    "website": "https://www.karathomsonpsychology.com.au/",
-    "interests": [
-     "Forensic psychology",
-     "Assessment and treatment of mental, behavioural and criminogenic difficulties"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [
-     "Low sensory space available"
-    ],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/kara-thomson-psychology/clinical-psychology/b0d0c582-97d2-4954-8961-0eadf6399146"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
@@ -224,55 +183,9 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/mind-care-psychology-psychiatry-neurology/clinical-psychology/fbcca28a-59d5-4990-a6dc-55c631682b6a",
-     "https://www.mind-care.net.au/services/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/mind-care-psychology-psychiatry-neurology/psychology/d5bf85ca-5194-4cae-8c80-616347a4ed93"
+     "https://www.mind-care.net.au/services/"
     ],
     "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Mind Sanctuary",
-    "specialty": "Psychology (Clinical)",
-    "practice": "Mind Sanctuary",
-    "address": "1/437 High Street, Maitland NSW 2320",
-    "suburb": "Maitland",
-    "phone": "02 4072 8555",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "https://www.themindsanctuary.com.au/",
-    "interests": [
-     "Trauma, PTSD and complex PTSD",
-     "Anxiety",
-     "Depression",
-     "Workplace stress and burnout",
-     "Women's mental health and perimenopause",
-     "Veterans",
-     "EMDR",
-     "CBT",
-     "ACT",
-     "DBT"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": "yes",
-     "np_note": "“recently opened with immediate availability”",
-     "np_checked": "9 November 2026"
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/mind-sanctuary/clinical-psychology/659e8caa-1830-4b2a-a5b2-3101b981b254"
-    ],
-    "checked": "9 November 2026",
     "ahpra": "not checked"
    },
    {
@@ -321,7 +234,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/hunter-psychological-services/psychology/5757af16-40fb-4759-ab5b-0e1e7ad10193",
      "https://hunterpsych.com.au/services/",
      "https://hunterpsych.com.au/team/"
     ],
@@ -367,179 +279,8 @@
      "Dedicated “LGBTQ Help at NPH” service"
     ],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/newcastle-psychology-health/psychology/bb13f2ab-620b-416c-a748-dcfd9652cf90",
      "https://www.nph.net.au/",
      "https://www.nph.net.au/nph/staff/"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Ramsay Psychology Charlestown",
-    "specialty": "Psychology",
-    "practice": "Ramsay Psychology Charlestown",
-    "address": "Suite C, 250 Pacific Highway, Charlestown NSW 2290",
-    "suburb": "Charlestown",
-    "phone": "1300 171 715",
-    "fax": "1300 171 786",
-    "email": "charlestown.RPP@ramsaypsychology.com.au",
-    "ereferral": "",
-    "website": "http://www.ramsaypsychology.com.au",
-    "interests": [
-     "Depression and mood disorders",
-     "Anxiety and health anxiety",
-     "Bipolar disorder",
-     "Substance use and addiction",
-     "Personality disorders",
-     "Trauma and PTSD",
-     "OCD",
-     "Grief and loss",
-     "Eating disorders",
-     "Relationship concerns",
-     "Perinatal anxiety and depression",
-     "Stress and burnout",
-     "Workplace and motor vehicle injuries"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": true,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/ramsay-psychology-charlestown/psychology/b7acad77-5fc8-4e96-ab27-b28756ed4e28"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Beam Health (Warners Bay)",
-    "specialty": "Psychology, speech pathology, OT and NDIS behaviour support",
-    "practice": "Beam Health",
-    "address": "Unit 13, 363 Hillsborough Road, Warners Bay NSW 2282",
-    "suburb": "Warners Bay",
-    "phone": "02 4954 9333",
-    "fax": "02 4956 5974",
-    "email": "info@beamservices.com.au",
-    "ereferral": "",
-    "website": "https://www.beamservices.com.au/",
-    "interests": [
-     "Psychology assessment and therapy",
-     "Children, young people and families",
-     "NDIS behaviour support"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "Children, young people, adults and families",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": true,
-     "medicare_cdm": true,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/beam-health/psychology/a3328aa6-f3ab-057d-b4f5-8c3175e8e18e"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Amanda Rodd Psychology",
-    "specialty": "Psychology",
-    "practice": "Amanda Rodd Psychology",
-    "address": "10 Bradford Close, Kotara NSW 2289",
-    "suburb": "Kotara",
-    "phone": "02 4956 3353",
-    "fax": "02 4957 0952",
-    "email": "info@amandaroddpsychology.com.au",
-    "ereferral": "",
-    "website": "https://www.amandaroddpsychology.com.au",
-    "interests": [
-     "Anxiety",
-     "Depression",
-     "Trauma",
-     "EMDR",
-     "Schema therapy",
-     "Educational and psychological assessment",
-     "ADHD assessment",
-     "Autism assessment",
-     "Learning disorders",
-     "Intellectual disability assessment"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "Young people and adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/kotara-2289-nsw/amanda-rodd-psychology/psychology/9a4038db-bd60-4f2d-a328-2313605cc2a4"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Living Mind",
-    "specialty": "Psychology and speech pathology",
-    "practice": "Living Mind",
-    "address": "Unit 5, 26-32 Lake Street, Warners Bay NSW 2282",
-    "suburb": "Warners Bay",
-    "phone": "0481 159 890",
-    "fax": "02 8252 2082",
-    "email": "admin@livingmind.com.au",
-    "ereferral": "",
-    "website": "https://www.livingmind.com.au",
-    "interests": [
-     "Mood disorders",
-     "Anxiety",
-     "ADHD and ADHD assessment",
-     "Trauma and PTSD",
-     "Substance use and addiction",
-     "Grief and loss",
-     "Personality disorders",
-     "Communication disorders"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "Children, adolescents and adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/warners-bay-2282-nsw/living-mind/psychology/e0e4ac4d-bc4d-4888-a1c8-b4d1ae7799ce"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
@@ -585,7 +326,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/here-now-psychology/psychology/ea73f319-1cb7-4da2-9d7b-70a224cec5e7",
      "https://www.herenowpsychology.com.au/about"
     ],
     "checked": "9 November 2026",
@@ -636,7 +376,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/newcastle-anxiety-clinic/psychology/b723744e-9c60-4e5f-9f8d-f62be93ed980",
      "https://newcastleanxietyclinic.com.au/newcastle-psychologist-about/"
     ],
     "checked": "9 November 2026",
@@ -688,7 +427,6 @@
      "Trauma-informed practice stated"
     ],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/morpeth-2321-nsw/harpers-health/psychology/63481ad6-9316-4404-b048-6d50e808ad5f",
      "https://www.harpershealth.com.au/psychologyandsocialwork"
     ],
     "checked": "9 November 2026",
@@ -728,7 +466,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/innervate-pain-management/psychology/7605d3d5-aee1-4460-84c2-3eb29a7e6476",
      "https://www.innervate.com.au/about/"
     ],
     "checked": "9 November 2026",
@@ -773,11 +510,8 @@
      "np_note": "",
      "np_checked": ""
     },
-    "inclusive": [
-     "Healthdirect listing describes “a neuro-affirming approach” to autism assessment"
-    ],
+    "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/broadmeadow-2292-nsw/mind-and-health-psychology/psychology/75624b5a-bee4-49e9-9c60-b485054f6a38",
      "https://mindandhealthpsychology.au/our-services"
     ],
     "checked": "9 November 2026",
@@ -814,7 +548,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/redwood-psychology/psychology/683b7e18-7071-46e4-a048-6773b5f2ebfa",
      "https://caitlinblaxland.com.au/"
     ],
     "checked": "9 November 2026",
@@ -860,7 +593,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/salamander-bay-2317-nsw/wavelengths-allied-health/psychology/fff99524-c479-2d89-6158-0e6d9ab9ddd3",
      "https://www.wavelengths.com.au/psychology/"
     ],
     "checked": "9 November 2026",
@@ -912,7 +644,6 @@
      "Trauma-informed care stated"
     ],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/wallsend-2287-nsw/gearing-up-psychology/psychology/064273f4-b627-35c3-8749-217ede7efa44",
      "https://gearinguppsychology.com/about/"
     ],
     "checked": "9 November 2026",
@@ -949,215 +680,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-east-2303-nsw/denison-practice/psychology/35ffc597-9e4b-cd0d-7d14-f12e264a2710",
      "https://www.denisonpractice.com.au/psychologists"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Psychological Health and Wellbeing Services",
-    "specialty": "Psychology",
-    "practice": "Psychological Health and Wellbeing Services",
-    "address": "7 Ernest Street, Belmont NSW 2280",
-    "suburb": "Belmont",
-    "phone": "02 4037 5811",
-    "fax": "02 4027 5068",
-    "email": "reception@phaws.com.au",
-    "ereferral": "",
-    "website": "http://www.phaws.com.au",
-    "interests": [
-     "Mood disorders",
-     "Anxiety disorders and phobias",
-     "Stress management and relaxation training",
-     "Adjustment difficulties",
-     "PTSD and trauma",
-     "Grief and bereavement",
-     "Work-related stress",
-     "Child behaviour problems",
-     "Eating disorders",
-     "Personality disorders",
-     "Self-harm",
-     "Couples therapy"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/belmont-2280-nsw/psychological-health-and-wellbeing-services/psychology/f0564062-a50d-91c4-fe40-051fc28c19ef"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Autumn House Psychology",
-    "specialty": "Psychology (Clinical)",
-    "practice": "Autumn House Psychology",
-    "address": "32 Ernest Street, Belmont NSW 2280",
-    "suburb": "Belmont",
-    "phone": "0493 744 872",
-    "fax": "",
-    "email": "admin@autumnhousepsychology.com.au",
-    "ereferral": "",
-    "website": "https://autumnhousepsychology.com.au",
-    "interests": [
-     "Mood and anxiety disorders",
-     "Personality disorders",
-     "Grief and loss",
-     "Adjustment difficulties",
-     "Trauma and stress",
-     "Addiction",
-     "Relationship concerns",
-     "Perinatal mental health",
-     "Suicidal thoughts and self-harm"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "Teens to older adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/belmont-2280-nsw/autumn-house-psychology/psychology/cc9f9799-3410-4e71-8bbd-8ad926ae2a59"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Mindflex Psychology",
-    "specialty": "Psychology",
-    "practice": "Mindflex Psychology",
-    "address": "8 Bay Street, Toronto NSW 2283",
-    "suburb": "Toronto",
-    "phone": "0402 751 755",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [
-     "Anxiety",
-     "Depression",
-     "Stress",
-     "Trauma",
-     "OCD",
-     "Grief and loss",
-     "Life direction",
-     "Walk-and-talk sessions"
-    ],
-    "practical": {
-     "telehealth": true,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "Adolescents 14+ and adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": true,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/toronto-2283-nsw/mindflex-psychology/psychology/2933299d-40a4-428c-9123-a9dbee28d69c"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Mindsource Psychology & Counselling",
-    "specialty": "Psychology",
-    "practice": "Mindsource Psychology & Counselling",
-    "address": "Offices on Hudson, 8 Hudson Street, Hamilton NSW 2303",
-    "suburb": "Hamilton",
-    "phone": "02 4962 1996",
-    "fax": "02 4962 1998",
-    "email": "",
-    "ereferral": "",
-    "website": "http://mindsourcepsychologyandcounselling.com.au",
-    "interests": [
-     "Adult psychology",
-     "Client-centred and solution-focused therapy"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "Adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/hamilton-2303-nsw/mindsource-psychology-counselling/psychology/515d9495-ecd0-4a8b-93e6-22f05ea1dbe7"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Elevated Well-being",
-    "specialty": "Psychology and social work",
-    "practice": "Elevated Well-being",
-    "address": "44 Bishopsgate Street, Wickham NSW 2293",
-    "suburb": "Wickham",
-    "phone": "02 4005 0117",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "http://elevatedwellbeing.com.au",
-    "interests": [
-     "Anxiety",
-     "Depression",
-     "PTSD and trauma therapy",
-     "EMDR",
-     "Grief and loss",
-     "Stress management"
-    ],
-    "practical": {
-     "telehealth": true,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/wickham-2293-nsw/elevated-well-being/psychology/26a76f34-f730-4fa7-9b02-43fb63c20a66"
     ],
     "checked": "9 November 2026",
     "ahpra": "not checked"
@@ -1209,7 +732,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/clinic-of-psychology/psychology/78b2a449-6b6d-45d6-8dc1-c5f6518d71b6",
      "https://www.clinicofpsychology.com.au/services",
      "https://www.clinicofpsychology.com.au/assessments"
     ],
@@ -1249,9 +771,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/procare-mental-health-services/psychology/3726e3fa-fb19-1c75-73f9-7a4da7bd07dd",
-     "https://www.procare.org.au/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/procare-mental-health-services/psychiatry/65a7c187-ae2a-01dc-c002-ba950fc3fcfa"
+     "https://www.procare.org.au/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -1305,7 +825,6 @@
      "“neuro-affirming and trauma-informed psychological support”"
     ],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/charlestown-2290-nsw/care-alliance-allied-health-supports/psychology/080080aa-8636-428a-a903-28e513909f9f",
      "https://www.carealliance.com.au/services/psychology"
     ],
     "checked": "9 November 2026",

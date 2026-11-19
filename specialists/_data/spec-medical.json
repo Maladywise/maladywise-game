@@ -39,8 +39,7 @@
     "inclusive": [],
     "sources": [
      "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardiology/106581/dr-nicholas-whitehead",
-     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-nicholas-whitehead/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-nicholas-whitehead/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -77,8 +76,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardiology/108875/dr-paul-bamford",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
+     "https://www.ramsayhealth.com.au/Specialists/lake-macquarie-private-hospital/cardiology/108875/dr-paul-bamford"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -115,8 +113,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-rachael-hatton/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-rachael-hatton/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -160,7 +157,7 @@
     "name": "Dr Patrick Diu",
     "specialty": "Cardiologist (interventional)",
     "practice": "Dr Patrick Diu Cardiologist",
-    "address": "34 Chapman Street, Charlestown NSW 2290 (also East Maitland rooms per Healthdirect)",
+    "address": "34 Chapman Street, Charlestown NSW 2290",
     "suburb": "Charlestown",
     "phone": "02 4943 9964",
     "fax": "",
@@ -189,8 +186,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://specialists.healthscope.com.au/specialist/patrick-diu-med0001184115",
-     "https://healthdirect.gov.au/australian-health-services/23029472/dr-patrick-diu-cardiologist-east-maitland/services/east-maitland-2323-george"
+     "https://specialists.healthscope.com.au/specialist/patrick-diu-med0001184115"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -834,8 +830,7 @@
     "inclusive": [],
     "sources": [
      "https://naphc.com.au/",
-     "https://naphc.com.au/our-staff/dr-nicholas-collins/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
+     "https://naphc.com.au/our-staff/dr-nicholas-collins/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -935,8 +930,7 @@
     "inclusive": [],
     "sources": [
      "https://naphc.com.au/our-staff/",
-     "https://naphc.com.au/our-staff/dr-jascha-kehr/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
+     "https://naphc.com.au/our-staff/dr-jascha-kehr/"
     ],
     "checked": "11 November 2026"
    },
@@ -968,8 +962,7 @@
     "inclusive": [],
     "sources": [
      "https://naphc.com.au/our-staff/",
-     "https://naphc.com.au/our-staff/dr-nitin-arora/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/lambton-2299-nsw/newcastle-adult-and-paediatric-heart-centre/cardiology/b3bc8cd6-6ba3-4cdf-904d-f36b7a6e8d58"
+     "https://naphc.com.au/our-staff/dr-nitin-arora/"
     ],
     "checked": "11 November 2026"
    },
@@ -1147,40 +1140,9 @@
     },
     "inclusive": [],
     "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/john-hunter-hospital-dermatology-clinic/dermatology/30e0ea6b-9345-4ebd-9b0e-e873edf93881",
      "https://www.nsw.gov.au/departments-and-agencies/hnelhd/services/outpatient-services"
     ],
     "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital Paediatric Dermatology Clinic",
-    "specialty": "Public paediatric dermatology clinic",
-    "practice": "Hunter New England Health",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [
-      "John Hunter Children's Hospital"
-     ],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/john-hunter-hospital-paediatric-dermatology-clinic/dermatology/f483909a-94cf-43a3-b792-5a915ad548f9"
-    ],
-    "checked": "2026-10-31",
     "ahpra": "not checked"
    },
    {
@@ -2104,36 +2066,6 @@
     "inclusive": [],
     "sources": [
      "https://www.doctify.com/au/specialist/elizabeth-pepper"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital Neurology",
-    "specialty": "Public neurology service (also Neurology Botulinum Toxin Therapy Clinic)",
-    "practice": "Hunter New England Health",
-    "address": "2 Lookout Road, New Lambton Heights NSW 2305",
-    "suburb": "New Lambton Heights",
-    "phone": "02 4921 3000",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "",
-     "hospitals": [
-      "John Hunter Hospital"
-     ],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/john-hunter-hospital/neurology/13441009-1513-481a-c542-6c30642813a3"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -3981,7 +3913,6 @@
     "inclusive": [],
     "sources": [
      "https://allergy.org.au/patients/locate-a-specialist/nsw/4",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/edgeworth-2285-nsw/newcastle-allergy-immunology-service/clinical-immunology-and-allergy/c9508dee-f943-6c5a-6623-b1d43eae0226",
      "https://www.allergynewcastle.com.au/faqs"
     ],
     "checked": "2026-10-31",
@@ -4086,38 +4017,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/infectious-diseases-service/788001008",
      "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/dr-theo-de-malmanche"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Children's Hospital Paediatric Infectious Diseases Clinic",
-    "specialty": "Public paediatric infectious diseases clinic",
-    "practice": "Hunter New England Health",
-    "address": "156 Kookaburra Circuit, New Lambton Heights NSW 2305",
-    "suburb": "New Lambton Heights",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [
-      "John Hunter Children's Hospital"
-     ],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/infectious-diseases-service/788001008"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
@@ -4208,12 +4108,9 @@
      "languages": [],
      "after_hours": null
     },
-    "inclusive": [
-     "Healthdirect states: 'A free service where no payment or Medicare card is required'"
-    ],
+    "inclusive": [],
     "sources": [
-     "https://playsafe.health.nsw.gov.au/healthcareservice/pacific-clinic/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-west-2302-nsw/pacific-clinic/sexual-health-clinic/24f089ea-9169-0a03-62af-107730ffaedf"
+     "https://playsafe.health.nsw.gov.au/healthcareservice/pacific-clinic/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -4249,41 +4146,9 @@
     },
     "inclusive": [],
     "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/newcastle-2300-nsw/family-planning-australia-hunter-clinic/sexual-health-clinic/2c15ed20-ad08-e0b0-c927-bf36eefabdf9?search_method=Details%20-%20search%20results%20list",
      "https://www.fpnsw.org.au/clinics/newcastle-clinic"
     ],
     "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital Immunology & Infectious Diseases Unit",
-    "specialty": "Public HIV/immunology and infectious diseases unit (listed as sexual health service)",
-    "practice": "Hunter New England Health",
-    "address": "John Hunter Hospital, 38 Lookout Road, New Lambton Heights NSW 2305",
-    "suburb": "New Lambton Heights",
-    "phone": "02 4922 3444",
-    "fax": "02 4922 3428",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "yes",
-     "wait": "",
-     "ages": "",
-     "hospitals": [
-      "John Hunter Hospital"
-     ],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/sexual-health-clinic/788122004",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/john-hunter-hospital-immunology-infectious-diseases-unit/sexual-health-clinic/f1fa044a-c920-18d0-4b2a-7298f90e0c0c"
-    ],
-    "checked": "11 November 2026",
     "ahpra": "not checked"
    }
   ]
@@ -4291,34 +4156,6 @@
  "rehabilitation": {
   "name": "Rehabilitation medicine",
   "people": [
-   {
-    "name": "Rankin Park Hospital (inpatient rehabilitation)",
-    "specialty": "Public rehabilitation hospital",
-    "practice": "Hunter New England Health",
-    "address": "2 Lookout Road, New Lambton Heights NSW 2305",
-    "suburb": "New Lambton Heights",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "yes",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-2305-nsw/rehabilitation-medicine/722424008"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
    {
     "name": "Dr Lauren Tarrant",
     "specialty": "Rehabilitation physician",
@@ -4577,8 +4414,7 @@
      "Listing states interpreter access is available through the HNE Health Interpreter Service"
     ],
     "sources": [
-     "https://infoqore.com.au/directory/health-and-wellbeing/community-health-services/mental-health-services/calvary-mater-newcastle-palliative-care-service",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/calvary-mater-newcastle-hospital/palliative-medicine/1e16dc8b-3b8e-4846-8e75-d1bdd998e155"
+     "https://infoqore.com.au/directory/health-and-wellbeing/community-health-services/mental-health-services/calvary-mater-newcastle-palliative-care-service"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"

@@ -468,42 +468,6 @@
     "ahpra": "not checked"
    },
    {
-    "name": "Connect Clinical Forensic Psychology",
-    "specialty": "Psychology (clinical and forensic)",
-    "practice": "Connect Clinical Forensic Psychology",
-    "address": "29 High Street, Greta NSW 2334",
-    "suburb": "Greta",
-    "phone": "0412 115 275",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [
-     "Clinical and forensic psychology consultations",
-     "By appointment, Monday to Thursday"
-    ],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "ndis": null,
-     "medicare_cdm": null,
-     "new_patients": null,
-     "np_note": "",
-     "np_checked": ""
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/greta-2334-nsw/connect-clinical-forensic-psychology/psychology/19f34bb8-2cd2-59a6-a361-5289da337551"
-    ],
-    "checked": "9 November 2026",
-    "ahpra": "not checked"
-   },
-   {
     "name": "Courageous Steps Psychology",
     "specialty": "Psychology (adult mental health)",
     "practice": "Courageous Steps Psychology",
@@ -1837,8 +1801,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://lornsurgery.com.au/services/mental-health/",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/maitland-2320-nsw/the-lorn-surgery-maitland/psychology/2a95edfb-5bf0-4916-94ed-7ea71f402257"
+     "https://lornsurgery.com.au/services/mental-health/"
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"

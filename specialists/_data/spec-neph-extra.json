@@ -3,38 +3,6 @@
   "name": "Nephrology",
   "people": [
    {
-    "name": "Hunter Kidney Clinic",
-    "specialty": "Nephrology (private practice)",
-    "practice": "Hunter Kidney Clinic",
-    "address": "6-8 Sydney Street, Gateshead NSW 2290",
-    "suburb": "Gateshead",
-    "phone": "02 4942 2558",
-    "fax": "02 4942 2899",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null,
-     "new_patients": null,
-     "np_note": ""
-    },
-    "inclusive": [],
-    "notes": "Healthdirect: 'Fees apply', appointment and referral required; hours Mon, Wed, Thu 7am-5:30pm, Tue 7am-6:30pm (Fri not shown). Ramsay profiles give 'Ground Floor, The Clark Suites, 6-8 Sydney St, Gateshead' as rooms for Prof Bobby Chacko and A/Prof Bruce MacKinnon.",
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/hunter-kidney-clinic/nephrology/8c275daa-9b5a-27a9-9c62-9dad8a691aaf",
-     "https://www.healthdirect.gov.au/australian-health-services/23027794/hunter-kidney-clinic/services/gateshead-2290-sydney"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
     "name": "Prof Bobby Chacko",
     "specialty": "Nephrology (renal medicine)",
     "practice": "The Clark Suites (same address as Hunter Kidney Clinic)",
@@ -60,7 +28,7 @@
      "np_note": ""
     },
     "inclusive": [],
-    "notes": "UoN profile lists him as 'Director Renal Services John Hunter Hospital'. Rooms phone not published separately; Hunter Kidney Clinic (same address) is 02 4942 2558 per Healthdirect.",
+    "notes": "UoN profile lists him as 'Director Renal Services John Hunter Hospital'. Rooms phone not published separately.",
     "sources": [
      "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/professor-bobby-chacko/",
      "https://www.newcastle.edu.au/profile/bobby-chacko"

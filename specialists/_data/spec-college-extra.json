@@ -266,34 +266,6 @@
     "ahpra": "not checked"
    },
    {
-    "name": "Dr Khalil Cassim",
-    "specialty": "Respiratory (pulmonary) medicine",
-    "practice": "Dr Khalil Cassim – East Maitland",
-    "address": "88 George Street, East Maitland NSW 2323",
-    "suburb": "East Maitland",
-    "phone": "02 4933 7001",
-    "fax": "02 4933 7009",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "no",
-     "wait": "",
-     "ages": "adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/dr-khalil-cassim-east-maitland/pulmonary-medicine-service/85fec953-0b70-598e-a6ad-ad86009e30cd"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
     "name": "Dr Emile Altmann",
     "specialty": "Respiratory medicine",
     "practice": "Hunter Respiratory and Sleep Centre",
@@ -320,36 +292,6 @@
     "inclusive": [],
     "sources": [
      "https://www.doctify.com/au/specialist/emile-altmann"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "East Maitland Respiratory and Sleep Clinic",
-    "specialty": "Respiratory and sleep medicine clinic",
-    "practice": "East Maitland Respiratory and Sleep Clinic",
-    "address": "Suite 9, Maitland Private Hospital, 173 Chisholm Road, Ashtonfield NSW 2323",
-    "suburb": "Ashtonfield",
-    "phone": "02 4018 7506",
-    "fax": "02 4915 5351",
-    "email": "",
-    "ereferral": "",
-    "website": "https://www.emrespiratoryandsleep.com/",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "some",
-     "wait": "",
-     "ages": "adults",
-     "hospitals": [
-      "Maitland Private Hospital"
-     ],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/ashtonfield-2323-nsw/east-maitland-respiratory-and-sleep-clinic/sleep-medicine/e40dbc54-abc1-e004-3e06-31cdbf8e7eeb"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -565,7 +507,6 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/dr-siva-sellathurai/gastroenterology-and-hepatology/0b25de3a-76c1-e70e-b15e-7f2e48e84eaa",
      "https://lingardprivate.cms.healthecare.com.au/specialists/dr-sivathasan-sellathurai"
     ],
     "checked": "2026-10-31",
@@ -683,34 +624,6 @@
     "ahpra": "not checked"
    },
    {
-    "name": "Dr Peter Martin",
-    "specialty": "General surgery",
-    "practice": "Dr Peter Martin",
-    "address": "Suite G3, Newcastle Private Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
-    "suburb": "New Lambton Heights",
-    "phone": "02 4957 1152",
-    "fax": "02 4957 1119",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "no",
-     "wait": "",
-     "ages": "adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-2305-nsw/dr-peter-martin/general-surgery/7e04bcc7-ec79-3dda-b3d6-0469e6bb32fc"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
     "name": "A/Prof James French",
     "specialty": "General and breast surgery",
     "practice": "Hunter Plastic Surgery",
@@ -771,8 +684,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-kalpesh-shah/",
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/hunter-surgery/general-surgery/7d6d2cb3-81de-4424-dff1-26b23b0a928d"
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-kalpesh-shah/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -808,8 +720,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.doctify.com/au/specialist/cino-bendinelli",
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/new-lambton-heights-2305-nsw/hunter-surgery/general-surgery/7d6d2cb3-81de-4424-dff1-26b23b0a928d"
+     "https://www.doctify.com/au/specialist/cino-bendinelli"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -848,34 +759,6 @@
     "inclusive": [],
     "sources": [
      "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-ruth-hardstaff/"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Dr Stephen Cox",
-    "specialty": "General surgery",
-    "practice": "Dr Stephen Cox – General Surgeon",
-    "address": "29 Bridge Street, Waratah NSW 2298",
-    "suburb": "Waratah",
-    "phone": "02 4967 4177",
-    "fax": "02 4960 2045",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "no",
-     "wait": "",
-     "ages": "adults",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/dr-stephen-cox-general-surgeon/general-surgery/8400b6fa-8997-4a54-1fe4-2fb22f1609e3"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -948,63 +831,6 @@
     "sources": [
      "https://lingardprivate.com.au/specialists/dr-mark-gately",
      "https://www.doctify.com/au/practice/lingard-private-hospital"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – General Surgery Clinic",
-    "specialty": "Public general surgery outpatient clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/gateshead-2290-nsw/general-surgery/310156009",
-     "https://www.healthdirect.gov.au/australian-health-services/search/charlestown-2290-nsw/general-surgery/310156009"
-    ],
-    "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Belmont Hospital – Surgical Clinic",
-    "specialty": "Public surgical outpatient clinic",
-    "practice": "Belmont Hospital",
-    "address": "16 Croudace Bay Road, Belmont NSW 2280",
-    "suburb": "Belmont",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/gateshead-2290-nsw/general-surgery/310156009"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1086,62 +912,6 @@
     "sources": [
      "https://lingardprivate.com.au/specialists/dr-gary-avery",
      "https://plasticsurgery.org.au/doctor/mr-gary-avery"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – Plastics Clinic",
-    "specialty": "Public plastic surgery outpatient clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/charlestown-2290-nsw/plastic-surgery/310164003"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Children's Hospital – Paediatric Cleft Palate Clinic",
-    "specialty": "Public paediatric cleft palate clinic",
-    "practice": "John Hunter Children's Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/charlestown-2290-nsw/plastic-surgery/310164003"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -1692,92 +1462,6 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
-   },
-   {
-    "name": "Dr Sylvester Fernandes",
-    "specialty": "Ear, nose and throat and facial plastic surgery",
-    "practice": "Dr Sylvester Fernandes – Ear, Nose, Throat and Facial Plastic Surgeon",
-    "address": "22 Kelton Street, Cardiff NSW 2285",
-    "suburb": "Cardiff",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/jesmond-2299-nsw/ent-ear-nose-and-throat-medicine/310149003"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – Ear, Nose and Throat Clinic",
-    "specialty": "Public ENT outpatient clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "all",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/jesmond-2299-nsw/ent-ear-nose-and-throat-medicine/310149003"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – Ear Nose & Throat Clinic – Aboriginal Clinic",
-    "specialty": "Public ENT outpatient clinic (Aboriginal clinic)",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "all",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [
-     "Healthdirect lists this as an Aboriginal ENT clinic (\"Ear Nose & Throat Clinic - Aboriginal Clinic\")"
-    ],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/jesmond-2299-nsw/ent-ear-nose-and-throat-medicine/310149003"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
    }
   ]
  },
@@ -2103,118 +1787,6 @@
     "sources": [
      "https://specialists.healthscope.com.au/specialist/lyndal-harborne-med0001166293",
      "https://doccy.com.au/specialist/newcastle/gynaecologist"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – Gynaecology General Clinic",
-    "specialty": "Public gynaecology outpatient clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/obstetrics-and-gynaecology/310060005"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – Urogynaecology Clinic",
-    "specialty": "Public urogynaecology outpatient clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/obstetrics-and-gynaecology/310060005"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – Antenatal Clinic",
-    "specialty": "Public antenatal (obstetric) clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/obstetrics-and-gynaecology/310060005"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Hospital – Complex Pregnancy Special Care Team Clinic",
-    "specialty": "Public complex pregnancy clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/new-lambton-heights-2305-nsw/obstetrics-and-gynaecology/310060005"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -2614,8 +2186,7 @@
     },
     "inclusive": [],
     "sources": [
-     "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-samuel-adera/",
-     "https://healthdirect.gov.au/australian-health-services/search/charlestown-2290-nsw/cardiology/789718008"
+     "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-samuel-adera/"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -2648,34 +2219,6 @@
     "inclusive": [],
     "sources": [
      "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-trevor-mallard/"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Children's Hospital – Paediatric Cardiology Clinic",
-    "specialty": "Public paediatric cardiology clinic",
-    "practice": "John Hunter Children's Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://healthdirect.gov.au/australian-health-services/search/charlestown-2290-nsw/cardiology/789718008"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -2845,146 +2388,6 @@
     "inclusive": [],
     "sources": [
      "https://www.doctify.com/au/specialist/caroline-hodge"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "John Hunter Children's Hospital – Paediatric General Medicine Clinic",
-    "specialty": "Public paediatric outpatient clinic",
-    "practice": "John Hunter Children's Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/warners-bay-2282-nsw/paediatrics/1223241000168106"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Maitland Hospital – Paediatric Clinic",
-    "specialty": "Public paediatric outpatient clinic",
-    "practice": "Maitland Hospital",
-    "address": "51 Metford Road, Metford NSW 2323",
-    "suburb": "Metford",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/maitland-2320-nsw/paediatrics/1223241000168106"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "Cessnock District Health Service – Paediatric Clinic",
-    "specialty": "Public paediatric outpatient clinic",
-    "practice": "Cessnock District Health Service",
-    "address": "Lot 1 View Street, Cessnock NSW 2325",
-    "suburb": "Cessnock",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/maitland-2320-nsw/paediatrics/1223241000168106"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "JHCH Paediatric Outreach Clinic – Belmont Hospital",
-    "specialty": "Public paediatric outreach clinic",
-    "practice": "John Hunter Children's Hospital outreach",
-    "address": "Belmont Hospital, 16 Croudace Bay Road, Belmont NSW 2280",
-    "suburb": "Belmont",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/warners-bay-2282-nsw/paediatrics/1223241000168106"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "JHCH Paediatric General Medicine Clinic – Raymond Terrace outreach",
-    "specialty": "Public paediatric outreach clinic",
-    "practice": "John Hunter Children's Hospital outreach",
-    "address": "3 Phillip Street, Raymond Terrace NSW 2324",
-    "suburb": "Raymond Terrace",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "0-18",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/maitland-2320-nsw/paediatrics/1223241000168106"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -3184,7 +2587,6 @@
     "inclusive": [],
     "sources": [
      "https://www.yourhealthinmind.org/find-a-psychiatrist/profile/9674/dr-tarun-yadav",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/east-maitland-2323-nsw/manas-clinic-mindful-solutions/psychiatry/583638c2-596e-4361-b9d8-906fe2a7fa6b",
      "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services"
     ],
     "checked": "2026-10-31",
@@ -3213,39 +2615,9 @@
     },
     "inclusive": [],
     "sources": [
-     "https://healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/procare-mental-health-services/psychiatry/65a7c187-ae2a-01dc-c002-ba950fc3fcfa",
-     "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/waratah-2298-nsw/procare-mental-health-services/psychiatry/65a7c187-ae2a-01dc-c002-ba950fc3fcfa"
+     "https://doccy.com.au/specialist/newcastle/practice/procare-mental-health-services"
     ],
     "checked": "11 November 2026",
-    "ahpra": "not checked"
-   },
-   {
-    "name": "HNE Mater Mental Health Service – Liaison Psychiatry Clinic (John Hunter Hospital)",
-    "specialty": "Public consultation-liaison psychiatry clinic",
-    "practice": "Hunter New England Mater Mental Health Service",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/warners-bay-2282-nsw/psychiatry/310116007"
-    ],
-    "checked": "2026-10-31",
     "ahpra": "not checked"
    }
   ]
@@ -3281,8 +2653,7 @@
     "inclusive": [],
     "sources": [
      "https://www.doctify.com/au/specialist/phillip-dwyer",
-     "https://www.doctify.com/au/practice/newcastle-dermatology",
-     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/georgetown-2298-nsw/newcastle-dermatology/dermatology/29c9a20e-94cf-41e8-89e1-449b230d50ee"
+     "https://www.doctify.com/au/practice/newcastle-dermatology"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -3395,35 +2766,6 @@
  },
  "vascular-surgery": {
   "name": "Vascular surgery",
-  "people": [
-   {
-    "name": "John Hunter Hospital – Vascular Surgery Clinic",
-    "specialty": "Public vascular surgery outpatient clinic",
-    "practice": "John Hunter Hospital",
-    "address": "156 Kookaburra Circuit, New Lambton NSW 2305",
-    "suburb": "New Lambton",
-    "phone": "",
-    "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
-    "interests": [],
-    "practical": {
-     "telehealth": null,
-     "bulk_billing": "unknown",
-     "wait": "",
-     "ages": "",
-     "hospitals": [],
-     "languages": [],
-     "after_hours": null
-    },
-    "inclusive": [],
-    "sources": [
-     "https://www.healthdirect.gov.au/australian-health-services/search/gateshead-2290-nsw/vascular-surgery-service/310168000"
-    ],
-    "checked": "2026-10-31",
-    "ahpra": "not checked"
-   }
-  ]
+  "people": []
  }
 }
