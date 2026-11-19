@@ -11,6 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 SRC = os.path.join(ROOT, "assets", "mascots")
 OUT = os.path.join(SRC, "poses")
 INK = "#2B2340"
+LINE = INK  # stroke colour for brows, closed eyes and mouths (light on dark faces)
 EYE = re.compile(r'<g><circle cx="([\d.]+)" cy="([\d.]+)" r="([\d.]+)" fill="#2B2340"/><circle [^>]*/></g>')
 
 def parts(svg):
@@ -52,7 +53,9 @@ def find_eyes(svg):
             a, b = c[i], c[j]
             if abs(a[3] - b[3]) < 3 and 10 <= abs(a[2] - b[2]) <= 85 and abs(a[4] - b[4]) < 1.5:
                 if best is None or a[4] > best[0][4]: best = (a, b)
-    if not best: return []
+    if not best:
+        big = [e for e in c if e[4] >= 4]
+        return [max(big, key=lambda e: e[4])] if len(big) == 1 else []
     return sorted(best, key=lambda e: e[2])
 
 def eyes_of(svg):
@@ -72,7 +75,7 @@ def f(x): return ("%.1f" % x).rstrip("0").rstrip(".")
 # ---- emotion eye kits: (cx, cy, r, side) -> svg; side = -1 left eye, +1 right eye
 def happy(x, y, r, s):    # ^ ^ closed smiling eyes
     return '<path d="M%s %sq%s %s %s 0" stroke="%s" stroke-width="%s" fill="none" stroke-linecap="round"/>' % (
-        f(x - r), f(y + r * .3), f(r), f(-r * 1.5), f(r * 2), INK, f(r * .55))
+        f(x - r), f(y + r * .3), f(r), f(-r * 1.5), f(r * 2), LINE, f(r * .55))
 def surprised(x, y, r, s):
     return ('<circle cx="%s" cy="%s" r="%s" fill="#fff" stroke="%s" stroke-width="%s"/><circle cx="%s" cy="%s" r="%s" fill="%s"/>'
             % (f(x), f(y), f(r * 1.25), INK, f(r * .3), f(x), f(y), f(r * .5), INK))
@@ -88,7 +91,7 @@ def angry(x, y, r, s):
 def frustrated(x, y, r, s):   # > <
     d = -s
     return '<path d="M%s %sl%s %s-%s %s" stroke="%s" stroke-width="%s" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' % (
-        f(x - d * r * .8), f(y - r * .8), f(d * r * 1.4), f(r * .8), f(d * r * 1.4), f(r * .8), INK, f(r * .5))
+        f(x - d * r * .8), f(y - r * .8), f(d * r * 1.4), f(r * .8), f(d * r * 1.4), f(r * .8), LINE, f(r * .5))
 def wink(x, y, r, s):
     if s < 0: return happy(x, y, r, s)
     return thinking(x, y, r, s).replace(f(x + r * .45), f(x - r * .3)).replace(f(y - r * .5), f(y - r * .35))
@@ -98,7 +101,7 @@ def brow(x, y, r, s, tilt):
     y0 = y - r * 1.9
     inner, outer = (x - s * r * .9, x + s * r * .9)
     return '<path d="M%s %sL%s %s" stroke="%s" stroke-width="%s" stroke-linecap="round"/>' % (
-        f(outer), f(y0 + tilt * r * .25), f(inner), f(y0 - tilt * r * .45), INK, f(r * .45))
+        f(outer), f(y0 + tilt * r * .25), f(inner), f(y0 - tilt * r * .45), LINE, f(r * .45))
 
 def extras(kind, eyes):
     (lx, ly, r), (rx, ry, _) = eyes[0], eyes[-1]
@@ -129,17 +132,18 @@ KITS = {"angry": (angry, -1.3), "frustrated": (frustrated, None), "happy": (happ
 
 def emotion(svg, kind, mid=None):
     found = find_eyes(svg)
-    if len(found) != 2: return None
+    if not found: return None
     eyes = [(e[2], e[3], e[4]) for e in found]
+    if len(eyes) == 1: eyes = eyes * 2
     kit, tilt = KITS[kind]
-    mo = find_mouth(svg, eyes)
+    mo = find_mouth(svg, eyes) if found[0] is not found[-1] else None
     out, pos = [], 0
     spans = [(e[0], e[1], "eye", e) for e in found] + ([(mo[0], mo[1], "mouth", mo)] if mo else [])
     for st, en, what, e in sorted(spans):
         out.append(svg[pos:st])
         if what == "eye":
             x, y, r = e[2], e[3], e[4]
-            sd = -1 if e is found[0] else 1
+            sd = -1 if (e is found[0] and len(found) == 2) else 1
             t = kit(x, y, r, sd)
             if tilt is not None: t += brow(x, y, r, sd, tilt)
             if kind == "thinking" and sd > 0: t += brow(x, y, r, sd, 1.4)
@@ -152,7 +156,8 @@ def emotion(svg, kind, mid=None):
     if not mo and mid in MOUTH:
         x, y, w, _ = MOUTH[mid]
         svg = svg.replace("</svg>", mouth(kind, x, y, w) + "</svg>")
-    return svg.replace("</svg>", extras(kind, eyes) + "</svg>")
+    svg = svg.replace("</svg>", extras(kind, eyes) + "</svg>")
+    return svg
 
 # ---- three-quarter view: shift listed face parts sideways and squash the far eye
 TURN = {  # indices (in parts()) of elements that move with the head turn: face = full shift, half = half shift
@@ -221,7 +226,7 @@ MOUTH = {  # mascots with no drawn mouth that should get one: (x, y, half-width,
     "zebritis": (60, 83, 4, None),
 }
 def mouth(kind, x, y, w):
-    st = 'stroke="%s" stroke-width="2.2" fill="none" stroke-linecap="round"' % INK
+    st = 'stroke="%s" stroke-width="2.2" fill="none" stroke-linecap="round"' % LINE
     if kind in ("happy", "celebrate"):
         return '<path d="M%s %sq%s %s %s 0z" fill="%s"/><path d="M%s %sq%s %s %s 0" fill="#FF8FAE"/>' % (f(x - w), f(y - 1), f(w), f(w * 1.6), f(w * 2), INK, f(x - w * .5), f(y + w * .55), f(w * .5), f(w * .5), f(w))
     if kind == "surprised": return '<ellipse cx="%s" cy="%s" rx="%s" ry="%s" fill="%s"/>' % (f(x), f(y + 1), f(w * .45), f(w * .65), INK)
@@ -231,16 +236,22 @@ def mouth(kind, x, y, w):
     if kind == "thinking": return '<path d="M%s %sl%s %s" %s/>' % (f(x - w * .7), f(y + 1), f(w * 1.4), f(-1), st)
     return '<path d="M%s %sq%s %s %s 0" %s/>' % (f(x - w * .8), f(y), f(w * .8), f(w * .7), f(w * 1.6), st)
 
+DARK = {"cryptogenic", "grandrounds", "emergency", "normie/cryptogenic", "normie/grandrounds"}
+LIGHT = "#F1ECFA"
+
 POSES = ["happy", "celebrate", "wink", "surprised", "thinking", "sad", "angry", "frustrated"]
+
+SKIP = {"sleep"}   # Kip sleeps with closed eyes; the single-eye fallback would pick her nose
 
 def build(rel):
     """rel = 'dx' or 'normie/dx'. Writes poses/<rel>-<pose>.svg."""
+    if rel in SKIP: return []
     base = open(os.path.join(SRC, rel + ".svg"), encoding="utf-8").read()
     mid = rel.split("/")[-1]
     os.makedirs(os.path.dirname(os.path.join(OUT, rel)), exist_ok=True)
     made = []
     for k in POSES:
-        s = emotion(base, k, None if "/" in rel else mid)
+        s = emotion(base, k, rel if rel in DARK else (None if "/" in rel else mid))
         if s: open(os.path.join(OUT, "%s-%s.svg" % (rel, k)), "w").write(s); made.append(k)
     return made
 

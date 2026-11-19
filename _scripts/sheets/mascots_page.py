@@ -74,6 +74,7 @@ _PCSS = ('<style>.mz-hero{display:flex;align-items:center;gap:16px;margin:8px 0 
          '.mz-vid{margin:6px 0 18px}.mz-vid summary{cursor:pointer;font-weight:600;color:var(--accent,#4A3480)}.mz-vid video{display:block;margin:10px auto 0;width:min(100%,360px);height:auto;border-radius:14px;background:#1B1430}'
          '.mz-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:10px 0 18px}.mz-facts div{background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:12px;padding:9px 12px}'
          '.mz-facts dt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#4A3480)}.mz-facts dd{margin:2px 0 0;font-size:15px;line-height:1.4}'
+         '.mz-moods{list-style:none!important;padding:0!important;margin:8px 0 18px!important;display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}.mz-moods li{margin:0!important;text-align:center;font-size:12.5px;color:var(--muted,#5C4E7E)}.mz-moods img{display:block;margin:0 auto 2px;width:76px;height:76px}'
          '.mz-nav img{width:40px;height:40px}@media(max-width:520px){.mz-hero img{width:92px;height:92px}}</style>\n')
 for i, a in enumerate(ALL):
     k, name, role, href, what, vibe, story, cheer, kind, slug = a
@@ -84,7 +85,9 @@ for i, a in enumerate(ALL):
     pf = _PF.get(name)
     facts = ('<dl class="mz-facts">' + "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (lab, _e(pf[key])) for lab, key in
              (("Job", "job"), ("From", "from"), ("Personality", "style"), ("Health quirk", "health"))) + '</dl>\n') if pf else ""
-    b = ('<p class="lede">%s</p>\n' % _e(vibe) + facts
+    _PZ = [("happy", "Happy"), ("celebrate", "Celebrating"), ("wink", "Wink"), ("surprised", "Surprised"), ("thinking", "Thinking"), ("sad", "Sad"), ("angry", "Cross"), ("frustrated", "Frustrated")]
+    moods = ('<h2>Moods</h2>\n<ul class="mz-moods">' + "".join('<li><img src="/assets/mascots/poses/%s-%s.svg" alt="%s looking %s" width="84" height="84" loading="lazy"><span>%s</span></li>' % (k, pz, _e(name), lab.lower(), lab) for pz, lab in _PZ) + '</ul>\n') if _os.path.exists("assets/mascots/poses/%s-happy.svg" % k) else ""
+    b = ('<p class="lede">%s</p>\n' % _e(vibe) + facts + moods
          + '<h2>%s story</h2>\n<div class="mz-story">%s</div>\n' % (("His" if pv == "his" else "Her"), "".join("<p>%s</p>" % _e(p) for p in paras))
          + (('<details class="mz-vid"><summary>▶ Watch %s story (short video)</summary><video controls playsinline preload="none" poster="/assets/video/mascots/%s.jpg" width="360" height="640">'
              '<source src="/assets/video/mascots/%s.mp4" type="video/mp4"></video></details>\n') % (pv, slug, slug) if _os.path.exists("assets/video/mascots/%s.mp4" % slug) else "")
