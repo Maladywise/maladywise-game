@@ -1903,6 +1903,13 @@
 "label": "Medicine",
 "title": "Amitriptyline"
 },
+"medicines-amoxicillin": {
+"url": "/medicines/amoxicillin/",
+"key": "ef3fe6a9e55b",
+"v": "7c399552",
+"label": "Medicine",
+"title": "Amoxicillin and Augmentin"
+},
 "medicines-antiplatelets": {
 "url": "/medicines/antiplatelets/",
 "key": "7d480df47856",
@@ -1945,6 +1952,13 @@
 "label": "Medicine",
 "title": "Calcium channel blockers"
 },
+"medicines-cefalexin": {
+"url": "/medicines/cefalexin/",
+"key": "e92eb734a11f",
+"v": "93d5ff40",
+"label": "Medicine",
+"title": "Cefalexin"
+},
 "medicines-clonidine": {
 "url": "/medicines/clonidine/",
 "key": "94d756240337",
@@ -1972,6 +1986,13 @@
 "v": "5efb2b26",
 "label": "Medicine",
 "title": "Diuretics (water tablets)"
+},
+"medicines-doxycycline": {
+"url": "/medicines/doxycycline/",
+"key": "450d7e081366",
+"v": "a83d5f2a",
+"label": "Medicine",
+"title": "Doxycycline"
 },
 "medicines-duloxetine": {
 "url": "/medicines/duloxetine/",
@@ -2161,6 +2182,13 @@
 "v": "3525967c",
 "label": "Medicine",
 "title": "Tirzepatide"
+},
+"medicines-uti-antibiotics": {
+"url": "/medicines/uti-antibiotics/",
+"key": "406928a08146",
+"v": "0077176f",
+"label": "Medicine",
+"title": "Antibiotics for urine infections (UTI)"
 },
 "medicines-weight-loss-medicines": {
 "url": "/medicines/weight-loss-medicines/",
