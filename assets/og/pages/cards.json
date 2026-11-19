@@ -1903,6 +1903,13 @@
 "label": "Medicine",
 "title": "Amitriptyline"
 },
+"medicines-antiplatelets": {
+"url": "/medicines/antiplatelets/",
+"key": "7d480df47856",
+"v": "05ee1128",
+"label": "Medicine",
+"title": "Antiplatelets"
+},
 "medicines-atomoxetine": {
 "url": "/medicines/atomoxetine/",
 "key": "dffc1d6e12d1",
@@ -1917,12 +1924,26 @@
 "label": "Medicine",
 "title": "Beta blockers"
 },
+"medicines-blood-thinners": {
+"url": "/medicines/blood-thinners/",
+"key": "4925fa109304",
+"v": "4206b975",
+"label": "Medicine",
+"title": "Blood thinners (anticoagulants)"
+},
 "medicines-bupropion": {
 "url": "/medicines/bupropion/",
 "key": "51b47a5e8b60",
 "v": "d94cbc8a",
 "label": "Medicine",
 "title": "Bupropion"
+},
+"medicines-calcium-channel-blockers": {
+"url": "/medicines/calcium-channel-blockers/",
+"key": "68ebf9628f80",
+"v": "fbcbdd88",
+"label": "Medicine",
+"title": "Calcium channel blockers"
 },
 "medicines-clonidine": {
 "url": "/medicines/clonidine/",
@@ -1945,6 +1966,13 @@
 "label": "Medicine",
 "title": "Visanne (Dienogest)"
 },
+"medicines-diuretics": {
+"url": "/medicines/diuretics/",
+"key": "6915d301fac4",
+"v": "5efb2b26",
+"label": "Medicine",
+"title": "Diuretics (water tablets)"
+},
 "medicines-duloxetine": {
 "url": "/medicines/duloxetine/",
 "key": "8e071b1b897f",
@@ -1965,6 +1993,13 @@
 "v": "57099b94",
 "label": "Medicine",
 "title": "Fluoxetine"
+},
+"medicines-gabapentin": {
+"url": "/medicines/gabapentin/",
+"key": "7eb64cd831ee",
+"v": "2f99c1a4",
+"label": "Medicine",
+"title": "Gabapentin"
 },
 "medicines-glp1-medicines": {
 "url": "/medicines/glp1-medicines/",
@@ -2036,6 +2071,27 @@
 "label": "Medicine",
 "title": "Modafinil"
 },
+"medicines-nsaids": {
+"url": "/medicines/nsaids/",
+"key": "60aaa1f455bd",
+"v": "d970b148",
+"label": "Medicine",
+"title": "Anti-inflammatories (NSAIDs)"
+},
+"medicines-opioids": {
+"url": "/medicines/opioids/",
+"key": "d7b6296081b5",
+"v": "b477a908",
+"label": "Medicine",
+"title": "Opioid pain medicines"
+},
+"medicines-paracetamol": {
+"url": "/medicines/paracetamol/",
+"key": "23731a08eba6",
+"v": "571ba3f1",
+"label": "Medicine",
+"title": "Paracetamol"
+},
 "medicines-pde5-inhibitors": {
 "url": "/medicines/pde5-inhibitors/",
 "key": "d8727340b68a",
@@ -2063,6 +2119,13 @@
 "v": "d11d10f0",
 "label": "Medicine",
 "title": "Quetiapine"
+},
+"medicines-sartans": {
+"url": "/medicines/sartans/",
+"key": "8643b6807f69",
+"v": "1732dd45",
+"label": "Medicine",
+"title": "Sartans (ARBs)"
 },
 "medicines-semaglutide": {
 "url": "/medicines/semaglutide/",
