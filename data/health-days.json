@@ -13047,7 +13047,7 @@
     "fun",
     "culture"
    ],
-   "priority": 5,
+   "priority": 3,
    "link": "https://en.wikipedia.org/wiki/International_Talk_Like_a_Pirate_Day",
    "blurb": "Arrr! Sailors got scurvy from a lack of vitamin C. Citrus cured it, which is why British sailors were nicknamed 'limeys'.",
    "puzzle_theme": "Pirate medicine: scurvy and vitamin C, amputations and peg legs, eye patches, rum",
@@ -17360,6 +17360,464 @@
    "blurb": "Allan-Herndon-Dudley syndrome is a rare X-linked condition in which thyroid hormone cannot get into brain cells.",
    "puzzle_theme": "Thyroid and brain: thyroid hormone transport, T3 and T4, X-linked inheritance, neurodevelopment",
    "icon": "zebra-rare"
+  },
+  {
+   "id": "diwali",
+   "name": "Diwali",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2026": {
+     "start": "2026-11-08"
+    },
+    "2027": {
+     "start": "2027-10-29"
+    },
+    "2028": {
+     "start": "2028-10-17"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Diwali",
+   "blurb": "The festival of lights. Fireworks and sparklers mean burns and eye injuries spike in India every Diwali; air pollution too.",
+   "puzzle_theme": "Light and lamps, burns and firework eye injuries, sweets and diabetes in South Asia, air quality, India and its doctors",
+   "icon": "candle",
+   "normie": {
+    "name": "Diwali",
+    "blurb": "The Hindu, Sikh and Jain festival of lights: lamps, rangoli, sweets and fireworks.",
+    "theme": "Lights, lamps, sweets, India, fireworks"
+   }
+  },
+  {
+   "id": "ramadan",
+   "name": "Ramadan begins",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2027": {
+     "start": "2027-02-08"
+    },
+    "2028": {
+     "start": "2028-01-28"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Ramadan",
+   "blurb": "A month of daytime fasting for many Muslims. Doctors adjust insulin, diabetes tablets and medicine timing so fasting is safe.",
+   "puzzle_theme": "Fasting physiology, diabetes and fasting, dehydration, medicine timing, the crescent moon, dates (the fruit)",
+   "icon": "star",
+   "normie": {
+    "name": "Ramadan begins",
+    "blurb": "The Islamic holy month: fasting from dawn to sunset, then iftar with family and friends.",
+    "theme": "Moon, dates, night markets, sunset feasts"
+   }
+  },
+  {
+   "id": "eidfitr",
+   "name": "Eid al-Fitr",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2027": {
+     "start": "2027-03-10"
+    },
+    "2028": {
+     "start": "2028-02-27"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Eid_al-Fitr",
+   "blurb": "Eid Mubarak! The feast that ends Ramadan. Sweets galore, so it is a classic day for blood sugar checks.",
+   "puzzle_theme": "Feasting after fasting, refeeding, sweets and teeth, sugar and insulin",
+   "icon": "star",
+   "normie": {
+    "name": "Eid al-Fitr",
+    "blurb": "Eid Mubarak! The festival marking the end of Ramadan: new clothes, gifts and feasting.",
+    "theme": "Feasts, sweets, gifts, celebrations around the world"
+   }
+  },
+  {
+   "id": "eidadha",
+   "name": "Eid al-Adha",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2027": {
+     "start": "2027-05-17"
+    },
+    "2028": {
+     "start": "2028-05-05"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Eid_al-Adha",
+   "blurb": "Eid Mubarak! It coincides with the Hajj, one of the biggest mass gatherings on Earth, with its own heat and infection medicine.",
+   "puzzle_theme": "Mass gathering medicine, heat illness, meningococcal vaccine for Hajj, food sharing and food safety",
+   "icon": "camel",
+   "normie": {
+    "name": "Eid al-Adha",
+    "blurb": "Eid Mubarak! The festival of sacrifice, at the time of the Hajj pilgrimage to Mecca.",
+    "theme": "Pilgrimage, travel, deserts, feasts"
+   }
+  },
+  {
+   "id": "holi",
+   "name": "Holi",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2027": {
+     "start": "2027-03-22"
+    },
+    "2028": {
+     "start": "2028-03-11"
+    }
+   },
+   "tags": [
+    "culture",
+    "fun"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Holi",
+   "blurb": "The festival of colours. Synthetic colour powders can irritate skin and eyes; doctors in India see a spike in eye injuries.",
+   "puzzle_theme": "Colour and colour vision, colour blindness, skin and eye irritation, pigments in medicine (jaundice, cyanosis)",
+   "icon": "heart-rainbow",
+   "normie": {
+    "name": "Holi",
+    "blurb": "The Hindu festival of colours: throwing bright powder and water to welcome spring.",
+    "theme": "Colours, rainbows, paint, spring, India"
+   }
+  },
+  {
+   "id": "nowruz",
+   "name": "Nowruz (Persian New Year)",
+   "kind": "day",
+   "rule": "equinox:03",
+   "dates": {
+    "2027": {
+     "start": "2027-03-21"
+    },
+    "2028": {
+     "start": "2028-03-20"
+    }
+   },
+   "tags": [
+    "culture"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Nowruz",
+   "blurb": "New Year at the spring equinox for about 300 million people. Persian physicians like Avicenna and al-Razi shaped medicine.",
+   "puzzle_theme": "Persian medicine (Avicenna, al-Razi), spring, sprouts and seeds, equinox, the Silk Road",
+   "icon": "sunrise",
+   "normie": {
+    "name": "Nowruz",
+    "blurb": "Persian New Year at the spring equinox, celebrated from Iran to Central Asia.",
+    "theme": "Spring, new beginnings, Persia, the Silk Road, equinox"
+   }
+  },
+  {
+   "id": "songkran",
+   "name": "Songkran (Thai New Year)",
+   "kind": "week",
+   "rule": "04-13:3",
+   "dates": {
+    "2027": {
+     "start": "2027-04-13",
+     "end": "2027-04-15"
+    },
+    "2028": {
+     "start": "2028-04-13",
+     "end": "2028-04-15"
+    }
+   },
+   "tags": [
+    "culture",
+    "fun"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Songkran",
+   "blurb": "Thailand’s New Year water fight. Its road toll is so high the days are nicknamed the \"seven dangerous days\".",
+   "puzzle_theme": "Water, heat and dehydration, road safety, Thailand, eye and ear infections from water",
+   "icon": "dolphin",
+   "normie": {
+    "name": "Songkran",
+    "blurb": "Thai New Year: the country’s biggest water fight, plus temple visits and family time.",
+    "theme": "Water, water fights, Thailand, summer heat"
+   }
+  },
+  {
+   "id": "muertos",
+   "name": "Día de Muertos",
+   "kind": "week",
+   "rule": "11-01:2",
+   "dates": {
+    "2026": {
+     "start": "2026-11-01",
+     "end": "2026-11-02"
+    },
+    "2027": {
+     "start": "2027-11-01",
+     "end": "2027-11-02"
+    },
+    "2028": {
+     "start": "2028-11-01",
+     "end": "2028-11-02"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Day_of_the_Dead",
+   "blurb": "Mexico’s Day of the Dead remembers loved ones with marigolds and sugar skulls. Anatomy lovers: those skulls are pretty accurate.",
+   "puzzle_theme": "Bones of the skull, anatomy, marigolds (calendula in medicine), grief and remembering, Mexico",
+   "icon": "candle",
+   "normie": {
+    "name": "Día de Muertos",
+    "blurb": "Mexico’s Day of the Dead: marigolds, sugar skulls and altars to remember loved ones.",
+    "theme": "Mexico, marigolds, sugar skulls, family, remembering"
+   }
+  },
+  {
+   "id": "midautumn",
+   "name": "Mid-Autumn Festival",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2027": {
+     "start": "2027-09-15"
+    },
+    "2028": {
+     "start": "2028-10-03"
+    }
+   },
+   "tags": [
+    "culture",
+    "fun"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Mid-Autumn_Festival",
+   "blurb": "Moon Festival across East Asia. One mooncake can carry close to 1,000 kJ, so share it.",
+   "puzzle_theme": "The moon (lunar myths, sleep and the moon), mooncakes and kilojoules, lanterns, East Asian medicine history",
+   "icon": "teacup",
+   "normie": {
+    "name": "Mid-Autumn Festival",
+    "blurb": "The Moon Festival in China and East Asia: mooncakes, lanterns and the full moon.",
+    "theme": "Moon, mooncakes, lanterns, rabbits, China"
+   }
+  },
+  {
+   "id": "hanukkah",
+   "name": "Hanukkah begins",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2026": {
+     "start": "2026-12-05"
+    },
+    "2027": {
+     "start": "2027-12-25"
+    },
+    "2028": {
+     "start": "2028-12-13"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Hanukkah",
+   "blurb": "The Jewish festival of lights, eight nights long. Fried treats (latkes, doughnuts) and candles: kitchen burns are the risk.",
+   "puzzle_theme": "Lights and candles, oil and frying, burns, the number eight, Jewish physicians in history (Maimonides)",
+   "icon": "candle",
+   "normie": {
+    "name": "Hanukkah",
+    "blurb": "The eight-night Jewish festival of lights: menorah candles, dreidels and fried treats.",
+    "theme": "Lights, candles, eight, doughnuts, games"
+   }
+  },
+  {
+   "id": "lanternfest",
+   "name": "Lantern Festival",
+   "kind": "day",
+   "rule": "lunar",
+   "dates": {
+    "2027": {
+     "start": "2027-02-20"
+    },
+    "2028": {
+     "start": "2028-02-09"
+    }
+   },
+   "tags": [
+    "culture",
+    "fun"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Lantern_Festival",
+   "blurb": "The last day of Lunar New Year celebrations, under the first full moon. Riddles are traditionally written on the lanterns.",
+   "puzzle_theme": "Riddles, lights, the full moon, sweet rice balls (tangyuan), Chinese medicine history",
+   "icon": "star",
+   "normie": {
+    "name": "Lantern Festival",
+    "blurb": "The finale of Lunar New Year: lanterns, riddles and sweet rice balls under the full moon.",
+    "theme": "Lanterns, riddles, moon, China"
+   }
+  },
+  {
+   "id": "matariki",
+   "name": "Matariki (Māori New Year)",
+   "kind": "day",
+   "rule": "nz-public-holiday",
+   "dates": {
+    "2027": {
+     "start": "2027-06-25"
+    },
+    "2028": {
+     "start": "2028-07-14"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://www.tepapa.govt.nz/discover-collections/read-watch-play/matariki-maori-new-year",
+   "blurb": "The rising of the Matariki star cluster marks the Māori New Year, a time to remember, celebrate and plan.",
+   "puzzle_theme": "Stars and navigation, Māori health and rongoā, Aotearoa New Zealand, winter, new beginnings",
+   "icon": "star",
+   "normie": {
+    "name": "Matariki",
+    "blurb": "Māori New Year, marked by the Matariki star cluster rising before dawn. A NZ public holiday.",
+    "theme": "Stars, New Zealand, winter, new beginnings"
+   }
+  },
+  {
+   "id": "obon",
+   "name": "Obon",
+   "kind": "week",
+   "rule": "08-13:4",
+   "dates": {
+    "2027": {
+     "start": "2027-08-13",
+     "end": "2027-08-16"
+    },
+    "2028": {
+     "start": "2028-08-13",
+     "end": "2028-08-16"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Bon_Festival",
+   "blurb": "Japan’s festival honouring ancestors, with dances and floating lanterns. Japan has the world’s oldest population.",
+   "puzzle_theme": "Ageing and longevity, Japan (Okinawa, centenarians), summer heat, lanterns, dancing",
+   "icon": "hands-heart",
+   "normie": {
+    "name": "Obon",
+    "blurb": "Japanese summer festival honouring ancestors: bon dances and floating lanterns.",
+    "theme": "Japan, lanterns, dance, summer"
+   }
+  },
+  {
+   "id": "vesak",
+   "name": "Vesak",
+   "kind": "day",
+   "rule": "fullmoon:05",
+   "dates": {
+    "2027": {
+     "start": "2027-05-20"
+    },
+    "2028": {
+     "start": "2028-05-09"
+    }
+   },
+   "tags": [
+    "culture",
+    "gentle"
+   ],
+   "priority": 4,
+   "link": "https://en.wikipedia.org/wiki/Vesak",
+   "blurb": "Celebrated by Buddhists around the world. Mindfulness meditation, now studied in hundreds of trials, has its roots here.",
+   "puzzle_theme": "Mindfulness and meditation research, calm and stress, lotus flowers, compassion, South and East Asia",
+   "icon": "heart-calm",
+   "normie": {
+    "name": "Vesak",
+    "blurb": "A Buddhist festival of light and kindness, held at the full moon in May.",
+    "theme": "Lotus flowers, lanterns, kindness, calm"
+   }
+  },
+  {
+   "id": "friday13",
+   "name": "Friday the 13th",
+   "kind": "day",
+   "rule": "friday13",
+   "dates": {
+    "2027": {
+     "start": "2027-08-13"
+    },
+    "2028": {
+     "start": "2028-10-13"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/Friday_the_13th",
+   "blurb": "Fear of Friday the 13th has a name: paraskevidekatriaphobia. A 1993 BMJ study even checked if it was bad for your health.",
+   "puzzle_theme": "Phobias, superstitions, black cats, unlucky medical history, the number 13",
+   "icon": "cipher-cat",
+   "normie": {
+    "name": "Friday the 13th",
+    "blurb": "Unlucky? Black cats, broken mirrors and ladders. Fear of it is paraskevidekatriaphobia.",
+    "theme": "Superstitions, black cats, luck, 13"
+   }
+  },
+  {
+   "id": "leapday",
+   "name": "Leap Day",
+   "kind": "day",
+   "rule": "02-29",
+   "dates": {
+    "2028": {
+     "start": "2028-02-29"
+    }
+   },
+   "tags": [
+    "fun"
+   ],
+   "priority": 5,
+   "link": "https://en.wikipedia.org/wiki/February_29",
+   "blurb": "A bonus day. About 1 in 1,461 people is born on 29 February: the \"leaplings\".",
+   "puzzle_theme": "Frogs and leaping, calendars and circadian rhythms, birthdays, odds and probability",
+   "icon": "frog",
+   "normie": {
+    "name": "Leap Day",
+    "blurb": "A bonus day that only turns up every four years. Happy birthday, leaplings.",
+    "theme": "Frogs, leaping, calendars, birthdays"
+   }
   }
  ]
 }
