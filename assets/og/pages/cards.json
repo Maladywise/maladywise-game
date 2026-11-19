@@ -1350,6 +1350,13 @@
 "label": "Condition",
 "title": "Impetigo (School Sores)"
 },
+"incontinence": {
+"url": "/incontinence/",
+"key": "4368fc409eb4",
+"v": "203b81fb",
+"label": "Condition",
+"title": "Types of incontinence"
+},
 "inflammatory-bowel-disease": {
 "url": "/inflammatory-bowel-disease/",
 "key": "57dd4c5dd436",
@@ -2078,6 +2085,13 @@
 "label": "Medicine",
 "title": "Duloxetine"
 },
+"medicines-duodart": {
+"url": "/medicines/duodart/",
+"key": "d41bd5f64284",
+"v": "691e14d0",
+"label": "Medicine",
+"title": "Duodart (dutasteride and tamsulosin)"
+},
 "medicines-escitalopram": {
 "url": "/medicines/escitalopram/",
 "key": "11c2430af541",
@@ -2295,6 +2309,13 @@
 "label": "Medicine",
 "title": "Proton pump inhibitors (PPIs)"
 },
+"medicines-prazosin": {
+"url": "/medicines/prazosin/",
+"key": "76c9febf0a82",
+"v": "b6247145",
+"label": "Medicine",
+"title": "Prazosin"
+},
 "medicines-prednisolone": {
 "url": "/medicines/prednisolone/",
 "key": "d775a836d4d0",
@@ -2406,6 +2427,13 @@
 "v": "0077176f",
 "label": "Medicine",
 "title": "Antibiotics for urine infections (UTI)"
+},
+"medicines-vaginal-oestrogen": {
+"url": "/medicines/vaginal-oestrogen/",
+"key": "565bab1b5591",
+"v": "544cf09b",
+"label": "Medicine",
+"title": "Vaginal oestrogen"
 },
 "medicines-varenicline": {
 "url": "/medicines/varenicline/",
@@ -2644,6 +2672,20 @@
 "v": "6ffebfc7",
 "label": "Fact sheet",
 "title": "Ovarian cysts"
+},
+"overactive-bladder": {
+"url": "/overactive-bladder/",
+"key": "0198c63371dc",
+"v": "fb0fa450",
+"label": "Condition",
+"title": "Overactive bladder"
+},
+"overflow-incontinence": {
+"url": "/overflow-incontinence/",
+"key": "d2e2e4e182f2",
+"v": "3ad18efc",
+"label": "Condition",
+"title": "Overflow incontinence"
 },
 "palpitations": {
 "url": "/palpitations/",
@@ -3666,6 +3708,13 @@
 "v": "1a02fa51",
 "label": "Condition",
 "title": "Strabismus (Squint)"
+},
+"stress-incontinence": {
+"url": "/stress-incontinence/",
+"key": "ac71de604ad1",
+"v": "a9c6716f",
+"label": "Condition",
+"title": "Stress incontinence"
 },
 "styes": {
 "url": "/styes/",
