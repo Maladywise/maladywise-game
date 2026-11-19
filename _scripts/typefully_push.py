@@ -10,7 +10,7 @@ FROM 23 NOV 2026 (owner's X strategy): two posts a day. "am" = 7:30am DAILY PUZZ
 object gets a drawn puzzle card, _scripts/puzzle_card.py). Its "answer" goes in the SAME thread as post 2,
 right after the puzzle ("Guess, then check the answer below"), because X blocks scheduled replies via the API
 (17 Nov 2026). The old 11:15am answer-reply run is retired. "pm" = 6pm value post (thread, TIL, new game, short video,
-or a strong world day). The noon slot is retired: no automatic noon World Day posts from 23 Nov.
+or a strong world day). The noon slot is retired for automatic World Day posts from 23 Nov; it now carries the daily "trend or pearl" quiz written by the evening trends task (STYLE.md).
 
 
 Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "slot": "am"|"noon"|"pm", "thread": ["post 1", ...], "note": "...", "card": true}]}
