@@ -558,7 +558,7 @@
     ["sx_keys", "⌨️", "Typo Cat", "Let Basil type a Wordemic guess.", "global", "", 0, 1],
     ["sx_konami", "🎮", "Cheat Code", "Typed march for the mascot parade.", "global", "", 0, 1],
     ["sx_codes", "🔐", "Code Breaker", "Found 10 secret codes.", "global", "codes", 10, 1],
-    ["sx_codebook", "📖", "Codebook", "Found every secret code.", "global", "codes", 62, 1],
+    ["sx_codebook", "📖", "Codebook", "Found every secret code.", "global", "codes", 61, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
     ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1],
@@ -2127,7 +2127,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // 6 Night shift look: midnight to 4am (your time) the site goes dark and Locum clocks on.
   // 7 Type "codeblue": crash call. 8 Type "scrawl": doctor's handwriting for 15 s. 9 Sit idle 3 min: Kip falls asleep.
   // 14 Tap the footer tagline 5 times: the Cabinet of Curiosities, a clickable list of the typed secrets plus clues for the rest.
-  // 13 Type "astle": the hidden For DA page (/da/), a nod to cryptic setter DA; solve all six clues without peeking for a badge.
+  // 13 (Nov 2026) The hidden For DA page (/da/) is now reached from a faint pencil link on the Cryptoplexy page (typing "astle" fired on "Newcastle", so it was removed).
   // 10 Friday 4:55 to 5:10pm: the Friday referral pill. 11 Browser console: a note and mw.ward().
   // 12 Type "basil": Basil knocks something off any page. Type "clove" (works on game keyboards too, e.g. as a Wordemic guess): Clover reviews the page and stamps it. Type "bothcats": chaos, then an incident report.
   (function () {
@@ -2300,7 +2300,6 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       // older secrets
       locum: function () { nightShift(); },
       scrawl: function () { scrawl(); },
-      astle: function () { daRoom(); },
       bothcats: function () { bothCats(); },
       basil: function () { flag("paws"); basilSwipe(); },
       clove: function () { flag("paws"); cloverStamp(); }
