@@ -1,0 +1,13 @@
+/* Mascot signature moves (pilot, Nov 2026). Add class mm-<id> to a mascot <img>/<svg>; add .go to play once, .loop to repeat. */
+@media (prefers-reduced-motion: no-preference){
+.mm-zebritis.go,.mm-zebritis.loop{animation:mm-prance 1.6s ease-in-out;transform-origin:50% 90%}
+.mm-dx.go,.mm-dx.loop{animation:mm-sleuth 1.8s ease-in-out;transform-origin:50% 90%}
+.mm-triviosis.go,.mm-triviosis.loop{animation:mm-bob 1.4s ease-in-out;transform-origin:50% 90%}
+.loop{animation-iteration-count:infinite!important}
+}
+/* Ziggy: a proud little horse trot, then a shy duck (she's definitely a horse) */
+@keyframes mm-prance{0%{transform:none}10%{transform:translateY(-10px) rotate(-6deg)}20%{transform:translateY(0) rotate(0)}30%{transform:translateY(-10px) rotate(6deg)}40%{transform:translateY(0)}50%{transform:translateY(-12px) rotate(-4deg)}60%{transform:translateY(0)}72%{transform:scale(1.04,.86) translateY(4px)}84%{transform:scale(.96,.9) translateY(6px) rotate(-3deg)}100%{transform:none}}
+/* Dex: sneaky lean left, lean right, then a dramatic spin for the reveal */
+@keyframes mm-sleuth{0%{transform:none}15%{transform:translateX(-8px) rotate(-10deg)}30%{transform:translateX(-8px) rotate(-10deg)}45%{transform:translateX(8px) rotate(10deg)}60%{transform:translateX(8px) rotate(10deg)}75%{transform:rotateY(180deg) scale(1.08)}90%{transform:rotateY(360deg) scale(1.08)}100%{transform:none}}
+/* Echo: parrot head-bob, side to side with a squash, then a big know-it-all puff */
+@keyframes mm-bob{0%{transform:none}12%{transform:translateX(-5px) scale(1.04,.94)}24%{transform:translateX(5px) scale(.96,1.06)}36%{transform:translateX(-5px) scale(1.04,.94)}48%{transform:translateX(5px) scale(.96,1.06)}62%{transform:none}78%{transform:scale(1.15)}100%{transform:none}}
