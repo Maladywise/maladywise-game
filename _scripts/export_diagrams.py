@@ -283,7 +283,8 @@ def render(ex_keys, dds):
 # ---------- page updates ----------
 def image_obj(url, alt, w, h):
     return {"@type": "ImageObject", "contentUrl": url, "url": url, "caption": alt, "width": w, "height": h,
-            "license": LICENCE, "acquireLicensePage": LICENCE, "creditText": CREDIT, "copyrightNotice": CREDIT}
+            "license": LICENCE, "acquireLicensePage": LICENCE, "creditText": CREDIT, "copyrightNotice": CREDIT,
+            "creator": {"@type": "Organization", "name": CREDIT}}
 
 
 def set_image_ld(src, objs):
