@@ -178,7 +178,10 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 
 ## X: 8:30pm "late" slot for picture-led extras (from 20 Nov 2026, owner's request)
 - Owner-approved extra posts (current health news with sass, and "X is cool" anatomy posts with our own anatomy-quiz diagrams) go in `"slot": "late"` (8:30pm Sydney) with `"planned": true`: they land in Typefully as planned drafts and only post once the owner confirms them. `"image": "assets/social/..."` attaches an exact picture; news posts use `"image": true` (the linked fact sheet's card).
-- Same rules: picture in post 1, no link in post 1, link in the reply, at most 1 hashtag, sass at hype or the reader's guess, never at patients. Every fact checked.
+- Voice (owner, 20 Nov): written for doctors first, still useful to everyone. Dense and skimmable: a doctor reads it, absorbs it, moves on. Light sass only.
+- News: text only is fine. Give the date (approval/decision), rough cost, effectiveness (trial name + number vs placebo/comparator), and one practical clinical snippet (interactions, who to test/vaccinate, red flags). A reply may link the regulator listing or a reputable news source; a maladywise.com link is optional, not required.
+- Anatomy/"X is cool": our diagram + the fact + a "Pearl:" that changes practice (sign, red flag, where pathology happens). No site link needed.
+- Every fact checked against a source; no question-bait for its own sake; at most 1 hashtag.
 
 ## X: daily noon "trend or pearl" quiz (from 20 Nov 2026, owner's request)
 - One extra post a day at **12:30pm Sydney** (`"slot": "noon"`), written by the 7:43pm evening trends task for TOMORROW into `_social/queue.json`. The owner has approved these to post automatically (no approval step). X replies are still on demand only.

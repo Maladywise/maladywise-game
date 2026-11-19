@@ -331,12 +331,11 @@
   {
    "date": "2026-11-21",
    "slot": "late",
-   "note": "News: Foundayo (orforglipron) TGA approval (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "News: Foundayo (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "Australia just approved a GLP-1 weight-loss pill.\n\nFoundayo (orforglipron) got TGA approval this week: one tablet a day, any time, no food or water rules.\n\nNo needle. No PBS listing yet either, so your wallet still feels the jab.\n\nPen or pill?",
-    "How GLP-1 medicines work, side effects and costs → https://maladywise.com/glp-1/"
+    "Foundayo (orforglipron) is now TGA-registered (Lilly, 17 Nov).\n\n• Daily oral GLP-1, any time, no food or water rules (unlike Rybelsus)\n• ATTAIN-1: −11% body weight at 72 wks on top dose (placebo −2%)\n• ~$250–370/month, private script, not PBS\n\nPen or pill?",
+    "For prescribers:\n• Hypo risk with insulin or a sulfonylurea: consider lowering those\n• Don't combine with another GLP-1\n• GI effects peak during dose increases; 5–10% stopped for side effects in ATTAIN-1\n• Not in pregnancy\n\nhttps://thenightly.com.au/society/health/tga-approves-first-of-its-kind-glp-1-weight-loss-pill-foundayo-for-australian-use-c-23171652"
    ],
-   "image": true,
    "planned": true,
    "pin": true,
    "typefully_id": "12041880",
@@ -383,12 +382,11 @@
   {
    "date": "2026-11-22",
    "slot": "late",
-   "note": "News: US loses measles elimination status (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "News: US loses measles elimination status (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "After 26 years, the US has officially lost its measles elimination status. PAHO confirmed it on 17 Nov: the same strain spread for over 12 months.\n\n5,412 US cases this year so far. Canada lost its status in 2025.\n\nStill think it's 'just a rash'?",
-    "Measles symptoms, who's at risk and the vaccine → https://maladywise.com/measles/"
+    "The US lost measles elimination status on 17 Nov (PAHO), after 26 years. 5,412 US cases so far in 2026.\n\nClinical: infectious 4 days before to 4 days after the rash. Airborne, lingers up to 2 hrs in a room.\n\nBorn 1966 or later without 2 documented MMRs? Vaccinate.",
+    "https://www.contagionlive.com/view/it-s-official-us-loses-measles-elimination-status"
    ],
-   "image": true,
    "planned": true,
    "pin": true,
    "typefully_id": "12041882",
@@ -437,12 +435,11 @@
   {
    "date": "2026-11-23",
    "slot": "late",
-   "note": "News: capsule sponge test (NICE draft, 16 Nov) (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "News: capsule sponge test (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "Swallow a pill on a string. It turns into a sponge, gets pulled back up, and brings back cells from your oesophagus.\n\nNICE draft guidance (16 Nov) backs it for Barrett's oesophagus checks in England. A trial found about 10x more Barrett's than usual care.\n\nWould you swallow it?",
-    "Reflux, heartburn and when to worry → https://maladywise.com/reflux/"
+    "NICE draft guidance (16 Nov): the capsule sponge for Barrett's oesophagus in England.\n\nSwallow a capsule on a string. It expands to a 50p-sized sponge, gets pulled back up, and collects cells. Done by a GP or nurse, no scope.\n\nBEST3: ~10x more Barrett's found than usual care.",
+    "Not a replacement for a scope when there are red flags (dysphagia, weight loss, GI bleeding, anaemia).\n\nhttps://news.cancerresearchuk.org/2026/11/16/capsule-sponge-recommended-for-thousands-more-people-on-the-nhs/"
    ],
-   "image": true,
    "planned": true,
    "pin": true,
    "typefully_id": "12041885",
@@ -491,10 +488,9 @@
   {
    "date": "2026-11-24",
    "slot": "late",
-   "note": "X is cool: circle of Willis (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "X is cool: circle of Willis (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "Your brain has a roundabout.\n\nThe circle of Willis links the front and back blood supply, so if one artery slowly narrows, blood can take a detour.\n\nPlot twist: only about half of people have a complete circle.\n\nFull roundabout or cul-de-sac? #MedEd",
-    "Name every artery in the circle → https://maladywise.com/anatomy-quiz/circle-of-willis/"
+    "Circle of Willis, the brain's roundabout: links front and back circulation, so a slowly blocked carotid gets bypassed. Only ~half of us have a complete one.\n\nPearl: the anterior communicating artery (highlighted) is the top site for berry aneurysms. Thunderclap headache = scan."
    ],
    "image": "assets/social/xcool/circle-of-willis.png",
    "planned": true,
@@ -545,10 +541,9 @@
   {
    "date": "2026-11-25",
    "slot": "late",
-   "note": "X is cool: widow-maker LAD (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "X is cool: widow-maker LAD (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "The highlighted artery has a nickname: 'the widow-maker'.\n\nA blockage high in the LAD knocks out a huge chunk of the left ventricle, fast.\n\nCardiology: not big on romance.\n\nCan you name the other two main coronary arteries? #MedEd",
-    "Test yourself on the coronary arteries → https://maladywise.com/anatomy-quiz/coronary-arteries/"
+    "The LAD (highlighted), aka the widow-maker. Proximal occlusion takes out much of the anterior wall and septum.\n\nPearl: Wellens' sign. Deep or biphasic T waves in V2–V3 in a now pain-free patient = critical proximal LAD stenosis. Don't stress test. Refer urgently."
    ],
    "image": "assets/social/xcool/coronary-arteries.png",
    "planned": true,
@@ -573,10 +568,9 @@
   {
    "date": "2026-11-26",
    "slot": "late",
-   "note": "X is cool: blind spot (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "X is cool: blind spot (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "You have a blind spot in each eye. Right now.\n\nWhere the optic nerve (highlighted) leaves, there are no light-sensing cells at all. Your brain quietly fills in the gap and says nothing.\n\nGaslit by your own brain. Ever found yours? #MedEd",
-    "More eye anatomy → https://maladywise.com/anatomy-quiz/eye/"
+    "Everyone has a blind spot: where the optic nerve (highlighted) leaves the eye, there are no photoreceptors. The brain fills the gap and says nothing.\n\nPearl: an enlarged blind spot on fields is a clue to papilloedema. Headache plus blurred vision? Think IIH."
    ],
    "image": "assets/social/xcool/eye.png",
    "planned": true,
@@ -609,10 +603,9 @@
   {
    "date": "2026-11-27",
    "slot": "late",
-   "note": "X is cool: stapes and stapedius (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "X is cool: stapes and stapedius (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "The smallest bone in your body: the stapes (highlighted), about 3 mm, shaped like a stirrup.\n\nIts bodyguard, stapedius, is the smallest skeletal muscle. It damps loud sounds.\n\nTiny, doing the heavy lifting. Which nerve runs that muscle? #MedEd",
-    "The facial nerve. That's why Bell's palsy can make ordinary sounds painfully loud.\n\nMore ear anatomy → https://maladywise.com/anatomy-quiz/ear/"
+    "The stapes (highlighted): smallest bone in the body, about 3 mm. Its muscle, stapedius, is the smallest skeletal muscle and damps loud sound.\n\nPearl: hyperacusis in Bell's palsy puts the lesion above the nerve to stapedius. Otosclerosis fixes the stapes: conductive loss."
    ],
    "image": "assets/social/xcool/ear.png",
    "planned": true,
@@ -663,10 +656,9 @@
   {
    "date": "2026-11-28",
    "slot": "late",
-   "note": "X is cool: shoulder-tip pain (C4) (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "X is cool: shoulder-tip pain (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "Gallbladder trouble, but the pain's in your shoulder tip? Your diaphragm is lying to you.\n\nIts nerve (phrenic) shares roots C3 to C5, so your brain files the pain under the shoulder: C4, highlighted.\n\nWho's had shoulder pain after keyhole surgery? #MedEd",
-    "Learn the dermatome map → https://maladywise.com/anatomy-quiz/dermatomes/"
+    "Shoulder-tip pain from the abdomen: the diaphragm's nerve (phrenic, C3–C5) shares the C4 dermatome (highlighted), so the brain blames the shoulder.\n\nPearl: Kehr's sign. Left shoulder-tip pain after trauma = think splenic rupture. Childbearing age? Ruptured ectopic."
    ],
    "image": "assets/social/xcool/dermatomes.png",
    "planned": true,
@@ -709,10 +701,9 @@
   {
    "date": "2026-11-29",
    "slot": "late",
-   "note": "X is cool: pulmonary veins (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "X is cool: pulmonary veins (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "Veins carry blood low in oxygen. True?\n\nMostly. The pulmonary veins (highlighted) break the rule: the only veins carrying oxygen-rich blood, from the lungs to the left atrium.\n\nAnatomy loves an exception. Which 'rule' tripped you up in exams? #MedEd",
-    "More lung anatomy → https://maladywise.com/anatomy-quiz/lungs/"
+    "Pulmonary veins (highlighted): the only veins carrying oxygen-rich blood, lungs to left atrium.\n\nPearl: most AF triggers fire from muscle sleeves in these veins. That's why AF ablation is 'pulmonary vein isolation'."
    ],
    "image": "assets/social/xcool/lungs.png",
    "planned": true,
@@ -763,10 +754,9 @@
   {
    "date": "2026-11-30",
    "slot": "late",
-   "note": "X is cool: patent foramen ovale (owner request 20 Nov: picture-led posts; planned draft, owner confirms in Typefully)",
+   "note": "X is cool: patent foramen ovale (rewritten 20 Nov: clinician-first style; planned draft, owner confirms)",
    "thread": [
-    "About 1 in 4 adults still has a small hole in the heart left over from before birth.\n\nThe patent foramen ovale: a flap in the wall between the upper chambers (highlighted). Usually harmless. Occasionally a big deal.\n\nDid you know you might have one? #MedEd",
-    "More heart anatomy → https://maladywise.com/anatomy-quiz/heart/"
+    "About 1 in 4 adults has a patent foramen ovale (highlighted): the fetal flap between the atria that never sealed. Usually harmless.\n\nPearl: in selected adults under 60 with cryptogenic stroke, PFO closure cuts recurrence. Also a risk for diving decompression illness."
    ],
    "image": "assets/social/xcool/heart.png",
    "planned": true,
