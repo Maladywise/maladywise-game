@@ -100,7 +100,8 @@ async function history(days) {
         const d = dayAgo(i), tot = Number(await kv.get("played:" + d) || 0);
         const g = await kv.hGetAll("games:" + d), games = {};
         for (const k in g) games[k] = Number(g[k] || 0);
-        out.days.push({ d, n: tot, g: games });
+        const pv = Number(await kv.get("pv:" + d) || 0);
+        out.days.push({ d, n: tot, g: games, pv });
         if (i > 0 && i <= 28) { const hr = await kv.hGetAll("playedh:" + d); if (hr && Object.keys(hr).length) { out.hourDays++; for (const k in hr) out.hours[Number(k) % 24] += Number(hr[k] || 0); } }
       }
     } catch (e) {}
@@ -117,6 +118,14 @@ async function addView(g) {
   if (kv && kv.isReady) {
     try { await kv.hIncrBy("views:" + d, g, 1); await kv.expire("views:" + d, 60 * 60 * 24 * 40); } catch (e) {}
   }
+}
+// page views: one per page load (each tab load gets a new random id; first ping = one view)
+let memPv = 0, memPvDay = "";
+async function addPageView() {
+  const d = sydDay();
+  if (memPvDay !== d) { memPvDay = d; memPv = 0; }
+  memPv++;
+  if (kv && kv.isReady) { try { await kv.incr("pv:" + d); await kv.expire("pv:" + d, 60 * 60 * 24 * 400); } catch (e) {} }
 }
 async function hubRank(days) {
   const out = {};
@@ -309,7 +318,7 @@ const server = http.createServer(async (req, res) => {
   try {
     if (url.pathname === "/ping") {
       const id = clean(url.searchParams.get("id"), 24);
-      if (id && !limited(ip, 400)) { const g = clean(url.searchParams.get("g"), 24); seen.set(id, { t: Date.now(), g }); await addView(g); }
+      if (id && !limited(ip, 400)) { const g = clean(url.searchParams.get("g"), 24); const fresh = !seen.has(id); seen.set(id, { t: Date.now(), g }); await addView(g); if (fresh) await addPageView(); }
       res.writeHead(204); return res.end();
     }
     if (url.pathname === "/done" && req.method === "POST") {
