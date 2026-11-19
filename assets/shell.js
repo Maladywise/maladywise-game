@@ -1041,12 +1041,15 @@
     ["04-01", "04-01", "aprilfools", "April Fools\u2019 Day"],
     ["2027-03-26", "2027-03-29", "easter", "Happy Easter"], ["2028-04-14", "2028-04-17", "easter", "Happy Easter"]
   ];
+  // full moons (Sydney date), computed with PyEphem; holidays above take priority
+  var FULLMOONS = "2026-11-25 2026-12-24 2027-01-22 2027-02-21 2027-03-22 2027-04-21 2027-05-20 2027-06-19 2027-07-19 2027-08-17 2027-09-16 2027-10-16 2027-11-14 2027-12-14 2028-01-12 2028-02-11 2028-03-11 2028-04-09 2028-05-09 2028-06-07 2028-07-07 2028-08-05 2028-09-04 2028-10-04 2028-11-02 2028-12-02 2029-01-01 2029-01-30 2029-03-01 2029-03-30 2029-04-28 2029-05-28 2029-06-26 2029-07-25 2029-08-24 2029-09-23 2029-10-22 2029-11-21 2029-12-21 2030-01-20 2030-02-18 2030-03-20 2030-04-18 2030-05-17 2030-06-16 2030-07-15 2030-08-13 2030-09-12 2030-10-11 2030-11-10 2030-12-10";
   function season() {
     var t = sydToday(), md = t.slice(5), hit = null;
     SEASONS.forEach(function (x) {
       var full = x[0].length > 5, a = x[0], b = x[1] || x[0], v = full ? t : md;
       if (v >= a && v <= b) hit = x;
     });
+    if ((!hit || hit[2] === "movember") && FULLMOONS.indexOf(t) >= 0) hit = [t, "", "fullmoon", "Full moon tonight"];
     return hit ? '<img class="season" src="/assets/season/' + hit[2] + '.svg" width="30" height="30" alt="' + hit[3] + '" title="' + hit[3] + '">' : "";
   }
 
