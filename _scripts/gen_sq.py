@@ -240,14 +240,13 @@ def rhtml():
 title = "Which Medical Specialty Suits You? (Quiz)"
 desc = "Which medical specialty suits you? 14 fun scenario questions match you to GP, emergency, surgery, radiology, psychiatry and more, with real training facts."
 LD = [
- {"@context": "https://schema.org", "@type": "Quiz", "name": title, "description": desc, "url": URL,
-  "inLanguage": "en-AU", "isAccessibleForFree": True, "educationalUse": "Career exploration",
+ {"@context": "https://schema.org", "@type": "WebPage", "name": title, "description": desc, "url": URL,
+  "inLanguage": "en-AU", "isAccessibleForFree": True,
   "about": [{"@type": "Thing", "name": "Medical specialties"}, {"@type": "Thing", "name": "Medical careers"}],
   "audience": {"@type": "Audience", "audienceType": "Medical students, junior doctors, nurses, allied health students and the curious"},
   "author": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"},
   "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"},
-  "dateModified": "2026-11-08",
-  "hasPart": [{"@type": "Question", "name": q, "eduQuestionType": "Multiple choice"} for q, _ in Q]},
+  "dateModified": "2026-11-08"},
  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
    {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQS]},
 ]
