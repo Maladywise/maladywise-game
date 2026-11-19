@@ -1889,6 +1889,13 @@
 "label": "Medicine",
 "title": "ACE inhibitors"
 },
+"medicines-allopurinol": {
+"url": "/medicines/allopurinol/",
+"key": "c1015670e6aa",
+"v": "5d85c31a",
+"label": "Medicine",
+"title": "Allopurinol"
+},
 "medicines-alpha-2-agonists": {
 "url": "/medicines/alpha-2-agonists/",
 "key": "a76ad8e14c04",
@@ -1910,6 +1917,13 @@
 "label": "Medicine",
 "title": "Amoxicillin and Augmentin"
 },
+"medicines-antihistamines": {
+"url": "/medicines/antihistamines/",
+"key": "d09f447e499a",
+"v": "01e81de1",
+"label": "Medicine",
+"title": "Antihistamines"
+},
 "medicines-antiplatelets": {
 "url": "/medicines/antiplatelets/",
 "key": "7d480df47856",
@@ -1924,12 +1938,26 @@
 "label": "Medicine",
 "title": "Atomoxetine"
 },
+"medicines-benzodiazepines": {
+"url": "/medicines/benzodiazepines/",
+"key": "f61376c14e10",
+"v": "85c0715f",
+"label": "Medicine",
+"title": "Benzodiazepines"
+},
 "medicines-beta-blockers": {
 "url": "/medicines/beta-blockers/",
 "key": "84d6aed44712",
 "v": "4d6ed880",
 "label": "Medicine",
 "title": "Beta blockers"
+},
+"medicines-bisphosphonates": {
+"url": "/medicines/bisphosphonates/",
+"key": "d0a994385f75",
+"v": "a156acac",
+"label": "Medicine",
+"title": "Alendronate and bisphosphonates"
 },
 "medicines-blood-thinners": {
 "url": "/medicines/blood-thinners/",
@@ -1965,6 +1993,20 @@
 "v": "20710eb3",
 "label": "Medicine",
 "title": "Clonidine"
+},
+"medicines-colchicine": {
+"url": "/medicines/colchicine/",
+"key": "e94a2cdce190",
+"v": "5096230d",
+"label": "Medicine",
+"title": "Colchicine"
+},
+"medicines-denosumab": {
+"url": "/medicines/denosumab/",
+"key": "f8d4e0266549",
+"v": "4777e2eb",
+"label": "Medicine",
+"title": "Denosumab (Prolia)"
 },
 "medicines-dexamfetamine": {
 "url": "/medicines/dexamfetamine/",
@@ -2008,6 +2050,13 @@
 "label": "Medicine",
 "title": "Escitalopram"
 },
+"medicines-finasteride": {
+"url": "/medicines/finasteride/",
+"key": "eba1eafad2c2",
+"v": "998023de",
+"label": "Medicine",
+"title": "Finasteride"
+},
 "medicines-fluoxetine": {
 "url": "/medicines/fluoxetine/",
 "key": "a0a21653f162",
@@ -2043,12 +2092,40 @@
 "label": "Medicine",
 "title": "Guanfacine"
 },
+"medicines-hydroxychloroquine": {
+"url": "/medicines/hydroxychloroquine/",
+"key": "d85d161aa4c4",
+"v": "eefd1f5f",
+"label": "Medicine",
+"title": "Hydroxychloroquine"
+},
+"medicines-iron-tablets": {
+"url": "/medicines/iron-tablets/",
+"key": "b1b960bb7c1b",
+"v": "bb0f8a33",
+"label": "Medicine",
+"title": "Iron tablets"
+},
+"medicines-isotretinoin": {
+"url": "/medicines/isotretinoin/",
+"key": "a0f19e02e930",
+"v": "7fa26552",
+"label": "Medicine",
+"title": "Isotretinoin"
+},
 "medicines-lamotrigine": {
 "url": "/medicines/lamotrigine/",
 "key": "1b02e1c6e1d5",
 "v": "5e7bd412",
 "label": "Medicine",
 "title": "Lamotrigine"
+},
+"medicines-levothyroxine": {
+"url": "/medicines/levothyroxine/",
+"key": "f5183f923755",
+"v": "05f44b50",
+"label": "Medicine",
+"title": "Levothyroxine (thyroxine)"
 },
 "medicines-low-dose-naltrexone": {
 "url": "/medicines/low-dose-naltrexone/",
@@ -2057,12 +2134,26 @@
 "label": "Medicine",
 "title": "Low-dose naltrexone (LDN)"
 },
+"medicines-melatonin": {
+"url": "/medicines/melatonin/",
+"key": "e823138222b3",
+"v": "94f09772",
+"label": "Medicine",
+"title": "Melatonin"
+},
 "medicines-memantine": {
 "url": "/medicines/memantine/",
 "key": "163afafd986c",
 "v": "ae4715e9",
 "label": "Medicine",
 "title": "Memantine"
+},
+"medicines-menopause-hormone-therapy": {
+"url": "/medicines/menopause-hormone-therapy/",
+"key": "f3aa08e2006c",
+"v": "4b3b25aa",
+"label": "Medicine",
+"title": "Menopause hormone therapy (MHT)"
 },
 "medicines-metformin": {
 "url": "/medicines/metformin/",
@@ -2071,12 +2162,26 @@
 "label": "Medicine",
 "title": "Metformin"
 },
+"medicines-methotrexate": {
+"url": "/medicines/methotrexate/",
+"key": "e407fda82a48",
+"v": "5f886a26",
+"label": "Medicine",
+"title": "Methotrexate"
+},
 "medicines-methylphenidate": {
 "url": "/medicines/methylphenidate/",
 "key": "371de424a8bb",
 "v": "075ed742",
 "label": "Medicine",
 "title": "Methylphenidate"
+},
+"medicines-minoxidil": {
+"url": "/medicines/minoxidil/",
+"key": "71defbfa427a",
+"v": "63439030",
+"label": "Medicine",
+"title": "Minoxidil"
 },
 "medicines-mirtazapine": {
 "url": "/medicines/mirtazapine/",
@@ -2092,6 +2197,20 @@
 "label": "Medicine",
 "title": "Modafinil"
 },
+"medicines-montelukast": {
+"url": "/medicines/montelukast/",
+"key": "5cdf59adb285",
+"v": "f377a342",
+"label": "Medicine",
+"title": "Montelukast"
+},
+"medicines-naltrexone": {
+"url": "/medicines/naltrexone/",
+"key": "77df183ad3aa",
+"v": "de8002a8",
+"label": "Medicine",
+"title": "Naltrexone (for alcohol)"
+},
 "medicines-nsaids": {
 "url": "/medicines/nsaids/",
 "key": "60aaa1f455bd",
@@ -2099,12 +2218,26 @@
 "label": "Medicine",
 "title": "Anti-inflammatories (NSAIDs)"
 },
+"medicines-ondansetron": {
+"url": "/medicines/ondansetron/",
+"key": "d32cb4c6588d",
+"v": "cd423709",
+"label": "Medicine",
+"title": "Ondansetron"
+},
 "medicines-opioids": {
 "url": "/medicines/opioids/",
 "key": "d7b6296081b5",
 "v": "b477a908",
 "label": "Medicine",
 "title": "Opioid pain medicines"
+},
+"medicines-overactive-bladder-medicines": {
+"url": "/medicines/overactive-bladder-medicines/",
+"key": "2e255762f079",
+"v": "ee98b02f",
+"label": "Medicine",
+"title": "Overactive bladder medicines"
 },
 "medicines-paracetamol": {
 "url": "/medicines/paracetamol/",
@@ -2127,6 +2260,13 @@
 "label": "Medicine",
 "title": "Proton pump inhibitors (PPIs)"
 },
+"medicines-prednisolone": {
+"url": "/medicines/prednisolone/",
+"key": "d775a836d4d0",
+"v": "0bae70ea",
+"label": "Medicine",
+"title": "Prednisolone and prednisone"
+},
 "medicines-pregabalin": {
 "url": "/medicines/pregabalin/",
 "key": "d9ba5d43fe04",
@@ -2134,12 +2274,26 @@
 "label": "Medicine",
 "title": "Pregabalin"
 },
+"medicines-preventer-inhalers": {
+"url": "/medicines/preventer-inhalers/",
+"key": "dd17748270e5",
+"v": "15efb3b4",
+"label": "Medicine",
+"title": "Preventer inhalers (inhaled corticosteroids)"
+},
 "medicines-quetiapine": {
 "url": "/medicines/quetiapine/",
 "key": "221b82dd6fc2",
 "v": "d11d10f0",
 "label": "Medicine",
 "title": "Quetiapine"
+},
+"medicines-salbutamol": {
+"url": "/medicines/salbutamol/",
+"key": "b665e111827b",
+"v": "9575130d",
+"label": "Medicine",
+"title": "Salbutamol (blue reliever puffer)"
 },
 "medicines-sartans": {
 "url": "/medicines/sartans/",
@@ -2169,12 +2323,40 @@
 "label": "Medicine",
 "title": "SGLT2 inhibitors"
 },
+"medicines-snris": {
+"url": "/medicines/snris/",
+"key": "fc0dbdbf3de6",
+"v": "180791c2",
+"label": "Medicine",
+"title": "Venlafaxine and desvenlafaxine (SNRIs)"
+},
 "medicines-statins": {
 "url": "/medicines/statins/",
 "key": "2ec13d189c7b",
 "v": "40e13f7d",
 "label": "Medicine",
 "title": "Statins"
+},
+"medicines-tamsulosin": {
+"url": "/medicines/tamsulosin/",
+"key": "d099d4cfe994",
+"v": "929d5b8c",
+"label": "Medicine",
+"title": "Tamsulosin"
+},
+"medicines-testosterone": {
+"url": "/medicines/testosterone/",
+"key": "26af43b1794a",
+"v": "9debe602",
+"label": "Medicine",
+"title": "Testosterone therapy"
+},
+"medicines-the-pill": {
+"url": "/medicines/the-pill/",
+"key": "58ab104f26c9",
+"v": "53f53595",
+"label": "Medicine",
+"title": "The combined pill"
 },
 "medicines-tirzepatide": {
 "url": "/medicines/tirzepatide/",
@@ -2190,12 +2372,33 @@
 "label": "Medicine",
 "title": "Antibiotics for urine infections (UTI)"
 },
+"medicines-varenicline": {
+"url": "/medicines/varenicline/",
+"key": "1b9327396518",
+"v": "f296f627",
+"label": "Medicine",
+"title": "Varenicline"
+},
+"medicines-vitamin-d-supplements": {
+"url": "/medicines/vitamin-d-supplements/",
+"key": "2dff8174323e",
+"v": "dfce17e4",
+"label": "Medicine",
+"title": "Vitamin D supplements"
+},
 "medicines-weight-loss-medicines": {
 "url": "/medicines/weight-loss-medicines/",
 "key": "72d32efc9ecf",
 "v": "bdbed305",
 "label": "Medicine",
 "title": "Weight-loss medicines"
+},
+"medicines-zolpidem": {
+"url": "/medicines/zolpidem/",
+"key": "3f4bc0a1aba2",
+"v": "3840140a",
+"label": "Medicine",
+"title": "Zolpidem and zopiclone (Z-drugs)"
 },
 "mediterranean-diet": {
 "url": "/mediterranean-diet/",
