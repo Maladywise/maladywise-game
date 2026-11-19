@@ -3625,6 +3625,13 @@
 "label": "Condition",
 "title": "Trigger Finger"
 },
+"tuberculosis": {
+"url": "/tuberculosis/",
+"key": "6b8523ec944b",
+"v": "73cc739b",
+"label": "Condition",
+"title": "Tuberculosis (TB)"
+},
 "type-2-diabetes": {
 "url": "/type-2-diabetes/",
 "key": "91b5b250b2b9",
