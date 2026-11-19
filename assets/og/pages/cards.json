@@ -1448,6 +1448,13 @@
 "label": "Fact sheet",
 "title": "Leptospirosis"
 },
+"lipoedema": {
+"url": "/lipoedema/",
+"key": "3755a17d110c",
+"v": "f2f7affe",
+"label": "Condition",
+"title": "Lipoedema"
+},
 "long-covid": {
 "url": "/long-covid/",
 "key": "5e0711413e95",
@@ -1986,6 +1993,13 @@
 "v": "5e7bd412",
 "label": "Medicine",
 "title": "Lamotrigine"
+},
+"medicines-low-dose-naltrexone": {
+"url": "/medicines/low-dose-naltrexone/",
+"key": "712108d17bc9",
+"v": "5bb924f2",
+"label": "Medicine",
+"title": "Low-dose naltrexone (LDN)"
 },
 "medicines-memantine": {
 "url": "/medicines/memantine/",
