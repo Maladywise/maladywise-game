@@ -978,39 +978,43 @@
   "date": "2026-11-25",
   "number": 40,
   "difficulty": "Medium",
-  "title": "The cat is sleepy too",
-  "answer": "Carbon monoxide poisoning",
+  "title": "Launch-week breakfast",
+  "answer": "Juvenile myoclonic epilepsy",
   "accept": [
-   "carbon monoxide",
-   "carbon monoxide poisoning",
-   "co poisoning",
-   "co toxicity",
-   "carboxyhaemoglobin",
-   "carboxyhemoglobin",
-   "carbon monoxide toxicity"
+   "jme",
+   "juvenile myoclonic epilepsy",
+   "juvenile myoclonic",
+   "janz syndrome",
+   "janz",
+   "myoclonic epilepsy",
+   "juvenile myoclonic epilepsy (jme)",
+   "impulsive petit mal",
+   "idiopathic generalised epilepsy",
+   "idiopathic generalized epilepsy"
   ],
   "clues": [
    {
-    "t": "35-year-old woman with headaches and nausea for 2 weeks."
+    "t": "17-year-old woman whose family says she's been 'clumsy in the mornings' for a year."
    },
    {
-    "t": "Worse at home in the evenings, better at work."
+    "t": "She drops her toothbrush, spills tea, and once flung her cereal spoon across the kitchen."
    },
    {
-    "t": "Her wife and their son have similar headaches."
+    "t": "The jerks come within an hour of waking, never in the evening, and she stays fully aware."
    },
    {
-    "t": "The family cat has been unusually lethargic."
+    "t": "After staying up all night with a brand-new video game, she had a generalised tonic-clonic seizure at breakfast."
    },
    {
-    "t": "SpO₂ 99% on room air.",
+    "t": "Neurological examination and brain MRI are normal.",
     "d": 1
    },
    {
-    "t": "They started using an old gas space heater this month."
+    "t": "EEG: generalised 4–6 Hz polyspike-and-wave discharges, set off by flashing lights.",
+    "d": 1
    }
   ],
-  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO₂ is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
+  "pearl": "Morning jerks are often brushed off as clumsiness until a big seizure arrives. Sleep loss, alcohol and flashing lights are classic triggers. It's usually lifelong but well controlled with medicine; valproate works well but carries serious pregnancy risks, so women who could become pregnant are usually offered alternatives."
  },
  {
   "date": "2026-11-26",

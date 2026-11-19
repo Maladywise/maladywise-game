@@ -779,5 +779,41 @@
    }
   ],
   "pearl": "Dry eyes plus dry mouth is the core of it. Schirmer's test measures tear production. Lymphoma risk is raised, so a persistently enlarged parotid gland needs review."
+ },
+ {
+  "difficulty": "Medium",
+  "title": "The cat is sleepy too",
+  "answer": "Carbon monoxide poisoning",
+  "accept": [
+   "carbon monoxide",
+   "carbon monoxide poisoning",
+   "co poisoning",
+   "co toxicity",
+   "carboxyhaemoglobin",
+   "carboxyhemoglobin",
+   "carbon monoxide toxicity"
+  ],
+  "clues": [
+   {
+    "t": "35-year-old woman with headaches and nausea for 2 weeks."
+   },
+   {
+    "t": "Worse at home in the evenings, better at work."
+   },
+   {
+    "t": "Her wife and their son have similar headaches."
+   },
+   {
+    "t": "The family cat has been unusually lethargic."
+   },
+   {
+    "t": "SpO₂ 99% on room air.",
+    "d": 1
+   },
+   {
+    "t": "They started using an old gas space heater this month."
+   }
+  ],
+  "pearl": "Pulse oximeters read carboxyhaemoglobin as oxygenated, so a normal SpO₂ is falsely reassuring. Order a venous COHb, and always ask whether others at home are unwell."
  }
 ]
