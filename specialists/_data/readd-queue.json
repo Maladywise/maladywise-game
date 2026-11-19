@@ -1,350 +1,39 @@
 {
- "_about": "Practices removed on 19 Nov 2026 (their listings came from Healthdirect/NHSD, which we may not use). Re-add each ONLY from its own website (and Ahpra/college pages), never from Healthdirect. Delete this file when done.",
- "queue": [
-  {
-   "file": "allied-b.json",
-   "name": "Med-Psych",
-   "website": "https://www.med-psych.com.au/"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Tidal Health Clinic",
-   "website": "https://www.tidalhealthclinic.com.au"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Hunter Clinical Services",
-   "website": "https://hunterclinicalservices.com.au"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Peak Dietetics",
-   "website": "https://peakdietetics.com.au"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Hunter Dietetics (Belmont)",
-   "website": "http://www.hunterdietetics.com.au"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Glow Wellness and Nutrition",
-   "website": "https://www.glowwellness.au/"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "New Ability Health",
-   "website": "https://newabilityhealth.com.au/"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Hunter Allied Care",
-   "website": "http://www.hunteralliedcare.com.au"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Designer Dietitian",
-   "website": "http://www.designerdietitian.com"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Local Hearing Aid Specialists",
-   "website": "https://localhearingaidspecialists.com/contact-us"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Family Hearing Centre",
-   "website": "https://familyhearing.com.au"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "bloom hearing specialists (Wallsend)",
-   "website": "https://www.bloomhearing.com.au/"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Select Hearing (Raymond Terrace)",
-   "website": "http://www.myselecthearing.com.au"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "Specsavers Audiology Charlestown",
-   "website": "https://www.specsavers.com.au/hearing"
-  },
-  {
-   "file": "allied-b.json",
-   "name": "On Point Diabetes",
-   "website": "http://www.onpointdiabetes.com.au/"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Peak Physio - Rutherford",
-   "website": "https://www.peak-physio.com.au/"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "East Maitland Physiotherapy",
-   "website": "http://www.eastmaitphysio.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Macquarie Physiotherapy",
-   "website": "https://macquariephysiotherapy.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Advanced Physiotherapy & Exercise Physiology",
-   "website": "https://www.newcastle-physiotherapy.com.au/"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Levaro Allied Health",
-   "website": "https://levaro.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Beyond Boundaries Rehab",
-   "website": "https://beyondboundariesrehab.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Mitchell Physiotherapy",
-   "website": "http://www.mitchellphysio.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "PhysioStudio",
-   "website": "https://physiostudio.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Victory Allied Health",
-   "website": "https://victoryalliedhealth.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Back In Motion - Kurri Kurri",
-   "website": "https://bodyworxphysio.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Leanda Howard Accredited Exercise Physiologist",
-   "website": "https://leandahoward.com"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Port Stephens Foot Clinic - Raymond Terrace",
-   "website": "https://psfootclinic.com.au/locations/raymond-terrace"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Damian Mather Podiatry",
-   "website": "https://matherpodiatry.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Foot Feat Podiatry",
-   "website": "https://footfeat.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Natural Fit Podiatry & Footwear",
-   "website": "https://naturalfitfootwear.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Better Rehab Newcastle",
-   "website": "https://betterrehab.com.au/newcastle/"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Absolute Injury Solutions",
-   "website": "http://www.absoluteinjury.com.au/"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Unified Health",
-   "website": "https://unifiedhealth.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Humanomics - Edgeworth",
-   "website": "http://www.humanomics.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Stepping Stones Therapy For Children",
-   "website": "https://steppingstonesforchildren.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Leaps & Bounds Speech Pathology - Charlestown",
-   "website": "https://leapsandbounds.net.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Quinn Health & Development",
-   "website": "https://quinnhealth.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Articulate Speech Pathology",
-   "website": "https://articulatespeech.com.au"
-  },
-  {
-   "file": "allied-c.json",
-   "name": "Ethos Health",
-   "website": "https://ethoshealth.com.au"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "Nelson Plaza Clinic",
-   "website": "https://nelsonplaza.com.au"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "Nelson Bay Physiotherapy",
-   "website": "https://www.nelsonbayphysiotherapy.com"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "The Physio Port Stephens",
-   "website": "https://thephysio.net.au"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "Terrace Physio Plus",
-   "website": "https://www.terracephysioplus.com.au"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "Port Stephens Podiatry",
-   "website": "https://www.pspodiatry.com"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "Dynamic Stride Podiatry",
-   "website": "https://www.dspodiatry.com.au"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "Communication Therapy - Salamander Bay",
-   "website": "https://communicationtherapy.com.au"
-  },
-  {
-   "file": "allied-portstephens.json",
-   "name": "Leaps & Bounds Speech Pathology - East Maitland",
-   "website": "https://leapsandbounds.org.au"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Kara Thomson Psychology",
-   "website": "https://www.karathomsonpsychology.com.au/"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Mind Sanctuary",
-   "website": "https://www.themindsanctuary.com.au/"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Ramsay Psychology Charlestown",
-   "website": "http://www.ramsaypsychology.com.au"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Beam Health (Warners Bay)",
-   "website": "https://www.beamservices.com.au/"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Amanda Rodd Psychology",
-   "website": "https://www.amandaroddpsychology.com.au"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Living Mind",
-   "website": "https://www.livingmind.com.au"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Psychological Health and Wellbeing Services",
-   "website": "http://www.phaws.com.au"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Autumn House Psychology",
-   "website": "https://autumnhousepsychology.com.au"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Mindsource Psychology & Counselling",
-   "website": "http://mindsourcepsychologyandcounselling.com.au"
-  },
-  {
-   "file": "allied-psych-2.json",
-   "name": "Elevated Well-being",
-   "website": "http://elevatedwellbeing.com.au"
-  },
-  {
-   "file": "leads-nov.json",
-   "name": "Newcastle Audiology Centre",
-   "website": "https://www.healthdirect.gov.au/australian-health-services/search/newcastle-2300-nsw/audiology/310004004"
-  },
-  {
-   "file": "leads-nov.json",
-   "name": "Port Stephens Audiology",
-   "website": "https://portstephensaudiology.com"
-  },
-  {
-   "file": "leads-nov.json",
-   "name": "Hunter Valley Audiology",
-   "website": "https://www.huntervalleyaudiology.com.au/"
-  },
-  {
-   "file": "spec-college-extra.json",
-   "name": "East Maitland Respiratory and Sleep Clinic",
-   "website": "https://www.emrespiratoryandsleep.com/"
-  },
-  {
-   "file": "spec-surgical.json",
-   "name": "Lake Macquarie Paediatrics",
-   "website": "https://www.lakemacpaediatrics.com.au/"
-  },
-  {
-   "file": "tests-imaging.json",
-   "name": "Hunter Imaging Group Charlestown",
-   "website": "http://www.hunterimaging.com.au/"
-  },
-  {
-   "file": "tests-imaging.json",
-   "name": "Hunter Imaging Group Adamstown",
-   "website": "http://www.hunterimaging.com.au/"
-  },
-  {
-   "file": "tests-imaging.json",
-   "name": "Hunter Imaging Group Rutherford",
-   "website": "http://www.hunterimaging.com.au/"
-  },
-  {
-   "file": "tests-imaging.json",
-   "name": "Hunter Imaging Group Toronto",
-   "website": "http://www.hunterimaging.com.au/"
-  },
-  {
-   "file": "tests-imaging.json",
-   "name": "Hunter Imaging Group Salamander Bay",
-   "website": "http://www.hunterimaging.com.au/"
-  },
-  {
-   "file": "tests-imaging.json",
-   "name": "Hunter Imaging Group Williamtown",
-   "website": "http://www.hunterimaging.com.au/"
-  },
-  {
-   "file": "tests-imaging.json",
-   "name": "Alpenglow Australia Muswellbrook Diagnostic Imaging",
-   "website": "https://alpenglow.com.au"
-  }
- ]
+ "_about": "Practices removed on 19 Nov 2026 (their listings came from Healthdirect/NHSD, which we may not use). Re-add each ONLY from its own website (and Ahpra/college pages), never from Healthdirect. Delete this file when done. Done 20 Nov 2026: 42 re-added; the rest are listed under skipped_20nov with the reason.",
+ "queue": [],
+ "skipped_20nov": {
+  "Med-Psych": "own site gives no address or phone",
+  "Tidal Health Clinic": "site blocks automated reading",
+  "Hunter Clinical Services": "site describes counselling/therapy, not dietetics; credentials not stated",
+  "Peak Dietetics": "own site gives no street address",
+  "Glow Wellness and Nutrition": "own site gives no street address",
+  "Beyond Boundaries Rehab": "website expired",
+  "Back In Motion - Kurri Kurri": "listed website belongs to a different practice (BodyWorx, Millers Forest)",
+  "Victory Allied Health": "site could not be read",
+  "Leanda Howard Accredited Exercise Physiologist": "site did not load",
+  "Natural Fit Podiatry & Footwear": "site gave no readable contact details",
+  "Absolute Injury Solutions": "site now redirects to an ergonomics company with only a PO box and a personal email",
+  "Humanomics - Edgeworth": "site now redirects to a different company",
+  "Terrace Physio Plus": "site did not load",
+  "Port Stephens Podiatry": "site did not load",
+  "Dynamic Stride Podiatry": "site did not load",
+  "Communication Therapy - Salamander Bay": "site did not load",
+  "Ramsay Psychology Charlestown": "site gives no Charlestown street address",
+  "Amanda Rodd Psychology": "site gives no street address",
+  "Psychological Health and Wellbeing Services": "site did not load",
+  "Mindsource Psychology & Counselling": "site gave no readable contact details",
+  "Hunter Valley Audiology": "site did not load",
+  "Hunter Imaging Group Williamtown": "no longer listed on the group's locations page",
+  "East Maitland Respiratory and Sleep Clinic": "site content could not be read",
+  "Hunter Dietetics (Belmont)": "site lists Glendale and Gateshead, not Belmont, and no phone",
+  "New Ability Health": "site gives no street address",
+  "Hunter Allied Care": "site did not load",
+  "Designer Dietitian": "site did not load",
+  "Local Hearing Aid Specialists": "site did not load",
+  "bloom hearing specialists (Wallsend)": "chain site has no readable Wallsend page",
+  "Select Hearing (Raymond Terrace)": "site blocks reading",
+  "Specsavers Audiology Charlestown": "chain site has no Charlestown hearing page",
+  "On Point Diabetes": "site content could not be read",
+  "Newcastle Audiology Centre": "only source was Healthdirect; no own website found"
+ }
 }

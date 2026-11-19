@@ -880,6 +880,43 @@
     ],
     "checked": "2026-11-20",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Family Hearing Centre",
+    "specialty": "Audiology / hearing clinic",
+    "practice": "Family Hearing Centre",
+    "address": "H Plus Consulting Suites, Level 1, Suite 3a, 472 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "",
+    "fax": "",
+    "email": "contact@familyhearing.com.au",
+    "ereferral": "",
+    "website": "https://familyhearing.com.au",
+    "interests": [
+     "Independent, family-owned audiology",
+     "Hearing tests and hearing aids",
+     "Pensioners and DVA veterans",
+     "Telehealth for hearing aid adjustments; home visits if unable to travel"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://familyhearing.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
    }
   ]
  },

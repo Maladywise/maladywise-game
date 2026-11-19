@@ -1001,6 +1001,214 @@
      "https://openmindpsychologists.com.au/our-team/"
     ],
     "checked": "11 November 2026"
+   },
+   {
+    "name": "Kara Thomson Psychology",
+    "specialty": "Psychology (Clinical and forensic)",
+    "practice": "Kara Thomson Psychology",
+    "address": "Evolve Mental Health & Wellbeing Hub, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "0493 190 272",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.karathomsonpsychology.com.au/",
+    "interests": [
+     "Clinical psychology",
+     "Forensic psychology",
+     "Medicare and Bupa ADF registered"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.karathomsonpsychology.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Mind Sanctuary",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Mind Sanctuary",
+    "address": "Level 1, 437 High Street, Maitland NSW 2320",
+    "suburb": "Maitland",
+    "phone": "",
+    "fax": "",
+    "email": "marlene@themindsanctuary.com.au",
+    "ereferral": "",
+    "website": "https://www.themindsanctuary.com.au/",
+    "interests": [
+     "Clinical psychology",
+     "In person and telehealth"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": true,
+     "np_note": "Site says now welcoming new clients"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.themindsanctuary.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Beam Health (Warners Bay)",
+    "specialty": "Psychology, speech pathology, OT and NDIS behaviour support",
+    "practice": "Beam Health (Warners Bay)",
+    "address": "Unit 13, 363 Hillsborough Road, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4954 9333",
+    "fax": "",
+    "email": "warnersbay@beamservices.com.au",
+    "ereferral": "",
+    "website": "https://www.beamservices.com.au/",
+    "interests": [
+     "Psychology, speech pathology and occupational therapy",
+     "NDIS behaviour support"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://beamservices.com.au/contact/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Living Mind",
+    "specialty": "Psychology and speech pathology",
+    "practice": "Living Mind",
+    "address": "5/26-32 Lake Street, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "0481 159 890",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.livingmind.com.au",
+    "interests": [
+     "Clinical psychologists and psychologists"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://livingmind.com.au/contact-us/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Autumn House Psychology",
+    "specialty": "Psychology (Clinical)",
+    "practice": "Autumn House Psychology",
+    "address": "32 Ernest Street, Belmont NSW 2280",
+    "suburb": "Belmont",
+    "phone": "0493 744 872",
+    "fax": "",
+    "email": "admin@autumnhousepsychology.com.au",
+    "ereferral": "",
+    "website": "https://autumnhousepsychology.com.au",
+    "interests": [
+     "Clinical psychology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.autumnhousepsychology.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Elevated Well-being",
+    "specialty": "Psychology and social work",
+    "practice": "Elevated Well-being",
+    "address": "44 Bishopsgate Street, Wickham NSW 2293",
+    "suburb": "Wickham",
+    "phone": "02 4005 0117",
+    "fax": "",
+    "email": "admin@elevatedwellbeing.com.au",
+    "ereferral": "",
+    "website": "http://elevatedwellbeing.com.au",
+    "interests": [
+     "Psychology and social work"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://elevatedwellbeing.com.au/contact/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
    }
   ]
  }

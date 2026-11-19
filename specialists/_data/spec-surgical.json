@@ -6532,6 +6532,40 @@
      "https://ishana.com.au/specialists/dr-prima-paul/"
     ],
     "checked": "11 November 2026"
+   },
+   {
+    "name": "Lake Macquarie Paediatrics",
+    "specialty": "Paediatrics (clinic)",
+    "practice": "Lake Macquarie Paediatrics",
+    "address": "11/472 The Esplanade, Warners Bay NSW 2282",
+    "suburb": "Warners Bay",
+    "phone": "02 4910 0805",
+    "fax": "02 4910 0848",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.lakemacpaediatrics.com.au/",
+    "interests": [
+     "General paediatricians: Dr Vanessa Cairns, Dr Sarahn Lovett, Dr Elizabeth Percival, Dr Krista Monkhouse"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "Children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.lakemacpaediatrics.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
    }
   ]
  },

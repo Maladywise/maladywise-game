@@ -2832,6 +2832,40 @@
     ],
     "checked": "2026-11-10",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Port Stephens Audiology",
+    "specialty": "Audiology clinic",
+    "practice": "Port Stephens Audiology",
+    "address": "Suite 4, 29 Stockton Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "02 4033 2729",
+    "fax": "",
+    "email": "reception@portstephensaudiology.com",
+    "ereferral": "",
+    "website": "https://portstephensaudiology.com",
+    "interests": [
+     "Audiology clinic"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.portstephensaudiology.com/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
    }
   ]
  },

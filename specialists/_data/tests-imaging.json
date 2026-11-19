@@ -566,6 +566,210 @@
     ],
     "checked": "11 November 2026",
     "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Charlestown",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group Charlestown",
+    "address": "Ground Floor, Suite 103, 99 Pacific Highway, Charlestown NSW 2290",
+    "suburb": "Charlestown",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "Radiology and medical imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterimaging.com.au/our-locations/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Adamstown",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group Adamstown",
+    "address": "Suite 2A, 282 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "Radiology and medical imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterimaging.com.au/our-locations/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Rutherford",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group Rutherford",
+    "address": "Shop 1, 9 North Mall, Rutherford NSW 2320",
+    "suburb": "Rutherford",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "Radiology and medical imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterimaging.com.au/our-locations/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Toronto",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group Toronto",
+    "address": "132 Brighton Avenue, Toronto NSW 2283",
+    "suburb": "Toronto",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "Radiology and medical imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterimaging.com.au/our-locations/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Imaging Group Salamander Bay",
+    "specialty": "Radiology and imaging",
+    "practice": "Hunter Imaging Group Salamander Bay",
+    "address": "Suite 2, 6 Central Avenue, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "13 23 36",
+    "fax": "1300 297 710",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.hunterimaging.com.au/",
+    "interests": [
+     "Radiology and medical imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hunterimaging.com.au/our-locations/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Alpenglow Australia Muswellbrook Diagnostic Imaging",
+    "specialty": "Radiology and imaging",
+    "practice": "Alpenglow Australia Muswellbrook Diagnostic Imaging",
+    "address": "64 Brook Street, Muswellbrook NSW 2333",
+    "suburb": "Muswellbrook",
+    "phone": "",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://alpenglow.com.au",
+    "interests": [
+     "Radiology and medical imaging"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.alpenglow.com.au/locations"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
    }
   ]
  },

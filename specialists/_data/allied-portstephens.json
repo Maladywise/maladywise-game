@@ -1,7 +1,110 @@
 {
  "physiotherapy": {
   "name": "Physiotherapy",
-  "people": []
+  "people": [
+   {
+    "name": "Nelson Plaza Clinic",
+    "specialty": "Physiotherapy (multidisciplinary clinic)",
+    "practice": "Nelson Plaza Clinic",
+    "address": "29 Stockton Street, Nelson Bay NSW 2315",
+    "suburb": "Nelson Bay",
+    "phone": "02 4981 2555",
+    "fax": "",
+    "email": "clinic@nelsonplaza.com.au",
+    "ereferral": "",
+    "website": "https://nelsonplaza.com.au",
+    "interests": [
+     "Multidisciplinary medical centre with physiotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://nelsonplaza.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Nelson Bay Physiotherapy",
+    "specialty": "Physiotherapy",
+    "practice": "Nelson Bay Physiotherapy",
+    "address": "210 Salamander Way, Salamander Bay NSW 2317",
+    "suburb": "Salamander Bay",
+    "phone": "02 4981 3461",
+    "fax": "",
+    "email": "reception@nelsonbayphysiotherapy.com.au",
+    "ereferral": "",
+    "website": "https://www.nelsonbayphysiotherapy.com",
+    "interests": [
+     "Physiotherapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://nelsonbayphysiotherapy.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Physio Port Stephens",
+    "specialty": "Physiotherapy and exercise physiology",
+    "practice": "The Physio Port Stephens",
+    "address": "29 Sandy Point Road, Corlette NSW 2315",
+    "suburb": "Corlette",
+    "phone": "02 4072 1759",
+    "fax": "",
+    "email": "hello@thephysio.net.au",
+    "ereferral": "",
+    "website": "https://thephysio.net.au",
+    "interests": [
+     "Physiotherapy and exercise physiology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://thephysio.net.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   }
+  ]
  },
  "podiatry": {
   "name": "Podiatry",
@@ -9,7 +112,42 @@
  },
  "speech-pathology-paediatric": {
   "name": "Speech pathology (children)",
-  "people": []
+  "people": [
+   {
+    "name": "Leaps & Bounds Speech Pathology - East Maitland",
+    "specialty": "Speech pathology",
+    "practice": "Leaps & Bounds Speech Pathology - East Maitland",
+    "address": "20 Bruce Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 7171",
+    "fax": "",
+    "email": "adminem@leapsandbounds.net.au",
+    "ereferral": "",
+    "website": "https://leapsandbounds.org.au",
+    "interests": [
+     "Children's speech pathology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.leapsandbounds.net.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   }
+  ]
  },
  "speech-pathology-adult": {
   "name": "Speech pathology (adults)",
