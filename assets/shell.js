@@ -125,6 +125,9 @@
   // Swap a bare "maladywise.com" (or maladywise.com/<path>/) last line for the full share link.
   function fixShare(t) {
     if (typeof t !== "string") return t;
+    var cr = window.MW_crowd, cg = window.MW_curGame; // today's solve rate (crowdRate), added above the link once
+    if (cr && cg && cr.g === cg.id && cr.pct != null && t.indexOf("% of players") < 0 && /maladywise\.com/.test(t))
+      t = t.replace(/(\n[^\n]*maladywise\.com[^\n]*\s*)$/, "\n" + (cr.pct <= 40 ? "Only " : "") + cr.pct + "% of players solved it today." + "$1");
     return t.replace(/(^|\n)[ \t]*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/[A-Za-z0-9\/_-]*)?(?:\?s=share)?\s*$/, function (m, nl, path) { return nl + shareURL(path); });
   }
   window.MW_shareText = fixShare;
@@ -211,7 +214,7 @@
     setTimeout(function () {
       fetch(LIVE.url + "/rate?g=" + encodeURIComponent(g.id), { mode: "cors" }).then(function (r) { return r.json(); }).then(function (d) {
         if (!d || d.n < LIVE.MIN_SOLVED) return;
-        var pct = Math.round(d.w / d.n * 100), n = d.n.toLocaleString("en-AU"), old = document.querySelector(".mw-crowd"); if (old) old.remove();
+        var pct = Math.round(d.w / d.n * 100), n = d.n.toLocaleString("en-AU"); window.MW_crowd = { g: g.id, pct: pct, win: win }; var old = document.querySelector(".mw-crowd"); if (old) old.remove();
         var msg = win ? (pct <= 30 ? "Only " + pct + "% of today\u2019s " + n + " players solved it. You\u2019re one of them. Show-off." : pct >= 85 ? pct + "% of today\u2019s " + n + " players solved it. Solid, not special. Yet." : "You and " + pct + "% of today\u2019s " + n + " players solved it.")
                       : (pct <= 40 ? "Only " + pct + "% of today\u2019s " + n + " players got it. Tough one. Not just you." : pct + "% of today\u2019s " + n + " players got it. Ouch. Tomorrow\u2019s yours.");
         var el = document.createElement("div"); el.className = "mw-crowd"; el.setAttribute("role", "status");
