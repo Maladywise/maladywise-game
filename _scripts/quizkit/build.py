@@ -7,6 +7,7 @@ from anat import QUIZZES
 from other import ECG, TERMS
 from pharm import PHARM
 from more import SIMPLE
+from physio import PHYS
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
 
@@ -15,7 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://maladywise.com"
 REVIEWED = "16 November 2026"
 ISO = "2026-11-16"
-QKV = "4"  # 4: redrawn rotator cuff and dermatome maps; labels shown once answered
+QKV = "7"  # 4: redrawn rotator cuff and dermatome maps; labels shown once answered
 
 
 def esc(s):
@@ -264,12 +265,37 @@ write("/pharmacology-quiz/", page("/pharmacology-quiz/", PHARM["title"], PHARM["
                                   [quiz_ld("Pharmacology quiz", SITE + "/pharmacology-quiz/", PHARM["qs"], "Pharmacology"), faq_ld(PHARM["faqs"])]))
 
 
+# ---------- physiology subpages (physio.py) ----------
+def phys_nav(cur=None):
+    items = ['<li><a href="/physiology-quiz/%s/">%s</a></li>' % (q["slug"], esc(q["h1"].replace(" Quiz", " quiz"))) for q in PHYS if q["slug"] != cur]
+    items += ['<li><a href="/physiology-quiz/">Mixed physiology quiz</a></li>', '<li><a href="/anatomy-quiz/">Anatomy quizzes</a></li>']
+    return '<h2>More physiology quizzes</h2><nav id="more" data-label="Try another quiz"><ul>%s</ul></nav>' % "".join(items)
+for pz in PHYS:
+    path = "/physiology-quiz/%s/" % pz["slug"]
+    body = "\n".join([
+        '<p class="meta"><a href="/quizzes/">Practice quizzes</a> › <a href="/physiology-quiz/">Physiology quizzes</a> › %s</p>' % esc(pz["h1"].replace(" Physiology Quiz", "")),
+        "<h1>%s</h1>" % esc(pz["h1"]),
+        '<p class="lede">%s</p>' % esc(pz["lede"]),
+        quiz_section(pz["qs"], "phys-" + pz["slug"], pz["h1"], pz["emoji"]),
+        '<p class="qk-cta"><b>Want the parts too?</b> Try the <a href="/anatomy-quiz/">anatomy quizzes</a>, with diagrams of every system.</p>',
+        faq_html(pz["faqs"]),
+        phys_nav(pz["slug"]),
+        reviewed(),
+    ])
+    lds = [quiz_ld(pz["h1"], SITE + path, pz["qs"], pz["h1"].replace(" Quiz", "")), faq_ld(pz["faqs"]),
+           crumbs_ld([("Malady Wise", "/"), ("Practice quizzes", "/quizzes/"), ("Physiology quizzes", "/physiology-quiz/"), (pz["h1"], path)])]
+    write(path, page(path, pz["title"], pz["desc"], "anatomegaly", body, lds))
+PHYS_CARDS = '<h2>Choose an organ</h2><ul class="qk-cards">%s</ul><h2>Mixed physiology quiz</h2>' % "".join(
+    '<li><a href="/physiology-quiz/%s/"><b>%s %s</b><span>%s</span><small data-qk-best="phys-%s" data-qk-n="%d">%d questions</small></a></li>' % (
+        q["slug"], q["emoji"], esc(q["h1"].replace(" Physiology Quiz", "")), esc(q["card"]), q["slug"], len(q["qs"]), len(q["qs"])) for q in PHYS)
+
 # ---------- simple text quizzes (more.py): first aid, physiology, abbreviations, dosage ----------
 for z in SIMPLE:
     others = "".join('<li><a href="%s">%s</a></li>' % (o["path"], esc(o["h1"].split(":")[0])) for o in SIMPLE if o is not z)
     zbody = "\n".join([
         "<h1>%s</h1>" % esc(z["h1"]),
         '<p class="lede">%s</p>' % esc(z["lede"]),
+        PHYS_CARDS if z["path"] == "/physiology-quiz/" else "",
         quiz_section(z["qs"], z["qid"], z["h1"].split(":")[0], z["emoji"]),
         z["cta"],
         faq_html(z["faqs"]),

@@ -81,7 +81,7 @@ svg.ecg .hl-tag.t2{fill:var(--hl2)}
 .qk-rounds a{padding:8px 14px;border-radius:999px;border:1.5px solid var(--brand);color:var(--brand);text-decoration:none;font-weight:600;font-size:14px}
 /* hub cards */
 .qk-cards{list-style:none;margin:12px 0;padding:0;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
-.doc .qk-cards li{margin:0}
+.doc .qk-cards{padding:0}.doc .qk-cards li{margin:0}
 .qk-cards a{display:block;height:100%;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);text-decoration:none}
 .qk-cards a:hover{border-color:var(--brand)}
 .qk-cards b{display:block;font:700 17px var(--title);color:var(--brand)}

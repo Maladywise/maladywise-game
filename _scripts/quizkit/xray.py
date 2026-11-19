@@ -17,7 +17,7 @@ SITE = "https://maladywise.com"
 PATH = "/x-ray-quiz/"
 ISO = "2026-11-08"
 REVIEWED = "8 November 2026"
-QKV = "3"  # quizkit.css with .qk-xr image styles (3: new diagram colours)
+QKV = "7"  # quizkit.css with .qk-xr image styles (3: new diagram colours)
 CUTOFF = "2026-11-08"  # Opacitis images used must be on or before this date
 
 COMMONS_DIR = sys.argv[sys.argv.index("--commons") + 1] if "--commons" in sys.argv else None
