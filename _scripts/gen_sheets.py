@@ -141,7 +141,7 @@ def med(slug, title, desc, h1, name, tags, lede, quick, glance, sass, brands, ho
         index_label="", blurb="", extra=""):
     """se = list of (cls, label, range, [items]); cls in v,c,u,r,vr (very common .. very rare)."""
     url = "/medicines/%s/" % slug
-    out = head(url, title, desc, faq, name, "Drug info", "Drug", [("Malady Wise", "/"), ("Medicines", "/medicines/"), (h1, url)])
+    out = head(url, title, desc, faq, name, "Drug info", "MedicalEntity", [("Malady Wise", "/"), ("Medicines", "/medicines/"), (h1, url)])
     out += "<h1>%s</h1>\n<p class=\"drug-tags\">%s</p>\n<p class=\"lede\">%s</p>\n" % (
         h1, " ".join('<span class="ev %s">%s</span>' % (c, t) for c, t in tags), lede)
     out += "<p class=\"quick-answer\"><b>Quick answer:</b> %s</p>\n" % quick

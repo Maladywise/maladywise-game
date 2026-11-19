@@ -6,7 +6,7 @@ OZ = dict(
     h1="Semaglutide vs Tirzepatide (Ozempic vs Mounjaro)",
     blurb="Weight loss in the head-to-head trial, diabetes, heart benefits, side effects and PBS status in Australia.",
     desc="Semaglutide (Ozempic, Wegovy) vs tirzepatide (Mounjaro): head-to-head weight loss in SURMOUNT-5, diabetes results, side effects and PBS status in Australia.",
-    about={"@type": "Drug", "name": "Semaglutide and tirzepatide"},
+    about={"@type": "MedicalEntity", "name": "Semaglutide and tirzepatide"},
     answer="Both are weekly injections that cut appetite and lower blood sugar. Tirzepatide (Mounjaro) acts on two gut hormones, semaglutide (Ozempic, Wegovy) on one. In the only head-to-head weight trial, people lost about 20% of their weight on tirzepatide versus 14% on semaglutide. Side effects are similar. In Australia, only Ozempic is PBS-subsidised, for type 2 diabetes.",
     body='''<div class="vs">
 <section><h3>Semaglutide (Ozempic, Wegovy)</h3><ul>
