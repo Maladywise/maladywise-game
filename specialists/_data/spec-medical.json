@@ -3897,7 +3897,9 @@
     "email": "",
     "ereferral": "",
     "website": "https://www.allergynewcastle.com.au",
-    "interests": [],
+    "interests": [
+     "Also consults at Coastal Immunology and Allergy Clinic, Erina"
+    ],
     "practical": {
      "telehealth": null,
      "bulk_billing": "no",
@@ -3913,7 +3915,8 @@
     "inclusive": [],
     "sources": [
      "https://allergy.org.au/patients/locate-a-specialist/nsw/4",
-     "https://www.allergynewcastle.com.au/faqs"
+     "https://www.allergynewcastle.com.au/faqs",
+     "https://www.allergy.org.au/find-a-specialist/tag/Gosford"
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
@@ -3985,6 +3988,168 @@
     ],
     "checked": "2026-10-31",
     "ahpra": "not checked"
+   },
+   {
+    "name": "A/Prof Rani Bhatia",
+    "specialty": "Paediatric allergist and clinical immunologist",
+    "practice": "Paediatric Allergy Services Newcastle (Paediatric Allergy and Immunology Services)",
+    "address": "27 Veronica Street, Cardiff NSW 2285",
+    "suburb": "Cardiff",
+    "phone": "02 4956 7800",
+    "fax": "02 4953 7511",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.paedallergynewcastle.com.au",
+    "interests": [
+     "Children’s allergy and immunology",
+     "Allergen immunotherapy (desensitisation)",
+     "Also Senior Staff Specialist, John Hunter Children’s Hospital"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "children",
+     "hospitals": [
+      "John Hunter Children's Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/dr-rani-bhatia-2",
+     "http://www.paedallergynewcastle.com.au"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr Malanie Hettiarachchi",
+    "specialty": "Clinical immunologist and allergist",
+    "practice": "Immunology North",
+    "address": "Health Care Hub, Suite 15, Level 1, 235 Darby Street, Cooks Hill NSW 2300",
+    "suburb": "Cooks Hill",
+    "phone": "02 4929 7691",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.immunologynorth.com.au/",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "paediatric and adult (as listed by ASCIA)",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/dr-malanie-hettiarachchi"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Dr John Malcolm",
+    "specialty": "Clinical immunologist and allergist",
+    "practice": "Hunter Valley Private Hospital Consulting Suites",
+    "address": "20 Mawson Street, Shortland NSW 2307",
+    "suburb": "Shortland",
+    "phone": "02 4950 0162",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults",
+     "hospitals": [
+      "Hunter Valley Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/dr-john-malcolm"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "MED0000942021"
+   },
+   {
+    "name": "Dr Alan Baker",
+    "specialty": "Clinical immunologist and allergist",
+    "practice": "Port Macquarie Physicians",
+    "address": "Suite 6, 12 Highfields Circuit, Port Macquarie NSW 2444",
+    "suburb": "Port Macquarie",
+    "phone": "02 6581 4608",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "",
+    "interests": [
+     "Adult allergy and clinical immunology",
+     "Paediatric allergy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults; children for allergy",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/dr-alan-baker-2"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "MED0000965619"
+   },
+   {
+    "name": "A/Prof Glenn Reeves",
+    "specialty": "Clinical immunologist and allergist",
+    "practice": "Coastal Immunology and Allergy Clinic",
+    "address": "Elizabeth Court, Suite 8, 30 Karalta Road, Erina NSW 2250",
+    "suburb": "Erina",
+    "phone": "02 4321 0666",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.coastalimmunology.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "paediatric and adult",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.allergy.org.au/patients/locate-a-specialist/nsw/item/a-prof-glenn-reeves"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "MED0001133508"
    }
   ]
  },

@@ -1041,7 +1041,7 @@
  "tests-cardiac": {
   "name": "Cardiac testing",
   "group": "tests",
-  "note": "<p class=\"sp-note\">Dedicated testing services only. Many cardiologists also do echo, Holter and stress tests in their rooms: see <a href=\"/specialists/cardiology/\">Cardiology</a>.</p>",
+  "note": "<p class=\"sp-note\">Testing services, including cardiology practices that take GP referrals for echo, stress echo and Holter. Many cardiologists also test their own patients in their rooms: see <a href=\"/specialists/cardiology/\">Cardiology</a>.</p>",
   "people": [
    {
     "name": "Healthe Heart Lingard",
@@ -1256,6 +1256,167 @@
      "https://prpimaging.com.au/practices/hunter-region"
     ],
     "checked": "11 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Hunter Cardiac Investigations",
+    "specialty": "Cardiac testing",
+    "practice": "Hunter Cardiac Investigations",
+    "address": "324 Brunker Road, Adamstown NSW 2289",
+    "suburb": "Adamstown",
+    "phone": "02 4952 7477",
+    "fax": "02 4952 7199",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.hci.net.au",
+    "interests": [
+     "Exercise stress echocardiogram (their preferred stress test)",
+     "Exercise stress ECG",
+     "Transthoracic echocardiogram (about 30 minutes)",
+     "Echo reports to the referring doctor within about 2 working days, or urgently on request",
+     "Stress tests supervised by a cardiac technician and cardiologist",
+     "Online referrals on their website"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.hci.net.au/services",
+     "https://hci.net.au"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Adult & Paediatric Heart Centre (NAPHC)",
+    "specialty": "Cardiac testing",
+    "practice": "Newcastle Adult & Paediatric Heart Centre",
+    "address": "16 Grainger Street, Lambton NSW 2299",
+    "suburb": "Lambton",
+    "phone": "02 4962 1811",
+    "fax": "02 4969 3835",
+    "email": "",
+    "ereferral": "",
+    "website": "https://naphc.com.au",
+    "interests": [
+     "Echocardiograms: adult, paediatric, contrast (saline) and foetal; GP referrals accepted",
+     "Holter monitoring: 24-hour, 48-hour and 7-day",
+     "Outpatient ECGs (bulk billed, as stated)",
+     "Exercise stress testing for existing NAPHC patients only",
+     "ECG and Holter appointments on Wednesdays; urgent requests by phone"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "adults and children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://naphc.com.au/services/echocardiograms/",
+     "https://naphc.com.au/services/diagnostics/"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Cardiology Clinic East Maitland",
+    "specialty": "Cardiac testing",
+    "practice": "The Cardiology Clinic",
+    "address": "43 Page Street, East Maitland NSW 2323",
+    "suburb": "East Maitland",
+    "phone": "02 4933 8585",
+    "fax": "02 4933 8549",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.thecardiologyclinic.com.au/",
+    "interests": [
+     "Echocardiogram",
+     "Stress echocardiogram",
+     "Stress testing",
+     "Cardiology consultations"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "http://www.thecardiologyclinic.com.au/"
+    ],
+    "checked": "19 November 2026",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "The Cardiology Clinic Scone",
+    "specialty": "Cardiac testing",
+    "practice": "The Cardiology Clinic",
+    "address": "5 Surman Street, Scone NSW 2337",
+    "suburb": "Scone",
+    "phone": "02 4933 8585",
+    "fax": "02 4933 8549",
+    "email": "",
+    "ereferral": "",
+    "website": "http://www.thecardiologyclinic.com.au/",
+    "interests": [
+     "Echocardiogram",
+     "Stress echocardiogram",
+     "Stress testing",
+     "Cardiology consultations"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "http://www.thecardiologyclinic.com.au/"
+    ],
+    "checked": "19 November 2026",
     "ahpra": "not checked"
    }
   ]
