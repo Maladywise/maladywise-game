@@ -5,7 +5,11 @@ import json as _j, re as _re, html as _h, os as _os, unicodedata as _ud
 _src = open("assets/games.js", encoding="utf-8").read()
 _M = _j.loads(_re.search(r"window\.MW_MASCOTS = (\{.*?\});\n", _src, _re.S).group(1))
 _C = _j.load(open("data/mascot-cast.json", encoding="utf-8"))["mascots"]
-_PF = _j.load(open("data/mascot-profiles.json", encoding="utf-8"))["mascots"]  # job, home, personality, health quirk
+_PF = _j.load(open("data/mascot-profiles.json", encoding="utf-8"))["mascots"]
+_SHOP = {}
+for _s in _j.load(open("data/shop.json", encoding="utf-8")):   # [category, image, quote, name, Redbubble url]
+    for _n in _s[3].replace(" and ", ",").split(","):
+        _SHOP.setdefault(_n.strip(), []).append(_s)  # job, home, personality, health quirk
 _GAMES = [("dx", "Dxtective", "/dxtective/"), ("wordemic", "Wordemic", "/wordemic/"), ("triviosis", "Triviosis", "/triviosis/"), ("glimpsis", "Glimpsis", "/glimpsis/"),
           ("opacitis", "Opacitis", "/opacitis/"), ("panelysis", "Panelysis", "/panelysis/"), ("comorbix", "Comorbix", "/comorbix/"), ("labelosis", "Anatomegaly", "/anatomegaly/"),
           ("linkase", "Linkase", "/linkase/"), ("zebritis", "Zebritis", "/zebritis/"), ("gridectomy", "Gridectomy", "/gridectomy/"), ("suturix", "Suturix", "/suturix/"),
@@ -75,6 +79,7 @@ _PCSS = ('<style>.mz-hero{display:flex;align-items:center;gap:16px;margin:8px 0 
          '.mz-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:10px 0 18px}.mz-facts div{background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:12px;padding:9px 12px}'
          '.mz-facts dt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent,#4A3480)}.mz-facts dd{margin:2px 0 0;font-size:15px;line-height:1.4}'
          '.mz-moods{list-style:none!important;padding:0!important;margin:8px 0 18px!important;display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(88px,1fr))}.mz-moods li{margin:0!important;text-align:center;font-size:12.5px;color:var(--muted,#5C4E7E)}.mz-moods img{display:block;margin:0 auto 2px;width:76px;height:76px}'
+         '.mz-stk{list-style:none!important;padding:0!important;margin:8px 0 6px!important;display:flex;flex-wrap:wrap;gap:10px}.mz-stk li{margin:0!important}.mz-stk a{display:flex;flex-direction:column;align-items:center;gap:4px;width:140px;padding:8px;border:1px solid var(--line,#E7E0F2);border-radius:14px;background:var(--card,#fff);text-decoration:none;color:var(--ink);font-size:13px;text-align:center}.mz-stk img{width:120px;height:120px}.mz-stk-more{font-size:14px;margin:0 0 18px}'
          '.mz-nav img{width:40px;height:40px}@media(max-width:520px){.mz-hero img{width:92px;height:92px}}</style>\n')
 for i, a in enumerate(ALL):
     k, name, role, href, what, vibe, story, cheer, kind, slug = a
@@ -87,7 +92,10 @@ for i, a in enumerate(ALL):
              (("Job", "job"), ("From", "from"), ("Personality", "style"), ("Health quirk", "health"))) + '</dl>\n') if pf else ""
     _PZ = [("happy", "Happy"), ("celebrate", "Celebrating"), ("wink", "Wink"), ("surprised", "Surprised"), ("thinking", "Thinking"), ("sad", "Sad"), ("angry", "Cross"), ("frustrated", "Frustrated")]
     moods = ('<h2>Moods</h2>\n<ul class="mz-moods">' + "".join('<li><img src="/assets/mascots/poses/%s-%s.svg" alt="%s looking %s" width="84" height="84" loading="lazy"><span>%s</span></li>' % (k, pz, _e(name), lab.lower(), lab) for pz, lab in _PZ) + '</ul>\n') if _os.path.exists("assets/mascots/poses/%s-happy.svg" % k) else ""
-    b = ('<p class="lede">%s</p>\n' % _e(vibe) + facts + moods
+    stk = _SHOP.get(name, [])
+    stk = sorted(stk, key=lambda s: "-b3-" not in s[1])[:4]
+    stickers = ('<h2>Get %s sticker</h2>\n<ul class="mz-stk">' % ("his" if name in _HE else "her") + "".join('<li><a href="%s" target="_blank" rel="noopener"><img src="%s" alt="%s sticker: %s" width="120" height="120" loading="lazy"><span>“%s”</span></a></li>' % (_e(s[4]), _e(s[1]), _e(name), _e(s[2]), _e(s[2])) for s in stk) + '</ul>\n<p class="mz-stk-more"><a href="/shop/">All stickers</a> · printed and shipped by Redbubble</p>\n') if stk else ""
+    b = ('<p class="lede">%s</p>\n' % _e(vibe) + facts + stickers + moods
          + '<h2>%s story</h2>\n<div class="mz-story">%s</div>\n' % (("His" if pv == "his" else "Her"), "".join("<p>%s</p>" % _e(p) for p in paras))
          + (('<details class="mz-vid"><summary>▶ Watch %s story (short video)</summary><video controls playsinline preload="none" poster="/assets/video/mascots/%s.jpg" width="360" height="640">'
              '<source src="/assets/video/mascots/%s.mp4" type="video/mp4"></video></details>\n') % (pv, slug, slug) if _os.path.exists("assets/video/mascots/%s.mp4" % slug) else "")
