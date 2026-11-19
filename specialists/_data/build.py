@@ -101,7 +101,7 @@ def sortkey(n):
         parts = base.split(); return (parts[-1] if parts else base).lower() + " " + base.lower()
     return re.sub(r"^the\s+", "", n.lower())
 people = {}; removed = []; ALLIED_LABELS = {"Psychology (children)"}; TEST_LABELS = {}; SERVICE_LABELS = {}  # SERVICE_LABELS: "Community health services" hub group (data sections with "group": "services"; public and community services kept on purpose)  # "Tests and imaging" hub group: label -> page note (data sections with "group": "tests")
-for f in sorted(x for x in glob.glob(os.path.join(DD, "*.json")) if not x.endswith("sp-urls.json")):
+for f in sorted(x for x in glob.glob(os.path.join(DD, "*.json")) if not x.endswith(("sp-urls.json", "readd-queue.json"))):
     for slug, sec in json.load(open(f)).items():
         label = NAMES.get(slug, sec.get("name", slug))
         if slug in ALLIED: ALLIED_LABELS.add(label)
