@@ -1571,3 +1571,11 @@ html.mw-disco main{animation:mwdisco .5s linear 8}
 @keyframes mm-peek{0%,100%{transform:none}20%{transform:scale(.94,1.14) translateY(-6px)}40%{transform:scale(.94,1.14) translateY(-6px) rotate(-8deg)}60%{transform:scale(.94,1.14) translateY(-6px) rotate(8deg)}80%{transform:scale(.94,1.14) translateY(-6px)}}
 @keyframes mm-stomp{0%,100%{transform:none}15%{transform:translateY(-8px) rotate(-5deg)}30%{transform:translateY(2px) scale(1.06,.92)}45%{transform:translateY(-8px) rotate(5deg)}60%{transform:translateY(2px) scale(1.06,.92)}80%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.cb-masc img[class^="mm-"]{animation:none}}html[data-motion="reduce"] .cb-masc img[class^="mm-"]{animation:none}
+
+/* today's solve rate chip (shell.js crowdRate) */
+.mw-crowd{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:60;width:min(440px,calc(100% - 32px));display:grid;grid-template-columns:1fr auto;gap:6px 10px;align-items:center;background:#fff;color:#2A2140;border:2px solid #4A3480;border-radius:14px;padding:10px 12px;box-shadow:0 6px 24px rgba(0,0,0,.18);font-size:15px;line-height:1.35;animation:mwCrowdIn .35s ease-out}
+.mw-crowd-bar{grid-column:1/-1;height:8px;border-radius:4px;background:#ECE6F6;overflow:hidden}.mw-crowd-bar i{display:block;height:100%;background:#4A3480;border-radius:4px}
+.mw-crowd button{background:none;border:0;font-size:22px;line-height:1;color:#4A3480;cursor:pointer;padding:0 4px}
+html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9C86D9}html[data-theme=dark] .mw-crowd-bar{background:#332B48}html[data-theme=dark] .mw-crowd-bar i{background:#9C86D9}html[data-theme=dark] .mw-crowd button{color:#C9B8F2}
+@keyframes mwCrowdIn{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}
+@media (prefers-reduced-motion:reduce){.mw-crowd{animation:none}}

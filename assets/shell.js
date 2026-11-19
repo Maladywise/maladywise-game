@@ -205,7 +205,23 @@
     Array.prototype.forEach.call(document.querySelectorAll(".mw-live"), function (el) { if (!homeOnly) { el.hidden = true; el.innerHTML = ""; return; } el.innerHTML = bits.length ? '<a class="mw-live-a" href="/site-stats/" title="See games played over time">' + bits.join(" &middot; ") + "</a>" : ""; el.hidden = !bits.length; });
   }
   function liveStats() { if (document.hidden) return; try { fetch(LIVE.url + "/stats", { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { if (d) { LIVE.last = d; liveShow(); } }).catch(function () {}); } catch (e) {} }
-  function liveDone(id) { try { fetch(LIVE.url + "/done?g=" + encodeURIComponent(id), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
+  function liveDone(id, w) { try { fetch(LIVE.url + "/done?g=" + encodeURIComponent(id) + (w == null ? "" : "&w=" + (w ? 1 : 0)), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
+  // After today's puzzle: how many players solved it today (shown once 10+ results are in)
+  function crowdRate(g, win) {
+    setTimeout(function () {
+      fetch(LIVE.url + "/rate?g=" + encodeURIComponent(g.id), { mode: "cors" }).then(function (r) { return r.json(); }).then(function (d) {
+        if (!d || d.n < LIVE.MIN_SOLVED) return;
+        var pct = Math.round(d.w / d.n * 100), n = d.n.toLocaleString("en-AU"), old = document.querySelector(".mw-crowd"); if (old) old.remove();
+        var msg = win ? (pct <= 30 ? "Only " + pct + "% of today\u2019s " + n + " players solved it. You\u2019re one of them. Show-off." : pct >= 85 ? pct + "% of today\u2019s " + n + " players solved it. Solid, not special. Yet." : "You and " + pct + "% of today\u2019s " + n + " players solved it.")
+                      : (pct <= 40 ? "Only " + pct + "% of today\u2019s " + n + " players got it. Tough one. Not just you." : pct + "% of today\u2019s " + n + " players got it. Ouch. Tomorrow\u2019s yours.");
+        var el = document.createElement("div"); el.className = "mw-crowd"; el.setAttribute("role", "status");
+        el.innerHTML = '<span class="mw-crowd-bar"><i style="width:' + pct + '%"></i></span><span class="mw-crowd-t"></span><button type="button" aria-label="Close">\u00d7</button>';
+        el.querySelector(".mw-crowd-t").textContent = msg;
+        el.querySelector("button").onclick = function () { el.remove(); };
+        document.body.appendChild(el); track("crowd-rate/" + g.id, g.name + " solve rate shown");
+      }).catch(function () {});
+    }, 2600);
+  }
   window.MW_liveShow = liveShow;
   setTimeout(function () { livePing(); liveStats(); }, 1200);
   setInterval(livePing, 30000); setInterval(liveStats, 60000);
@@ -221,7 +237,8 @@
           if (!prev || !/"done":true/.test(prev)) {
             var win = /"win":true/.test(v);
             track("finished/" + g.id, g.name + " finished");
-            if (!g.store.weekly ? k === pre + sydToday() : true) liveDone(g.id);
+            if (!g.store.weekly ? k === pre + sydToday() : true) liveDone(g.id, win);
+            if (!g.store.weekly && k === pre + sydToday()) crowdRate(g, win);
             if (win) track("won/" + g.id, g.name + " won");
             if (!g.store.weekly && k === pre + sydToday()) markDay();
             logFinish(g, k, v);

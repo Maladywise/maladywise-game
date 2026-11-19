@@ -138,7 +138,7 @@ async function hubRank(days) {
   }
   return out;
 }
-async function addDone(g) {
+async function addDone(g, w) {
   const d = sydDay();
   if (memDay !== d) { memDay = d; memCount = 0; memGames = {}; }
   memCount++; memGames[g] = (memGames[g] || 0) + 1;
@@ -147,6 +147,10 @@ async function addDone(g) {
       await kv.incr("played:" + d); await kv.expire("played:" + d, 60 * 60 * 24 * 400);
       await kv.hIncrBy("playedh:" + d, String(sydHour()), 1); await kv.expire("playedh:" + d, 60 * 60 * 24 * 400);
       if (g) { await kv.hIncrBy("games:" + d, g, 1); await kv.expire("games:" + d, 60 * 60 * 24 * 400); }
+      if (g && (w === "0" || w === "1")) { // solve rate: finishes that reported win/loss, and wins
+        await kv.hIncrBy("fin2:" + d, g, 1); await kv.expire("fin2:" + d, 60 * 60 * 24 * 400);
+        if (w === "1") { await kv.hIncrBy("wins:" + d, g, 1); await kv.expire("wins:" + d, 60 * 60 * 24 * 400); }
+      }
     } catch (e) {}
   }
 }
@@ -322,8 +326,14 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(204); return res.end();
     }
     if (url.pathname === "/done" && req.method === "POST") {
-      if (!limited(ip, 60)) await addDone(clean(url.searchParams.get("g"), 24));
+      if (!limited(ip, 60)) await addDone(clean(url.searchParams.get("g"), 24), url.searchParams.get("w"));
       res.writeHead(204); return res.end();
+    }
+    if (url.pathname === "/rate") { // today's solve rate for one game: {g, n: finishes with a result, w: wins}
+      const g = clean(url.searchParams.get("g"), 24), d = sydDay(); let n = 0, w = 0;
+      if (g && kv && kv.isReady) { try { n = Number(await kv.hGet("fin2:" + d, g) || 0); w = Number(await kv.hGet("wins:" + d, g) || 0); } catch (e) {} }
+      res.writeHead(200, { "Content-Type": "application/json", "Cache-Control": "no-store" });
+      return res.end(JSON.stringify({ g, n, w, day: d }));
     }
     if (url.pathname === "/hubrank") {
       const days = Math.max(1, Math.min(35, Number(url.searchParams.get("days")) || 28));
