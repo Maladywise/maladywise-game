@@ -6,322 +6,397 @@
    "from": "A windy sub-Antarctic island",
    "style": "Quiet, thorough, overdressed",
    "health": "Seasick on boats, which is embarrassing for a penguin",
-   "secret": "Has a secret pebble collection sorted by evidence level."
+   "secret": "Has a secret pebble collection sorted by evidence level.",
+   "condition": "Raynaud’s phenomenon: cold feet, which is a lot for a penguin",
+   "condition_url": "/raynauds/"
   },
   "Dex": {
    "job": "GP diagnostician",
    "from": "A village library in the English countryside",
    "style": "Showy, sharp, loves a monologue",
    "health": "Needs reading glasses, denies it",
-   "secret": "Once solved a case from the smell of a waiting room."
+   "secret": "Once solved a case from the smell of a waiting room.",
+   "condition": "Glaucoma, picked up early at a routine eye check; never misses her eye drops"
   },
   "Vira": {
    "job": "Self-described influencer",
    "from": "A Petri dish someone forgot to cover",
    "style": "Loud, needy, oddly lovable",
    "health": "Allergic to hand sanitiser",
-   "secret": "Is technically washing her hands of all of this."
+   "secret": "Is technically washing her hands of all of this.",
+   "condition": "Contact dermatitis from hand sanitiser, ironically",
+   "condition_url": "/contact-dermatitis/"
   },
   "Octavia": {
    "job": "Clinic supply manager, retired",
    "from": "An Indo-Pacific coral reef",
    "style": "Orderly, anxious, stress-cleans",
    "health": "Repetitive strain in arm six",
-   "secret": "Can hold eight cups of tea and still judge your groupings."
+   "secret": "Can hold eight cups of tea and still judge your groupings.",
+   "condition": "Carpal tunnel syndrome in arm six (and occasionally arm two)",
+   "condition_url": "/carpal-tunnel/"
   },
   "Bea": {
    "job": "Nurse unit manager",
    "from": "A hive on a lavender farm",
    "style": "Firm, warm, unflappable",
    "health": "Hay fever (yes, a bee)",
-   "secret": "Has never once been late for handover. Never."
+   "secret": "Has never once been late for handover. Never.",
+   "condition": "Pollen-triggered asthma; carries her reliever everywhere",
+   "condition_url": "/asthma/"
   },
   "Cadi": {
    "job": "Emergency triage nurse",
    "from": "An emergency department stethoscope rail",
    "style": "Charming, competitive, sore loser",
    "health": "Dry, flaky skin every shedding season",
-   "secret": "Is wildly jealous of the caduceus. One snake? Amateurs."
+   "secret": "Is wildly jealous of the caduceus. One snake? Amateurs.",
+   "condition": "Crohn’s disease, with short bowel syndrome after surgery; a very long snake with a slightly shorter bowel",
+   "condition_url": "/crohns-disease/"
   },
   "Tess": {
    "job": "Retired ward tortoise, crossword setter",
    "from": "The Galápagos, via a country hospital",
    "style": "Calm, dry, rarely wrong",
    "health": "Hard of hearing; wears hearing aids and loves captions",
-   "secret": "Turns her hearing aids off during boring meetings. Nobody has noticed."
+   "secret": "Turns her hearing aids off during boring meetings. Nobody has noticed.",
+   "condition": "Osteoporosis: a shell is bone, after all; on treatment and hasn’t broken a scute",
+   "condition_url": "/osteoporosis/"
   },
   "Silk": {
    "job": "Plastic surgeon",
    "from": "The corner of an operating theatre",
    "style": "Precise, theatrical, judgemental",
-   "health": "Faints at a granny knot (vasovagal)",
-   "secret": "Sutures in her sleep. Literally. Check the blanket."
+   "health": "Untangles knots to relax",
+   "secret": "Sutures in her sleep. Literally. Check the blanket.",
+   "condition": "Vasovagal syncope: faints at a granny knot"
   },
   "Echo": {
    "job": "Medical lecturer",
    "from": "Central Africa, via a university lecture theatre",
    "style": "Bright, chatty, a show-off",
    "health": "Mild tinnitus from lecture halls",
-   "secret": "Repeats every fact twice, just to be sure. Just to be sure."
+   "secret": "Repeats every fact twice, just to be sure. Just to be sure.",
+   "condition": "Tinnitus from years in lecture halls",
+   "condition_url": "/tinnitus/"
   },
   "Ziggy": {
    "job": "Rare-disease geneticist",
    "from": "The Kenyan plains",
    "style": "Shy, odd, fiercely curious",
    "health": "Hypermobile joints",
-   "secret": "Gets mistaken for a horse daily. Takes it personally."
+   "secret": "Gets mistaken for a horse daily. Takes it personally.",
+   "condition": "Hypermobile Ehlers–Danlos syndrome: very bendy, very rare-ish, very proud"
   },
   "Cipher": {
    "job": "Unofficial hospital codebreaker",
    "from": "Unknown (she came in through a window)",
    "style": "Aloof, cryptic, mischievous",
    "health": "Hairballs",
-   "secret": "Knows what the clue means. Will not be telling you."
+   "secret": "Knows what the clue means. Will not be telling you.",
+   "condition": "Colour vision deficiency (cats see mostly blues and yellows)"
   },
   "Locum": {
    "job": "Night locum doctor",
    "from": "The overnight medical roster",
    "style": "Deadpan, sharp, tired",
    "health": "Shift-work insomnia",
-   "secret": "Hasn’t seen daylight since 2019. Prefers it that way."
+   "secret": "Hasn’t seen daylight since 2019. Prefers it that way.",
+   "condition": "BPPV: hanging upside down all night sets off her vertigo",
+   "condition_url": "/bppv/"
   },
   "Ruby": {
    "job": "Haematology lab scientist",
    "from": "She claims Transylvania; it was actually the pathology lab, level 2",
    "style": "Theatrical, exacting, nocturnal",
    "health": "Vitamin D deficiency",
-   "secret": "Does not drink blood. Only checks it. Mostly."
+   "secret": "Does not drink blood. Only checks it. Mostly.",
+   "condition": "Haemochromatosis: too much iron, managed with regular venesection",
+   "condition_url": "/haemochromatosis/"
   },
   "Riff": {
    "job": "Cardiac technician (ECGs)",
    "from": "A school band",
    "style": "Steady, rhythmic, alert",
    "health": "Occasional ectopic beats, which drive her mad",
-   "secret": "Skips a beat whenever someone says ‘sinus rhythm’."
+   "secret": "Skips a beat whenever someone says ‘sinus rhythm’.",
+   "condition": "Atrial fibrillation, well controlled; she keeps time for everyone else",
+   "condition_url": "/atrial-fibrillation/"
   },
   "Iris": {
    "job": "Endocrinologist",
    "from": "A barn, then the night endocrine lab",
    "style": "Logical, exacting, nocturnal",
-   "health": "Underactive thyroid, perfectly managed",
-   "secret": "Keeps a spare thyroid joke for every occasion."
+   "health": "Can turn her head 270 degrees, which unsettles patients",
+   "secret": "Keeps a spare thyroid joke for every occasion.",
+   "condition": "Underactive thyroid, perfectly managed",
+   "condition_url": "/underactive-thyroid/"
   },
   "Mira": {
    "job": "Dermatology nurse",
    "from": "Madagascar, via a skin-clinic pot plant",
    "style": "Observant, patient, quietly smug",
    "health": "Eczema that flares when she's stressed",
-   "secret": "Changes colour when you call everything eczema."
+   "secret": "Changes colour when you call everything eczema.",
+   "condition": "Vitiligo: patches of her skin don’t change colour, which she says keeps people guessing"
   },
   "Lumo": {
    "job": "Radiologist",
    "from": "The ocean, via a storm drain into radiology",
    "style": "Calm, transparent, kind",
-   "health": "Burns in about four minutes of sun",
-   "secret": "Glows a little brighter when the report says ‘incidental’."
+   "health": "Glows when she’s pleased",
+   "secret": "Glows a little brighter when the report says ‘incidental’.",
+   "condition": "Basal cell carcinoma, caught early and removed; now very serious about sunscreen",
+   "condition_url": "/skin-cancer/"
   },
   "Digby": {
    "job": "Sign-language interpreter",
    "from": "North America, behind a school for deaf children",
    "style": "Curious, restless, hands-on",
    "health": "Dust-mite allergy",
-   "secret": "Has dug up three femurs. All plastic. Probably."
+   "secret": "Has dug up three femurs. All plastic. Probably.",
+   "condition": "Hand osteoarthritis from very busy hands",
+   "condition_url": "/osteoarthritis/"
   },
   "Lottie": {
    "job": "Anatomy demonstrator",
    "from": "Lake Xochimilco in Mexico, via an anatomy school's jar room",
    "style": "Easy-going, tidy, forgiving",
    "health": "None. She regrows everything, and she's smug about it",
-   "secret": "Grows back anything. Except her patience for typos."
+   "secret": "Grows back anything. Except her patience for typos.",
+   "condition": "Psoriasis: her skin regrows too fast as well",
+   "condition_url": "/psoriasis/"
   },
   "Sunny": {
    "job": "Screening epidemiologist",
    "from": "The Kalahari",
    "style": "Vigilant, sceptical, protective",
    "health": "Neck strain from lookout duty",
-   "secret": "Calculates the sensitivity of every compliment."
+   "secret": "Calculates the sensitivity of every compliment.",
+   "condition": "Sunspots (solar keratoses) from years on lookout in the sun",
+   "condition_url": "/sunspots/"
   },
   "Brix": {
    "job": "Builder turned organ stacker",
    "from": "The Hunter",
    "style": "Practical, proud, smoko at 10am",
    "health": "Bad back, refuses to see a physio",
-   "secret": "Built a burrow with perfect corners. Measured it twice."
+   "secret": "Built a burrow with perfect corners. Measured it twice.",
+   "condition": "Chronic constipation (cube-shaped poo is normal for wombats; straining isn’t)",
+   "condition_url": "/constipation/"
   },
   "Noggin": {
    "job": "Neuroscientist",
    "from": "A neurology textbook page",
    "style": "Brilliant, scatty, dreamy",
    "health": "Migraines",
-   "secret": "Has forgotten this secret already."
+   "secret": "Has forgotten this secret already.",
+   "condition": "Epilepsy, well controlled on medicine"
   },
   "Kiri": {
    "job": "Dental nurse",
    "from": "A Pacific reef",
    "style": "Bubbly, bossy about brushing",
    "health": "Zero cavities in 30,000 teeth",
-   "secret": "Has 300 teeth and flosses every single one."
+   "secret": "Has 300 teeth and flosses every single one.",
+   "condition": "TMJ disorder: a jaw that clicks after 30,000 teeth"
   },
   "Zola": {
    "job": "Emergency nurse",
    "from": "The deep Atlantic",
    "style": "Unflappable, gentle, direct",
-   "health": "Sensitive to bright light",
-   "secret": "Her headlamp has a backup headlamp."
+   "health": "Headlamp battery anxiety",
+   "secret": "Her headlamp has a backup headlamp.",
+   "condition": "Migraine, set off by bright light",
+   "condition_url": "/migraine/"
   },
   "Tembi": {
    "job": "Immunisation nurse",
    "from": "South Africa",
    "style": "Patient, warm, watchful",
    "health": "Very high blood pressure, which is normal for a giraffe",
-   "secret": "Can see your vaccine card from across the clinic."
+   "secret": "Can see your vaccine card from across the clinic.",
+   "condition": "Postural hypotension when she bends down to drink"
   },
   "Magnus": {
    "job": "Men's health advocate, retired fisherman",
    "from": "Svalbard",
    "style": "Loud, blunt, big-hearted",
-   "health": "High cholesterol, caught early and managed",
-   "secret": "Booked his own check-up. Told nobody. Felt great."
+   "health": "Tusks need regular dental checks",
+   "secret": "Booked his own check-up. Told nobody. Felt great.",
+   "condition": "Familial hypercholesterolaemia, caught early and treated",
+   "condition_url": "/cholesterol/"
   },
   "Otto": {
    "job": "Therapy dog and counsellor",
    "from": "A children's hospital therapy-dog programme",
    "style": "Warm, patient, easily delighted",
    "health": "Itchy ears",
-   "secret": "Will sit with you as long as you need. No talking required."
+   "secret": "Will sit with you as long as you need. No talking required.",
+   "condition": "Generalised anxiety, well managed with CBT; it’s why he’s so good at listening",
+   "condition_url": "/anxiety/"
   },
   "Fig": {
    "job": "Dietitian",
    "from": "A village café in Provence",
    "style": "Practical, cosy, prickly about fads",
    "health": "Lactose intolerant (most hedgehogs are)",
-   "secret": "Once confiscated a detox tea at a party. No regrets."
+   "secret": "Once confiscated a detox tea at a party. No regrets.",
+   "condition": "Coeliac disease: strictly gluten-free, and an expert at it",
+   "condition_url": "/coeliac/"
   },
   "Marisol": {
    "job": "Midwife",
    "from": "Spain's Mediterranean coast",
    "style": "Calm, honest, non-judgemental",
    "health": "Motion sickness",
-   "secret": "Knows every lullaby in eleven languages."
+   "secret": "Knows every lullaby in eleven languages.",
+   "condition": "Pelvic floor weakness after three births; does her exercises daily",
+   "condition_url": "/stress-incontinence/"
   },
   "Quill": {
    "job": "Satirist",
    "from": "An east-coast rainforest",
    "style": "Cheeky, clever, never cruel",
    "health": "Hoarse voice after a big impression",
-   "secret": "Can do a perfect impression of your phone’s ringtone."
+   "secret": "Can do a perfect impression of your phone’s ringtone.",
+   "condition": "Vocal cord nodules from too many impressions"
   },
   "Yara": {
    "job": "Travel health nurse",
    "from": "Iceland, technically; she lives on the wing",
    "style": "Organised, restless, prepared",
    "health": "Permanent jet lag",
-   "secret": "Has flown further than most airlines. Still gets jet lag."
+   "secret": "Has flown further than most airlines. Still gets jet lag.",
+   "condition": "A DVT after a long-haul flight; now wears compression socks on every trip"
   },
   "Yuki": {
    "job": "Pharmacist",
    "from": "Sichuan",
    "style": "Calm, methodical, never rushed",
    "health": "Dry eyes from reading fine print",
-   "secret": "Reads the leaflet inside the box. For fun."
+   "secret": "Reads the leaflet inside the box. For fun.",
+   "condition": "De Quervain’s tenosynovitis in her panda ‘thumb’ (it’s really a wrist bone)"
   },
   "Norm": {
    "job": "Professional relaxer",
    "from": "The Brazilian wetlands",
    "style": "Laid-back, sociable, zero urgency",
    "health": "An enviable resting heart rate",
-   "secret": "Has never once been in a hurry. Thriving."
+   "secret": "Has never once been in a hurry. Thriving.",
+   "condition": "Type 2 diabetes, managed with daily walks and a very relaxed attitude",
+   "condition_url": "/type-2-diabetes/"
   },
   "Inês": {
    "job": "Retired country GP",
    "from": "The Amazon",
    "style": "Wise, unhurried, wry",
    "health": "Feels the cold (manatees really do)",
-   "secret": "Has never raised her voice. The silence is worse."
+   "secret": "Has never raised her voice. The silence is worse.",
+   "condition": "Cataracts, fixed with surgery; sees beautifully now"
   },
   "Saga": {
    "job": "GP registrar",
    "from": "A Swedish river",
    "style": "Eager, playful, overcommitted",
-   "health": "Reflux from too much coffee",
-   "secret": "Has 47 browser tabs open and knows what every one is."
+   "health": "Drinks far too much coffee",
+   "secret": "Has 47 browser tabs open and knows what every one is.",
+   "condition": "Reflux (GORD) from too much coffee",
+   "condition_url": "/reflux/"
   },
   "Percy": {
    "job": "Retired GP, referral wrangler",
    "from": "A coastal country town",
    "style": "Kindly, well connected, chatty",
-   "health": "A sore shoulder from carrying too much",
-   "secret": "Carries a spare referral letter in his beak at all times."
+   "health": "Pouch stretches to fit three referral letters",
+   "secret": "Carries a spare referral letter in his beak at all times.",
+   "condition": "Rotator cuff tendinopathy from carrying too much",
+   "condition_url": "/rotator-cuff/"
   },
   "Mei": {
    "job": "Ophthalmologist turned research reviewer",
    "from": "An escapee from a research facility",
    "style": "Curious, careful, sceptical",
    "health": "Allergic to cats",
-   "secret": "Asks for the methods section before saying hello."
+   "secret": "Asks for the methods section before saying hello.",
+   "condition": "Short-sighted (myopia), which is how she got into eyes"
   },
   "Ama": {
    "job": "Myth-buster and health journalist",
    "from": "The roof of a health-food shop",
    "style": "Clever, cheeky, fair",
    "health": "None. Just smug",
-   "secret": "Has a nest full of busted myths. Shinier than gold."
+   "secret": "Has a nest full of busted myths. Shinier than gold.",
+   "condition": "Gout, which she researched thoroughly before believing"
   },
   "Nalu": {
    "job": "Neurologist",
    "from": "Hawaii",
    "style": "Precise, balanced, nerdy about reflexes",
    "health": "Needs extremely wide glasses",
-   "secret": "Sees both sides of every argument. Literally."
+   "secret": "Sees both sides of every argument. Literally.",
+   "condition": "Restless legs syndrome (well, restless fins)",
+   "condition_url": "/restless-legs/"
   },
   "Hana": {
    "job": "Allergy nurse",
    "from": "Japan",
    "style": "Gentle, careful, patient",
-   "health": "Peanut allergy, always carries her adrenaline autoinjector",
-   "secret": "Only puffs up for a very good reason."
+   "health": "Puffs up when startled",
+   "secret": "Only puffs up for a very good reason.",
+   "condition": "Peanut allergy with anaphylaxis; always carries her adrenaline autoinjector",
+   "condition_url": "/anaphylaxis/"
   },
   "Jett": {
    "job": "Physio",
    "from": "The Hunter hills",
    "style": "Encouraging, practical, relentless",
-   "health": "Achilles tendinopathy, doing her own rehab",
-   "secret": "Hops 10,000 steps before breakfast. Annoying, honestly."
+   "health": "Sore shoulders after basketball",
+   "secret": "Hops 10,000 steps before breakfast. Annoying, honestly.",
+   "condition": "Spinal cord injury; uses a wheelchair and plays wheelchair basketball"
   },
   "Kip": {
    "job": "Sleep scientist",
    "from": "A coastal gum forest",
    "style": "Sleepy, wise, strict about screens",
-   "health": "Snores, so now uses a CPAP machine",
-   "secret": "Fell asleep writing this secret."
+   "health": "Naps about 20 hours a day",
+   "secret": "Fell asleep writing this secret.",
+   "condition": "Obstructive sleep apnoea; sleeps well with CPAP",
+   "condition_url": "/sleep-apnoea/"
   },
   "Layla": {
    "job": "Occupational therapist",
    "from": "Costa Rica",
    "style": "Steady, kind, boundary queen",
-   "health": "Long-term fatigue, paces like a pro",
-   "secret": "Took three days to tell you this. Worth it."
+   "health": "Top speed: about a quarter of a kilometre an hour",
+   "secret": "Took three days to tell you this. Worth it.",
+   "condition": "ME/CFS; paces like a pro",
+   "condition_url": "/deep-dives/me-cfs/"
   },
   "Hazel": {
    "job": "Data analyst",
    "from": "A Scottish pine wood",
    "style": "Organised, excitable, competitive",
-   "health": "Grinds her teeth at night",
-   "secret": "Has never broken a streak. Do not ask her about Leap Day."
+   "health": "Hoards stationery for winter",
+   "secret": "Has never broken a streak. Do not ask her about Leap Day.",
+   "condition": "Teeth grinding (bruxism); wears a night guard"
   },
   "Pippa": {
    "job": "Practice nurse",
    "from": "Sri Lanka",
    "style": "Warm, organised, motherly",
-   "health": "Sore feet from long days on the floor",
-   "secret": "Remembers the name of every patient. And their dog."
+   "health": "Always holding a pen that isn’t hers",
+   "secret": "Remembers the name of every patient. And their dog.",
+   "condition": "Plantar fasciitis from long days on the floor",
+   "condition_url": "/plantar-fasciitis/"
   },
   "Hugo": {
    "job": "Orthopaedic surgeon",
    "from": "The dog park next to the footy oval",
    "style": "Loud, loyal, bone-first",
-   "health": "Two ACL reconstructions, both from chasing balls",
-   "secret": "Cries at every plaster cast signing. Every single one."
+   "health": "Chews anything orthopaedic",
+   "secret": "Cries at every plaster cast signing. Every single one.",
+   "condition": "Two ACL ruptures, both from chasing balls; reconstructed twice"
   }
  }
 }

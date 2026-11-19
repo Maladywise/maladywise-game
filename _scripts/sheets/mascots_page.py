@@ -89,7 +89,7 @@ for i, a in enumerate(ALL):
     paras = [" ".join(sents[j:j + 3]) for j in range(0, len(sents), 3)] if story else []
     pf = _PF.get(name)
     facts = ('<dl class="mz-facts">' + "".join('<div><dt>%s</dt><dd>%s</dd></div>' % (lab, _e(pf[key])) for lab, key in
-             (("Job", "job"), ("From", "from"), ("Personality", "style"), ("Health quirk", "health"))) + '</dl>\n') if pf else ""
+             (("Job", "job"), ("From", "from"), ("Personality", "style"), ("Health quirk", "health"))) + ('<div><dt>Medical condition</dt><dd>%s</dd></div>' % ((_e(pf["condition"]) + (' <a href="%s">Read more</a>' % pf["condition_url"] if pf.get("condition_url") else "")) if pf.get("condition") else "")) + '</dl>\n') if pf else ""
     _PZ = [("happy", "Happy"), ("celebrate", "Celebrating"), ("wink", "Wink"), ("surprised", "Surprised"), ("thinking", "Thinking"), ("sad", "Sad"), ("angry", "Cross"), ("frustrated", "Frustrated")]
     moods = ('<h2>Moods</h2>\n<ul class="mz-moods">' + "".join('<li><img src="/assets/mascots/poses/%s-%s.svg" alt="%s looking %s" width="84" height="84" loading="lazy"><span>%s</span></li>' % (k, pz, _e(name), lab.lower(), lab) for pz, lab in _PZ) + '</ul>\n') if _os.path.exists("assets/mascots/poses/%s-happy.svg" % k) else ""
     stk = _SHOP.get(name, [])
