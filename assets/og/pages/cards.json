@@ -48,6 +48,13 @@
 "label": "Condition",
 "title": "ADHD in Children"
 },
+"alcohol": {
+"url": "/alcohol/",
+"key": "1bd9f14c1dd9",
+"v": "70b3ea34",
+"label": "Condition",
+"title": "Cutting down or quitting alcohol"
+},
 "algorithms": {
 "url": "/algorithms/",
 "key": "7bb37f76337c",
@@ -453,6 +460,13 @@
 "v": "77c0d4bd",
 "label": "Condition",
 "title": "Cancer Screening"
+},
+"cannabis": {
+"url": "/cannabis/",
+"key": "821b216c9c03",
+"v": "2e67c074",
+"label": "Condition",
+"title": "Cannabis"
 },
 "carpal-tunnel": {
 "url": "/carpal-tunnel/",
@@ -1062,6 +1076,13 @@
 "v": "f7e62662",
 "label": "Condition",
 "title": "Gallstones"
+},
+"gambling": {
+"url": "/gambling/",
+"key": "b17af8440c25",
+"v": "3d7d8d2e",
+"label": "Condition",
+"title": "Gambling problems"
 },
 "ganglion": {
 "url": "/ganglion/",
@@ -3141,6 +3162,13 @@
 "v": "4a3f00ef",
 "label": "Rare condition",
 "title": "Smith-Magenis syndrome"
+},
+"social-media": {
+"url": "/social-media/",
+"key": "6beba5f2a369",
+"v": "368a8557",
+"label": "Condition",
+"title": "Cutting back on social media"
 },
 "sore-throat": {
 "url": "/sore-throat/",
