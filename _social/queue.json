@@ -338,7 +338,9 @@
    ],
    "image": true,
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041880",
+   "queued_at": "2026-11-20T00:43+11:00"
   },
   {
    "date": "2026-11-22",
@@ -388,7 +390,9 @@
    ],
    "image": true,
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041882",
+   "queued_at": "2026-11-20T00:43+11:00"
   },
   {
    "date": "2026-11-23",
@@ -440,7 +444,9 @@
    ],
    "image": true,
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041885",
+   "queued_at": "2026-11-20T00:43+11:00"
   },
   {
    "date": "2026-11-24",
@@ -492,7 +498,9 @@
    ],
    "image": "assets/social/xcool/circle-of-willis.png",
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041887",
+   "queued_at": "2026-11-20T00:44+11:00"
   },
   {
    "date": "2026-11-25",
@@ -544,7 +552,9 @@
    ],
    "image": "assets/social/xcool/coronary-arteries.png",
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041889",
+   "queued_at": "2026-11-20T00:44+11:00"
   },
   {
    "date": "2026-11-26",
@@ -570,7 +580,9 @@
    ],
    "image": "assets/social/xcool/eye.png",
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041893",
+   "queued_at": "2026-11-20T00:44+11:00"
   },
   {
    "date": "2026-11-27",
@@ -604,7 +616,9 @@
    ],
    "image": "assets/social/xcool/ear.png",
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041896",
+   "queued_at": "2026-11-20T00:44+11:00"
   },
   {
    "date": "2026-11-28",
@@ -656,7 +670,9 @@
    ],
    "image": "assets/social/xcool/dermatomes.png",
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041897",
+   "queued_at": "2026-11-20T00:44+11:00"
   },
   {
    "date": "2026-11-29",
@@ -700,7 +716,9 @@
    ],
    "image": "assets/social/xcool/lungs.png",
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041898",
+   "queued_at": "2026-11-20T00:44+11:00"
   },
   {
    "date": "2026-11-30",
@@ -738,8 +756,9 @@
     "8/9 History: in 1955 London's Royal Free Hospital closed for months after about 292 staff fell ill, but only 12 inpatients. In 1970 McEvedy and Beard called it \"epidemic hysteria\" and proposed the name \"myalgia nervosa\".",
     "9/9 Frontier: plasma-cell drugs. In an open-label pilot, 6 of 10 people with ME/CFS responded to daratumumab (Fluge 2025). Tiny and uncontrolled; a placebo-controlled trial is the real test. #MECFS"
    ],
-   "queued_at": "2026-11-17T05:50+11:00",
-   "slot": "pm"
+   "queued_at": "2026-11-20T00:44+11:00",
+   "slot": "pm",
+   "typefully_id": "12041901"
   },
   {
    "date": "2026-11-30",
@@ -751,7 +770,9 @@
    ],
    "image": "assets/social/xcool/heart.png",
    "planned": true,
-   "pin": true
+   "pin": true,
+   "typefully_id": "12041900",
+   "queued_at": "2026-11-20T00:44+11:00"
   },
   {
    "date": "2026-12-01",
