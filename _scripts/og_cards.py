@@ -318,7 +318,14 @@ def card_path(u):
 
 def card_key(spec):
     tpl = [DD_TEMPLATE, DD_FIT_JS] if len(spec) > 4 else [TEMPLATE, FIT_JS]
-    return hashlib.sha1(json.dumps([TEMPLATE_V, FORMAT] + tpl + list(spec), ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
+    art = []  # the card redraws when its mascot or icon file changes, not just its text
+    for x in spec:
+        if isinstance(x, str) and re.match(r"^[\w/.-]+\.(svg|png)(\?.*)?$", x):
+            try:
+                art.append(hashlib.md5(open(os.path.join(ROOT, "assets", x.split("?")[0]), "rb").read()).hexdigest()[:8])
+            except OSError:
+                pass
+    return hashlib.sha1(json.dumps([TEMPLATE_V, FORMAT] + tpl + list(spec) + art, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:12]
 
 
 def load_manifest():
