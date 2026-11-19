@@ -1043,7 +1043,7 @@ a.hday-chip:hover .hc-go{text-decoration:underline}
 .arc-ic{display:inline-block;width:48px;height:48px;object-fit:contain;box-sizing:border-box;padding:3px;border-radius:12px;background:color-mix(in srgb,var(--brand,#4A3480) 9%,transparent)}
 .arc-ic2{display:inline-flex;align-items:flex-end;justify-content:center;width:48px;height:48px}.arc-ic2 img{width:26px;height:36px;object-fit:contain}.arc-ic2 img+img{width:25px;height:34px;margin-left:-4px}
 .doc ul.tx.arcl li{padding-left:72px;min-height:72px}
-.doc ul.tx.arcl li>.arc-ic{position:absolute;left:12px;top:12px}
+.doc ul.tx.arcl li{position:relative}.doc ul.tx.arcl li .arc-ic{position:absolute;left:12px;top:12px}
 .doc ul.tx.arcl li .ev{position:static;margin:2px 0 4px}.doc ul.tx.arcl li b{padding-right:0;margin-bottom:4px}
 .mwx-arcade .arc-ic{width:34px;height:34px;flex:none;padding:2px;border-radius:9px}.mwx-arcade .arc-ic2 img{width:17px;height:24px}.mwx-arcade .arc-ic2 img+img{width:16px;height:23px;margin-left:-3px}
 .mw-allg-l.mw-arcl{list-style:none;padding-left:0}.mw-allg-l.mw-arcl li{display:flex;align-items:center;gap:10px;margin:6px 0}.mw-allg-l.mw-arcl .arc-tx{min-width:0}.mw-allg-l.mw-arcl .arc-ic{width:36px;height:36px;flex:none}.mw-allg-l.mw-arcl .arc-ic2 img{width:19px;height:27px}.mw-allg-l.mw-arcl .arc-ic2 img+img{width:18px;height:25px}
