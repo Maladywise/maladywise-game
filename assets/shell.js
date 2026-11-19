@@ -1028,30 +1028,72 @@
   window.MW_NL = NL_HTML;
 
   // ---------- seasonal logo icon ----------
+  // Each entry: [from, to, icon, title, flags]. MM-DD repeats yearly; YYYY-MM-DD is one-off. Later matches win.
+  // flags: "soft" = sky events (moons, solstices) may replace it; "au" = Australian visitors only.
   var SEASONS = [
     ["10-24", "10-31", "halloween", "Happy Halloween"],
-    ["11-01", "11-30", "movember", "Movember: grow a mo for men\u2019s health"],
+    ["11-01", "11-30", "movember", "Movember: grow a mo for men\u2019s health", "soft"],
+    ["11-01", "11-02", "muertos", "D\u00eda de Muertos (Mexico)"],
     ["2026-11-03", "", "melbcup", "Melbourne Cup. Think horses."], ["2027-11-02", "", "melbcup", "Melbourne Cup. Think horses."], ["2028-11-07", "", "melbcup", "Melbourne Cup. Think horses."],
-    ["12-01", "12-26", "christmas", "Merry Christmas"],
+    ["12-01", "12-20", "christmas", "Merry Christmas", "soft"], ["12-21", "12-26", "christmas", "Merry Christmas"],
+    ["2026-12-05", "2026-12-12", "hanukkah", "Happy Hanukkah"], ["2027-12-27", "2027-12-30", "hanukkah", "Happy Hanukkah"], ["2028-12-13", "2028-12-20", "hanukkah", "Happy Hanukkah"],
     ["12-31", "12-31", "newyear", "Happy New Year"], ["01-01", "01-01", "newyear", "Happy New Year"],
     ["2027-02-06", "", "lunar", "Happy Lunar New Year"], ["2028-01-26", "", "lunar", "Happy Lunar New Year"],
+    ["2027-02-20", "", "lantern", "Lantern Festival"], ["2028-02-09", "", "lantern", "Lantern Festival"],
+    ["2027-02-08", "", "ramadan", "Ramadan begins"], ["2028-01-28", "", "ramadan", "Ramadan begins"],
     ["2027-02-09", "", "pancake", "Pancake Day"], ["2028-02-29", "", "pancake", "Pancake Day"],
+    ["2028-02-29", "", "leapday", "Leap day: a bonus day"],
     ["02-14", "02-14", "valentine", "Happy Valentine\u2019s Day"],
+    ["2027-03-10", "", "eid", "Eid al-Fitr: Eid Mubarak"], ["2028-02-27", "", "eid", "Eid al-Fitr: Eid Mubarak"],
+    ["03-14", "03-14", "piday", "Pi Day: 3.14"],
     ["03-17", "03-17", "stpatrick", "Happy St Patrick\u2019s Day"],
+    ["2027-03-21", "", "nowruz", "Happy Nowruz (Persian New Year)"], ["2028-03-20", "", "nowruz", "Happy Nowruz (Persian New Year)"],
+    ["2027-03-22", "", "holi", "Happy Holi"], ["2028-03-11", "", "holi", "Happy Holi"],
     ["04-01", "04-01", "aprilfools", "April Fools\u2019 Day"],
-    ["2027-03-26", "2027-03-29", "easter", "Happy Easter"], ["2028-04-14", "2028-04-17", "easter", "Happy Easter"]
+    ["2027-03-26", "2027-03-29", "easter", "Happy Easter"], ["2028-04-14", "2028-04-17", "easter", "Happy Easter"],
+    ["04-13", "04-15", "songkran", "Songkran: Thai New Year water fight"],
+    ["04-22", "04-22", "earthday", "Earth Day"],
+    ["05-04", "05-04", "starwars", "May the 4th be with you"],
+    ["2027-05-17", "", "eid", "Eid al-Adha: Eid Mubarak"], ["2028-05-05", "", "eid", "Eid al-Adha: Eid Mubarak"],
+    ["2027-05-20", "", "vesak", "Vesak"], ["2028-05-09", "", "vesak", "Vesak"],
+    ["2027-06-25", "", "matariki", "Matariki: M\u0101ori New Year"], ["2028-07-14", "", "matariki", "Matariki: M\u0101ori New Year"],
+    ["2027-07-04", "2027-07-11", "naidoc", "NAIDOC Week", "au"], ["2028-07-02", "2028-07-09", "naidoc", "NAIDOC Week", "au"],
+    ["07-17", "07-17", "emoji", "World Emoji Day"],
+    ["2027-08-02", "", "eclipse", "Total solar eclipse today (Spain, North Africa, Arabia)"], ["2028-07-22", "", "eclipse", "Total solar eclipse over Australia today"],
+    ["08-12", "08-12", "meteor", "Perseid meteor shower peaks", "soft"],
+    ["08-13", "08-16", "obon", "Obon (Japan)"],
+    ["2027-09-15", "", "midautumn", "Mid-Autumn Festival: mooncake time"], ["2028-10-03", "", "midautumn", "Mid-Autumn Festival: mooncake time"],
+    ["09-19", "09-19", "pirate", "Talk Like a Pirate Day. Arrr."],
+    ["2027-10-29", "", "diwali", "Happy Diwali"], ["2028-10-17", "", "diwali", "Happy Diwali"],
+    ["12-14", "12-14", "meteor", "Geminid meteor shower peaks", "soft"]
   ];
-  // full moons (Sydney date), computed with PyEphem; holidays above take priority
   var FULLMOONS = "2026-11-25 2026-12-24 2027-01-22 2027-02-21 2027-03-22 2027-04-21 2027-05-20 2027-06-19 2027-07-19 2027-08-17 2027-09-16 2027-10-16 2027-11-14 2027-12-14 2028-01-12 2028-02-11 2028-03-11 2028-04-09 2028-05-09 2028-06-07 2028-07-07 2028-08-05 2028-09-04 2028-10-04 2028-11-02 2028-12-02 2029-01-01 2029-01-30 2029-03-01 2029-03-30 2029-04-28 2029-05-28 2029-06-26 2029-07-25 2029-08-24 2029-09-23 2029-10-22 2029-11-21 2029-12-21 2030-01-20 2030-02-18 2030-03-20 2030-04-18 2030-05-17 2030-06-16 2030-07-15 2030-08-13 2030-09-12 2030-10-11 2030-11-10 2030-12-10";
+  var NEWMOONS = "2026-12-09 2027-01-08 2027-02-07 2027-03-08 2027-04-07 2027-05-06 2027-06-05 2027-07-04 2027-08-02 2027-09-01 2027-09-30 2027-10-30 2027-11-28 2027-12-28 2028-01-27 2028-02-25 2028-03-26 2028-04-25 2028-05-24 2028-06-23 2028-07-22 2028-08-20 2028-09-19 2028-10-18 2028-11-17 2028-12-16 2029-01-15 2029-02-13 2029-03-15 2029-04-14 2029-05-13 2029-06-12 2029-07-12 2029-08-10 2029-09-08 2029-10-08 2029-11-06 2029-12-06 2030-01-04 2030-02-03 2030-03-04 2030-04-03 2030-05-03 2030-06-01 2030-07-01 2030-07-30 2030-08-29 2030-09-27 2030-10-27 2030-11-25 2030-12-25";
+  var SUPERMOONS = "2026-11-25 2026-12-24 2027-01-22 2028-01-12 2028-02-11 2028-03-11 2029-03-01 2029-03-30 2029-04-28 2030-04-18 2030-05-17 2030-06-16", BLUEMOONS = "2029-01-30 2029-03-30";
+  var SOLSTICES = "2026-12-22 2027-06-22 2027-12-22 2028-06-21 2028-12-21 2029-06-21 2029-12-22 2030-06-21 2030-12-22", EQUINOXES = "2027-03-21 2027-09-23 2028-03-20 2028-09-22 2029-03-20 2029-09-23 2030-03-21 2030-09-23";
+  function sky(t) {
+    if (BLUEMOONS.indexOf(t) >= 0) return [t, "", "bluemoon", "Blue moon tonight (second full moon this month)"];
+    if (SUPERMOONS.indexOf(t) >= 0) return [t, "", "supermoon", "Supermoon tonight"];
+    if (FULLMOONS.indexOf(t) >= 0) return [t, "", "fullmoon", "Full moon tonight"];
+    if (SOLSTICES.indexOf(t) >= 0) return [t, "", "solstice", t.slice(5, 7) === "06" ? "Solstice: shortest day (south), longest day (north)" : "Solstice: longest day (south), shortest day (north)"];
+    if (EQUINOXES.indexOf(t) >= 0) return [t, "", "equinox", "Equinox: day and night about equal"];
+    if (NEWMOONS.indexOf(t) >= 0) return [t, "", "newmoon", "New moon tonight"];
+    return null;
+  }
   function season() {
     var t = sydToday(), md = t.slice(5), hit = null;
     SEASONS.forEach(function (x) {
       var full = x[0].length > 5, a = x[0], b = x[1] || x[0], v = full ? t : md;
-      if (v >= a && v <= b) hit = x;
+      if (v >= a && v <= b && (!/au/.test(x[4] || "") || inAU())) hit = x;
     });
-    if ((!hit || hit[2] === "movember") && FULLMOONS.indexOf(t) >= 0) hit = [t, "", "fullmoon", "Full moon tonight"];
+    if (!hit || /soft/.test(hit[4] || "")) {
+      var dt = new Date(t + "T12:00:00");
+      var sk = sky(t) || (dt.getDay() === 5 && dt.getDate() === 13 ? [t, "", "friday13", "Friday the 13th"] : null);
+      if (sk) hit = sk;
+    }
     return hit ? '<img class="season" src="/assets/season/' + hit[2] + '.svg" width="30" height="30" alt="' + hit[3] + '" title="' + hit[3] + '">' : "";
   }
+
 
   // ---------- top menu (MW_HOME.nav in site.js): links and dropdown groups ----------
   // Specialists directory is Newcastle/Hunter only: show the link to NSW/ACT time zone (closest a browser can tell without asking for location)
