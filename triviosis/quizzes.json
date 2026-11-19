@@ -3567,107 +3567,107 @@
   "date": "2026-11-20",
   "number": 34,
   "difficulty": "Hard",
-  "theme": "Surgery through history",
+  "theme": "TB, and the week\u2019s health news",
   "questions": [
    {
-    "q": "Which antiseptic did Joseph Lister use?",
-    "a": "Carbolic acid",
+    "q": "World TB Day is 24 March because on that date in 1882 a German scientist announced he had found the germ that causes TB. Who?",
+    "a": "Robert Koch",
     "w": [
-     "Iodine",
-     "Alcohol",
-     "Chlorine"
+     "Louis Pasteur",
+     "Paul Ehrlich",
+     "Rudolf Virchow"
     ],
-    "e": "Phenol, sprayed in the air and on wounds."
+    "e": "His Berlin lecture identified Mycobacterium tuberculosis. He won the Nobel Prize in 1905 for his TB work."
    },
    {
-    "q": "Who performed the first human heart transplant?",
-    "a": "Christiaan Barnard",
+    "q": "This week about 100 young children at three Adelaide childcare centres are being offered TB skin tests after a worker was diagnosed. The purified tuberculin these tests rely on was developed in the 1930s by?",
+    "a": "Florence Seibert",
     "w": [
-     "Michael DeBakey",
-     "Denton Cooley",
-     "Norman Shumway"
+     "Gertrude Elion",
+     "Dorothy Hodgkin",
+     "Gerty Cori"
     ],
-    "e": "Cape Town, 1967."
+    "e": "SA Health says the risk is low and the worker is recovering well. Seibert, an American biochemist who had polio as a child, purified the protein derivative (PPD) that became the international standard for the skin test in the 1940s."
    },
    {
-    "q": "The first public demonstration of ether anaesthesia, in 1846, was in?",
-    "a": "Boston",
+    "q": "The BCG vaccine, still given to babies in many countries, is a weakened TB germ that was first taken from?",
+    "a": "A cow",
     "w": [
-     "London",
-     "Edinburgh",
-     "Paris"
+     "A chicken",
+     "A mouse",
+     "A monkey"
     ],
-    "e": "On 16 October 1846, dentist William Morton gave ether at Massachusetts General Hospital in Boston. The theatre is now called the Ether Dome."
+    "e": "Mycobacterium bovis, from a cow with tuberculous mastitis. Calmette and Gu\u00e9rin grew it through 230 subcultures over 13 years before the first baby was vaccinated in 1921."
    },
    {
-    "q": "Who introduced chloroform anaesthesia in 1847?",
-    "a": "James Young Simpson",
+    "q": "Australia has one of the world\u2019s lowest TB rates. Its 2026\u20132030 national TB plan adds which word to \u2018elimination\u2019 in its title?",
+    "a": "Equity",
     "w": [
-     "Joseph Lister",
-     "William Morton",
-     "Humphry Davy"
+     "Eradication",
+     "Enforcement",
+     "Efficiency"
     ],
-    "e": "An Edinburgh obstetrician."
+    "e": "The burden isn\u2019t shared fairly: people born in high-TB countries and Aboriginal and Torres Strait Islander communities carry more of it."
    },
    {
-    "q": "Which monarch made chloroform in childbirth fashionable?",
-    "a": "Queen Victoria",
+    "q": "TB bacteria keep their red dye even when washed with acid-alcohol, so they\u2019re called \u2018acid-fast\u2019. What in their cell wall does this?",
+    "a": "Mycolic acids",
     "w": [
-     "Elizabeth I",
-     "Mary I",
-     "Queen Anne"
+     "Teichoic acids",
+     "Lipopolysaccharide",
+     "A sugar capsule"
     ],
-    "e": "For Prince Leopold, in 1853. John Snow gave it."
+    "e": "The waxy, mycolic acid-rich wall holds the carbolfuchsin in a Ziehl\u2013Neelsen stain. It also makes the bacteria hardy and slow-growing."
    },
    {
-    "q": "The red and white of a barber\u2019s pole recall?",
-    "a": "Blood and bandages",
+    "q": "Which vitamin is often given alongside the TB drug isoniazid to protect the nerves?",
+    "a": "Vitamin B6 (pyridoxine)",
     "w": [
-     "Royal colours",
-     "Hair and soap",
-     "Wine and bread"
+     "Vitamin B12",
+     "Vitamin D",
+     "Thiamine (B1)"
     ],
-    "e": "Barbers once did bloodletting and surgery."
+    "e": "Isoniazid can cause peripheral neuropathy, especially with diabetes, poor nutrition, heavy drinking, HIV or pregnancy."
    },
    {
-    "q": "The first successful kidney transplant, in 1954, was between?",
-    "a": "Identical twins",
+    "q": "It\u2019s World AMR Awareness Week. In TB, \u2018multidrug-resistant\u2019 means the germ resists at least which two drugs?",
+    "a": "Isoniazid and rifampicin",
     "w": [
-     "A mother and son",
-     "Two strangers",
-     "A husband and wife"
+     "Penicillin and amoxicillin",
+     "Streptomycin and ethambutol",
+     "Any two antibiotics"
     ],
-    "e": "No rejection to worry about."
+    "e": "They\u2019re the two most powerful first-line TB drugs, so losing both means longer, different drug combinations."
    },
    {
-    "q": "In 1893 in Chicago, Daniel Hale Williams, one of America\u2019s first Black heart surgeons, successfully repaired a stab wound to the?",
-    "a": "Pericardium",
+    "q": "Before effective antibiotics, some TB patients had \u2018plombage\u2019: the lung was collapsed to rest it, and the space was packed with?",
+    "a": "Plastic (Lucite) balls",
     "w": [
-     "Aorta",
-     "Carotid artery",
-     "Oesophagus"
+     "Gold leaf",
+     "Sea sponges",
+     "Cotton wool"
     ],
-    "e": "The patient survived. Williams also founded Provident Hospital, which trained Black nurses and doctors when most hospitals wouldn\u2019t."
+    "e": "Mid-20th-century collapse therapy. Fat, oil, wax and bone were also used, and the balls still turn up on some older people\u2019s chest X-rays."
    },
    {
-    "q": "Mary Edwards Walker, a US Civil War surgeon, remains the only woman awarded the?",
-    "a": "Medal of Honor",
+    "q": "An AMA report released this week found reports of critical antibiotic resistance in Australia rose by about how much in 2024?",
+    "a": "A quarter",
     "w": [
-     "Victoria Cross",
-     "Purple Heart",
-     "Congressional Gold Medal"
+     "About 2%",
+     "About half",
+     "They fell"
     ],
-    "e": "It was taken away in 1917 and restored in 1977. She was also arrested for wearing trousers."
+    "e": "Up 25.2%, even though antibiotic use is about 21% lower than a decade ago. The AMA wants stronger stewardship wherever antibiotics are prescribed."
    },
    {
-    "q": "William Halsted introduced which item to the operating theatre around 1890?",
-    "a": "Rubber gloves",
+    "q": "Your smartwatch\u2019s HRV figure, heart rate variability, measures?",
+    "a": "Variation in time between heartbeats",
     "w": [
-     "Surgical masks",
-     "Scalpels",
-     "Sutures"
+     "Day versus night heart rate",
+     "How hard each beat pumps",
+     "Average heart rate during exercise"
     ],
-    "e": "Originally to protect his scrub nurse\u2019s hands."
+    "e": "A healthy heart doesn\u2019t tick like a metronome. Higher resting HRV tends to go with fitness and resilience; lower HRV is linked with higher cardiovascular risk."
    }
   ]
  },
