@@ -1966,6 +1966,13 @@
 "label": "Medicine",
 "title": "Amoxicillin and Augmentin"
 },
+"medicines-anti-tnf-biologics": {
+"url": "/medicines/anti-tnf-biologics/",
+"key": "48f8a3c08a10",
+"v": "bb37bf77",
+"label": "Medicine",
+"title": "Infliximab and adalimumab (anti-TNF)"
+},
 "medicines-antihistamines": {
 "url": "/medicines/antihistamines/",
 "key": "d09f447e499a",
@@ -2014,6 +2021,13 @@
 "v": "4206b975",
 "label": "Medicine",
 "title": "Blood thinners (anticoagulants)"
+},
+"medicines-budesonide-ibd": {
+"url": "/medicines/budesonide-ibd/",
+"key": "9b8138245b1a",
+"v": "2ab02ca4",
+"label": "Medicine",
+"title": "Budesonide for IBD"
 },
 "medicines-bupropion": {
 "url": "/medicines/bupropion/",
@@ -2155,6 +2169,13 @@
 "label": "Medicine",
 "title": "Hydroxychloroquine"
 },
+"medicines-il-12-23-biologics": {
+"url": "/medicines/il-12-23-biologics/",
+"key": "019ffcc176bc",
+"v": "f74d7103",
+"label": "Medicine",
+"title": "Ustekinumab and IL-23 biologics"
+},
 "medicines-iron-tablets": {
 "url": "/medicines/iron-tablets/",
 "key": "b1b960bb7c1b",
@@ -2210,6 +2231,13 @@
 "v": "4b3b25aa",
 "label": "Medicine",
 "title": "Menopause hormone therapy (MHT)"
+},
+"medicines-mesalazine": {
+"url": "/medicines/mesalazine/",
+"key": "767b6646a82f",
+"v": "16ac0251",
+"label": "Medicine",
+"title": "Mesalazine and aminosalicylates"
 },
 "medicines-metformin": {
 "url": "/medicines/metformin/",
@@ -2421,12 +2449,26 @@
 "label": "Medicine",
 "title": "The combined pill"
 },
+"medicines-thiopurines": {
+"url": "/medicines/thiopurines/",
+"key": "cc9d185e931a",
+"v": "fda2e10c",
+"label": "Medicine",
+"title": "Azathioprine and mercaptopurine (thiopurines)"
+},
 "medicines-tirzepatide": {
 "url": "/medicines/tirzepatide/",
 "key": "f2b42dc3cc10",
 "v": "3525967c",
 "label": "Medicine",
 "title": "Tirzepatide"
+},
+"medicines-upadacitinib": {
+"url": "/medicines/upadacitinib/",
+"key": "a0121c0f05fa",
+"v": "90cb6164",
+"label": "Medicine",
+"title": "Upadacitinib and JAK inhibitors"
 },
 "medicines-uti-antibiotics": {
 "url": "/medicines/uti-antibiotics/",
@@ -2448,6 +2490,13 @@
 "v": "f296f627",
 "label": "Medicine",
 "title": "Varenicline"
+},
+"medicines-vedolizumab": {
+"url": "/medicines/vedolizumab/",
+"key": "6cd5c9183bf9",
+"v": "2206ac4a",
+"label": "Medicine",
+"title": "Vedolizumab"
 },
 "medicines-vitamin-d-supplements": {
 "url": "/medicines/vitamin-d-supplements/",
