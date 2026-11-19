@@ -1262,6 +1262,30 @@
    "date": "2026-11-19",
    "source": "news search: PharmExec",
    "niche": true
+  },
+  {
+   "term": "FDA approves Roche oral SERD (giredestrant) for advanced breast cancer",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-20",
+   "source": "news search: RAPS Regulatory Recon 17 Nov 2026",
+   "niche": true
+  },
+  {
+   "term": "FDA approves Klygefa",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-20",
+   "source": "news search: PharmExec 16 Nov 2026",
+   "niche": true
+  },
+  {
+   "term": "CDC E. coli outbreak linked to frozen blueberries",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-20",
+   "source": "news search: CDC media release",
+   "niche": false
   }
  ],
  "used": [
