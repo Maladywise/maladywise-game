@@ -407,6 +407,79 @@
       "tag": "eating disorders"
      }
     ]
+   },
+   {
+    "name": "Wise Mind Psychology Newcastle",
+    "specialty": "Psychology",
+    "practice": "Wise Mind Psychology Newcastle",
+    "address": "202 Lambton Road, New Lambton NSW 2305",
+    "suburb": "New Lambton",
+    "phone": "02 4091 0100",
+    "fax": "02 8201 3485",
+    "email": "admin@wisemindnewcastle.com.au",
+    "ereferral": "",
+    "website": "https://www.wisemindnewcastle.com.au/",
+    "interests": [
+     "Therapy and assessments",
+     "Clinical psychologists and registered psychologists",
+     "Clinical supervision for psychologists"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.wisemindnewcastle.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Greygum Psychology",
+    "specialty": "Psychology",
+    "practice": "Greygum Psychology",
+    "address": "1/802 Hunter Street, Newcastle West NSW 2302",
+    "suburb": "Newcastle West",
+    "phone": "0481 317 971",
+    "fax": "",
+    "email": "info@greygumpsychology.com.au",
+    "ereferral": "",
+    "website": "https://www.greygumpsychology.com.au/",
+    "interests": [
+     "EMDR and trauma-focused therapy",
+     "Child and adolescent therapy",
+     "ADHD and autism assessment and support",
+     "Anxiety, depression and stress"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "Children, adolescents and adults",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": null,
+     "new_patients": true,
+     "np_note": "Site says accepting new clients, no waitlist; no referral needed"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.greygumpsychology.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -619,6 +692,78 @@
     "checked": "9 November 2026",
     "ahpra": "not checked",
     "credential": "Accredited Practising Dietitian (APD), per the practice website"
+   },
+   {
+    "name": "The Nourish Club",
+    "specialty": "Dietetics",
+    "practice": "The Nourish Club",
+    "address": "Level 2, Unit 4, 363 Hillsborough Road, Warners Bay NSW 2282 (Beam Health building)",
+    "suburb": "Warners Bay",
+    "phone": "",
+    "fax": "",
+    "email": "hello@thenourishclub.com.au",
+    "ereferral": "",
+    "website": "https://www.thenourishclub.com.au",
+    "interests": [
+     "Eating disorders (anorexia, bulimia, binge eating, OSFED)",
+     "ARFID and fussy eating",
+     "Neurodivergent clients (autism, ADHD)"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.thenourishclub.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "AusClin Dietitians",
+    "specialty": "Dietetics",
+    "practice": "AusClin Dietitians",
+    "address": "18 Wilsons Road, Mount Hutton NSW 2290",
+    "suburb": "Mount Hutton",
+    "phone": "02 4091 9889",
+    "fax": "",
+    "email": "contact@ausclin.com.au",
+    "ereferral": "",
+    "website": "https://ausclin.com.au/",
+    "interests": [
+     "Medical nutrition therapy",
+     "Eating disorders (including children and young people)",
+     "Women's health and pregnancy nutrition"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": true,
+     "medicare_cdm": true,
+     "new_patients": null,
+     "np_note": "No referral needed to book"
+    },
+    "inclusive": [],
+    "sources": [
+     "https://ausclin.com.au/"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
    }
   ]
  },
@@ -663,6 +808,77 @@
      "https://www.newcastleherald.com.au/story/9336479/gurdeep-singh-opens-earport-audiology-for-all-ages-in-glendale/"
     ],
     "checked": "2026-10-31",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Audika Hearing Clinic Newcastle",
+    "specialty": "Audiology / hearing clinic",
+    "practice": "Audika Hearing Clinic Newcastle",
+    "address": "Shop 6, 209 Hunter Street, Newcastle NSW 2300",
+    "suburb": "Newcastle",
+    "phone": "02 4929 1989",
+    "fax": "",
+    "email": "newcastle@audika.com.au",
+    "ereferral": "",
+    "website": "https://www.audika.com.au/hearing-aids-clinic/nsw/newcastle",
+    "interests": [
+     "Hearing tests and hearing aids",
+     "Australian Government Hearing Services Program (conditions apply)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.audika.com.au/hearing-aids-clinic/nsw/newcastle"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Newcastle Hearing Centre for Children",
+    "specialty": "Audiology",
+    "practice": "Newcastle Hearing Centre for Children",
+    "address": "Level 1, 218 Pacific Highway, Charlestown NSW 2290 (entry via Pearson St Mall)",
+    "suburb": "Charlestown",
+    "phone": "02 4047 2111",
+    "fax": "",
+    "email": "admin@newcastlehearingcentre.com.au",
+    "ereferral": "",
+    "website": "https://www.newcastlehearingcentre.com.au",
+    "interests": [
+     "Paediatric diagnostic hearing assessment (infants to school age)",
+     "Auditory processing disorder assessment",
+     "Paediatric audiologists"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "",
+     "wait": "",
+     "ages": "Infants, toddlers and children",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.newcastlehearingcentre.com.au/"
+    ],
+    "checked": "2026-11-20",
     "ahpra": "not checked"
    }
   ]
