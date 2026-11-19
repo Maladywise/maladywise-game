@@ -34,8 +34,38 @@ def parts(svg):
             out.append(body[i:j]); i = j
     return out
 
+NUM = r"(-?[\d.]+)"
+PUP = re.compile(r'(?:<g>)?<(circle|ellipse) cx="%s" cy="%s" (?:r="%s"|rx="%s" ry="%s") fill="#2B2340"/>(<circle cx="[\d.]+" cy="[\d.]+" r="[\d.]+" fill="#fff"/>)?(?:</g>)?' % (NUM, NUM, NUM, NUM, NUM))
+
+def find_eyes(svg):
+    """The pair of ink pupils that are the eyes: similar size, level, 10-85 apart. Returns [(start, end, x, y, r)] left to right."""
+    c = []
+    for m in PUP.finditer(svg):
+        txt = m.group(0)
+        if txt.startswith("<g>") != txt.endswith("</g>"): continue
+        x, y = float(m.group(2)), float(m.group(3))
+        r = float(m.group(4) or m.group(6))
+        if 2 <= r <= 9: c.append((m.start(), m.end(), x, y, r))
+    best = None
+    for i in range(len(c)):
+        for j in range(i + 1, len(c)):
+            a, b = c[i], c[j]
+            if abs(a[3] - b[3]) < 3 and 10 <= abs(a[2] - b[2]) <= 85 and abs(a[4] - b[4]) < 1.5:
+                if best is None or a[4] > best[0][4]: best = (a, b)
+    if not best: return []
+    return sorted(best, key=lambda e: e[2])
+
 def eyes_of(svg):
-    return [(float(a), float(b), float(c)) for a, b, c in EYE.findall(svg)]
+    return [(e[2], e[3], e[4]) for e in find_eyes(svg)]
+
+SMILE = re.compile(r'<path d="M%s %sq%s %s %s 0"[^>]*stroke="#2B2340"[^>]*/>' % (NUM, NUM, NUM, NUM, NUM))
+def find_mouth(svg, eyes):
+    (lx, ly, r), (rx, _, _) = eyes
+    for m in SMILE.finditer(svg):
+        x, y, w = float(m.group(1)), float(m.group(2)), float(m.group(5))
+        if lx - 4 <= x and x + w <= rx + 4 and y > ly + r and 4 <= w <= 18 and float(m.group(4)) > 0:
+            return m.start(), m.end(), x + w / 2, y, w / 2
+    return None
 
 def f(x): return ("%.1f" % x).rstrip("0").rstrip(".")
 
@@ -52,6 +82,13 @@ def thinking(x, y, r, s):  # looking up and to the side
 def sad(x, y, r, s):
     return '<circle cx="%s" cy="%s" r="%s" fill="%s"/><circle cx="%s" cy="%s" r="%s" fill="#fff"/><circle cx="%s" cy="%s" r="%s" fill="#fff" opacity=".7"/>' % (
         f(x), f(y + r * .15), f(r * .9), INK, f(x - r * .3), f(y - r * .25), f(r * .4), f(x + r * .35), f(y + r * .45), f(r * .18))
+def angry(x, y, r, s):
+    return '<circle cx="%s" cy="%s" r="%s" fill="%s"/><path d="M%s %sh%s" stroke="%s" stroke-width="%s"/>' % (
+        f(x), f(y + r * .2), f(r * .85), INK, f(x - r * 1.1), f(y - r * .55), f(r * 2.2), "none", "0")
+def frustrated(x, y, r, s):   # > <
+    d = -s
+    return '<path d="M%s %sl%s %s-%s %s" stroke="%s" stroke-width="%s" fill="none" stroke-linecap="round" stroke-linejoin="round"/>' % (
+        f(x - d * r * .8), f(y - r * .8), f(d * r * 1.4), f(r * .8), f(d * r * 1.4), f(r * .8), INK, f(r * .5))
 def wink(x, y, r, s):
     if s < 0: return happy(x, y, r, s)
     return thinking(x, y, r, s).replace(f(x + r * .45), f(x - r * .3)).replace(f(y - r * .5), f(y - r * .35))
@@ -72,6 +109,14 @@ def extras(kind, eyes):
         return ''.join('<circle cx="%s" cy="%s" r="%s" fill="#fff" stroke="%s" stroke-width="1.5"/>' % (f(rx + 8 + i * 7), f(top + 4 - i * 7), f(2 + i * 1.6), INK) for i in range(3))
     if kind == "sad":
         return '<path d="M%s %sq-3 5 0 7q3-2 0-7z" fill="#7CC8F2" stroke="#3C8FC2" stroke-width=".8"/>' % (f(lx - r * .4), f(ly + r * 1.6))
+    if kind == "angry":
+        x0, y0 = rx + r * 3.6, top + 4
+        return '<g stroke="#E0465E" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M%s %sq3 3 6 0M%s %sq3-3 6 0M%s %sq-3 3 0 6M%s %sq3 3 0 6"/></g>' % (
+            f(x0 - 3), f(y0 - 5), f(x0 - 3), f(y0 + 5), f(x0 - 5), f(y0 - 3), f(x0 + 5), f(y0 - 3))
+    if kind == "frustrated":
+        x0, y0 = (lx + rx) / 2, top - 2
+        sc = '<path d="M%s %sc4-6 8 6 12 0s8 6 12 0 8 6 12 0" stroke="%s" stroke-width="2" fill="none" stroke-linecap="round"/>' % (f(x0 - 18), f(y0), INK)
+        return sc + '<path d="M%s %sq-3 5 0 7q3-2 0-7z" fill="#7CC8F2" stroke="#3C8FC2" stroke-width=".8"/>' % (f(rx + r * 2.2), f(ry - r * 1.6))
     if kind == "celebrate":
         cols = ["#FFD66B", "#FF8FAE", "#7CC8F2", "#9BE3A8", "#C3A6FF"]
         pts = [(14, 22, 20), (104, 18, -25), (20, 52, 40), (102, 50, 15), (60, 8, 0), (30, 10, -30), (92, 32, 35)]
@@ -80,27 +125,32 @@ def extras(kind, eyes):
         return ''.join('<path d="M%s %sl1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5z" fill="#FFD66B"/>' % (f(x), f(y)) for x, y in [(lx - r * 3.2, top + 6), (rx + r * 3.4, top + 12)])
     return ""
 
-KITS = {"happy": (happy, None), "surprised": (surprised, 0), "thinking": (thinking, None), "sad": (sad, 1), "celebrate": (happy, None), "wink": (wink, None)}
+KITS = {"angry": (angry, -1.3), "frustrated": (frustrated, None), "happy": (happy, None), "surprised": (surprised, 0), "thinking": (thinking, None), "sad": (sad, 1), "celebrate": (happy, None), "wink": (wink, None)}
 
 def emotion(svg, kind, mid=None):
-    base = svg
-    eyes = eyes_of(svg)
-    if len(eyes) < 2: return None
+    found = find_eyes(svg)
+    if len(found) != 2: return None
+    eyes = [(e[2], e[3], e[4]) for e in found]
     kit, tilt = KITS[kind]
-    k = [0]
-    def rep(m):
-        x, y, r = float(m.group(1)), float(m.group(2)), float(m.group(3))
-        s = -1 if k[0] == 0 else 1; k[0] += 1
-        out = kit(x, y, r, s)
-        if tilt is not None: out += brow(x, y, r, s, tilt)
-        if kind == "thinking" and s > 0: out += brow(x, y, r, s, 1.4)
-        return out
-    svg = EYE.sub(rep, svg)
-    if mid in MOUTH:
-        x, y, w, idx = MOUTH[mid]
-        ps = parts(svg)
-        if idx is not None:
-            old = parts(base)[idx]; svg = svg.replace(old, "", 1)
+    mo = find_mouth(svg, eyes)
+    out, pos = [], 0
+    spans = [(e[0], e[1], "eye", e) for e in found] + ([(mo[0], mo[1], "mouth", mo)] if mo else [])
+    for st, en, what, e in sorted(spans):
+        out.append(svg[pos:st])
+        if what == "eye":
+            x, y, r = e[2], e[3], e[4]
+            sd = -1 if e is found[0] else 1
+            t = kit(x, y, r, sd)
+            if tilt is not None: t += brow(x, y, r, sd, tilt)
+            if kind == "thinking" and sd > 0: t += brow(x, y, r, sd, 1.4)
+            if kind == "frustrated": t += brow(x, y, r, sd, 1.0)
+        else:
+            t = mouth(kind, e[2], e[3], e[4])
+        out.append(t); pos = en
+    out.append(svg[pos:])
+    svg = "".join(out)
+    if not mo and mid in MOUTH:
+        x, y, w, _ = MOUTH[mid]
         svg = svg.replace("</svg>", mouth(kind, x, y, w) + "</svg>")
     return svg.replace("</svg>", extras(kind, eyes) + "</svg>")
 
@@ -167,8 +217,8 @@ SIDE = {
 <ellipse cx="62" cy="64" rx="5" ry="3" fill="#FF8FAE" opacity=".6"/></svg>''',
 }
 
-MOUTH = {  # (x, y, half-width, index of the existing mouth element to replace or None)
-    "zebritis": (60, 83, 4, None), "dx": (60, 79, 5, 12),
+MOUTH = {  # mascots with no drawn mouth that should get one: (x, y, half-width, unused)
+    "zebritis": (60, 83, 4, None),
 }
 def mouth(kind, x, y, w):
     st = 'stroke="%s" stroke-width="2.2" fill="none" stroke-linecap="round"' % INK
@@ -176,23 +226,33 @@ def mouth(kind, x, y, w):
         return '<path d="M%s %sq%s %s %s 0z" fill="%s"/><path d="M%s %sq%s %s %s 0" fill="#FF8FAE"/>' % (f(x - w), f(y - 1), f(w), f(w * 1.6), f(w * 2), INK, f(x - w * .5), f(y + w * .55), f(w * .5), f(w * .5), f(w))
     if kind == "surprised": return '<ellipse cx="%s" cy="%s" rx="%s" ry="%s" fill="%s"/>' % (f(x), f(y + 1), f(w * .45), f(w * .65), INK)
     if kind == "sad": return '<path d="M%s %sq%s %s %s 0" %s/>' % (f(x - w), f(y + 2), f(w), f(-w * .8), f(w * 2), st)
+    if kind == "angry": return '<path d="M%s %sq%s %s %s 0" %s/>' % (f(x - w), f(y + 3), f(w), f(-w * 1.1), f(w * 2), st)
+    if kind == "frustrated": return '<path d="M%s %sq%s %s %s 0t%s 0" %s/>' % (f(x - w), f(y + 1), f(w * .5), f(-w * .6), f(w), f(w), st)
     if kind == "thinking": return '<path d="M%s %sl%s %s" %s/>' % (f(x - w * .7), f(y + 1), f(w * 1.4), f(-1), st)
     return '<path d="M%s %sq%s %s %s 0" %s/>' % (f(x - w * .8), f(y), f(w * .8), f(w * .7), f(w * 1.6), st)
 
-POSES = ["happy", "celebrate", "surprised", "thinking", "sad", "wink"]
+POSES = ["happy", "celebrate", "wink", "surprised", "thinking", "sad", "angry", "frustrated"]
 
-def build(mid):
-    base = open(os.path.join(SRC, mid + ".svg"), encoding="utf-8").read()
-    os.makedirs(OUT, exist_ok=True)
+def build(rel):
+    """rel = 'dx' or 'normie/dx'. Writes poses/<rel>-<pose>.svg."""
+    base = open(os.path.join(SRC, rel + ".svg"), encoding="utf-8").read()
+    mid = rel.split("/")[-1]
+    os.makedirs(os.path.dirname(os.path.join(OUT, rel)), exist_ok=True)
     made = []
     for k in POSES:
-        s = emotion(base, k, mid)
-        if s: open(os.path.join(OUT, "%s-%s.svg" % (mid, k)), "w").write(s); made.append(k)
-    s = three_quarter(mid, base)
-    if s: open(os.path.join(OUT, mid + "-turn.svg"), "w").write(s); made.append("turn")
-    if mid in SIDE:
-        open(os.path.join(OUT, mid + "-side.svg"), "w").write(re.sub(r"\n", "", SIDE[mid])); made.append("side")
-    print(mid, ", ".join(made))
+        s = emotion(base, k, None if "/" in rel else mid)
+        if s: open(os.path.join(OUT, "%s-%s.svg" % (rel, k)), "w").write(s); made.append(k)
+    return made
+
+def all_ids():
+    ids = [f[:-4] for f in sorted(os.listdir(SRC)) if f.endswith(".svg")]
+    ids += ["normie/" + f[:-4] for f in sorted(os.listdir(os.path.join(SRC, "normie"))) if f.endswith(".svg")]
+    return ids
 
 if __name__ == "__main__":
-    for mid in sys.argv[1:] or ["zebritis", "dx", "triviosis"]: build(mid)
+    import json
+    ok, miss = [], []
+    for rel in sys.argv[1:] or all_ids():
+        (ok if build(rel) else miss).append(rel)
+    json.dump(sorted(ok), open(os.path.join(OUT, "index.json"), "w"))
+    print(len(ok), "with poses; none for:", " ".join(miss))

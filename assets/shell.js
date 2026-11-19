@@ -74,9 +74,12 @@
   // arcade games (no daily puzzles): [path, name, mascot, tag line, accent, dark accent]. Home cards + "More games" box.
   var ARCADE = [["basil-clover", "Basil + Clover", "basil", "Basil kicks. Clover eats. Nothing is safe.", "#2B5E80", "#8EB8E8"], ["stackulus", "Stackulus", "stackulus", "Falling organs. Clear the rows.", "#7A4A92", "#C9A3DD"], ["mergeon", "Mergeon", "mergeon", "Merge microbes all the way up to a brain.", "#5E7A2E", "#A8C77A"]];
   // Mascot image: in Normie mode, games with normieMascot use the "day off" outfit (falls back to the normal one if missing).
-  function mascImg(id, alt, w, cls) {
+  // Mascot emotions (assets/mascots/poses/<id>-<pose>.svg, made by _scripts/mascot_poses/poses.py) and signature moves (shell.css .mm-*).
+  var POSED = ["allergy","arrhythmix","basil","comorbix","cryptogenic","dactylosis","deepdives","dental","dx","emergency","exercises","gphub","gpschool","grandrounds","gridectomy","immunisation","labelosis","layla","linkase","medicines","menshealth","mentalhealth","mergeon","morphemia","mythbusting","neurology","normie/comorbix","normie/cryptogenic","normie/dactylosis","normie/dx","normie/grandrounds","normie/gridectomy","normie/linkase","normie/morphemia","normie/norm","normie/suturix","normie/triviosis","normie/wordemic","normie/zebritis","nutrition","opacitis","ortho","panelysis","patients","research","satire","sensitosis","specialists","stackulus","stats","sudokrine","suturix","travel","triviosis","wordemic","zebritis"], MOVES = {"zebritis":"prance","dx":"sleuth","cryptogenic":"sleuth","triviosis":"bob","deepdives":"bob","wordemic":"wiggle","dactylosis":"wiggle","labelosis":"wiggle","comorbix":"spin","suturix":"spin","panelysis":"spin","morphemia":"flap","grandrounds":"flap","sudokrine":"flap","linkase":"slither","gridectomy":"sway","opacitis":"sway","arrhythmix":"drum","glimpsis":"peek","sensitosis":"peek","stackulus":"stomp","mergeon":"hop"};
+  function mascImg(id, alt, w, cls, pose) {
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0], std = "/assets/mascots/" + id + ".svg";
     var src = NORMIE && g && g.normieMascot ? "/assets/mascots/normie/" + id + ".svg" : std;
+    if (pose) { var rel = src.slice(16, -4); if (POSED.indexOf(rel) >= 0) { std = src; src = "/assets/mascots/poses/" + rel + "-" + pose + ".svg"; } }
     return '<img' + (cls ? ' class="' + cls + '"' : "") + ' src="' + src + '"' + (src !== std ? " onerror=\"this.onerror=null;this.src='" + std + "'\"" : "") + ' alt="' + (alt || "") + '" width="' + w + '" height="' + w + '" decoding="async"' + (cls === "mwx-masc" ? ' loading="lazy"' : "") + '>';
   }
   // Norm, the Normie host mascot. Hidden if the SVG is missing.
@@ -384,12 +387,12 @@
     var m = window.MW_MASCOTS && MW_MASCOTS[g.id]; if (!m) return "";
     return '<div class="mw-masc-help"><a href="' + mascUrl(m) + '" aria-label="' + m.name + '\u2019s story">' + mascImg(g.id, "", 72) + '</a><div><p><b>Hi, I\u2019m <a href="' + mascUrl(m) + '">' + m.name + '</a>,</b> ' + (NORMIE && g.nmode && g.normieMascot ? "on my day off" : m.what) + '. Here\u2019s how ' + g.name + ' works.</p>' + (m.vibe && !(NORMIE && g.nmode && g.normieMascot) ? '<p class="mw-masc-vibe">' + m.vibe + ' <a href="' + mascUrl(m) + '">Read my story</a></p>' : '') + '</div></div>';
   }
-  function mascotCheer(id) {
+  function mascotCheer(id, first) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id]; if (!m) return "";
     var last = get("mw-cheer-" + id, -1), k = Math.floor(Math.random() * m.cheer.length); if (k === last) k = (k + 1) % m.cheer.length; set("mw-cheer-" + id, k); var line = m.cheer[k];
     var gg = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0], NC = window.MW_NORMIE_CHEER;
     if (NORMIE && gg && gg.nmode && NC && NC.length) { var kn = get("mw-ncheer", -1), j = Math.floor(Math.random() * NC.length); if (j === kn) j = (j + 1) % NC.length; set("mw-ncheer", j); line = NC[j]; }
-    return '<div class="cb-masc"><span class="cb-bub">' + line + '</span>' + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>";
+    return '<div class="cb-masc"><span class="cb-bub">' + line + '</span>' + mascImg(id, m.name, 96, "mm-" + (MOVES[id] || "hop"), first ? "surprised" : lpick(["happy", "celebrate", "wink"])) + '<span class="cb-mname">' + m.name + "</span></div>";
   }
   // Lose screen: every game gets one (win scenes above return null on a loss). Sassy at the player, never at patients.
   var LOSE = {
@@ -426,13 +429,13 @@
   function loseScene(id, st) {
     var m = window.MW_MASCOTS && MW_MASCOTS[id], G = LOSE_G[id], own = G && !NORMIE && Math.random() < 0.75;
     var cap = st.gaveUp ? lpick(LOSE.gave) : own ? lpick(G.cap) : lpick(NORMIE ? LOSE.capN : LOSE.cap);
-    var masc = m ? '<div class="cb-masc cb-masc-sad"><span class="cb-bub">' + lpick(G && Math.random() < 0.75 ? G.bub : LOSE.bub) + "</span>" + mascImg(id, m.name, 96) + '<span class="cb-mname">' + m.name + "</span></div>" : "";
+    var masc = m ? '<div class="cb-masc cb-masc-sad"><span class="cb-bub">' + lpick(G && Math.random() < 0.75 ? G.bub : LOSE.bub) + "</span>" + mascImg(id, m.name, 96, "", lpick(["sad", "angry", "frustrated"])) + '<span class="cb-mname">' + m.name + "</span></div>" : "";
     return { cls: "cb-lose", ms: 4800, html: '<svg class="cb-x" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><path d="M38 38 L82 82"/><path d="M82 38 L38 82"/></svg>' +
       '<div class="cb-big">' + (G && !NORMIE && Math.random() < 0.8 ? G.big[0] : lpick(NORMIE ? LOSE.bigN : LOSE.big)) + '</div><p class="cb-cap">' + cap + "</p>" + masc };
   }
   function celebrate(id, st) {
     if (!st) return; var f = SCENES[id];
-    var sc0 = f ? f(st) : null; if (sc0 && st.win !== false) { sc0.html += mascotCheer(id); sc0.ms = (sc0.ms || 2600) + 2000; }
+    var sc0 = f ? f(st) : null; if (sc0 && st.win !== false) { sc0.html += mascotCheer(id, Array.isArray(st.guesses) ? st.guesses.length === 1 : /\bgold\b/.test(sc0.cls || "")); sc0.ms = (sc0.ms || 2600) + 2000; }
     if (!sc0 && st.done && st.win === false) sc0 = loseScene(id, st);
     queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
