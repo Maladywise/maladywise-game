@@ -14,6 +14,8 @@ or a strong world day). The noon slot is retired for automatic World Day posts f
 
 
 Queue: _social/queue.json  ->  {"posts": [{"date": "YYYY-MM-DD", "slot": "am"|"noon"|"pm", "thread": ["post 1", ...], "note": "...", "card": true}]}
+- "late" = 8:30pm Sydney for owner-approved extra posts. "image": "assets/social/x.png" attaches that exact picture;
+  "planned": true creates a planned (inert) Typefully draft that waits for the owner to confirm it.
 - Two slots a day: "am" = 7:30am (the weekly mix; the default when "slot" is missing) and "noon" = 12:30pm
   (world health day posts: history, facts, why it matters). One post per slot.
 - Entries without "typefully_id" whose date is today..today+10 (Sydney) are created as scheduled drafts.
@@ -59,7 +61,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEUE = os.path.join(ROOT, "_social", "queue.json")
 API = "https://api.typefully.com/v2"
 SYD = ZoneInfo("Australia/Sydney")
-SLOTS = {"am": (7, 30), "noon": (12, 30), "pm": (18, 0)}   # pm = 6pm Sydney (extra world-day or teaser posts)
+SLOTS = {"am": (7, 30), "noon": (12, 30), "pm": (18, 0), "late": (20, 30)}  # late = 8:30pm (owner-approved extras)   # pm = 6pm Sydney (extra world-day or teaser posts)
 #    # 7:30am Sydney (weekly mix); 12:30pm Sydney (world health day posts)
 
 
@@ -173,7 +175,7 @@ def scheduled_dates(sid):
         s = d.get("scheduled_date") or d.get("publish_at")
         if s:
             t = datetime.datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(SYD)
-            out.add("%s|%s" % (t.date().isoformat(), "pm" if t.hour >= 16 else "noon" if t.hour >= 11 else "am"))
+            out.add("%s|%s" % (t.date().isoformat(), "late" if t.hour >= 20 else "pm" if t.hour >= 16 else "noon" if t.hour >= 11 else "am"))
     return out
 
 
@@ -600,6 +602,11 @@ def main():
     def image_for(p, url):
         """Local image path for post 1: puzzle card, day card, page og image, generated game card, or the share card."""
         nonlocal browser, pw
+        if isinstance(p.get("image"), str):  # "image": "assets/social/..." = this exact picture
+            fp = os.path.join(ROOT, p["image"])
+            if os.path.exists(fp):
+                return fp
+            print("Image %s not found for %s; falling back." % (p["image"], p["date"]))
         if p.get("puzzle"):
             try:
                 if browser is None:
@@ -715,6 +722,8 @@ def main():
                     if "http" in xp["text"]:
                         xp["hide_link_preview"] = True
             body["publish_at"] = when.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+            if p.get("planned"):  # "planned": true = dated in Typefully but waits for the owner to confirm it
+                body["plan_at"] = body.pop("publish_at")
             res = call("POST", "/social-sets/%s/drafts" % sid, body)
             if busy is not None:
                 busy.add(key_of(p))

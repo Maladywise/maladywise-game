@@ -176,6 +176,10 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Owner's request: build fact sheets ahead for upcoming world days. Each Friday, the task that writes the week's X posts checks priority 1–3 days in the next 3 weeks with no `page`. Where a useful patient topic exists (the condition, a test, a treatment decision such as /antibiotics/ for AMR week or /seeing-a-psychologist/ for Psychology Week), write the fact sheet in the usual template (verified facts, Australian sources, sources list, Updated date, no "Reviewed"), add it to the Conditions hub and MW_FACTS in site.js, set `page`, then run the normal page pipeline. Skip country/national days, remembrance and sensitive days.
 - After adding pages, run `python3 _scripts/build_days.py` (and bump CSS_V/JS_V there when days.css/days.js change).
 
+## X: 8:30pm "late" slot for picture-led extras (from 20 Nov 2026, owner's request)
+- Owner-approved extra posts (current health news with sass, and "X is cool" anatomy posts with our own anatomy-quiz diagrams) go in `"slot": "late"` (8:30pm Sydney) with `"planned": true`: they land in Typefully as planned drafts and only post once the owner confirms them. `"image": "assets/social/..."` attaches an exact picture; news posts use `"image": true` (the linked fact sheet's card).
+- Same rules: picture in post 1, no link in post 1, link in the reply, at most 1 hashtag, sass at hype or the reader's guess, never at patients. Every fact checked.
+
 ## X: daily noon "trend or pearl" quiz (from 20 Nov 2026, owner's request)
 - One extra post a day at **12:30pm Sydney** (`"slot": "noon"`), written by the 7:43pm evening trends task for TOMORROW into `_social/queue.json`. The owner has approved these to post automatically (no approval step). X replies are still on demand only.
 - **If a health topic is clearly trending** in data/trends-google.json (AU first, then US/GB): a quiz on it. Make or update the matching fact sheet first if there isn't one, then link it.
