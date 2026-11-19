@@ -1030,6 +1030,7 @@
   // ---------- seasonal logo icon ----------
   var SEASONS = [
     ["10-24", "10-31", "halloween", "Happy Halloween"],
+    ["11-01", "11-30", "movember", "Movember: grow a mo for men\u2019s health"],
     ["2026-11-03", "", "melbcup", "Melbourne Cup. Think horses."], ["2027-11-02", "", "melbcup", "Melbourne Cup. Think horses."], ["2028-11-07", "", "melbcup", "Melbourne Cup. Think horses."],
     ["12-01", "12-26", "christmas", "Merry Christmas"],
     ["12-31", "12-31", "newyear", "Happy New Year"], ["01-01", "01-01", "newyear", "Happy New Year"],
