@@ -1567,6 +1567,13 @@
 "label": "Malady Wise mascots",
 "title": "Ama"
 },
+"mascots-basil": {
+"url": "/mascots/basil/",
+"key": "51adc23d52eb",
+"v": "fd35f5e7",
+"label": "Malady Wise mascots",
+"title": "Basil"
+},
 "mascots-bea": {
 "url": "/mascots/bea/",
 "key": "bd72ab47512f",
@@ -1594,6 +1601,13 @@
 "v": "0bb78029",
 "label": "Malady Wise mascots",
 "title": "Cipher"
+},
+"mascots-clover": {
+"url": "/mascots/clover/",
+"key": "37cedc0103d5",
+"v": "10106be4",
+"label": "Malady Wise mascots",
+"title": "Clover"
 },
 "mascots-dex": {
 "url": "/mascots/dex/",

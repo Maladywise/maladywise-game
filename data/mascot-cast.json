@@ -168,6 +168,22 @@
    "role": "Orthopaedics and bone pages",
    "vibe": "Ortho bro. Maintains skeletal integrity. Never far from a good bone, and will tell you about it.",
    "story": "Hugo is a dog, which makes orthopaedics less a career than a calling: he has loved bones since he was a puppy. He keeps one at his feet at all times, purely for teaching. He talks about protein, never skips leg day and calls everyone mate, but he is secretly the gentlest pair of paws in the building when a frightened kid comes in with a broken arm."
+  },
+  "basil": {
+   "name": "Basil",
+   "animal": "fluffy white cat",
+   "role": "Basil + Clover arcade game",
+   "cat": true,
+   "vibe": "Smug, fluffy and gravity’s greatest research partner. If it’s on a surface, it’s about to be on the floor.",
+   "story": "Basil is a real cat, drawn as a cartoon. He is enormously fluffy, entirely white and convinced every object on a table is an experiment waiting to happen. He runs these experiments daily, with a paw, at eye contact. He likes sitting in the bathroom sink and splashing the water, and he likes swiping his sister Clover, mostly because she complains about it. His nicknames include Furby with Fangs and Fat White Seal, and he answers to none of them. He stars in the Basil + Clover arcade game, where he kicks. Everything."
+  },
+  "clover": {
+   "name": "Clover",
+   "animal": "tortoiseshell cat",
+   "role": "Basil + Clover arcade game",
+   "cat": true,
+   "vibe": "Sassy, opinionated and Chief Complaints Officer. Eats everything. Regrets nothing.",
+   "story": "Clover is a real cat, drawn as a cartoon. She is a tortoiseshell with a lot to say, and she says it, loudly, usually about her brother Basil. She has an appetite that has earned her the nickname Miss Piggy and a talent for finding food nobody knew was there. Her other titles include Whingapotamus and Spicy Little Muffin. In the Basil + Clover arcade game, Basil kicks and Clover eats, which is exactly how it works at home."
   }
  }
 }

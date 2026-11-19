@@ -15,8 +15,8 @@ _GAMES = [("dx", "Dxtective", "/dxtective/"), ("wordemic", "Wordemic", "/wordemi
 # where each host works (only pages that exist and aren't redirects)
 _HOME = {"medicines": "/medicines/", "normie/norm": "/normie/", "gphub": "/doctors/", "gpschool": "/gp-school/", "specialists": "/specialists/",
          "research": "/research/", "exercises": "/exercises/", "layla": "/tiredwise/", "patients": "/patients/", "mentalhealth": "/mental-health/",
-         "sleep": "/sleep/", "travel": "/travel/"}
-_HE = ("Norm", "Percy", "Magnus", "Brix", "Otto", "Hugo")
+         "sleep": "/sleep/", "travel": "/travel/", "basil": "/basil-clover/", "clover": "/basil-clover/"}
+_HE = ("Norm", "Percy", "Magnus", "Brix", "Otto", "Hugo", "Basil")
 _e = _h.escape
 def _slug(n): return _re.sub(r"[^a-z0-9]+", "-", _ud.normalize("NFKD", n).encode("ascii", "ignore").decode().lower()).strip("-")
 def _live(href):
@@ -30,7 +30,7 @@ for k, g, href in _GAMES:
     m = _M.get(k)
     if m: ALL.append((k, m["name"], g + " mascot", _live(href), m.get("what", ""), m.get("vibe", ""), m.get("story", ""), m.get("cheer") or [], "game"))
 for k, v in _C.items():
-    ALL.append((k, v["name"], v["role"], _live(_HOME.get(k)), v["animal"], v["vibe"], v["story"], [], "host"))
+    ALL.append((k, v["name"], v["role"], _live(_HOME.get(k)), v["animal"], v["vibe"], v["story"], [], "cat" if v.get("cat") else "host"))
 _seen = {}
 for i, a in enumerate(ALL):
     s = _slug(a[1]); s = s if s not in _seen else s + "-" + _slug(a[2]).split("-")[0]
@@ -53,12 +53,12 @@ def _tile(a):
     k, name, role, href, what, vibe, story, cheer, kind, slug = a
     return ('<li><a href="/mascots/%s/"><img src="/assets/mascots/%s.svg" alt="" width="84" height="84" loading="lazy"><b>%s</b><i>%s</i><span>%s</span></a></li>'
             % (slug, k, _e(name), _e(role), _e(what[:1].upper() + what[1:])))
-games = [a for a in ALL if a[8] == "game"]; hosts = [a for a in ALL if a[8] == "host"]
+games = [a for a in ALL if a[8] == "game"]; hosts = [a for a in ALL if a[8] == "host"]; cats = [a for a in ALL if a[8] == "cat"]
 body = ('<p class="lede">Every Malady Wise puzzle has a mascot, and every part of the site has a host. Tap one to read her story.</p>\n'
         '<p class="sass">All characters are fictional. Any resemblance to your registrar is a coincidence.</p>\n'
         '<h2>Game mascots</h2>\n<ul class="mcg">' + "".join(_tile(a) for a in games) + '</ul>\n'
         '<h2>Hosts and topic mascots</h2>\n<p>They look after hubs, sections and health topics.</p>\n<ul class="mcg">' + "".join(_tile(a) for a in hosts) + '</ul>\n'
-        '<h2>Basil and Clover</h2>\n<p>The two real cats who started it all, drawn as cartoons. They star in the <a href="/basil-clover/">Basil + Clover</a> arcade game and most of the <a href="/shop/">stickers</a>.</p>\n' + _CSS)
+        '<h2>Basil and Clover</h2>\n<p>The two real cats who started it all, drawn as cartoons. They star in the <a href="/basil-clover/">Basil + Clover</a> arcade game and most of the <a href="/shop/">stickers</a>.</p>\n<ul class="mcg">' + "".join(_tile(a) for a in cats) + '</ul>\n' + _CSS)
 page("/mascots/", "Meet the Malady Wise Mascots: Back Stories and Win Lines",
      "Meet the mascots behind every Malady Wise puzzle and section: Dex the fox detective, Lumo the see-through jellyfish, Pippa the elephant and the rest, each with a back story.",
      "Meet the mascots", "Malady Wise mascots", "About", [("Malady Wise", "/"), ("Mascots", "/mascots/")], body, [], [],
