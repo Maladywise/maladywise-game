@@ -1782,6 +1782,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   }
   // "Babies and children" filter chip on the Conditions list (Nov 2026). Uses the groups in MW_FACTS; /conditions/#kids opens it filtered.
   function kidsChip() {
+    return; // chip removed at the owner's request (19 Nov 2026)
     if (location.pathname !== "/conditions/" || !window.MW_FACTS) return;
     var ul = document.getElementById("fs-list"); if (!ul || document.querySelector(".mw-kidchip")) return;
     var F = window.MW_FACTS, kids = {};

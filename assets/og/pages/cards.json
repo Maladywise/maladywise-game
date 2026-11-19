@@ -3646,6 +3646,27 @@
 "label": "Condition",
 "title": "Whooping Cough (Pertussis)"
 },
+"x-rays-and-radiation": {
+"url": "/x-rays-and-radiation/",
+"key": "d17633977fa5",
+"v": "dbfa08eb",
+"label": "Condition",
+"title": "X-Rays and Radiation Dose"
+},
+"xanthelasma": {
+"url": "/xanthelasma/",
+"key": "8e569613ac68",
+"v": "6d05642e",
+"label": "Condition",
+"title": "Xanthelasma"
+},
+"yellow-fever": {
+"url": "/yellow-fever/",
+"key": "20537465ba02",
+"v": "c4b44077",
+"label": "Condition",
+"title": "Yellow Fever"
+},
 "zinc": {
 "url": "/zinc/",
 "key": "28507400e387",
