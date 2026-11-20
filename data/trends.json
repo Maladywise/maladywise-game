@@ -1286,6 +1286,22 @@
    "date": "2026-11-20",
    "source": "news search: CDC media release",
    "niche": false
+  },
+  {
+   "term": "Base editing nears first BLA as AAV gene therapy safety comes under scrutiny",
+   "region": "Global",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-21",
+   "source": "news search: Cell & Gene Therapy Insights (insights.bio)",
+   "niche": true
+  },
+  {
+   "term": "Ebola (Bundibugyo) outbreak DRC: 11,145 cases, 5,437 deaths",
+   "region": "Global",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-21",
+   "source": "news search: Contagion Live 15 Nov 2026",
+   "niche": false
   }
  ],
  "used": [
