@@ -116,7 +116,7 @@ PAGES = {
     <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
   </section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
-  scripts='<script defer src="cases.js?v=1"></script>\n<script defer src="triagic.js?v=1"></script>'),
+  scripts='<script defer src="cases.js?v=2"></script>\n<script defer src="triagic.js?v=2"></script>'),
  "lunicorn": dict(
   title="Lunicorn", robots="noindex", theme="#2E1F57", canon="",
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",

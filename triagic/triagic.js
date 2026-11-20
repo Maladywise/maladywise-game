@@ -8,7 +8,8 @@
     ["🔔", "Fire alarm test. Nobody told you."], ["🔑", "Your password has expired. Please choose one you’ve never used before."], ["🐟", "Someone microwaved fish in the staff room."],
     ["📟", "Pager: ‘Can you please chart Panadol in bed 4?’"], ["🧾", "Coding wants you to clarify a discharge summary from 2019."]];
   var S;
-  function reset() { S = { t: SHIFT, chaos: 0, score: 0, seen: 0, saved: 0, wrong: 0, wait: [], deck: G.shuffle(CASES), di: 0, next: 1.5, curve: 22 + Math.random() * 12, block: null, open: null, over: false, last: performance.now(), id: 0 }; }
+  function deal() { return G.shuffle(CASES.map(function (g) { return Array.isArray(g[0]) ? g[Math.floor(Math.random() * g.length)] : g; })); } // one variant per group per shift
+  function reset() { S = { t: SHIFT, chaos: 0, score: 0, seen: 0, saved: 0, wrong: 0, wait: [], deck: deal(), di: 0, next: 1.5, curve: 22 + Math.random() * 12, block: null, open: null, over: false, last: performance.now(), id: 0 }; }
   function draw() {
     $("tr-time").textContent = Math.floor(S.t / 60) + ":" + ("0" + Math.floor(S.t % 60)).slice(-2);
     $("tr-score").textContent = S.score.toLocaleString("en-AU");
@@ -21,7 +22,7 @@
     }).join("") : '<p class="tr-empty">Waiting room empty. Don’t say it.</p>';
   }
   function arrive() {
-    if (S.di >= S.deck.length) { S.deck = G.shuffle(CASES); S.di = 0; }
+    if (S.di >= S.deck.length) { S.deck = deal(); S.di = 0; }
     var c = S.deck[S.di++];
     if (S.wait.length >= MAXWAIT) { S.chaos += 12; G.toast("🚑 Ambulance ramped. Chaos rising."); return; }
     S.wait.push({ id: ++S.id, c: c, w: 0, bad: false });
