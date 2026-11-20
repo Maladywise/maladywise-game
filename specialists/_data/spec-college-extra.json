@@ -1798,22 +1798,27 @@
   "people": [
    {
     "name": "Dr Michael Catanach",
-    "specialty": "Orthopaedic surgery (hand surgery)",
-    "practice": "Dr Michael Catanach",
-    "address": "Level 2, Suite 11, 6-8 Sydney Street, Gateshead NSW 2290",
+    "specialty": "Orthopaedic surgery (hand and wrist)",
+    "practice": "Lake Macquarie Specialist Medical Centre",
+    "address": "Suite 11, Level 2, Lake Macquarie Specialist Medical Centre, 6-8 Sydney Street, Gateshead NSW 2290",
     "suburb": "Gateshead",
-    "phone": "",
+    "phone": "02 4099 2444",
     "fax": "",
-    "email": "",
+    "email": "specialist.lmp@ramsayhealth.com.au",
     "ereferral": "",
-    "website": "",
+    "website": "https://drmichaelcatanach.com.au/",
     "interests": [
-     "Hand surgery"
+     "Carpal and cubital tunnel syndrome",
+     "Trigger finger, De Quervain's, ganglions, Dupuytren's",
+     "Wrist, finger and base of thumb arthritis",
+     "Scaphoid and distal radius fractures",
+     "Tendon and nerve injuries",
+     "DVA, WorkCover (iCare) and CTP patients"
     ],
     "practical": {
      "telehealth": null,
      "bulk_billing": "unknown",
-     "wait": "",
+     "wait": "New patients usually seen within a week of referral",
      "ages": "",
      "hospitals": [
       "Lake Macquarie Private Hospital",
@@ -1823,14 +1828,18 @@
       "German",
       "Spanish"
      ],
-     "after_hours": null
+     "after_hours": null,
+     "new_patients": true,
+     "np_note": "Site says new patients usually seen within a week of the referral"
     },
     "inclusive": [],
     "sources": [
+     "https://drmichaelcatanach.com.au/",
+     "https://drmichaelcatanach.com.au/contact",
      "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-michael-catanach/",
      "https://www.surgeons.org/Profile/dr-michael-catanach"
     ],
-    "checked": "2026-10-31",
+    "checked": "2026-11-20",
     "ahpra": "not checked"
    }
   ]

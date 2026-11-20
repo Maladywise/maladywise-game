@@ -1472,6 +1472,43 @@
     "checked": "2026-10-31",
     "ahpra": "not checked",
     "notes": "Gap fee may apply; first consult 50-60 min. Assisted consults possible at participating GP clinics."
+   },
+   {
+    "name": "Mind Matters Psychiatry",
+    "specialty": "Telepsychiatry service",
+    "practice": "Mind Matters Psychiatry",
+    "address": "Telehealth only",
+    "suburb": "Online",
+    "phone": "02 8531 1214",
+    "fax": "",
+    "email": "referrals@mindmatterspsychiatry.com.au",
+    "ereferral": "",
+    "website": "https://www.mindmatterspsychiatry.com.au",
+    "interests": [
+     "ADHD",
+     "Anxiety, depression and bipolar disorder",
+     "PTSD and trauma, OCD",
+     "Eating and personality disorders",
+     "Women's mental health; mental health impacts of family and domestic violence"
+    ],
+    "practical": {
+     "telehealth": true,
+     "bulk_billing": "unknown",
+     "wait": "Immediate availability for new patients (practice, Nov 2026)",
+     "ages": "Adults 18-65",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": true,
+     "new_patients": true,
+     "np_note": "GP referral by email. Ongoing treating practice: does not do one-off item 291 assessment and management plans. Appointments Mon-Fri 8am-9pm."
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.mindmatterspsychiatry.com.au"
+    ],
+    "checked": "2026-11-20",
+    "ahpra": "not checked",
+    "notes": "Psychiatrist-led practice (Dr Elizabeth Fyson, FRANZCP). Video appointments Australia-wide."
    }
   ]
  }
