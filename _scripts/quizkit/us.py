@@ -155,14 +155,14 @@ def fetch_local(i, k):
     tmp = "/tmp/qk-%s" % hashlib.md5(i["url"].encode()).hexdigest()
     if not os.path.exists(tmp):
         req = urllib.request.Request(i["url"], headers={"User-Agent": "MaladyWiseBot/1.0 (https://maladywise.com; maladywise@gmail.com)"})
-        for t in range(8):
+        for t in range(2):
             try:
                 with urllib.request.urlopen(req, timeout=60) as r:
                     data = r.read()
                 break
             except Exception as e:
-                if t == 7: raise
-                time.sleep(20 * (t + 1))
+                if t == 1: raise
+                time.sleep(5)
         open(tmp, "wb").write(data)
         time.sleep(5)
     i["path"] = tmp
@@ -204,8 +204,13 @@ def build():
     items = []
     for k, q in enumerate(QS):
         i = q["img"]
-        fetch_local(i, k + 1)
-        name, w, h = save_img(q, k + 1)
+        try:  # self-host under a neutral name; if Wikimedia refuses (rate limit), keep hotlinking for now
+            fetch_local(i, k + 1)
+            name, w, h = save_img(q, k + 1)
+            src = "img/" + name
+        except Exception as e:
+            print("  image %d: kept hotlink (%s)" % (k + 1, str(e)[:60]))
+            src, w, h = i["url"], 0, 0
         opts = shuffled(q, "ultrasound-quiz", pos[k])
         cap = "Image: %s · %s · %s." % (esc(i["author"]), lic_html(i), esc(i["source"]))
         items.append("".join([
@@ -213,8 +218,8 @@ def build():
             '<p class="qk-n">Question %d of %d · %s</p>' % (k + 1, n, esc(q["region"])),
             '<p class="qk-case">%s</p>' % esc(q["case"]),
             '<h3 class="qk-p">%s</h3>' % esc(q["q"]),
-            '<figure class="qk-xr"><img src="img/%s" width="%d" height="%d" alt="%s" loading="%s" decoding="async"><figcaption>%s</figcaption></figure>' % (
-                name, w, h, esc(q["alt"]), "eager" if k == 0 else "lazy", cap),
+            '<figure class="qk-xr"><img src="%s"%s alt="%s" loading="%s" decoding="async" referrerpolicy="no-referrer"><figcaption>%s</figcaption></figure>' % (
+                esc(src), (' width="%d" height="%d"' % (w, h)) if w else "", esc(q["alt"]), "eager" if k == 0 else "lazy", cap),
             '<ol class="qk-opts" type="A">%s</ol>' % "".join("<li>%s</li>" % esc(x) for x in opts),
             '<details class="qk-ans"><summary>Show answer</summary><p><b>Answer: %s.</b> <span class="why">%s <span class="qk-tip"><strong>Tip:</strong> %s</span> <span class="qk-src">Image source: %s by %s.</span></span></p></details>' % (
                 esc(q["a"]), esc(q["why"]), esc(q["tip"]), src_link(i), esc(i["author"])),
