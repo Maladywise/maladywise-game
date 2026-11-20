@@ -1,0 +1,47 @@
+/* Lunicorn question sets: [chip colour, the sign, answer, [3 wrong], why]. Question is always "What’s behind it?" */
+window.LUNICORN = {
+  rainbow: [
+    ["#D7263D", "Red flush over the face, neck and chest during a fast vancomycin drip", "Infusion too fast (vancomycin flushing reaction)", ["Penicillin allergy", "Measles", "Sunburn"], "Fast vancomycin releases histamine. Slow the drip and give an antihistamine. It isn’t a true allergy."],
+    ["#C0392B", "Red-currant jelly stool in a screaming toddler", "Intussusception", ["Beetroot", "Gastro", "Meckel’s diverticulum"], "Bowel telescoping into bowel. Ultrasound shows a target. An air enema often fixes it."],
+    ["#E8743B", "Orange tears, sweat and urine", "Rifampicin", ["Carrot juice", "Jaundice", "Vitamin B12"], "Rifampicin turns body fluids orange and can permanently stain soft contact lenses. Harmless, but warn people."],
+    ["#F39C12", "Orange palms and soles, whites of the eyes normal", "Carotenaemia (too many carrots)", ["Jaundice", "Hepatitis", "Addison’s disease"], "Beta-carotene stains the skin but not the sclera. Jaundice yellows the eyes first."],
+    ["#E5C100", "Yellow, thick, slow-growing nails, swollen legs and fluid on the lungs", "Yellow nail syndrome", ["Fungal nail infection", "Smoking", "Jaundice"], "A rare lymphatic disorder: yellow nails, lymphoedema and pleural effusions."],
+    ["#C9A227", "Golden-brown ring around the edge of the cornea", "Wilson disease (Kayser–Fleischer rings)", ["Arcus senilis", "Jaundice", "Contact lens deposit"], "Copper builds up in the cornea, liver and brain. Think of it in young people with liver disease or new movement problems."],
+    ["#2E8B57", "Green urine in an ICU patient", "Propofol infusion", ["Pseudomonas infection", "Asparagus", "Bile duct blockage"], "Propofol metabolites can turn urine green. Usually harmless. Methylene blue can do it too."],
+    ["#27AE60", "Green-tinged sputum in a cold that’s getting better", "Normal colour from white cells, not a reason for antibiotics", ["Bacterial pneumonia", "Pseudomonas", "Asthma"], "The green is an enzyme (myeloperoxidase) from your own white cells. Colour alone doesn’t mean bacteria."],
+    ["#2E86DE", "Blue whites of the eyes, several fractures and hearing loss", "Osteogenesis imperfecta", ["Marfan syndrome", "Iron deficiency", "Normal in babies"], "Thin collagen lets the blue underneath show through. Brittle bones, blue sclera, deafness."],
+    ["#3867D6", "Blue-grey skin after years of taking colloidal silver", "Argyria", ["Cyanosis", "Haemochromatosis", "Methaemoglobinaemia"], "Silver deposits in the skin permanently. Brighter in sun-exposed areas."],
+    ["#5B3A8E", "Purple urine in a catheter bag", "Purple urine bag syndrome (UTI with a catheter)", ["Porphyria", "Kidney cancer", "Beetroot"], "Gut bacteria break down tryptophan; bacteria in alkaline urine turn it into blue and red pigments that dye the bag."],
+    ["#6C3483", "Purple face patch from birth, plus seizures", "Sturge–Weber syndrome", ["Bruising", "Haemangioma", "Lupus"], "Port-wine stain in the trigeminal area plus abnormal blood vessels over the brain."],
+    ["#5D4037", "Chocolate-brown blood that stays brown in air", "Methaemoglobinaemia", ["Carbon monoxide", "Anaemia", "Cyanide"], "Iron in the wrong state can’t carry oxygen. Low sats that don’t fix with oxygen. Antidote: methylene blue."],
+    ["#212121", "Urine that goes black when left standing", "Alkaptonuria", ["Rhabdomyolysis", "Blackwater fever", "Liquorice"], "Homogentisic acid darkens in air. Later: dark ear cartilage and early arthritis."],
+    ["#37474F", "Black hairy tongue", "Antibiotics, smoking or poor oral hygiene", ["Oral cancer", "Thrush", "Iron tablets"], "Overgrown tongue papillae trap pigment. Harmless. Brush the tongue."],
+    ["#B5651D", "Bronze skin, diabetes and an enlarged liver", "Haemochromatosis", ["Addison’s disease", "Spray tan", "Wilson disease"], "‘Bronze diabetes’ from iron overload. Check ferritin and transferrin saturation."],
+    ["#E91E63", "Pink urine after beetroot", "Beeturia", ["Kidney stones", "Bladder cancer", "Rifampicin"], "Harmless, but more common with iron deficiency."],
+    ["#C2185B", "Strawberry tongue, red cracked lips, fever for 5 days in a child", "Kawasaki disease", ["Scarlet fever only", "Measles", "Allergy"], "Can damage coronary arteries. Treat with IV immunoglobulin and aspirin, and get an echo."]
+  ],
+  blue: [
+    ["#1E88E5", "Blue toes after a heart catheter, but strong foot pulses", "Cholesterol emboli (blue toe syndrome)", ["Frostbite", "Raynaud’s", "DVT"], "Tiny cholesterol crystals shower downstream after vessel instrumentation. Pulses stay normal."],
+    ["#1565C0", "A blue dot at the top of a painful testis", "Torsion of a testicular appendage", ["Testicular torsion", "Epididymitis", "Hernia"], "The ‘blue dot sign’ is a twisted little appendage. Usually managed without surgery, but ultrasound to be sure."],
+    ["#42A5F5", "Blue-grey patches over a baby’s lower back", "Congenital dermal melanocytosis (Mongolian spots)", ["Bruising from abuse", "Haemangioma", "Melanoma"], "Common and harmless, especially in darker skin. Document them so they’re never mistaken for bruises."],
+    ["#0D47A1", "Blue soft rubbery skin lumps and iron-deficiency anaemia", "Blue rubber bleb naevus syndrome", ["Lipomas", "Neurofibromas", "Kaposi sarcoma"], "Venous malformations in the skin and gut that bleed slowly."],
+    ["#1976D2", "Blue nappy stains in a baby with fevers and high calcium", "Blue diaper syndrome", ["Methylene blue", "Dye in wipes", "Pseudomonas"], "A rare defect in absorbing tryptophan. Gut bacteria turn it into indigo blue."],
+    ["#2196F3", "A ‘blue baby’ who squats to catch her breath", "Tetralogy of Fallot", ["Asthma", "Croup", "Anaemia"], "Squatting raises resistance in the body, pushing more blood to the lungs. Classic boot-shaped heart on X-ray."],
+    ["#64B5F6", "Blue-green urine on an antidepressant", "Amitriptyline", ["Pseudomonas", "Bladder cancer", "Copper"], "Rare and harmless. Methylene blue and propofol can do it too."],
+    ["#1A237E", "Blue lips, low sats that don’t rise on oxygen, after a dental anaesthetic spray", "Methaemoglobinaemia (from benzocaine)", ["Asthma", "Pneumothorax", "Anaphylaxis"], "Topical anaesthetics can oxidise haemoglobin. Treat with methylene blue."],
+    ["#3F51B5", "Blue half-moons at the base of the nails", "Wilson disease, silver or some medicines", ["Iron deficiency", "Kidney failure", "Normal"], "Azure lunulae: think copper, silver, or drugs such as zidovudine."],
+    ["#283593", "Overweight, blue-tinged and wheezy with a chronic cough", "Chronic bronchitis (‘blue bloater’)", ["Emphysema (‘pink puffer’)", "Asthma", "Heart attack"], "An old teaching label for COPD with low oxygen and fluid build-up. Today we just say COPD."]
+  ],
+  blood: [
+    ["#B71C1C", "Cherry-red spot in the middle of the retina, sudden painless vision loss in one eye", "Central retinal artery occlusion", ["Retinal detachment", "Glaucoma", "Migraine"], "The pale, starved retina makes the fovea look red. An eye stroke: emergency."],
+    ["#C62828", "Cherry-red spot on the retina in a baby losing skills", "Tay–Sachs disease", ["Retinoblastoma", "Cataract", "Normal finding"], "Fatty material builds up in nerve cells. Same red-spot sign, very different cause."],
+    ["#D32F2F", "Red, painful eye, halos around lights, fixed mid-sized pupil, vomiting", "Acute angle-closure glaucoma", ["Conjunctivitis", "Migraine", "Iritis"], "Pressure in the eye spikes. Urgent ophthalmology: it can blind within hours."],
+    ["#E53935", "Red bullseye rash after a tick bite overseas", "Erythema migrans (Lyme disease)", ["Ringworm", "Cellulitis", "Allergic reaction"], "The expanding target rash is diagnostic in Lyme areas. Treat with doxycycline."],
+    ["#AD1457", "Red butterfly rash across the cheeks that spares the folds beside the nose", "Systemic lupus erythematosus", ["Rosacea", "Sunburn", "Slapped cheek"], "The malar rash spares the nasolabial folds. Check ANA and other bloods."],
+    ["#8E2420", "Cola-coloured urine two weeks after a sore throat", "Post-streptococcal glomerulonephritis", ["Rhabdomyolysis", "Kidney stones", "Beetroot"], "The kidneys inflame after strep. Blood pressure up, puffy face. Usually recovers."],
+    ["#7B1F1F", "Cola-coloured urine the day after a heavy gym session", "Rhabdomyolysis", ["Glomerulonephritis", "Dehydration only", "Bladder infection"], "Muscle breakdown releases myoglobin. Check CK, push fluids, protect the kidneys."],
+    ["#E57373", "Bright red blood on the paper and sharp pain when passing hard stools", "Anal fissure", ["Bowel cancer", "Haemorrhoids", "Diverticulitis"], "Tearing pain plus bright blood is classic. Fibre, fluids and topical treatments. Painless bleeding in older people needs a scope."],
+    ["#C2185B", "Bright red ‘slapped cheeks’ in a child, then a lacy rash on the arms", "Fifth disease (parvovirus B19)", ["Scarlet fever", "Measles", "Lupus"], "Usually mild, but can cause problems in pregnancy and in people with blood disorders."],
+    ["#880E4F", "Red man, purple bag, black tongue, orange tears: which colour change is a true emergency?", "None of them: the emergency is a non-blanching purple rash with fever", ["Purple urine bag", "Black hairy tongue", "Orange tears"], "A fever with a spreading rash that doesn’t fade under a glass is meningococcal sepsis until proven otherwise."]
+  ]
+};

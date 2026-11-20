@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<link rel="canonical" href="https://maladywise.com/fridaemia/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="max-image-preview:large">
+<title>Fridaemia: The 5pm Friday Results Inbox | Malady Wise</title>
+<meta name="description" content="Fridaemia is a free weekly GP game, open Fridays 4:30 to 7pm only: eight results land at knock-off time. ED now, call today, or Monday?">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#7A1F2B">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
+<link rel="stylesheet" href="../assets/shell.css?v=246">
+<link rel="stylesheet" href="../assets/mg.css?v=1">
+<style>:root{--mg-a:#7A1F2B;--mg-b:#4A1220;--mg-hi:#FFD3D8;--mg-soft:#FBEDEF}.fr-res{font:700 20px/1.35 var(--body);color:var(--mg-a)}html[data-theme=dark] .fr-res{color:var(--mg-hi)}</style>
+<script defer src="../assets/games.js?v=127"></script>
+<script defer src="../assets/shell.js?v=295"></script>
+</head>
+<body>
+<main class="wrap mg-page">
+  <section class="mg-intro" id="fr-intro">
+    <img class="mg-masc" src="/assets/mascots/panelysis.svg" alt="Ruby the vampire, host of the blood test games" width="104" height="104">
+    <p class="mg-kick">&#128229; Fridays, 4:30 to 7pm only</p>
+    <h1>Fridaemia</h1>
+    <p class="mg-lede">It&rsquo;s 5pm on a Friday. You&rsquo;re reaching for your keys when eight results land in your inbox. For each one: ED now, call today, or Monday is fine?</p>
+    <p class="mg-small">Same eight results for everyone this week. Ruby hosts.</p>
+    <p class="mg-lock" id="fr-lock"></p>
+    <button class="big" type="button" id="fr-play">Open the inbox</button>
+    <p class="mg-best" id="fr-best"></p>
+  </section>
+  <section class="mg-game" id="fr-game" hidden>
+    <div class="mg-hud"><span class="mg-grow"><small>Fridaemia</small><b>Inbox</b></span><span><small>Result</small><b id="fr-n">1/8</b></span><span><small>Safe calls</small><b id="fr-s">0</b></span></div>
+    <div class="mg-card" id="fr-q"></div>
+  </section>
+  <section class="mg-card mg-end" id="fr-end" hidden>
+    <p class="mg-q" id="fr-etitle">Inbox cleared. Keys in hand.</p>
+    <p class="mg-score" id="fr-final"></p>
+    <p id="fr-verdict"></p>
+    <div class="mg-btns"><button class="big" type="button" id="fr-again">Back to the start</button><button class="mg-sbtn" type="button" id="fr-share">Share</button></div>
+  </section>
+  <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>
+  <footer class="site">
+<!-- static-nav --><nav class="static-nav" aria-label="Site sections"><a href="/medical-games/">Puzzles</a> <a href="/conditions/" class="sn-med">Conditions</a> <a href="/medicines/" class="sn-med">Medicines</a> <a href="/blood-tests/" class="sn-med">Blood tests</a> <a href="/exercises/" class="sn-med">Exercises</a> <a href="/tools/" class="sn-med">Tools</a> <a href="/quizzes/">Quizzes</a> <a href="/specialists/" class="sn-med">Specialists</a> <a href="/days/">Health days</a></nav><!-- /static-nav -->
+<p class="ft-base"><span class="ft-note">A teaching game with fictional patients. Real decisions depend on the whole patient and local guidelines.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
+</main>
+<script defer src="/assets/boot.js?v=1" data-mw="page"></script>
+<script defer src="/assets/mg.js?v=1"></script>
+<script defer src="fridaemia.js?v=1"></script>
+</body>
+</html>

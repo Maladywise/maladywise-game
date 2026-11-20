@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Triagic | Malady Wise</title>
+<meta name="description" content="Shh. You said the Q word. A secret Malady Wise game.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#B3261E">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
+<link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
+<link rel="stylesheet" href="../assets/shell.css?v=246">
+<link rel="stylesheet" href="../assets/mg.css?v=1">
+<style>:root{--mg-a:#B3261E;--mg-b:#5A0F0B;--mg-hi:#FFE08A;--mg-soft:#FDECEA}
+.tr-bar{flex:1 1 140px;min-width:120px;height:14px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden;position:relative}
+.tr-bar i{position:absolute;inset:0 auto 0 0;background:#FFE08A;transition:width .25s}.tr-bar.warm i{background:#FFB547}.tr-bar.hot i{background:#FF5A4E}
+.tr-room{display:grid;gap:8px}
+.tr-pt{position:relative;display:flex;gap:12px;align-items:center;text-align:left;font:500 15px/1.35 var(--body);padding:12px 14px 16px;border-radius:16px;border:2px solid var(--line,#E4DCF0);background:var(--card,#fff);color:inherit;cursor:pointer;overflow:hidden}
+.tr-pt b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.tr-pt.c1{border-color:#D93025}.tr-pt.c1 b{color:#D93025}.tr-pt.c2{border-color:#F29900}.tr-pt.c2 b{color:#B06F00}.tr-pt.c3{border-color:#1E8E3E}.tr-pt.c3 b{color:#1E8E3E}
+.tr-pt.bad{animation:trpulse 1s infinite}@keyframes trpulse{50%{background:#FDECEA}}
+.tr-pt i{position:absolute;left:0;bottom:0;height:4px;background:currentColor;opacity:.35}
+.tr-em,.tr-big{font-size:28px;line-height:1}
+.tr-empty{text-align:center;color:var(--muted,#6B5A93);padding:20px}
+.tr-curve{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(40,8,6,.55);padding:16px}
+.tr-cb{background:#FAF7F2;color:#2B2340;border-radius:20px;padding:20px;max-width:340px;text-align:center;display:grid;gap:10px;justify-items:center;animation:trshake .4s}
+.tr-cb span{font-size:42px}.tr-cb p{margin:0;font:600 17px var(--body)}
+@keyframes trshake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.tr-siren{animation:trsiren 1s steps(2) 3}@keyframes trsiren{50%{filter:hue-rotate(-40deg) saturate(1.6)}}
+@media (prefers-reduced-motion:reduce){.tr-pt.bad,.tr-cb,.tr-siren{animation:none}}</style>
+<script defer src="../assets/games.js?v=127"></script>
+<script defer src="../assets/shell.js?v=295"></script>
+</head>
+<body>
+<main class="wrap mg-page">
+  <section class="mg-intro tr-siren" id="tr-intro">
+    <img class="mg-masc" src="/assets/mascots/sensitosis.svg" alt="Sunny the meerkat, on lookout" width="104" height="104">
+    <p class="mg-kick">&#128680; You said the Q word</p>
+    <h1>Triagic</h1>
+    <p class="mg-lede">Never say &ldquo;quiet&rdquo; in ED. Now the waiting room is filling up. Three minutes, one shift: tap a patient, make the call, keep the chaos under 100%.</p>
+    <p class="mg-small">Cat 1 can&rsquo;t wait. Long waits, wrong calls and a full waiting room all add chaos.</p>
+    <button class="big" type="button" id="tr-play">Start the shift</button>
+    <p class="mg-best" id="tr-best"></p>
+    <p class="mg-small"><i>Shh. It&rsquo;s not on the menu.</i></p>
+  </section>
+  <section class="mg-game" id="tr-game" hidden>
+    <div class="mg-hud"><span><small>Shift left</small><b id="tr-time">3:00</b></span><span><small>Score</small><b id="tr-score">0</b></span><span><small>Sorted</small><b id="tr-saved">0</b></span>
+      <span class="mg-grow" style="flex:1 1 160px"><small>Chaos <span id="tr-chaosn">0%</span></small><span class="tr-bar" id="tr-chaosbar"><i id="tr-chaos" style="width:0"></i></span></span></div>
+    <div class="tr-room" id="tr-room"></div>
+    <div class="mg-card" id="tr-case" hidden></div>
+  </section>
+  <div class="tr-curve" id="tr-curve" hidden></div>
+  <section class="mg-card mg-end" id="tr-end" hidden>
+    <p class="mg-q" id="tr-etitle"></p>
+    <p class="mg-score" id="tr-escore"></p>
+    <p id="tr-emsg"></p>
+    <p class="mg-small" id="tr-ebest"></p>
+    <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
+  </section>
+  <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>
+  <footer class="site"><p class="ft-base"><span class="ft-note">A secret game with fictional patients. Not medical advice.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
+</main>
+<script defer src="/assets/boot.js?v=1" data-mw="page"></script>
+<script defer src="/assets/mg.js?v=1"></script>
+<script defer src="cases.js?v=1"></script>
+<script defer src="triagic.js?v=1"></script>
+</body>
+</html>

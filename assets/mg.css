@@ -48,3 +48,9 @@ html[data-theme=dark] .mg-score{color:var(--mg-hi,#FFE08A)}
 html[data-theme=dark] .mg-sbtn{border-color:var(--mg-hi,#FFE08A);color:var(--mg-hi,#FFE08A)}
 @media (prefers-reduced-motion:reduce){.mg-masc{animation:none}}
 :root[data-motion="reduce"] .mg-masc{animation:none}
+.mg-lock:empty{display:none}
+html[data-theme=dark] .mg-card{background:#1E1830;color:#F1ECF8;border-color:#3A2F55}
+html[data-theme=dark] .mg-opts button{background:#2A2140;color:#F1ECF8;border-color:#463A66}
+html[data-theme=dark] .tr-pt{background:#1E1830;color:#F1ECF8}
+html[data-theme=dark] .tr-pt.bad{animation:none;background:#4A1E12}
+html[data-theme=dark] .lu-stripe i{border-color:#463A66}
