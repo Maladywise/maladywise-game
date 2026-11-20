@@ -221,7 +221,7 @@ def build():
         '<p class="qk-cta"><b>Want more?</b> Try the <a href="/ct-quiz/">CT scan quiz</a> and <a href="/x-ray-quiz/">X-ray quiz</a>, or <a href="/opacitis/">play a new X-ray every day</a> in Opacitis, our daily X-ray puzzle: one film, one story, six diagnoses. Past films are in the <a href="/opacitis/archive/">Opacitis archive</a>, and there are more games in <a href="/medical-games/">Medical games</a>.</p>',
         about,
         faq,
-        '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/ct-quiz/">CT scan quiz</a></li><li><a href="/x-ray-quiz/">X-ray quiz</a></li><li><a href="/ecg-quiz/">ECG quiz</a></li><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/anatomy-quiz/bones/">Bones quiz</a></li><li><a href="/medical-terminology-quiz/">Medical terminology quiz</a></li><li><a href="/opacitis/">Opacitis: a daily X-ray</a></li><li><a href="/medical-games/">All medical games</a></li></ul></nav>',
+        '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/ct-quiz/">CT scan quiz</a></li><li><a href="/ultrasound-quiz/">Ultrasound quiz</a></li><li><a href="/x-ray-quiz/">X-ray quiz</a></li><li><a href="/ecg-quiz/">ECG quiz</a></li><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/anatomy-quiz/bones/">Bones quiz</a></li><li><a href="/medical-terminology-quiz/">Medical terminology quiz</a></li><li><a href="/opacitis/">Opacitis: a daily X-ray</a></li><li><a href="/medical-games/">All medical games</a></li></ul></nav>',
         credits,
         '<p class="meta"><em>Updated %s. Real MRI scans, fictional cases. General education, not personal medical advice.</em></p>' % REVIEWED,
     ])
