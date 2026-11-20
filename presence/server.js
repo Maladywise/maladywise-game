@@ -70,7 +70,7 @@ async function heat() {
   if (kv && kv.isReady) {
     try {
       const h = sydHour(), frac = (h + sydMinute() / 60) / 24;
-      let sum = 0, n = 0, best = { n: 0, day: "" };
+      let sum = 0, n = 0, best = { n: 0, day: "" }; const past = [];
       for (let i = 1; i <= 120; i++) {
         const d = dayAgo(i), tot = Number(await kv.get("played:" + d) || 0);
         if (tot > best.n) best = { n: tot, day: d };
@@ -80,9 +80,9 @@ async function heat() {
         if (hr && Object.keys(hr).length) {
           upto = 0; for (const k in hr) { const kh = Number(k); if (kh < h) upto += Number(hr[k]); else if (kh === h) upto += Number(hr[k]) * sydMinute() / 60; }
         } else upto = tot * frac;
-        sum += upto; n++;
+        sum += upto; n++; past.push(Math.round(upto));
       }
-      v = { expect: n ? Math.round(sum / n * 10) / 10 : 0, days: n, best };
+      v = { expect: n ? Math.round(sum / n * 10) / 10 : 0, days: n, best, past }; // past = games by this time of day on each of the last 28 days (for the percentile heat level)
     } catch (e) { v = null; }
   }
   heatCache = { t: Date.now(), v }; return v;

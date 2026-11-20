@@ -193,9 +193,16 @@
     if (h && h.best && h.best.n >= LIVE.MIN_TODAY && n > h.best.n)
       return '<span class="mw-heat h6" title="Best day before today: ' + h.best.n + '">\ud83c\udfc6 ' + num + " <small>" + (NORMIE ? "New record!" : "New record. Code purple.") + "</small></span>";
     if (!h || h.days < 3 || h.expect < 3) return "\ud83e\udde9 " + num; // not enough history yet
-    var r = n / h.expect, k = 0;
-    for (var i = 0; i < HEAT.length; i++) if (r >= HEAT[i][0]) k = i;
-    return '<span class="mw-heat h' + HEAT[k][4] + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + HEAT[k][1] + " " + num + " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small></span>";
+    var r = n / h.expect, k = 0, tip;
+    if (h.past && h.past.length >= 7) { // rank today against the same time of day on recent days: every level turns up about equally often (21 Nov 2026)
+      var below = 0; h.past.forEach(function (x) { below += n > x ? 1 : n === x ? 0.5 : 0; });
+      var f = below / h.past.length; k = Math.min(HEAT.length - 1, Math.floor(f * HEAT.length));
+      tip = "Busier than " + Math.round(f * 100) + "% of the last " + h.past.length + " days at this time of day";
+    } else {
+      for (var i = 0; i < HEAT.length; i++) if (r >= HEAT[i][0]) k = i;
+      tip = "About " + Math.round(r * 100) + "% of the usual pace for this time of day";
+    }
+    return '<span class="mw-heat h' + HEAT[k][4] + '" title="' + tip + '">' + HEAT[k][1] + " " + num + " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small></span>";
   }
   function liveShow() {
     var d = LIVE.last; if (!d) return;
