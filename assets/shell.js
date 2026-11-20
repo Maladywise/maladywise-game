@@ -167,7 +167,7 @@
   // Heat level for "games played today": today's count vs the usual pace for this time of day (server: d.heat).
   var HEAT = [ // [min ratio of the usual pace, emoji, Medical comment, Normie comment, colour band h0–h5] (20 levels, Nov 2026)
     [0, "\ud83e\udd97", "It\u2019s awfully quiet around here today", "Tumbleweeds", 0],
-    [0.25, "\ud83e\udd10", "Shouldn\u2019t have used the Q word", "Crickets", 0],
+    [0.25, "\ud83e\udd10", "Anaemic. Pale, tired and short of players.", "Crickets", 0],
     [0.4, "\u2744\ufe0f", "Hypothermic. Warm blankets, stat.", "Sleepy start", 0],
     [0.55, "\ud83d\udca4", "Bradycardic but stable", "Slow and steady", 1],
     [0.7, "\ud83e\uded6", "Quiet in the waiting room", "Warming up", 1],
