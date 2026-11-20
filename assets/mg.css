@@ -1,0 +1,50 @@
+/* Shared look for the small time-gated and secret games (Triagic, Lunicorn, Fridaemia). Each page sets --mg-a / --mg-b / --mg-hi. */
+.mg-page{max-width:760px}
+.mg-intro{position:relative;overflow:hidden;border-radius:24px;padding:26px 20px 22px;text-align:center;color:#fff;background:linear-gradient(165deg,var(--mg-a,#4A3480) 0%,var(--mg-b,#2E1F57) 100%);display:grid;justify-items:center;gap:10px;box-shadow:0 14px 40px rgba(30,22,45,.25)}
+.mg-intro>*{position:relative;margin:0}
+.mg-masc{width:104px;height:104px;animation:mgbob 3s ease-in-out infinite}
+@keyframes mgbob{50%{transform:translateY(-6px) rotate(-3deg)}}
+.mg-kick{font:600 12px var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--mg-hi,#FFE08A);background:rgba(255,255,255,.12);border-radius:999px;padding:5px 12px}
+.mg-intro h1{font:700 clamp(36px,8vw,52px)/1.05 var(--title)}
+.mg-lede{max-width:34em;font-size:16px;line-height:1.5;opacity:.92}
+.mg-small{font-size:13px;opacity:.8}
+.mg-intro .big{background:var(--mg-hi,#FFE08A);color:#2B2340}
+.mg-intro .big[disabled]{opacity:.55;cursor:not-allowed}
+.mg-best{font-size:14px;min-height:1.3em;opacity:.9}
+.mg-lock{font:600 15px var(--body);background:rgba(0,0,0,.18);border-radius:14px;padding:10px 14px}
+.mg-game{display:grid;gap:12px}
+.mg-hud{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--mg-a,#4A3480);color:#fff;border-radius:16px;padding:8px 14px;font-variant-numeric:tabular-nums}
+.mg-hud span{display:grid;line-height:1.1}
+.mg-hud small{font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.mg-hud b{font:600 19px var(--body)}
+.mg-hud .mg-grow{margin-right:auto}
+.mg-card{background:var(--card,#fff);color:var(--text,#2B2340);border:1px solid var(--line,#E4DCF0);border-radius:20px;padding:18px;display:grid;gap:12px;box-shadow:0 6px 20px rgba(30,22,45,.08)}
+.mg-card p{margin:0}
+.mg-tag{justify-self:start;font:600 11px var(--body);letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:4px 10px;background:var(--mg-soft,#F1ECF8);color:var(--mg-a,#4A3480)}
+.mg-case{font-size:17px;line-height:1.5}
+.mg-q{font:600 18px/1.35 var(--body)}
+.mg-opts{display:grid;gap:8px}
+.mg-opts button{font:500 16px var(--body);text-align:left;padding:13px 14px;border-radius:14px;border:2px solid var(--line,#E4DCF0);background:var(--bg,#FAF7F2);color:inherit;cursor:pointer;min-height:48px}
+.mg-opts button:hover:not([disabled]){border-color:var(--mg-a,#4A3480)}
+.mg-opts button:focus-visible{outline:3px solid var(--mg-hi,#FFE08A);outline-offset:2px}
+.mg-opts button.ok{border-color:#2E8B57;background:#E5F5EC;color:#14522F}
+.mg-opts button.no{border-color:#C2502E;background:#FBE9E3;color:#7A2A12}
+.mg-opts button[disabled]{cursor:default}
+.mg-why{font-size:15px;line-height:1.55;background:var(--mg-soft,#F1ECF8);color:#2B2340;border-radius:14px;padding:12px 14px}
+.mg-why b{color:var(--mg-a,#4A3480)}
+.mg-next{justify-self:end}
+.mg-end{text-align:center;justify-items:center}
+.mg-score{font:700 44px/1 var(--title);color:var(--mg-a,#4A3480)}
+.mg-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.mg-sbtn{font:600 15px var(--body);border-radius:999px;padding:11px 20px;border:2px solid var(--mg-a,#4A3480);background:transparent;color:var(--mg-a,#4A3480);cursor:pointer}
+.mg-foot{text-align:center;font-size:14px}
+.mg-toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:#2B2340;color:#fff;border-radius:999px;padding:10px 18px;font:500 14px var(--body);z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.25);max-width:90vw}
+html[data-theme=dark] .mg-why{background:#2A2140;color:#F1ECF8}
+html[data-theme=dark] .mg-why b{color:var(--mg-hi,#FFE08A)}
+html[data-theme=dark] .mg-tag{background:#2A2140;color:var(--mg-hi,#FFE08A)}
+html[data-theme=dark] .mg-opts button.ok{background:#173A27;color:#BFF0D2}
+html[data-theme=dark] .mg-opts button.no{background:#4A1E12;color:#FFD3C4}
+html[data-theme=dark] .mg-score{color:var(--mg-hi,#FFE08A)}
+html[data-theme=dark] .mg-sbtn{border-color:var(--mg-hi,#FFE08A);color:var(--mg-hi,#FFE08A)}
+@media (prefers-reduced-motion:reduce){.mg-masc{animation:none}}
+:root[data-motion="reduce"] .mg-masc{animation:none}
