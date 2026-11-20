@@ -26,7 +26,7 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="../assets/mg.css?v=1">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=295"></script>
+<script defer src="../assets/shell.js?v=296"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -34,7 +34,7 @@ HEAD = """<!doctype html>
   <footer class="site"><p class="ft-base"><span class="ft-note">%(foot)s</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 <script defer src="/assets/boot.js?v=1" data-mw="page"></script>
-<script defer src="/assets/mg.js?v=1"></script>
+<script defer src="/assets/mg.js?v=2"></script>
 %(scripts)s
 </body>
 </html>
@@ -49,8 +49,8 @@ END = """  <section class="mg-card mg-end" id="%(p)s-end" hidden>
 
 PAGES = {
  "fridaemia": dict(
-  title="Fridaemia: The 5pm Friday Results Inbox", robots="max-image-preview:large", theme="#7A1F2B",
-  canon='<link rel="canonical" href="https://maladywise.com/fridaemia/">\n',
+  title="Fridaemia: The 5pm Friday Results Inbox", robots="noindex", theme="#7A1F2B",
+  canon="",
   desc="Fridaemia is a free weekly GP game, open Fridays 4:30 to 7pm only: eight results land at knock-off time. ED now, call today, or Monday?",
   foot="A teaching game with fictional patients. Real decisions depend on the whole patient and local guidelines.",
   css=":root{--mg-a:#7A1F2B;--mg-b:#4A1220;--mg-hi:#FFD3D8;--mg-soft:#FBEDEF}.fr-res{font:700 20px/1.35 var(--body);color:var(--mg-a)}html[data-theme=dark] .fr-res{color:var(--mg-hi)}",

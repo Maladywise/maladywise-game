@@ -14,5 +14,6 @@
   function flag(id) { set("mw-secret-" + id, 1); }
   function localDay(d) { d = d || new Date(); return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
   function week(d) { d = d || new Date(); var t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())), dn = t.getUTCDay() || 7; t.setUTCDate(t.getUTCDate() + 4 - dn); var y = new Date(Date.UTC(t.getUTCFullYear(), 0, 1)); return t.getUTCFullYear() + "-W" + Math.ceil(((t - y) / 864e5 + 1) / 7); }
+  try { localStorage.setItem("mw-tester", "1"); } catch (e) {} // opening any of these private test games marks this browser as a tester
   window.MG = { $: $, rng: rng, shuffle: shuffle, get: get, set: set, esc: esc, toast: toast, share: share, flag: flag, localDay: localDay, week: week };
 })();

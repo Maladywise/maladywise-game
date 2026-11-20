@@ -588,7 +588,7 @@
     ["sx_keys", "⌨️", "Typo Cat", "Let Basil type a Wordemic guess.", "global", "", 0, 1],
     ["sx_konami", "🎮", "Cheat Code", "Typed march for the mascot parade.", "global", "", 0, 1],
     ["sx_codes", "🔐", "Code Breaker", "Found 10 secret codes.", "global", "codes", 10, 1],
-    ["sx_codebook", "📖", "Codebook", "Found every secret code.", "global", "codes", 62, 1],
+    ["sx_codebook", "📖", "Codebook", "Found every secret code.", "global", "codes", 61, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
     ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1],
@@ -599,11 +599,8 @@
     ["sx_console", "🔧", "Under the Hood", "Found the message in the console.", "global", "", 0, 1],
     ["sx_paws", "🐾", "Cat Person", "Called a cat by name.", "global", "", 0, 1],
     ["sx_cab", "🗝️", "Cabinet Keeper", "Opened the Cabinet of Curiosities.", "global", "", 0, 1],
-    ["sx_da", "✏️", "Diabolically Clever", "Solved the hidden mini cryptic without peeking.", "global", "", 0, 1],
-    ["sx_quiet", "🚨", "You Said It", "Said the Q word and unlocked Triagic.", "global", "", 0, 1],
-    ["sx_moon", "🦄", "Moonstruck", "Found Ziggy under a full moon (Lunicorn).", "global", "", 0, 1],
-    ["sx_bluemoon", "🔵", "Once in a Blue Moon", "Played Lunicorn on a blue moon.", "global", "", 0, 1],
-    ["sx_bloodmoon", "🔴", "Blood Moon", "Played Lunicorn during a total lunar eclipse.", "global", "", 0, 1]
+    ["sx_da", "✏️", "Diabolically Clever", "Solved the hidden mini cryptic without peeking.", "global", "", 0, 1]
+    // at launch of Triagic/Lunicorn add: sx_quiet You Said It, sx_moon Moonstruck, sx_bluemoon Once in a Blue Moon, sx_bloodmoon Blood Moon
   ];
   var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb eye ear dermatomes spine coronary-arteries circle-of-willis".split(" ");
   function myStats(mode) {
@@ -2340,6 +2337,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       basil: function () { flag("paws"); basilSwipe(); },
       clove: function () { flag("paws"); cloverStamp(); }
     };
+    if (!get("mw-tester", 0)) delete CODES.quiet; // Triagic is in private testing (21 Nov 2026): only testers get the "quiet" code
     var CODE_KEYS = Object.keys(CODES).sort(function (a, b) { return b.length - a.length; });
     window.MW_CODE_COUNT = CODE_KEYS.length;
     function runCode(code) {
@@ -2547,9 +2545,9 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["🐾", "Both cats", "Chaos, then paperwork.", bothCats],
         ["⌨️", "Cat on the keyboard", "Basil helps with your Wordemic guess.", catKeys],
         ["📖", "Codebook", "Secret codes you’ve found so far.", codebook],
-        ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom], ["🚨", "Triagic", "Never say the Q word in ED.", function () { CODES.quiet(); }]];
+        ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]].concat(get("mw-tester", 0) ? [["🚨", "Triagic", "Never say the Q word in ED.", function () { CODES.quiet(); }]] : []);
       var H = ["🔐 There are " + CODE_KEYS.length + " secret codes. They’re ordinary words: some turn up as Wordemic and crossword answers. Hospitals have colour codes too…", "🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
-        "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌕 Ziggy only comes out under a full moon, at night.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
+        "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
       var d = document.createElement("div"); d.className = "mw-cab"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "Cabinet of Curiosities");
       d.innerHTML = '<div class="mw-cab-in"><button type="button" class="mw-cab-x" aria-label="Close">×</button><p class="mw-cab-k">You found it</p><h2>The Cabinet of Curiosities</h2>' +
         '<p class="mw-cab-l">Curiosity is contagious. Pick one:</p><div class="mw-cab-g">' +
@@ -2615,7 +2613,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     })();
     // --- full-moon nights (player's local time, 6pm to 6am, within a day of the full moon): Ziggy pops up once a night with a link to Lunicorn ---
     (function () {
-      if (/^\/lunicorn\//.test(location.pathname)) return;
+      if (/^\/lunicorn\//.test(location.pathname) || !get("mw-tester", 0)) return; // private testing until launch
       var SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, n = new Date(), d = n / 864e5, k = Math.round((d - EP) / SYN - 0.5), fm = (EP + (k + 0.5) * SYN) * 864e5, h = n.getHours();
       if (!(h >= 18 || h < 6) || Math.abs(n - fm) > 864e5) return;
       var key = "mw-moon-" + new Date(fm).toDateString(); if (get(key, 0)) return; set(key, 1);
@@ -2624,7 +2622,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     // --- Friday 4:30 to 7pm local time: Fridaemia inbox is open ---
     (function () {
       var n = new Date(), m = n.getHours() * 60 + n.getMinutes();
-      if (n.getDay() !== 5 || m < 16 * 60 + 30 || m >= 19 * 60 || /^\/fridaemia\//.test(location.pathname) || (m >= 16 * 60 + 55 && m <= 17 * 60 + 10)) return;
+      if (n.getDay() !== 5 || m < 16 * 60 + 30 || m >= 19 * 60 || /^\/fridaemia\//.test(location.pathname) || !get("mw-tester", 0) || (m >= 16 * 60 + 55 && m <= 17 * 60 + 10)) return;
       var k = "mw-fridaemia-pill-" + n.toDateString(); if (get(k, 0)) return; set(k, 1);
       setTimeout(function () { pill('📥 Eight results just landed in your inbox. <a href="/fridaemia/">Fridaemia is open</a> until 7pm.', 8000); }, 3000);
     })();
