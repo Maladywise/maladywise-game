@@ -3675,7 +3675,7 @@
   "date": "2026-11-21",
   "number": 35,
   "difficulty": "Hard",
-  "theme": "Say hello: talking to patients",
+  "theme": "Legionella, and the week's health news",
   "questions": [
    {
     "q": "Today is World Hello Day. Brothers Brian and Michael McCormack started it in 1973 in response to which conflict?",
@@ -3688,94 +3688,94 @@
     "e": "Their idea: greet ten people and let leaders notice that talking beats fighting. Sadly under-prescribed."
    },
    {
-    "q": "In Beckman and Frankel\u2019s classic 1984 study, doctors interrupted a patient\u2019s opening statement after an average of?",
-    "a": "18 seconds",
+    "q": "Legionnaires\u2019 disease got its name from a 1976 outbreak at a Philadelphia convention of?",
+    "a": "US military veterans (the American Legion)",
     "w": [
-     "5 seconds",
-     "60 seconds",
-     "2 minutes"
+     "Hotel workers",
+     "Firefighters",
+     "Medical students"
     ],
-    "e": "Eighteen whole seconds. Later studies have not exactly flattered us either."
+    "e": "The convention marked the US Bicentennial. This week UKHSA reported two deaths among people with Legionnaires\u2019 disease in Rotherham, England; the public risk there is described as low."
    },
    {
-    "q": "In a 2002 BMJ study from a Basel clinic, patients left to talk uninterrupted finished after a mean of about?",
-    "a": "90 seconds",
+    "q": "The 1976 bug was finally identified in January 1977 by Joseph McDade, working at?",
+    "a": "The CDC",
     "w": [
-     "5 minutes",
-     "10 minutes",
-     "20 minutes"
+     "The Pasteur Institute",
+     "The Mayo Clinic",
+     "Johns Hopkins Hospital"
     ],
-    "e": "The feared endless monologue lasted a mean of 92 seconds."
+    "e": "He went back to old slides over the Christmas holidays and spotted rod-shaped bacteria he had dismissed months earlier."
    },
    {
-    "q": "The SPIKES protocol is a six-step framework for?",
-    "a": "Breaking bad news",
+    "q": "In ponds, rivers and pipes, Legionella bacteria often multiply inside?",
+    "a": "Free-living amoebae",
     "w": [
-     "Handing over between shifts",
-     "Recognising a deteriorating patient",
-     "Taking a drug history"
+     "Mosquito larvae",
+     "Algae",
+     "Snail shells"
     ],
-    "e": "Setting, Perception, Invitation, Knowledge, Emotions, Strategy and Summary. Baile and Buckman, 2000."
+    "e": "Amoebae act as Trojan horses, shielding the bacteria from chlorine. It\u2019s also good practice for invading our lung macrophages."
    },
    {
-    "q": "In the consultation shorthand \u2018ICE\u2019, the letters stand for Ideas, Concerns and?",
-    "a": "Expectations",
+    "q": "Legionella multiplies best in water at roughly what temperature range?",
+    "a": "20\u201345 \u00b0C",
     "w": [
-     "Examination",
-     "Empathy",
-     "Evidence"
+     "0\u201310 \u00b0C",
+     "50\u201370 \u00b0C",
+     "Above 80 \u00b0C"
     ],
-    "e": "Three questions that stop you treating the wrong problem beautifully."
+    "e": "Lukewarm is the danger zone, which is why stored hot water is kept at 60 \u00b0C or more and cold water kept cold."
    },
    {
-    "q": "Asking a patient to explain in their own words what you just told them is called?",
-    "a": "Teach-back",
+    "q": "In Australia, bags of which garden product carry a Legionella health warning?",
+    "a": "Potting mix",
     "w": [
-     "Safety-netting",
-     "Motivational interviewing",
-     "Reflective listening"
+     "Lawn seed",
+     "Pool chlorine",
+     "Snail bait"
     ],
-    "e": "If they can\u2019t explain it, the fault is usually in the telling."
+    "e": "Legionella longbeachae lives in potting mix and compost and causes many Australian cases. Advice: wet the mix, wear gloves and a mask, wash hands."
    },
    {
-    "q": "A 2003 study of paediatric clinics found interpreting errors with clinical consequences were more likely with?",
-    "a": "Ad hoc interpreters such as relatives",
+    "q": "The common urine antigen test for Legionella reliably detects only?",
+    "a": "L. pneumophila serogroup 1",
     "w": [
-     "Trained hospital interpreters",
-     "Neither: the rates were identical",
-     "Only interpreters on the phone"
+     "All Legionella species",
+     "L. longbeachae",
+     "Any atypical pneumonia"
     ],
-    "e": "Flores and colleagues. Love doesn\u2019t translate dosing instructions."
+    "e": "Serogroup 1 causes most cases in Europe and the US. A negative test doesn\u2019t rule out other types, including longbeachae, so cultures or PCR still matter."
    },
    {
-    "q": "In Rogers v Whitaker (Australia, 1992), a woman wasn\u2019t warned that surgery on one eye carried a small risk of?",
-    "a": "Blindness in her other eye",
+    "q": "Pontiac fever, caused by the same bacteria as Legionnaires\u2019 disease, is?",
+    "a": "A mild flu-like illness without pneumonia",
     "w": [
-     "A stroke",
-     "Losing her sense of smell",
-     "Facial nerve palsy"
+     "A severe brain infection",
+     "A skin rash caught in spas",
+     "A form of food poisoning"
     ],
-    "e": "The risk of sympathetic ophthalmia was about 1 in 14,000. She had asked about her good eye, and consent law changed."
+    "e": "Named after a 1968 outbreak in a Pontiac, Michigan health department building. Most people recover in a few days."
    },
    {
-    "q": "\u2018Listen to your patient, he is telling you the diagnosis\u2019 is usually credited to?",
-    "a": "William Osler",
+    "q": "On 3 November the TGA approved a once-daily tablet form of which weekly weight-loss injection drug?",
+    "a": "Semaglutide",
     "w": [
-     "Hippocrates",
-     "Rudolf Virchow",
-     "Thomas Sydenham"
+     "Tirzepatide",
+     "Liraglutide",
+     "Orlistat"
     ],
-    "e": "The exact words are hard to find in his writings. The advice holds regardless."
+    "e": "It\u2019s taken on an empty stomach each morning. A different GLP-1 pill, orforglipron, was approved on 17 November."
    },
    {
-    "q": "Rita Charon, a physician with a doctorate in English, founded which field at Columbia University?",
-    "a": "Narrative medicine",
+    "q": "Hospitals urge soap and water rather than alcohol gel during norovirus outbreaks because norovirus?",
+    "a": "Has no fatty envelope, so alcohol works poorly on it",
     "w": [
-     "Palliative care",
-     "Bioethics",
-     "Health literacy"
+     "Lives only on wet surfaces",
+     "Is spread mainly through the air",
+     "Is killed by soap but feeds on alcohol"
     ],
-    "e": "Training clinicians to take in patients\u2019 stories as carefully as they read a blood result."
+    "e": "Envelope-free viruses shrug off alcohol. Rubbing and rinsing physically removes them."
    }
   ]
  },
