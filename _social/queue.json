@@ -342,6 +342,18 @@
    "queued_at": "2026-11-20T00:43+11:00"
   },
   {
+   "date": "2026-11-21",
+   "slot": "noon",
+   "note": "Noon quiz featuring the new CT scan quiz (owner request 20 Nov)",
+   "thread": [
+    "Quiz: a 19-year-old is knocked out, wakes and chats, then gets drowsy 2 hours later. CT head shows a bright, lens-shaped bleed that stops at the skull sutures.\n\nA) Acute subdural\nB) Extradural\nC) Subarachnoid\nD) Intracerebral\n\nGuess, then check the answer below. 👇",
+    "Answer: B, extradural (epidural) haematoma.\n\nLens (biconvex) shape, held back by the sutures, usually a torn middle meningeal artery. A subdural is a crescent that follows the brain surface and crosses sutures (torn bridging veins).",
+    "10 real CT scans to read, from brain bleeds to free air → https://maladywise.com/ct-quiz/"
+   ],
+   "image": true,
+   "pin": true
+  },
+  {
    "date": "2026-11-22",
    "slot": "am",
    "note": "Scaphoid puzzle (made directly in Typefully, 15 Nov)",

@@ -1579,3 +1579,5 @@ html.mw-disco main{animation:mwdisco .5s linear 8}
 html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9C86D9}html[data-theme=dark] .mw-crowd-bar{background:#332B48}html[data-theme=dark] .mw-crowd-bar i{background:#9C86D9}html[data-theme=dark] .mw-crowd button{color:#C9B8F2}
 @keyframes mwCrowdIn{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}
 @media (prefers-reduced-motion:reduce){.mw-crowd{animation:none}}
+
+.mw-ab-quiz{margin:14px 0 4px;font-size:15px;line-height:1.6}.mw-new{display:inline-block;background:#4A3480;color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:6px;padding:1px 6px;vertical-align:2px}html[data-theme=dark] .mw-new{background:#9C86D9;color:#14101F}
