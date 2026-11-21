@@ -80,7 +80,9 @@ PAGES = {
 .tr-room{display:grid;gap:8px}
 .tr-pt{position:relative;display:flex;gap:12px;align-items:center;text-align:left;font:500 15px/1.35 var(--body);padding:12px 14px 16px;border-radius:16px;border:2px solid var(--line,#E4DCF0);background:var(--card,#fff);color:inherit;cursor:pointer;overflow:hidden}
 .tr-pt b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.tr-pt.c1{border-color:#D93025}.tr-pt.c1 b{color:#D93025}.tr-pt.c2{border-color:#F29900}.tr-pt.c2 b{color:#B06F00}.tr-pt.c3{border-color:#1E8E3E}.tr-pt.c3 b{color:#1E8E3E}
+.tr-pt.c1{border-color:#D93025}.tr-pt.c1 b{color:#D93025}.tr-pt.c2{border-color:#F29900}.tr-pt.c2 b{color:#B06F00}.tr-pt.c3{border-color:#1E8E3E}.tr-pt.c3 b{color:#1E8E3E}.tr-pt.c4{border-color:#1A73E8}.tr-pt.c4 b{color:#1A73E8}.tr-pt.c5{border-color:#80868B}.tr-pt.c5 b{color:#5F6368}
+.tr-poo{position:fixed;top:-60px;z-index:60;pointer-events:none;animation:trpoo 2.4s ease-in forwards}@keyframes trpoo{to{transform:translateY(115vh) rotate(360deg)}}
+.tr-black{background:#1C1B1F;color:#fff}.tr-blue{background:#E8F0FE}
 .tr-pt.bad{animation:trpulse 1s infinite}@keyframes trpulse{50%{background:#FDECEA}}
 .tr-pt i{position:absolute;left:0;bottom:0;height:4px;background:currentColor;opacity:.35}
 .tr-em,.tr-big{font-size:28px;line-height:1}
@@ -94,13 +96,13 @@ PAGES = {
 .tr-bb{font:700 15px var(--body);border:0;border-radius:999px;padding:10px 14px;background:#FFE08A;color:#2B2340;cursor:pointer;min-height:44px}.tr-bb.ghost{background:transparent;color:#fff;border:2px solid #fff}
 @keyframes trpop{from{transform:translateX(-50%) scale(.8);opacity:0}}
 .tr-tired{animation:trwob 3s ease-in-out infinite}@keyframes trwob{25%{transform:translate(1px,-1px) rotate(.3deg)}75%{transform:translate(-1px,1px) rotate(-.3deg)}}
-@media (prefers-reduced-motion:reduce){.tr-pt.bad,.tr-cb,.tr-siren,.tr-tired,.tr-bonus{animation:none}}""",
+@media (prefers-reduced-motion:reduce){.tr-pt.bad,.tr-cb,.tr-siren,.tr-tired,.tr-bonus{animation:none}.tr-poo{display:none}}""",
   body="""  <section class="mg-intro tr-siren" id="tr-intro">
     <img class="mg-masc" src="/assets/mascots/sensitosis.svg" alt="Sunny the meerkat, on lookout" width="104" height="104">
     <p class="mg-kick">&#128680; You said the Q word</p>
     <h1>Triagic</h1>
     <p class="mg-lede">Never say &ldquo;quiet&rdquo; in ED. Now the waiting room is filling up. Three minutes, one shift: tap a patient, make the call, keep the chaos under 100%.</p>
-    <p class="mg-small">Cat 1 can&rsquo;t wait. Long waits, wrong calls and a full waiting room all add chaos.</p>
+    <p class="mg-small">Cat 1 can&rsquo;t wait, Cat 5 can. But the triage desk gets it wrong sometimes. Long waits, wrong calls and a full waiting room all add chaos. The clock pauses while you read.</p>
     <button class="big" type="button" id="tr-play">Start the shift</button>
     <p class="mg-small" id="tr-lock" hidden></p>
     <p class="mg-best" id="tr-best"></p>
@@ -122,7 +124,7 @@ PAGES = {
     <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
   </section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
-  scripts='<script defer src="cases.js?v=3"></script>\n<script defer src="triagic.js?v=5"></script>'),
+  scripts='<script defer src="cases.js?v=5"></script>\n<script defer src="triagic.js?v=6"></script>'),
  "lunicorn": dict(
   title="Lunicorn", robots="noindex", theme="#2E1F57", canon="",
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",
