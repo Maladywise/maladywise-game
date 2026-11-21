@@ -1417,13 +1417,23 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (!list.length && !hiddenTiles(true)) return "";
       return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
         (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move to the bottom of the page.</p>' : "") +
-        '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + hiddenTiles(true) + list.map(function (g) { return tile(g).replace(' data-g="', ' data-h="1" data-g="'); }).join("") + "</div></section>";
+        '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + hiddenTiles(true) + list.map(function (g) { return tile(g).replace(' data-g="', ' data-h="1" data-g="'); }).join("") + extraTiles(hid, false) + "</div></section>";
+    }
+    // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
+    var EXTRA = [["nomulous", "Nomulous", "nomulous", "Name the eponym", "#4A3480", "#B9A6E8"]];
+    function extraTiles(hid, hiddenOnes) {
+      if (NORMIE) return "";
+      var dk = root.getAttribute("data-theme") === "dark";
+      return EXTRA.filter(function (x) { return (hid.indexOf(x[0]) > -1) === hiddenOnes; }).map(function (x) {
+        return '<a class="tl" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink></span><b>' + x[1] + "</b><small>" + x[3] + "</small>" +
+          (hiddenOnes ? '<span class="tl-unhide" role="button" data-tl="show" data-id="' + x[0] + '">Show</span>' : "") + "</a>";
+      }).join("");
     }
     function hiddenSec() {
       var hid = userHidden(), mine = order().filter(function (g) { return hid.indexOf(g.id) > -1; }), timed = hiddenTiles(false);
-      if (!mine.length && !timed) return "";
+      if (!mine.length && !timed && !extraTiles(hid, true)) return "";
       return '<section class="tls" id="g-hidden"><div class="t3-head"><h2>Hidden games</h2><span>Timed games appear when they open</span></div><div class="tl-grid">' +
-        mine.map(function (g) { return tile(g, '<span class="tl-unhide" role="button" data-tl="show" data-id="' + g.id + '">Show</span>'); }).join("") + timed + "</div></section>";
+        mine.map(function (g) { return tile(g, '<span class="tl-unhide" role="button" data-tl="show" data-id="' + g.id + '">Show</span>'); }).join("") + extraTiles(hid, true) + timed + "</div></section>";
     }
     if (!window.MW_tlClicks) {
       window.MW_tlClicks = 1;
@@ -1446,7 +1456,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function hiddenOpen() {
       var n = new Date(), SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, k = Math.round((n / 864e5 - EP) / SYN - 0.5), fm = new Date((EP + (k + 0.5) * SYN) * 864e5);
       var TDAY = n.getFullYear() + "-" + (n.getMonth() + 1) + "-" + n.getDate();
-      return { triagic: get("mw-open-quiet", "") === TDAY || n.getHours() >= 16, fridaemia: n.getDay() === 5, lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
+      return { triagic: get("mw-open-quiet", "") === TDAY || n.getHours() >= 16, fridaemia: n.getDay() === 5, lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11, "dxtective-gauntlet": n.getDay() === 0 };
     }
     // Open timed games go first in the grid; closed (stamped Hidden) ones go last.
     function hiddenTiles(openOnes) {
@@ -1455,7 +1465,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var H = [["triagic", "Triagic", '<img src="/assets/mascots/triagic.svg" alt="" width="44" height="44" data-nolink>', "4pm to midnight", "#B3261E", "#FF8A80", "Fast ED triage"],
         ["fridaemia", "Fridaemia", '<img src="/assets/mascots/layla.svg" alt="" width="44" height="44" data-nolink>', "Fridays only", "#8A5A00", "#F2C46B", "Friday 5pm results"],
         ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44" data-nolink>', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
-        ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"]];
+        ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"],
+        ["dxtective-gauntlet", "Gauntlet", '<img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44" data-nolink>', "Sundays only", "#4A3480", "#B9A6E8", "Dex v Uncle Sherlock"]];
       return H.filter(function (h) { return !!o[h[0]] === openOnes; }).map(function (h) {
         var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + "</b><small>" + (on ? h[6] + " · open now" : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
         return on ? '<a class="tl" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";

@@ -26,7 +26,7 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="../assets/mg.css?v=3">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=308"></script>
+<script defer src="../assets/shell.js?v=309"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -161,8 +161,9 @@ PAGES = {
 """ + END % dict(p="lu", etitle="Your rainbow", again="Play again"),
   scripts='<script defer src="sets.js?v=3"></script>\n<script defer src="lunicorn.js?v=4"></script>'),
  "nomulous": dict(
-  title="Nomulous", robots="noindex", theme="#4A3480", canon="",
-  desc="Nomulous: name the eponymous sign, test, triad or syndrome. Three a day, with the history behind each name.",
+  title="Nomulous: Name the Medical Eponym", robots="index,follow", theme="#4A3480",
+  canon='<link rel="canonical" href="https://maladywise.com/nomulous/">\n',
+  desc="Nomulous is a free daily medical eponym quiz: name the sign, test, triad or syndrome. Three a day, with the history behind each name.",
   foot="A teaching game. Signs are clues, not diagnoses on their own.",
   css=""":root{--mg-a:#4A3480;--mg-b:#2E1F57;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}
 .nm-name{margin:4px 0 2px;font:700 24px/1.2 Lora,Georgia,serif;color:var(--mg-a)}html[data-theme=dark] .nm-name{color:#C9B8F0}
@@ -183,8 +184,9 @@ PAGES = {
 """ + END % dict(p="nm", etitle="Your eponyms", again="Play again"),
   scripts='<script defer src="signs.js?v=2"></script>\n<script defer src="nomulous.js?v=3"></script>'),
  "dxtective-gauntlet": dict(
-  title="Dxtective Gauntlet", robots="noindex", theme="#4A3480", canon="",
-  desc="Dxtective Gauntlet: Uncle Sherlock's Sunday challenge. Ten diagnosis cases in a row, one slip and it's over.",
+  title="Dxtective Gauntlet: Sunday Diagnosis Challenge", robots="index,follow", theme="#4A3480",
+  canon='<link rel="canonical" href="https://maladywise.com/dxtective-gauntlet/">\n',
+  desc="Dxtective Gauntlet is a free Sunday diagnosis challenge: ten cases in a row against Uncle Sherlock. One wrong answer and the run is over.",
   foot="A teaching game. Cases are fictional.",
   css=""":root{--mg-a:#4A3480;--mg-b:#7A5230;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}
 .gt-duo{display:flex;justify-content:center;align-items:flex-end;gap:6px}.gt-duo img{width:96px;height:96px}.gt-duo .gt-vs{font:700 20px var(--title);color:var(--mg-hi);margin-bottom:30px}
