@@ -24,7 +24,9 @@
   }[M.kind];
   document.documentElement.setAttribute("data-moon", M.kind);
   var seed = "lunicorn-" + G.localDay(new Date(M.fm)) + "-" + M.kind, KEY = "mw-lunicorn-" + G.localDay(new Date(M.fm));
-  var SET = G.shuffle(L[M.kind], G.rng(seed)).slice(0, THEME.n), idx = 0, score = 0, marks = [];
+  // Rainbow: a fixed shuffled order, worked through 10 at a time, one block per full moon (120 colours = a year without repeats).
+  var moonNo = Math.round((M.fm / 864e5 - EPOCH) / SYN - 0.5), ORDER = G.shuffle(L.rainbow, G.rng("lunicorn-order-v1")), blocks = Math.floor(ORDER.length / THEME.n);
+  var SET = M.kind === "rainbow" ? ORDER.slice(((moonNo % blocks) + blocks) % blocks * THEME.n, ((moonNo % blocks) + blocks) % blocks * THEME.n + THEME.n) : G.shuffle(L[M.kind], G.rng(seed)).slice(0, THEME.n), idx = 0, score = 0, marks = [];
   $("lu-h1").textContent = THEME.h; $("lu-kick").textContent = THEME.kick; $("lu-lede").textContent = THEME.lede;
   if (M.open && M.near === false) $("lu-kick").textContent = "🌙 You said the magic word";
 

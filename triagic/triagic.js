@@ -122,12 +122,12 @@
   function start() { reset(); $("tr-intro").hidden = true; $("tr-end").hidden = true; $("tr-game").hidden = false; closeCase(); arrive(); arrive(); draw(); S.last = performance.now(); requestAnimationFrame(tick); }
   $("tr-room").addEventListener("click", function (e) { var b = e.target.closest(".tr-pt"); if (b) openCase(+b.getAttribute("data-id")); });
   $("tr-play").onclick = start; $("tr-again").onclick = start;
-  var now = new Date(), OPEN = !!G.get("mw-secret-quiet", 0) || now.getHours() === 16 || /[?&]t=open/.test(location.search);
+  var now = new Date(), OPEN = !!G.get("mw-secret-quiet", 0) || (now.getHours() === 16 || now.getHours() === 17) || /[?&]t=open/.test(location.search);
   if (!OPEN) {
     $("tr-play").disabled = true;
     var nx = new Date(now); nx.setHours(16, 0, 0, 0); if (nx <= now) nx.setDate(nx.getDate() + 1);
     var tick2 = function () { var ms = nx - new Date(); if (ms <= 0) return location.reload(); var h = Math.floor(ms / 36e5), m = Math.floor(ms / 6e4) % 60;
-      $("tr-lock").innerHTML = "&#128274; The waiting room opens 4 to 5pm, your time. <b>" + h + "h " + m + "m</b> to go."; };
+      $("tr-lock").innerHTML = "&#128274; The waiting room opens 4 to 6pm, your time. <b>" + h + "h " + m + "m</b> to go."; };
     $("tr-lock").hidden = false; tick2(); setInterval(tick2, 30000);
   }
   var best = G.get("mw-triagic-best", 0); if (best) $("tr-best").innerHTML = "Your best shift: <b>" + best.toLocaleString("en-AU") + "</b>";

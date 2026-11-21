@@ -1417,12 +1417,12 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     // Hidden games (testers only until launch): greyed out with a red HIDDEN stamp until their time window opens or the secret word is typed.
     function hiddenOpen() {
       var n = new Date(), SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, k = Math.round((n / 864e5 - EP) / SYN - 0.5), fm = new Date((EP + (k + 0.5) * SYN) * 864e5);
-      return { triagic: !!get("mw-secret-quiet", 0) || n.getHours() === 16, lunicorn: !!get("mw-secret-lunar", 0) || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
+      return { triagic: !!get("mw-secret-quiet", 0) || n.getHours() === 16 || n.getHours() === 17, lunicorn: !!get("mw-secret-lunar", 0) || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
     }
     function hiddenRow() {
       if (!get("mw-tester", 0)) return "";
       var o = hiddenOpen(), dk = root.getAttribute("data-theme") === "dark";
-      var H = [["triagic", "Triagic", '<img src="/assets/mascots/sensitosis.svg" alt="" width="44" height="44">', "4 to 5pm daily", "#B3261E", "#FF8A80"],
+      var H = [["triagic", "Triagic", '<img src="/assets/mascots/sensitosis.svg" alt="" width="44" height="44">', "4 to 6pm daily", "#B3261E", "#FF8A80"],
         ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44">', "Full-moon days", "#5B3A8E", "#C9A3DD"],
         ["toxiquest", "Toxiquest", '<span style="font-size:32px">&#9763;</span>', "From 1 December", "#2E6B3A", "#8FD18A"]];
       return '<section class="tls" id="g-hidden"><div class="t3-head"><h2>Hidden games</h2><span>Only at certain times. Or if you know the word.</span></div><div class="tl-grid tl-arc">' + H.map(function (h) {

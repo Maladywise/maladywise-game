@@ -26,7 +26,7 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="../assets/mg.css?v=3">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=300"></script>
+<script defer src="../assets/shell.js?v=301"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -122,7 +122,7 @@ PAGES = {
     <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
   </section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
-  scripts='<script defer src="cases.js?v=3"></script>\n<script defer src="triagic.js?v=4"></script>'),
+  scripts='<script defer src="cases.js?v=3"></script>\n<script defer src="triagic.js?v=5"></script>'),
  "lunicorn": dict(
   title="Lunicorn", robots="noindex", theme="#2E1F57", canon="",
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",
@@ -157,7 +157,7 @@ PAGES = {
     <div class="mg-card" id="lu-q"></div>
   </section>
 """ + END % dict(p="lu", etitle="Your rainbow", again="Play again"),
-  scripts='<script defer src="sets.js?v=2"></script>\n<script defer src="lunicorn.js?v=2"></script>'),
+  scripts='<script defer src="sets.js?v=3"></script>\n<script defer src="lunicorn.js?v=3"></script>'),
  "nomulous": dict(
   title="Nomulous", robots="noindex", theme="#4A3480", canon="",
   desc="Nomulous: name the eponymous sign, test, triad or syndrome. Eight a day, with the history behind each name.",
