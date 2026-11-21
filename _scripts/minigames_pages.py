@@ -207,7 +207,7 @@ PAGES = {
     <div class="mg-card" id="gt-q"></div>
   </section>
 """ + END % dict(p="gt", etitle="Dex v Uncle Sherlock", again="Try again"),
-  scripts='<script defer src="gauntlet.js?v=1"></script>'),
+  scripts='<script defer src="gauntlet.js?v=2"></script>'),
 }
 for k, v in PAGES.items():
     os.makedirs(ROOT + k, exist_ok=True)

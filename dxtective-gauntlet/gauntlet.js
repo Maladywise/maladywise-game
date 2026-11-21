@@ -17,7 +17,7 @@
     lose: ["Sherlock wins this week. Same time next Sunday?"]
   };
   function line(k) { var a = SAY[k]; return a[Math.floor(Math.random() * a.length)]; }
-  var CASES = [], SET = [], idx = 0, score = 0, shown = 1, marks = [];
+  var AUTO = 0, CASES = [], SET = [], idx = 0, score = 0, shown = 1, marks = [];
 
   function months() {
     var out = [], d = new Date(2026, 8, 1);
@@ -41,8 +41,9 @@
     });
   }
   function hud() { $("gt-n").textContent = (idx + 1) + "/" + SET.length; $("gt-s").textContent = score; $("gt-t").textContent = TARGET; }
-  function card() {
+  function card(top) {
     var q = SET[idx], c = q.c; hud();
+    if (top) { var g = $("gt-game"); window.scrollTo({ top: Math.max(0, g.getBoundingClientRect().top + window.pageYOffset - 90), behavior: "smooth" }); }
     $("gt-q").innerHTML = '<span class="mg-tag">Case ' + (idx + 1) + ' of 10</span>' +
       '<ol class="gt-clues">' + c.clues.slice(0, shown).map(function (k) { return "<li>" + G.esc(k.t) + "</li>"; }).join("") + "</ol>" +
       '<p class="mg-q">What’s the diagnosis? <small class="gt-pts">' + (7 - shown) + " points</small></p>" +
@@ -60,16 +61,20 @@
         var last = !ok || idx + 1 >= SET.length;
         $("gt-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Solved: " : "It was ") + G.esc(c.answer) + ".</b> " + G.esc(c.pearl || "") + "</p>" +
           '<p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="gt-next">' + (last ? "See the verdict" : "Next case") + "</button></p>";
-        $("gt-next").onclick = function () { if (last) end(ok && idx + 1 >= SET.length); else { idx++; shown = 1; card(); } };
-        $("gt-next").focus();
+        var nb = $("gt-next"), left = 5;
+        function go() { clearInterval(AUTO); if (last) end(ok && idx + 1 >= SET.length); else { idx++; shown = 1; card(true); } }
+        nb.onclick = go; nb.focus({ preventScroll: true });
+        clearInterval(AUTO);
+        if (!last) { nb.textContent = "Next case (" + left + ")"; AUTO = setInterval(function () { left--; if (left <= 0) go(); else nb.textContent = "Next case (" + left + ")"; }, 1000); }
       };
     });
   }
   function end(all) {
+    clearInterval(AUTO);
     var win = score > TARGET, best = G.get(KEY, null);
     if (!best || score > best.score) G.set(KEY, { score: score, marks: marks.join(""), win: win });
     if (win) { var w = G.get("mw-gauntlet-wins", 0) || 0; if (!best || !best.win) G.set("mw-gauntlet-wins", w + 1); }
-    $("gt-game").hidden = true; $("gt-end").hidden = false;
+    $("gt-game").hidden = true; $("gt-end").hidden = false; window.scrollTo({ top: Math.max(0, $("gt-end").getBoundingClientRect().top + window.pageYOffset - 90), behavior: "smooth" });
     $("gt-final").textContent = score + " v " + TARGET;
     $("gt-verdict").textContent = (win ? "You beat Uncle Sherlock. " + line("win") : line("lose")) + (all ? " All ten solved." : " " + (marks.length - 1) + " of 10 solved before the slip.");
     $("gt-share").onclick = function () { G.share("Dxtective Gauntlet " + WEEK + " 🦊 v 🦌\n" + score + " v Sherlock’s " + TARGET + (win ? " 🏆" : "") + "\n" + marks.join("") + "\nmaladywise.com/dxtective-gauntlet/"); };
@@ -77,7 +82,7 @@
   function start() {
     idx = 0; score = 0; shown = 1; marks = [];
     $("gt-intro").hidden = true; $("gt-end").hidden = true; $("gt-game").hidden = false;
-    $("gt-say").textContent = line("start"); card();
+    $("gt-say").textContent = line("start"); card(true);
   }
   function nextSunday() { var n = new Date(T); n.setDate(n.getDate() + ((7 - n.getDay()) % 7 || 7)); return n.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" }); }
 
