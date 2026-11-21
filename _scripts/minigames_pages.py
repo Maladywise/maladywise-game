@@ -69,7 +69,7 @@ PAGES = {
     <div class="mg-card" id="fr-q"></div>
   </section>
 """ + END % dict(p="fr", etitle="Inbox cleared. Keys in hand.", again="Back to the start"),
-  scripts='<script defer src="fridaemia.js?v=1"></script>'),
+  scripts='<script defer src="fridaemia.js?v=2"></script>'),
  "triagic": dict(
   title="Triagic", robots="noindex", theme="#B3261E", canon="",
   desc="Shh. You said the Q word. A secret Malady Wise game.",
@@ -116,7 +116,7 @@ PAGES = {
     <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
   </section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
-  scripts='<script defer src="cases.js?v=2"></script>\n<script defer src="triagic.js?v=2"></script>'),
+  scripts='<script defer src="cases.js?v=3"></script>\n<script defer src="triagic.js?v=2"></script>'),
  "lunicorn": dict(
   title="Lunicorn", robots="noindex", theme="#2E1F57", canon="",
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",
@@ -151,7 +151,7 @@ PAGES = {
     <div class="mg-card" id="lu-q"></div>
   </section>
 """ + END % dict(p="lu", etitle="Your rainbow", again="Play again"),
-  scripts='<script defer src="sets.js?v=1"></script>\n<script defer src="lunicorn.js?v=1"></script>'),
+  scripts='<script defer src="sets.js?v=2"></script>\n<script defer src="lunicorn.js?v=1"></script>'),
 }
 for k, v in PAGES.items():
     os.makedirs(ROOT + k, exist_ok=True)
