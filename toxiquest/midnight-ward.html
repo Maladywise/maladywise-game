@@ -217,7 +217,7 @@ button[disabled]{opacity:.45;cursor:not-allowed}
       <p class="story" id="story"></p>
       <h2 id="cf">Clues</h2>
       <ol class="clues" id="clues"></ol>
-      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><button class="ghost" type="button" id="giveup">Give up</button><span class="label" id="left"></span></div>
       <div id="verdict"></div>
     </section>
     <section class="side" aria-labelledby="acc">
@@ -319,7 +319,7 @@ button[disabled]{opacity:.45;cursor:not-allowed}
   drawCases();
   $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
   function load(i) {
-    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false; if ($("giveup")) $("giveup").disabled = false;
     Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
     $("story").textContent = C.note; $("note").textContent = "Tap the yellow evidence tags to learn about each suspect, reveal clues one at a time, and accuse the culprit. Fewer clues, more stars.";
     $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
@@ -343,6 +343,13 @@ button[disabled]{opacity:.45;cursor:not-allowed}
   }
   function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
   function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("giveup").onclick = function () {
+    if (done) return; done = true; var name = P[C.ans - 1][1];
+    shown = C.clues.length; renderClues(); $("accuse").disabled = true; $("giveup").disabled = true;
+    Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+    $("verdict").innerHTML = '<div class="verdict no"><b>Case handed over.</b> It was ' + name.toLowerCase() + ". " + C.solver.charAt(0).toUpperCase() + C.solver.slice(1) + " took it from here.</div>" + planHtml();
+    recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); }
+  };
   $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
   $("accuse").onclick = function () {
     if (!pick || done) return;
