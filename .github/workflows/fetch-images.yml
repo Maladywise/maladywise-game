@@ -1,0 +1,34 @@
+name: Fetch quiz images
+# Downloads the Wikimedia images listed in _incoming/urls.txt into _incoming/<md5 of url>,
+# so the quiz builders can self-host them (Wikimedia rate-limits the build machine).
+on:
+  push:
+    paths: ["_incoming/urls.txt"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download slowly
+        run: |
+          while read -r u; do
+            [ -z "$u" ] && continue
+            f="_incoming/$(printf '%s' "$u" | md5sum | cut -d' ' -f1)"
+            [ -s "$f" ] && continue
+            for t in 1 2 3 4; do
+              curl -sSfL -A "MaladyWiseBot/1.0 (https://maladywise.com; maladywise@gmail.com)" -o "$f" "$u" && break
+              rm -f "$f"; sleep $((t * 20))
+            done
+            sleep 5
+          done < _incoming/urls.txt
+          ls -la _incoming
+      - name: Commit
+        run: |
+          git config user.name "Maladywise"
+          git config user.email "maladywise@gmail.com"
+          git add _incoming
+          git diff --cached --quiet || git commit -m "Fetched quiz images"
+          git pull --rebase && git push
