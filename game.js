@@ -237,8 +237,12 @@ var sw0 = window.MW_swear && MW_swear(raw); if (sw0) { $("guess").value = ""; sa
     if ((C.accept || []).some(function (a) { return norm(a) === n; }) || norm(C.answer) === n) { finish(true); render(); return; }
     var tc = typoCands(n);
     if (tc.length) { loadDict(function (D) { if (tc.some(function (ch) { return ch.every(function (w) { return !D[w]; }); })) { finish(true); render(); say("Spelling forgiven \u2713 " + C.answer + "."); } else wrongPath(raw, n); }); return; }
+    if (nearly(n)) { say(NORMIE ? "So close! Just a bit more detail." : "So close! Add the detail: which type or form?"); return; } // no clue burned
     wrongPath(raw, n);
   };
+  // Nearly right: the guess matches the answer once brackets and 'type 1' style qualifiers are dropped. Hint, don't penalise.
+  function bare(s) { return norm(s.replace(/\([^)]*\)/g, " ")).replace(/\b(type|grade|stage|class)\b/g, " ").replace(/\b([0-9]+|i{1,3}|iv|v|a|b|c)\b/g, " ").replace(/\s+/g, " ").trim(); }
+  function nearly(n) { var b = bare(n); return b.length > 3 && (C.accept || []).concat([C.answer]).some(function (a) { return bare(a) === b; }); }
   function wrongPath(raw, n) {
     if (st.wrong.some(function (w) { return norm(w) === n; })) { say(pick(SASS.repeat)); return; }
     if (isNonsense(n)) { say(pick(SASS.nonsense)); return; }              // no clue burned
