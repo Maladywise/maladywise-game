@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>*{box-sizing:border-box}[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}
+.cel{position:fixed;inset:0;display:grid;place-items:center;align-content:center;gap:6px;background:rgba(6,12,9,.93);backdrop-filter:blur(3px);z-index:50;cursor:pointer;animation:celin .3s ease-out}
+.cel .cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cel .cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.95}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+.cel-stamp{font:400 clamp(26px,7vw,48px)/1 var(--display);color:#F5C518;border:4px solid #F5C518;border-radius:10px;padding:6px 16px;transform:rotate(-6deg);animation:stamp .45s cubic-bezier(.2,1.6,.4,1) both;letter-spacing:.04em;text-transform:uppercase}
+.cel .cel-m{width:130px;height:130px;animation:hop .9s ease-in-out .3s 3}
+.cel-s{font-size:clamp(24px,6vw,34px);letter-spacing:6px;color:#F5C518}
+.cel-t{margin:0;font:600 15px var(--body);color:#fff;text-align:center;max-width:30em;padding:0 16px}
+.cel-tap{font:500 11px var(--mono);color:#C9D8CE;letter-spacing:.1em;text-transform:uppercase}
+@keyframes stamp{from{transform:scale(2.4) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-4deg)}}
+@keyframes celin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
+.cases button[disabled]{opacity:.5;cursor:not-allowed}
+.cases button .st{color:var(--tag);margin-left:4px}
+.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
+</style>
+<title>Toxiquest: Dry Heat</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one crime-scene garden at dusk on top, the case file underneath; evidence tags in the garden open plant dossiers. Single dusk look by choice. */
+:root{
+  --night:#13241C; --moss:#1F3A2C; --leaf:#2F5A3F; --mist:#D8E6D9;
+  --paper:#F2F0E6; --ink:#1A1F1B; --tag:#F5C518; --tox:#B23A48; --ok:#2E8B57;
+  --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--night);color:var(--mist)}
+body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
+.lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
+.lives b{color:var(--tox);letter-spacing:3px}
+.scene{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #2C4A38}
+.scene svg{display:block;width:100%;height:auto}
+.tagbtn{cursor:pointer}
+.tagbtn:focus-visible rect{stroke:#fff;stroke-width:3}
+.tagbtn:hover rect{fill:#FFE15A}
+.tape{position:absolute;left:-8%;right:-8%;top:16px;transform:rotate(-2.5deg);background:var(--tag);color:var(--ink);font:500 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:5px 0;pointer-events:none;opacity:.92}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.file{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:grid;gap:12px;min-width:0;position:relative}
+.file h2{font:400 22px var(--display);margin:0}
+.label{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5B6B5F;margin:0}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.clues li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #DCD8C8;animation:in .35s ease-out}
+.clues li .k{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--leaf);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.clues li p{margin:0;font-size:15px}
+@keyframes in{from{opacity:.3;transform:translateY(4px)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.main{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--leaf);color:#fff;cursor:pointer}
+button.main:hover{background:#3A6E4C}
+button.main:focus-visible,button.ghost:focus-visible,.suspects button:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+button.ghost{font:600 14px var(--body);border:2px solid var(--leaf);border-radius:999px;padding:10px 16px;background:transparent;color:var(--leaf);cursor:pointer}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.side{background:var(--moss);border:1px solid #2C4A38;border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.side h2{font:400 20px var(--display);margin:0;color:#fff}
+.suspects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.suspects button{display:flex;gap:8px;align-items:center;text-align:left;font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}
+.suspects button .n{font:500 11px var(--mono);background:var(--tag);color:var(--ink);border-radius:4px;padding:2px 5px}
+.suspects button.out{opacity:.4;text-decoration:line-through}
+.suspects button.win{border-color:var(--ok);background:#1E4A30}
+.dossier{background:#0F1C16;border:1px dashed #3B5E48;border-radius:12px;padding:12px 14px;font-size:14px;min-height:72px}
+.dossier b{color:#fff}
+.dossier .sci{font-style:italic;color:#9FB8A6}
+.verdict{border-radius:12px;padding:12px 14px;font-size:15px}
+.verdict.no{background:#F6DADD;color:#6B1A24}
+.verdict.yes{background:#DDF1E4;color:#14522F}
+.stars{font-size:26px;letter-spacing:4px}
+.foot{font-size:12px;color:#7F9A88;text-align:center}
+@media (prefers-reduced-motion:reduce){.clues li{animation:none}.sway{animation:none!important}}
+.pan{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pan::-webkit-scrollbar{display:none}
+.pan svg{width:100%;min-width:100%}
+.swipe{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;background:rgba(10,20,14,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .6s}
+@media (max-width:640px){.tagbtn{transform-box:fill-box;transform-origin:50% 50%;transform:scale(1.5)}.scene{border-radius:12px}}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:500 12px var(--mono)}.scenes a{color:var(--mist);text-decoration:none;border:1px solid #3B5E48;border-radius:999px;padding:6px 12px}.scenes a[aria-current]{background:#F2F0E6;color:#1A1F1B;border-color:#F2F0E6}.scenes span{color:#7F9A88}
+.cases{display:flex;gap:8px;flex-wrap:wrap}.cases button{font:600 14px var(--body);border-radius:999px;padding:9px 16px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}.cases button[aria-pressed=true]{background:var(--tag);color:var(--ink);border-color:var(--tag)}.cases button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.recov{border-radius:12px;padding:12px 14px;font-size:15px;background:#E3EEF9;color:#173A5E;margin-top:10px}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.ff{animation:ff 3s ease-in-out infinite}@keyframes ff{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none}}
+</style></head><body>
+
+<div class="wrap">
+  <nav class="scenes" aria-label="Scenes"><a class="tqcal" href="./">&#128197; December calendar</a><a href="herb-patch.html">1 · The Herb Patch</a><a href="low-tide.html">2 · Low Tide</a><a href="whiteout.html">3 · Whiteout</a><a href="off-track.html">4 · Off Track</a><a href="dinner-party.html">5 · Dinner Party</a><a href="medicine-cabinet.html">6 · Medicine Cabinet</a><a href="the-shed.html">7 · The Shed</a><a href="dry-heat.html" aria-current="page">8 · Dry Heat</a><a href="canopy.html">9 · Canopy</a><a href="midnight-ward.html">10 · Midnight Ward</a></nav>
+  <div class="top">
+    <div>
+      <p class="kick">Toxiquest · Scene 8 of 10: the outback · 3 cases</p>
+      <h1>Dry Heat</h1>
+    </div>
+    <p class="lives" aria-live="polite">Accusations left <b id="lives">●●●</b></p>
+  </div>
+  <div class="cases" id="cases" role="group" aria-label="Choose a case"></div>
+  <p class="note" id="note"></p>
+
+  <div class="scene">
+    <div class="pan" id="pan"><svg viewBox="30 112 760 358" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A red-dirt outback plain under a blazing midday sun: spinifex, a mulga tree, an old windmill bore and tank, a rocky outcrop with a snake under the ledge, a backpack with empty water bottles, a scorpion, a centipede, a bush tomato shrub and a cane toad by a cattle trough. One walker lies asleep and unwell on the track.">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D2350"/><stop offset=".38" stop-color="#4B3F78"/><stop offset=".7" stop-color="#B0627A"/><stop offset="1" stop-color="#F0A86C"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#355E3E"/><stop offset=".5" stop-color="#22432D"/><stop offset="1" stop-color="#11241A"/></linearGradient>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#5C4C70"/></linearGradient>
+        <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324A"/><stop offset="1" stop-color="#1E3330"/></linearGradient>
+        <linearGradient id="trunk" x1="0" x2="1"><stop offset="0" stop-color="#3B2C20"/><stop offset=".5" stop-color="#6B5440"/><stop offset="1" stop-color="#2E2219"/></linearGradient>
+        <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D493E0"/><stop offset="1" stop-color="#7E3B95"/></linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6B8"/><stop offset="1" stop-color="#A9BB7C"/></linearGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FA35E"/><stop offset="1" stop-color="#2F5A36"/></linearGradient>
+        <linearGradient id="castor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0454C"/><stop offset="1" stop-color="#5E1C24"/></linearGradient>
+        <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3E2A"/><stop offset="1" stop-color="#2E1F15"/></linearGradient>
+        <radialGradient id="moonglow"><stop offset="0" stop-color="#FFF6DC" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DC" stop-opacity="0"/></radialGradient>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".18"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+        <radialGradient id="berry" cx=".35" cy=".35"><stop offset="0" stop-color="#5A5A6A"/><stop offset=".35" stop-color="#151518"/><stop offset="1" stop-color="#050506"/></radialGradient>
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8E8" stop-opacity="0"/><stop offset=".5" stop-color="#C9D8E8" stop-opacity=".16"/><stop offset="1" stop-color="#C9D8E8" stop-opacity="0"/></linearGradient>
+        <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer><feBlend in2="SourceGraphic" mode="multiply"/></filter>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="scene"></g>
+      <!-- The walker, asleep and unwell, and the spilled teacup -->
+      <ellipse cx="410" cy="392" rx="120" ry="52" fill="url(#lamp)"/>
+      <g id="victim" transform="translate(345 318) rotate(-14 60 60) scale(1.2)"></g>
+      
+      <g id="fx"></g>
+      <rect width="800" height="470" fill="url(#vig)" opacity=".45" pointer-events="none"/>
+      <rect width="800" height="470" filter="url(#grain)" fill="#888" opacity=".2" pointer-events="none" style="mix-blend-mode:multiply"/>
+      <g id="tags"></g>
+    </svg></div>
+    
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg", sc = document.getElementById("scene"), fx = document.getElementById("fx");
+  var seed = 97; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function R(a, b) { return a + (b - a) * r(); }
+  function el(p, tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+  function g(p, a) { return el(p, "g", a || {}); }
+  document.querySelector("svg defs").insertAdjacentHTML("beforeend",
+    '<linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A8AC4"/><stop offset=".6" stop-color="#9CC8E0"/><stop offset="1" stop-color="#F4DDB0"/></linearGradient>' +
+    '<linearGradient id="dirt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D2693A"/><stop offset=".5" stop-color="#B4502A"/><stop offset="1" stop-color="#7A3218"/></linearGradient>' +
+    '<linearGradient id="rock" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8583A"/><stop offset="1" stop-color="#7A2E1A"/></linearGradient>' +
+    '<radialGradient id="dsun"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".25" stop-color="#FFF3B0" stop-opacity=".9"/><stop offset="1" stop-color="#FFE07A" stop-opacity="0"/></radialGradient>' +
+    '<linearGradient id="haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFF" stop-opacity=".25"/><stop offset="1" stop-color="#FFF" stop-opacity="0"/></linearGradient>');
+  el(sc, "rect", { width: 800, height: 470, fill: "url(#dsky)" });
+  el(sc, "circle", { cx: 690, cy: 150, r: 110, fill: "url(#dsun)" }); el(sc, "circle", { cx: 690, cy: 150, r: 20, fill: "#FFFDF0" });
+  // distant mesa
+  el(sc, "path", { d: "M0 240 L60 240 L80 206 L220 206 L240 240 L800 240 L800 260 L0 260z", fill: "#B8684A", opacity: .7 });
+  el(sc, "path", { d: "M420 240 q60 -30 140 -26 q80 4 120 26z", fill: "#A85A3E", opacity: .65 });
+  el(sc, "rect", { y: 228, width: 800, height: 30, fill: "url(#haze)" });
+  // red dirt plain
+  el(sc, "path", { d: "M0 252 Q200 244 400 250 Q600 256 800 248 L800 470 L0 470z", fill: "url(#dirt)" });
+  for (var i = 0; i < 120; i++) el(sc, "circle", { cx: R(0, 800), cy: R(260, 470), r: R(.6, 2.2), fill: ["#8A3A1A", "#E88A5A", "#6E2A12"][i % 3], opacity: .6 });
+  // dirt track
+  el(sc, "path", { d: "M300 470 Q360 380 420 320 Q460 280 520 256 L540 256 Q490 284 456 324 Q404 386 380 470z", fill: "#E8915E", opacity: .55 });
+  // spinifex clumps
+  function spin(x, y, s) { var t = g(sc, { transform: "translate(" + x + " " + y + ") scale(" + s + ")" }); el(t, "ellipse", { rx: 24, ry: 8, fill: "#8A8A4A", opacity: .5 }); for (var k = 0; k < 22; k++) { var a = R(-2.6, -.5); el(t, "path", { d: "M0 0 L" + (26 * Math.cos(a)).toFixed(1) + " " + (20 * Math.sin(a)).toFixed(1), stroke: ["#B8B060", "#9A9A4A", "#C8C070"][k % 3], "stroke-width": 1.4, "class": k % 7 ? "" : "sway" }); } }
+  spin(60, 300, 1.1); spin(200, 286, .8); spin(560, 300, .9); spin(740, 290, 1.2); spin(90, 440, 1.3); spin(700, 440, 1.1); spin(330, 270, .6);
+  // desert oak / mulga tree giving thin shade
+  var tr = g(sc, {}); el(tr, "path", { d: "M156 300 q-4 -40 4 -70 M160 244 l-26 -24 M162 238 l24 -26", stroke: "#4A3420", "stroke-width": 4, fill: "none" });
+  for (var i = 0; i < 18; i++) el(tr, "ellipse", { cx: 160 + R(-36, 36), cy: 212 + R(-14, 12), rx: R(10, 16), ry: R(5, 8), fill: ["#6E7A4A", "#7E8A5A"][i % 2], opacity: .9 });
+  // old bore with windmill and tank
+  var bw = g(sc, { transform: "translate(110 272)" }); el(bw, "path", { d: "M-10 0 L0 -70 L10 0 M-6 -20 h12 M-4 -40 h8", stroke: "#6E6E6E", "stroke-width": 2, fill: "none" });
+  var bl = g(bw, { transform: "translate(0 -72)", "class": "spinw" }); for (var k = 0; k < 8; k++) el(bl, "path", { d: "M0 0 L" + (16 * Math.cos(k * Math.PI / 4)).toFixed(1) + " " + (16 * Math.sin(k * Math.PI / 4)).toFixed(1), stroke: "#8A8A8A", "stroke-width": 3 });
+  el(sc, "rect", { x: 132, y: 266, width: 46, height: 24, fill: "#9AA6AC", stroke: "#6E7A80" }); for (var x = 136; x < 178; x += 6) el(sc, "path", { d: "M" + x + " 266 v24", stroke: "#7E8A90", "stroke-width": 1 });
+  // rocky outcrop with ledge (snake)
+  el(sc, "path", { d: "M540 390 Q560 320 620 312 Q690 306 720 360 Q740 392 730 400z", fill: "url(#rock)" });
+  el(sc, "path", { d: "M560 372 Q620 360 700 372 L700 380 Q620 370 560 382z", fill: "#3A1A10", opacity: .6 });
+  // mulga snake under ledge
+  el(sc, "path", { d: "M584 378 q14 -6 26 0 q14 6 26 0 q8 -3 14 -1", stroke: "#7A4A22", "stroke-width": 7, fill: "none", "stroke-linecap": "round" }); el(sc, "ellipse", { cx: 652, cy: 376, rx: 7, ry: 4.5, fill: "#6A3A18" });
+  // magnifying glass dropped
+  el(sc, "circle", { cx: 560, cy: 404, r: 7, fill: "#BFE6F5", stroke: "#1E7A8A", "stroke-width": 2.5 }); el(sc, "path", { d: "M565 409 l8 6", stroke: "#6B4A2A", "stroke-width": 3 });
+  // backpack with water bottles
+  var bp = g(sc, { transform: "translate(240 356)" }); el(bp, "rect", { x: -18, y: -26, width: 36, height: 34, rx: 8, fill: "#3B4FA3" }); el(bp, "rect", { x: -12, y: -10, width: 24, height: 12, rx: 3, fill: "#2E3E86" });
+  [[-34, 4, -70], [-24, 10, -80], [26, 6, 70], [36, 10, 85], [16, 14, 90], [-10, 14, -90]].forEach(function (b) { var w = g(bp, { transform: "translate(" + b[0] + " " + b[1] + ") rotate(" + b[2] + ")" }); el(w, "rect", { x: -5, y: -14, width: 10, height: 24, rx: 3, fill: "#BFE6F5", opacity: .8, stroke: "#7AAAC0" }); el(w, "rect", { x: -3, y: -18, width: 6, height: 4, fill: "#2E86DE" }); });
+  // scorpion by a rock
+  el(sc, "ellipse", { cx: 476, cy: 426, rx: 16, ry: 8, fill: "#8A3A22" });
+  var scp = g(sc, { transform: "translate(470 422)" }); el(scp, "ellipse", { rx: 6, ry: 3, fill: "#3A2A1A" }); el(scp, "path", { d: "M5 0 q8 -2 8 -8 q0 -4 -4 -4", stroke: "#3A2A1A", "stroke-width": 2, fill: "none" }); el(scp, "path", { d: "M-6 -1 l-5 -3 M-6 1 l-5 3", stroke: "#3A2A1A", "stroke-width": 1.5 });
+  // centipede
+  var cp = g(sc, { transform: "translate(110 432)" }); for (var k = 0; k < 9; k++) { el(cp, "circle", { cx: k * 4, cy: Math.sin(k / 1.5) * 2, r: 2.2, fill: k ? "#C2501A" : "#2B2340" }); el(cp, "path", { d: "M" + k * 4 + " " + (Math.sin(k / 1.5) * 2 - 2) + " l-1 -3 M" + k * 4 + " " + (Math.sin(k / 1.5) * 2 + 2) + " l-1 3", stroke: "#F2C230", "stroke-width": .8 }); }
+  // bush tomato shrub
+  var bt = g(sc, { transform: "translate(380 322)" }); for (var k = 0; k < 10; k++) el(bt, "ellipse", { cx: R(-16, 16), cy: R(-10, 4), rx: 6, ry: 3, fill: "#9AA07A" }); [[-8, -2, "#9AC24A"], [4, -6, "#B8C84A"], [10, 0, "#9AC24A"], [-2, 2, "#C8A040"]].forEach(function (f) { el(bt, "circle", { cx: f[0], cy: f[1], r: 3, fill: f[2] }); });
+  // cane toad by the cattle trough
+  el(sc, "rect", { x: 720, y: 352, width: 70, height: 14, rx: 3, fill: "#8A9AA0" }); el(sc, "rect", { x: 724, y: 354, width: 62, height: 5, fill: "#6EA8B8" });
+  var td = g(sc, { transform: "translate(756 376)" }); el(td, "ellipse", { rx: 12, ry: 8, fill: "#8A7A4A" }); el(td, "ellipse", { cx: -8, cy: -6, rx: 4, ry: 3, fill: "#6E5E32" }); el(td, "circle", { cx: -10, cy: -8, r: 1.6, fill: "#F2C230" }); el(td, "ellipse", { cx: -3, cy: -6, rx: 4, ry: 2.5, fill: "#A89A6A" });
+  for (var i = 0; i < 6; i++) el(td, "circle", { cx: R(-6, 8), cy: R(-4, 4), r: 1, fill: "#5A4A22" });
+  // heat shimmer
+  for (var i = 0; i < 10; i++) el(fx, "path", { d: "M" + R(0, 760) + " " + R(244, 262) + " q10 -3 20 0 q10 3 20 0", stroke: "#FFF6E0", "stroke-width": 1.2, fill: "none", opacity: .5, "class": "ff" });
+  // dust
+  for (var i = 0; i < 26; i++) { var c = el(fx, "circle", { cx: R(30, 790), cy: R(260, 460), r: R(.6, 1.6), fill: "#F4C8A0", "class": "ff" }); c.style.animationDelay = R(0, 4).toFixed(2) + "s"; c.style.animationDuration = R(2, 5).toFixed(2) + "s"; }
+  // circling bird
+  el(fx, "path", { d: "M300 150 q8 -6 14 0 q6 -6 14 0", stroke: "#2B2340", "stroke-width": 2, fill: "none" });
+})();
+</script>
+  </div>
+
+  <div class="grid">
+    <section class="file" aria-labelledby="cf">
+      <p class="label" id="cfile"></p>
+      <h2 id="cf">Clues</h2>
+      <ol class="clues" id="clues"></ol>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div id="verdict"></div>
+    </section>
+    <section class="side" aria-labelledby="acc">
+      <h2 id="acc">Accuse a culprit</h2>
+      <div class="dossier" id="dossier">Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.</div>
+      <div class="suspects" id="suspects"></div>
+      <button class="main" type="button" id="accuse" disabled>Accuse</button>
+    </section>
+  </div>
+  <p class="foot">Fictional cases. In the heat, exercise early, drink to thirst, and cool first if a mate collapses.</p>
+</div>
+
+<script>
+(function () {
+  var V = {"mira": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M84 88q22 0 22-16q0-12-11-12q-9 0-9 8q0 6 6 6q4 0 4-3\" stroke=\"#2E8B6E\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M30 104q-4-30 22-44q24-12 36 10q8 18-6 34z\" fill=\"#3FA37F\"/><path d=\"M40 98q4-16 18-22q14-4 22 8\" stroke=\"#2E8B6E\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" opacity=\".7\"/><path d=\"M38 102q-6-4-10 2M56 104q-2-6-8-4M74 104q2-6 8-4\" stroke=\"#2E8B6E\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M22 60q0-26 26-30q16-2 22 10l4 10q-6 18-30 20q-22 2-22-10z\" fill=\"#4DB88F\"/><path d=\"M30 34q8-14 22-12q-4 6-2 10\" fill=\"#3FA37F\"/><path d=\"M28 66q12 4 26 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"44\" r=\"13\" fill=\"#3FA37F\"/><path d=\"M57.4 40.6 L49.7 45.0 L57.4 49.4\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"36\" cy=\"56\" rx=\"4.5\" ry=\"2.6\" fill=\"#FF8FAE\" opacity=\".6\"/><g transform=\"rotate(-20 92 46)\"><circle cx=\"92\" cy=\"40\" r=\"15\" fill=\"#E6F7F8\" fill-opacity=\".7\" stroke=\"#0E7C86\" stroke-width=\"5\"/><path d=\"M84 34a10 10 0 0 1 8-4\" stroke=\"#fff\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"88.5\" y=\"55\" width=\"7\" height=\"20\" rx=\"3.5\" fill=\"#6E4A33\"/></g><path d=\"M66 60q12 2 22 6\" stroke=\"#4DB88F\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"93\" cy=\"67\" r=\"5\" fill=\"#4DB88F\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M84 88q22 0 22-16q0-12-11-12q-9 0-9 8q0 6 6 6q4 0 4-3\" stroke=\"#2E8B6E\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M30 104q-4-30 22-44q24-12 36 10q8 18-6 34z\" fill=\"#3FA37F\"/><path d=\"M40 98q4-16 18-22q14-4 22 8\" stroke=\"#2E8B6E\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" opacity=\".7\"/><path d=\"M38 102q-6-4-10 2M56 104q-2-6-8-4M74 104q2-6 8-4\" stroke=\"#2E8B6E\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M22 60q0-26 26-30q16-2 22 10l4 10q-6 18-30 20q-22 2-22-10z\" fill=\"#4DB88F\"/><path d=\"M30 34q8-14 22-12q-4 6-2 10\" fill=\"#3FA37F\"/><path d=\"M28 66q12 4 26 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"44\" r=\"13\" fill=\"#3FA37F\"/><circle cx=\"50\" cy=\"44\" r=\"9\" fill=\"#fff\"/><circle cx=\"53\" cy=\"45\" r=\"5.5\" fill=\"#2B2340\"/><circle cx=\"51\" cy=\"42.6\" r=\"1.9\" fill=\"#fff\"/><ellipse cx=\"36\" cy=\"56\" rx=\"4.5\" ry=\"2.6\" fill=\"#FF8FAE\" opacity=\".6\"/><g transform=\"rotate(-20 92 46)\"><circle cx=\"92\" cy=\"40\" r=\"15\" fill=\"#E6F7F8\" fill-opacity=\".7\" stroke=\"#0E7C86\" stroke-width=\"5\"/><path d=\"M84 34a10 10 0 0 1 8-4\" stroke=\"#fff\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><rect x=\"88.5\" y=\"55\" width=\"7\" height=\"20\" rx=\"3.5\" fill=\"#6E4A33\"/></g><path d=\"M66 60q12 2 22 6\" stroke=\"#4DB88F\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\"/><circle cx=\"93\" cy=\"67\" r=\"5\" fill=\"#4DB88F\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "yara": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 70q-40-30-52-14q20 8 40 22z\" fill=\"#E6EBF0\"/><path d=\"M60 70q40-30 52-14q-20 8-40 22z\" fill=\"#E6EBF0\"/><path d=\"M8 56l8 6M112 56l-8 6\" stroke=\"#9AA6B2\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M52 98l-10 10h20zM68 98l10 10H58z\" fill=\"#fff\"/><ellipse cx=\"60\" cy=\"78\" rx=\"18\" ry=\"22\" fill=\"#fff\"/><circle cx=\"60\" cy=\"46\" r=\"20\" fill=\"#fff\"/><path d=\"M40 44q2-22 20-22t20 22q-20-8-40 0z\" fill=\"#2B2340\"/><path d=\"M76 50l22 4-22 4z\" fill=\"#E03A3A\"/><path d=\"M56.0 46.9 a1.1 1.1 0 1 1 -1.1 1.1 a2.2 2.2 0 1 1 3.2 -2.2 a3.4 3.4 0 1 1 -4.5 4.3\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M70.0 46.9 a1.1 1.1 0 1 1 -1.1 1.1 a2.2 2.2 0 1 1 3.2 -2.2 a3.4 3.4 0 1 1 -4.5 4.3\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"52\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"74\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><rect x=\"42\" y=\"78\" width=\"16\" height=\"20\" rx=\"2\" fill=\"#4A3480\"/><circle cx=\"50\" cy=\"86\" r=\"3.5\" fill=\"none\" stroke=\"#F2C230\" stroke-width=\"1.5\"/><path d=\"M45 93h10\" stroke=\"#F2C230\" stroke-width=\"1.5\"/><path d=\"M96 14l1.6 3.4 3.4 1.6-3.4 1.6-1.6 3.4-1.6-3.4-3.4-1.6 3.4-1.6z\" fill=\"#FFD23F\"/><path d=\"M108 26l1.2 2.4 2.4 1.2-2.4 1.2-1.2 2.4-1.2-2.4-2.4-1.2 2.4-1.2z\" fill=\"#FFD23F\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 70q-40-30-52-14q20 8 40 22z\" fill=\"#E6EBF0\"/><path d=\"M60 70q40-30 52-14q-20 8-40 22z\" fill=\"#E6EBF0\"/><path d=\"M8 56l8 6M112 56l-8 6\" stroke=\"#9AA6B2\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M52 98l-10 10h20zM68 98l10 10H58z\" fill=\"#fff\"/><ellipse cx=\"60\" cy=\"78\" rx=\"18\" ry=\"22\" fill=\"#fff\"/><circle cx=\"60\" cy=\"46\" r=\"20\" fill=\"#fff\"/><path d=\"M40 44q2-22 20-22t20 22q-20-8-40 0z\" fill=\"#2B2340\"/><path d=\"M76 50l22 4-22 4z\" fill=\"#E03A3A\"/><circle cx=\"56\" cy=\"48\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"70\" cy=\"48\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"54.7\" cy=\"46.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"68.7\" cy=\"46.5\" r=\"1.6\" fill=\"#fff\"/><ellipse cx=\"52\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"74\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><rect x=\"42\" y=\"78\" width=\"16\" height=\"20\" rx=\"2\" fill=\"#4A3480\"/><circle cx=\"50\" cy=\"86\" r=\"3.5\" fill=\"none\" stroke=\"#F2C230\" stroke-width=\"1.5\"/><path d=\"M45 93h10\" stroke=\"#F2C230\" stroke-width=\"1.5\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "zola": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 30q-4-18 18-18\" stroke=\"#3A3060\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"80\" cy=\"12\" r=\"9\" fill=\"#FFE27A\" opacity=\".45\"/><circle cx=\"80\" cy=\"12\" r=\"5.5\" fill=\"#FFE27A\"/><path d=\"M96 70l16-14v28z\" fill=\"#2E2A55\"/><ellipse cx=\"58\" cy=\"68\" rx=\"40\" ry=\"36\" fill=\"#3A3570\"/><ellipse cx=\"54\" cy=\"80\" rx=\"26\" ry=\"18\" fill=\"#4D4888\"/><path d=\"M44.0 52.6 a1.3 1.3 0 1 1 -1.3 1.3 a2.7 2.7 0 1 1 4.0 -2.7 a4.3 4.3 0 1 1 -5.6 5.4\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M68.0 52.6 a1.3 1.3 0 1 1 -1.3 1.3 a2.7 2.7 0 1 1 4.0 -2.7 a4.3 4.3 0 1 1 -5.6 5.4\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"36\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"76\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><path d=\"M32 74q24 16 48 0\" stroke=\"#2B2340\" stroke-width=\"3\" fill=\"#2B2340\"/><path d=\"M36 76l3 5 3-5M58 80l3 5 3-5M70 77l3 5 3-5\" fill=\"#fff\"/><path d=\"M96 14l1.6 3.4 3.4 1.6-3.4 1.6-1.6 3.4-1.6-3.4-3.4-1.6 3.4-1.6z\" fill=\"#FFD23F\"/><path d=\"M108 26l1.2 2.4 2.4 1.2-2.4 1.2-1.2 2.4-1.2-2.4-2.4-1.2 2.4-1.2z\" fill=\"#FFD23F\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 30q-4-18 18-18\" stroke=\"#3A3060\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"80\" cy=\"12\" r=\"9\" fill=\"#FFE27A\" opacity=\".45\"/><circle cx=\"80\" cy=\"12\" r=\"5.5\" fill=\"#FFE27A\"/><path d=\"M96 70l16-14v28z\" fill=\"#2E2A55\"/><ellipse cx=\"58\" cy=\"68\" rx=\"40\" ry=\"36\" fill=\"#3A3570\"/><ellipse cx=\"54\" cy=\"80\" rx=\"26\" ry=\"18\" fill=\"#4D4888\"/><circle cx=\"44\" cy=\"54\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"68\" cy=\"54\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"42.7\" cy=\"52.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"66.7\" cy=\"52.5\" r=\"1.6\" fill=\"#fff\"/><ellipse cx=\"36\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"76\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><path d=\"M32 74q24 16 48 0\" stroke=\"#2B2340\" stroke-width=\"3\" fill=\"#2B2340\"/><path d=\"M36 76l3 5 3-5M58 80l3 5 3-5M70 77l3 5 3-5\" fill=\"#fff\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"]};
+  var P = [ // [tag no., name, latin/source, toxin, what it does, tag x, tag y]
+    [1, "Bush tomatoes", "Unripe wild Solanum fruit", "Solanine", "Ripe desert raisins are a bush food. Unripe fruit of some Solanum species causes vomiting and diarrhoea.", 380, 286],
+    [2, "Cane toad", "Rhinella marina", "Bufotoxin", "Its toxin acts like digoxin. Licked or eaten: vomiting, a slow heart and high potassium. Antidote: digoxin antibodies.", 728, 330],
+    [3, "Mulga snake", "Pseudechis australis (king brown)", "Venom: muscle and anticoagulant toxins", "Big, painful bite with swelling. Hours later: muscle breakdown (very high CK, dark urine) and blood that clots slowly.", 665, 280],
+    [4, "Giant centipede", "Ethmostigmus rubripes", "Centipede venom", "Very painful bite with redness and swelling. Settles in a day or two.", 182, 418],
+    [5, "Water bottles", "Six 1.5 L bottles, all empty", "Too much water", "Drinking far more than you sweat dilutes the blood’s sodium: nausea, headache, confusion, seizures.", 240, 296],
+    [6, "Bore water", "From an old station bore", "Nitrate", "High-nitrate water in baby formula can cause methaemoglobinaemia: blue-grey skin and low oxygen.", 150, 246],
+    [7, "Desert scorpion", "Under a rock", "Scorpion venom", "Australian scorpions: sharp local pain and swelling for a few hours. Not dangerous.", 512, 414],
+    [8, "The sun", "42°C in the shade, none of which is here", "Heat", "Heat stroke: core temperature over 40°C with confusion, seizures or collapse. Cool first, transport second.", 640, 192]
+  ];
+  var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day. In an emergency, call 000.";
+  var CASES = [
+    { id: "mira", solver: "the ED and toxicology team", team: "&#129514; ED and toxicology’s plan", who: "Mira", label: "Case 1 · Mira", file: "Case file 022 · Mira, chameleon, blends in, spots everything", ans: 3,
+      note: "Mira the chameleon was found sitting in the shade, unwell.",
+      clues: [["Symptoms", "Nausea, vomiting, tummy pain and a headache."],
+        ["Exam", "Painful, swollen hand, swelling creeping up the forearm. Eyelids normal, no paralysis. Temperature 37.4°C."],
+        ["Tests", "6 hours: CK 48,000 and climbing, dark brown urine. aPTT prolonged, but fibrinogen normal. Sodium normal."],
+        ["Hand", "Two deep puncture wounds on the back of her hand."],
+        ["History", "She reached under a shady ledge for her dropped magnifying glass. Something grabbed her hand and held on."],
+        ["Evidence", "Something large and heavy, coppery-brown and over 2 metres long, was seen in the shade of the ledge."]],
+      win: "Mulga snake (king brown) envenoming. Unlike brown and tiger snakes, it doesn’t use up fibrinogen. Its venom breaks down muscle and slows clotting with an anticoagulant effect, and the bite itself is painful and swollen.<br><br><b>Pearl:</b> despite the name ‘king brown’, it’s a black snake (Pseudechis). The right antivenom is black snake antivenom, not brown snake antivenom.",
+      plan: "<b>First aid:</b> pressure immobilisation bandage, splint and keep still. Call 000.<br><b>Antivenom:</b> black snake antivenom, 1 vial IV, with adrenaline ready.<br><b>Muscles and kidneys:</b> IV fluids to keep urine flowing, CK and kidney tests every 6 to 12 hours. Muscle breakdown can keep rising for a day or two.",
+      recov: "One vial, four days of fluids, kidneys protected. Back to spotting things, from a safe distance.",
+      tip: "Don’t put hands under ledges or into holes you can’t see into. Wear boots and carry a pressure bandage in the outback. Snakes bite when grabbed, trodden on or cornered.",
+      why: { 8: "Heat can cause muscle breakdown too, but her temperature is normal and there are fang marks on her hand.", 5: "Too much water lowers sodium. Hers is normal.", 7: "Australian scorpions cause local pain for a few hours, not muscle breakdown and clotting problems.", 4: "Close! A centipede bite is painful and swollen too. But it doesn’t break down muscle or affect clotting.", 2: "Cane toads cause vomiting and a slow heart, not a swollen bitten hand.", 1: "Unripe bush tomatoes cause vomiting, not a CK of 48,000.", 6: "Bore water nitrate affects babies’ oxygen levels, not muscles." } },
+    { id: "yara", solver: "the ED team", team: "&#128657; ED’s plan", who: "Yara", label: "Case 2 · Yara", file: "Case file 023 · Yara, Arctic tern, flies 70,000 km a year, not used to this", ans: 8,
+      note: "Yara the tern was found collapsed on the red dirt track.",
+      clues: [["Symptoms", "Confused and agitated, then a short seizure. She doesn’t know where she is."],
+        ["Exam", "Hot, flushed skin, still sweating. Pulse 150, BP 92/50."],
+        ["Tests", "Sodium 139, normal. Glucose normal. CK mildly raised. No bites or stings anywhere."],
+        ["History", "She drank steadily but sensibly: about 600 mL an hour."],
+        ["More", "She was 8 km into a run, pushing for a personal best."],
+        ["Evidence", "It was midday, 42°C, with no shade for 8 km. Rectal temperature 41.8°C."]],
+      win: "Exertional heat stroke: the body makes heat faster than it can lose it. A core temperature over 40°C with confusion or a seizure is heat stroke until proven otherwise. Sweating doesn’t rule it out.<br><br><b>Pearl:</b> survival depends on how fast you cool. Cold water immersion can drop the temperature by 0.15 to 0.35°C per minute. Paracetamol doesn’t help: the brain’s thermostat isn’t the problem.",
+      plan: "<b>Cool first, transport second:</b> immerse in cold or iced water (a tub, tarp or body bag with ice) until the core temperature is 38.5 to 39°C, ideally within 30 minutes of collapse.<br><b>If no tub:</b> strip, soak with water, ice packs to neck, armpits and groin, and fan hard.<br><b>Then:</b> IV fluids, and watch for muscle breakdown, kidney and liver injury, and clotting problems.",
+      recov: "Cooled to 39°C in 15 minutes in an ice bath. Home the next day, with a new rule: run at dawn.",
+      tip: "Exercise early or late in hot weather, build up slowly, and stop at the first sign of confusion or stumbling in a mate. Event medical tents keep ice baths for exactly this.",
+      why: { 3: "No bite marks, and her clotting is fine. Snake bites don’t raise your temperature to 41.8°C.", 5: "Close! Too much water also causes confusion and seizures after exercise. But her sodium is normal, and her temperature is dangerously high.", 7: "Scorpions cause local pain, not confusion and a temperature of 41.8°C.", 4: "Centipedes cause a painful bite, not heat stroke.", 2: "Cane toads cause a slow heart. Hers is racing.", 1: "Unripe bush tomatoes cause vomiting, not a temperature of 41.8°C.", 6: "Bore water nitrate affects babies’ oxygen, not adult runners." } },
+    { id: "zola", solver: "the ED and ICU team", team: "&#129657; ED and ICU’s plan", who: "Zola", label: "Case 3 · Zola", file: "Case file 024 · Zola, anglerfish, calm in a crisis, poor at estimating water", ans: 5,
+      note: "Zola the anglerfish was found confused at the end of the walking track.",
+      clues: [["Symptoms", "Headache, nausea, vomiting and bloating. Her rings feel tight."],
+        ["Exam", "Confused, then a seizure. Temperature 37.6°C. No bites or stings."],
+        ["History", "A slow 6-hour walk. ‘I was so worried about getting dehydrated.’"],
+        ["Weight", "2 kg heavier than this morning. She hasn’t needed the toilet all day."],
+        ["Course", "Paramedics are about to give a big bag of IV saline for ‘dehydration’."],
+        ["Evidence", "Sodium 119 mmol/L (normal 135 to 145). Six empty 1.5 L bottles in her pack."]],
+      win: "Exercise-associated hyponatraemia: drinking far more than you sweat out dilutes the blood’s sodium, and the brain swells. Weight gain during exercise is a red flag. Slow walkers and charity hikers are at particular risk.<br><br><b>Pearl:</b> it looks like dehydration or heat illness, but more fluid makes it worse. Check sodium before giving fluids to a confused athlete.",
+      plan: "<b>Treatment:</b> hypertonic saline 3%, 100 mL IV bolus over 10 minutes, repeated up to 3 times until symptoms improve. No more water or normal saline.<br><b>ICU:</b> check sodium every 2 to 4 hours, and avoid raising it too fast (no more than 8 to 10 mmol/L in 24 hours).<br><b>Also:</b> fluid restriction until she’s passing plenty of urine.",
+      recov: "Two boluses of hypertonic saline and the seizures stopped. Sodium back to 134 the next day. Now drinks to thirst.",
+      tip: "Drink to thirst during exercise rather than to a schedule. If you weigh more after exercise than before, you drank too much.",
+      why: { 3: "No bite marks, and her CK is normal.", 8: "Close! Heat stroke also causes confusion and seizures. But her temperature is only 37.6°C, and her sodium is 119.", 7: "Scorpions cause local pain, not a sodium of 119.", 4: "Centipedes cause a painful bite, not seizures and low sodium.", 2: "Cane toads cause vomiting and a slow heart, not swelling and low sodium.", 1: "Unripe bush tomatoes cause vomiting and diarrhoea, which can lower sodium a little, but not a weight gain of 2 kg.", 6: "Bore water nitrate affects babies’ oxygen levels, not sodium." } }
+  ];
+  Array.prototype.forEach.call(document.querySelectorAll('#scene > g[transform^="translate"], [id^="prop-"] > g[transform^="translate"]'), function (g) { var t = g.getAttribute("transform"); if (!/scale/.test(t)) g.setAttribute("transform", t + " scale(1.45)"); });
+  var $ = function (id) { return document.getElementById(id); };
+  var NS = "http://www.w3.org/2000/svg", C, shown, lives, pick, out, done;
+
+  var SCENE = 8, SCENE_NAME = "Dry Heat";
+  var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
+  function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
+  function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
+  function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
+  function celebrate(stars, name) {
+    var host = document.body, cols = ["#F5C518", "#2E8B57", "#B23A48", "#4FB3D9", "#B48CFF", "#F28C28"], h = "";
+    for (var k = 0; k < 60; k++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[k % cols.length] + ";animation-delay:" + (Math.random() * .6).toFixed(2) + "s;animation-duration:" + (1.6 + Math.random() * 1.6).toFixed(2) + 's"></i>';
+    var solved = Object.keys(TQ).filter(function (k) { return TQ[k] > 0; }).length, sceneDone = CASES.every(function (c) { return TQ[c.id] > 0; });
+    var extra = solved >= 30 ? "All 30 cases closed. Toxicology December complete! &#127942;" : sceneDone ? SCENE_NAME + " cleared: all 3 cases closed." : solved + " of 30 cases closed this December.";
+    var o = document.createElement("div"); o.className = "cel"; o.setAttribute("role", "status");
+    o.innerHTML = '<div class="cf-wrap" aria-hidden="true">' + h + '</div><div class="cel-stamp">Case closed</div><svg class="cel-m" viewBox="0 0 120 120" aria-hidden="true">' + V[C.id][1] + '</svg><div class="cel-s">' + "★".repeat(stars) + "☆".repeat(3 - stars) + '</div><p class="cel-t">' + C.who + " is on the mend, thanks to you and " + C.solver + ". " + extra + '</p><span class="cel-tap">Tap to read the plan</span>';
+    o.addEventListener("click", function () { o.remove(); });
+    host.appendChild(o); setTimeout(function () { if (o.parentNode) o.remove(); }, 6000);
+  }
+  P.forEach(function (p) { p[5] = Math.min(730, Math.max(58, p[5])); p[6] = Math.min(450, Math.max(132, p[6])); });
+  P.forEach(function (p) {
+    var g = document.createElementNS(NS, "g"); g.setAttribute("class", "tagbtn"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "Evidence " + p[0] + ": " + p[1]);
+    g.innerHTML = '<rect x="' + (p[5] - 13) + '" y="' + (p[6] - 13) + '" width="26" height="26" rx="4" fill="#F5C518" stroke="#1A1F1B" stroke-width="1.5"/><text x="' + p[5] + '" y="' + (p[6] + 5) + '" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#1A1F1B">' + p[0] + "</text>";
+    g.addEventListener("click", function () { select(p[0]); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p[0]); } });
+    $("tags").appendChild(g);
+  });
+  $("suspects").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) select(+b.getAttribute("data-n")); });
+  function drawCases() { $("cases").innerHTML = CASES.map(function (c, i) { var s = TQ[c.id]; return '<button type="button" data-i="' + i + '"' + (isOpen(i) ? "" : " disabled") + ">" + c.label + (isOpen(i) ? (s > 0 ? '<span class="st">' + "★".repeat(s) + "</span>" : s === 0 ? '<span class="st">✓</span>' : "") : " · opens " + dayOf(i) + " Dec") + "</button>"; }).join(""); }
+  drawCases();
+  $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
+  function load(i) {
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each suspect, reveal clues one at a time, and accuse the culprit. Fewer clues, more stars.";
+    $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
+    $("victim").innerHTML = V[C.id][0];
+    CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
+    $("suspects").innerHTML = P.map(function (p) { return '<button type="button" data-n="' + p[0] + '"><span class="n">' + p[0] + "</span>" + p[1] + "</button>"; }).join("");
+    $("dossier").innerHTML = "Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.";
+    $("accuse").disabled = true; $("accuse").textContent = "Accuse";
+    renderClues();
+  }
+  function select(n) {
+    var p = P[n - 1]; pick = n;
+    $("dossier").innerHTML = "<b>Evidence " + p[0] + ": " + p[1] + '</b> <span class="sci">' + p[2] + "</span><br><b>Toxin:</b> " + p[3] + "<br>" + p[4];
+    Array.prototype.forEach.call($("suspects").children, function (b) { b.style.outline = +b.getAttribute("data-n") === n ? "2px solid #F5C518" : ""; });
+    $("accuse").disabled = done || !!out[n]; $("accuse").textContent = "Accuse the " + p[1].toLowerCase();
+  }
+  function renderClues() {
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (c) { return '<li><span class="k">' + c[0] + "</span><p>" + c[1] + "</p></li>"; }).join("");
+    $("left").textContent = shown < C.clues.length ? (C.clues.length - shown) + " clues left" : "All clues revealed";
+    $("more").disabled = done || shown >= C.clues.length;
+  }
+  function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
+  function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
+  $("accuse").onclick = function () {
+    if (!pick || done) return;
+    var name = P[C.ans - 1][1];
+    if (pick === C.ans) {
+      done = true; var stars = Math.max(1, (shown <= 2 ? 3 : shown <= 4 ? 2 : 1) - (lives < 3 ? 1 : 0));
+      $("verdict").innerHTML = '<div class="verdict yes"><div class="stars">' + "★".repeat(stars) + "☆".repeat(3 - stars) + "</div><b>" + name + ". You and " + C.solver + " cracked it on clue " + shown + ".</b> " + C.win + "</div>" + planHtml();
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+      shown = C.clues.length; renderClues(); $("accuse").disabled = true; recover(); if (!(TQ[C.id] >= stars)) TQ[C.id] = stars; tqSave(); var keep = C; drawCases(); Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", CASES[k] === keep ? "true" : "false"); }); celebrate(stars);
+    } else {
+      lives--; out[pick] = 1; $("lives").textContent = "●".repeat(lives) + "○".repeat(3 - lives);
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === pick) b.classList.add("out"); });
+      var why = C.why[pick] || "Not this time.";
+      if (!lives) { done = true; why += " Out of accusations. Luckily " + C.solver + " worked it out: " + name.toLowerCase() + "."; shown = C.clues.length; renderClues(); }
+      $("verdict").innerHTML = '<div class="verdict no"><b>Not that one.</b> ' + why + "</div>" + (lives ? "" : planHtml());
+      if (!lives) { recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); } }
+      $("accuse").disabled = true;
+    }
+  };
+  (function () { var pan = $("pan"), hint = $("swipe"); if (pan.scrollWidth > pan.clientWidth) pan.scrollLeft = (pan.scrollWidth - pan.clientWidth) * 0.5;
+    setTimeout(function () { pan.addEventListener("scroll", function () { if (hint) hint.style.opacity = 0; }, { passive: true }); }, 400); setTimeout(function () { if (hint) hint.style.opacity = 0; }, 5000); })();
+  (function () { var q = +((location.search.match(/[?&]c=(\d)/) || [])[1] || 0) - 1, open = CASES.map(function (c, i) { return isOpen(i) ? i : -1; }).filter(function (i) { return i > -1; });
+    if (!open.length) { $("note").innerHTML = '<span class="lockmsg">&#128274; This scene opens on ' + dayOf(0) + " December. One new case every day of Toxicology December.</span>"; document.querySelector(".grid").hidden = true; return; }
+    load(open.indexOf(q) > -1 ? q : open[open.length - 1]); })();
+})();
+</script>
+
+</body></html>

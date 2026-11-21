@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>*{box-sizing:border-box}[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}
+.cel{position:fixed;inset:0;display:grid;place-items:center;align-content:center;gap:6px;background:rgba(6,12,9,.93);backdrop-filter:blur(3px);z-index:50;cursor:pointer;animation:celin .3s ease-out}
+.cel .cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cel .cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.95}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+.cel-stamp{font:400 clamp(26px,7vw,48px)/1 var(--display);color:#F5C518;border:4px solid #F5C518;border-radius:10px;padding:6px 16px;transform:rotate(-6deg);animation:stamp .45s cubic-bezier(.2,1.6,.4,1) both;letter-spacing:.04em;text-transform:uppercase}
+.cel .cel-m{width:130px;height:130px;animation:hop .9s ease-in-out .3s 3}
+.cel-s{font-size:clamp(24px,6vw,34px);letter-spacing:6px;color:#F5C518}
+.cel-t{margin:0;font:600 15px var(--body);color:#fff;text-align:center;max-width:30em;padding:0 16px}
+.cel-tap{font:500 11px var(--mono);color:#C9D8CE;letter-spacing:.1em;text-transform:uppercase}
+@keyframes stamp{from{transform:scale(2.4) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-4deg)}}
+@keyframes celin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
+.cases button[disabled]{opacity:.5;cursor:not-allowed}
+.cases button .st{color:var(--tag);margin-left:4px}
+.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
+</style>
+<title>Toxiquest: The Shed</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one crime-scene garden at dusk on top, the case file underneath; evidence tags in the garden open plant dossiers. Single dusk look by choice. */
+:root{
+  --night:#13241C; --moss:#1F3A2C; --leaf:#2F5A3F; --mist:#D8E6D9;
+  --paper:#F2F0E6; --ink:#1A1F1B; --tag:#F5C518; --tox:#B23A48; --ok:#2E8B57;
+  --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--night);color:var(--mist)}
+body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
+.lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
+.lives b{color:var(--tox);letter-spacing:3px}
+.scene{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #2C4A38}
+.scene svg{display:block;width:100%;height:auto}
+.tagbtn{cursor:pointer}
+.tagbtn:focus-visible rect{stroke:#fff;stroke-width:3}
+.tagbtn:hover rect{fill:#FFE15A}
+.tape{position:absolute;left:-8%;right:-8%;top:16px;transform:rotate(-2.5deg);background:var(--tag);color:var(--ink);font:500 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:5px 0;pointer-events:none;opacity:.92}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.file{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:grid;gap:12px;min-width:0;position:relative}
+.file h2{font:400 22px var(--display);margin:0}
+.label{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5B6B5F;margin:0}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.clues li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #DCD8C8;animation:in .35s ease-out}
+.clues li .k{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--leaf);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.clues li p{margin:0;font-size:15px}
+@keyframes in{from{opacity:.3;transform:translateY(4px)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.main{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--leaf);color:#fff;cursor:pointer}
+button.main:hover{background:#3A6E4C}
+button.main:focus-visible,button.ghost:focus-visible,.suspects button:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+button.ghost{font:600 14px var(--body);border:2px solid var(--leaf);border-radius:999px;padding:10px 16px;background:transparent;color:var(--leaf);cursor:pointer}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.side{background:var(--moss);border:1px solid #2C4A38;border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.side h2{font:400 20px var(--display);margin:0;color:#fff}
+.suspects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.suspects button{display:flex;gap:8px;align-items:center;text-align:left;font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}
+.suspects button .n{font:500 11px var(--mono);background:var(--tag);color:var(--ink);border-radius:4px;padding:2px 5px}
+.suspects button.out{opacity:.4;text-decoration:line-through}
+.suspects button.win{border-color:var(--ok);background:#1E4A30}
+.dossier{background:#0F1C16;border:1px dashed #3B5E48;border-radius:12px;padding:12px 14px;font-size:14px;min-height:72px}
+.dossier b{color:#fff}
+.dossier .sci{font-style:italic;color:#9FB8A6}
+.verdict{border-radius:12px;padding:12px 14px;font-size:15px}
+.verdict.no{background:#F6DADD;color:#6B1A24}
+.verdict.yes{background:#DDF1E4;color:#14522F}
+.stars{font-size:26px;letter-spacing:4px}
+.foot{font-size:12px;color:#7F9A88;text-align:center}
+@media (prefers-reduced-motion:reduce){.clues li{animation:none}.sway{animation:none!important}}
+.pan{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pan::-webkit-scrollbar{display:none}
+.pan svg{width:100%;min-width:100%}
+.swipe{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;background:rgba(10,20,14,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .6s}
+@media (max-width:640px){.tagbtn{transform-box:fill-box;transform-origin:50% 50%;transform:scale(1.5)}.scene{border-radius:12px}}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:500 12px var(--mono)}.scenes a{color:var(--mist);text-decoration:none;border:1px solid #3B5E48;border-radius:999px;padding:6px 12px}.scenes a[aria-current]{background:#F2F0E6;color:#1A1F1B;border-color:#F2F0E6}.scenes span{color:#7F9A88}
+.cases{display:flex;gap:8px;flex-wrap:wrap}.cases button{font:600 14px var(--body);border-radius:999px;padding:9px 16px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}.cases button[aria-pressed=true]{background:var(--tag);color:var(--ink);border-color:var(--tag)}.cases button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.recov{border-radius:12px;padding:12px 14px;font-size:15px;background:#E3EEF9;color:#173A5E;margin-top:10px}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.ff{animation:ff 3s ease-in-out infinite}@keyframes ff{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none}}
+</style></head><body>
+
+<div class="wrap">
+  <nav class="scenes" aria-label="Scenes"><a class="tqcal" href="./">&#128197; December calendar</a><a href="herb-patch.html">1 · The Herb Patch</a><a href="low-tide.html">2 · Low Tide</a><a href="whiteout.html">3 · Whiteout</a><a href="off-track.html">4 · Off Track</a><a href="dinner-party.html">5 · Dinner Party</a><a href="medicine-cabinet.html">6 · Medicine Cabinet</a><a href="the-shed.html" aria-current="page">7 · The Shed</a><a href="dry-heat.html">8 · Dry Heat</a><a href="canopy.html">9 · Canopy</a><a href="midnight-ward.html">10 · Midnight Ward</a></nav>
+  <div class="top">
+    <div>
+      <p class="kick">Toxiquest · Scene 7 of 10: the shed · 3 cases</p>
+      <h1>The Shed</h1>
+    </div>
+    <p class="lives" aria-live="polite">Accusations left <b id="lives">●●●</b></p>
+  </div>
+  <div class="cases" id="cases" role="group" aria-label="Choose a case"></div>
+  <p class="note" id="note"></p>
+
+  <div class="scene">
+    <div class="pan" id="pan"><svg viewBox="30 112 760 358" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A garden shed at dusk under a bare bulb: a shelf of garden chemicals, a pegboard of tools, a workbench with a lemonade bottle of green liquid, wheel cleaner and a bike wheel, a fuming bucket of cleaners, a lawnmower and petrol can. One patient lies asleep and unwell on the concrete floor.">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D2350"/><stop offset=".38" stop-color="#4B3F78"/><stop offset=".7" stop-color="#B0627A"/><stop offset="1" stop-color="#F0A86C"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#355E3E"/><stop offset=".5" stop-color="#22432D"/><stop offset="1" stop-color="#11241A"/></linearGradient>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#5C4C70"/></linearGradient>
+        <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324A"/><stop offset="1" stop-color="#1E3330"/></linearGradient>
+        <linearGradient id="trunk" x1="0" x2="1"><stop offset="0" stop-color="#3B2C20"/><stop offset=".5" stop-color="#6B5440"/><stop offset="1" stop-color="#2E2219"/></linearGradient>
+        <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D493E0"/><stop offset="1" stop-color="#7E3B95"/></linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6B8"/><stop offset="1" stop-color="#A9BB7C"/></linearGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FA35E"/><stop offset="1" stop-color="#2F5A36"/></linearGradient>
+        <linearGradient id="castor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0454C"/><stop offset="1" stop-color="#5E1C24"/></linearGradient>
+        <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3E2A"/><stop offset="1" stop-color="#2E1F15"/></linearGradient>
+        <radialGradient id="moonglow"><stop offset="0" stop-color="#FFF6DC" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DC" stop-opacity="0"/></radialGradient>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".18"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+        <radialGradient id="berry" cx=".35" cy=".35"><stop offset="0" stop-color="#5A5A6A"/><stop offset=".35" stop-color="#151518"/><stop offset="1" stop-color="#050506"/></radialGradient>
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8E8" stop-opacity="0"/><stop offset=".5" stop-color="#C9D8E8" stop-opacity=".16"/><stop offset="1" stop-color="#C9D8E8" stop-opacity="0"/></linearGradient>
+        <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer><feBlend in2="SourceGraphic" mode="multiply"/></filter>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="scene"></g>
+      <!-- The walker, asleep and unwell, and the spilled teacup -->
+      <ellipse cx="410" cy="392" rx="120" ry="52" fill="url(#lamp)"/>
+      <g id="victim" transform="translate(345 318) rotate(-14 60 60) scale(1.2)"></g>
+      
+      <g id="fx"></g>
+      <rect width="800" height="470" fill="url(#vig)" opacity=".45" pointer-events="none"/>
+      <rect width="800" height="470" filter="url(#grain)" fill="#888" opacity=".2" pointer-events="none" style="mix-blend-mode:multiply"/>
+      <g id="tags"></g>
+    </svg></div>
+    
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg", sc = document.getElementById("scene"), fx = document.getElementById("fx");
+  var seed = 89; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function R(a, b) { return a + (b - a) * r(); }
+  function el(p, tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+  function g(p, a) { return el(p, "g", a || {}); }
+  document.querySelector("svg defs").insertAdjacentHTML("beforeend",
+    '<linearGradient id="tin" x1="0" x2="1"><stop offset="0" stop-color="#5A6A70"/><stop offset=".5" stop-color="#7A8A90"/><stop offset="1" stop-color="#4A5A60"/></linearGradient>' +
+    '<linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2A5C"/><stop offset="1" stop-color="#F29A4A"/></linearGradient>' +
+    '<radialGradient id="bulb"><stop offset="0" stop-color="#FFE6A8" stop-opacity=".7"/><stop offset=".4" stop-color="#FFD27A" stop-opacity=".2"/><stop offset="1" stop-color="#FFD27A" stop-opacity="0"/></radialGradient>' +
+    '<linearGradient id="conc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E6A64"/><stop offset="1" stop-color="#3A3834"/></linearGradient>');
+  // corrugated iron walls
+  el(sc, "rect", { width: 800, height: 470, fill: "#4A5A60" });
+  for (var x = 0; x < 800; x += 14) el(sc, "rect", { x: x, y: 100, width: 7, height: 220, fill: "url(#tin)", opacity: .7 });
+  for (var i = 0; i < 18; i++) el(sc, "circle", { cx: R(0, 800), cy: R(110, 300), r: R(4, 14), fill: "#8A5A3A", opacity: R(.15, .35) });
+  // timber frame
+  el(sc, "path", { d: "M0 140 h800 M0 230 h800", stroke: "#6B5440", "stroke-width": 8 }); [40, 420, 780].forEach(function (x) { el(sc, "rect", { x: x - 5, y: 100, width: 10, height: 220, fill: "#6B5440" }); });
+  // window with dusk outside
+  el(sc, "rect", { x: 600, y: 120, width: 120, height: 90, fill: "url(#dusk)", stroke: "#6B5440", "stroke-width": 6 }); el(sc, "path", { d: "M660 120 v90 M600 165 h120", stroke: "#6B5440", "stroke-width": 3 });
+  el(sc, "path", { d: "M604 124 l20 18 M610 124 l-6 10 M624 142 l14 -6", stroke: "#DDD", "stroke-width": .6, opacity: .8 });
+  el(sc, "path", { d: "M600 208 q30 -18 50 -6 q20 -12 70 2 v4 h-120z", fill: "#2E3A2A" });
+  // shelf with garden chemicals
+  el(sc, "rect", { x: 170, y: 172, width: 240, height: 8, fill: "#8A6A48" }); el(sc, "path", { d: "M180 180 l14 14 M398 180 l-14 14", stroke: "#6B5440", "stroke-width": 4 });
+  var b1 = g(sc, { transform: "translate(200 172)" }); el(b1, "rect", { x: -10, y: -24, width: 20, height: 24, rx: 3, fill: "#8A9A3A" }); el(b1, "rect", { x: -4, y: -30, width: 8, height: 6, fill: "#3A3A2A" }); el(b1, "rect", { x: -8, y: -18, width: 16, height: 10, fill: "#E8E0C0", opacity: .7 }); el(b1, "path", { d: "M-6 -14 h12", stroke: "#B23A48", "stroke-width": 2 });
+  var b4 = g(sc, { transform: "translate(260 172)" }); el(b4, "rect", { x: -11, y: -28, width: 22, height: 28, rx: 3, fill: "#3A6A9A" }); el(b4, "rect", { x: -4, y: -34, width: 8, height: 6, fill: "#222" }); el(b4, "path", { d: "M-6 -16 l12 -6 M-6 -10 h12", stroke: "#F2C230", "stroke-width": 2 });
+  var b6 = g(sc, { transform: "translate(320 172)" }); el(b6, "rect", { x: -12, y: -20, width: 24, height: 20, rx: 2, fill: "#3FA35A" }); el(b6, "path", { d: "M-6 -10 q6 -8 12 0 q-6 4 -12 0z", fill: "#E8E0C0" });
+  var b7 = g(sc, { transform: "translate(380 172)" }); el(b7, "rect", { x: -12, y: -18, width: 24, height: 18, rx: 2, fill: "#C24A3A" }); el(b7, "circle", { cx: 0, cy: -9, r: 4, fill: "#E8E0C0" }); el(b7, "path", { d: "M3 -9 q6 2 4 6", stroke: "#E8E0C0", "stroke-width": 1, fill: "none" });
+  // pegboard with tools
+  el(sc, "rect", { x: 440, y: 120, width: 140, height: 70, fill: "#B8946A" }); for (var x = 448; x < 580; x += 10) for (var y = 128; y < 190; y += 10) el(sc, "circle", { cx: x, cy: y, r: 1, fill: "#6B5440" });
+  el(sc, "path", { d: "M460 130 v40 M456 130 h8", stroke: "#8A8A8A", "stroke-width": 4 }); el(sc, "path", { d: "M490 132 l14 34", stroke: "#C24A3A", "stroke-width": 5 }); el(sc, "path", { d: "M520 130 q10 20 0 40 M530 130 q-10 20 0 40", stroke: "#3A3A3A", "stroke-width": 3, fill: "none" }); el(sc, "circle", { cx: 560, cy: 150, r: 12, fill: "none", stroke: "#3FA35A", "stroke-width": 4 });
+  // concrete floor
+  el(sc, "rect", { y: 300, width: 800, height: 170, fill: "url(#conc)" });
+  for (var i = 0; i < 6; i++) el(sc, "ellipse", { cx: R(40, 760), cy: R(330, 460), rx: R(20, 50), ry: R(4, 10), fill: "#2A2824", opacity: .4 });
+  // workbench
+  el(sc, "rect", { x: 430, y: 236, width: 240, height: 14, fill: "#8A6A48" }); el(sc, "path", { d: "M440 250 v60 M660 250 v60", stroke: "#6B5440", "stroke-width": 8 }); el(sc, "rect", { x: 440, y: 286, width: 220, height: 6, fill: "#6B5440" });
+  // lemonade bottle with green coolant
+  var lb = g(sc, { transform: "translate(470 236)" }); el(lb, "path", { d: "M-7 0 v-20 q0 -6 4 -10 v-6 h6 v6 q4 4 4 10 v20z", fill: "#7CE08A", opacity: .85, stroke: "#3A8A4A" }); el(lb, "rect", { x: -7, y: -14, width: 14, height: 6, fill: "#F2F0E6" }); el(lb, "rect", { x: -3, y: -40, width: 6, height: 4, fill: "#2E86DE" });
+  // wheel cleaner spray and bike wheel
+  var wc = g(sc, { transform: "translate(560 236)" }); el(wc, "path", { d: "M-8 0 v-22 h16 v22z", fill: "#F2C230" }); el(wc, "path", { d: "M-4 -22 v-6 h10 l4 4 h-6 v2z", fill: "#222" }); el(wc, "rect", { x: -6, y: -16, width: 12, height: 8, fill: "#222" }); el(wc, "path", { d: "M-4 -12 h8", stroke: "#F2C230", "stroke-width": 1.5 });
+  var wh = g(sc, { transform: "translate(620 214)" }); el(wh, "circle", { r: 22, fill: "none", stroke: "#2A2A2A", "stroke-width": 5 }); el(wh, "circle", { r: 18, fill: "none", stroke: "#C9D2D8", "stroke-width": 1.5 }); for (var k = 0; k < 12; k++) { var a = k * Math.PI / 6; el(wh, "path", { d: "M0 0 L" + (18 * Math.cos(a)).toFixed(1) + " " + (18 * Math.sin(a)).toFixed(1), stroke: "#C9D2D8", "stroke-width": .8 }); } el(wh, "circle", { r: 3, fill: "#888" });
+  // rubber gloves on bench
+  el(sc, "path", { d: "M500 236 q-2 -8 4 -10 l2 -6 2 6 2 -7 2 7 2 -6 1 8 q4 4 0 8z", fill: "#F2C230", opacity: .9 });
+  // bucket with bleach and toilet cleaner
+  var bk = g(sc, { transform: "translate(690 330)" }); el(bk, "path", { d: "M-18 -20 h36 l-4 30 h-28z", fill: "#3A8ABF" }); el(bk, "ellipse", { cy: -20, rx: 18, ry: 5, fill: "#BFE6CA" });
+  el(bk, "rect", { x: 22, y: -24, width: 12, height: 30, rx: 3, fill: "#fff", stroke: "#8AA4AC" }); el(bk, "rect", { x: 25, y: -30, width: 6, height: 6, fill: "#2E86DE" }); el(bk, "path", { d: "M-34 -26 v28 h12 v-22 l-4 -6z", fill: "#7A3AB2" });
+  for (var i = 0; i < 4; i++) el(fx, "path", { d: "M" + (682 + i * 6) + " 306 q-4 -10 2 -18 q6 -8 0 -16", stroke: "#D8F0A0", "stroke-width": 2, fill: "none", opacity: .45, "class": "ff" });
+  // lawnmower and petrol can (left)
+  var lm = g(sc, { transform: "translate(90 350)" }); el(lm, "rect", { x: -34, y: -18, width: 64, height: 26, rx: 8, fill: "#C24A3A" }); el(lm, "circle", { cx: -24, cy: 10, r: 9, fill: "#222" }); el(lm, "circle", { cx: 22, cy: 10, r: 9, fill: "#222" }); el(lm, "path", { d: "M26 -16 l30 -50 h10", stroke: "#3A3A3A", "stroke-width": 4, fill: "none" }); el(lm, "rect", { x: -10, y: -28, width: 20, height: 12, rx: 3, fill: "#3A3A3A" });
+  var pc = g(sc, { transform: "translate(150 362)" }); el(pc, "path", { d: "M-14 12 v-26 l6 -6 h22 v32z", fill: "#D93A2A", stroke: "#8A1A1A" }); el(pc, "path", { d: "M-8 -20 l-6 -8", stroke: "#222", "stroke-width": 4 }); el(pc, "path", { d: "M-2 -12 l10 16 M8 -12 l-10 16", stroke: "#8A1A1A", "stroke-width": 1.5 });
+  el(sc, "path", { d: "M136 344 q-30 10 -40 -14", stroke: "#B8C8A0", "stroke-width": 2, fill: "none", opacity: .8 });
+  // garden hose coil
+  var hs = g(sc, { transform: "translate(300 420)" }); [16, 12, 8].forEach(function (rr) { el(hs, "ellipse", { rx: rr * 2, ry: rr * .7, fill: "none", stroke: "#3FA35A", "stroke-width": 4 }); });
+  // cobweb in the corner
+  el(sc, "path", { d: "M0 100 l60 0 M0 100 l0 60 M0 100 l50 45 M0 100 l30 55 M0 100 l55 25 M14 100 q2 12 -14 14 M28 100 q4 24 -28 28 M44 100 q6 36 -44 44", stroke: "#DDD", "stroke-width": .7, fill: "none", opacity: .7 });
+  // hanging bulb
+  el(sc, "path", { d: "M300 100 v40", stroke: "#222", "stroke-width": 1.5 }); el(sc, "circle", { cx: 300, cy: 146, r: 7, fill: "#FFE6A8" }); el(sc, "circle", { cx: 300, cy: 200, r: 200, fill: "url(#bulb)" });
+  // dust motes
+  for (var i = 0; i < 30; i++) { var c = el(fx, "circle", { cx: R(150, 500), cy: R(150, 380), r: R(.5, 1.4), fill: "#FFE6A8", "class": "ff" }); c.style.animationDelay = R(0, 4).toFixed(2) + "s"; c.style.animationDuration = R(2, 5).toFixed(2) + "s"; }
+})();
+</script>
+  </div>
+
+  <div class="grid">
+    <section class="file" aria-labelledby="cf">
+      <p class="label" id="cfile"></p>
+      <h2 id="cf">Clues</h2>
+      <ol class="clues" id="clues"></ol>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div id="verdict"></div>
+    </section>
+    <section class="side" aria-labelledby="acc">
+      <h2 id="acc">Accuse a culprit</h2>
+      <div class="dossier" id="dossier">Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.</div>
+      <div class="suspects" id="suspects"></div>
+      <button class="main" type="button" id="accuse" disabled>Accuse</button>
+    </section>
+  </div>
+  <p class="foot">Fictional cases. Keep chemicals in their original bottles, and take old ones to a chemical collection day.</p>
+</div>
+
+<script>
+(function () {
+  var V = {"saga": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"60\" cy=\"84\" rx=\"28\" ry=\"24\" fill=\"#8A5A3C\"/><ellipse cx=\"60\" cy=\"90\" rx=\"18\" ry=\"15\" fill=\"#E8C9A6\"/><circle cx=\"60\" cy=\"50\" r=\"28\" fill=\"#8A5A3C\"/><circle cx=\"36\" cy=\"30\" r=\"7\" fill=\"#7A4D32\"/><circle cx=\"84\" cy=\"30\" r=\"7\" fill=\"#7A4D32\"/><ellipse cx=\"60\" cy=\"58\" rx=\"18\" ry=\"14\" fill=\"#E8C9A6\"/><path d=\"M44.4 45.5 a3.6 3.6 0 0 0 7.2 0z\" fill=\"#2B2340\"/><path d=\"M43.0 45.5 h9.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.4 45.5 a3.6 3.6 0 0 0 7.2 0z\" fill=\"#2B2340\"/><path d=\"M67.0 45.5 h9.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"60\" cy=\"54\" rx=\"5\" ry=\"3.5\" fill=\"#2B2340\"/><path d=\"M56 60q4 3.2 8 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"42\" cy=\"58\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"78\" cy=\"58\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><path d=\"M50 58l-14-3M50 61l-13 2M70 58l14-3M70 61l13 2\" stroke=\"#5A3A26\" stroke-width=\"1.2\"/><g transform=\"rotate(-10 30 88)\"><rect x=\"16\" y=\"76\" width=\"24\" height=\"16\" rx=\"2\" fill=\"#FF8FAE\"/><rect x=\"19\" y=\"72\" width=\"24\" height=\"16\" rx=\"2\" fill=\"#F2C230\"/><rect x=\"22\" y=\"68\" width=\"24\" height=\"16\" rx=\"2\" fill=\"#fff\" stroke=\"#4A3480\" stroke-width=\"1.5\"/><path d=\"M26 74h14M26 78h10\" stroke=\"#4A3480\" stroke-width=\"1.5\"/></g><g><rect x=\"70\" y=\"76\" width=\"12\" height=\"2.4\" fill=\"#5BCEFA\"/><rect x=\"70\" y=\"78.4\" width=\"12\" height=\"2.4\" fill=\"#F5A9B8\"/><rect x=\"70\" y=\"80.8\" width=\"12\" height=\"2.4\" fill=\"#fff\"/><rect x=\"70\" y=\"83.2\" width=\"12\" height=\"2.4\" fill=\"#F5A9B8\"/><rect x=\"70\" y=\"85.6\" width=\"12\" height=\"2.4\" fill=\"#5BCEFA\"/></g><path d=\"M44 74q16 10 32 0\" stroke=\"#4A3480\" stroke-width=\"2.5\" fill=\"none\"/><ellipse cx=\"48.0\" cy=\"56.4\" rx=\"5.9\" ry=\"3.1\" fill=\"#8FD18A\" opacity=\".55\"/><ellipse cx=\"72.0\" cy=\"56.4\" rx=\"5.9\" ry=\"3.1\" fill=\"#8FD18A\" opacity=\".55\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"60\" cy=\"84\" rx=\"28\" ry=\"24\" fill=\"#8A5A3C\"/><ellipse cx=\"60\" cy=\"90\" rx=\"18\" ry=\"15\" fill=\"#E8C9A6\"/><circle cx=\"60\" cy=\"50\" r=\"28\" fill=\"#8A5A3C\"/><circle cx=\"36\" cy=\"30\" r=\"7\" fill=\"#7A4D32\"/><circle cx=\"84\" cy=\"30\" r=\"7\" fill=\"#7A4D32\"/><ellipse cx=\"60\" cy=\"58\" rx=\"18\" ry=\"14\" fill=\"#E8C9A6\"/><circle cx=\"48\" cy=\"46\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"72\" cy=\"46\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"46.7\" cy=\"44.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"70.7\" cy=\"44.5\" r=\"1.6\" fill=\"#fff\"/><ellipse cx=\"60\" cy=\"54\" rx=\"5\" ry=\"3.5\" fill=\"#2B2340\"/><path d=\"M56 60q4 3.2 8 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"42\" cy=\"58\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"78\" cy=\"58\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><path d=\"M50 58l-14-3M50 61l-13 2M70 58l14-3M70 61l13 2\" stroke=\"#5A3A26\" stroke-width=\"1.2\"/><g transform=\"rotate(-10 30 88)\"><rect x=\"16\" y=\"76\" width=\"24\" height=\"16\" rx=\"2\" fill=\"#FF8FAE\"/><rect x=\"19\" y=\"72\" width=\"24\" height=\"16\" rx=\"2\" fill=\"#F2C230\"/><rect x=\"22\" y=\"68\" width=\"24\" height=\"16\" rx=\"2\" fill=\"#fff\" stroke=\"#4A3480\" stroke-width=\"1.5\"/><path d=\"M26 74h14M26 78h10\" stroke=\"#4A3480\" stroke-width=\"1.5\"/></g><g><rect x=\"70\" y=\"76\" width=\"12\" height=\"2.4\" fill=\"#5BCEFA\"/><rect x=\"70\" y=\"78.4\" width=\"12\" height=\"2.4\" fill=\"#F5A9B8\"/><rect x=\"70\" y=\"80.8\" width=\"12\" height=\"2.4\" fill=\"#fff\"/><rect x=\"70\" y=\"83.2\" width=\"12\" height=\"2.4\" fill=\"#F5A9B8\"/><rect x=\"70\" y=\"85.6\" width=\"12\" height=\"2.4\" fill=\"#5BCEFA\"/></g><path d=\"M44 74q16 10 32 0\" stroke=\"#4A3480\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "silk": ["<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 4v26\" stroke=\"#C9C1DB\" stroke-width=\"1.6\"/><g stroke=\"#C05A38\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M38 60q-16-6-22 6M38 70q-16 2-20 16M82 60q16-6 22 6M82 70q16 2 20 16M42 82q-8 10-6 18M78 82q8 10 6 18\"/></g><circle cx=\"60\" cy=\"62\" r=\"30\" fill=\"#E07050\"/><g><path d=\"M41.4 56.4 L51.2 62.0 L41.4 67.6\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g><path d=\"M78.6 56.4 L68.8 62.0 L78.6 67.6\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><ellipse cx=\"38\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"82\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M55 74q5 5 10 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><path d=\"M70 38l18-20\" stroke=\"#B8C2CF\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"87\" cy=\"19\" r=\"2\" fill=\"none\" stroke=\"#8892A0\" stroke-width=\"1.4\"/><path d=\"M87 19q10 10 2 26t6 40\" stroke=\"#4A3480\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"4 3\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 4v26\" stroke=\"#C9C1DB\" stroke-width=\"1.6\"/><g stroke=\"#C05A38\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M38 60q-16-6-22 6M38 70q-16 2-20 16M82 60q16-6 22 6M82 70q16 2 20 16M42 82q-8 10-6 18M78 82q8 10 6 18\"/></g><circle cx=\"60\" cy=\"62\" r=\"30\" fill=\"#E07050\"/><g><circle cx=\"47\" cy=\"62\" r=\"7\" fill=\"#2B2340\"/><circle cx=\"44.55\" cy=\"59.2\" r=\"2.66\" fill=\"#fff\"/></g><g><circle cx=\"73\" cy=\"62\" r=\"7\" fill=\"#2B2340\"/><circle cx=\"70.55\" cy=\"59.2\" r=\"2.66\" fill=\"#fff\"/></g><ellipse cx=\"38\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"82\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M55 74q5 5 10 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><path d=\"M70 38l18-20\" stroke=\"#B8C2CF\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"87\" cy=\"19\" r=\"2\" fill=\"none\" stroke=\"#8892A0\" stroke-width=\"1.4\"/><path d=\"M87 19q10 10 2 26t6 40\" stroke=\"#4A3480\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"4 3\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "iris": ["<ellipse cx=\"60\" cy=\"108\" rx=\"28\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M34 34l-6-18 18 10zM86 34l6-18-18 10z\" fill=\"#6E4A33\"/><ellipse cx=\"60\" cy=\"66\" rx=\"32\" ry=\"38\" fill=\"#8A5A3C\"/><path d=\"M30 62q-10 18 2 36q8-6 10-20z\" fill=\"#6E4A33\"/><path d=\"M90 62q10 18-2 36q-8-6-10-20z\" fill=\"#6E4A33\"/><ellipse cx=\"60\" cy=\"80\" rx=\"20\" ry=\"22\" fill=\"#F3E1C7\"/><g stroke=\"#D9BE98\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M52 74q3 3 6 0M62 74q3 3 6 0M47 84q3 3 6 0M57 84q3 3 6 0M67 84q3 3 6 0M52 94q3 3 6 0M62 94q3 3 6 0\"/></g><circle cx=\"46\" cy=\"50\" r=\"14\" fill=\"#F3E1C7\"/><circle cx=\"74\" cy=\"50\" r=\"14\" fill=\"#F3E1C7\"/><path d=\"M39.5 51.0 q7.5 5 15 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><path d=\"M65.5 51.0 q7.5 5 15 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><path d=\"M34 38q8-5 16-1M70 37q8-4 16 1\" stroke=\"#4A3022\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M55 60l5 8 5-8z\" fill=\"#F0A21E\"/><ellipse cx=\"36\" cy=\"62\" rx=\"4.5\" ry=\"2.6\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"84\" cy=\"62\" rx=\"4.5\" ry=\"2.6\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M40 70q2 18 20 22q18-4 20-22\" stroke=\"#1F7A8C\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"92\" r=\"4.5\" fill=\"#1F7A8C\"/><circle cx=\"60\" cy=\"92\" r=\"1.8\" fill=\"#fff\"/><path d=\"M49 104h8M63 104h8\" stroke=\"#F0A21E\" stroke-width=\"4\" stroke-linecap=\"round\"/><g transform=\"rotate(-35 98 82)\"><rect x=\"89\" y=\"78\" width=\"18\" height=\"8\" rx=\"4\" fill=\"#FFF4E6\" stroke=\"#A3520C\" stroke-width=\"1.8\"/><path d=\"M89 82a4 4 0 0 1 4-4h5v8h-5a4 4 0 0 1-4-4z\" fill=\"#F08A24\"/></g><path d=\"M86 88q6-4 8-10\" stroke=\"#6E4A33\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><text x=\"96\" y=\"30\" font-family=\"Figtree, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#E8F0E8\">z</text><text x=\"104\" y=\"20\" font-family=\"Figtree, sans-serif\" font-size=\"10\" font-weight=\"700\" fill=\"#E8F0E8\">z</text>", "<ellipse cx=\"60\" cy=\"108\" rx=\"28\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M34 34l-6-18 18 10zM86 34l6-18-18 10z\" fill=\"#6E4A33\"/><ellipse cx=\"60\" cy=\"66\" rx=\"32\" ry=\"38\" fill=\"#8A5A3C\"/><path d=\"M30 62q-10 18 2 36q8-6 10-20z\" fill=\"#6E4A33\"/><path d=\"M90 62q10 18-2 36q-8-6-10-20z\" fill=\"#6E4A33\"/><ellipse cx=\"60\" cy=\"80\" rx=\"20\" ry=\"22\" fill=\"#F3E1C7\"/><g stroke=\"#D9BE98\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"><path d=\"M52 74q3 3 6 0M62 74q3 3 6 0M47 84q3 3 6 0M57 84q3 3 6 0M67 84q3 3 6 0M52 94q3 3 6 0M62 94q3 3 6 0\"/></g><circle cx=\"46\" cy=\"50\" r=\"14\" fill=\"#F3E1C7\"/><circle cx=\"74\" cy=\"50\" r=\"14\" fill=\"#F3E1C7\"/><circle cx=\"46\" cy=\"50\" r=\"9.5\" fill=\"#fff\"/><circle cx=\"74\" cy=\"50\" r=\"9.5\" fill=\"#fff\"/><circle cx=\"47\" cy=\"51\" r=\"6.5\" fill=\"#5B7F1F\"/><circle cx=\"73\" cy=\"51\" r=\"6.5\" fill=\"#5B7F1F\"/><circle cx=\"47\" cy=\"51\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"73\" cy=\"51\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"45\" cy=\"48.6\" r=\"1.9\" fill=\"#fff\"/><circle cx=\"71\" cy=\"48.6\" r=\"1.9\" fill=\"#fff\"/><path d=\"M34 38q8-5 16-1M70 37q8-4 16 1\" stroke=\"#4A3022\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M55 60l5 8 5-8z\" fill=\"#F0A21E\"/><ellipse cx=\"36\" cy=\"62\" rx=\"4.5\" ry=\"2.6\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"84\" cy=\"62\" rx=\"4.5\" ry=\"2.6\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M40 70q2 18 20 22q18-4 20-22\" stroke=\"#1F7A8C\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"92\" r=\"4.5\" fill=\"#1F7A8C\"/><circle cx=\"60\" cy=\"92\" r=\"1.8\" fill=\"#fff\"/><path d=\"M49 104h8M63 104h8\" stroke=\"#F0A21E\" stroke-width=\"4\" stroke-linecap=\"round\"/><g transform=\"rotate(-35 98 82)\"><rect x=\"89\" y=\"78\" width=\"18\" height=\"8\" rx=\"4\" fill=\"#FFF4E6\" stroke=\"#A3520C\" stroke-width=\"1.8\"/><path d=\"M89 82a4 4 0 0 1 4-4h5v8h-5a4 4 0 0 1-4-4z\" fill=\"#F08A24\"/></g><path d=\"M86 88q6-4 8-10\" stroke=\"#6E4A33\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"]};
+  var P = [ // [tag no., name, latin/source, toxin, what it does, tag x, tag y]
+    [1, "Lemonade bottle", "Green liquid inside, poured from the radiator coolant", "Ethylene glycol", "Sweet-tasting. Seems like being drunk, then severe acid build-up and kidney failure. Antidote: fomepizole.", 514, 154],
+    [2, "Bleach and toilet cleaner", "Mixed in one bucket", "Chlorine gas", "Mixing bleach with acid cleaners releases chlorine gas. Burning eyes, cough, wheeze and chest tightness.", 690, 262],
+    [3, "Insecticide concentrate", "An old organophosphate garden spray", "Organophosphate", "Blocks the enzyme that clears acetylcholine. Sweating, drooling, tears, vomiting, diarrhoea, pinpoint pupils, a slow heart and wet, wheezy lungs. Antidote: atropine.", 200, 196],
+    [4, "Weedkiller", "Paraquat concentrate", "Paraquat", "A mouthful can be fatal. Mouth and throat burns, then kidney failure and lung scarring over days. No antidote.", 260, 196],
+    [5, "Rat bait", "Brodifacoum blocks", "Superwarfarin", "Stops blood clotting for weeks to months. Bruising and bleeding days later. Antidote: high-dose vitamin K, for months.", 380, 196],
+    [6, "Petrol can", "Used to siphon fuel for the mower", "Hydrocarbons", "If inhaled into the lungs while siphoning: coughing, choking and pneumonitis over the next hours.", 152, 302],
+    [7, "Wheel cleaner", "Heavy-duty rust and wheel cleaner", "Hydrofluoric acid", "Soaks through skin with little sign on the surface, then binds calcium. Deep, throbbing pain hours later. Antidote: calcium gluconate.", 560, 176],
+    [8, "Snail pellets", "Metaldehyde", "Metaldehyde", "Swallowed: vomiting, then muscle spasms, seizures and acid build-up. Very dangerous for dogs.", 320, 196]
+  ];
+  var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day. In an emergency, call 000.";
+  var CASES = [
+    { id: "saga", solver: "the ICU team", team: "&#129657; ICU’s plan", who: "Saga", label: "Case 1 · Saga", file: "Case file 019 · Saga, otter, overcommitted gardener", ans: 3,
+      note: "Saga the otter was found slumped in the shed after an afternoon in the garden.",
+      clues: [["Symptoms", "Sweating, drooling, streaming eyes, vomiting and diarrhoea. ‘Everything is leaking.’"],
+        ["Exam", "Pinpoint pupils. Pulse 46. Wheeze with bubbly secretions in both lungs. Muscles twitching."],
+        ["Course", "Her muscles are getting weaker, and her breathing is tiring."],
+        ["Tests", "Red cell cholinesterase very low. Oxygen levels falling."],
+        ["History", "She spent the afternoon spraying the veggie patch, with no gloves. Her shirt is soaked."],
+        ["Evidence", "The spray came from a very old bottle at the back of the shelf, banned for home use years ago."]],
+      win: "Organophosphate poisoning. It blocks acetylcholinesterase, so acetylcholine floods every nerve ending: the body ‘leaks’ from everywhere (sweat, spit, tears, gut, lungs), the heart slows and the muscles twitch, then weaken.<br><br><b>Pearl:</b> the killer is the ‘three Bs’: bronchorrhoea (wet lungs), bronchospasm and bradycardia. Atropine dries them all.",
+      plan: "<b>Decontaminate:</b> remove her clothes and wash her skin. Staff wear gloves and gowns.<br><b>Antidote:</b> atropine 1.2 mg IV, doubling the dose every 5 minutes until the chest is clear, pulse over 80, systolic BP over 80 and armpits dry. Then an atropine infusion.<br><b>ICU:</b> intubate if breathing muscles weaken. Pralidoxime has weak evidence.",
+      recov: "Huge doses of atropine and four days in ICU. Muscles back to full strength in a week. The old bottle went to a chemical collection day.",
+      tip: "Take old garden chemicals to a free chemical collection event (Chemclear or council drop-offs). Wear gloves and long sleeves when spraying.",
+      why: { 7: "Hydrofluoric acid burns the skin and lowers calcium. It doesn’t cause drooling and pinpoint pupils.", 1: "Ethylene glycol causes a drunk feeling and acid build-up, not drooling, tears and wet lungs.", 4: "Paraquat burns the mouth and damages the kidneys and lungs over days. It doesn’t slow the heart or shrink the pupils.", 2: "Close! Chlorine gas also causes cough, wheeze and streaming eyes. But not pinpoint pupils, diarrhoea, a slow pulse and twitching.", 8: "Snail bait causes muscle spasms and seizures, not ‘leaking’ from everywhere.", 5: "Rat bait causes bleeding days later, not instant symptoms.", 6: "Petrol inhaled into the lungs causes coughing, not drooling and pinpoint pupils." } },
+    { id: "silk", solver: "the ED and plastic surgery team", team: "&#128657; ED and plastic surgery’s plan", who: "Silk", label: "Case 2 · Silk", file: "Case file 020 · Silk, spider, surgeon, protective of all eight hands", ans: 7,
+      note: "Silk the spider was found in the shed at midnight, clutching her hands.",
+      clues: [["Symptoms", "Deep, throbbing, burning pain in four fingertips, getting worse by the hour."],
+        ["Exam", "The skin looks almost normal: slightly pale, no blisters. The pain is far worse than it looks."],
+        ["Tests", "Calcium 2.0 mmol/L (low), magnesium low. ECG: slightly long QT."],
+        ["History", "This afternoon she cleaned something in the shed until it gleamed. Her rubber gloves had a small split."],
+        ["Course", "She rinsed her hands afterwards, and nothing hurt for several hours."],
+        ["Evidence", "The cleaning product’s small print: ‘contains ammonium bifluoride’."]],
+      win: "Hydrofluoric acid burn. The fluoride ion soaks through the skin and binds calcium and magnesium in the deep tissues, causing severe pain with little to see. Large burns can drop the body’s calcium enough to stop the heart.<br><br><b>Pearl:</b> with HF, pain out of proportion to how the skin looks is the classic clue. The pain itself is the guide to treatment: when it stops, the fluoride is neutralised.",
+      plan: "<b>Antidote:</b> calcium gluconate 2.5% gel, massaged into the fingers (often inside a glove filled with gel), for at least 30 minutes.<br><b>If pain persists:</b> calcium gluconate injected under the skin, or into the artery or a vein of the arm (Bier block) by the hand team.<br><b>Watch:</b> calcium, magnesium and potassium, with an ECG, and replace calcium IV if low.",
+      recov: "Pain gone within an hour of the calcium gel. Hands fully healed in a week. All eight still suturing.",
+      tip: "Read the label for ‘hydrofluoric acid’ or ‘bifluoride’ in rust and wheel cleaners, and use thick chemical gloves. If exposed, wash well and get medical help, even if the skin looks fine.",
+      why: { 3: "Organophosphates make you sweat, drool and wheeze. Silk’s problem is just her fingertips.", 1: "Ethylene glycol is swallowed, and causes drunkenness and acid build-up, not burning fingertips.", 4: "Paraquat can irritate skin, but doesn’t cause deep, delayed pain with low calcium.", 2: "Close! Bleach and toilet cleaner are corrosive too, but they hurt straight away and look burnt. HF looks normal and hurts later.", 8: "Snail bait causes vomiting and seizures when swallowed.", 5: "Rat bait causes bleeding, not finger pain.", 6: "Petrol can irritate skin, but doesn’t cause deep, throbbing pain with low calcium." } },
+    { id: "iris", solver: "the renal and toxicology team", team: "&#129514; Renal and toxicology’s plan", who: "Iris", label: "Case 3 · Iris", file: "Case file 021 · Iris, owl, night-shift endocrinologist", ans: 1,
+      note: "Iris the owl was found asleep in the shed one morning.",
+      clues: [["Symptoms", "Last night she seemed drunk: slurred and wobbly. But she hadn’t had any alcohol. This morning: vomiting."],
+        ["Exam", "Drowsy. Breathing fast and deep. No smell of alcohol. Pulse 115."],
+        ["Tests", "pH 7.05. Anion gap 32 and osmolar gap 30, both high. Blood alcohol zero."],
+        ["Urine", "Needle-shaped calcium oxalate crystals. Creatinine starting to rise."],
+        ["History", "Thirsty late at night, she swigged from a drink bottle on the bench. ‘Sweet, but odd.’"],
+        ["Evidence", "The bottle holds bright green liquid. The car’s radiator was topped up last weekend."]],
+      win: "Ethylene glycol poisoning. It makes you feel drunk, then the liver turns it into glycolic and oxalic acids, causing severe acid build-up, oxalate crystals and kidney failure.<br><br><b>Pearl:</b> a high anion gap plus a high osmolar gap with no alcohol on board means a toxic alcohol (ethylene glycol or methanol) until proven otherwise. Oxalate crystals point to ethylene glycol.",
+      plan: "<b>Antidote:</b> fomepizole 15 mg/kg IV, then 10 mg/kg every 12 hours. It blocks the enzyme that makes the toxic acids. (Ethanol works too if fomepizole isn’t available.)<br><b>Dialysis:</b> haemodialysis to clear the ethylene glycol and acids, and support the kidneys.<br><b>Also:</b> sodium bicarbonate for the acid, and replace calcium if she has spasms or seizures.",
+      recov: "Fomepizole, two sessions of dialysis and a week in hospital. Kidneys recovered over a month. All chemicals now live in their original bottles.",
+      tip: "Never store chemicals in drink bottles. Keep coolant, fuel and garden chemicals in their original labelled containers, up high and locked away.",
+      why: { 3: "Organophosphates cause drooling, pinpoint pupils and a slow pulse, not a drunk feeling and oxalate crystals.", 7: "Hydrofluoric acid can lower calcium, but it’s a skin burn here, and doesn’t cause a high osmolar gap.", 4: "Paraquat burns the mouth and damages kidneys and lungs, but doesn’t make you feel drunk or raise the osmolar gap.", 2: "Chlorine gas causes coughing and wheeze, not acid build-up and crystals.", 8: "Close! Snail bait also causes acid build-up and seizures. But not a high osmolar gap, oxalate crystals or a drunk feeling.", 5: "Rat bait causes bleeding days later.", 6: "Petrol swallowed can make you drowsy, but doesn’t cause severe acid build-up or oxalate crystals." } }
+  ];
+  Array.prototype.forEach.call(document.querySelectorAll('#scene > g[transform^="translate"], [id^="prop-"] > g[transform^="translate"]'), function (g) { var t = g.getAttribute("transform"); if (!/scale/.test(t)) g.setAttribute("transform", t + " scale(1.45)"); });
+  var $ = function (id) { return document.getElementById(id); };
+  var NS = "http://www.w3.org/2000/svg", C, shown, lives, pick, out, done;
+
+  var SCENE = 7, SCENE_NAME = "The Shed";
+  var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
+  function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
+  function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
+  function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
+  function celebrate(stars, name) {
+    var host = document.body, cols = ["#F5C518", "#2E8B57", "#B23A48", "#4FB3D9", "#B48CFF", "#F28C28"], h = "";
+    for (var k = 0; k < 60; k++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[k % cols.length] + ";animation-delay:" + (Math.random() * .6).toFixed(2) + "s;animation-duration:" + (1.6 + Math.random() * 1.6).toFixed(2) + 's"></i>';
+    var solved = Object.keys(TQ).filter(function (k) { return TQ[k] > 0; }).length, sceneDone = CASES.every(function (c) { return TQ[c.id] > 0; });
+    var extra = solved >= 30 ? "All 30 cases closed. Toxicology December complete! &#127942;" : sceneDone ? SCENE_NAME + " cleared: all 3 cases closed." : solved + " of 30 cases closed this December.";
+    var o = document.createElement("div"); o.className = "cel"; o.setAttribute("role", "status");
+    o.innerHTML = '<div class="cf-wrap" aria-hidden="true">' + h + '</div><div class="cel-stamp">Case closed</div><svg class="cel-m" viewBox="0 0 120 120" aria-hidden="true">' + V[C.id][1] + '</svg><div class="cel-s">' + "★".repeat(stars) + "☆".repeat(3 - stars) + '</div><p class="cel-t">' + C.who + " is on the mend, thanks to you and " + C.solver + ". " + extra + '</p><span class="cel-tap">Tap to read the plan</span>';
+    o.addEventListener("click", function () { o.remove(); });
+    host.appendChild(o); setTimeout(function () { if (o.parentNode) o.remove(); }, 6000);
+  }
+  P.forEach(function (p) { p[5] = Math.min(730, Math.max(58, p[5])); p[6] = Math.min(450, Math.max(132, p[6])); });
+  P.forEach(function (p) {
+    var g = document.createElementNS(NS, "g"); g.setAttribute("class", "tagbtn"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "Evidence " + p[0] + ": " + p[1]);
+    g.innerHTML = '<rect x="' + (p[5] - 13) + '" y="' + (p[6] - 13) + '" width="26" height="26" rx="4" fill="#F5C518" stroke="#1A1F1B" stroke-width="1.5"/><text x="' + p[5] + '" y="' + (p[6] + 5) + '" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#1A1F1B">' + p[0] + "</text>";
+    g.addEventListener("click", function () { select(p[0]); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p[0]); } });
+    $("tags").appendChild(g);
+  });
+  $("suspects").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) select(+b.getAttribute("data-n")); });
+  function drawCases() { $("cases").innerHTML = CASES.map(function (c, i) { var s = TQ[c.id]; return '<button type="button" data-i="' + i + '"' + (isOpen(i) ? "" : " disabled") + ">" + c.label + (isOpen(i) ? (s > 0 ? '<span class="st">' + "★".repeat(s) + "</span>" : s === 0 ? '<span class="st">✓</span>' : "") : " · opens " + dayOf(i) + " Dec") + "</button>"; }).join(""); }
+  drawCases();
+  $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
+  function load(i) {
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each suspect, reveal clues one at a time, and accuse the culprit. Fewer clues, more stars.";
+    $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
+    $("victim").innerHTML = V[C.id][0];
+    CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
+    $("suspects").innerHTML = P.map(function (p) { return '<button type="button" data-n="' + p[0] + '"><span class="n">' + p[0] + "</span>" + p[1] + "</button>"; }).join("");
+    $("dossier").innerHTML = "Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.";
+    $("accuse").disabled = true; $("accuse").textContent = "Accuse";
+    renderClues();
+  }
+  function select(n) {
+    var p = P[n - 1]; pick = n;
+    $("dossier").innerHTML = "<b>Evidence " + p[0] + ": " + p[1] + '</b> <span class="sci">' + p[2] + "</span><br><b>Toxin:</b> " + p[3] + "<br>" + p[4];
+    Array.prototype.forEach.call($("suspects").children, function (b) { b.style.outline = +b.getAttribute("data-n") === n ? "2px solid #F5C518" : ""; });
+    $("accuse").disabled = done || !!out[n]; $("accuse").textContent = "Accuse the " + p[1].toLowerCase();
+  }
+  function renderClues() {
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (c) { return '<li><span class="k">' + c[0] + "</span><p>" + c[1] + "</p></li>"; }).join("");
+    $("left").textContent = shown < C.clues.length ? (C.clues.length - shown) + " clues left" : "All clues revealed";
+    $("more").disabled = done || shown >= C.clues.length;
+  }
+  function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
+  function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
+  $("accuse").onclick = function () {
+    if (!pick || done) return;
+    var name = P[C.ans - 1][1];
+    if (pick === C.ans) {
+      done = true; var stars = Math.max(1, (shown <= 2 ? 3 : shown <= 4 ? 2 : 1) - (lives < 3 ? 1 : 0));
+      $("verdict").innerHTML = '<div class="verdict yes"><div class="stars">' + "★".repeat(stars) + "☆".repeat(3 - stars) + "</div><b>" + name + ". You and " + C.solver + " cracked it on clue " + shown + ".</b> " + C.win + "</div>" + planHtml();
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+      shown = C.clues.length; renderClues(); $("accuse").disabled = true; recover(); if (!(TQ[C.id] >= stars)) TQ[C.id] = stars; tqSave(); var keep = C; drawCases(); Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", CASES[k] === keep ? "true" : "false"); }); celebrate(stars);
+    } else {
+      lives--; out[pick] = 1; $("lives").textContent = "●".repeat(lives) + "○".repeat(3 - lives);
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === pick) b.classList.add("out"); });
+      var why = C.why[pick] || "Not this time.";
+      if (!lives) { done = true; why += " Out of accusations. Luckily " + C.solver + " worked it out: " + name.toLowerCase() + "."; shown = C.clues.length; renderClues(); }
+      $("verdict").innerHTML = '<div class="verdict no"><b>Not that one.</b> ' + why + "</div>" + (lives ? "" : planHtml());
+      if (!lives) { recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); } }
+      $("accuse").disabled = true;
+    }
+  };
+  (function () { var pan = $("pan"), hint = $("swipe"); if (pan.scrollWidth > pan.clientWidth) pan.scrollLeft = (pan.scrollWidth - pan.clientWidth) * 0.5;
+    setTimeout(function () { pan.addEventListener("scroll", function () { if (hint) hint.style.opacity = 0; }, { passive: true }); }, 400); setTimeout(function () { if (hint) hint.style.opacity = 0; }, 5000); })();
+  (function () { var q = +((location.search.match(/[?&]c=(\d)/) || [])[1] || 0) - 1, open = CASES.map(function (c, i) { return isOpen(i) ? i : -1; }).filter(function (i) { return i > -1; });
+    if (!open.length) { $("note").innerHTML = '<span class="lockmsg">&#128274; This scene opens on ' + dayOf(0) + " December. One new case every day of Toxicology December.</span>"; document.querySelector(".grid").hidden = true; return; }
+    load(open.indexOf(q) > -1 ? q : open[open.length - 1]); })();
+})();
+</script>
+
+</body></html>

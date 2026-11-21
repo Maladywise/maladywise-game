@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>*{box-sizing:border-box}[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}
+.cel{position:fixed;inset:0;display:grid;place-items:center;align-content:center;gap:6px;background:rgba(6,12,9,.93);backdrop-filter:blur(3px);z-index:50;cursor:pointer;animation:celin .3s ease-out}
+.cel .cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cel .cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.95}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+.cel-stamp{font:400 clamp(26px,7vw,48px)/1 var(--display);color:#F5C518;border:4px solid #F5C518;border-radius:10px;padding:6px 16px;transform:rotate(-6deg);animation:stamp .45s cubic-bezier(.2,1.6,.4,1) both;letter-spacing:.04em;text-transform:uppercase}
+.cel .cel-m{width:130px;height:130px;animation:hop .9s ease-in-out .3s 3}
+.cel-s{font-size:clamp(24px,6vw,34px);letter-spacing:6px;color:#F5C518}
+.cel-t{margin:0;font:600 15px var(--body);color:#fff;text-align:center;max-width:30em;padding:0 16px}
+.cel-tap{font:500 11px var(--mono);color:#C9D8CE;letter-spacing:.1em;text-transform:uppercase}
+@keyframes stamp{from{transform:scale(2.4) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-4deg)}}
+@keyframes celin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
+.cases button[disabled]{opacity:.5;cursor:not-allowed}
+.cases button .st{color:var(--tag);margin-left:4px}
+.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
+</style>
+<title>Toxiquest: Off Track</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one crime-scene garden at dusk on top, the case file underneath; evidence tags in the garden open plant dossiers. Single dusk look by choice. */
+:root{
+  --night:#13241C; --moss:#1F3A2C; --leaf:#2F5A3F; --mist:#D8E6D9;
+  --paper:#F2F0E6; --ink:#1A1F1B; --tag:#F5C518; --tox:#B23A48; --ok:#2E8B57;
+  --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--night);color:var(--mist)}
+body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
+.lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
+.lives b{color:var(--tox);letter-spacing:3px}
+.scene{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #2C4A38}
+.scene svg{display:block;width:100%;height:auto}
+.tagbtn{cursor:pointer}
+.tagbtn:focus-visible rect{stroke:#fff;stroke-width:3}
+.tagbtn:hover rect{fill:#FFE15A}
+.tape{position:absolute;left:-8%;right:-8%;top:16px;transform:rotate(-2.5deg);background:var(--tag);color:var(--ink);font:500 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:5px 0;pointer-events:none;opacity:.92}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.file{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:grid;gap:12px;min-width:0;position:relative}
+.file h2{font:400 22px var(--display);margin:0}
+.label{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5B6B5F;margin:0}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.clues li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #DCD8C8;animation:in .35s ease-out}
+.clues li .k{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--leaf);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.clues li p{margin:0;font-size:15px}
+@keyframes in{from{opacity:.3;transform:translateY(4px)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.main{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--leaf);color:#fff;cursor:pointer}
+button.main:hover{background:#3A6E4C}
+button.main:focus-visible,button.ghost:focus-visible,.suspects button:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+button.ghost{font:600 14px var(--body);border:2px solid var(--leaf);border-radius:999px;padding:10px 16px;background:transparent;color:var(--leaf);cursor:pointer}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.side{background:var(--moss);border:1px solid #2C4A38;border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.side h2{font:400 20px var(--display);margin:0;color:#fff}
+.suspects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.suspects button{display:flex;gap:8px;align-items:center;text-align:left;font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}
+.suspects button .n{font:500 11px var(--mono);background:var(--tag);color:var(--ink);border-radius:4px;padding:2px 5px}
+.suspects button.out{opacity:.4;text-decoration:line-through}
+.suspects button.win{border-color:var(--ok);background:#1E4A30}
+.dossier{background:#0F1C16;border:1px dashed #3B5E48;border-radius:12px;padding:12px 14px;font-size:14px;min-height:72px}
+.dossier b{color:#fff}
+.dossier .sci{font-style:italic;color:#9FB8A6}
+.verdict{border-radius:12px;padding:12px 14px;font-size:15px}
+.verdict.no{background:#F6DADD;color:#6B1A24}
+.verdict.yes{background:#DDF1E4;color:#14522F}
+.stars{font-size:26px;letter-spacing:4px}
+.foot{font-size:12px;color:#7F9A88;text-align:center}
+@media (prefers-reduced-motion:reduce){.clues li{animation:none}.sway{animation:none!important}}
+.pan{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pan::-webkit-scrollbar{display:none}
+.pan svg{width:100%;min-width:100%}
+.swipe{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;background:rgba(10,20,14,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .6s}
+@media (max-width:640px){.tagbtn{transform-box:fill-box;transform-origin:50% 50%;transform:scale(1.5)}.scene{border-radius:12px}}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:500 12px var(--mono)}.scenes a{color:var(--mist);text-decoration:none;border:1px solid #3B5E48;border-radius:999px;padding:6px 12px}.scenes a[aria-current]{background:#F2F0E6;color:#1A1F1B;border-color:#F2F0E6}.scenes span{color:#7F9A88}
+.cases{display:flex;gap:8px;flex-wrap:wrap}.cases button{font:600 14px var(--body);border-radius:999px;padding:9px 16px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}.cases button[aria-pressed=true]{background:var(--tag);color:var(--ink);border-color:var(--tag)}.cases button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.recov{border-radius:12px;padding:12px 14px;font-size:15px;background:#E3EEF9;color:#173A5E;margin-top:10px}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.ff{animation:ff 3s ease-in-out infinite}@keyframes ff{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none}}
+</style></head><body>
+
+<div class="wrap">
+  <nav class="scenes" aria-label="Scenes"><a class="tqcal" href="./">&#128197; December calendar</a><a href="herb-patch.html">1 · The Herb Patch</a><a href="low-tide.html">2 · Low Tide</a><a href="whiteout.html">3 · Whiteout</a><a href="off-track.html" aria-current="page">4 · Off Track</a><a href="dinner-party.html">5 · Dinner Party</a><a href="medicine-cabinet.html">6 · Medicine Cabinet</a><a href="the-shed.html">7 · The Shed</a><a href="dry-heat.html">8 · Dry Heat</a><a href="canopy.html">9 · Canopy</a><a href="midnight-ward.html">10 · Midnight Ward</a></nav>
+  <div class="top">
+    <div>
+      <p class="kick">Toxiquest · Scene 4 of 10: the bush · 3 cases</p>
+      <h1>Off Track</h1>
+    </div>
+    <p class="lives" aria-live="polite">Accusations left <b id="lives">●●●</b></p>
+  </div>
+  <div class="cases" id="cases" role="group" aria-label="Choose a case"></div>
+  <p class="note" id="note"></p>
+
+  <div class="scene">
+    <div class="pan" id="pan"><svg viewBox="30 112 760 358" preserveAspectRatio="xMidYMid slice" role="img" aria-label="An Australian bush campsite at sunset among gum trees: a tent with walking boots outside, a fire pit, long dry grass, a stinging tree with heart-shaped leaves, an ant nest, a log, a creek with reeds and a banded snake, a water bottle and a fire danger sign. One of the walkers lies asleep and unwell in the middle.">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D2350"/><stop offset=".38" stop-color="#4B3F78"/><stop offset=".7" stop-color="#B0627A"/><stop offset="1" stop-color="#F0A86C"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#355E3E"/><stop offset=".5" stop-color="#22432D"/><stop offset="1" stop-color="#11241A"/></linearGradient>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#5C4C70"/></linearGradient>
+        <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324A"/><stop offset="1" stop-color="#1E3330"/></linearGradient>
+        <linearGradient id="trunk" x1="0" x2="1"><stop offset="0" stop-color="#3B2C20"/><stop offset=".5" stop-color="#6B5440"/><stop offset="1" stop-color="#2E2219"/></linearGradient>
+        <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D493E0"/><stop offset="1" stop-color="#7E3B95"/></linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6B8"/><stop offset="1" stop-color="#A9BB7C"/></linearGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FA35E"/><stop offset="1" stop-color="#2F5A36"/></linearGradient>
+        <linearGradient id="castor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0454C"/><stop offset="1" stop-color="#5E1C24"/></linearGradient>
+        <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3E2A"/><stop offset="1" stop-color="#2E1F15"/></linearGradient>
+        <radialGradient id="moonglow"><stop offset="0" stop-color="#FFF6DC" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DC" stop-opacity="0"/></radialGradient>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".18"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+        <radialGradient id="berry" cx=".35" cy=".35"><stop offset="0" stop-color="#5A5A6A"/><stop offset=".35" stop-color="#151518"/><stop offset="1" stop-color="#050506"/></radialGradient>
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8E8" stop-opacity="0"/><stop offset=".5" stop-color="#C9D8E8" stop-opacity=".16"/><stop offset="1" stop-color="#C9D8E8" stop-opacity="0"/></linearGradient>
+        <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer><feBlend in2="SourceGraphic" mode="multiply"/></filter>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="scene"></g>
+      <!-- The walker, asleep and unwell, and the spilled teacup -->
+      <ellipse cx="410" cy="392" rx="120" ry="52" fill="url(#lamp)"/>
+      <g id="victim" transform="translate(345 318) rotate(-14 60 60) scale(1.2)"></g>
+      
+      <g id="fx"></g>
+      <rect width="800" height="470" fill="url(#vig)" opacity=".45" pointer-events="none"/>
+      <rect width="800" height="470" filter="url(#grain)" fill="#888" opacity=".2" pointer-events="none" style="mix-blend-mode:multiply"/>
+      <g id="tags"></g>
+    </svg></div>
+    
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg", sc = document.getElementById("scene"), fx = document.getElementById("fx");
+  var seed = 41; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function R(a, b) { return a + (b - a) * r(); }
+  function el(p, tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+  function g(p, a) { return el(p, "g", a || {}); }
+  document.querySelector("svg defs").insertAdjacentHTML("beforeend",
+    '<linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2A5C"/><stop offset=".45" stop-color="#C2566A"/><stop offset=".8" stop-color="#F29A4A"/><stop offset="1" stop-color="#FFD27A"/></linearGradient>' +
+    '<linearGradient id="ridge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5C4A78"/><stop offset="1" stop-color="#7A5A70"/></linearGradient>' +
+    '<linearGradient id="bground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A6A3E"/><stop offset=".5" stop-color="#5E4A2C"/><stop offset="1" stop-color="#2E2418"/></linearGradient>' +
+    '<linearGradient id="creek" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4E7C8C"/><stop offset=".5" stop-color="#7FB0BC"/><stop offset="1" stop-color="#3E6878"/></linearGradient>' +
+    '<linearGradient id="gum" x1="0" x2="1"><stop offset="0" stop-color="#D8CFC2"/><stop offset=".5" stop-color="#F2ECE2"/><stop offset="1" stop-color="#BFB2A0"/></linearGradient>' +
+    '<radialGradient id="sun"><stop offset="0" stop-color="#FFF1C2"/><stop offset=".3" stop-color="#FFD27A" stop-opacity=".8"/><stop offset="1" stop-color="#FF9A4A" stop-opacity="0"/></radialGradient>');
+  el(sc, "rect", { width: 800, height: 470, fill: "url(#bsky)" });
+  el(sc, "circle", { cx: 640, cy: 200, r: 90, fill: "url(#sun)" }); el(sc, "circle", { cx: 640, cy: 200, r: 18, fill: "#FFF1C2" });
+  // blue haze ridges (eucalyptus oil haze)
+  el(sc, "path", { d: "M0 220 Q80 186 160 204 Q260 176 360 200 Q460 180 560 206 Q680 184 800 202 L800 260 L0 260z", fill: "url(#ridge)", opacity: .85 });
+  el(sc, "path", { d: "M0 240 Q120 214 240 232 Q360 212 480 236 Q620 218 800 234 L800 280 L0 280z", fill: "#4A3A5C", opacity: .9 });
+  // distant canopy bumps
+  for (var i = 0; i < 40; i++) el(sc, "circle", { cx: R(0, 800), cy: R(238, 256), r: R(8, 18), fill: "#3A3A4C", opacity: .8 });
+  // ground
+  el(sc, "path", { d: "M0 262 Q200 250 400 260 Q600 270 800 256 L800 470 L0 470z", fill: "url(#bground)" });
+  // leaf litter and sticks
+  for (var i = 0; i < 90; i++) { var x = R(0, 800), y = R(270, 470); el(sc, "ellipse", { cx: x, cy: y, rx: R(2, 5), ry: R(1, 2), fill: ["#A8763C", "#7A5A30", "#C8A060", "#6E4E2A"][i % 4], transform: "rotate(" + R(0, 180) + " " + x + " " + y + ")", opacity: .8 }); }
+  for (var i = 0; i < 16; i++) { var x = R(0, 800), y = R(280, 470); el(sc, "path", { d: "M" + x + " " + y + " l" + R(10, 26) + " " + R(-4, 4), stroke: "#4A3420", "stroke-width": 1.5 }); }
+  // sandstone boulders
+  [[30, 300, 50, 26], [440, 300, 34, 16], [770, 320, 46, 24]].forEach(function (b) {
+    el(sc, "ellipse", { cx: b[0], cy: b[1], rx: b[2], ry: b[3], fill: "#C89A62" });
+    el(sc, "path", { d: "M" + (b[0] - b[2] * .8) + " " + (b[1] - 4) + " q" + b[2] * .8 + " -6 " + b[2] * 1.6 + " 0", stroke: "#A87A48", "stroke-width": 2, fill: "none" }); });
+  // gum trees with ghostly trunks
+  function gum(x, h, s) {
+    var t = g(sc, {}); el(t, "path", { d: "M" + (x - 6 * s) + " 300 Q" + (x - 3 * s) + " " + (300 - h * .5) + " " + (x - 2 * s) + " " + (300 - h) + " L" + (x + 2 * s) + " " + (300 - h) + " Q" + (x + 4 * s) + " " + (300 - h * .5) + " " + (x + 7 * s) + " 300z", fill: "url(#gum)" });
+    el(t, "path", { d: "M" + x + " " + (300 - h * .7) + " q" + 16 * s + " -18 " + 30 * s + " -22 M" + x + " " + (300 - h * .8) + " q" + (-14 * s) + " -14 " + (-26 * s) + " -16", stroke: "#E6DED0", "stroke-width": 2.5 * s, fill: "none" });
+    for (var i = 0; i < 26; i++) el(t, "circle", { cx: x + R(-40, 40) * s, cy: 300 - h - R(-6, 30) * s, r: R(8, 15) * s, fill: ["#5E7A5A", "#6E8A62", "#4E6A4E"][i % 3], opacity: .92, "class": i % 5 ? "" : "sway" });
+    for (var i = 0; i < 4; i++) el(t, "path", { d: "M" + (x + R(-5, 3) * s) + " " + (300 - R(10, h * .9)) + " l" + R(2, 5) + " " + R(10, 20), stroke: "#9A8A78", "stroke-width": 1.4 });
+  }
+  gum(120, 150, 1); gum(400, 170, 1.1); gum(700, 140, .95); gum(260, 110, .7);
+  // creek across the bottom right
+  el(sc, "path", { d: "M520 470 Q560 420 610 404 Q680 384 800 378 L800 412 Q700 418 650 432 Q600 450 584 470z", fill: "url(#creek)" });
+  for (var i = 0; i < 8; i++) { var x = R(600, 790); el(fx, "path", { d: "M" + x + " " + R(392, 420) + " q8 -2 16 0", stroke: "#DFF2F6", "stroke-width": 1.2, fill: "none", "class": "ff" }); }
+  // reeds by the creek
+  for (var i = 0; i < 26; i++) { var x = R(560, 660), y = R(380, 410); el(sc, "path", { d: "M" + x + " " + y + " q" + R(-6, 6) + " -20 " + R(-4, 8) + " -" + R(26, 44), stroke: ["#6E8A3A", "#8AA04A", "#556E2E"][i % 3], "stroke-width": 2, fill: "none", "class": i % 4 ? "" : "sway" }); }
+  // tiger snake sliding into the reeds
+  var sn = g(sc, { transform: "translate(604 404)" });
+  el(sn, "path", { d: "M-40 6 Q-26 -6 -12 4 Q2 14 16 2 Q24 -4 30 -2", stroke: "#3A2E1A", "stroke-width": 7, fill: "none", "stroke-linecap": "round" });
+  el(sn, "path", { d: "M-40 6 Q-26 -6 -12 4 Q2 14 16 2 Q24 -4 30 -2", stroke: "#D8B84A", "stroke-width": 7, fill: "none", "stroke-dasharray": "3 5", "stroke-linecap": "butt" });
+  el(sn, "ellipse", { cx: 32, cy: -2, rx: 6, ry: 4, fill: "#3A2E1A" });
+  // tent and campsite
+  var te = g(sc, {});
+  el(te, "path", { d: "M110 316 L175 246 L240 316z", fill: "#2E8B7A" }); el(te, "path", { d: "M175 246 L240 316 L212 316z", fill: "#1F6E60" });
+  el(te, "path", { d: "M162 316 L175 280 L188 316z", fill: "#123E36" });
+  el(te, "line", { x1: 110, y1: 316, x2: 96, y2: 324, stroke: "#6E5A40" }); el(te, "line", { x1: 240, y1: 316, x2: 254, y2: 324, stroke: "#6E5A40" });
+  // walking boots outside the tent (funnel-web)
+  var bt = g(sc, { transform: "translate(262 320)" });
+  [[-9, 0], [9, 2]].forEach(function (b) { el(bt, "path", { d: "M" + (b[0] - 6) + " " + (b[1] - 14) + " h10 v10 h6 q3 0 3 4 v2 h-19z", fill: "#6B4A2A", stroke: "#3A2A18", "stroke-width": 1 }); el(bt, "path", { d: "M" + (b[0] - 6) + " " + (b[1] + 2) + " h19", stroke: "#2A1E12", "stroke-width": 2 }); });
+  el(bt, "circle", { cx: -10, cy: -14, r: 2.4, fill: "#111" }); el(bt, "path", { d: "M-13 -16 l-3 -3 M-7 -16 l3 -3", stroke: "#111", "stroke-width": 1 });
+  // camp chair and firepit
+  var fp = g(sc, { transform: "translate(200 360)" }); el(fp, "ellipse", { rx: 22, ry: 8, fill: "#3A2E22" });
+  [[-18, -2], [-8, -7], [6, -7], [17, -2], [12, 5], [-12, 5]].forEach(function (s) { el(fp, "ellipse", { cx: s[0], cy: s[1], rx: 5, ry: 3.5, fill: "#7A6A5A" }); });
+  el(fp, "path", { d: "M-6 -2 l12 -4 M-6 -6 l12 4", stroke: "#3A2A18", "stroke-width": 3 });
+  // long grass on the left (ticks)
+  for (var i = 0; i < 60; i++) { var x = R(10, 170), y = R(350, 420); el(sc, "path", { d: "M" + x + " " + y + " q" + R(-5, 5) + " -14 " + R(-6, 6) + " -" + R(18, 34), stroke: ["#B8A45A", "#9A8A44", "#C8B46A", "#7A7038"][i % 4], "stroke-width": 1.6, fill: "none", "class": i % 6 ? "" : "sway" }); }
+  // stinging tree with big heart-shaped leaves
+  var st = g(sc, { transform: "translate(474 262)" });
+  el(st, "path", { d: "M0 38 v-40", stroke: "#6E5A40", "stroke-width": 5 });
+  [[-18, -8, -20], [16, -12, 24], [-4, -30, 0], [20, -34, 30], [-22, -30, -30]].forEach(function (l) {
+    el(st, "path", { d: "M0 0 C-14 -10 -14 -26 0 -18 C14 -26 14 -10 0 0z", fill: "#4E8A3A", stroke: "#2E5A22", "stroke-width": 1, transform: "translate(" + l[0] + " " + l[1] + ") rotate(" + l[2] + ") scale(1.3)" }); });
+  el(st, "path", { d: "M-30 -48 h60", stroke: "none" });
+  // jack jumper nest (gravel mound)
+  var an = g(sc, { transform: "translate(362 392)" }); el(an, "ellipse", { rx: 22, ry: 8, fill: "#A88A5A" }); el(an, "circle", { r: 3, fill: "#3A2A18" });
+  for (var i = 0; i < 6; i++) { var x = R(-22, 22), y = R(-8, 8); el(an, "path", { d: "M" + x + " " + y + " l4 0", stroke: "#111", "stroke-width": 2.2, "stroke-linecap": "round" }); }
+  // log with a redback underneath
+  var lg = g(sc, { transform: "translate(312 444)" }); el(lg, "rect", { x: -44, y: -9, width: 88, height: 18, rx: 9, fill: "#6E5236" }); el(lg, "ellipse", { cx: 44, cy: 0, rx: 5, ry: 9, fill: "#A88358" }); el(lg, "ellipse", { cx: 44, cy: 0, rx: 2.5, ry: 5, fill: "none", stroke: "#6E5236" });
+  el(lg, "circle", { cx: -20, cy: 10, r: 3.6, fill: "#111" }); el(lg, "path", { d: "M-21 9 h2.5", stroke: "#E03A2A", "stroke-width": 1.6 });
+  el(lg, "path", { d: "M-34 9 l14 1 M-24 12 l10 -2 M-30 13 l20 -5", stroke: "#DDD", "stroke-width": .4, opacity: .7 });
+  // water bottle filled at the creek
+  var wb = g(sc, { transform: "translate(724 372)" }); el(wb, "rect", { x: -7, y: -18, width: 14, height: 26, rx: 4, fill: "#4FA3D9" }); el(wb, "rect", { x: -4, y: -23, width: 8, height: 6, rx: 1, fill: "#2B2340" }); el(wb, "rect", { x: -7, y: -8, width: 14, height: 5, fill: "#BFE6F5" });
+  // fire danger sign (heat)
+  var fs = g(sc, { transform: "translate(560 316)" }); el(fs, "path", { d: "M0 24 v-40", stroke: "#5A4A3A", "stroke-width": 3 });
+  el(fs, "path", { d: "M-22 -16 A22 22 0 0 1 22 -16z", fill: "#F2E9C9", stroke: "#3A2E22" });
+  [["#3FAE5A", -180], ["#F2C230", -144], ["#F28C28", -108], ["#D93A2A", -72], ["#7A1A1A", -36]].forEach(function (c) {
+    var a1 = c[1] * Math.PI / 180, a2 = (c[1] + 36) * Math.PI / 180;
+    el(fs, "path", { d: "M0 -16 L" + (20 * Math.cos(a1)).toFixed(1) + " " + (-16 + 20 * Math.sin(a1)).toFixed(1) + " A20 20 0 0 1 " + (20 * Math.cos(a2)).toFixed(1) + " " + (-16 + 20 * Math.sin(a2)).toFixed(1) + "z", fill: c[0] }); });
+  el(fs, "path", { d: "M0 -16 L14 -28", stroke: "#111", "stroke-width": 2 });
+  // walking track
+  for (var i = 0; i < 12; i++) el(sc, "ellipse", { cx: 280 + i * 22, cy: 300 + Math.sin(i / 2) * 8, rx: 6, ry: 2, fill: "#A8865A", opacity: .6 });
+  // heat shimmer and floating dust
+  for (var i = 0; i < 30; i++) { var c = el(fx, "circle", { cx: R(30, 790), cy: R(200, 440), r: R(.6, 1.6), fill: "#FFE6A8", "class": "ff" }); c.style.animationDelay = R(0, 4).toFixed(2) + "s"; c.style.animationDuration = R(2, 5).toFixed(2) + "s"; }
+})();
+</script>
+  </div>
+
+  <div class="grid">
+    <section class="file" aria-labelledby="cf">
+      <p class="label" id="cfile"></p>
+      <h2 id="cf">Clues</h2>
+      <ol class="clues" id="clues"></ol>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div id="verdict"></div>
+    </section>
+    <section class="side" aria-labelledby="acc">
+      <h2 id="acc">Accuse a culprit</h2>
+      <div class="dossier" id="dossier">Tap a yellow evidence tag in the camp, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.</div>
+      <div class="suspects" id="suspects"></div>
+      <button class="main" type="button" id="accuse" disabled>Accuse</button>
+    </section>
+  </div>
+  <p class="foot">Fictional cases. In the bush, carry a pressure bandage and know your location for 000.</p>
+</div>
+
+<script>
+(function () {
+  var V = {"jett": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><circle cx=\"44\" cy=\"90\" r=\"18\" fill=\"none\" stroke=\"#4A3480\" stroke-width=\"5\"/><circle cx=\"44\" cy=\"90\" r=\"3\" fill=\"#4A3480\"/><path d=\"M44 72v18M26 90h36\" stroke=\"#4A3480\" stroke-width=\"1.5\"/><circle cx=\"84\" cy=\"104\" r=\"5\" fill=\"none\" stroke=\"#4A3480\" stroke-width=\"3\"/><path d=\"M40 72h40l6 30\" stroke=\"#4A3480\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M36 54v20\" stroke=\"#4A3480\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M84 92q24 4 26-12\" stroke=\"#C99560\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"62\" cy=\"64\" rx=\"20\" ry=\"22\" fill=\"#D4A06A\"/><ellipse cx=\"62\" cy=\"70\" rx=\"12\" ry=\"14\" fill=\"#F1D7B3\"/><path d=\"M60 78h24v8H60z\" fill=\"#D4A06A\"/><circle cx=\"62\" cy=\"34\" r=\"17\" fill=\"#D4A06A\"/><path d=\"M50 22l-4-18 12 12zM74 22l4-18-12 12z\" fill=\"#C08A55\"/><path d=\"M50 20l-2-10 6 6zM74 20l2-10-6 6z\" fill=\"#F4B4C8\"/><path d=\"M53.1 29.1 L58.2 32.0 L53.1 34.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M72.9 29.1 L67.8 32.0 L72.9 34.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"63\" cy=\"40\" rx=\"3\" ry=\"2.2\" fill=\"#2B2340\"/><path d=\"M60 44q3 2.4000000000000004 6 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"51\" cy=\"40\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"75\" cy=\"40\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><circle cx=\"94\" cy=\"50\" r=\"11\" fill=\"#F28C28\"/><path d=\"M83 50h22M94 39v22M86 42q8 8 0 16M102 42q-8 8 0 16\" stroke=\"#8A4A12\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M78 60l10-6\" stroke=\"#D4A06A\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><circle cx=\"44\" cy=\"90\" r=\"18\" fill=\"none\" stroke=\"#4A3480\" stroke-width=\"5\"/><circle cx=\"44\" cy=\"90\" r=\"3\" fill=\"#4A3480\"/><path d=\"M44 72v18M26 90h36\" stroke=\"#4A3480\" stroke-width=\"1.5\"/><circle cx=\"84\" cy=\"104\" r=\"5\" fill=\"none\" stroke=\"#4A3480\" stroke-width=\"3\"/><path d=\"M40 72h40l6 30\" stroke=\"#4A3480\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M36 54v20\" stroke=\"#4A3480\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M84 92q24 4 26-12\" stroke=\"#C99560\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"62\" cy=\"64\" rx=\"20\" ry=\"22\" fill=\"#D4A06A\"/><ellipse cx=\"62\" cy=\"70\" rx=\"12\" ry=\"14\" fill=\"#F1D7B3\"/><path d=\"M60 78h24v8H60z\" fill=\"#D4A06A\"/><circle cx=\"62\" cy=\"34\" r=\"17\" fill=\"#D4A06A\"/><path d=\"M50 22l-4-18 12 12zM74 22l4-18-12 12z\" fill=\"#C08A55\"/><path d=\"M50 20l-2-10 6 6zM74 20l2-10-6 6z\" fill=\"#F4B4C8\"/><circle cx=\"56\" cy=\"32\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"70\" cy=\"32\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"54.7\" cy=\"30.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"68.7\" cy=\"30.5\" r=\"1.6\" fill=\"#fff\"/><ellipse cx=\"63\" cy=\"40\" rx=\"3\" ry=\"2.2\" fill=\"#2B2340\"/><path d=\"M60 44q3 2.4000000000000004 6 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"51\" cy=\"40\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"75\" cy=\"40\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><circle cx=\"94\" cy=\"50\" r=\"11\" fill=\"#F28C28\"/><path d=\"M83 50h22M94 39v22M86 42q8 8 0 16M102 42q-8 8 0 16\" stroke=\"#8A4A12\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M78 60l10-6\" stroke=\"#D4A06A\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "layla": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"60\" cy=\"84\" rx=\"26\" ry=\"22\" fill=\"#8C7158\"/><circle cx=\"60\" cy=\"52\" r=\"28\" fill=\"#8C7158\"/><path d=\"M40 78h40v22q-20 7-40 0z\" fill=\"#2A9D8F\"/><path d=\"M48 78v-6M72 78v-6\" stroke=\"#21867A\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"54\" rx=\"22\" ry=\"22\" fill=\"#D9C2A2\"/><path d=\"M42 50q8-8 14 2q-8 6-14-2zM78 50q-8-8-14 2q8 6 14-2z\" fill=\"#6B5240\"/><path d=\"M46.1 50.6 a2.9 2.9 0 0 0 5.8 0z\" fill=\"#2B2340\"/><path d=\"M45.0 50.6 h7.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M68.1 50.6 a2.9 2.9 0 0 0 5.8 0z\" fill=\"#2B2340\"/><path d=\"M67.0 50.6 h7.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"60\" cy=\"60\" rx=\"4\" ry=\"3\" fill=\"#2B2340\"/><path d=\"M56 65q4 3.2 8 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"44\" cy=\"62\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"76\" cy=\"62\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><rect x=\"74\" y=\"80\" width=\"18\" height=\"20\" rx=\"3\" fill=\"#fff\" stroke=\"#4A3480\" stroke-width=\"2\"/><path d=\"M92 85q7 1 6 7q-1 5-6 5\" stroke=\"#4A3480\" stroke-width=\"2\" fill=\"none\"/><path d=\"M80 74q2-4 0-8M86 74q2-4 0-8\" stroke=\"#B3A6D6\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M34 92q-6 6-2 12M86 92q4 4 2 10\" stroke=\"#5E4A38\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"49.0\" cy=\"59.3\" rx=\"4.7\" ry=\"2.5\" fill=\"#8FD18A\" opacity=\".55\"/><ellipse cx=\"71.0\" cy=\"59.3\" rx=\"4.7\" ry=\"2.5\" fill=\"#8FD18A\" opacity=\".55\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"60\" cy=\"84\" rx=\"26\" ry=\"22\" fill=\"#8C7158\"/><circle cx=\"60\" cy=\"52\" r=\"28\" fill=\"#8C7158\"/><path d=\"M40 78h40v22q-20 7-40 0z\" fill=\"#2A9D8F\"/><path d=\"M48 78v-6M72 78v-6\" stroke=\"#21867A\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"54\" rx=\"22\" ry=\"22\" fill=\"#D9C2A2\"/><path d=\"M42 50q8-8 14 2q-8 6-14-2zM78 50q-8-8-14 2q8 6 14-2z\" fill=\"#6B5240\"/><circle cx=\"49\" cy=\"51\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"71\" cy=\"51\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"47.7\" cy=\"49.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"69.7\" cy=\"49.5\" r=\"1.6\" fill=\"#fff\"/><ellipse cx=\"60\" cy=\"60\" rx=\"4\" ry=\"3\" fill=\"#2B2340\"/><path d=\"M56 65q4 3.2 8 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"44\" cy=\"62\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"76\" cy=\"62\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><rect x=\"74\" y=\"80\" width=\"18\" height=\"20\" rx=\"3\" fill=\"#fff\" stroke=\"#4A3480\" stroke-width=\"2\"/><path d=\"M92 85q7 1 6 7q-1 5-6 5\" stroke=\"#4A3480\" stroke-width=\"2\" fill=\"none\"/><path d=\"M80 74q2-4 0-8M86 74q2-4 0-8\" stroke=\"#B3A6D6\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M34 92q-6 6-2 12M86 92q4 4 2 10\" stroke=\"#5E4A38\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "sunny": ["<ellipse cx=\"60\" cy=\"108\" rx=\"28\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M76 96q22 2 26-14q2-6-3-6q-2 10-22 12z\" fill=\"#A87A47\"/><path d=\"M99 76q4 0 3 6\" stroke=\"#6B4A2E\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"49\" cy=\"104\" rx=\"8\" ry=\"4\" fill=\"#8C6239\"/><ellipse cx=\"71\" cy=\"104\" rx=\"8\" ry=\"4\" fill=\"#8C6239\"/><path d=\"M60 46c-16 0-22 14-22 30s4 28 22 28 22-12 22-28-6-30-22-30z\" fill=\"#C99A63\"/><path d=\"M60 56c-9 0-12 9-12 21s3 22 12 22 12-10 12-22-3-21-12-21z\" fill=\"#F0DCB6\"/><path d=\"M36 26q-6-8 0-12q5 1 6 9zM84 26q6-8 0-12q-5 1-6 9z\" fill=\"#8C6239\"/><path d=\"M38 24q-3-5 0-7q3 1 3 5zM82 24q3-5 0-7q-3 1-3 5z\" fill=\"#3A2A1C\"/><path d=\"M60 12c-16 0-26 10-26 24 0 13 11 21 26 21s26-8 26-21c0-14-10-24-26-24z\" fill=\"#C99A63\"/><path d=\"M60 34c-8 0-13 6-13 12 0 6 6 10 13 10s13-4 13-10c0-6-5-12-13-12z\" fill=\"#F0DCB6\"/><path d=\"M60 12q-4 6-2 12\" stroke=\"#A87A47\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"47\" cy=\"34\" rx=\"8\" ry=\"7\" fill=\"#6B4A2E\" transform=\"rotate(-18 47 34)\"/><ellipse cx=\"73\" cy=\"34\" rx=\"8\" ry=\"7\" fill=\"#6B4A2E\" transform=\"rotate(18 73 34)\"/><g><path d=\"M43.5 33.5 a4.0 4.0 0 0 0 8.0 0z\" fill=\"#2B2340\"/><path d=\"M42.0 33.5 h11.0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g><path d=\"M68.5 33.5 a4.0 4.0 0 0 0 8.0 0z\" fill=\"#2B2340\"/><path d=\"M67.0 33.5 h11.0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M56 42q4 3 8 0l-4 4z\" fill=\"#2B2340\"/><path d=\"M55 48q5 4 10 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"40\" cy=\"44\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".7\"/><ellipse cx=\"80\" cy=\"44\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".7\"/><g transform=\"rotate(-8 60 78)\"><rect x=\"44\" y=\"62\" width=\"32\" height=\"38\" rx=\"4\" fill=\"#4A3480\"/><rect x=\"47\" y=\"67\" width=\"26\" height=\"30\" rx=\"2\" fill=\"#FFFDF8\"/><rect x=\"54\" y=\"59\" width=\"12\" height=\"7\" rx=\"2.5\" fill=\"#B5540C\"/><path d=\"M51 74v8M54 74v8M57 74v8M60 74v8M49.5 80l12-5\" stroke=\"#2B2340\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M51 88v6M54 88v6M57 88v6\" stroke=\"#B5540C\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"67\" cy=\"78\" r=\"3\" fill=\"none\" stroke=\"#2F7D4A\" stroke-width=\"1.8\"/><path d=\"M64.5 91.5l5-5M64.5 86.5l5 5\" stroke=\"#B4472F\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></g><ellipse cx=\"44\" cy=\"74\" rx=\"5\" ry=\"6\" fill=\"#A87A47\"/><ellipse cx=\"77\" cy=\"86\" rx=\"5\" ry=\"6\" fill=\"#A87A47\"/><ellipse cx=\"47.5\" cy=\"45.5\" rx=\"6.5\" ry=\"3.5\" fill=\"#8FD18A\" opacity=\".55\"/><ellipse cx=\"72.5\" cy=\"45.5\" rx=\"6.5\" ry=\"3.5\" fill=\"#8FD18A\" opacity=\".55\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"108\" rx=\"28\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M76 96q22 2 26-14q2-6-3-6q-2 10-22 12z\" fill=\"#A87A47\"/><path d=\"M99 76q4 0 3 6\" stroke=\"#6B4A2E\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"49\" cy=\"104\" rx=\"8\" ry=\"4\" fill=\"#8C6239\"/><ellipse cx=\"71\" cy=\"104\" rx=\"8\" ry=\"4\" fill=\"#8C6239\"/><path d=\"M60 46c-16 0-22 14-22 30s4 28 22 28 22-12 22-28-6-30-22-30z\" fill=\"#C99A63\"/><path d=\"M60 56c-9 0-12 9-12 21s3 22 12 22 12-10 12-22-3-21-12-21z\" fill=\"#F0DCB6\"/><path d=\"M36 26q-6-8 0-12q5 1 6 9zM84 26q6-8 0-12q-5 1-6 9z\" fill=\"#8C6239\"/><path d=\"M38 24q-3-5 0-7q3 1 3 5zM82 24q3-5 0-7q-3 1-3 5z\" fill=\"#3A2A1C\"/><path d=\"M60 12c-16 0-26 10-26 24 0 13 11 21 26 21s26-8 26-21c0-14-10-24-26-24z\" fill=\"#C99A63\"/><path d=\"M60 34c-8 0-13 6-13 12 0 6 6 10 13 10s13-4 13-10c0-6-5-12-13-12z\" fill=\"#F0DCB6\"/><path d=\"M60 12q-4 6-2 12\" stroke=\"#A87A47\" stroke-width=\"3\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"47\" cy=\"34\" rx=\"8\" ry=\"7\" fill=\"#6B4A2E\" transform=\"rotate(-18 47 34)\"/><ellipse cx=\"73\" cy=\"34\" rx=\"8\" ry=\"7\" fill=\"#6B4A2E\" transform=\"rotate(18 73 34)\"/><g><circle cx=\"47.5\" cy=\"34\" r=\"5\" fill=\"#2B2340\"/><circle cx=\"45.8\" cy=\"32\" r=\"1.9\" fill=\"#fff\"/></g><g><circle cx=\"72.5\" cy=\"34\" r=\"5\" fill=\"#2B2340\"/><circle cx=\"70.8\" cy=\"32\" r=\"1.9\" fill=\"#fff\"/></g><path d=\"M56 42q4 3 8 0l-4 4z\" fill=\"#2B2340\"/><path d=\"M55 48q5 4 10 0\" stroke=\"#2B2340\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"40\" cy=\"44\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".7\"/><ellipse cx=\"80\" cy=\"44\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".7\"/><g transform=\"rotate(-8 60 78)\"><rect x=\"44\" y=\"62\" width=\"32\" height=\"38\" rx=\"4\" fill=\"#4A3480\"/><rect x=\"47\" y=\"67\" width=\"26\" height=\"30\" rx=\"2\" fill=\"#FFFDF8\"/><rect x=\"54\" y=\"59\" width=\"12\" height=\"7\" rx=\"2.5\" fill=\"#B5540C\"/><path d=\"M51 74v8M54 74v8M57 74v8M60 74v8M49.5 80l12-5\" stroke=\"#2B2340\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><path d=\"M51 88v6M54 88v6M57 88v6\" stroke=\"#B5540C\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"67\" cy=\"78\" r=\"3\" fill=\"none\" stroke=\"#2F7D4A\" stroke-width=\"1.8\"/><path d=\"M64.5 91.5l5-5M64.5 86.5l5 5\" stroke=\"#B4472F\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></g><ellipse cx=\"44\" cy=\"74\" rx=\"5\" ry=\"6\" fill=\"#A87A47\"/><ellipse cx=\"77\" cy=\"86\" rx=\"5\" ry=\"6\" fill=\"#A87A47\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"]};
+  var P = [ // [tag no., name, latin/source, toxin, what it does, tag x, tag y]
+    [1, "Paralysis tick", "Ixodes holocyclus", "Holocyclotoxin", "Climbs on from long grass and hides in the hairline or behind an ear. After several days: unsteady walking, then weakness spreading up the body.", 95, 326],
+    [2, "Creek water", "Untreated stream water", "Giardia (a gut parasite)", "1 to 2 weeks after drinking: bloating, sulphur burps, greasy diarrhoea. Treated with tinidazole.", 725, 318],
+    [3, "Stinging tree", "Dendrocnide moroides (gympie-gympie)", "Gympietide (a pain toxin) in tiny hollow hairs", "Brushing a heart-shaped leaf leaves glass-like hairs in the skin. Excruciating pain that can flare for weeks or months. Painful, but not deadly.", 485, 145],
+    [4, "Funnel-web spider", "Atrax robustus (Sydney funnel-web)", "Delta-hexatoxin", "Hides in boots and shoes left outside. Bite is very painful. Within 30 minutes: tingling lips, twitching tongue and muscles, sweating, drooling, racing heart. Antivenom works.", 268, 280],
+    [5, "Tiger snake", "Notechis scutatus", "Venom: clotting, nerve and muscle toxins", "Lives near creeks and swamps. Bite may be painless. Early collapse, then blood that won’t clot, droopy eyelids and muscle breakdown.", 602, 378],
+    [6, "Jack jumper ant", "Myrmecia pilosula", "Ant venom", "Black ants that jump. Painful sting with a local lump. The real danger is anaphylaxis in allergic people.", 338, 360],
+    [7, "The heat", "38°C afternoon walk", "Heat", "Heat exhaustion: headache, nausea, cramps. Heat stroke: temperature over 40°C with confusion. Cool fast.", 560, 242],
+    [8, "Redback spider", "Latrodectus hasselti", "Alpha-latrotoxin", "Hides under logs, seats and outdoor furniture. Pain spreads from the bite over hours, with local sweating. Rarely dangerous.", 262, 410]
+  ];
+  var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day. In an emergency, call 000.";
+  var CASES = [
+    { id: "jett", solver: "the ED team", team: "&#128657; ED’s plan", who: "Jett", label: "Case 1 · Jett", file: "Case file 010 · Jett, kangaroo, early riser", ans: 4,
+      note: "Jett the kangaroo was found at the campsite at dawn.",
+      clues: [["Symptoms", "A sudden, very painful bite on the foot. 20 minutes later: tingling lips and a twitching tongue."],
+        ["Exam", "Pouring with sweat, drooling and teary. Muscles twitching all over. Pulse 130, BP 190/110."],
+        ["Course", "Getting short of breath, with crackles in both lungs: fluid on the lungs."],
+        ["Bite site", "Two clear puncture marks, a few millimetres apart."],
+        ["Place", "Bushland just north of Sydney."],
+        ["Evidence", "The bite happened the moment she put on her boots, left outside the tent overnight."]],
+      win: "The Sydney funnel-web’s venom holds nerve channels open, causing a storm of adrenaline and nerve signals: sweating, drooling, twitching, high blood pressure and fluid on the lungs.<br><br><b>Pearl:</b> no one has died from a funnel-web bite since the antivenom arrived in 1981. Oddly, cats and dogs barely react to the venom, but primates (including us) are very sensitive.",
+      plan: "<b>First aid:</b> pressure immobilisation bandage over the bite and up the limb, splint it and keep her still.<br><b>Antivenom:</b> funnel-web antivenom, 2 vials IV (4 if severe), repeated every 15 to 30 minutes until symptoms settle. Same dose for children.<br><b>Also:</b> oxygen and close monitoring of breathing and blood pressure.",
+      recov: "Four vials and a night in hospital. Back on the trail two days later.",
+      tip: "Shake out boots, shoes and clothes left outside. For any big black spider bite in NSW or south-east Queensland, use a pressure bandage and call 000.",
+      why: { 1: "Ticks cause weakness over days, not sweating and twitching within 20 minutes.", 5: "Snake bites can be painless, and don’t cause drooling and twitching. The spider in the boot is the clue.", 3: "Stinging tree causes severe skin pain, but not sweating, drooling or fluid on the lungs.", 6: "Jack jumpers cause a painful sting and sometimes anaphylaxis, not muscle twitching and drooling.", 8: "Close! Redbacks also cause sweating, but slowly, around the bite. Whole-body sweating, twitching and fluid on the lungs within minutes is a funnel-web.", 2: "Creek water causes gut trouble 1 to 2 weeks later.", 7: "Heat doesn’t leave two fang marks on your foot." } },
+    { id: "layla", solver: "the ED and neurology team", team: "&#129504; ED and neurology’s plan", who: "Layla", label: "Case 2 · Layla", file: "Case file 011 · Layla, sloth, takes the scenic route", ans: 1,
+      note: "Layla the sloth was found lying beside the track, unable to stand.",
+      clues: [["Symptoms", "Wobbly walking yesterday. Today her legs are weak, and the weakness is creeping into her arms."],
+        ["Exam", "Absent reflexes in the legs. Unsteady reaching. Wide pupils and a slight facial droop. No fever."],
+        ["Tests", "Bloods and brain scan normal. No recent gastro. Breathing tests OK for now."],
+        ["History", "Four days ago she bushwalked on the NSW coast, taking shortcuts through scrub and long grass."],
+        ["Course", "A nurse finds and removes something while washing her hair. She still gets a little weaker over the next day."],
+        ["Evidence", "What the nurse found: grey and pea-sized, attached in the hairline behind her left ear."]],
+      win: "The Australian paralysis tick makes a toxin that blocks nerve signals to muscles. Weakness creeps up the body over days, a bit like Guillain–Barré syndrome, until the tick is found.<br><br><b>Pearl:</b> in anyone with new weakness or unsteadiness after time in the bush on Australia’s east coast, search the scalp, behind the ears and skin folds for a tick.",
+      plan: "<b>Remove the tick:</b> freeze it with an ether-containing spray, wait for it to die and drop off. Don’t squeeze, pull or dig it out: that can push in more toxin.<br><b>Watch:</b> weakness can worsen for 24 to 48 hours after removal, so admit and check breathing strength regularly.<br><b>Support:</b> breathing support if needed. There’s no human antitoxin.",
+      recov: "Back on her feet in three days. Now checks behind her ears after every walk.",
+      tip: "Tick bites can also cause anaphylaxis and red meat allergy (alpha-gal). Freeze it, don’t squeeze it. Wear long sleeves and pants in scrub, and check yourself and your kids after walks.",
+      why: { 4: "Funnel-web bites cause sweating and twitching within minutes, not weakness over days.", 5: "Tiger snakes cause bleeding and droopy eyelids within hours, not weakness creeping up over days.", 3: "Stinging tree causes severe skin pain, not weakness.", 6: "Jack jumpers cause a painful sting or anaphylaxis, not slow paralysis.", 8: "Redbacks cause pain and sweating, not paralysis.", 2: "Creek water causes diarrhoea. Close: Guillain–Barré can follow a gut infection, but there was no stomach bug, and the tick explains it.", 7: "Heat causes headache and confusion, not paralysis creeping up over days." } },
+    { id: "sunny", solver: "the ED and toxicology team", team: "&#129514; ED and toxicology’s plan", who: "Sunny", label: "Case 3 · Sunny", file: "Case file 012 · Sunny, meerkat, first to check every noise", ans: 5,
+      note: "Sunny the meerkat was found collapsed near the campsite at dusk.",
+      clues: [["Symptoms", "She collapsed, then came round. Now headache, vomiting and tummy pain."],
+        ["Exam", "Droopy eyelids. Pulse 110. Two faint scratches on one ankle, still oozing."],
+        ["Tests", "20-minute bloods: INR over 10, fibrinogen too low to measure, D-dimer very high."],
+        ["Course", "Later: aching muscles and dark brown urine. CK 25,000."],
+        ["History", "She felt only a ‘scratch’ when she went to investigate a rustle down by the water."],
+        ["Evidence", "Something banded, yellow and dark brown, was seen sliding away into the reeds."]],
+      win: "Tiger snake venom eats up clotting factors (venom-induced consumption coagulopathy), paralyses nerves and breaks down muscle. Early collapse that improves, then bleeding, droopy eyelids and dark urine fit perfectly.<br><br><b>Pearl:</b> snake bites can be painless and nearly invisible. Bands don’t identify snakes reliably: doctors choose antivenom from the symptoms, blood tests and the area, not the snake’s colour.",
+      plan: "<b>First aid:</b> pressure immobilisation bandage, splint the leg, keep her still and call 000. Don’t wash the bite or try to catch the snake.<br><b>Antivenom:</b> tiger snake antivenom, 1 vial IV, in hospital with adrenaline ready.<br><b>Watch:</b> repeat clotting tests and CK. Fresh frozen plasma if bleeding. Fluids to protect the kidneys from muscle breakdown. Every suspected bite needs 12 hours of observation and blood tests.",
+      recov: "Clotting back to normal in a day, kidneys protected, home in four days. Still first to check every noise, but now from a safe distance.",
+      tip: "On bush walks, wear boots and long pants, and watch where you step near water. Carry a pressure bandage. Leave snakes alone: most bites happen when people try to catch or kill them.",
+      why: { 4: "Funnel-web bites are very painful and cause sweating and twitching, not blood that won’t clot.", 1: "Ticks cause slow weakness over days, not bleeding and dark urine within hours.", 3: "Stinging tree causes severe skin pain, not bleeding.", 6: "Jack jumpers cause a painful sting or anaphylaxis, not a clotting failure.", 8: "Redbacks cause spreading pain and sweating, not bleeding and dark urine.", 2: "Creek water causes diarrhoea a week or two later.", 7: "Close! Severe heat stroke can cause muscle breakdown and clotting problems too. But her temperature is normal, and there are fang scratches on her ankle." } }
+  ];
+  Array.prototype.forEach.call(document.querySelectorAll('#scene > g[transform^="translate"], [id^="prop-"] > g[transform^="translate"]'), function (g) { var t = g.getAttribute("transform"); if (!/scale/.test(t)) g.setAttribute("transform", t + " scale(1.45)"); });
+  var $ = function (id) { return document.getElementById(id); };
+  var NS = "http://www.w3.org/2000/svg", C, shown, lives, pick, out, done;
+
+  var SCENE = 4, SCENE_NAME = "Off Track";
+  var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
+  function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
+  function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
+  function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
+  function celebrate(stars, name) {
+    var host = document.body, cols = ["#F5C518", "#2E8B57", "#B23A48", "#4FB3D9", "#B48CFF", "#F28C28"], h = "";
+    for (var k = 0; k < 60; k++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[k % cols.length] + ";animation-delay:" + (Math.random() * .6).toFixed(2) + "s;animation-duration:" + (1.6 + Math.random() * 1.6).toFixed(2) + 's"></i>';
+    var solved = Object.keys(TQ).filter(function (k) { return TQ[k] > 0; }).length, sceneDone = CASES.every(function (c) { return TQ[c.id] > 0; });
+    var extra = solved >= 30 ? "All 30 cases closed. Toxicology December complete! &#127942;" : sceneDone ? SCENE_NAME + " cleared: all 3 cases closed." : solved + " of 30 cases closed this December.";
+    var o = document.createElement("div"); o.className = "cel"; o.setAttribute("role", "status");
+    o.innerHTML = '<div class="cf-wrap" aria-hidden="true">' + h + '</div><div class="cel-stamp">Case closed</div><svg class="cel-m" viewBox="0 0 120 120" aria-hidden="true">' + V[C.id][1] + '</svg><div class="cel-s">' + "★".repeat(stars) + "☆".repeat(3 - stars) + '</div><p class="cel-t">' + C.who + " is on the mend, thanks to you and " + C.solver + ". " + extra + '</p><span class="cel-tap">Tap to read the plan</span>';
+    o.addEventListener("click", function () { o.remove(); });
+    host.appendChild(o); setTimeout(function () { if (o.parentNode) o.remove(); }, 6000);
+  }
+  P.forEach(function (p) { p[5] = Math.min(730, Math.max(58, p[5])); p[6] = Math.min(450, Math.max(132, p[6])); });
+  P.forEach(function (p) {
+    var g = document.createElementNS(NS, "g"); g.setAttribute("class", "tagbtn"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "Evidence " + p[0] + ": " + p[1]);
+    g.innerHTML = '<rect x="' + (p[5] - 13) + '" y="' + (p[6] - 13) + '" width="26" height="26" rx="4" fill="#F5C518" stroke="#1A1F1B" stroke-width="1.5"/><text x="' + p[5] + '" y="' + (p[6] + 5) + '" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#1A1F1B">' + p[0] + "</text>";
+    g.addEventListener("click", function () { select(p[0]); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p[0]); } });
+    $("tags").appendChild(g);
+  });
+  $("suspects").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) select(+b.getAttribute("data-n")); });
+  function drawCases() { $("cases").innerHTML = CASES.map(function (c, i) { var s = TQ[c.id]; return '<button type="button" data-i="' + i + '"' + (isOpen(i) ? "" : " disabled") + ">" + c.label + (isOpen(i) ? (s > 0 ? '<span class="st">' + "★".repeat(s) + "</span>" : s === 0 ? '<span class="st">✓</span>' : "") : " · opens " + dayOf(i) + " Dec") + "</button>"; }).join(""); }
+  drawCases();
+  $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
+  function load(i) {
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each suspect, reveal clues one at a time, and accuse the culprit. Fewer clues, more stars.";
+    $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
+    $("victim").innerHTML = V[C.id][0];
+    CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
+    $("suspects").innerHTML = P.map(function (p) { return '<button type="button" data-n="' + p[0] + '"><span class="n">' + p[0] + "</span>" + p[1] + "</button>"; }).join("");
+    $("dossier").innerHTML = "Tap a yellow evidence tag in the camp, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.";
+    $("accuse").disabled = true; $("accuse").textContent = "Accuse";
+    renderClues();
+  }
+  function select(n) {
+    var p = P[n - 1]; pick = n;
+    $("dossier").innerHTML = "<b>Evidence " + p[0] + ": " + p[1] + '</b> <span class="sci">' + p[2] + "</span><br><b>Toxin:</b> " + p[3] + "<br>" + p[4];
+    Array.prototype.forEach.call($("suspects").children, function (b) { b.style.outline = +b.getAttribute("data-n") === n ? "2px solid #F5C518" : ""; });
+    $("accuse").disabled = done || !!out[n]; $("accuse").textContent = "Accuse the " + p[1].toLowerCase();
+  }
+  function renderClues() {
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (c) { return '<li><span class="k">' + c[0] + "</span><p>" + c[1] + "</p></li>"; }).join("");
+    $("left").textContent = shown < C.clues.length ? (C.clues.length - shown) + " clues left" : "All clues revealed";
+    $("more").disabled = done || shown >= C.clues.length;
+  }
+  function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
+  function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
+  $("accuse").onclick = function () {
+    if (!pick || done) return;
+    var name = P[C.ans - 1][1];
+    if (pick === C.ans) {
+      done = true; var stars = Math.max(1, (shown <= 2 ? 3 : shown <= 4 ? 2 : 1) - (lives < 3 ? 1 : 0));
+      $("verdict").innerHTML = '<div class="verdict yes"><div class="stars">' + "★".repeat(stars) + "☆".repeat(3 - stars) + "</div><b>" + name + ". You and " + C.solver + " cracked it on clue " + shown + ".</b> " + C.win + "</div>" + planHtml();
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+      shown = C.clues.length; renderClues(); $("accuse").disabled = true; recover(); if (!(TQ[C.id] >= stars)) TQ[C.id] = stars; tqSave(); var keep = C; drawCases(); Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", CASES[k] === keep ? "true" : "false"); }); celebrate(stars);
+    } else {
+      lives--; out[pick] = 1; $("lives").textContent = "●".repeat(lives) + "○".repeat(3 - lives);
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === pick) b.classList.add("out"); });
+      var why = C.why[pick] || "Not this time.";
+      if (!lives) { done = true; why += " Out of accusations. Luckily " + C.solver + " worked it out: " + name.toLowerCase() + "."; shown = C.clues.length; renderClues(); }
+      $("verdict").innerHTML = '<div class="verdict no"><b>Not that one.</b> ' + why + "</div>" + (lives ? "" : planHtml());
+      if (!lives) { recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); } }
+      $("accuse").disabled = true;
+    }
+  };
+  (function () { var pan = $("pan"), hint = $("swipe"); if (pan.scrollWidth > pan.clientWidth) pan.scrollLeft = (pan.scrollWidth - pan.clientWidth) * 0.5;
+    setTimeout(function () { pan.addEventListener("scroll", function () { if (hint) hint.style.opacity = 0; }, { passive: true }); }, 400); setTimeout(function () { if (hint) hint.style.opacity = 0; }, 5000); })();
+  (function () { var q = +((location.search.match(/[?&]c=(\d)/) || [])[1] || 0) - 1, open = CASES.map(function (c, i) { return isOpen(i) ? i : -1; }).filter(function (i) { return i > -1; });
+    if (!open.length) { $("note").innerHTML = '<span class="lockmsg">&#128274; This scene opens on ' + dayOf(0) + " December. One new case every day of Toxicology December.</span>"; document.querySelector(".grid").hidden = true; return; }
+    load(open.indexOf(q) > -1 ? q : open[open.length - 1]); })();
+})();
+</script>
+
+</body></html>

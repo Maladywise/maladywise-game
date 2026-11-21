@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Toxiquest: Toxicology December | Malady Wise</title>
+<meta name="description" content="Toxiquest: one poisoning mystery a day through December. Read the clues, accuse the culprit, learn the antidote.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{--night:#13241C;--moss:#1F3A2C;--mist:#D8E6D9;--tag:#F5C518;--paper:#F2F0E6;--ink:#1A1F1B;--display:"Young Serif",Georgia,serif;--body:"Figtree",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;color-scheme:dark}
+*{box-sizing:border-box}html,body{background:var(--night);color:var(--mist);margin:0}
+body{font:16px/1.5 var(--body);padding:20px max(16px,env(safe-area-inset-left,0px)) 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:16px}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0}
+h1{font:400 clamp(34px,8vw,52px)/1 var(--display);margin:4px 0 0}
+.lede{margin:0;color:#B8CCBE;max-width:38em}
+.tot{display:flex;gap:16px;flex-wrap:wrap;font:500 13px var(--mono)}.tot b{color:var(--tag);font-size:18px}
+.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+.day{display:grid;gap:2px;align-content:start;min-height:92px;padding:10px;border-radius:12px;border:1px solid #2C4A38;background:var(--moss);color:var(--mist);text-decoration:none}
+.day .n{font:500 11px var(--mono);color:#9FB8A6}.day .w{font:600 15px var(--body);color:#fff}.day .s{font-size:11px;color:#9FB8A6}.day .st{color:var(--tag);letter-spacing:2px}
+.day.today{border-color:var(--tag);box-shadow:0 0 0 2px var(--tag) inset}
+.day.lock{opacity:.45;pointer-events:none}.day.lock .w{color:#9FB8A6}
+.day.fin{background:#2A1F44;border-color:#5B4C99}
+.btn{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--tag);color:var(--ink);cursor:pointer}
+.foot{font-size:12px;color:#7F9A88}.foot a{color:var(--mist)}
+</style></head><body><div class="wrap">
+<p class="kick">&#9763; Toxicology December · one case a day</p>
+<h1>Toxiquest</h1>
+<p class="lede">A new poisoning mystery opens every day from 1 to 30 December. Read the clues, accuse the culprit, and learn the antidote from the team that cracked it. Fewer clues, more stars. On 31 December every case opens for a replay.</p>
+<div class="tot"><span>Cases closed <b id="c">0</b>/30</span><span>Stars <b id="s">0</b>/90</span></div>
+<div class="cal" id="cal"></div>
+<p><button class="btn" type="button" id="share">Share my December</button></p>
+<p class="foot">Fictional cases for learning. In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day. In an emergency, call 000. <a href="/">&larr; Back to Malady Wise</a></p>
+</div>
+<script>
+(function () {
+  var DAYS = [{"d": 1, "id": "tess", "who": "Tess", "scene": "The Herb Patch", "url": "herb-patch.html?c=1"}, {"d": 2, "id": "bea", "who": "Bea", "scene": "The Herb Patch", "url": "herb-patch.html?c=2"}, {"d": 3, "id": "echo", "who": "Echo", "scene": "The Herb Patch", "url": "herb-patch.html?c=3"}, {"d": 4, "id": "dex", "who": "Dex", "scene": "Low Tide", "url": "low-tide.html?c=1"}, {"d": 5, "id": "ziggy", "who": "Ziggy", "scene": "Low Tide", "url": "low-tide.html?c=2"}, {"d": 6, "id": "cipher", "who": "Cipher", "scene": "Low Tide", "url": "low-tide.html?c=3"}, {"d": 7, "id": "pebble", "who": "Pebble", "scene": "Whiteout", "url": "whiteout.html?c=1"}, {"d": 8, "id": "locum", "who": "Locum", "scene": "Whiteout", "url": "whiteout.html?c=2"}, {"d": 9, "id": "octavia", "who": "Octavia", "scene": "Whiteout", "url": "whiteout.html?c=3"}, {"d": 10, "id": "jett", "who": "Jett", "scene": "Off Track", "url": "off-track.html?c=1"}, {"d": 11, "id": "layla", "who": "Layla", "scene": "Off Track", "url": "off-track.html?c=2"}, {"d": 12, "id": "sunny", "who": "Sunny", "scene": "Off Track", "url": "off-track.html?c=3"}, {"d": 13, "id": "pippa", "who": "Pippa", "scene": "Dinner Party", "url": "dinner-party.html?c=1"}, {"d": 14, "id": "mei", "who": "Mei", "scene": "Dinner Party", "url": "dinner-party.html?c=2"}, {"d": 15, "id": "hazel", "who": "Hazel", "scene": "Dinner Party", "url": "dinner-party.html?c=3"}, {"d": 16, "id": "kiri", "who": "Kiri", "scene": "Medicine Cabinet", "url": "medicine-cabinet.html?c=1"}, {"d": 17, "id": "lottie", "who": "Lottie", "scene": "Medicine Cabinet", "url": "medicine-cabinet.html?c=2"}, {"d": 18, "id": "tembi", "who": "Tembi", "scene": "Medicine Cabinet", "url": "medicine-cabinet.html?c=3"}, {"d": 19, "id": "saga", "who": "Saga", "scene": "The Shed", "url": "the-shed.html?c=1"}, {"d": 20, "id": "silk", "who": "Silk", "scene": "The Shed", "url": "the-shed.html?c=2"}, {"d": 21, "id": "iris", "who": "Iris", "scene": "The Shed", "url": "the-shed.html?c=3"}, {"d": 22, "id": "mira", "who": "Mira", "scene": "Dry Heat", "url": "dry-heat.html?c=1"}, {"d": 23, "id": "yara", "who": "Yara", "scene": "Dry Heat", "url": "dry-heat.html?c=2"}, {"d": 24, "id": "zola", "who": "Zola", "scene": "Dry Heat", "url": "dry-heat.html?c=3"}, {"d": 25, "id": "ines", "who": "Inês", "scene": "Canopy", "url": "canopy.html?c=1"}, {"d": 26, "id": "ama", "who": "Ama", "scene": "Canopy", "url": "canopy.html?c=2"}, {"d": 27, "id": "quill", "who": "Quill", "scene": "Canopy", "url": "canopy.html?c=3"}, {"d": 28, "id": "ruby", "who": "Ruby", "scene": "Midnight Ward", "url": "midnight-ward.html?c=1"}, {"d": 29, "id": "riff", "who": "Riff", "scene": "Midnight Ward", "url": "midnight-ward.html?c=2"}, {"d": 30, "id": "lumo", "who": "Lumo", "scene": "Midnight Ward", "url": "midnight-ward.html?c=3"}], TQ = {}, tester = false;
+  try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; tester = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var now = new Date(), all = tester || !/maladywise\.com$/.test(location.hostname), dec = now.getFullYear() === 2026 && now.getMonth() === 11;
+  function open(d) { return all || now >= new Date(2026, 11, d); }
+  var c = 0, s = 0, h = "";
+  DAYS.forEach(function (x) { var st = TQ[x.id], o = open(x.d); if (st > 0) { c++; s += st; }
+    h += '<a class="day' + (o ? "" : " lock") + (dec && now.getDate() === x.d ? " today" : "") + '" href="' + x.url + '"><span class="n">' + x.d + ' Dec</span><span class="w">' + (o ? x.who : "&#128274;") + '</span><span class="s">' + x.scene + '</span>' + (st > 0 ? '<span class="st">' + "★".repeat(st) + "</span>" : st === 0 ? '<span class="s">Attempted</span>' : "") + "</a>"; });
+  h += '<a class="day fin' + (open(31) ? "" : " lock") + '" href="herb-patch.html"><span class="n">31 Dec</span><span class="w">&#127942; Finale</span><span class="s">Replay every scene</span></a>';
+  document.getElementById("cal").innerHTML = h; document.getElementById("c").textContent = c; document.getElementById("s").textContent = s;
+  document.getElementById("share").onclick = function () { var t = "Toxiquest ☣ Toxicology December\n" + c + "/30 cases closed, " + s + "/90 ★\nmaladywise.com/toxiquest/";
+    if (navigator.share) navigator.share({ text: t }).catch(function () {}); else if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { document.getElementById("share").textContent = "Copied!"; }); };
+})();
+</script></body></html>

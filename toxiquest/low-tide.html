@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>*{box-sizing:border-box}[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}
+.cel{position:fixed;inset:0;display:grid;place-items:center;align-content:center;gap:6px;background:rgba(6,12,9,.93);backdrop-filter:blur(3px);z-index:50;cursor:pointer;animation:celin .3s ease-out}
+.cel .cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cel .cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.95}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+.cel-stamp{font:400 clamp(26px,7vw,48px)/1 var(--display);color:#F5C518;border:4px solid #F5C518;border-radius:10px;padding:6px 16px;transform:rotate(-6deg);animation:stamp .45s cubic-bezier(.2,1.6,.4,1) both;letter-spacing:.04em;text-transform:uppercase}
+.cel .cel-m{width:130px;height:130px;animation:hop .9s ease-in-out .3s 3}
+.cel-s{font-size:clamp(24px,6vw,34px);letter-spacing:6px;color:#F5C518}
+.cel-t{margin:0;font:600 15px var(--body);color:#fff;text-align:center;max-width:30em;padding:0 16px}
+.cel-tap{font:500 11px var(--mono);color:#C9D8CE;letter-spacing:.1em;text-transform:uppercase}
+@keyframes stamp{from{transform:scale(2.4) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-4deg)}}
+@keyframes celin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
+.cases button[disabled]{opacity:.5;cursor:not-allowed}
+.cases button .st{color:var(--tag);margin-left:4px}
+.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
+</style>
+<title>Toxiquest: Low Tide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one crime-scene garden at dusk on top, the case file underneath; evidence tags in the garden open plant dossiers. Single dusk look by choice. */
+:root{
+  --night:#13241C; --moss:#1F3A2C; --leaf:#2F5A3F; --mist:#D8E6D9;
+  --paper:#F2F0E6; --ink:#1A1F1B; --tag:#F5C518; --tox:#B23A48; --ok:#2E8B57;
+  --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--night);color:var(--mist)}
+body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
+.lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
+.lives b{color:var(--tox);letter-spacing:3px}
+.scene{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #2C4A38}
+.scene svg{display:block;width:100%;height:auto}
+.tagbtn{cursor:pointer}
+.tagbtn:focus-visible rect{stroke:#fff;stroke-width:3}
+.tagbtn:hover rect{fill:#FFE15A}
+.tape{position:absolute;left:-8%;right:-8%;top:16px;transform:rotate(-2.5deg);background:var(--tag);color:var(--ink);font:500 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:5px 0;pointer-events:none;opacity:.92}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.file{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:grid;gap:12px;min-width:0;position:relative}
+.file h2{font:400 22px var(--display);margin:0}
+.label{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5B6B5F;margin:0}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.clues li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #DCD8C8;animation:in .35s ease-out}
+.clues li .k{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--leaf);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.clues li p{margin:0;font-size:15px}
+@keyframes in{from{opacity:.3;transform:translateY(4px)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.main{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--leaf);color:#fff;cursor:pointer}
+button.main:hover{background:#3A6E4C}
+button.main:focus-visible,button.ghost:focus-visible,.suspects button:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+button.ghost{font:600 14px var(--body);border:2px solid var(--leaf);border-radius:999px;padding:10px 16px;background:transparent;color:var(--leaf);cursor:pointer}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.side{background:var(--moss);border:1px solid #2C4A38;border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.side h2{font:400 20px var(--display);margin:0;color:#fff}
+.suspects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.suspects button{display:flex;gap:8px;align-items:center;text-align:left;font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}
+.suspects button .n{font:500 11px var(--mono);background:var(--tag);color:var(--ink);border-radius:4px;padding:2px 5px}
+.suspects button.out{opacity:.4;text-decoration:line-through}
+.suspects button.win{border-color:var(--ok);background:#1E4A30}
+.dossier{background:#0F1C16;border:1px dashed #3B5E48;border-radius:12px;padding:12px 14px;font-size:14px;min-height:72px}
+.dossier b{color:#fff}
+.dossier .sci{font-style:italic;color:#9FB8A6}
+.verdict{border-radius:12px;padding:12px 14px;font-size:15px}
+.verdict.no{background:#F6DADD;color:#6B1A24}
+.verdict.yes{background:#DDF1E4;color:#14522F}
+.stars{font-size:26px;letter-spacing:4px}
+.foot{font-size:12px;color:#7F9A88;text-align:center}
+@media (prefers-reduced-motion:reduce){.clues li{animation:none}.sway{animation:none!important}}
+.pan{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pan::-webkit-scrollbar{display:none}
+.pan svg{width:100%;min-width:100%}
+.swipe{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;background:rgba(10,20,14,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .6s}
+@media (max-width:640px){.tagbtn{transform-box:fill-box;transform-origin:50% 50%;transform:scale(1.5)}.scene{border-radius:12px}}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:500 12px var(--mono)}.scenes a{color:var(--mist);text-decoration:none;border:1px solid #3B5E48;border-radius:999px;padding:6px 12px}.scenes a[aria-current]{background:#F2F0E6;color:#1A1F1B;border-color:#F2F0E6}.scenes span{color:#7F9A88}
+.cases{display:flex;gap:8px;flex-wrap:wrap}.cases button{font:600 14px var(--body);border-radius:999px;padding:9px 16px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}.cases button[aria-pressed=true]{background:var(--tag);color:var(--ink);border-color:var(--tag)}.cases button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.recov{border-radius:12px;padding:12px 14px;font-size:15px;background:#E3EEF9;color:#173A5E;margin-top:10px}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.ff{animation:ff 3s ease-in-out infinite}@keyframes ff{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none}}
+</style></head><body>
+
+<div class="wrap">
+  <nav class="scenes" aria-label="Scenes"><a class="tqcal" href="./">&#128197; December calendar</a><a href="herb-patch.html">1 · The Herb Patch</a><a href="low-tide.html" aria-current="page">2 · Low Tide</a><a href="whiteout.html">3 · Whiteout</a><a href="off-track.html">4 · Off Track</a><a href="dinner-party.html">5 · Dinner Party</a><a href="medicine-cabinet.html">6 · Medicine Cabinet</a><a href="the-shed.html">7 · The Shed</a><a href="dry-heat.html">8 · Dry Heat</a><a href="canopy.html">9 · Canopy</a><a href="midnight-ward.html">10 · Midnight Ward</a></nav>
+  <div class="top">
+    <div>
+      <p class="kick">Toxiquest · Scene 2 of 10: the beach · 3 cases</p>
+      <h1>Low Tide</h1>
+    </div>
+    <p class="lives" aria-live="polite">Accusations left <b id="lives">●●●</b></p>
+  </div>
+  <div class="cases" id="cases" role="group" aria-label="Choose a case"></div>
+  <p class="note" id="note"></p>
+
+  <div class="scene">
+    <div class="pan" id="pan"><svg viewBox="30 112 760 358" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A beach at dusk: a rock platform with rock pools on the left, the sea and a setting sun behind, sand in the middle and a wooden jetty with an esky on the right. One of the mascots lies unwell on the sand. Numbered evidence tags mark a blue-ringed octopus, a stonefish, a coral trout, a box jellyfish, a bluebottle, a cone snail, a toadfish and a stingray.">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D2350"/><stop offset=".38" stop-color="#4B3F78"/><stop offset=".7" stop-color="#B0627A"/><stop offset="1" stop-color="#F0A86C"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#355E3E"/><stop offset=".5" stop-color="#22432D"/><stop offset="1" stop-color="#11241A"/></linearGradient>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#5C4C70"/></linearGradient>
+        <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324A"/><stop offset="1" stop-color="#1E3330"/></linearGradient>
+        <linearGradient id="trunk" x1="0" x2="1"><stop offset="0" stop-color="#3B2C20"/><stop offset=".5" stop-color="#6B5440"/><stop offset="1" stop-color="#2E2219"/></linearGradient>
+        <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D493E0"/><stop offset="1" stop-color="#7E3B95"/></linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6B8"/><stop offset="1" stop-color="#A9BB7C"/></linearGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FA35E"/><stop offset="1" stop-color="#2F5A36"/></linearGradient>
+        <linearGradient id="castor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0454C"/><stop offset="1" stop-color="#5E1C24"/></linearGradient>
+        <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3E2A"/><stop offset="1" stop-color="#2E1F15"/></linearGradient>
+        <radialGradient id="moonglow"><stop offset="0" stop-color="#FFF6DC" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DC" stop-opacity="0"/></radialGradient>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".18"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+        <radialGradient id="berry" cx=".35" cy=".35"><stop offset="0" stop-color="#5A5A6A"/><stop offset=".35" stop-color="#151518"/><stop offset="1" stop-color="#050506"/></radialGradient>
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8E8" stop-opacity="0"/><stop offset=".5" stop-color="#C9D8E8" stop-opacity=".16"/><stop offset="1" stop-color="#C9D8E8" stop-opacity="0"/></linearGradient>
+        <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer><feBlend in2="SourceGraphic" mode="multiply"/></filter>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="scene"></g>
+      <!-- Tess, asleep and unwell, and the spilled teacup -->
+      <ellipse cx="410" cy="392" rx="120" ry="52" fill="url(#lamp)"/>
+      <g id="victim" transform="translate(345 318) rotate(-14 60 60) scale(1.2)"></g>
+      
+      <g id="fx"></g>
+      <rect width="800" height="470" fill="url(#vig)" opacity=".45" pointer-events="none"/>
+      <rect width="800" height="470" filter="url(#grain)" fill="#888" opacity=".2" pointer-events="none" style="mix-blend-mode:multiply"/>
+      <g id="tags"></g>
+    </svg></div>
+    
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg", sc = document.getElementById("scene"), fx = document.getElementById("fx");
+  var seed = 11; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function R(a, b) { return a + (b - a) * r(); }
+  function el(p, tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+  function g(p, a) { return el(p, "g", a || {}); }
+  document.querySelector("svg defs").insertAdjacentHTML("beforeend",
+    '<linearGradient id="bsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22285A"/><stop offset=".45" stop-color="#7A4C86"/><stop offset=".8" stop-color="#E5806A"/><stop offset="1" stop-color="#F9C27A"/></linearGradient>' +
+    '<linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5C5A8E"/><stop offset=".35" stop-color="#2E5C7A"/><stop offset="1" stop-color="#1E7C86"/></linearGradient>' +
+    '<linearGradient id="sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9B98A"/><stop offset="1" stop-color="#9E7E58"/></linearGradient>' +
+    '<linearGradient id="rock" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6E6460"/><stop offset="1" stop-color="#3C3533"/></linearGradient>' +
+    '<radialGradient id="pool" cx=".45" cy=".4"><stop offset="0" stop-color="#7FD3D9"/><stop offset="1" stop-color="#1F6E7A"/></radialGradient>' +
+    '<radialGradient id="sun"><stop offset="0" stop-color="#FFF1C4"/><stop offset=".5" stop-color="#FFC56B"/><stop offset="1" stop-color="#FF8A5B" stop-opacity="0"/></radialGradient>' +
+    '<linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8A6A4A"/><stop offset="1" stop-color="#5A4230"/></linearGradient>');
+  // sky, stars, setting sun
+  el(sc, "rect", { width: 800, height: 470, fill: "url(#bsky)" });
+  for (var i = 0; i < 70; i++) { var y = R(112, 175); el(sc, "circle", { cx: R(0, 800), cy: y, r: R(.3, 1.2), fill: "#fff", opacity: (1 - (y - 112) / 70) * R(.3, .9) }); }
+  el(sc, "circle", { cx: 610, cy: 226, r: 90, fill: "url(#sun)", opacity: .8 });
+  el(sc, "circle", { cx: 610, cy: 228, r: 26, fill: "#FFE3A0" });
+  [[160, 150, 120], [470, 172, 160], [700, 160, 90]].forEach(function (c) { el(sc, "ellipse", { cx: c[0], cy: c[1], rx: c[2], ry: 6, fill: "#F7B59A", opacity: .25, filter: "url(#blur4)" }); });
+  // distant headland and lighthouse
+  el(sc, "path", { d: "M0 230 Q60 196 130 204 Q170 196 210 214 L260 230z", fill: "#3B2F4F" });
+  el(sc, "rect", { x: 150, y: 186, width: 6, height: 18, fill: "#EDE2D0" }); el(sc, "circle", { cx: 153, cy: 185, r: 3, fill: "#FFE08A" });
+  el(sc, "path", { d: "M153 185 L60 170 L60 178z", fill: "#FFE08A", opacity: .25 });
+  // sea with sun streak and waves
+  el(sc, "rect", { y: 228, width: 800, height: 242, fill: "url(#sea)" });
+  for (var i = 0; i < 26; i++) { var y = 232 + i * 4 + R(0, 3), w = 8 + i * 2.4; el(sc, "rect", { x: 610 - w / 2 + R(-6, 6), y: y, width: w, height: 1.6, fill: "#FFD9A0", opacity: .7 - i * .022 }); }
+  for (var i = 0; i < 70; i++) { var x = R(0, 800), y = R(240, 330); el(sc, "path", { d: "M" + x + " " + y + " q6 -3 12 0", stroke: "#BFE3EC", "stroke-width": 1, fill: "none", opacity: R(.15, .45) }); }
+  // stingray shadow in the shallows (left)
+  var st = g(sc, { transform: "translate(238 258) rotate(-12)", opacity: .75 });
+  el(st, "path", { d: "M0 -12 Q22 -4 26 0 Q22 4 0 12 Q-22 4 -26 0 Q-22 -4 0 -12z", fill: "#1D3A44" }); el(st, "path", { d: "M0 10 Q4 26 14 36", stroke: "#1D3A44", "stroke-width": 2, fill: "none" });
+  // box jellyfish (centre-right shallows)
+  var bj = g(sc, { transform: "translate(520 292)" });
+  el(bj, "path", { d: "M-12 0 Q-12 -16 0 -16 Q12 -16 12 0z", fill: "#E8F6FF", opacity: .55, stroke: "#FFFFFF", "stroke-width": .8 });
+  for (var k = -10; k <= 10; k += 4) el(bj, "path", { d: "M" + k + " 0 q" + R(-4, 4) + " 14 " + R(-3, 3) + " " + R(24, 36), stroke: "#E8F6FF", "stroke-width": .9, fill: "none", opacity: .6 });
+  // shoreline foam and sand
+  el(sc, "path", { d: "M300 470 Q330 360 420 342 Q560 322 800 338 L800 470z", fill: "url(#sand)" });
+  el(sc, "path", { d: "M300 470 Q330 360 420 342 Q560 322 800 338", stroke: "#F4FAFB", "stroke-width": 3, fill: "none", opacity: .8 });
+  el(sc, "path", { d: "M322 410 Q350 352 430 336 Q560 316 800 330", stroke: "#F4FAFB", "stroke-width": 1.4, fill: "none", opacity: .45 });
+  for (var i = 0; i < 160; i++) { var x = R(330, 800), y = R(350, 470); el(sc, "circle", { cx: x, cy: y, r: R(.4, 1.1), fill: ["#B99868", "#E9D2AA", "#8F7350"][i % 3], opacity: .7 }); }
+  [[560, 440], [584, 452], [612, 438], [636, 450]].forEach(function (f) { el(sc, "ellipse", { cx: f[0], cy: f[1], rx: 4, ry: 2.2, fill: "#8F7350", opacity: .45 }); });
+  // rock platform with pools (left)
+  var rk = g(sc, {});
+  el(rk, "path", { d: "M0 290 Q60 276 140 284 Q230 280 300 300 Q340 330 330 380 Q320 430 300 470 L0 470z", fill: "url(#rock)" });
+  for (var i = 0; i < 90; i++) { var x = R(10, 310), y = R(292, 465); el(rk, "ellipse", { cx: x, cy: y, rx: R(3, 12), ry: R(2, 6), fill: ["#7A6E68", "#4C4340", "#5E5450"][i % 3], opacity: .55 }); }
+  for (var i = 0; i < 40; i++) { var x = R(20, 300), y = R(290, 300 + R(0, 40)); el(rk, "circle", { cx: x, cy: y, r: R(1, 2.2), fill: "#2E3A2E", opacity: .8 }); }
+  el(rk, "ellipse", { cx: 150, cy: 368, rx: 48, ry: 18, fill: "url(#pool)" }); el(rk, "ellipse", { cx: 150, cy: 368, rx: 48, ry: 18, fill: "none", stroke: "#2A2422", "stroke-width": 3 });
+  el(rk, "ellipse", { cx: 238, cy: 420, rx: 34, ry: 12, fill: "url(#pool)" });
+  for (var i = 0; i < 6; i++) el(rk, "path", { d: "M" + R(110, 190) + " " + R(380, 384) + " q2 -10 " + R(-4, 4) + " -16", stroke: "#3E8F4E", "stroke-width": 2, fill: "none" });
+  // blue-ringed octopus in the big pool
+  var oc = g(sc, { transform: "translate(150 364) scale(1.3)" });
+  for (var a = 0; a < 8; a++) { var an = a * 0.78; el(oc, "path", { d: "M0 0 q" + Math.cos(an) * 8 + " " + Math.sin(an) * 6 + " " + Math.cos(an + .4) * 14 + " " + (Math.sin(an + .4) * 9 + 3), stroke: "#D9B45A", "stroke-width": 2.4, fill: "none", "stroke-linecap": "round" }); }
+  el(oc, "ellipse", { cx: 0, cy: -3, rx: 7, ry: 6, fill: "#E0BE62" });
+  [[-3, -5], [3, -4], [0, -1], [-5, 0], [5, 1], [9, 4], [-9, 4]].forEach(function (c) { el(oc, "circle", { cx: c[0], cy: c[1], r: 1.6, fill: "none", stroke: "#1E64FF", "stroke-width": 1.2 }); });
+  // cone snail on the rocks
+  var cs = g(sc, { transform: "translate(92 312) rotate(-20)" });
+  el(cs, "path", { d: "M-10 0 L10 -4 L10 4z", fill: "#F1E3C6", stroke: "#6B4A2A", "stroke-width": .8 });
+  for (var k = -8; k < 10; k += 3) el(cs, "rect", { x: k, y: -1.5, width: 1.4, height: 1.4, fill: "#8A4E22" });
+  // stonefish at the rock edge
+  var sf = g(sc, { transform: "translate(300 314) scale(1.3)" });
+  el(sf, "path", { d: "M-16 4 Q-14 -8 0 -9 Q14 -8 18 2 Q10 8 -16 4z", fill: "#7B6A58" });
+  for (var k = -10; k <= 12; k += 4) el(sf, "path", { d: "M" + k + " -7 l2 -5 l2 5z", fill: "#5E5040" });
+  for (var i = 0; i < 10; i++) el(sf, "circle", { cx: R(-12, 14), cy: R(-6, 3), r: R(.8, 1.8), fill: ["#9A8670", "#5E5040", "#B07A5A"][i % 3] });
+  el(sf, "circle", { cx: 12, cy: -3, r: 1.2, fill: "#E0D4B0" });
+  // jetty with esky and coral trout (right)
+  var jt = g(sc, {});
+  for (var x = 580; x < 800; x += 30) el(jt, "rect", { x: x, y: 270, width: 5, height: 70, fill: "#4A3626" });
+  el(jt, "path", { d: "M560 262 L800 254 L800 272 L560 276z", fill: "url(#wood)" });
+  for (var x = 566; x < 800; x += 12) el(jt, "line", { x1: x, y1: 262, x2: x - 1, y2: 276, stroke: "#4A3626", "stroke-width": .8, opacity: .7 });
+  el(jt, "rect", { x: 630, y: 244, width: 38, height: 20, rx: 3, fill: "#F2F2F2", stroke: "#9AA3A8" }); el(jt, "rect", { x: 628, y: 238, width: 42, height: 7, rx: 2, fill: "#2F7FBF", transform: "rotate(-14 628 238)" });
+  var tr = g(jt, { transform: "translate(649 246)" }); el(tr, "path", { d: "M-14 0 Q0 -8 12 0 Q0 8 -14 0z M12 0 l6 -5 l0 10z", fill: "#D9463A" });
+  [[-6, -1], [-2, 2], [3, -2], [6, 1]].forEach(function (c) { el(tr, "circle", { cx: c[0], cy: c[1], r: .9, fill: "#7FD0FF" }); });
+  // fishing rod leaning on the esky
+  el(jt, "path", { d: "M672 262 L720 196", stroke: "#2B2340", "stroke-width": 1.6 }); el(jt, "path", { d: "M720 196 Q740 230 735 262", stroke: "#DDD", "stroke-width": .6, fill: "none" });
+  // toadfish (pufferfish) on the sand near the jetty
+  var tf = g(sc, { transform: "translate(732 354) scale(1.7)" });
+  el(tf, "ellipse", { cx: 0, cy: 0, rx: 13, ry: 9, fill: "#6F7A4A", stroke: "#3E4626", "stroke-width": .8 }); el(tf, "ellipse", { cx: -1, cy: 4, rx: 10, ry: 4, fill: "#E8E2C8" }); el(tf, "path", { d: "M12 0 l7 -5 l0 10z", fill: "#5E6A3E" });
+  for (var i = 0; i < 9; i++) el(tf, "circle", { cx: R(-10, 8), cy: R(-6, 2), r: R(.8, 1.6), fill: "#4A3A20" });
+  el(tf, "circle", { cx: -8, cy: -2, r: 1.5, fill: "#111" });
+  // bluebottle washed up on the sand
+  var bb = g(sc, { transform: "translate(590 418)" });
+  el(bb, "path", { d: "M-10 0 Q-8 -10 2 -9 Q12 -8 10 0z", fill: "#5FA8FF", opacity: .9, stroke: "#C9E3FF", "stroke-width": .8 });
+  el(bb, "path", { d: "M-6 0 q6 10 -2 22 q-6 10 4 18", stroke: "#3E7BE0", "stroke-width": 1.4, fill: "none" });
+  // red and yellow flags
+  [[455, 300], [500, 296]].forEach(function (f) { el(sc, "rect", { x: f[0], y: f[1], width: 2, height: 40, fill: "#5A4A3A" }); el(sc, "path", { d: "M" + (f[0] + 2) + " " + f[1] + " h16 v6 h-16z", fill: "#E23B30" }); el(sc, "path", { d: "M" + (f[0] + 2) + " " + (f[1] + 6) + " h16 v6 h-16z", fill: "#FFD23A" }); });
+  // shells
+  [[380, 452], [520, 462], [690, 440]].forEach(function (s) { el(sc, "path", { d: "M" + s[0] + " " + s[1] + " q6 -8 12 0z", fill: "#F3D8D0", stroke: "#B48A7A", "stroke-width": .6 }); });
+  // sea sparkles
+  for (var i = 0; i < 16; i++) { var c = el(fx, "circle", { cx: R(240, 800), cy: R(236, 320), r: R(.8, 1.6), fill: "#FFF6D6", "class": "ff" }); c.style.animationDelay = R(0, 4).toFixed(2) + "s"; c.style.animationDuration = R(2, 4).toFixed(2) + "s"; }
+})();
+</script>
+  </div>
+
+  <div class="grid">
+    <section class="file" aria-labelledby="cf">
+      <p class="label" id="cfile"></p>
+      <h2 id="cf">Clues</h2>
+      <ol class="clues" id="clues"></ol>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div id="verdict"></div>
+    </section>
+    <section class="side" aria-labelledby="acc">
+      <h2 id="acc">Accuse a creature</h2>
+      <div class="dossier" id="dossier">Tap a yellow evidence tag on the beach, or a creature below, to read its file. When you’re sure, tap <b>Accuse</b>.</div>
+      <div class="suspects" id="suspects"></div>
+      <button class="main" type="button" id="accuse" disabled>Accuse</button>
+    </section>
+  </div>
+  <p class="foot">Fictional cases. Look, don’t touch: rock pools hide some of the most venomous animals on Earth.</p>
+</div>
+
+<script>
+(function () {
+  var V = {"dex": ["<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"60\" cy=\"90\" rx=\"20\" ry=\"14\" fill=\"#7A5AC9\"/><path d=\"M60 78v24\" stroke=\"#5B3FA6\" stroke-width=\"2\"/><path d=\"M33 40l-4-22 18 12zM87 40l4-22-18 12z\" fill=\"#F08A24\"/><path d=\"M34 36l-2-12 9 7zM86 36l2-12-9 7z\" fill=\"#FFE2C4\"/><circle cx=\"60\" cy=\"62\" r=\"27\" fill=\"#F08A24\"/><ellipse cx=\"60\" cy=\"76\" rx=\"15\" ry=\"10\" fill=\"#FFF2E2\"/><ellipse cx=\"38\" cy=\"71\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"82\" cy=\"71\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M34 40q26-22 52 0q-2 8-26 6t-26-6z\" fill=\"#8A6D3B\"/><path d=\"M40 36q20-10 40 0\" stroke=\"#6E552D\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"60\" cy=\"73\" r=\"3\" fill=\"#2B2340\"/><path d=\"M55 78q5 4 10 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><g><path d=\"M43.2 61.4 a4.8 4.8 0 0 0 9.6 0z\" fill=\"#2B2340\"/><path d=\"M41.4 61.4 h13.2\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g><path d=\"M67.2 61.4 a4.8 4.8 0 0 0 9.6 0z\" fill=\"#2B2340\"/><path d=\"M65.4 61.4 h13.2\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><circle cx=\"94\" cy=\"84\" r=\"10\" fill=\"#DDF1FF\" stroke=\"#4A3480\" stroke-width=\"3.5\"/><path d=\"M87 92l-8 9\" stroke=\"#4A3480\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M90 80q3-3 7 0\" stroke=\"#fff\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"48.0\" cy=\"75.8\" rx=\"7.8\" ry=\"4.2\" fill=\"#8FD18A\" opacity=\".55\"/><ellipse cx=\"72.0\" cy=\"75.8\" rx=\"7.8\" ry=\"4.2\" fill=\"#8FD18A\" opacity=\".55\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"60\" cy=\"90\" rx=\"20\" ry=\"14\" fill=\"#7A5AC9\"/><path d=\"M60 78v24\" stroke=\"#5B3FA6\" stroke-width=\"2\"/><path d=\"M33 40l-4-22 18 12zM87 40l4-22-18 12z\" fill=\"#F08A24\"/><path d=\"M34 36l-2-12 9 7zM86 36l2-12-9 7z\" fill=\"#FFE2C4\"/><circle cx=\"60\" cy=\"62\" r=\"27\" fill=\"#F08A24\"/><ellipse cx=\"60\" cy=\"76\" rx=\"15\" ry=\"10\" fill=\"#FFF2E2\"/><ellipse cx=\"38\" cy=\"71\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"82\" cy=\"71\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M34 40q26-22 52 0q-2 8-26 6t-26-6z\" fill=\"#8A6D3B\"/><path d=\"M40 36q20-10 40 0\" stroke=\"#6E552D\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"60\" cy=\"73\" r=\"3\" fill=\"#2B2340\"/><path d=\"M55 78q5 4 10 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><g><circle cx=\"48\" cy=\"62\" r=\"6\" fill=\"#2B2340\"/><circle cx=\"45.9\" cy=\"59.6\" r=\"2.2800000000000002\" fill=\"#fff\"/></g><g><circle cx=\"72\" cy=\"62\" r=\"6\" fill=\"#2B2340\"/><circle cx=\"69.9\" cy=\"59.6\" r=\"2.2800000000000002\" fill=\"#fff\"/></g><circle cx=\"94\" cy=\"84\" r=\"10\" fill=\"#DDF1FF\" stroke=\"#4A3480\" stroke-width=\"3.5\"/><path d=\"M87 92l-8 9\" stroke=\"#4A3480\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M90 80q3-3 7 0\" stroke=\"#fff\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "ziggy": ["<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><rect x=\"40\" y=\"80\" width=\"40\" height=\"22\" rx=\"11\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M48 82v18M60 81v20M72 82v18\" stroke=\"#2B2340\" stroke-width=\"3.5\"/><ellipse cx=\"38\" cy=\"38\" rx=\"7\" ry=\"11\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" transform=\"rotate(-25 38 38)\"/><ellipse cx=\"82\" cy=\"38\" rx=\"7\" ry=\"11\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" transform=\"rotate(25 82 38)\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M60 32l-3-12 6 0z\" fill=\"#FFD66B\" stroke=\"#E0B44A\" stroke-width=\"1\"/><path d=\"M44 37q6 6 0 12M76 37q-6 6 0 12M60 33v9\" stroke=\"#2B2340\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M50 30q10-8 20 0\" stroke=\"#2B2340\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"60\" cy=\"77\" rx=\"13\" ry=\"8\" fill=\"#F3D9E5\"/><circle cx=\"55\" cy=\"77\" r=\"1.6\" fill=\"#2B2340\"/><circle cx=\"65\" cy=\"77\" r=\"1.6\" fill=\"#2B2340\"/><g><path d=\"M41.8 54.8 L50.9 60.0 L41.8 65.2\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g><path d=\"M78.2 54.8 L69.1 60.0 L78.2 65.2\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><ellipse cx=\"37\" cy=\"70\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"83\" cy=\"70\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><rect x=\"40\" y=\"80\" width=\"40\" height=\"22\" rx=\"11\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M48 82v18M60 81v20M72 82v18\" stroke=\"#2B2340\" stroke-width=\"3.5\"/><ellipse cx=\"38\" cy=\"38\" rx=\"7\" ry=\"11\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" transform=\"rotate(-25 38 38)\"/><ellipse cx=\"82\" cy=\"38\" rx=\"7\" ry=\"11\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" transform=\"rotate(25 82 38)\"/><circle cx=\"60\" cy=\"60\" r=\"28\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M60 32l-3-12 6 0z\" fill=\"#FFD66B\" stroke=\"#E0B44A\" stroke-width=\"1\"/><path d=\"M44 37q6 6 0 12M76 37q-6 6 0 12M60 33v9\" stroke=\"#2B2340\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M50 30q10-8 20 0\" stroke=\"#2B2340\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"60\" cy=\"77\" rx=\"13\" ry=\"8\" fill=\"#F3D9E5\"/><circle cx=\"55\" cy=\"77\" r=\"1.6\" fill=\"#2B2340\"/><circle cx=\"65\" cy=\"77\" r=\"1.6\" fill=\"#2B2340\"/><g><circle cx=\"47\" cy=\"60\" r=\"6.5\" fill=\"#2B2340\"/><circle cx=\"44.725\" cy=\"57.4\" r=\"2.47\" fill=\"#fff\"/></g><g><circle cx=\"73\" cy=\"60\" r=\"6.5\" fill=\"#2B2340\"/><circle cx=\"70.725\" cy=\"57.4\" r=\"2.47\" fill=\"#fff\"/></g><ellipse cx=\"37\" cy=\"70\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"83\" cy=\"70\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "cipher": ["<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M84 92q20-4 16-24\" stroke=\"#3A2F55\" stroke-width=\"7\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"60\" cy=\"88\" rx=\"22\" ry=\"16\" fill=\"#3A2F55\"/><path d=\"M36 44l-4-24 18 14zM84 44l4-24-18 14z\" fill=\"#3A2F55\"/><path d=\"M37 38l-2-12 9 7zM83 38l2-12-9 7z\" fill=\"#E8A0C0\"/><circle cx=\"60\" cy=\"62\" r=\"27\" fill=\"#3A2F55\"/><path d=\"M36 58q24-10 48 0v10q-24-8-48 0z\" fill=\"#6E3A8C\"/><path d=\"M41.5 62 q6.5 4.55 13 0\" fill=\"none\" stroke=\"#FFD66B\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><path d=\"M65.5 62 q6.5 4.55 13 0\" fill=\"none\" stroke=\"#FFD66B\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><path d=\"M57 74l3 3 3-3\" fill=\"#E8A0C0\"/><path d=\"M60 77q-4 4-8 1M60 77q4 4 8 1\" stroke=\"#B9AED6\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M28 98l12-22\" stroke=\"#E8B92A\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M28 98l-2 5 5-2z\" fill=\"#2B2340\"/><text x=\"96\" y=\"30\" font-family=\"Figtree, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#E8F0E8\">z</text><text x=\"104\" y=\"20\" font-family=\"Figtree, sans-serif\" font-size=\"10\" font-weight=\"700\" fill=\"#E8F0E8\">z</text>", "<ellipse cx=\"60\" cy=\"104\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M84 92q20-4 16-24\" stroke=\"#3A2F55\" stroke-width=\"7\" stroke-linecap=\"round\" fill=\"none\"/><ellipse cx=\"60\" cy=\"88\" rx=\"22\" ry=\"16\" fill=\"#3A2F55\"/><path d=\"M36 44l-4-24 18 14zM84 44l4-24-18 14z\" fill=\"#3A2F55\"/><path d=\"M37 38l-2-12 9 7zM83 38l2-12-9 7z\" fill=\"#E8A0C0\"/><circle cx=\"60\" cy=\"62\" r=\"27\" fill=\"#3A2F55\"/><path d=\"M36 58q24-10 48 0v10q-24-8-48 0z\" fill=\"#6E3A8C\"/><circle cx=\"48\" cy=\"62\" r=\"6.5\" fill=\"#FFD66B\"/><circle cx=\"72\" cy=\"62\" r=\"6.5\" fill=\"#FFD66B\"/><ellipse cx=\"48\" cy=\"62\" rx=\"2\" ry=\"5\" fill=\"#2B2340\"/><ellipse cx=\"72\" cy=\"62\" rx=\"2\" ry=\"5\" fill=\"#2B2340\"/><path d=\"M57 74l3 3 3-3\" fill=\"#E8A0C0\"/><path d=\"M60 77q-4 4-8 1M60 77q4 4 8 1\" stroke=\"#B9AED6\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M28 98l12-22\" stroke=\"#E8B92A\" stroke-width=\"4\" stroke-linecap=\"round\"/><path d=\"M28 98l-2 5 5-2z\" fill=\"#2B2340\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"]};
+  var P = [ // [tag no., name, latin, toxin, what it does, tag x, tag y]
+    [1, "Stonefish", "Synanceia spp.", "Stonustoxin (spine venom)", "Looks like a rock. Stepping on its spines causes instant, agonising pain and swelling. Hot water helps; antivenom exists.", 300, 296],
+    [2, "Bluebottle", "Physalia spp.", "Stinging-cell venom", "A burning red line on the skin. Painful but rarely dangerous. Hot water, not vinegar.", 626, 362],
+    [3, "Stingray", "Dasyatidae", "Venomous tail barb", "A deep, painful gash from the barb. Hot water, then X-ray for barb fragments. Chest wounds can be fatal.", 240, 228],
+    [4, "Cone snail", "Conus spp.", "Conotoxins", "A beautiful shell with a harpoon tooth. Stings the hand that picks it up: numbness then paralysis. No antivenom.", 78, 270],
+    [5, "Toadfish", "Tetraodontidae", "Tetrodotoxin", "A pufferfish. Eating it causes numb lips, then paralysis. Never eat toadfish.", 735, 320],
+    [6, "Blue-ringed octopus", "Hapalochlaena spp.", "Tetrodotoxin", "A painless bite, then numbness and paralysis within minutes, while the person stays fully awake. No antivenom.", 140, 314],
+    [7, "Box jellyfish", "Chironex fleckeri", "Cardiotoxic venom", "Tropical waters. Whip-like burning welts and can stop the heart within minutes. Vinegar, then antivenom.", 550, 216],
+    [8, "Coral trout", "Plectropomus spp.", "Ciguatoxin", "Big reef fish build up toxin from algae. Gastro, then tingling, hot-cold reversal and a slow heart. Cooking doesn’t help.", 720, 226]
+  ];
+  var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day. In an emergency, call 000.";
+  var CASES = [
+    { id: "dex", solver: "the ICU team", team: "&#129729; ICU’s plan", who: "Dex", label: "Case 1 · Dex", file: "Case file 004 · Dex, fox detective, rock pool explorer", ans: 6,
+      note: "Dex the fox was found on the rocks at low tide, unable to move or speak.",
+      clues: [["Symptoms", "Numb lips and tongue, then trouble swallowing and talking, all within about 15 minutes."],
+        ["Exam", "Droopy eyelids and floppy limbs. He can’t speak, but squeezes your hand when asked. Fully awake."],
+        ["Breathing", "Breathing 6 times a minute and getting shallower. Pupils wide and sluggish."],
+        ["Tests", "ECG normal. Glucose and sodium normal. He hasn’t eaten anything since breakfast."],
+        ["Skin", "A tiny puncture on the back of his paw, barely bleeding. He says it didn’t hurt at all."],
+        ["Evidence", "Friends say he was showing off something small and yellow-brown from a rock pool, which flashed bright blue rings when poked."]],
+      win: "The blue-ringed octopus carries tetrodotoxin, which blocks sodium channels in nerves. The bite is often painless, then paralysis spreads within minutes while the brain stays fully awake.<br><br><b>Pearl:</b> people have survived by being given rescue breaths for hours on the rocks. Breathing support alone is life-saving.",
+      plan: "<b>Antidote:</b> none. Tetrodotoxin has no antivenom.<br><b>First aid:</b> pressure immobilisation bandage over the bite, call 000, rescue breaths or bag-mask ventilation as soon as breathing fails. CPR if no pulse.<br><b>Hospital:</b> intubation and ventilation until the toxin wears off (usually 4 to 24 hours), with sedation. Keep talking to him: he can hear everything.",
+      recov: "Ventilated for 15 hours, then breathing on his own. Home on day 3, banned from picking up octopuses.",
+      tip: "Never pick up octopuses or shells in rock pools. Blue-ringed octopuses live all around Australia, not just in the tropics.",
+      why: { 1: "Stonefish stings are agonising. Dex felt nothing, then went floppy.", 8: "Ciguatera comes from eating reef fish and causes gastro and tingling, not paralysis within minutes.", 7: "Box jellyfish stings burn intensely and leave whip marks. Dex has a tiny painless puncture.", 2: "Bluebottles cause a burning red line, not paralysis.", 4: "Close! Cone snails also paralyse. But the evidence in the pool is an octopus with flashing blue rings.", 5: "Toadfish cause paralysis only when eaten. Dex didn’t eat anything.", 3: "Stingray barbs cause a deep, painful gash, not painless paralysis." } },
+    { id: "ziggy", solver: "the ED team", team: "&#128657; The ED team’s plan", who: "Ziggy", label: "Case 2 · Ziggy", file: "Case file 005 · Ziggy, zebra (secretly a unicorn), barefoot wader", ans: 1,
+      note: "Ziggy was found on the sand at dusk, crying with pain.",
+      clues: [["Symptoms", "Instant, excruciating pain in one foot, the worst she’s ever felt, now spreading up the leg."],
+        ["Exam", "Foot swollen and blue-grey. Sweating, pulse 110. BP and breathing normal."],
+        ["Course", "Still screaming in pain after an hour and two doses of oral pain relief."],
+        ["Wound", "Two small puncture wounds on the sole. No long cut, no whip-like red lines."],
+        ["Tests", "ECG normal. Clotting normal. X-ray: no fragments left in the wound."],
+        ["Evidence", "She waded barefoot across the reef flat and stood on what she thought was a lumpy rock."]],
+      win: "Stonefish are the most venomous fish in the world. Spines on the back inject venom when trodden on, causing some of the worst pain known in medicine.<br><br><b>Pearl:</b> the venom is broken down by heat. Hot water immersion often eases the pain within minutes.",
+      plan: "<b>First aid:</b> immerse the foot in hot water, as hot as tolerable without scalding (test with an unaffected limb, around 45°C), for up to 90 minutes.<br><b>Pain:</b> regional nerve block or local anaesthetic into the wound.<br><b>Antivenom:</b> CSL stonefish antivenom, 1 vial (2000 units) IV for severe pain not settling, repeated if needed.<br><b>Also:</b> X-ray for spine fragments, tetanus booster, and watch for infection.",
+      recov: "Pain gone within an hour of the antivenom. Home the same night, with reef shoes on order.",
+      tip: "Wear thick-soled reef shoes and shuffle your feet when walking on reef flats and in shallow rocky water.",
+      why: { 6: "Blue-ringed octopus bites are painless and cause paralysis. Ziggy is in agony, not paralysed.", 8: "Ciguatera comes from eating fish, not treading on it.", 7: "Box jellyfish stings leave long whip-like welts across the skin, not 2 punctures on the sole.", 2: "Bluebottles sting with tentacles, leaving a red line, and the pain isn’t this extreme.", 4: "Cone snails sting the hand that picks them up, and cause numbness rather than agony.", 5: "Toadfish are only dangerous to eat.", 3: "Close! Stingrays also cause severe pain and get hot water. But a barb leaves a deep gash, not 2 small punctures, and the culprit was a rock-like fish." } },
+    { id: "cipher", solver: "the toxicologist", team: "&#129514; The toxicologist’s plan", who: "Cipher", label: "Case 3 · Cipher", file: "Case file 006 · Cipher, crossword cat, keen on fish", ans: 8,
+      note: "Cipher the cat was found curled up on the jetty, feeling awful.",
+      clues: [["Symptoms", "Vomiting and diarrhoea, then tingling lips, fingers and toes."],
+        ["Oddities", "Cold water feels hot and hot feels cold. Her teeth feel loose. She’s itchy all over."],
+        ["Exam", "Pulse 46, BP 92/60. Pupils normal. No paralysis, breathing normal."],
+        ["Tests", "ECG: sinus bradycardia. Bloods normal. No routine test confirms the poison."],
+        ["History", "It started 6 hours after a fish dinner. Two friends who shared it have tingling lips too."],
+        ["Evidence", "The fish was a big reef predator from the outer reef, not a puffer: red, with blue spots."]],
+      win: "Ciguatera comes from big reef predators that build up ciguatoxin from the algae their prey eat. The giveaway is hot-cold reversal: cold feels burning hot.<br><br><b>Pearl:</b> it’s the most common fish poisoning in the world. Cooking, freezing and smoking don’t destroy the toxin, and it can’t be tasted.",
+      plan: "<b>Antidote:</b> none. Mannitol was used for years, but a trial showed it doesn’t help.<br><b>Treatment:</b> IV fluids for the gastro and low blood pressure. Atropine (0.6 mg IV, repeated) for a symptomatic slow heart rate. Amitriptyline or gabapentin for lingering nerve symptoms.<br><b>Advice:</b> avoid alcohol, fish, nuts and caffeine for 3 to 6 months: they can bring symptoms back. Report it to public health.",
+      recov: "Home on day 2. The tingling and hot-cold mix-up faded over 6 weeks.",
+      tip: "Big reef predators (coral trout, Spanish mackerel, barracuda) carry the most risk. Smaller reef fish are safer to eat.",
+      why: { 6: "Blue-ringed octopus bites cause paralysis within minutes, not gastro and hot-cold reversal.", 1: "Stonefish stings cause agonising foot pain, not a fishy gastro.", 7: "Box jellyfish stings leave welts and can stop the heart quickly. Cipher wasn’t stung.", 2: "Bluebottles sting the skin. Cipher’s problem started after dinner.", 4: "Cone snails sting the hand. Cipher ate something.", 5: "Close! Toadfish are also poisonous to eat. But tetrodotoxin causes numbness and paralysis, not hot-cold reversal, and the leftovers are a large red reef fish.", 3: "Stingrays cause a painful gash, not gastro and tingling." } }
+  ];
+  Array.prototype.forEach.call(document.querySelectorAll('#scene > g[transform^="translate"], [id^="prop-"] > g[transform^="translate"]'), function (g) { var t = g.getAttribute("transform"); if (!/scale/.test(t)) g.setAttribute("transform", t + " scale(1.45)"); });
+  var $ = function (id) { return document.getElementById(id); };
+  var NS = "http://www.w3.org/2000/svg", C, shown, lives, pick, out, done;
+
+  var SCENE = 2, SCENE_NAME = "Low Tide";
+  var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
+  function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
+  function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
+  function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
+  function celebrate(stars, name) {
+    var host = document.body, cols = ["#F5C518", "#2E8B57", "#B23A48", "#4FB3D9", "#B48CFF", "#F28C28"], h = "";
+    for (var k = 0; k < 60; k++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[k % cols.length] + ";animation-delay:" + (Math.random() * .6).toFixed(2) + "s;animation-duration:" + (1.6 + Math.random() * 1.6).toFixed(2) + 's"></i>';
+    var solved = Object.keys(TQ).filter(function (k) { return TQ[k] > 0; }).length, sceneDone = CASES.every(function (c) { return TQ[c.id] > 0; });
+    var extra = solved >= 30 ? "All 30 cases closed. Toxicology December complete! &#127942;" : sceneDone ? SCENE_NAME + " cleared: all 3 cases closed." : solved + " of 30 cases closed this December.";
+    var o = document.createElement("div"); o.className = "cel"; o.setAttribute("role", "status");
+    o.innerHTML = '<div class="cf-wrap" aria-hidden="true">' + h + '</div><div class="cel-stamp">Case closed</div><svg class="cel-m" viewBox="0 0 120 120" aria-hidden="true">' + V[C.id][1] + '</svg><div class="cel-s">' + "★".repeat(stars) + "☆".repeat(3 - stars) + '</div><p class="cel-t">' + C.who + " is on the mend, thanks to you and " + C.solver + ". " + extra + '</p><span class="cel-tap">Tap to read the plan</span>';
+    o.addEventListener("click", function () { o.remove(); });
+    host.appendChild(o); setTimeout(function () { if (o.parentNode) o.remove(); }, 6000);
+  }
+  P.forEach(function (p) { p[5] = Math.min(730, Math.max(58, p[5])); p[6] = Math.min(450, Math.max(132, p[6])); });
+  P.forEach(function (p) {
+    var g = document.createElementNS(NS, "g"); g.setAttribute("class", "tagbtn"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "Evidence " + p[0] + ": " + p[1]);
+    g.innerHTML = '<rect x="' + (p[5] - 13) + '" y="' + (p[6] - 13) + '" width="26" height="26" rx="4" fill="#F5C518" stroke="#1A1F1B" stroke-width="1.5"/><text x="' + p[5] + '" y="' + (p[6] + 5) + '" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#1A1F1B">' + p[0] + "</text>";
+    g.addEventListener("click", function () { select(p[0]); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p[0]); } });
+    $("tags").appendChild(g);
+  });
+  $("suspects").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) select(+b.getAttribute("data-n")); });
+  function drawCases() { $("cases").innerHTML = CASES.map(function (c, i) { var s = TQ[c.id]; return '<button type="button" data-i="' + i + '"' + (isOpen(i) ? "" : " disabled") + ">" + c.label + (isOpen(i) ? (s > 0 ? '<span class="st">' + "★".repeat(s) + "</span>" : s === 0 ? '<span class="st">✓</span>' : "") : " · opens " + dayOf(i) + " Dec") + "</button>"; }).join(""); }
+  drawCases();
+  $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
+  function load(i) {
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each creature, reveal clues one at a time, and accuse the culprit. Fewer clues, more stars.";
+    $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
+    $("victim").innerHTML = V[C.id][0];
+    CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
+    $("suspects").innerHTML = P.map(function (p) { return '<button type="button" data-n="' + p[0] + '"><span class="n">' + p[0] + "</span>" + p[1] + "</button>"; }).join("");
+    $("dossier").innerHTML = "Tap a yellow evidence tag on the beach, or a creature below, to read its file. When you’re sure, tap <b>Accuse</b>.";
+    $("accuse").disabled = true; $("accuse").textContent = "Accuse";
+    renderClues();
+  }
+  function select(n) {
+    var p = P[n - 1]; pick = n;
+    $("dossier").innerHTML = "<b>Evidence " + p[0] + ": " + p[1] + '</b> <span class="sci">' + p[2] + "</span><br><b>Toxin:</b> " + p[3] + "<br>" + p[4];
+    Array.prototype.forEach.call($("suspects").children, function (b) { b.style.outline = +b.getAttribute("data-n") === n ? "2px solid #F5C518" : ""; });
+    $("accuse").disabled = done || !!out[n]; $("accuse").textContent = "Accuse the " + p[1].toLowerCase();
+  }
+  function renderClues() {
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (c) { return '<li><span class="k">' + c[0] + "</span><p>" + c[1] + "</p></li>"; }).join("");
+    $("left").textContent = shown < C.clues.length ? (C.clues.length - shown) + " clues left" : "All clues revealed";
+    $("more").disabled = done || shown >= C.clues.length;
+  }
+  function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
+  function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
+  $("accuse").onclick = function () {
+    if (!pick || done) return;
+    var name = P[C.ans - 1][1];
+    if (pick === C.ans) {
+      done = true; var stars = Math.max(1, (shown <= 2 ? 3 : shown <= 4 ? 2 : 1) - (lives < 3 ? 1 : 0));
+      $("verdict").innerHTML = '<div class="verdict yes"><div class="stars">' + "★".repeat(stars) + "☆".repeat(3 - stars) + "</div><b>" + name + ". You and " + C.solver + " cracked it on clue " + shown + ".</b> " + C.win + "</div>" + planHtml();
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+      shown = C.clues.length; renderClues(); $("accuse").disabled = true; recover(); if (!(TQ[C.id] >= stars)) TQ[C.id] = stars; tqSave(); var keep = C; drawCases(); Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", CASES[k] === keep ? "true" : "false"); }); celebrate(stars);
+    } else {
+      lives--; out[pick] = 1; $("lives").textContent = "●".repeat(lives) + "○".repeat(3 - lives);
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === pick) b.classList.add("out"); });
+      var why = C.why[pick] || "Not this time.";
+      if (!lives) { done = true; why += " Out of accusations. Luckily " + C.solver + " worked it out: " + name.toLowerCase() + "."; shown = C.clues.length; renderClues(); }
+      $("verdict").innerHTML = '<div class="verdict no"><b>Not that one.</b> ' + why + "</div>" + (lives ? "" : planHtml());
+      if (!lives) { recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); } }
+      $("accuse").disabled = true;
+    }
+  };
+  (function () { var pan = $("pan"), hint = $("swipe"); if (pan.scrollWidth > pan.clientWidth) pan.scrollLeft = (pan.scrollWidth - pan.clientWidth) * 0.5;
+    setTimeout(function () { pan.addEventListener("scroll", function () { if (hint) hint.style.opacity = 0; }, { passive: true }); }, 400); setTimeout(function () { if (hint) hint.style.opacity = 0; }, 5000); })();
+  (function () { var q = +((location.search.match(/[?&]c=(\d)/) || [])[1] || 0) - 1, open = CASES.map(function (c, i) { return isOpen(i) ? i : -1; }).filter(function (i) { return i > -1; });
+    if (!open.length) { $("note").innerHTML = '<span class="lockmsg">&#128274; This scene opens on ' + dayOf(0) + " December. One new case every day of Toxicology December.</span>"; document.querySelector(".grid").hidden = true; return; }
+    load(open.indexOf(q) > -1 ? q : open[open.length - 1]); })();
+})();
+</script>
+
+</body></html>

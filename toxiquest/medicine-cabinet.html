@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>*{box-sizing:border-box}[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}
+.cel{position:fixed;inset:0;display:grid;place-items:center;align-content:center;gap:6px;background:rgba(6,12,9,.93);backdrop-filter:blur(3px);z-index:50;cursor:pointer;animation:celin .3s ease-out}
+.cel .cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cel .cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.95}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+.cel-stamp{font:400 clamp(26px,7vw,48px)/1 var(--display);color:#F5C518;border:4px solid #F5C518;border-radius:10px;padding:6px 16px;transform:rotate(-6deg);animation:stamp .45s cubic-bezier(.2,1.6,.4,1) both;letter-spacing:.04em;text-transform:uppercase}
+.cel .cel-m{width:130px;height:130px;animation:hop .9s ease-in-out .3s 3}
+.cel-s{font-size:clamp(24px,6vw,34px);letter-spacing:6px;color:#F5C518}
+.cel-t{margin:0;font:600 15px var(--body);color:#fff;text-align:center;max-width:30em;padding:0 16px}
+.cel-tap{font:500 11px var(--mono);color:#C9D8CE;letter-spacing:.1em;text-transform:uppercase}
+@keyframes stamp{from{transform:scale(2.4) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-4deg)}}
+@keyframes celin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
+.cases button[disabled]{opacity:.5;cursor:not-allowed}
+.cases button .st{color:var(--tag);margin-left:4px}
+.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
+</style>
+<title>Toxiquest: Medicine Cabinet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one crime-scene garden at dusk on top, the case file underneath; evidence tags in the garden open plant dossiers. Single dusk look by choice. */
+:root{
+  --night:#13241C; --moss:#1F3A2C; --leaf:#2F5A3F; --mist:#D8E6D9;
+  --paper:#F2F0E6; --ink:#1A1F1B; --tag:#F5C518; --tox:#B23A48; --ok:#2E8B57;
+  --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--night);color:var(--mist)}
+body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
+.lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
+.lives b{color:var(--tox);letter-spacing:3px}
+.scene{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #2C4A38}
+.scene svg{display:block;width:100%;height:auto}
+.tagbtn{cursor:pointer}
+.tagbtn:focus-visible rect{stroke:#fff;stroke-width:3}
+.tagbtn:hover rect{fill:#FFE15A}
+.tape{position:absolute;left:-8%;right:-8%;top:16px;transform:rotate(-2.5deg);background:var(--tag);color:var(--ink);font:500 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:5px 0;pointer-events:none;opacity:.92}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.file{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:grid;gap:12px;min-width:0;position:relative}
+.file h2{font:400 22px var(--display);margin:0}
+.label{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5B6B5F;margin:0}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.clues li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #DCD8C8;animation:in .35s ease-out}
+.clues li .k{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--leaf);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.clues li p{margin:0;font-size:15px}
+@keyframes in{from{opacity:.3;transform:translateY(4px)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.main{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--leaf);color:#fff;cursor:pointer}
+button.main:hover{background:#3A6E4C}
+button.main:focus-visible,button.ghost:focus-visible,.suspects button:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+button.ghost{font:600 14px var(--body);border:2px solid var(--leaf);border-radius:999px;padding:10px 16px;background:transparent;color:var(--leaf);cursor:pointer}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.side{background:var(--moss);border:1px solid #2C4A38;border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.side h2{font:400 20px var(--display);margin:0;color:#fff}
+.suspects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.suspects button{display:flex;gap:8px;align-items:center;text-align:left;font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}
+.suspects button .n{font:500 11px var(--mono);background:var(--tag);color:var(--ink);border-radius:4px;padding:2px 5px}
+.suspects button.out{opacity:.4;text-decoration:line-through}
+.suspects button.win{border-color:var(--ok);background:#1E4A30}
+.dossier{background:#0F1C16;border:1px dashed #3B5E48;border-radius:12px;padding:12px 14px;font-size:14px;min-height:72px}
+.dossier b{color:#fff}
+.dossier .sci{font-style:italic;color:#9FB8A6}
+.verdict{border-radius:12px;padding:12px 14px;font-size:15px}
+.verdict.no{background:#F6DADD;color:#6B1A24}
+.verdict.yes{background:#DDF1E4;color:#14522F}
+.stars{font-size:26px;letter-spacing:4px}
+.foot{font-size:12px;color:#7F9A88;text-align:center}
+@media (prefers-reduced-motion:reduce){.clues li{animation:none}.sway{animation:none!important}}
+.pan{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pan::-webkit-scrollbar{display:none}
+.pan svg{width:100%;min-width:100%}
+.swipe{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;background:rgba(10,20,14,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .6s}
+@media (max-width:640px){.tagbtn{transform-box:fill-box;transform-origin:50% 50%;transform:scale(1.5)}.scene{border-radius:12px}}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:500 12px var(--mono)}.scenes a{color:var(--mist);text-decoration:none;border:1px solid #3B5E48;border-radius:999px;padding:6px 12px}.scenes a[aria-current]{background:#F2F0E6;color:#1A1F1B;border-color:#F2F0E6}.scenes span{color:#7F9A88}
+.cases{display:flex;gap:8px;flex-wrap:wrap}.cases button{font:600 14px var(--body);border-radius:999px;padding:9px 16px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}.cases button[aria-pressed=true]{background:var(--tag);color:var(--ink);border-color:var(--tag)}.cases button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.recov{border-radius:12px;padding:12px 14px;font-size:15px;background:#E3EEF9;color:#173A5E;margin-top:10px}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.ff{animation:ff 3s ease-in-out infinite}@keyframes ff{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none}}
+</style></head><body>
+
+<div class="wrap">
+  <nav class="scenes" aria-label="Scenes"><a class="tqcal" href="./">&#128197; December calendar</a><a href="herb-patch.html">1 · The Herb Patch</a><a href="low-tide.html">2 · Low Tide</a><a href="whiteout.html">3 · Whiteout</a><a href="off-track.html">4 · Off Track</a><a href="dinner-party.html">5 · Dinner Party</a><a href="medicine-cabinet.html" aria-current="page">6 · Medicine Cabinet</a><a href="the-shed.html">7 · The Shed</a><a href="dry-heat.html">8 · Dry Heat</a><a href="canopy.html">9 · Canopy</a><a href="midnight-ward.html">10 · Midnight Ward</a></nav>
+  <div class="top">
+    <div>
+      <p class="kick">Toxiquest · Scene 6 of 10: the bathroom · 3 cases</p>
+      <h1>Medicine Cabinet</h1>
+    </div>
+    <p class="lives" aria-live="polite">Accusations left <b id="lives">●●●</b></p>
+  </div>
+  <div class="cases" id="cases" role="group" aria-label="Choose a case"></div>
+  <p class="note" id="note"></p>
+
+  <div class="scene">
+    <div class="pan" id="pan"><svg viewBox="30 112 760 358" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A night-time bathroom: an open mirror cabinet full of medicine boxes and bottles, a pill organiser and a spilled bottle of red iron tablets by the sink, sleeping tablets on the toilet cistern, bathroom scales on the floor, and a bathtub with a rubber duck. One patient lies asleep and unwell on the floor.">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D2350"/><stop offset=".38" stop-color="#4B3F78"/><stop offset=".7" stop-color="#B0627A"/><stop offset="1" stop-color="#F0A86C"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#355E3E"/><stop offset=".5" stop-color="#22432D"/><stop offset="1" stop-color="#11241A"/></linearGradient>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#5C4C70"/></linearGradient>
+        <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324A"/><stop offset="1" stop-color="#1E3330"/></linearGradient>
+        <linearGradient id="trunk" x1="0" x2="1"><stop offset="0" stop-color="#3B2C20"/><stop offset=".5" stop-color="#6B5440"/><stop offset="1" stop-color="#2E2219"/></linearGradient>
+        <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D493E0"/><stop offset="1" stop-color="#7E3B95"/></linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6B8"/><stop offset="1" stop-color="#A9BB7C"/></linearGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FA35E"/><stop offset="1" stop-color="#2F5A36"/></linearGradient>
+        <linearGradient id="castor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0454C"/><stop offset="1" stop-color="#5E1C24"/></linearGradient>
+        <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3E2A"/><stop offset="1" stop-color="#2E1F15"/></linearGradient>
+        <radialGradient id="moonglow"><stop offset="0" stop-color="#FFF6DC" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DC" stop-opacity="0"/></radialGradient>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".18"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+        <radialGradient id="berry" cx=".35" cy=".35"><stop offset="0" stop-color="#5A5A6A"/><stop offset=".35" stop-color="#151518"/><stop offset="1" stop-color="#050506"/></radialGradient>
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8E8" stop-opacity="0"/><stop offset=".5" stop-color="#C9D8E8" stop-opacity=".16"/><stop offset="1" stop-color="#C9D8E8" stop-opacity="0"/></linearGradient>
+        <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer><feBlend in2="SourceGraphic" mode="multiply"/></filter>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="scene"></g>
+      <!-- The walker, asleep and unwell, and the spilled teacup -->
+      <ellipse cx="410" cy="392" rx="120" ry="52" fill="url(#lamp)"/>
+      <g id="victim" transform="translate(345 318) rotate(-14 60 60) scale(1.2)"></g>
+      
+      <g id="fx"></g>
+      <rect width="800" height="470" fill="url(#vig)" opacity=".45" pointer-events="none"/>
+      <rect width="800" height="470" filter="url(#grain)" fill="#888" opacity=".2" pointer-events="none" style="mix-blend-mode:multiply"/>
+      <g id="tags"></g>
+    </svg></div>
+    
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg", sc = document.getElementById("scene"), fx = document.getElementById("fx");
+  var seed = 73; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function R(a, b) { return a + (b - a) * r(); }
+  function el(p, tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+  function g(p, a) { return el(p, "g", a || {}); }
+  document.querySelector("svg defs").insertAdjacentHTML("beforeend",
+    '<linearGradient id="mirror" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9FC4CC"/><stop offset=".5" stop-color="#D8ECEF"/><stop offset="1" stop-color="#7FA8B2"/></linearGradient>' +
+    '<radialGradient id="nl"><stop offset="0" stop-color="#9CE0FF" stop-opacity=".6"/><stop offset="1" stop-color="#9CE0FF" stop-opacity="0"/></radialGradient>' +
+    '<linearGradient id="tub" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#BFD0D6"/></linearGradient>');
+  // tiled wall
+  el(sc, "rect", { width: 800, height: 470, fill: "#2E5A64" });
+  for (var x = 0; x < 800; x += 26) for (var y = 100; y < 300; y += 26) el(sc, "rect", { x: x + 1, y: y + 1, width: 24, height: 24, rx: 2, fill: (x / 26 + y / 26) % 7 ? "#3E7280" : "#5B98A6", opacity: .9 });
+  // floor tiles
+  el(sc, "rect", { y: 300, width: 800, height: 170, fill: "#1E2A30" });
+  for (var row = 0; row < 6; row++) for (var c = 0; c < 22; c++) if ((row + c) % 2) { var y0 = 300 + row * 28, x0 = c * 40 - row * 8; el(sc, "rect", { x: x0, y: y0, width: 40, height: 28, fill: "#E6ECEE", opacity: .85 }); }
+  el(sc, "rect", { y: 296, width: 800, height: 6, fill: "#14343C" });
+  // toilet with cistern (left)
+  var tl = g(sc, { transform: "translate(132 300)" }); el(tl, "rect", { x: -26, y: -62, width: 52, height: 40, rx: 6, fill: "url(#tub)", stroke: "#8AA4AC" }); el(tl, "rect", { x: -6, y: -58, width: 12, height: 4, rx: 2, fill: "#B8C8CC" });
+  el(tl, "path", { d: "M-24 -20 h48 q0 30 -14 36 h-20 q-14 -6 -14 -36z", fill: "url(#tub)", stroke: "#8AA4AC" }); el(tl, "ellipse", { cy: -20, rx: 26, ry: 6, fill: "#E8F0F2", stroke: "#8AA4AC" });
+  // sleeping tablets box on cistern
+  el(tl, "rect", { x: -12, y: -74, width: 24, height: 12, rx: 2, fill: "#3B4FA3" }); el(tl, "path", { d: "M-6 -68 a4 4 0 1 0 4 -4 a3 3 0 0 1 -4 4z", fill: "#FFE08A" });
+  // vanity bench and sink
+  el(sc, "rect", { x: 280, y: 250, width: 240, height: 14, rx: 3, fill: "#E8E0D0" }); el(sc, "rect", { x: 290, y: 264, width: 220, height: 40, fill: "#6E4A3A" }); el(sc, "path", { d: "M400 264 v40 M345 284 h10 M445 284 h10", stroke: "#4A2E22", "stroke-width": 2 });
+  el(sc, "ellipse", { cx: 400, cy: 254, rx: 36, ry: 6, fill: "#CFDDE2", stroke: "#8AA4AC" }); el(sc, "path", { d: "M400 236 v-10 q0 -6 10 -6", stroke: "#B8C8CC", "stroke-width": 4, fill: "none" });
+  // drip
+  var dr = el(fx, "circle", { cx: 410, cy: 236, r: 1.6, fill: "#BFE6F5", "class": "ff" });
+  // mirror cabinet, doors open
+  el(sc, "rect", { x: 300, y: 118, width: 200, height: 112, rx: 4, fill: "#F2F0E6", stroke: "#8A9A9E", "stroke-width": 3 });
+  el(sc, "path", { d: "M300 118 L262 128 L262 222 L300 230z", fill: "url(#mirror)", stroke: "#8A9A9E", "stroke-width": 2 });
+  el(sc, "path", { d: "M500 118 L538 128 L538 222 L500 230z", fill: "url(#mirror)", stroke: "#8A9A9E", "stroke-width": 2 });
+  el(sc, "path", { d: "M304 156 h192 M304 192 h192", stroke: "#B8B2A0", "stroke-width": 3 });
+  // shelf 1: paracetamol boxes, oxycodone
+  [[318, "#E03A3A"], [338, "#2E86DE"], [358, "#F2C230"]].forEach(function (b) { el(sc, "rect", { x: b[0] - 8, y: 132, width: 16, height: 22, rx: 1.5, fill: b[1] }); el(sc, "rect", { x: b[0] - 8, y: 140, width: 16, height: 5, fill: "#fff", opacity: .8 }); });
+  el(sc, "rect", { x: 420, y: 140, width: 22, height: 14, rx: 2, fill: "#C9D2D8" }); for (var i = 0; i < 4; i++) el(sc, "circle", { cx: 424 + i * 5, cy: 147, r: 1.8, fill: "#E8743B" });
+  el(sc, "rect", { x: 456, y: 134, width: 12, height: 20, rx: 2, fill: "#8A6A3A" }); el(sc, "rect", { x: 455, y: 130, width: 14, height: 5, fill: "#fff" });
+  // shelf 2: amitriptyline bottle, aspirin tube, cotton buds
+  el(sc, "rect", { x: 372, y: 170, width: 16, height: 20, rx: 3, fill: "#E8A13A", opacity: .9 }); el(sc, "rect", { x: 371, y: 165, width: 18, height: 6, rx: 1, fill: "#fff" }); el(sc, "rect", { x: 374, y: 176, width: 12, height: 7, fill: "#fff" });
+  el(sc, "rect", { x: 462, y: 172, width: 16, height: 18, rx: 2, fill: "#F2F0E6", stroke: "#2E86DE" }); el(sc, "path", { d: "M465 180 h10", stroke: "#2E86DE", "stroke-width": 2 });
+  el(sc, "rect", { x: 312, y: 172, width: 24, height: 18, rx: 3, fill: "#BFE6F5", opacity: .7 });
+  // shelf 3: toothbrushes, perfume
+  el(sc, "rect", { x: 320, y: 204, width: 14, height: 22, rx: 3, fill: "#F49AB8" }); el(sc, "path", { d: "M436 226 v-22 M444 226 v-24", stroke: "#4FB3D9", "stroke-width": 3 });
+  // weekly pill organiser (warfarin)
+  var dz = g(sc, { transform: "translate(320 248)" }); el(dz, "rect", { x: -26, y: -6, width: 52, height: 8, rx: 2, fill: "#B48CFF" }); for (var i = 0; i < 7; i++) el(dz, "rect", { x: -25 + i * 7.3, y: -5, width: 6, height: 6, rx: 1, fill: ["#F2C230", "#F2C230", "#F49A8A", "#F2C230", "#F2C230", "#F49A8A", "#F2C230"][i], opacity: .9 });
+  // iron bottle on its side with red tablets spilled
+  var ib = g(sc, { transform: "translate(470 248) rotate(-80)" }); el(ib, "rect", { x: -7, y: -12, width: 14, height: 20, rx: 3, fill: "#fff", stroke: "#8AA4AC" }); el(ib, "rect", { x: -6, y: -3, width: 12, height: 6, fill: "#C24A3A" });
+  for (var i = 0; i < 9; i++) el(sc, "ellipse", { cx: R(484, 512), cy: R(245, 256), rx: 2.6, ry: 1.8, fill: "#C2283A" });
+  for (var i = 0; i < 7; i++) el(sc, "ellipse", { cx: R(300, 520), cy: R(380, 450), rx: 2.6, ry: 1.8, fill: "#C2283A" });
+  // Basil the cat, enjoying a bubble bath
+  document.querySelector("svg defs").insertAdjacentHTML("beforeend", '<clipPath id="bathclip"><rect x="556" y="100" width="230" height="186"/></clipPath>');
+  sc.insertAdjacentHTML("beforeend", "<g clip-path=\"url(#bathclip)\"><g transform=\"translate(596 218) scale(.62)\"><ellipse cx=\"120\" cy=\"248\" rx=\"62\" ry=\"7\" fill=\"#000\" opacity=\".08\"/><path d=\"M150 236 q60 6 66 -40 q4 -26 -12 -30\" stroke=\"#E2DCD3\" stroke-width=\"30\" fill=\"none\" stroke-linecap=\"round\"/>\n<path d=\"M150 236 q60 6 66 -40 q4 -26 -12 -30\" stroke=\"#FFFFFF\" stroke-width=\"24\" fill=\"none\" stroke-linecap=\"round\"/>\n<path d=\"M200.0 158.6 L191.6 157.1 L194.9 167.1z\" fill=\"#FFFFFF\"/><path d=\"M204.2 157.0 L193.9 153.8 L196.1 162.9z\" fill=\"#FFFFFF\"/><path d=\"M208.6 157.1 L201.7 149.8 L198.9 159.4z\" fill=\"#FFFFFF\"/><path d=\"M212.6 159.0 L209.4 147.6 L202.8 157.3z\" fill=\"#FFFFFF\"/><path d=\"M215.6 162.3 L214.9 154.4 L207.2 156.9z\" fill=\"#FFFFFF\"/><path d=\"M217.1 166.5 L223.3 157.5 L211.4 158.2z\" fill=\"#FFFFFF\"/><path d=\"M216.8 170.9 L226.2 164.8 L214.8 161.1z\" fill=\"#FFFFFF\"/>\n<path d=\"M78 236 q-8 -70 14 -110 h56 q22 40 14 110 z\" fill=\"#FFFFFF\" stroke=\"#E2DCD3\" stroke-width=\"2\"/>\n<path d=\"M162.1 224.1 L173.5 221.3 L164.1 214.3z\" fill=\"#FFFFFF\"/><path d=\"M158.0 229.3 L165.3 227.1 L162.1 220.2z\" fill=\"#FFFFFF\"/><path d=\"M152.0 233.7 L162.9 235.4 L158.1 225.8z\" fill=\"#FFFFFF\"/><path d=\"M144.4 237.2 L154.0 239.4 L152.0 230.8z\" fill=\"#FFFFFF\"/><path d=\"M135.5 239.4 L143.9 244.9 L144.4 234.9z\" fill=\"#FFFFFF\"/><path d=\"M125.9 240.4 L132.8 245.3 L135.6 238.0z\" fill=\"#FFFFFF\"/><path d=\"M115.9 240.1 L121.1 247.5 L125.9 239.9z\" fill=\"#FFFFFF\"/><path d=\"M106.2 238.4 L109.2 250.0 L116.0 240.5z\" fill=\"#FFFFFF\"/><path d=\"M97.1 235.6 L97.3 245.2 L106.2 239.7z\" fill=\"#FFFFFF\"/><path d=\"M89.3 231.6 L88.5 240.1 L97.2 237.7z\" fill=\"#FFFFFF\"/><path d=\"M82.9 226.7 L81.8 234.1 L89.3 234.4z\" fill=\"#FFFFFF\"/><path d=\"M78.5 221.2 L73.6 228.9 L83.0 230.2z\" fill=\"#FFFFFF\"/><path d=\"M76.1 215.4 L70.0 222.7 L78.5 225.1z\" fill=\"#FFFFFF\"/>\n<path d=\"M96 236 v-40 M144 236 v-40\" stroke=\"#E2DCD3\" stroke-width=\"2\"/>\n<ellipse cx=\"102\" cy=\"238\" rx=\"13\" ry=\"8\" fill=\"#FFFFFF\" stroke=\"#E2DCD3\" stroke-width=\"1.5\"/><ellipse cx=\"138\" cy=\"238\" rx=\"13\" ry=\"8\" fill=\"#FFFFFF\" stroke=\"#E2DCD3\" stroke-width=\"1.5\"/>\n<path d=\"M98 236 v3 M104 236 v3 M134 236 v3 M140 236 v3\" stroke=\"#E2DCD3\" stroke-width=\"1.2\"/>\n<path d=\"M162.5 142.8 L175.3 142.4 L165.4 133.3z\" fill=\"#FFFFFF\"/><path d=\"M159.0 147.6 L173.0 149.9 L163.4 138.6z\" fill=\"#FFFFFF\"/><path d=\"M154.6 151.8 L170.2 153.7 L160.4 143.6z\" fill=\"#FFFFFF\"/><path d=\"M149.3 155.4 L159.7 164.2 L156.3 148.3z\" fill=\"#FFFFFF\"/><path d=\"M143.2 158.4 L154.4 165.0 L151.3 152.4z\" fill=\"#FFFFFF\"/><path d=\"M136.5 160.5 L149.7 170.8 L145.4 156.0z\" fill=\"#FFFFFF\"/><path d=\"M129.5 161.9 L139.7 173.8 L139.0 158.8z\" fill=\"#FFFFFF\"/><path d=\"M122.2 162.4 L129.5 172.5 L132.0 160.8z\" fill=\"#FFFFFF\"/><path d=\"M114.8 162.0 L119.7 179.9 L124.8 162.0z\" fill=\"#FFFFFF\"/><path d=\"M107.6 160.7 L110.1 178.0 L117.4 162.4z\" fill=\"#FFFFFF\"/><path d=\"M100.7 158.7 L100.3 169.9 L110.1 161.8z\" fill=\"#FFFFFF\"/><path d=\"M94.2 155.8 L90.8 171.7 L103.1 160.4z\" fill=\"#FFFFFF\"/><path d=\"M88.5 152.2 L85.0 163.2 L96.5 158.2z\" fill=\"#FFFFFF\"/><path d=\"M83.5 148.1 L74.1 161.5 L90.4 155.3z\" fill=\"#FFFFFF\"/><path d=\"M79.4 143.4 L68.8 157.8 L85.2 151.6z\" fill=\"#FFFFFF\"/><path d=\"M76.4 138.3 L63.8 150.9 L80.8 147.3z\" fill=\"#FFFFFF\"/><path d=\"M74.5 133.0 L63.1 142.7 L77.4 142.6z\" fill=\"#FFFFFF\"/>\n<ellipse cx=\"120\" cy=\"134\" rx=\"50\" ry=\"38\" fill=\"#FFFFFF\"/>\n<path d=\"M104 150 l6 12 l6 -10 l6 12 l6 -12 l6 10\" stroke=\"#E2DCD3\" stroke-width=\"1.6\" fill=\"none\"/><path d=\"M84 74 l-10 -54 l38 32 z\" fill=\"#FFFFFF\" stroke=\"#E2DCD3\" stroke-width=\"2\"/><path d=\"M88 66 l-7 -36 l24 22 z\" fill=\"#F5B7B4\"/>\n<path d=\"M156 74 l10 -54 l-38 32 z\" fill=\"#FFFFFF\" stroke=\"#E2DCD3\" stroke-width=\"2\"/><path d=\"M152 66 l7 -36 l-24 22 z\" fill=\"#F5B7B4\"/>\n<path d=\"M82 34 l-6 -10 M158 34 l6 -10\" stroke=\"#E2DCD3\" stroke-width=\"2\"/>\n<path d=\"M159.3 100.2 L168.7 96.0 L160.3 90.2z\" fill=\"#FFFFFF\"/><path d=\"M156.6 106.4 L167.7 104.2 L159.6 96.9z\" fill=\"#FFFFFF\"/><path d=\"M152.4 112.1 L161.5 112.7 L157.3 103.4z\" fill=\"#FFFFFF\"/><path d=\"M146.7 116.9 L160.4 121.7 L153.3 109.4z\" fill=\"#FFFFFF\"/><path d=\"M140.0 120.6 L151.6 124.7 L148.0 114.6z\" fill=\"#FFFFFF\"/><path d=\"M132.3 123.1 L141.5 129.4 L141.4 118.9z\" fill=\"#FFFFFF\"/><path d=\"M124.2 124.3 L130.9 130.9 L133.9 122.0z\" fill=\"#FFFFFF\"/><path d=\"M115.8 124.1 L121.0 137.9 L125.8 123.9z\" fill=\"#FFFFFF\"/><path d=\"M107.7 122.5 L110.1 136.2 L117.5 124.4z\" fill=\"#FFFFFF\"/><path d=\"M100.0 119.6 L99.7 129.5 L109.3 123.5z\" fill=\"#FFFFFF\"/><path d=\"M93.3 115.6 L92.1 128.1 L101.5 121.2z\" fill=\"#FFFFFF\"/><path d=\"M87.6 110.5 L82.1 123.3 L94.5 117.7z\" fill=\"#FFFFFF\"/><path d=\"M83.4 104.6 L74.5 113.0 L88.7 113.1z\" fill=\"#FFFFFF\"/><path d=\"M80.7 98.2 L71.5 107.0 L84.1 107.6z\" fill=\"#FFFFFF\"/><path d=\"M79.7 91.6 L69.7 97.7 L81.1 101.5z\" fill=\"#FFFFFF\"/>\n<ellipse cx=\"120\" cy=\"90\" rx=\"42\" ry=\"36\" fill=\"#FFFFFF\" stroke=\"#EFEBE5\" stroke-width=\"1.5\"/>\n<path d=\"M114 102 h12 l-6 7 z\" fill=\"#F2A3A8\"/>\n<path d=\"M120 109 v4 M120 113 q-5 4 -10 1 M120 113 q6 4 12 0\" stroke=\"#B08B8B\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/>\n<path d=\"M104 106 l-52 -6 M104 110 l-50 6 M104 114 l-44 16 M136 106 l52 -6 M136 110 l50 6 M136 114 l44 16\" stroke=\"#CFC6BB\" stroke-width=\"1.3\"/><ellipse cx=\"104\" cy=\"88\" rx=\"10\" ry=\"8\" fill=\"#A8B98E\"/><ellipse cx=\"136\" cy=\"88\" rx=\"10\" ry=\"8\" fill=\"#A8B98E\"/><ellipse cx=\"104.5\" cy=\"89\" rx=\"2.6\" ry=\"6.2\" fill=\"#2B2340\"/><ellipse cx=\"136.5\" cy=\"89\" rx=\"2.6\" ry=\"6.2\" fill=\"#2B2340\"/><rect x=\"92\" y=\"77\" width=\"24\" height=\"9\" fill=\"#fff\"/><rect x=\"124\" y=\"77\" width=\"24\" height=\"9\" fill=\"#fff\"/><path d=\"M94 86 h20 M126 86 h20\" stroke=\"#BDB3A6\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"107\" cy=\"90\" r=\"1.5\" fill=\"#fff\"/><circle cx=\"139\" cy=\"90\" r=\"1.5\" fill=\"#fff\"/></g><circle cx=\"600\" cy=\"280\" r=\"7\" fill=\"#FFFFFF\" opacity=\".85\" stroke=\"#CFE2EA\"/><circle cx=\"612\" cy=\"276\" r=\"9\" fill=\"#FFFFFF\" opacity=\".85\" stroke=\"#CFE2EA\"/><circle cx=\"628\" cy=\"280\" r=\"6\" fill=\"#FFFFFF\" opacity=\".85\" stroke=\"#CFE2EA\"/><circle cx=\"650\" cy=\"278\" r=\"8\" fill=\"#FFFFFF\" opacity=\".85\" stroke=\"#CFE2EA\"/><circle cx=\"664\" cy=\"281\" r=\"6\" fill=\"#FFFFFF\" opacity=\".85\" stroke=\"#CFE2EA\"/><circle cx=\"586\" cy=\"282\" r=\"5\" fill=\"#FFFFFF\" opacity=\".85\" stroke=\"#CFE2EA\"/></g>");
+  // bathtub (right) with a rubber duck
+  el(sc, "path", { d: "M560 286 h220 v12 q0 40 -30 46 h-160 q-30 -6 -30 -46z", fill: "url(#tub)", stroke: "#8AA4AC" }); el(sc, "path", { d: "M600 344 v12 M740 344 v12", stroke: "#C9A24A", "stroke-width": 5 });
+  el(sc, "rect", { x: 556, y: 282, width: 228, height: 8, rx: 4, fill: "#F2F6F7", stroke: "#8AA4AC" });
+  var dk = g(sc, { transform: "translate(700 278)" }); el(dk, "ellipse", { rx: 10, ry: 6, fill: "#F2C230" }); el(dk, "circle", { cx: 7, cy: -7, r: 5, fill: "#F2C230" }); el(dk, "path", { d: "M11 -7 l5 1 -5 2z", fill: "#E8743B" }); el(dk, "circle", { cx: 8, cy: -8, r: 1, fill: "#2B2340" });
+  el(sc, "path", { d: "M770 284 v-40 q0 -12 -12 -12 h-8", stroke: "#B8C8CC", "stroke-width": 4, fill: "none" });
+  // shower curtain
+  el(sc, "path", { d: "M560 110 h220", stroke: "#B8C8CC", "stroke-width": 3 });
+  el(sc, "path", { d: "M740 112 q10 60 0 120 q14 20 4 50 h40 v-170z", fill: "#E8A3C4", opacity: .85 });
+  // towel rail
+  el(sc, "path", { d: "M600 200 h70", stroke: "#B8C8CC", "stroke-width": 3 }); el(sc, "path", { d: "M606 200 h58 v46 h-58z", fill: "#F2C230", opacity: .85 }); el(sc, "path", { d: "M606 236 h58", stroke: "#fff", "stroke-width": 2 });
+  // bathroom scales with the battery cover open
+  var bs = g(sc, { transform: "translate(226 414)" }); el(bs, "rect", { x: -30, y: -12, width: 60, height: 22, rx: 6, fill: "#E8ECEE", stroke: "#8AA4AC" }); el(bs, "rect", { x: -12, y: -8, width: 24, height: 8, rx: 2, fill: "#3B4A50" }); el(bs, "text", { x: 0, y: -2, "font-family": "JetBrains Mono, monospace", "font-size": 6, fill: "#7CFFB2", "text-anchor": "middle" }).textContent = "0.0";
+  el(bs, "circle", { cx: 40, cy: 8, r: 5, fill: "#C9D2D8", stroke: "#6E7E84" }); el(bs, "text", { x: 40, y: 10, "font-family": "Figtree, sans-serif", "font-size": 5, fill: "#3B4A50", "text-anchor": "middle" }).textContent = "+";
+  // bath mat
+  el(sc, "rect", { x: 600, y: 380, width: 110, height: 40, rx: 10, fill: "#4FA39A", opacity: .9 });
+  // night-light glow
+  el(sc, "circle", { cx: 560, cy: 270, r: 30, fill: "url(#nl)" }); el(sc, "rect", { x: 554, y: 262, width: 12, height: 14, rx: 3, fill: "#BFE6F5" });
+  for (var i = 0; i < 16; i++) { var c = el(fx, "circle", { cx: R(560, 780), cy: R(200, 290), r: R(1, 3), fill: "#fff", opacity: .5, "class": "ff" }); c.style.animationDelay = R(0, 4).toFixed(2) + "s"; }
+})();
+</script>
+  </div>
+
+  <div class="grid">
+    <section class="file" aria-labelledby="cf">
+      <p class="label" id="cfile"></p>
+      <h2 id="cf">Clues</h2>
+      <ol class="clues" id="clues"></ol>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div id="verdict"></div>
+    </section>
+    <section class="side" aria-labelledby="acc">
+      <h2 id="acc">Accuse a culprit</h2>
+      <div class="dossier" id="dossier">Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.</div>
+      <div class="suspects" id="suspects"></div>
+      <button class="main" type="button" id="accuse" disabled>Accuse</button>
+    </section>
+  </div>
+  <p class="foot">Fictional cases. Lock medicines away from children, and keep the Poisons line handy: 13 11 26.</p>
+</div>
+
+<script>
+(function () {
+  var V = {"kiri": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 22l10 20H50z\" fill=\"#7E8C9C\"/><path d=\"M88 76q20-10 24 6q-14 0-20 6z\" fill=\"#7E8C9C\"/><ellipse cx=\"60\" cy=\"68\" rx=\"36\" ry=\"38\" fill=\"#7E8C9C\"/><ellipse cx=\"60\" cy=\"80\" rx=\"28\" ry=\"24\" fill=\"#F4F6F8\"/><path d=\"M42.4 48.4 L48.7 52.0 L42.4 55.6\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M77.6 48.4 L71.3 52.0 L77.6 55.6\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><ellipse cx=\"38\" cy=\"66\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"82\" cy=\"66\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><path d=\"M38 74q22 20 44 0z\" fill=\"#9E3D52\"/><path d=\"M40 75l4 5 4-5 4 5 4-5 4 5 4-5 4 5 4-5 4 5 4-5\" stroke=\"#fff\" stroke-width=\"2.4\" fill=\"#fff\" stroke-linejoin=\"round\"/><path d=\"M30 52l-4 4M30 58l-4 4M90 52l4 4M90 58l4 4\" stroke=\"#5E6C7C\" stroke-width=\"2\" stroke-linecap=\"round\"/><g transform=\"rotate(-30 22 92)\"><rect x=\"12\" y=\"88\" width=\"34\" height=\"5\" rx=\"2.5\" fill=\"#4FB3D9\"/><rect x=\"8\" y=\"82\" width=\"8\" height=\"8\" rx=\"2\" fill=\"#fff\" stroke=\"#9AA6B2\"/></g><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 22l10 20H50z\" fill=\"#7E8C9C\"/><path d=\"M88 76q20-10 24 6q-14 0-20 6z\" fill=\"#7E8C9C\"/><ellipse cx=\"60\" cy=\"68\" rx=\"36\" ry=\"38\" fill=\"#7E8C9C\"/><ellipse cx=\"60\" cy=\"80\" rx=\"28\" ry=\"24\" fill=\"#F4F6F8\"/><circle cx=\"46\" cy=\"52\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"74\" cy=\"52\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"44.7\" cy=\"50.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"72.7\" cy=\"50.5\" r=\"1.6\" fill=\"#fff\"/><ellipse cx=\"38\" cy=\"66\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"82\" cy=\"66\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><path d=\"M38 74q22 20 44 0z\" fill=\"#9E3D52\"/><path d=\"M40 75l4 5 4-5 4 5 4-5 4 5 4-5 4 5 4-5 4 5 4-5\" stroke=\"#fff\" stroke-width=\"2.4\" fill=\"#fff\" stroke-linejoin=\"round\"/><path d=\"M30 52l-4 4M30 58l-4 4M90 52l4 4M90 58l4 4\" stroke=\"#5E6C7C\" stroke-width=\"2\" stroke-linecap=\"round\"/><g transform=\"rotate(-30 22 92)\"><rect x=\"12\" y=\"88\" width=\"34\" height=\"5\" rx=\"2.5\" fill=\"#4FB3D9\"/><rect x=\"8\" y=\"82\" width=\"8\" height=\"8\" rx=\"2\" fill=\"#fff\" stroke=\"#9AA6B2\"/></g><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "lottie": ["<ellipse cx=\"58\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M78 92q22 4 30-10q-4 14-22 20q-8 2-12-2z\" fill=\"#F7A8C4\"/><path d=\"M82 94q16 2 24-8\" stroke=\"#E0568A\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" opacity=\".6\"/><ellipse cx=\"58\" cy=\"88\" rx=\"26\" ry=\"18\" fill=\"#F7A8C4\"/><path d=\"M40 100q-6 6-2 8q4 1 8-6M70 102q2 7 7 5q3-2-2-8\" fill=\"#F293B5\"/><g fill=\"#E0568A\"><path d=\"M24 40q-14-6-18 2q8-2 16 6z\"/><path d=\"M22 52q-14 0-16 8q8-4 16 0z\"/><path d=\"M26 63q-12 6-12 14q6-6 14-8z\"/><path d=\"M96 40q14-6 18 2q-8-2-16 6z\"/><path d=\"M98 52q14 0 16 8q-8-4-16 0z\"/><path d=\"M94 63q12 6 12 14q-6-6-14-8z\"/></g><g fill=\"#F07AA6\"><circle cx=\"9\" cy=\"42\" r=\"2.5\"/><circle cx=\"8\" cy=\"58\" r=\"2.5\"/><circle cx=\"15\" cy=\"74\" r=\"2.5\"/><circle cx=\"111\" cy=\"42\" r=\"2.5\"/><circle cx=\"112\" cy=\"58\" r=\"2.5\"/><circle cx=\"105\" cy=\"74\" r=\"2.5\"/></g><path d=\"M22 58q0-30 38-30t38 30q0 20-38 20t-38-20z\" fill=\"#F9B6CF\"/><path d=\"M32 44q10-12 26-12\" stroke=\"#fff\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\".55\"/><g><path d=\"M38.0 54.0 q6.0 4.2 12.0 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g><path d=\"M70.0 54.0 q6.0 4.2 12.0 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><ellipse cx=\"34\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF6F9C\" opacity=\".55\"/><ellipse cx=\"86\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF6F9C\" opacity=\".55\"/><path d=\"M50 64q10 8 20 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M84 84q8-2 10-10\" stroke=\"#F293B5\" stroke-width=\"7\" stroke-linecap=\"round\" fill=\"none\"/><text x=\"96\" y=\"30\" font-family=\"Figtree, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#E8F0E8\">z</text><text x=\"104\" y=\"20\" font-family=\"Figtree, sans-serif\" font-size=\"10\" font-weight=\"700\" fill=\"#E8F0E8\">z</text>", "<ellipse cx=\"58\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M78 92q22 4 30-10q-4 14-22 20q-8 2-12-2z\" fill=\"#F7A8C4\"/><path d=\"M82 94q16 2 24-8\" stroke=\"#E0568A\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" opacity=\".6\"/><ellipse cx=\"58\" cy=\"88\" rx=\"26\" ry=\"18\" fill=\"#F7A8C4\"/><path d=\"M40 100q-6 6-2 8q4 1 8-6M70 102q2 7 7 5q3-2-2-8\" fill=\"#F293B5\"/><g fill=\"#E0568A\"><path d=\"M24 40q-14-6-18 2q8-2 16 6z\"/><path d=\"M22 52q-14 0-16 8q8-4 16 0z\"/><path d=\"M26 63q-12 6-12 14q6-6 14-8z\"/><path d=\"M96 40q14-6 18 2q-8-2-16 6z\"/><path d=\"M98 52q14 0 16 8q-8-4-16 0z\"/><path d=\"M94 63q12 6 12 14q-6-6-14-8z\"/></g><g fill=\"#F07AA6\"><circle cx=\"9\" cy=\"42\" r=\"2.5\"/><circle cx=\"8\" cy=\"58\" r=\"2.5\"/><circle cx=\"15\" cy=\"74\" r=\"2.5\"/><circle cx=\"111\" cy=\"42\" r=\"2.5\"/><circle cx=\"112\" cy=\"58\" r=\"2.5\"/><circle cx=\"105\" cy=\"74\" r=\"2.5\"/></g><path d=\"M22 58q0-30 38-30t38 30q0 20-38 20t-38-20z\" fill=\"#F9B6CF\"/><path d=\"M32 44q10-12 26-12\" stroke=\"#fff\" stroke-width=\"4\" stroke-linecap=\"round\" fill=\"none\" opacity=\".55\"/><g><circle cx=\"44\" cy=\"54\" r=\"6\" fill=\"#2B2340\"/><circle cx=\"41.9\" cy=\"51.6\" r=\"2.28\" fill=\"#fff\"/></g><g><circle cx=\"76\" cy=\"54\" r=\"6\" fill=\"#2B2340\"/><circle cx=\"73.9\" cy=\"51.6\" r=\"2.28\" fill=\"#fff\"/></g><ellipse cx=\"34\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF6F9C\" opacity=\".55\"/><ellipse cx=\"86\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF6F9C\" opacity=\".55\"/><path d=\"M50 64q10 8 20 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M84 84q8-2 10-10\" stroke=\"#F293B5\" stroke-width=\"7\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "tembi": ["<ellipse cx=\"60\" cy=\"112\" rx=\"32\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M34 112q-2-26 14-34h24q16 8 14 34z\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M50 78l10 12 10-12\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M60 90v22\" stroke=\"#E7E0F0\" stroke-width=\"2\"/><path d=\"M50 80l2-26h16l2 26z\" fill=\"#F2C35B\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><g fill=\"#C9822F\"><path d=\"M53 62q3-3 6 0-1 4-5 3z\"/><path d=\"M61 72q4-2 6 1-2 4-6 2z\"/></g><path d=\"M44 18v12M76 18v12\" stroke=\"#2B2340\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"44\" cy=\"16\" r=\"4.5\" fill=\"#B5672A\" stroke=\"#2B2340\" stroke-width=\"2\"/><circle cx=\"76\" cy=\"16\" r=\"4.5\" fill=\"#B5672A\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M34 34q-14-6-16 4 8 6 18 2zM86 34q14-6 16 4-8 6-18 2z\" fill=\"#F2C35B\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M36 30q24-10 48 0 8 18-2 32-22 12-44 0-10-14-2-32z\" fill=\"#F2C35B\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><g fill=\"#C9822F\"><path d=\"M42 36q4-3 7 0-1 5-6 4z\"/><path d=\"M74 34q4-2 6 2-2 4-6 2z\"/><path d=\"M78 46q3-1 4 2-2 3-4 1z\"/></g><ellipse cx=\"60\" cy=\"56\" rx=\"17\" ry=\"11\" fill=\"#F7DFA8\" stroke=\"#2B2340\" stroke-width=\"2\"/><ellipse cx=\"54\" cy=\"55\" rx=\"2\" ry=\"1.4\" fill=\"#2B2340\"/><ellipse cx=\"66\" cy=\"55\" rx=\"2\" ry=\"1.4\" fill=\"#2B2340\"/><path d=\"M53 61q7 5 14 0\" stroke=\"#2B2340\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M46.2 42.0 q3.8 2.7 7.6 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M66.2 42.0 q3.8 2.7 7.6 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M45 36l-3-2M75 36l3-2\" stroke=\"#2B2340\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><ellipse cx=\"42\" cy=\"50\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"78\" cy=\"50\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M48 28l-2-8h28l-2 8z\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M57 24h6M60 21v6\" stroke=\"#E65C86\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><g transform=\"rotate(-12 92 96)\"><rect x=\"80\" y=\"88\" width=\"24\" height=\"16\" rx=\"4\" fill=\"#fff\" stroke=\"#4A3480\" stroke-width=\"2\"/><path d=\"M86 96l4 4 8-8\" stroke=\"#2E7D6B\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><text x=\"96\" y=\"30\" font-family=\"Figtree, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#E8F0E8\">z</text><text x=\"104\" y=\"20\" font-family=\"Figtree, sans-serif\" font-size=\"10\" font-weight=\"700\" fill=\"#E8F0E8\">z</text>", "<ellipse cx=\"60\" cy=\"112\" rx=\"32\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M34 112q-2-26 14-34h24q16 8 14 34z\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M50 78l10 12 10-12\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M60 90v22\" stroke=\"#E7E0F0\" stroke-width=\"2\"/><path d=\"M50 80l2-26h16l2 26z\" fill=\"#F2C35B\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><g fill=\"#C9822F\"><path d=\"M53 62q3-3 6 0-1 4-5 3z\"/><path d=\"M61 72q4-2 6 1-2 4-6 2z\"/></g><path d=\"M44 18v12M76 18v12\" stroke=\"#2B2340\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"44\" cy=\"16\" r=\"4.5\" fill=\"#B5672A\" stroke=\"#2B2340\" stroke-width=\"2\"/><circle cx=\"76\" cy=\"16\" r=\"4.5\" fill=\"#B5672A\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M34 34q-14-6-16 4 8 6 18 2zM86 34q14-6 16 4-8 6-18 2z\" fill=\"#F2C35B\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M36 30q24-10 48 0 8 18-2 32-22 12-44 0-10-14-2-32z\" fill=\"#F2C35B\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><g fill=\"#C9822F\"><path d=\"M42 36q4-3 7 0-1 5-6 4z\"/><path d=\"M74 34q4-2 6 2-2 4-6 2z\"/><path d=\"M78 46q3-1 4 2-2 3-4 1z\"/></g><ellipse cx=\"60\" cy=\"56\" rx=\"17\" ry=\"11\" fill=\"#F7DFA8\" stroke=\"#2B2340\" stroke-width=\"2\"/><ellipse cx=\"54\" cy=\"55\" rx=\"2\" ry=\"1.4\" fill=\"#2B2340\"/><ellipse cx=\"66\" cy=\"55\" rx=\"2\" ry=\"1.4\" fill=\"#2B2340\"/><path d=\"M53 61q7 5 14 0\" stroke=\"#2B2340\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"50\" cy=\"42\" r=\"3.8\" fill=\"#2B2340\"/><circle cx=\"70\" cy=\"42\" r=\"3.8\" fill=\"#2B2340\"/><circle cx=\"48.8\" cy=\"40.7\" r=\"1.5\" fill=\"#fff\"/><circle cx=\"68.8\" cy=\"40.7\" r=\"1.5\" fill=\"#fff\"/><path d=\"M45 36l-3-2M75 36l3-2\" stroke=\"#2B2340\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><ellipse cx=\"42\" cy=\"50\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"78\" cy=\"50\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M48 28l-2-8h28l-2 8z\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M57 24h6M60 21v6\" stroke=\"#E65C86\" stroke-width=\"2.6\" stroke-linecap=\"round\"/><g transform=\"rotate(-12 92 96)\"><rect x=\"80\" y=\"88\" width=\"24\" height=\"16\" rx=\"4\" fill=\"#fff\" stroke=\"#4A3480\" stroke-width=\"2\"/><path d=\"M86 96l4 4 8-8\" stroke=\"#2E7D6B\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"]};
+  var P = [ // [tag no., name, latin/source, toxin, what it does, tag x, tag y]
+    [1, "Sleeping tablets", "Doxylamine (an antihistamine)", "Anticholinergic", "In overdose: hot dry skin, wide pupils, fast heart, can’t pass urine, confused and picking at the air.", 120, 174],
+    [2, "Aspirin", "Soluble aspirin", "Salicylate", "Ringing ears, vomiting, fast deep breathing, sweating and fever. Treated with bicarbonate and sometimes dialysis.", 540, 180],
+    [3, "Oxycodone", "Opioid painkiller", "Opioid", "Pinpoint pupils, slow shallow breathing and drowsiness. Antidote: naloxone.", 395, 142],
+    [4, "Iron tablets", "Red-coated ferrous sulfate", "Iron", "Corrosive to the gut, then poisons cells. Vomiting and bloody diarrhoea, a quiet phase, then shock and liver failure. Antidote: desferrioxamine.", 528, 222],
+    [5, "Paracetamol", "Panadol, plus cold and flu tablets", "Paracetamol (NAPQI)", "Safe at normal doses (adults up to 4 g a day). Too much overwhelms the liver’s defences. Early: few symptoms. Days later: liver failure. Antidote: acetylcysteine.", 282, 150],
+    [6, "Bathroom scales", "With a coin-sized button battery", "Button battery", "If swallowed, it can burn through the food pipe within 2 hours. Drooling, refusing food, vomiting blood.", 236, 378],
+    [7, "Warfarin", "In the weekly pill organiser", "Warfarin", "Stops blood clotting. Too much: bruising and bleeding. Antidote: vitamin K, plus clotting factors if bleeding.", 260, 246],
+    [8, "Amitriptyline", "Tricyclic antidepressant, used for nerve pain", "Sodium channel blockade", "In overdose: drowsiness, seizures, a widened QRS on the ECG and dangerous heart rhythms. Antidote: sodium bicarbonate.", 406, 184]
+  ];
+  var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day. In an emergency, call 000.";
+  var CASES = [
+    { id: "kiri", solver: "the toxicology and hepatology team", team: "&#129514; Toxicology and hepatology’s plan", who: "Kiri", label: "Case 1 · Kiri", file: "Case file 016 · Kiri, shark, terrible toothache", ans: 5,
+      note: "Kiri the shark was found curled up on the bathroom floor.",
+      clues: [["Symptoms", "Nausea, vomiting and pain under the right ribs since yesterday."],
+        ["Exam", "Tender in the upper right tummy. Whites of the eyes slightly yellow. Alert and talking."],
+        ["Tests", "ALT 2,100 (normal under 40), INR 1.8. Salicylate level zero."],
+        ["History", "Three days of terrible toothache, treated at home with ‘whatever was in the cabinet’."],
+        ["More", "She took painkillers every 3 to 4 hours, plus ‘day and night’ cold and flu tablets, ‘because they help too’."],
+        ["Evidence", "A blood drug level of 35 mg/L, still detectable. The bin is full of empty packets that all share one active ingredient."]],
+      win: "Repeated paracetamol overdose: taking too much over several days, often by doubling up on products that all contain paracetamol. The liver runs out of glutathione, and a toxic by-product (NAPQI) damages it.<br><br><b>Pearl:</b> in repeated overdoses, a single paracetamol level can’t be plotted on the nomogram. Treat if ALT is raised or paracetamol is still detectable.",
+      plan: "<b>Antidote:</b> acetylcysteine IV, the Australian two-bag regimen: 200 mg/kg over 4 hours, then 100 mg/kg over 16 hours, continued until bloods improve.<br><b>Watch:</b> ALT, INR, creatinine, glucose and acid levels. Liver transplant team involved if INR keeps rising or confusion develops.<br><b>Also:</b> a dentist for the tooth, which started it all.",
+      recov: "Three days of acetylcysteine, liver tests back to normal in two weeks. The tooth was fixed in 20 minutes.",
+      tip: "Adults: no more than 4 g of paracetamol a day (8 standard 500 mg tablets). Check every label: cold and flu, migraine and combination painkillers often contain it too.",
+      why: { 4: "Iron causes vomiting and bloody diarrhoea first. The packets in the bin and the detectable paracetamol level point elsewhere.", 8: "Amitriptyline causes drowsiness and heart rhythm problems, not liver injury.", 3: "Opioids cause drowsiness and slow breathing with pinpoint pupils. Kiri is alert.", 2: "Close! Aspirin overdose also causes vomiting, but with ringing ears and fast breathing. Her salicylate level is zero.", 7: "Warfarin raises the INR, but doesn’t cause an ALT of 2,100.", 6: "Button batteries burn the food pipe, not the liver.", 1: "Doxylamine causes confusion, wide pupils and a dry mouth, not liver injury." } },
+    { id: "lottie", solver: "the paediatric ICU and toxicology team", team: "&#129514; Paediatric ICU and toxicology’s plan", who: "Lottie", label: "Case 2 · Lottie", file: "Case file 017 · Lottie, axolotl, labels everything except medicines", ans: 4,
+      note: "Little Lottie the axolotl was found on the bathroom floor.",
+      clues: [["Symptoms", "Repeated vomiting within an hour, then diarrhoea with blood in it. Tummy pain."],
+        ["Exam", "Pale, drowsy, pulse 150. Breathing fast and deep."],
+        ["Tests", "Severe acid build-up (metabolic acidosis), lactate high. Glucose a little high."],
+        ["History", "She was alone in the bathroom for 20 minutes, and says she ate some ‘lollies’."],
+        ["X-ray", "Abdominal X-ray: lots of small bright white tablets in the stomach and gut."],
+        ["Evidence", "An open bottle on the bench is missing about 20 tablets, each with a shiny red coating."]],
+      win: "Iron poisoning. Iron corrodes the gut lining, then poisons cells across the body, causing acid build-up, shock and liver failure. Tablets that show up on X-ray are a clue (iron is one of the few).<br><br><b>Pearl:</b> iron poisoning can look like it’s getting better after the first few hours, before the dangerous phase hits. Anyone who swallowed more than 60 mg/kg of elemental iron needs hospital, even if they seem well.",
+      plan: "<b>Antidote:</b> desferrioxamine, 15 mg/kg per hour IV. It binds iron and can turn the urine a pinkish ‘vin rosé’ colour.<br><b>Gut:</b> whole bowel irrigation to flush out the tablets seen on X-ray. Activated charcoal doesn’t bind iron.<br><b>Support:</b> IV fluids, correct the acid, and check iron levels at 4 to 6 hours, liver tests and clotting.",
+      recov: "A day of desferrioxamine and two days in hospital. She now has a very serious label on the medicine cupboard.",
+      tip: "Keep iron, pregnancy vitamins and all medicines locked up and out of children’s reach. Child-resistant lids slow kids down, but don’t stop them.",
+      why: { 5: "Paracetamol causes few early symptoms, not bloody diarrhoea and shock within hours.", 8: "Amitriptyline causes seizures and heart rhythm problems. It doesn’t show up on X-ray or cause bloody diarrhoea.", 3: "Opioids cause sleepiness and slow breathing. Lottie is breathing fast.", 2: "Close! Aspirin also causes fast breathing and acid build-up, but not bloody diarrhoea, and the tablets don’t show on X-ray like this.", 7: "Warfarin can cause bleeding, but not severe vomiting and shock within an hour.", 6: "A button battery shows on X-ray too, but as one coin with a ‘halo’, not lots of small tablets.", 1: "Doxylamine causes confusion, wide pupils and dry skin, not bloody diarrhoea." } },
+    { id: "tembi", solver: "the ICU team", team: "&#129657; ICU’s plan", who: "Tembi", label: "Case 3 · Tembi", file: "Case file 018 · Tembi, giraffe, long neck, longer list of medicines", ans: 8,
+      note: "Tembi the giraffe was found unresponsive in the bathroom late at night.",
+      clues: [["Exam", "Drowsy, then a seizure. Wide pupils, dry flushed skin, full bladder. Pulse 140, BP 82/50."],
+        ["ECG", "QRS 160 ms (normal under 100), with a tall R wave in lead aVR."],
+        ["Tests", "Paracetamol and salicylate levels zero. Glucose normal."],
+        ["History", "She couldn’t sleep, so took ‘a few extra’ of her regular night-time tablet."],
+        ["More", "That tablet is for nerve pain. Her new pharmacy bottle looks different from the old one."],
+        ["Evidence", "The new bottle says 50 mg tablets. Her usual is 10 mg."]],
+      win: "Tricyclic antidepressant overdose. Amitriptyline blocks sodium channels in the heart, widening the QRS and causing dangerous rhythms, plus anticholinergic effects and seizures. A dispensing error turned a few extra tablets into a big overdose.<br><br><b>Pearl:</b> a QRS over 100 ms predicts seizures; over 160 ms predicts dangerous rhythms. A tall R wave in aVR is a classic clue.",
+      plan: "<b>Antidote:</b> sodium bicarbonate 8.4%, 1 to 2 mmol/kg IV bolus, repeated until the QRS narrows, aiming for a blood pH of about 7.5.<br><b>ICU:</b> intubate early and hyperventilate; benzodiazepines for seizures. Avoid other sodium channel blockers.<br><b>Also:</b> report the dispensing error and review all her medicines.",
+      recov: "Bicarbonate narrowed her QRS within an hour. Two days in ICU, and home on the right dose, with the pharmacy’s profuse apologies.",
+      tip: "Check new bottles against the old ones: strength, name and how they look. Ask your pharmacist if anything is different.",
+      why: { 5: "Paracetamol causes few early symptoms and doesn’t widen the QRS.", 4: "Iron causes vomiting, bloody diarrhoea and shock first, not seizures and a wide QRS.", 3: "Opioids cause pinpoint pupils. Tembi’s are wide.", 2: "Aspirin causes ringing ears and fast breathing, not a QRS of 160.", 7: "Warfarin causes bleeding, not seizures.", 6: "Button batteries burn the food pipe, not the heart.", 1: "Close! Doxylamine causes the same hot, dry, wide-pupilled picture, but rarely a QRS this wide, and the bottle says otherwise." } }
+  ];
+  Array.prototype.forEach.call(document.querySelectorAll('#scene > g[transform^="translate"], [id^="prop-"] > g[transform^="translate"]'), function (g) { var t = g.getAttribute("transform"); if (!/scale/.test(t)) g.setAttribute("transform", t + " scale(1.45)"); });
+  var $ = function (id) { return document.getElementById(id); };
+  var NS = "http://www.w3.org/2000/svg", C, shown, lives, pick, out, done;
+
+  var SCENE = 6, SCENE_NAME = "Medicine Cabinet";
+  var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
+  function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
+  function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
+  function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
+  function celebrate(stars, name) {
+    var host = document.body, cols = ["#F5C518", "#2E8B57", "#B23A48", "#4FB3D9", "#B48CFF", "#F28C28"], h = "";
+    for (var k = 0; k < 60; k++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[k % cols.length] + ";animation-delay:" + (Math.random() * .6).toFixed(2) + "s;animation-duration:" + (1.6 + Math.random() * 1.6).toFixed(2) + 's"></i>';
+    var solved = Object.keys(TQ).filter(function (k) { return TQ[k] > 0; }).length, sceneDone = CASES.every(function (c) { return TQ[c.id] > 0; });
+    var extra = solved >= 30 ? "All 30 cases closed. Toxicology December complete! &#127942;" : sceneDone ? SCENE_NAME + " cleared: all 3 cases closed." : solved + " of 30 cases closed this December.";
+    var o = document.createElement("div"); o.className = "cel"; o.setAttribute("role", "status");
+    o.innerHTML = '<div class="cf-wrap" aria-hidden="true">' + h + '</div><div class="cel-stamp">Case closed</div><svg class="cel-m" viewBox="0 0 120 120" aria-hidden="true">' + V[C.id][1] + '</svg><div class="cel-s">' + "★".repeat(stars) + "☆".repeat(3 - stars) + '</div><p class="cel-t">' + C.who + " is on the mend, thanks to you and " + C.solver + ". " + extra + '</p><span class="cel-tap">Tap to read the plan</span>';
+    o.addEventListener("click", function () { o.remove(); });
+    host.appendChild(o); setTimeout(function () { if (o.parentNode) o.remove(); }, 6000);
+  }
+  P.forEach(function (p) { p[5] = Math.min(730, Math.max(58, p[5])); p[6] = Math.min(450, Math.max(132, p[6])); });
+  P.forEach(function (p) {
+    var g = document.createElementNS(NS, "g"); g.setAttribute("class", "tagbtn"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "Evidence " + p[0] + ": " + p[1]);
+    g.innerHTML = '<rect x="' + (p[5] - 13) + '" y="' + (p[6] - 13) + '" width="26" height="26" rx="4" fill="#F5C518" stroke="#1A1F1B" stroke-width="1.5"/><text x="' + p[5] + '" y="' + (p[6] + 5) + '" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#1A1F1B">' + p[0] + "</text>";
+    g.addEventListener("click", function () { select(p[0]); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p[0]); } });
+    $("tags").appendChild(g);
+  });
+  $("suspects").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) select(+b.getAttribute("data-n")); });
+  function drawCases() { $("cases").innerHTML = CASES.map(function (c, i) { var s = TQ[c.id]; return '<button type="button" data-i="' + i + '"' + (isOpen(i) ? "" : " disabled") + ">" + c.label + (isOpen(i) ? (s > 0 ? '<span class="st">' + "★".repeat(s) + "</span>" : s === 0 ? '<span class="st">✓</span>' : "") : " · opens " + dayOf(i) + " Dec") + "</button>"; }).join(""); }
+  drawCases();
+  $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
+  function load(i) {
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each suspect, reveal clues one at a time, and accuse the culprit. Fewer clues, more stars.";
+    $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
+    $("victim").innerHTML = V[C.id][0];
+    CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
+    $("suspects").innerHTML = P.map(function (p) { return '<button type="button" data-n="' + p[0] + '"><span class="n">' + p[0] + "</span>" + p[1] + "</button>"; }).join("");
+    $("dossier").innerHTML = "Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.";
+    $("accuse").disabled = true; $("accuse").textContent = "Accuse";
+    renderClues();
+  }
+  function select(n) {
+    var p = P[n - 1]; pick = n;
+    $("dossier").innerHTML = "<b>Evidence " + p[0] + ": " + p[1] + '</b> <span class="sci">' + p[2] + "</span><br><b>Toxin:</b> " + p[3] + "<br>" + p[4];
+    Array.prototype.forEach.call($("suspects").children, function (b) { b.style.outline = +b.getAttribute("data-n") === n ? "2px solid #F5C518" : ""; });
+    $("accuse").disabled = done || !!out[n]; $("accuse").textContent = "Accuse the " + p[1].toLowerCase();
+  }
+  function renderClues() {
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (c) { return '<li><span class="k">' + c[0] + "</span><p>" + c[1] + "</p></li>"; }).join("");
+    $("left").textContent = shown < C.clues.length ? (C.clues.length - shown) + " clues left" : "All clues revealed";
+    $("more").disabled = done || shown >= C.clues.length;
+  }
+  function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
+  function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
+  $("accuse").onclick = function () {
+    if (!pick || done) return;
+    var name = P[C.ans - 1][1];
+    if (pick === C.ans) {
+      done = true; var stars = Math.max(1, (shown <= 2 ? 3 : shown <= 4 ? 2 : 1) - (lives < 3 ? 1 : 0));
+      $("verdict").innerHTML = '<div class="verdict yes"><div class="stars">' + "★".repeat(stars) + "☆".repeat(3 - stars) + "</div><b>" + name + ". You and " + C.solver + " cracked it on clue " + shown + ".</b> " + C.win + "</div>" + planHtml();
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+      shown = C.clues.length; renderClues(); $("accuse").disabled = true; recover(); if (!(TQ[C.id] >= stars)) TQ[C.id] = stars; tqSave(); var keep = C; drawCases(); Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", CASES[k] === keep ? "true" : "false"); }); celebrate(stars);
+    } else {
+      lives--; out[pick] = 1; $("lives").textContent = "●".repeat(lives) + "○".repeat(3 - lives);
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === pick) b.classList.add("out"); });
+      var why = C.why[pick] || "Not this time.";
+      if (!lives) { done = true; why += " Out of accusations. Luckily " + C.solver + " worked it out: " + name.toLowerCase() + "."; shown = C.clues.length; renderClues(); }
+      $("verdict").innerHTML = '<div class="verdict no"><b>Not that one.</b> ' + why + "</div>" + (lives ? "" : planHtml());
+      if (!lives) { recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); } }
+      $("accuse").disabled = true;
+    }
+  };
+  (function () { var pan = $("pan"), hint = $("swipe"); if (pan.scrollWidth > pan.clientWidth) pan.scrollLeft = (pan.scrollWidth - pan.clientWidth) * 0.5;
+    setTimeout(function () { pan.addEventListener("scroll", function () { if (hint) hint.style.opacity = 0; }, { passive: true }); }, 400); setTimeout(function () { if (hint) hint.style.opacity = 0; }, 5000); })();
+  (function () { var q = +((location.search.match(/[?&]c=(\d)/) || [])[1] || 0) - 1, open = CASES.map(function (c, i) { return isOpen(i) ? i : -1; }).filter(function (i) { return i > -1; });
+    if (!open.length) { $("note").innerHTML = '<span class="lockmsg">&#128274; This scene opens on ' + dayOf(0) + " December. One new case every day of Toxicology December.</span>"; document.querySelector(".grid").hidden = true; return; }
+    load(open.indexOf(q) > -1 ? q : open[open.length - 1]); })();
+})();
+</script>
+
+</body></html>

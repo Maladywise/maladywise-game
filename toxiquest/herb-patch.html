@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Toxiquest: The Herb Patch</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one crime-scene garden at dusk on top, the case file underneath; evidence tags in the garden open plant dossiers. Single dusk look by choice. */
+:root{
+  --night:#13241C; --moss:#1F3A2C; --leaf:#2F5A3F; --mist:#D8E6D9;
+  --paper:#F2F0E6; --ink:#1A1F1B; --tag:#F5C518; --tox:#B23A48; --ok:#2E8B57;
+  --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--night);color:var(--mist)}
+body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
+.lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
+.lives b{color:var(--tox);letter-spacing:3px}
+.scene{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #2C4A38}
+.scene svg{display:block;width:100%;height:auto}
+.tagbtn{cursor:pointer}
+.tagbtn:focus-visible rect{stroke:#fff;stroke-width:3}
+.tagbtn:hover rect{fill:#FFE15A}
+.tape{position:absolute;left:-8%;right:-8%;top:16px;transform:rotate(-2.5deg);background:var(--tag);color:var(--ink);font:500 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:5px 0;pointer-events:none;opacity:.92}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.file{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:grid;gap:12px;min-width:0;position:relative}
+.file h2{font:400 22px var(--display);margin:0}
+.label{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5B6B5F;margin:0}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.clues li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #DCD8C8;animation:in .35s ease-out}
+.clues li .k{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--leaf);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.clues li p{margin:0;font-size:15px}
+@keyframes in{from{opacity:.3;transform:translateY(4px)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.main{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--leaf);color:#fff;cursor:pointer}
+button.main:hover{background:#3A6E4C}
+button.main:focus-visible,button.ghost:focus-visible,.suspects button:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+button.ghost{font:600 14px var(--body);border:2px solid var(--leaf);border-radius:999px;padding:10px 16px;background:transparent;color:var(--leaf);cursor:pointer}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.side{background:var(--moss);border:1px solid #2C4A38;border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.side h2{font:400 20px var(--display);margin:0;color:#fff}
+.suspects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.suspects button{display:flex;gap:8px;align-items:center;text-align:left;font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}
+.suspects button .n{font:500 11px var(--mono);background:var(--tag);color:var(--ink);border-radius:4px;padding:2px 5px}
+.suspects button.out{opacity:.4;text-decoration:line-through}
+.suspects button.win{border-color:var(--ok);background:#1E4A30}
+.dossier{background:#0F1C16;border:1px dashed #3B5E48;border-radius:12px;padding:12px 14px;font-size:14px;min-height:72px}
+.dossier b{color:#fff}
+.dossier .sci{font-style:italic;color:#9FB8A6}
+.verdict{border-radius:12px;padding:12px 14px;font-size:15px}
+.verdict.no{background:#F6DADD;color:#6B1A24}
+.verdict.yes{background:#DDF1E4;color:#14522F}
+.stars{font-size:26px;letter-spacing:4px}
+.foot{font-size:12px;color:#7F9A88;text-align:center}
+@media (prefers-reduced-motion:reduce){.clues li{animation:none}.sway{animation:none!important}}
+.pan{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pan::-webkit-scrollbar{display:none}
+.pan svg{width:100%;min-width:100%}
+.swipe{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;background:rgba(10,20,14,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .6s}
+@media (max-width:640px){.tagbtn{transform-box:fill-box;transform-origin:50% 50%;transform:scale(1.5)}.scene{border-radius:12px}}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:500 12px var(--mono)}.scenes a{color:var(--mist);text-decoration:none;border:1px solid #3B5E48;border-radius:999px;padding:6px 12px}.scenes a[aria-current]{background:#F2F0E6;color:#1A1F1B;border-color:#F2F0E6}.scenes span{color:#7F9A88}
+.cases{display:flex;gap:8px;flex-wrap:wrap}.cases button{font:600 14px var(--body);border-radius:999px;padding:9px 16px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}.cases button[aria-pressed=true]{background:var(--tag);color:var(--ink);border-color:var(--tag)}.cases button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.recov{border-radius:12px;padding:12px 14px;font-size:15px;background:#E3EEF9;color:#173A5E;margin-top:10px}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.ff{animation:ff 3s ease-in-out infinite}@keyframes ff{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none}}
+
+.cel{position:fixed;inset:0;display:grid;place-items:center;align-content:center;gap:6px;background:rgba(6,12,9,.93);backdrop-filter:blur(3px);z-index:50;cursor:pointer;animation:celin .3s ease-out}
+.cel .cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cel .cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.95}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+.cel-stamp{font:400 clamp(26px,7vw,48px)/1 var(--display);color:#F5C518;border:4px solid #F5C518;border-radius:10px;padding:6px 16px;transform:rotate(-6deg);animation:stamp .45s cubic-bezier(.2,1.6,.4,1) both;letter-spacing:.04em;text-transform:uppercase}
+.cel .cel-m{width:130px;height:130px;animation:hop .9s ease-in-out .3s 3}
+.cel-s{font-size:clamp(24px,6vw,34px);letter-spacing:6px;color:#F5C518}
+.cel-t{margin:0;font:600 15px var(--body);color:#fff;text-align:center;max-width:30em;padding:0 16px}
+.cel-tap{font:500 11px var(--mono);color:#C9D8CE;letter-spacing:.1em;text-transform:uppercase}
+@keyframes stamp{from{transform:scale(2.4) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-4deg)}}
+@keyframes celin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
+.cases button[disabled]{opacity:.5;cursor:not-allowed}
+.cases button .st{color:var(--tag);margin-left:4px}
+.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
+</style>
+
+<div class="wrap">
+  <nav class="scenes" aria-label="Scenes"><a class="tqcal" href="./">&#128197; December calendar</a><a href="herb-patch.html" aria-current="page">1 · The Herb Patch</a><a href="low-tide.html">2 · Low Tide</a><a href="whiteout.html">3 · Whiteout</a><a href="off-track.html">4 · Off Track</a><a href="dinner-party.html">5 · Dinner Party</a><a href="medicine-cabinet.html">6 · Medicine Cabinet</a><a href="the-shed.html">7 · The Shed</a><a href="dry-heat.html">8 · Dry Heat</a><a href="canopy.html">9 · Canopy</a><a href="midnight-ward.html">10 · Midnight Ward</a></nav>
+  <div class="top">
+    <div>
+      <p class="kick">Toxiquest · Scene 1 of 10: the garden · 3 cases</p>
+      <h1>The Herb Patch</h1>
+    </div>
+    <p class="lives" aria-live="polite">Accusations left <b id="lives">●●●</b></p>
+  </div>
+  <div class="cases" id="cases" role="group" aria-label="Choose a case"></div>
+  <p class="note" id="note"></p>
+
+  <div class="scene">
+    <div class="pan" id="pan"><svg viewBox="30 112 760 358" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A garden at dusk. Tess the tortoise lies asleep and unwell on the stone path by the herb patch, next to a spilled teacup. Around her: a willow, foxgloves, lily of the valley, an oleander bush, death cap mushrooms, deadly nightshade, a yew hedge and a castor oil plant, each with a numbered evidence tag. A garden shed glows in the background.">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D2350"/><stop offset=".38" stop-color="#4B3F78"/><stop offset=".7" stop-color="#B0627A"/><stop offset="1" stop-color="#F0A86C"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#355E3E"/><stop offset=".5" stop-color="#22432D"/><stop offset="1" stop-color="#11241A"/></linearGradient>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#5C4C70"/></linearGradient>
+        <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324A"/><stop offset="1" stop-color="#1E3330"/></linearGradient>
+        <linearGradient id="trunk" x1="0" x2="1"><stop offset="0" stop-color="#3B2C20"/><stop offset=".5" stop-color="#6B5440"/><stop offset="1" stop-color="#2E2219"/></linearGradient>
+        <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D493E0"/><stop offset="1" stop-color="#7E3B95"/></linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6B8"/><stop offset="1" stop-color="#A9BB7C"/></linearGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FA35E"/><stop offset="1" stop-color="#2F5A36"/></linearGradient>
+        <linearGradient id="castor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0454C"/><stop offset="1" stop-color="#5E1C24"/></linearGradient>
+        <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3E2A"/><stop offset="1" stop-color="#2E1F15"/></linearGradient>
+        <radialGradient id="moonglow"><stop offset="0" stop-color="#FFF6DC" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DC" stop-opacity="0"/></radialGradient>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".18"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+        <radialGradient id="berry" cx=".35" cy=".35"><stop offset="0" stop-color="#5A5A6A"/><stop offset=".35" stop-color="#151518"/><stop offset="1" stop-color="#050506"/></radialGradient>
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8E8" stop-opacity="0"/><stop offset=".5" stop-color="#C9D8E8" stop-opacity=".16"/><stop offset="1" stop-color="#C9D8E8" stop-opacity="0"/></linearGradient>
+        <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer><feBlend in2="SourceGraphic" mode="multiply"/></filter>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="scene"></g>
+      <!-- Tess, asleep and unwell, and the spilled teacup -->
+      <ellipse cx="410" cy="392" rx="120" ry="52" fill="url(#lamp)"/>
+      <g id="victim" transform="translate(345 318) rotate(-14 60 60) scale(1.2)"></g>
+      
+      <path d="M456 398 q-14 6 -30 4 q-10 -2 -2 -6 q16 -2 32 2z" fill="#7C8C4A" opacity=".75"/>
+      <g fill="#5E8C4E"><path d="M432 404 q-8 -4 -2 -9 q8 3 2 9z"/><path d="M444 406 q-2 -9 6 -8 q1 8 -6 8z"/></g></g>
+      <g id="fx"></g>
+      <rect width="800" height="470" fill="url(#vig)" opacity=".45" pointer-events="none"/>
+      <rect width="800" height="470" filter="url(#grain)" fill="#888" opacity=".2" pointer-events="none" style="mix-blend-mode:multiply"/>
+      <g id="tags"></g>
+    </svg></div>
+    
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg", sc = document.getElementById("scene"), fx = document.getElementById("fx");
+  var seed = 7; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function R(a, b) { return a + (b - a) * r(); }
+  function el(p, tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+  function g(p, a) { return el(p, "g", a || {}); }
+  function leaf(p, x, y, len, w, ang, fill, vein) { // a pointed leaf with a midrib
+    var t = g(p, { transform: "translate(" + x + " " + y + ") rotate(" + ang + ")" });
+    el(t, "path", { d: "M0 0 Q" + w + " " + (-len * .45) + " 0 " + (-len) + " Q" + (-w) + " " + (-len * .45) + " 0 0z", fill: fill });
+    if (vein) el(t, "path", { d: "M0 0 L0 " + (-len * .92), stroke: vein, "stroke-width": .8, fill: "none", opacity: .7 });
+    return t;
+  }
+  // sky: stars, moon, wisps of cloud
+  el(sc, "rect", { width: 800, height: 470, fill: "url(#sky)" });
+  for (var i = 0; i < 110; i++) { var y = R(112, 200); el(sc, "circle", { cx: R(0, 800), cy: y, r: R(.3, 1.3), fill: "#fff", opacity: (1 - (y - 112) / 100) * R(.4, 1) }); }
+  el(sc, "circle", { cx: 300, cy: 140, r: 70, fill: "url(#moonglow)" });
+  el(sc, "circle", { cx: 300, cy: 140, r: 19, fill: "#FFF4DA" });
+  [[291, 135, 3.2], [306, 147, 2.4], [299, 151, 1.6], [309, 133, 1.8]].forEach(function (c) { el(sc, "circle", { cx: c[0], cy: c[1], r: c[2], fill: "#E9DFC0", opacity: .7 }); });
+  [[120, 60, 140], [430, 40, 180], [560, 112, 120]].forEach(function (c) { el(sc, "ellipse", { cx: c[0], cy: c[1], rx: c[2], ry: 7, fill: "#E9A8B8", opacity: .16, filter: "url(#blur4)" }); });
+  // two distant tree lines
+  function ridge(y0, amp, fill, step) { var d = "M0 " + y0; for (var x = 0; x <= 800; x += step) d += " Q" + (x + step / 2) + " " + (y0 - R(amp * .4, amp)) + " " + (x + step) + " " + (y0 - R(0, amp * .5)); el(sc, "path", { d: d + " L800 470 L0 470z", fill: fill }); }
+  ridge(196, 34, "url(#far)", 26); ridge(214, 40, "url(#mid)", 18);
+  // garden shed with a lit window, behind the path
+  var sh = g(sc, {}); el(sh, "path", { d: "M372 214 L372 166 L412 140 L452 166 L452 214z", fill: "#3A2E2A" }); el(sh, "path", { d: "M366 168 L412 136 L458 168", stroke: "#2A201C", "stroke-width": 6, fill: "none" });
+  for (var k = 0; k < 7; k++) el(sh, "line", { x1: 376 + k * 11, y1: 168, x2: 376 + k * 11, y2: 214, stroke: "#2C2320", "stroke-width": 1 });
+  el(sh, "rect", { x: 420, y: 176, width: 20, height: 16, fill: "#FFC96B" }); el(sh, "path", { d: "M430 176v16M420 184h20", stroke: "#5A4030", "stroke-width": 1.5 });
+  el(sh, "ellipse", { cx: 430, cy: 184, rx: 40, ry: 26, fill: "url(#lamp)" });
+  // lawn
+  el(sc, "rect", { y: 210, width: 800, height: 260, fill: "url(#lawn)" });
+  // picket fence across the back
+  var fe = g(sc, { opacity: .85 }); el(fe, "rect", { x: 0, y: 222, width: 800, height: 3, fill: "#6F5E52" }); el(fe, "rect", { x: 0, y: 238, width: 800, height: 3, fill: "#6F5E52" });
+  for (var x = 4; x < 800; x += 14) { if (x > 360 && x < 470) continue; el(fe, "path", { d: "M" + x + " 250 V220 l4 -6 l4 6 V250z", fill: "#7C6A5C" }); }
+  // stone path in perspective
+  var pa = g(sc, {});
+  el(pa, "path", { d: "M330 470 Q360 350 392 214 L432 214 Q462 350 500 470z", fill: "#4B4234", opacity: .9 });
+  for (var j = 0; j < 14; j++) { var t = j / 14, yy = 214 + Math.pow(t, 1.5) * 256, wd = 38 + t * 150, cx = 412 + t * 3, h = 4 + t * 22;
+    for (var s = -1; s <= 1; s += 2) el(pa, "path", { d: "M" + (cx + s * 2) + " " + yy + " h" + (s * wd / 2 * .9) + " l" + (s * 2) + " " + h + " h" + (-s * wd / 2 * .92) + "z", fill: j % 2 ? "#A89A80" : "#9A8C72", stroke: "#4B4234", "stroke-width": 1 }); }
+  // yew hedge: dense clipped foliage with red arils
+  var ye = g(sc, {}); el(ye, "path", { d: "M470 232 Q480 170 540 160 Q575 128 620 144 Q660 128 700 152 Q745 160 752 232z", fill: "#13291B" });
+  for (var i = 0; i < 260; i++) { var x = R(482, 745), y = R(150, 230); if (y < 160 + Math.abs(x - 615) * .14) continue; el(ye, "ellipse", { cx: x, cy: y, rx: R(2, 4.5), ry: R(1, 2), fill: ["#1C3A26", "#244A30", "#0F2216"][i % 3], transform: "rotate(" + R(-40, 40) + " " + x + " " + y + ")" }); }
+  [[520, 192], [556, 178], [608, 186], [648, 172], [692, 198], [588, 208], [726, 214], [535, 216]].forEach(function (c) { el(ye, "circle", { cx: c[0], cy: c[1], r: 3.6, fill: "#E0323F" }); el(ye, "circle", { cx: c[0] - 1, cy: c[1] - 1, r: 1, fill: "#FF9AA2" }); });
+  // willow: textured trunk and many drooping strands with leaves
+  var wi = g(sc, {});
+  el(wi, "path", { d: "M106 262 Q120 190 110 120 Q104 100 92 92 L116 96 Q126 104 128 92 L136 100 Q130 120 136 160 Q142 220 150 262z", fill: "url(#trunk)" });
+  for (var i = 0; i < 140; i++) { var a = R(0, 6.283), rr = Math.sqrt(r()), cx2 = 128 + Math.cos(a) * rr * 86, cy2 = 92 + Math.sin(a) * rr * 26; el(wi, "ellipse", { cx: cx2, cy: cy2, rx: R(3, 7), ry: R(1.5, 3), fill: ["#4F7A45", "#5E8C50", "#3E6638", "#6E9C5C"][i % 4], transform: "rotate(" + R(-50, 50) + " " + cx2 + " " + cy2 + ")" }); }
+  var sw = g(wi, { "class": "sway" });
+  for (var i = 0; i < 46; i++) { var sx = R(48, 210), dx = R(-40, 40), len = R(90, 170), col = ["#7FA86A", "#8DB877", "#6A9558"][i % 3];
+    el(sw, "path", { d: "M" + sx + " " + R(78, 102) + " q" + dx * .3 + " " + len * .5 + " " + dx + " " + len, stroke: col, "stroke-width": 1.4, fill: "none", opacity: .9 });
+    for (var q = 0; q < 7; q++) { var tt = q / 7; leaf(sw, sx + dx * tt * tt, 96 + len * tt, 9, 2.6, R(150, 210), col); } }
+  // castor oil plant (left): red palmate leaves with veins, spiky pods
+  var ca = g(sc, {});
+  function palm(x, y, s, a) { var t = g(ca, { transform: "translate(" + x + " " + y + ") rotate(" + a + ") scale(" + s + ")" });
+    for (var l = 0; l < 7; l++) { var an = -90 + (l - 3) * 26; leaf(t, 0, 0, l === 3 ? 34 : 28 - Math.abs(l - 3) * 2, 8, an + 90, "url(#castor)", "#E07A80"); }
+    el(t, "circle", { r: 3, fill: "#7A2B2B" }); }
+  el(ca, "path", { d: "M34 330 Q30 280 38 236 M38 270 Q60 250 70 236", stroke: "#8E3A3A", "stroke-width": 4, fill: "none" });
+  palm(38, 236, 1.1, -8); palm(70, 236, .8, 18); palm(14, 268, .75, -30);
+  [[52, 270], [58, 260], [47, 258]].forEach(function (c) { el(ca, "circle", { cx: c[0], cy: c[1], r: 6, fill: "#C64F4F" }); for (var z = 0; z < 8; z++) { var an = z / 8 * 6.283; el(ca, "line", { x1: c[0] + Math.cos(an) * 5, y1: c[1] + Math.sin(an) * 5, x2: c[0] + Math.cos(an) * 8, y2: c[1] + Math.sin(an) * 8, stroke: "#E06A6A", "stroke-width": 1 }); } });
+  // oleander bush (right): lance leaves and pink five-petal flowers
+  var ol = g(sc, {}); el(ol, "ellipse", { cx: 640, cy: 300, rx: 92, ry: 58, fill: "#1E3D24" });
+  for (var i = 0; i < 120; i++) { var x = R(560, 720), y = R(252, 350); leaf(ol, x, y, R(16, 24), 3.5, R(-70, 70), ["#2F5F38", "#3B7046", "#27512F"][i % 3], "#9BC09A"); }
+  [[600, 270], [630, 258], [668, 268], [700, 292], [610, 304], [652, 300], [584, 292], [682, 318], [632, 322]].forEach(function (c) {
+    for (var f = 0; f < 3; f++) { var fx0 = c[0] + R(-8, 8), fy0 = c[1] + R(-6, 6), fl = g(ol, { transform: "translate(" + fx0 + " " + fy0 + ") rotate(" + R(0, 72) + ")" });
+      for (var p = 0; p < 5; p++) el(fl, "ellipse", { cx: 0, cy: -4.2, rx: 3, ry: 4.6, fill: "#F59BBE", transform: "rotate(" + p * 72 + ")" });
+      el(fl, "circle", { r: 1.8, fill: "#C2507E" }); } });
+  // herb patch: raised bed, soil, comfrey sign
+  var hb = g(sc, {}); el(hb, "path", { d: "M190 306 L330 306 L326 350 L194 350z", fill: "#5E412B" }); el(hb, "path", { d: "M196 312 L324 312 L322 324 L198 324z", fill: "url(#soil)" });
+  for (var i = 0; i < 6; i++) el(hb, "line", { x1: 190, y1: 318 + i * 6, x2: 330, y2: 318 + i * 6, stroke: "#3E2A1C", "stroke-width": .8, opacity: .6 });
+  el(hb, "rect", { x: 272, y: 262, width: 60, height: 22, rx: 3, fill: "#E9DFC4", stroke: "#8A7A5A" }); el(hb, "rect", { x: 300, y: 284, width: 4, height: 28, fill: "#6B4E36" });
+  var tx = el(hb, "text", { x: 302, y: 277, "font-family": "JetBrains Mono, monospace", "font-size": 10, fill: "#3A2A1A", "text-anchor": "middle" }); tx.textContent = "COMFREY";
+  // foxglove: rosette of hairy leaves + two spikes of spotted bells
+  var fg = g(sc, {});
+  for (var i = 0; i < 9; i++) leaf(fg, R(212, 312), R(314, 322), R(18, 26), 7, R(-70, 70), "url(#leafg)", "#B9D9A8");
+  [[218, 316, 150], [246, 316, 126]].forEach(function (s) {
+    el(fg, "path", { d: "M" + s[0] + " " + s[1] + " Q" + (s[0] + 3) + " " + (s[1] - s[2] / 2) + " " + s[0] + " " + (s[1] - s[2]), stroke: "#4E7A3E", "stroke-width": 3.5, fill: "none" });
+    for (var b = 0; b < 11; b++) { var by = s[1] - s[2] + 8 + b * (s[2] - 40) / 11, side = b % 2 ? 1 : -1, sz = .6 + b * .05;
+      var bl = g(fg, { transform: "translate(" + s[0] + " " + by + ") scale(" + side * sz + " " + sz + ")" });
+      el(bl, "path", { d: "M0 0 q-16 3 -16 16 q8 4 14 -2 z", fill: "url(#bell)" });
+      el(bl, "circle", { cx: -10, cy: 11, r: 1.1, fill: "#4A1F55" }); el(bl, "circle", { cx: -7, cy: 13, r: .9, fill: "#4A1F55" }); }
+    el(fg, "circle", { cx: s[0], cy: s[1] - s[2] - 2, r: 3, fill: "#7FA86A" }); });
+  // lily of the valley (front left): broad leaves, arching stems of white bells
+  var lv = g(sc, {});
+  [[70, 430, -10], [96, 430, 14], [84, 432, 2]].forEach(function (l) { leaf(lv, l[0], l[1], 92, 18, l[2], "url(#leafg)", "#B9D9A8"); });
+  [[84, 432, 112, 334], [92, 432, 128, 352]].forEach(function (s) { el(lv, "path", { d: "M" + s[0] + " " + s[1] + " Q" + (s[0] - 4) + " " + (s[3] + 10) + " " + s[2] + " " + s[3], stroke: "#5E8C4E", "stroke-width": 2, fill: "none" });
+    for (var b = 0; b < 6; b++) { var tt = .35 + b * .11, bx = s[0] + (s[2] - s[0]) * tt * tt, by = s[1] + (s[3] - s[1]) * (1 - Math.pow(1 - tt, 2));
+      el(lv, "path", { d: "M" + bx + " " + (by + 2) + " v4", stroke: "#5E8C4E", "stroke-width": 1 });
+      el(lv, "path", { d: "M" + (bx - 4.5) + " " + (by + 6) + " q4.5 -6 9 0 q-1 4 -2 5 q-2.5 -2 -5 0 q-1 -1 -2 -5z", fill: "#FBFBF2" }); } });
+  // deadly nightshade (front right): leaves, glossy berries with star calyces
+  var ns = g(sc, {});
+  for (var i = 0; i < 9; i++) leaf(ns, R(700, 740), R(400, 450), R(30, 44), 11, R(-50, 50), ["#3F6B3E", "#355E37"][i % 2], "#A9C9A0");
+  [[712, 372], [736, 392], [718, 406], [748, 378]].forEach(function (c) { var st = g(ns, { transform: "translate(" + c[0] + " " + (c[1] + 6) + ")" });
+    for (var p = 0; p < 5; p++) el(st, "ellipse", { cx: 0, cy: -5, rx: 2, ry: 5, fill: "#4E7A3E", transform: "rotate(" + p * 72 + ")" });
+    el(ns, "circle", { cx: c[0], cy: c[1], r: 7.5, fill: "url(#berry)" }); el(ns, "circle", { cx: c[0] - 2.5, cy: c[1] - 2.5, r: 1.8, fill: "#fff", opacity: .75 }); });
+  // death caps by the path: domed caps, skirt, volva
+  var dc = g(sc, {});
+  [[548, 432, 1], [578, 440, .78], [526, 444, .6]].forEach(function (m) { var t = g(dc, { transform: "translate(" + m[0] + " " + m[1] + ") scale(" + m[2] + ")" });
+    el(t, "path", { d: "M-6 0 Q-4 -24 -3 -26 L3 -26 Q4 -24 6 0z", fill: "#EEF0E2" }); el(t, "path", { d: "M-8 0 Q0 -8 8 0 Q0 4 -8 0z", fill: "#E2E6CF" });
+    el(t, "path", { d: "M-6 -16 Q0 -12 6 -16 L5 -13 Q0 -10 -5 -13z", fill: "#F7F7EE" });
+    el(t, "path", { d: "M-20 -24 Q0 -50 20 -24 Q0 -20 -20 -24z", fill: "url(#cap)" });
+    for (var q = -14; q <= 14; q += 4) el(t, "line", { x1: q * .9, y1: -24, x2: q, y2: -22, stroke: "#C9D1AC", "stroke-width": .8 }); });
+  // grass tufts and blades in the foreground (not over the path)
+  var gr = g(sc, {});
+  for (var i = 0; i < 520; i++) { var x = R(0, 800), y = R(250, 470), mid = 412 + (y - 214) * .01, half = 20 + (y - 214) * .34; if (Math.abs(x - mid) < half) continue;
+    var h = 4 + (y - 250) * .06 + R(0, 6); el(gr, "path", { d: "M" + x + " " + y + " q" + R(-2, 2) + " " + (-h / 2) + " " + R(-3, 3) + " " + (-h), stroke: ["#3E6E45", "#2E5A36", "#4C8052", "#25492D"][i % 4], "stroke-width": R(.8, 1.6), fill: "none", "stroke-linecap": "round" }); }
+  // low mist band
+  el(sc, "rect", { y: 300, width: 800, height: 90, fill: "url(#mist)" });
+  // fireflies (gently pulsing) in front of everything
+  for (var i = 0; i < 18; i++) { var c = el(fx, "circle", { cx: R(20, 780), cy: R(170, 440), r: R(1.2, 2.2), fill: "#FFE98A", "class": "ff" }); c.style.animationDelay = R(0, 4).toFixed(2) + "s"; c.style.animationDuration = R(2.5, 5).toFixed(2) + "s";
+    var h2 = el(fx, "circle", { cx: c.getAttribute("cx"), cy: c.getAttribute("cy"), r: 6, fill: "#FFE98A", opacity: .18, filter: "url(#soft)", "class": "ff" }); h2.style.animationDelay = c.style.animationDelay; h2.style.animationDuration = c.style.animationDuration; }
+})();
+</script>
+  </div>
+
+  <div class="grid">
+    <section class="file" aria-labelledby="cf">
+      <p class="label" id="cfile"></p>
+      <h2 id="cf">Clues</h2>
+      <ol class="clues" id="clues"></ol>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div id="verdict"></div>
+    </section>
+    <section class="side" aria-labelledby="acc">
+      <h2 id="acc">Accuse a plant</h2>
+      <div class="dossier" id="dossier">Tap a yellow evidence tag in the garden, or a plant name below, to read its file. When you’re sure, tap <b>Accuse</b>.</div>
+      <div class="suspects" id="suspects"></div>
+      <button class="main" type="button" id="accuse" disabled>Accuse</button>
+    </section>
+  </div>
+  <p class="foot">Fictional case. Never eat garden plants you can’t identify.</p>
+</div>
+
+<script>
+(function () {
+  var V = {"tess": ["\n        <ellipse cx=\"60\" cy=\"104\" rx=\"34\" ry=\"6\" fill=\"#000\" opacity=\".3\"/><ellipse cx=\"34\" cy=\"98\" rx=\"8\" ry=\"6\" fill=\"#B5D69A\"/><ellipse cx=\"86\" cy=\"98\" rx=\"8\" ry=\"6\" fill=\"#B5D69A\"/><path d=\"M28 92q0-34 32-34t32 34z\" fill=\"#3B2E6E\"/>\n        <g fill=\"#fff\"><rect x=\"40\" y=\"70\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"51\" y=\"70\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"62\" y=\"70\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"51\" y=\"59\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"40\" y=\"81\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"62\" y=\"81\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"73\" y=\"81\" width=\"9\" height=\"9\" rx=\"1.5\"/></g>\n        <circle cx=\"94\" cy=\"64\" r=\"16\" fill=\"#B5D69A\"/>\n        \n        \n        <path d=\"M106 50q9 2 8 13q-1 6-6 5q3-8-2-18z\" fill=\"#E8C7A0\" stroke=\"#B98F62\" stroke-width=\"1.5\"/>\n        <g><path d=\"M86.4 61.5 a3.6 3.6 0 0 0 7.2 0z\" fill=\"#2B2340\"/><path d=\"M85.0 61.5 h9.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M97.4 61.5 a3.6 3.6 0 0 0 7.2 0z\" fill=\"#2B2340\"/><path d=\"M96.0 61.5 h9.9\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M93 70q4 4 8 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M118 40c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/><rect x=\"74\" y=\"88\" width=\"16\" height=\"6\" rx=\"2\" fill=\"#fff\" stroke=\"#4A7FB5\"/></g>\n      <ellipse cx=\"90.0\" cy=\"72.3\" rx=\"5.9\" ry=\"3.1\" fill=\"#8FD18A\" opacity=\".55\"/><ellipse cx=\"101.0\" cy=\"72.3\" rx=\"5.9\" ry=\"3.1\" fill=\"#8FD18A\" opacity=\".55\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "\n        <ellipse cx=\"60\" cy=\"104\" rx=\"34\" ry=\"6\" fill=\"#000\" opacity=\".3\"/><ellipse cx=\"34\" cy=\"98\" rx=\"8\" ry=\"6\" fill=\"#B5D69A\"/><ellipse cx=\"86\" cy=\"98\" rx=\"8\" ry=\"6\" fill=\"#B5D69A\"/><path d=\"M28 92q0-34 32-34t32 34z\" fill=\"#3B2E6E\"/>\n        <g fill=\"#fff\"><rect x=\"40\" y=\"70\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"51\" y=\"70\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"62\" y=\"70\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"51\" y=\"59\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"40\" y=\"81\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"62\" y=\"81\" width=\"9\" height=\"9\" rx=\"1.5\"/><rect x=\"73\" y=\"81\" width=\"9\" height=\"9\" rx=\"1.5\"/></g>\n        <circle cx=\"94\" cy=\"64\" r=\"16\" fill=\"#B5D69A\"/>\n        \n        \n        <path d=\"M106 50q9 2 8 13q-1 6-6 5q3-8-2-18z\" fill=\"#E8C7A0\" stroke=\"#B98F62\" stroke-width=\"1.5\"/>\n        <g><circle cx=\"90\" cy=\"62\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"88.4\" cy=\"60.2\" r=\"1.7\" fill=\"#fff\"/><circle cx=\"101\" cy=\"62\" r=\"4.5\" fill=\"#2B2340\"/><circle cx=\"99.4\" cy=\"60.2\" r=\"1.7\" fill=\"#fff\"/><path d=\"M93 70q4 4 8 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M118 40c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/><rect x=\"74\" y=\"88\" width=\"16\" height=\"6\" rx=\"2\" fill=\"#fff\" stroke=\"#4A7FB5\"/></g>\n      "], "bea": ["<ellipse cx=\"60\" cy=\"102\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"35\" cy=\"48\" rx=\"13\" ry=\"18\" fill=\"#DDF1FF\" opacity=\".9\" transform=\"rotate(-30 35 48)\"/><ellipse cx=\"85\" cy=\"48\" rx=\"13\" ry=\"18\" fill=\"#DDF1FF\" opacity=\".9\" transform=\"rotate(30 85 48)\"/><ellipse cx=\"60\" cy=\"88\" rx=\"22\" ry=\"16\" fill=\"#FFC93C\"/><path d=\"M42 84h36M44 94h32\" stroke=\"#2B2340\" stroke-width=\"6\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"62\" r=\"27\" fill=\"#FFC93C\"/><path d=\"M50 36q-6-14-14-12M70 36q6-14 14-12\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"36\" cy=\"24\" r=\"3.5\" fill=\"#2B2340\"/><circle cx=\"84\" cy=\"24\" r=\"3.5\" fill=\"#2B2340\"/><path d=\"M42 42q18-14 36 0l-3 6H45z\" fill=\"#fff\" stroke=\"#E5DCF2\" stroke-width=\"1.5\"/><path d=\"M57 38h6M60 35v6\" stroke=\"#E0465E\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><g><path d=\"M41.4 61.3 a5.6 5.6 0 0 0 11.2 0z\" fill=\"#2B2340\"/><path d=\"M39.3 61.3 h15.4\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><g><path d=\"M67.4 61.3 a5.6 5.6 0 0 0 11.2 0z\" fill=\"#2B2340\"/><path d=\"M65.3 61.3 h15.4\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></g><ellipse cx=\"38\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"82\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M55 74q5 5 10 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><ellipse cx=\"47.0\" cy=\"78.1\" rx=\"9.1\" ry=\"4.9\" fill=\"#8FD18A\" opacity=\".55\"/><ellipse cx=\"73.0\" cy=\"78.1\" rx=\"9.1\" ry=\"4.9\" fill=\"#8FD18A\" opacity=\".55\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"102\" rx=\"26\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><ellipse cx=\"35\" cy=\"48\" rx=\"13\" ry=\"18\" fill=\"#DDF1FF\" opacity=\".9\" transform=\"rotate(-30 35 48)\"/><ellipse cx=\"85\" cy=\"48\" rx=\"13\" ry=\"18\" fill=\"#DDF1FF\" opacity=\".9\" transform=\"rotate(30 85 48)\"/><ellipse cx=\"60\" cy=\"88\" rx=\"22\" ry=\"16\" fill=\"#FFC93C\"/><path d=\"M42 84h36M44 94h32\" stroke=\"#2B2340\" stroke-width=\"6\" stroke-linecap=\"round\"/><circle cx=\"60\" cy=\"62\" r=\"27\" fill=\"#FFC93C\"/><path d=\"M50 36q-6-14-14-12M70 36q6-14 14-12\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"36\" cy=\"24\" r=\"3.5\" fill=\"#2B2340\"/><circle cx=\"84\" cy=\"24\" r=\"3.5\" fill=\"#2B2340\"/><path d=\"M42 42q18-14 36 0l-3 6H45z\" fill=\"#fff\" stroke=\"#E5DCF2\" stroke-width=\"1.5\"/><path d=\"M57 38h6M60 35v6\" stroke=\"#E0465E\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><g><circle cx=\"47\" cy=\"62\" r=\"7\" fill=\"#2B2340\"/><circle cx=\"44.55\" cy=\"59.2\" r=\"2.66\" fill=\"#fff\"/></g><g><circle cx=\"73\" cy=\"62\" r=\"7\" fill=\"#2B2340\"/><circle cx=\"70.55\" cy=\"59.2\" r=\"2.66\" fill=\"#fff\"/></g><ellipse cx=\"38\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"82\" cy=\"73\" rx=\"6\" ry=\"3.5\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M55 74q5 5 10 0\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "echo": ["<ellipse cx=\"60\" cy=\"104\" rx=\"24\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M48 96l-6 10M72 96l6 10\" stroke=\"#F0A830\" stroke-width=\"4\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"84\" rx=\"22\" ry=\"18\" fill=\"#1F9AAE\"/><ellipse cx=\"60\" cy=\"88\" rx=\"12\" ry=\"12\" fill=\"#B9EEF2\"/><circle cx=\"60\" cy=\"56\" r=\"26\" fill=\"#1F9AAE\"/><path d=\"M50 32q4-14 10-2q4-14 10 2\" fill=\"#E0465E\"/><path d=\"M60 62q10 2 8 12q-6-4-8-4z\" fill=\"#F0A830\"/><path d=\"M60 62q-6 6-2 12\" fill=\"#E09020\"/><g><path d=\"M49.0 52.2 a1.8 1.8 0 1 1 -1.8 1.8 a3.6 3.6 0 1 1 5.4 -3.6 a5.7 5.7 0 1 1 -7.5 7.2\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/></g><g><path d=\"M71.0 52.2 a1.8 1.8 0 1 1 -1.8 1.8 a3.6 3.6 0 1 1 5.4 -3.6 a5.7 5.7 0 1 1 -7.5 7.2\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/></g><ellipse cx=\"40\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"80\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M96 14l1.6 3.4 3.4 1.6-3.4 1.6-1.6 3.4-1.6-3.4-3.4-1.6 3.4-1.6z\" fill=\"#FFD23F\"/><path d=\"M108 26l1.2 2.4 2.4 1.2-2.4 1.2-1.2 2.4-1.2-2.4-2.4-1.2 2.4-1.2z\" fill=\"#FFD23F\"/>", "<ellipse cx=\"60\" cy=\"104\" rx=\"24\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M48 96l-6 10M72 96l6 10\" stroke=\"#F0A830\" stroke-width=\"4\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"84\" rx=\"22\" ry=\"18\" fill=\"#1F9AAE\"/><ellipse cx=\"60\" cy=\"88\" rx=\"12\" ry=\"12\" fill=\"#B9EEF2\"/><circle cx=\"60\" cy=\"56\" r=\"26\" fill=\"#1F9AAE\"/><path d=\"M50 32q4-14 10-2q4-14 10 2\" fill=\"#E0465E\"/><path d=\"M60 62q10 2 8 12q-6-4-8-4z\" fill=\"#F0A830\"/><path d=\"M60 62q-6 6-2 12\" fill=\"#E09020\"/><g><circle cx=\"49\" cy=\"54\" r=\"6\" fill=\"#2B2340\"/><circle cx=\"46.9\" cy=\"51.6\" r=\"2.2800000000000002\" fill=\"#fff\"/></g><g><circle cx=\"71\" cy=\"54\" r=\"6\" fill=\"#2B2340\"/><circle cx=\"68.9\" cy=\"51.6\" r=\"2.2800000000000002\" fill=\"#fff\"/></g><ellipse cx=\"40\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><ellipse cx=\"80\" cy=\"64\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".6\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"]};
+  var P = [ // [tag no., name, latin, toxin, what it does, tag x, tag y]
+    [1, "Willow", "Salix spp.", "Salicin (the original aspirin)", "Bark tea gives salicylates. In big doses: ringing ears, fast breathing, vomiting, acid build-up. Leaves are only mildly toxic.", 176, 262],
+    [2, "Foxglove", "Digitalis purpurea", "Cardiac glycosides (digitoxin, digoxin-like)", "Slows and disturbs the heart. Nausea, vomiting, yellow-green vision, very slow irregular pulse, high potassium. Leaves look like comfrey.", 238, 142],
+    [3, "Lily of the valley", "Convallaria majalis", "Cardiac glycosides (convallatoxin)", "Same family of heart poisons as foxglove. Leaves are mistaken for wild garlic, not comfrey.", 75, 318],
+    [4, "Oleander", "Nerium oleander", "Cardiac glycosides (oleandrin)", "Every part is toxic, even smoke from burning it. Classic in Sri Lanka and India. Pretty pink flowers, leathery long leaves.", 730, 296],
+    [5, "Death cap", "Amanita phalloides", "Amatoxins", "Nothing for 6 to 24 hours, then violent diarrhoea and vomiting, a false recovery, then liver failure days later.", 612, 345],
+    [6, "Deadly nightshade", "Atropa belladonna", "Atropine, scopolamine", "Anticholinergic: hot, flushed, dry, huge pupils, fast heart, delirium. Sweet black berries tempt children.", 728, 352],
+    [7, "Yew", "Taxus baccata", "Taxines", "Seeds and leaves (not the red flesh) stop the heart suddenly. Collapse and sudden death, often with few warning signs.", 500, 204],
+    [8, "Castor oil plant", "Ricinus communis", "Ricin", "Chewed seeds release ricin. Hours later: vomiting, bloody diarrhoea, then dehydration and organ failure.", 72, 306]
+  ];
+  var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day.";
+  var CASES = [
+    { id: "tess", solver: "the cardiology team", team: "&#129728; Cardiology’s plan", who: "Tess", label: "Case 1 · Tess", file: "Case file 001 · Tess, 104-year-old tortoise", ans: 2,
+      note: "Tess the tortoise was found drowsy on the garden path at dusk.",
+      clues: [["Symptoms", "Nausea, vomiting and stomach cramps. She says the garden looks yellow-green, with halos around the porch light."],
+        ["Exam", "Pulse 38 and irregular. BP 90/60. Pupils normal. Skin cool, not dry or flushed."],
+        ["ECG", "Slow rhythm with heart block. ST segments dip in a scooped ‘reverse tick’ shape."],
+        ["Bloods", "Potassium 6.1 (high). A digoxin blood test is positive, though she has never taken digoxin."],
+        ["History", "She makes her own herbal tea from the garden for sore joints. She picked fresh leaves this afternoon."],
+        ["Evidence", "The leaves in her teapot are large, soft and hairy, from a low rosette. She thought they were comfrey."]],
+      win: "Foxglove leaves are easily mistaken for comfrey. Yellow-green vision (xanthopsia), a very slow heart, high potassium and a positive digoxin test all point to cardiac glycosides.<br><br><b>Pearl:</b> William Withering described foxglove for ‘dropsy’ (heart failure) in 1785. Lily of the valley and oleander cause the same picture: the teacup and the comfrey mix-up point to foxglove.",
+      plan: "<b>Antidote:</b> digoxin-specific antibody fragments (DigiFab), 40 mg vials given IV. Each vial binds about 0.5 mg of digoxin.<br><b>Dose:</b> Tess was unstable (pulse 38, BP 90/60, heart block), so 10 vials. If stable, 5 vials. Repeat after 30 minutes if not improving. Plant glycosides bind less well than the drug, so extra vials may be needed.<br><b>Also:</b> cardiac monitoring, recheck potassium after the antidote (it falls as the poison is mopped up), and repeat the ECG.",
+      recov: "Two nights in ICU. Heart rate back to 70, potassium normal. Home on day 3, with one new rule: no more DIY herbal tea.",
+      tip: "Before it flowers, foxglove is easy to mistake for comfrey or borage. Never make tea from leaves you can’t identify for certain.",
+      why: { 1: "Willow gives salicylates: ringing ears and fast breathing, not yellow vision and a pulse of 38.", 3: "Close! Lily of the valley has the same heart poisons. But its leaves get mistaken for wild garlic, not comfrey.", 4: "Close! Oleander has the same heart poisons, but there’s no oleander in the cup.", 5: "Death cap waits 6 to 24 hours, then hits the gut and liver. It doesn’t slow the heart like this.", 6: "Nightshade makes you hot, dry and wide-pupilled with a fast heart. Tess is cool with normal pupils and a slow pulse.", 7: "Yew stops the heart suddenly with little warning, and doesn’t cause yellow vision or a positive digoxin test.", 8: "Castor beans cause bloody diarrhoea and organ failure hours later, not a pulse of 38." } },
+    { id: "bea", solver: "the hepatology team", team: "&#129658; Hepatology’s plan", who: "Bea", label: "Case 2 · Bea", file: "Case file 002 · Bea, nurse bee and keen cook", ans: 5,
+      note: "Bea the bee was found curled up on the garden path one morning.",
+      clues: [["Symptoms", "Violent vomiting, cramps and torrents of watery diarrhoea since 4am."],
+        ["Exam", "Dry mouth, pulse 118, BP 95/60. Pupils normal, skin not flushed. Tummy tender all over."],
+        ["Timing", "Her last meal was dinner at 6pm, about 10 hours before the vomiting started. She felt fine all evening."],
+        ["Day 2", "After IV fluids she feels much better and wants to go home."],
+        ["Day 3 bloods", "ALT 3,200 U/L (normal under 40), INR 2.4 and rising, blood sugar low."],
+        ["Evidence", "Dinner was risotto made with ‘something foraged from the garden’. In the bin: a pale greenish cap with white gills, and a stem with a skirt and a cup at the base."]],
+      win: "Death caps (Amanita phalloides) are deceptive: nothing for 6 to 24 hours, then violent gastro, then a ‘honeymoon’ when the patient feels better while the liver quietly fails. The ring and the cup at the base are the giveaways.<br><br><b>Pearl:</b> death caps grow under oak trees in Canberra, Melbourne and Adelaide. One cap can kill an adult, and cooking doesn’t destroy the toxin.",
+      plan: "<b>Antidote:</b> no true antidote. IV silibinin (from milk thistle) blocks the toxin getting into liver cells: 20 mg/kg a day as a continuous infusion. Plus acetylcysteine, repeated activated charcoal and aggressive IV fluids.<br><b>Watch:</b> INR, glucose, ALT and kidney function every 6 to 12 hours. Rising INR or falling glucose: call the liver transplant unit early.",
+      recov: "Four nights in ICU. The INR peaked on day 4, then fell. Home on day 8 with a liver that bounced back.",
+      tip: "Never eat wild mushrooms you can’t identify for certain. A ring on the stem and a cup at the base are red flags.",
+      why: { 1: "Willow gives salicylates: ringing ears and fast breathing, not a 10-hour delay then liver failure.", 2: "Foxglove slows the heart within hours. Bea’s heart is fast, and her liver is the problem.", 3: "Lily of the valley is a heart poison, not a liver poison.", 4: "Oleander is a heart poison. Bea’s ECG and potassium are fine.", 6: "Nightshade makes you hot, dry, confused and wide-pupilled within an hour or two. Bea’s pupils are normal.", 7: "Yew stops the heart suddenly. It doesn’t cause a delayed gastro and liver failure.", 8: "Close: castor beans also cause delayed gastro. But ricin rarely wrecks the liver like this, and there were no beans in the risotto." } },
+    { id: "echo", solver: "the ED team", team: "&#128657; The ED team’s plan", who: "Echo", label: "Case 3 · Echo", file: "Case file 003 · Echo, parrot and berry enthusiast", ans: 6,
+      note: "Echo the parrot was found in the garden at dusk, talking to someone who isn’t there.",
+      clues: [["Symptoms", "Agitated and confused, picking at the air. Says everything looks blurry."],
+        ["Exam", "Temperature 38.6, pulse 140. Skin hot, red and bone dry. Pupils huge and barely react to light."],
+        ["Abdomen", "Bladder full up to the belly button. Bowel sounds very quiet."],
+        ["Tests", "ECG: fast but normal rhythm. Glucose, sodium and CK normal. Paracetamol level zero."],
+        ["History", "She spent the afternoon foraging around the garden for berries and seeds."],
+        ["Evidence", "Dark juice on her beak. She describes the berries as shiny, black, cherry-sized and sweet, each sitting on a green star-shaped base."]],
+      win: "Deadly nightshade berries are sweet, so children (and parrots) eat them. Atropine and scopolamine block acetylcholine: the anticholinergic toxidrome.<br><br><b>Pearl:</b> hot as a hare, dry as a bone, red as a beet, blind as a bat, mad as a hatter, full as a flask. Angel’s trumpet and some antihistamines cause the same picture.",
+      plan: "<b>Treatment:</b> a calm, cool, quiet room, IV fluids, and a urinary catheter for the full bladder. Benzodiazepines for agitation (e.g. diazepam 5 mg IV, repeated as needed).<br><b>Antidote:</b> physostigmine 0.5 to 1 mg IV slowly, with ECG monitoring, can reverse the delirium. Used in some centres, and not if the ECG shows a wide QRS.",
+      recov: "Clear-headed after 24 hours. Home on day 2, with the nightshade dug out of the garden.",
+      tip: "Teach children never to eat berries from the garden or bush without asking. Pull out deadly nightshade and angel’s trumpet where kids play.",
+      why: { 1: "Willow gives salicylates: fast breathing and sweating, not hot dry skin with huge pupils.", 2: "Foxglove makes the heart slow. Echo’s is racing.", 3: "Lily of the valley slows the heart. Echo’s pulse is 140.", 4: "Oleander slows the heart and raises potassium. Echo’s potassium is normal and her heart is fast.", 5: "Death cap waits 6 to 24 hours, then causes gastro. It doesn’t cause hot, dry, confused delirium.", 7: "Yew stops the heart suddenly and doesn’t cause big pupils or delirium.", 8: "Castor beans cause vomiting and bloody diarrhoea, not hot, dry, confused delirium." } }
+  ];
+  Array.prototype.forEach.call(document.querySelectorAll('#scene > g[transform^="translate"], [id^="prop-"] > g[transform^="translate"]'), function (g) { var t = g.getAttribute("transform"); if (!/scale/.test(t)) g.setAttribute("transform", t + " scale(1.45)"); });
+  var $ = function (id) { return document.getElementById(id); };
+  var NS = "http://www.w3.org/2000/svg", C, shown, lives, pick, out, done;
+
+  var SCENE = 1, SCENE_NAME = "The Herb Patch";
+  var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
+  function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
+  function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
+  function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
+  function celebrate(stars, name) {
+    var host = document.body, cols = ["#F5C518", "#2E8B57", "#B23A48", "#4FB3D9", "#B48CFF", "#F28C28"], h = "";
+    for (var k = 0; k < 60; k++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[k % cols.length] + ";animation-delay:" + (Math.random() * .6).toFixed(2) + "s;animation-duration:" + (1.6 + Math.random() * 1.6).toFixed(2) + 's"></i>';
+    var solved = Object.keys(TQ).filter(function (k) { return TQ[k] > 0; }).length, sceneDone = CASES.every(function (c) { return TQ[c.id] > 0; });
+    var extra = solved >= 30 ? "All 30 cases closed. Toxicology December complete! &#127942;" : sceneDone ? SCENE_NAME + " cleared: all 3 cases closed." : solved + " of 30 cases closed this December.";
+    var o = document.createElement("div"); o.className = "cel"; o.setAttribute("role", "status");
+    o.innerHTML = '<div class="cf-wrap" aria-hidden="true">' + h + '</div><div class="cel-stamp">Case closed</div><svg class="cel-m" viewBox="0 0 120 120" aria-hidden="true">' + V[C.id][1] + '</svg><div class="cel-s">' + "★".repeat(stars) + "☆".repeat(3 - stars) + '</div><p class="cel-t">' + C.who + " is on the mend, thanks to you and " + C.solver + ". " + extra + '</p><span class="cel-tap">Tap to read the plan</span>';
+    o.addEventListener("click", function () { o.remove(); });
+    host.appendChild(o); setTimeout(function () { if (o.parentNode) o.remove(); }, 6000);
+  }
+  P.forEach(function (p) { p[5] = Math.min(730, Math.max(58, p[5])); p[6] = Math.min(450, Math.max(132, p[6])); });
+  P.forEach(function (p) {
+    var g = document.createElementNS(NS, "g"); g.setAttribute("class", "tagbtn"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "Evidence " + p[0] + ": " + p[1]);
+    g.innerHTML = '<rect x="' + (p[5] - 13) + '" y="' + (p[6] - 13) + '" width="26" height="26" rx="4" fill="#F5C518" stroke="#1A1F1B" stroke-width="1.5"/><text x="' + p[5] + '" y="' + (p[6] + 5) + '" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#1A1F1B">' + p[0] + "</text>";
+    g.addEventListener("click", function () { select(p[0]); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p[0]); } });
+    $("tags").appendChild(g);
+  });
+  $("suspects").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) select(+b.getAttribute("data-n")); });
+  function drawCases() { $("cases").innerHTML = CASES.map(function (c, i) { var s = TQ[c.id]; return '<button type="button" data-i="' + i + '"' + (isOpen(i) ? "" : " disabled") + ">" + c.label + (isOpen(i) ? (s > 0 ? '<span class="st">' + "★".repeat(s) + "</span>" : s === 0 ? '<span class="st">✓</span>' : "") : " · opens " + dayOf(i) + " Dec") + "</button>"; }).join(""); }
+  drawCases();
+  $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
+  function load(i) {
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each plant, reveal clues one at a time, and accuse the plant they ate. Fewer clues, more stars.";
+    $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
+    $("victim").innerHTML = V[C.id][0];
+    CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
+    $("suspects").innerHTML = P.map(function (p) { return '<button type="button" data-n="' + p[0] + '"><span class="n">' + p[0] + "</span>" + p[1] + "</button>"; }).join("");
+    $("dossier").innerHTML = "Tap a yellow evidence tag in the garden, or a plant name below, to read its file. When you’re sure, tap <b>Accuse</b>.";
+    $("accuse").disabled = true; $("accuse").textContent = "Accuse";
+    renderClues();
+  }
+  function select(n) {
+    var p = P[n - 1]; pick = n;
+    $("dossier").innerHTML = "<b>Evidence " + p[0] + ": " + p[1] + '</b> <span class="sci">' + p[2] + "</span><br><b>Toxin:</b> " + p[3] + "<br>" + p[4];
+    Array.prototype.forEach.call($("suspects").children, function (b) { b.style.outline = +b.getAttribute("data-n") === n ? "2px solid #F5C518" : ""; });
+    $("accuse").disabled = done || !!out[n]; $("accuse").textContent = "Accuse the " + p[1].toLowerCase();
+  }
+  function renderClues() {
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (c) { return '<li><span class="k">' + c[0] + "</span><p>" + c[1] + "</p></li>"; }).join("");
+    $("left").textContent = shown < C.clues.length ? (C.clues.length - shown) + " clues left" : "All clues revealed";
+    $("more").disabled = done || shown >= C.clues.length;
+  }
+  function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
+  function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
+  $("accuse").onclick = function () {
+    if (!pick || done) return;
+    var name = P[C.ans - 1][1];
+    if (pick === C.ans) {
+      done = true; var stars = Math.max(1, (shown <= 2 ? 3 : shown <= 4 ? 2 : 1) - (lives < 3 ? 1 : 0));
+      $("verdict").innerHTML = '<div class="verdict yes"><div class="stars">' + "★".repeat(stars) + "☆".repeat(3 - stars) + "</div><b>" + name + ". You and " + C.solver + " cracked it on clue " + shown + ".</b> " + C.win + "</div>" + planHtml();
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+      shown = C.clues.length; renderClues(); $("accuse").disabled = true; recover(); if (!(TQ[C.id] >= stars)) TQ[C.id] = stars; tqSave(); var keep = C; drawCases(); Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", CASES[k] === keep ? "true" : "false"); }); celebrate(stars);
+    } else {
+      lives--; out[pick] = 1; $("lives").textContent = "●".repeat(lives) + "○".repeat(3 - lives);
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === pick) b.classList.add("out"); });
+      var why = C.why[pick] || "Not this time.";
+      if (!lives) { done = true; why += " Out of accusations. Luckily " + C.solver + " worked it out: " + name.toLowerCase() + "."; shown = C.clues.length; renderClues(); }
+      $("verdict").innerHTML = '<div class="verdict no"><b>Not that one.</b> ' + why + "</div>" + (lives ? "" : planHtml());
+      if (!lives) { recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); } }
+      $("accuse").disabled = true;
+    }
+  };
+  (function () { var pan = $("pan"), hint = $("swipe"); if (pan.scrollWidth > pan.clientWidth) pan.scrollLeft = (pan.scrollWidth - pan.clientWidth) * 0.5;
+    setTimeout(function () { pan.addEventListener("scroll", function () { if (hint) hint.style.opacity = 0; }, { passive: true }); }, 400); setTimeout(function () { if (hint) hint.style.opacity = 0; }, 5000); })();
+  (function () { var q = +((location.search.match(/[?&]c=(\d)/) || [])[1] || 0) - 1, open = CASES.map(function (c, i) { return isOpen(i) ? i : -1; }).filter(function (i) { return i > -1; });
+    if (!open.length) { $("note").innerHTML = '<span class="lockmsg">&#128274; This scene opens on ' + dayOf(0) + " December. One new case every day of Toxicology December.</span>"; document.querySelector(".grid").hidden = true; return; }
+    load(open.indexOf(q) > -1 ? q : open[open.length - 1]); })();
+})();
+</script>

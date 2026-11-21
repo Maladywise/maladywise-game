@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>*{box-sizing:border-box}[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}
+.cel{position:fixed;inset:0;display:grid;place-items:center;align-content:center;gap:6px;background:rgba(6,12,9,.93);backdrop-filter:blur(3px);z-index:50;cursor:pointer;animation:celin .3s ease-out}
+.cel .cf-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.cel .cf{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:cffall linear forwards;opacity:.95}
+@keyframes cffall{to{top:110%;transform:rotate(540deg) translateX(30px)}}
+.cel-stamp{font:400 clamp(26px,7vw,48px)/1 var(--display);color:#F5C518;border:4px solid #F5C518;border-radius:10px;padding:6px 16px;transform:rotate(-6deg);animation:stamp .45s cubic-bezier(.2,1.6,.4,1) both;letter-spacing:.04em;text-transform:uppercase}
+.cel .cel-m{width:130px;height:130px;animation:hop .9s ease-in-out .3s 3}
+.cel-s{font-size:clamp(24px,6vw,34px);letter-spacing:6px;color:#F5C518}
+.cel-t{margin:0;font:600 15px var(--body);color:#fff;text-align:center;max-width:30em;padding:0 16px}
+.cel-tap{font:500 11px var(--mono);color:#C9D8CE;letter-spacing:.1em;text-transform:uppercase}
+@keyframes stamp{from{transform:scale(2.4) rotate(-6deg);opacity:0}to{transform:scale(1) rotate(-6deg);opacity:1}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-22px) rotate(-4deg)}}
+@keyframes celin{from{opacity:0}}
+@media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
+.cases button[disabled]{opacity:.5;cursor:not-allowed}
+.cases button .st{color:var(--tag);margin-left:4px}
+.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
+</style>
+<title>Toxiquest: Canopy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one crime-scene garden at dusk on top, the case file underneath; evidence tags in the garden open plant dossiers. Single dusk look by choice. */
+:root{
+  --night:#13241C; --moss:#1F3A2C; --leaf:#2F5A3F; --mist:#D8E6D9;
+  --paper:#F2F0E6; --ink:#1A1F1B; --tag:#F5C518; --tox:#B23A48; --ok:#2E8B57;
+  --display:"Young Serif",Georgia,serif; --body:"Figtree",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--night);color:var(--mist)}
+body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:900px;margin:0 auto;display:grid;gap:18px}
+.top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
+.top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
+.kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
+.lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
+.lives b{color:var(--tox);letter-spacing:3px}
+.scene{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid #2C4A38}
+.scene svg{display:block;width:100%;height:auto}
+.tagbtn{cursor:pointer}
+.tagbtn:focus-visible rect{stroke:#fff;stroke-width:3}
+.tagbtn:hover rect{fill:#FFE15A}
+.tape{position:absolute;left:-8%;right:-8%;top:16px;transform:rotate(-2.5deg);background:var(--tag);color:var(--ink);font:500 12px var(--mono);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:5px 0;pointer-events:none;opacity:.92}
+.grid{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
+.file{background:var(--paper);color:var(--ink);border-radius:14px;padding:18px;display:grid;gap:12px;min-width:0;position:relative}
+.file h2{font:400 22px var(--display);margin:0}
+.label{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#5B6B5F;margin:0}
+.clues{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.clues li{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #DCD8C8;animation:in .35s ease-out}
+.clues li .k{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--leaf);border-radius:6px;padding:3px 7px;white-space:nowrap}
+.clues li p{margin:0;font-size:15px}
+@keyframes in{from{opacity:.3;transform:translateY(4px)}}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button.main{font:600 15px var(--body);border:0;border-radius:999px;padding:12px 20px;background:var(--leaf);color:#fff;cursor:pointer}
+button.main:hover{background:#3A6E4C}
+button.main:focus-visible,button.ghost:focus-visible,.suspects button:focus-visible{outline:3px solid var(--tag);outline-offset:2px}
+button.ghost{font:600 14px var(--body);border:2px solid var(--leaf);border-radius:999px;padding:10px 16px;background:transparent;color:var(--leaf);cursor:pointer}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.side{background:var(--moss);border:1px solid #2C4A38;border-radius:14px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.side h2{font:400 20px var(--display);margin:0;color:#fff}
+.suspects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.suspects button{display:flex;gap:8px;align-items:center;text-align:left;font:500 14px var(--body);padding:9px 10px;border-radius:10px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}
+.suspects button .n{font:500 11px var(--mono);background:var(--tag);color:var(--ink);border-radius:4px;padding:2px 5px}
+.suspects button.out{opacity:.4;text-decoration:line-through}
+.suspects button.win{border-color:var(--ok);background:#1E4A30}
+.dossier{background:#0F1C16;border:1px dashed #3B5E48;border-radius:12px;padding:12px 14px;font-size:14px;min-height:72px}
+.dossier b{color:#fff}
+.dossier .sci{font-style:italic;color:#9FB8A6}
+.verdict{border-radius:12px;padding:12px 14px;font-size:15px}
+.verdict.no{background:#F6DADD;color:#6B1A24}
+.verdict.yes{background:#DDF1E4;color:#14522F}
+.stars{font-size:26px;letter-spacing:4px}
+.foot{font-size:12px;color:#7F9A88;text-align:center}
+@media (prefers-reduced-motion:reduce){.clues li{animation:none}.sway{animation:none!important}}
+.pan{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pan::-webkit-scrollbar{display:none}
+.pan svg{width:100%;min-width:100%}
+.swipe{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);margin:0;background:rgba(10,20,14,.75);color:#fff;font:500 12px var(--mono);letter-spacing:.06em;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .6s}
+@media (max-width:640px){.tagbtn{transform-box:fill-box;transform-origin:50% 50%;transform:scale(1.5)}.scene{border-radius:12px}}
+.scenes{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font:500 12px var(--mono)}.scenes a{color:var(--mist);text-decoration:none;border:1px solid #3B5E48;border-radius:999px;padding:6px 12px}.scenes a[aria-current]{background:#F2F0E6;color:#1A1F1B;border-color:#F2F0E6}.scenes span{color:#7F9A88}
+.cases{display:flex;gap:8px;flex-wrap:wrap}.cases button{font:600 14px var(--body);border-radius:999px;padding:9px 16px;border:1px solid #3B5E48;background:#183024;color:var(--mist);cursor:pointer;min-height:44px}.cases button[aria-pressed=true]{background:var(--tag);color:var(--ink);border-color:var(--tag)}.cases button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.recov{border-radius:12px;padding:12px 14px;font-size:15px;background:#E3EEF9;color:#173A5E;margin-top:10px}
+.sway{transform-box:fill-box;transform-origin:50% 0;animation:sway 6s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(1.6deg)}}
+.ff{animation:ff 3s ease-in-out infinite}@keyframes ff{0%,100%{opacity:.15}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.ff{animation:none}}
+</style></head><body>
+
+<div class="wrap">
+  <nav class="scenes" aria-label="Scenes"><a class="tqcal" href="./">&#128197; December calendar</a><a href="herb-patch.html">1 · The Herb Patch</a><a href="low-tide.html">2 · Low Tide</a><a href="whiteout.html">3 · Whiteout</a><a href="off-track.html">4 · Off Track</a><a href="dinner-party.html">5 · Dinner Party</a><a href="medicine-cabinet.html">6 · Medicine Cabinet</a><a href="the-shed.html">7 · The Shed</a><a href="dry-heat.html">8 · Dry Heat</a><a href="canopy.html" aria-current="page">9 · Canopy</a><a href="midnight-ward.html">10 · Midnight Ward</a></nav>
+  <div class="top">
+    <div>
+      <p class="kick">Toxiquest · Scene 9 of 10: the rainforest · 3 cases</p>
+      <h1>Canopy</h1>
+    </div>
+    <p class="lives" aria-live="polite">Accusations left <b id="lives">●●●</b></p>
+  </div>
+  <div class="cases" id="cases" role="group" aria-label="Choose a case"></div>
+  <p class="note" id="note"></p>
+
+  <div class="scene">
+    <div class="pan" id="pan"><svg viewBox="30 112 760 358" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A tropical rainforest at dusk: buttress trees with strangler fig roots, light shafts, ferns, a cabin with a cooking pot and root peelings, a cycad with orange seeds, a lantana bush, an angel’s trumpet tree with hanging white flowers, gold top mushrooms, a water tank with mosquitoes, leeches on the boardwalk and a cane toad by the stream. One walker lies asleep and unwell on the boardwalk.">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D2350"/><stop offset=".38" stop-color="#4B3F78"/><stop offset=".7" stop-color="#B0627A"/><stop offset="1" stop-color="#F0A86C"/></linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#355E3E"/><stop offset=".5" stop-color="#22432D"/><stop offset="1" stop-color="#11241A"/></linearGradient>
+        <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4A4170"/><stop offset="1" stop-color="#5C4C70"/></linearGradient>
+        <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26324A"/><stop offset="1" stop-color="#1E3330"/></linearGradient>
+        <linearGradient id="trunk" x1="0" x2="1"><stop offset="0" stop-color="#3B2C20"/><stop offset=".5" stop-color="#6B5440"/><stop offset="1" stop-color="#2E2219"/></linearGradient>
+        <linearGradient id="bell" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D493E0"/><stop offset="1" stop-color="#7E3B95"/></linearGradient>
+        <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DCE6B8"/><stop offset="1" stop-color="#A9BB7C"/></linearGradient>
+        <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6FA35E"/><stop offset="1" stop-color="#2F5A36"/></linearGradient>
+        <linearGradient id="castor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B0454C"/><stop offset="1" stop-color="#5E1C24"/></linearGradient>
+        <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3E2A"/><stop offset="1" stop-color="#2E1F15"/></linearGradient>
+        <radialGradient id="moonglow"><stop offset="0" stop-color="#FFF6DC" stop-opacity=".55"/><stop offset="1" stop-color="#FFF6DC" stop-opacity="0"/></radialGradient>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#FFD27A" stop-opacity=".55"/><stop offset=".5" stop-color="#FFB547" stop-opacity=".18"/><stop offset="1" stop-color="#FFB547" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></radialGradient>
+        <radialGradient id="berry" cx=".35" cy=".35"><stop offset="0" stop-color="#5A5A6A"/><stop offset=".35" stop-color="#151518"/><stop offset="1" stop-color="#050506"/></radialGradient>
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D8E8" stop-opacity="0"/><stop offset=".5" stop-color="#C9D8E8" stop-opacity=".16"/><stop offset="1" stop-color="#C9D8E8" stop-opacity="0"/></linearGradient>
+        <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="table" tableValues="0 .09"/></feComponentTransfer><feBlend in2="SourceGraphic" mode="multiply"/></filter>
+        <filter id="soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+      </defs>
+      <g id="scene"></g>
+      <!-- The walker, asleep and unwell, and the spilled teacup -->
+      <ellipse cx="410" cy="392" rx="120" ry="52" fill="url(#lamp)"/>
+      <g id="victim" transform="translate(345 318) rotate(-14 60 60) scale(1.2)"></g>
+      
+      <g id="fx"></g>
+      <rect width="800" height="470" fill="url(#vig)" opacity=".45" pointer-events="none"/>
+      <rect width="800" height="470" filter="url(#grain)" fill="#888" opacity=".2" pointer-events="none" style="mix-blend-mode:multiply"/>
+      <g id="tags"></g>
+    </svg></div>
+    
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg", sc = document.getElementById("scene"), fx = document.getElementById("fx");
+  var seed = 113; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+  function R(a, b) { return a + (b - a) * r(); }
+  function el(p, tag, a) { var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; }
+  function g(p, a) { return el(p, "g", a || {}); }
+  document.querySelector("svg defs").insertAdjacentHTML("beforeend",
+    '<linearGradient id="rsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0E2A22"/><stop offset=".6" stop-color="#1E4A36"/><stop offset="1" stop-color="#3A6A48"/></linearGradient>' +
+    '<linearGradient id="rfloor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A4A2A"/><stop offset="1" stop-color="#1A2414"/></linearGradient>' +
+    '<linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E8F8C0" stop-opacity=".35"/><stop offset="1" stop-color="#E8F8C0" stop-opacity="0"/></linearGradient>' +
+    '<linearGradient id="bark" x1="0" x2="1"><stop offset="0" stop-color="#3A2E22"/><stop offset=".5" stop-color="#5E4A36"/><stop offset="1" stop-color="#2A2018"/></linearGradient>');
+  el(sc, "rect", { width: 800, height: 470, fill: "url(#rsky)" });
+  // far canopy layers
+  for (var L = 0; L < 3; L++) for (var i = 0; i < 40; i++) el(sc, "circle", { cx: R(0, 800), cy: R(100 + L * 40, 150 + L * 50), r: R(20, 44), fill: ["#16382A", "#1E4A34", "#2A5E40"][L], opacity: .9 });
+  // light shafts
+  [[200, 40], [430, 60], [620, 30]].forEach(function (s) { el(sc, "path", { d: "M" + s[0] + " 100 l" + s[1] + " 0 l80 370 l-" + (s[1] + 60) + " 0z", fill: "url(#shaft)" }); });
+  // big buttress tree trunks
+  function trunk(x, w) { el(sc, "path", { d: "M" + (x - w) + " 100 Q" + (x - w * .8) + " 260 " + (x - w * 2.4) + " 330 L" + (x + w * 2.4) + " 330 Q" + (x + w * .8) + " 260 " + (x + w) + " 100z", fill: "url(#bark)" });
+    for (var i = 0; i < 4; i++) el(sc, "path", { d: "M" + (x + R(-w, w)) + " " + R(110, 200) + " q" + R(-4, 4) + " 40 " + R(-6, 6) + " 80", stroke: "#2A2018", "stroke-width": 1.5, fill: "none" }); }
+  trunk(60, 22); trunk(380, 16); trunk(760, 26);
+  // strangler fig roots on middle trunk
+  for (var i = 0; i < 6; i++) el(sc, "path", { d: "M" + (370 + i * 4) + " 120 q" + R(-20, 20) + " 80 " + R(-30, 30) + " 200", stroke: "#8A7A5A", "stroke-width": 3, fill: "none", opacity: .8 });
+  // vines and hanging lianas
+  for (var i = 0; i < 12; i++) { var x = R(0, 800); el(sc, "path", { d: "M" + x + " 100 q" + R(-30, 30) + " " + R(60, 120) + " " + R(-10, 10) + " " + R(120, 200), stroke: "#4A6A2A", "stroke-width": 2, fill: "none", "class": i % 3 ? "" : "sway" }); }
+  // forest floor
+  el(sc, "path", { d: "M0 300 Q200 288 400 296 Q600 304 800 292 L800 470 L0 470z", fill: "url(#rfloor)" });
+  // boardwalk and wet track
+  el(sc, "path", { d: "M440 470 L520 300 L600 300 L640 470z", fill: "#7A5A3A" }); for (var y = 304; y < 470; y += 12) { var t = (y - 300) / 170; el(sc, "path", { d: "M" + (520 - 80 * t) + " " + y + " L" + (600 + 40 * t) + " " + y, stroke: "#4A3420", "stroke-width": 1.5 }); }
+  // ferns
+  function fern(x, y, s, col) { var f = g(sc, { transform: "translate(" + x + " " + y + ") scale(" + s + ")", "class": "sway" }); for (var k = -3; k <= 3; k++) { var a = (-90 + k * 22) * Math.PI / 180; var ex = 40 * Math.cos(a), ey = 40 * Math.sin(a); el(f, "path", { d: "M0 0 Q" + (ex * .5 + k * 4).toFixed(1) + " " + (ey * .6).toFixed(1) + " " + ex.toFixed(1) + " " + ey.toFixed(1), stroke: col, "stroke-width": 3, fill: "none" }); for (var j = 1; j < 6; j++) { var px = ex * j / 6, py = ey * j / 6; el(f, "path", { d: "M" + px.toFixed(1) + " " + py.toFixed(1) + " l-5 -3 M" + px.toFixed(1) + " " + py.toFixed(1) + " l5 -3", stroke: col, "stroke-width": 1.4 }); } } }
+  fern(20, 330, 1.1, "#4E8A3A"); fern(300, 316, .9, "#5E9A4A"); fern(690, 330, 1.2, "#4E8A3A"); fern(780, 440, 1.3, "#3E7A2E"); fern(30, 460, 1.4, "#3E7A2E");
+  // cabin corner with cooking pot and cassava peel (left)
+  el(sc, "path", { d: "M100 300 v-70 l40 -20 l40 20 v70z", fill: "#6E5236" }); el(sc, "path", { d: "M92 234 l48 -28 l48 28", stroke: "#3A2A1A", "stroke-width": 6, fill: "none" }); el(sc, "rect", { x: 128, y: 258, width: 22, height: 42, fill: "#3A2A1A" });
+  var pot = g(sc, { transform: "translate(176 350)" }); el(pot, "path", { d: "M-16 -10 h32 v10 q0 10 -16 10 q-16 0 -16 -10z", fill: "#3A3A3A" }); el(pot, "ellipse", { cy: -10, rx: 16, ry: 4, fill: "#E8E0D0" }); el(pot, "path", { d: "M-20 4 l-8 10 M20 4 l8 10", stroke: "#222", "stroke-width": 2 });
+  for (var i = 0; i < 4; i++) el(sc, "path", { d: "M" + (196 + i * 6) + " 360 q4 -6 10 -2", stroke: "#8A5A2A", "stroke-width": 3, fill: "none" });
+  el(sc, "rect", { x: 200, y: 352, width: 14, height: 6, rx: 3, fill: "#F4EEE2" });
+  // cycad with seed cone (left, by cabin)
+  var cy = g(sc, { transform: "translate(96 296)" }); el(cy, "rect", { x: -5, y: -20, width: 10, height: 20, fill: "#5E4A2A" }); for (var k = 0; k < 9; k++) { var a = (-170 + k * 20) * Math.PI / 180; el(cy, "path", { d: "M0 -20 q" + (20 * Math.cos(a)).toFixed(1) + " " + (20 * Math.sin(a) - 6).toFixed(1) + " " + (36 * Math.cos(a)).toFixed(1) + " " + (32 * Math.sin(a)).toFixed(1), stroke: "#3E7A2E", "stroke-width": 3, fill: "none" }); }
+  [[-4, -24], [4, -24], [0, -28]].forEach(function (s) { el(cy, "ellipse", { cx: s[0], cy: s[1], rx: 4, ry: 5, fill: "#E8743B" }); });
+  // lantana bush with green berries
+  var ln = g(sc, { transform: "translate(236 286)" }); [[-12, 0], [0, -2], [12, 0]].forEach(function (s) { el(ln, "path", { d: "M" + s[0] + " " + s[1] + " L" + (s[0] * .4) + " 22", stroke: "#5E4A2A", "stroke-width": 2 }); }); for (var k = 0; k < 14; k++) el(ln, "ellipse", { cx: R(-22, 22), cy: R(-10, 12), rx: 7, ry: 4, fill: "#3E6A2E" }); [["#F28C28", -10, -6], ["#E05A8A", 6, -10], ["#F2C230", 14, 2]].forEach(function (f) { for (var j = 0; j < 5; j++) el(ln, "circle", { cx: f[1] + R(-3, 3), cy: f[2] + R(-3, 3), r: 1.8, fill: f[0] }); }); for (var j = 0; j < 5; j++) el(ln, "circle", { cx: -2 + R(-3, 3), cy: 8 + R(-2, 2), r: 2, fill: "#5A8A3A" });
+  // angel's trumpet tree with hanging flowers
+  var at = g(sc, { transform: "translate(470 230)" }); el(at, "path", { d: "M0 70 v-60 M0 20 l-20 -16 M0 10 l18 -14", stroke: "#5E4A2A", "stroke-width": 4, fill: "none" });
+  for (var k = 0; k < 8; k++) el(at, "ellipse", { cx: R(-28, 28), cy: R(-24, 0), rx: 10, ry: 5, fill: "#3E6A2E" });
+  [[-20, 0], [-6, 6], [10, 2], [24, 8], [0, -6]].forEach(function (f) { var t = g(at, { transform: "translate(" + f[0] + " " + f[1] + ")", "class": "sway" }); el(t, "path", { d: "M-2 0 h4 l6 22 q-8 4 -16 0z", fill: "#F4EEE2", stroke: "#C9C1B4", "stroke-width": .8 }); });
+  // stream with the cane toad
+  el(sc, "path", { d: "M560 470 Q600 420 660 400 Q720 384 800 380 L800 404 Q730 410 690 424 Q640 444 620 470z", fill: "#4E7C8C", opacity: .9 });
+  for (var i = 0; i < 6; i++) el(fx, "path", { d: "M" + R(640, 790) + " " + R(392, 416) + " q8 -2 16 0", stroke: "#DFF2F6", "stroke-width": 1.2, fill: "none", "class": "ff" });
+  var td = g(sc, { transform: "translate(628 410)" }); el(td, "ellipse", { rx: 16, ry: 10, fill: "#8A7A4A" }); el(td, "ellipse", { cx: -10, cy: -7, rx: 5, ry: 4, fill: "#6E5E32" }); el(td, "circle", { cx: -13, cy: -10, r: 2, fill: "#F2C230" }); el(td, "ellipse", { cx: -3, cy: -8, rx: 5, ry: 3, fill: "#A89A6A" });
+  for (var i = 0; i < 8; i++) el(td, "circle", { cx: R(-8, 12), cy: R(-5, 6), r: 1.2, fill: "#5A4A22" });
+  // gold top mushrooms in the leaf litter
+  [[318, 424], [332, 430], [346, 422]].forEach(function (m) { el(sc, "path", { d: "M" + m[0] + " " + m[1] + " v-10", stroke: "#F2EAD0", "stroke-width": 3 }); el(sc, "path", { d: "M" + (m[0] - 8) + " " + (m[1] - 10) + " q8 -12 16 0z", fill: "#D8A43A" }); });
+  // water tank with mosquitoes
+  el(sc, "rect", { x: 690, y: 230, width: 50, height: 66, rx: 4, fill: "#7E8A90" }); for (var y = 236; y < 296; y += 6) el(sc, "path", { d: "M690 " + y + " h50", stroke: "#6E7A80" }); el(sc, "ellipse", { cx: 715, cy: 230, rx: 25, ry: 5, fill: "#8E9AA0" });
+  for (var i = 0; i < 6; i++) { var m = g(fx, { transform: "translate(" + R(700, 750) + " " + R(206, 236) + ")", "class": "ff" }); el(m, "path", { d: "M-3 0 h6 M0 0 l-3 -3 M0 0 l3 -3", stroke: "#111", "stroke-width": .9 }); }
+  // leeches on the boardwalk edge
+  [[540, 436], [552, 446], [534, 452]].forEach(function (l) { el(sc, "path", { d: "M" + l[0] + " " + l[1] + " q6 -6 12 0", stroke: "#2A2A1A", "stroke-width": 3, fill: "none", "stroke-linecap": "round" }); });
+  // fireflies
+  for (var i = 0; i < 30; i++) { var c = el(fx, "circle", { cx: R(20, 780), cy: R(140, 440), r: R(1, 2.2), fill: "#E8FF8A", "class": "ff" }); c.style.animationDelay = R(0, 4).toFixed(2) + "s"; c.style.animationDuration = R(2, 5).toFixed(2) + "s"; }
+})();
+</script>
+  </div>
+
+  <div class="grid">
+    <section class="file" aria-labelledby="cf">
+      <p class="label" id="cfile"></p>
+      <h2 id="cf">Clues</h2>
+      <ol class="clues" id="clues"></ol>
+      <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
+      <div id="verdict"></div>
+    </section>
+    <section class="side" aria-labelledby="acc">
+      <h2 id="acc">Accuse a culprit</h2>
+      <div class="dossier" id="dossier">Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.</div>
+      <div class="suspects" id="suspects"></div>
+      <button class="main" type="button" id="accuse" disabled>Accuse</button>
+    </section>
+  </div>
+  <p class="foot">Fictional cases. Never make tea from garden plants, and don’t lick the toads.</p>
+</div>
+
+<script>
+(function () {
+  var V = {"ines": ["<ellipse cx=\"60\" cy=\"111\" rx=\"34\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 28c-24 0-38 18-38 42 0 26 14 40 38 40s38-14 38-40c0-24-14-42-38-42z\" fill=\"#8FA3B8\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M34 70h52v30q0 9-26 9t-26-9z\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M60 70v38\" stroke=\"#E7E0F0\" stroke-width=\"2\"/><path d=\"M47 70l13 12 13-12\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M45 74q15 18 30 0\" stroke=\"#4A3480\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"75\" cy=\"92\" r=\"4.2\" fill=\"#4A3480\"/><path d=\"M34 80q-14 4-16 16q8 2 18-6z\" fill=\"#7D90A6\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M86 80q14 4 16 16q-8 2-18-6z\" fill=\"#7D90A6\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><ellipse cx=\"60\" cy=\"58\" rx=\"19\" ry=\"13\" fill=\"#B6C5D4\" stroke=\"#2B2340\" stroke-width=\"2\"/><g fill=\"#5E7086\"><circle cx=\"51\" cy=\"56\" r=\"1.2\"/><circle cx=\"55\" cy=\"60\" r=\"1.2\"/><circle cx=\"50\" cy=\"61\" r=\"1.2\"/><circle cx=\"69\" cy=\"56\" r=\"1.2\"/><circle cx=\"65\" cy=\"60\" r=\"1.2\"/><circle cx=\"70\" cy=\"61\" r=\"1.2\"/></g><path d=\"M56 51q4 2 8 0\" stroke=\"#2B2340\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M55 65q5 3 10 0\" stroke=\"#2B2340\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M43.4 42.0 q3.6 2.5 7.2 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M69.4 42.0 q3.6 2.5 7.2 0\" stroke=\"#2B2340\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M39 45h15a7.5 6 0 0 1-15 0zM66 45h15a7.5 6 0 0 1-15 0z\" fill=\"#fff\" fill-opacity=\".3\" stroke=\"#4A3480\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M54 45q6-3 12 0M39 45l-6-3M81 45l6-3\" stroke=\"#4A3480\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"38\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".55\"/><ellipse cx=\"82\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".55\"/><path d=\"M44 34q8-6 16-6\" stroke=\"#fff\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" opacity=\".55\"/><text x=\"96\" y=\"30\" font-family=\"Figtree, sans-serif\" font-size=\"13\" font-weight=\"700\" fill=\"#E8F0E8\">z</text><text x=\"104\" y=\"20\" font-family=\"Figtree, sans-serif\" font-size=\"10\" font-weight=\"700\" fill=\"#E8F0E8\">z</text>", "<ellipse cx=\"60\" cy=\"111\" rx=\"34\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 28c-24 0-38 18-38 42 0 26 14 40 38 40s38-14 38-40c0-24-14-42-38-42z\" fill=\"#8FA3B8\" stroke=\"#2B2340\" stroke-width=\"2\"/><path d=\"M34 70h52v30q0 9-26 9t-26-9z\" fill=\"#fff\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M60 70v38\" stroke=\"#E7E0F0\" stroke-width=\"2\"/><path d=\"M47 70l13 12 13-12\" fill=\"none\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M45 74q15 18 30 0\" stroke=\"#4A3480\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"75\" cy=\"92\" r=\"4.2\" fill=\"#4A3480\"/><path d=\"M34 80q-14 4-16 16q8 2 18-6z\" fill=\"#7D90A6\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M86 80q14 4 16 16q-8 2-18-6z\" fill=\"#7D90A6\" stroke=\"#2B2340\" stroke-width=\"2\" stroke-linejoin=\"round\"/><ellipse cx=\"60\" cy=\"58\" rx=\"19\" ry=\"13\" fill=\"#B6C5D4\" stroke=\"#2B2340\" stroke-width=\"2\"/><g fill=\"#5E7086\"><circle cx=\"51\" cy=\"56\" r=\"1.2\"/><circle cx=\"55\" cy=\"60\" r=\"1.2\"/><circle cx=\"50\" cy=\"61\" r=\"1.2\"/><circle cx=\"69\" cy=\"56\" r=\"1.2\"/><circle cx=\"65\" cy=\"60\" r=\"1.2\"/><circle cx=\"70\" cy=\"61\" r=\"1.2\"/></g><path d=\"M56 51q4 2 8 0\" stroke=\"#2B2340\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M55 65q5 3 10 0\" stroke=\"#2B2340\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"47\" cy=\"42\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"73\" cy=\"42\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"45.9\" cy=\"40.8\" r=\"1.4\" fill=\"#fff\"/><circle cx=\"71.9\" cy=\"40.8\" r=\"1.4\" fill=\"#fff\"/><path d=\"M39 45h15a7.5 6 0 0 1-15 0zM66 45h15a7.5 6 0 0 1-15 0z\" fill=\"#fff\" fill-opacity=\".3\" stroke=\"#4A3480\" stroke-width=\"2\" stroke-linejoin=\"round\"/><path d=\"M54 45q6-3 12 0M39 45l-6-3M81 45l6-3\" stroke=\"#4A3480\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\"/><ellipse cx=\"38\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".55\"/><ellipse cx=\"82\" cy=\"52\" rx=\"4\" ry=\"2.4\" fill=\"#FF8FAE\" opacity=\".55\"/><path d=\"M44 34q8-6 16-6\" stroke=\"#fff\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\" opacity=\".55\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "ama": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M44 102l-4 8M50 102l0 8M70 102l0 8M76 102l4 8\" stroke=\"#3A3036\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"76\" rx=\"26\" ry=\"28\" fill=\"#2B2340\"/><path d=\"M84 70q20 4 22 22q-16-4-24-10z\" fill=\"#3A3150\"/><ellipse cx=\"60\" cy=\"84\" rx=\"16\" ry=\"16\" fill=\"#3E3560\"/><circle cx=\"60\" cy=\"44\" r=\"24\" fill=\"#2B2340\"/><rect x=\"42\" y=\"22\" width=\"36\" height=\"9\" rx=\"4.5\" fill=\"#4FB3D9\" stroke=\"#2B6B8A\" stroke-width=\"2\"/><path d=\"M47.8 44.6 a3.2 3.2 0 0 0 6.4 0z\" fill=\"#E8E0F0\"/><path d=\"M46.6 44.6 h8.8\" stroke=\"#E8E0F0\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M67.8 44.6 a3.2 3.2 0 0 0 6.4 0z\" fill=\"#E8E0F0\"/><path d=\"M66.6 44.6 h8.8\" stroke=\"#E8E0F0\" stroke-width=\"2.4\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M52 54l8 12 8-12z\" fill=\"#8A8F9C\"/><ellipse cx=\"42\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"78\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><circle cx=\"22\" cy=\"80\" r=\"11\" fill=\"none\" stroke=\"#B88A5A\" stroke-width=\"4\"/><circle cx=\"22\" cy=\"80\" r=\"8\" fill=\"#DCEFF7\" opacity=\".7\"/><path d=\"M30 88l10 8\" stroke=\"#B88A5A\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M98 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z\" fill=\"#F2C230\"/><circle cx=\"22\" cy=\"80\" r=\"3.5\" fill=\"#F2C230\"/><ellipse cx=\"51.0\" cy=\"54.2\" rx=\"5.2\" ry=\"2.8\" fill=\"#8FD18A\" opacity=\".55\"/><ellipse cx=\"71.0\" cy=\"54.2\" rx=\"5.2\" ry=\"2.8\" fill=\"#8FD18A\" opacity=\".55\"/><path d=\"M101 18q5 7 0 10q-5-3 0-10z\" fill=\"#7EC8F0\" stroke=\"#3A7AA0\" stroke-width=\".8\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M44 102l-4 8M50 102l0 8M70 102l0 8M76 102l4 8\" stroke=\"#3A3036\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"76\" rx=\"26\" ry=\"28\" fill=\"#2B2340\"/><path d=\"M84 70q20 4 22 22q-16-4-24-10z\" fill=\"#3A3150\"/><ellipse cx=\"60\" cy=\"84\" rx=\"16\" ry=\"16\" fill=\"#3E3560\"/><circle cx=\"60\" cy=\"44\" r=\"24\" fill=\"#2B2340\"/><rect x=\"42\" y=\"22\" width=\"36\" height=\"9\" rx=\"4.5\" fill=\"#4FB3D9\" stroke=\"#2B6B8A\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"44\" r=\"7\" fill=\"#fff\"/><circle cx=\"70\" cy=\"44\" r=\"7\" fill=\"#fff\"/><circle cx=\"51\" cy=\"45\" r=\"4\" fill=\"#2B2340\"/><circle cx=\"71\" cy=\"45\" r=\"4\" fill=\"#2B2340\"/><circle cx=\"49.7\" cy=\"43.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"69.7\" cy=\"43.5\" r=\"1.6\" fill=\"#fff\"/><path d=\"M52 54l8 12 8-12z\" fill=\"#8A8F9C\"/><ellipse cx=\"42\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"78\" cy=\"56\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><circle cx=\"22\" cy=\"80\" r=\"11\" fill=\"none\" stroke=\"#B88A5A\" stroke-width=\"4\"/><circle cx=\"22\" cy=\"80\" r=\"8\" fill=\"#DCEFF7\" opacity=\".7\"/><path d=\"M30 88l10 8\" stroke=\"#B88A5A\" stroke-width=\"5\" stroke-linecap=\"round\"/><path d=\"M98 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z\" fill=\"#F2C230\"/><circle cx=\"22\" cy=\"80\" r=\"3.5\" fill=\"#F2C230\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"], "quill": ["<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 84q-40 -50 -50 -64\" stroke=\"#8A5E3D\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q-24 -50 -30 -64\" stroke=\"#C99560\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q-8 -50 -10 -64\" stroke=\"#E8C89A\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q8 -50 10 -64\" stroke=\"#C99560\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q24 -50 30 -64\" stroke=\"#8A5E3D\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q40 -50 50 -64\" stroke=\"#C99560\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M30 30q30-40 60 0\" stroke=\"#F4E6CF\" stroke-width=\"3\" fill=\"none\"/><path d=\"M52 102l-4 8M68 102l4 8\" stroke=\"#6B5240\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"80\" rx=\"28\" ry=\"24\" fill=\"#9A6E4A\"/><ellipse cx=\"60\" cy=\"86\" rx=\"18\" ry=\"15\" fill=\"#D9B48A\"/><circle cx=\"60\" cy=\"54\" r=\"18\" fill=\"#A87A52\"/><path d=\"M54.0 50.9 a1.1 1.1 0 1 1 -1.1 1.1 a2.2 2.2 0 1 1 3.2 -2.2 a3.4 3.4 0 1 1 -4.5 4.3\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M66.0 50.9 a1.1 1.1 0 1 1 -1.1 1.1 a2.2 2.2 0 1 1 3.2 -2.2 a3.4 3.4 0 1 1 -4.5 4.3\" stroke=\"#2B2340\" stroke-width=\"1.8\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M58 58l2 6 2-6z\" fill=\"#3A3036\"/><ellipse cx=\"48\" cy=\"60\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"72\" cy=\"60\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><rect x=\"80\" y=\"70\" width=\"6\" height=\"22\" rx=\"3\" fill=\"#3A3036\" transform=\"rotate(25 83 81)\"/><circle cx=\"90\" cy=\"64\" r=\"7\" fill=\"#9AA6B2\" stroke=\"#3A3036\" stroke-width=\"2\"/><path d=\"M96 14l1.6 3.4 3.4 1.6-3.4 1.6-1.6 3.4-1.6-3.4-3.4-1.6 3.4-1.6z\" fill=\"#FFD23F\"/><path d=\"M108 26l1.2 2.4 2.4 1.2-2.4 1.2-1.2 2.4-1.2-2.4-2.4-1.2 2.4-1.2z\" fill=\"#FFD23F\"/>", "<ellipse cx=\"60\" cy=\"110\" rx=\"30\" ry=\"6\" fill=\"#000\" opacity=\".08\"/><path d=\"M60 84q-40 -50 -50 -64\" stroke=\"#8A5E3D\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q-24 -50 -30 -64\" stroke=\"#C99560\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q-8 -50 -10 -64\" stroke=\"#E8C89A\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q8 -50 10 -64\" stroke=\"#C99560\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q24 -50 30 -64\" stroke=\"#8A5E3D\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M60 84q40 -50 50 -64\" stroke=\"#C99560\" stroke-width=\"5\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M30 30q30-40 60 0\" stroke=\"#F4E6CF\" stroke-width=\"3\" fill=\"none\"/><path d=\"M52 102l-4 8M68 102l4 8\" stroke=\"#6B5240\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"60\" cy=\"80\" rx=\"28\" ry=\"24\" fill=\"#9A6E4A\"/><ellipse cx=\"60\" cy=\"86\" rx=\"18\" ry=\"15\" fill=\"#D9B48A\"/><circle cx=\"60\" cy=\"54\" r=\"18\" fill=\"#A87A52\"/><circle cx=\"54\" cy=\"52\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"66\" cy=\"52\" r=\"3.6\" fill=\"#2B2340\"/><circle cx=\"52.7\" cy=\"50.5\" r=\"1.6\" fill=\"#fff\"/><circle cx=\"64.7\" cy=\"50.5\" r=\"1.6\" fill=\"#fff\"/><path d=\"M58 58l2 6 2-6z\" fill=\"#3A3036\"/><ellipse cx=\"48\" cy=\"60\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><ellipse cx=\"72\" cy=\"60\" rx=\"5\" ry=\"3\" fill=\"#FF8FAE\" opacity=\".5\"/><rect x=\"80\" y=\"70\" width=\"6\" height=\"22\" rx=\"3\" fill=\"#3A3036\" transform=\"rotate(25 83 81)\"/><circle cx=\"90\" cy=\"64\" r=\"7\" fill=\"#9AA6B2\" stroke=\"#3A3036\" stroke-width=\"2\"/><path d=\"M104 24c-3-5-10-2-7 3l7 7 7-7c3-5-4-8-7-3z\" fill=\"#FF6B8A\"/>"]};
+  var P = [ // [tag no., name, latin/source, toxin, what it does, tag x, tag y]
+    [1, "Lantana berries", "Lantana camara, green and unripe", "Lantadenes and atropine-like compounds", "Unripe berries can cause vomiting, diarrhoea and drowsiness in children. Toxic to cattle.", 226, 232],
+    [2, "Cycad seeds", "Cycas and Macrozamia nuts", "Cycasin and macrozamin", "Must be leached for days before eating. Raw: vomiting within hours, then liver damage. Deadly to dogs.", 64, 214],
+    [3, "Gold top mushrooms", "Psilocybe cubensis, in cow paddocks nearby", "Psilocybin", "Hallucinations and wide pupils within an hour, but sweaty skin, normal temperature and no urine retention. Usually settles in 6 hours.", 305, 352],
+    [4, "Angel’s trumpet", "Brugmansia, made into tea", "Atropine and scopolamine", "Anticholinergic: hot, dry, red skin, huge pupils, racing heart, can’t pass urine, confused and seeing things.", 510, 172],
+    [5, "Mosquitoes", "Aedes aegypti, in the water tank", "Dengue virus", "Fever, severe headache, pain behind the eyes, muscle and joint pain, rash and low platelets, 4 to 7 days after a bite.", 700, 212],
+    [6, "Bitter cassava", "Manihot esculenta, eaten after a quick boil", "Cyanide (from linamarin)", "Safe after proper grating, soaking and cooking. Undercooked bitter cassava releases cyanide: headache, vomiting, collapse and severe acid build-up. Antidote: hydroxocobalamin.", 176, 312],
+    [7, "Leeches", "On the wet track", "Hirudin (an anticoagulant)", "Painless bites that bleed for hours afterwards. Messy, but not dangerous. Don’t pull them off with salt or a flame: flick them off.", 566, 446],
+    [8, "Cane toad", "Rhinella marina", "Bufotoxin (bufadienolides)", "Acts like digoxin on the heart. Licked or eaten: vomiting, a slow heart, heart block and high potassium. Antidote: digoxin antibodies.", 644, 372]
+  ];
+  var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day. In an emergency, call 000.";
+  var CASES = [
+    { id: "ines", solver: "the ED and ICU team", team: "&#129657; ED and ICU’s plan", who: "Inês", label: "Case 1 · Inês", file: "Case file 025 · Inês, manatee, calm, unhurried, adventurous cook", ans: 6,
+      note: "Inês the manatee was found collapsed by the cabin one evening.",
+      clues: [["Symptoms", "Headache, dizziness, vomiting and a racing heart, then a brief seizure."],
+        ["Exam", "Breathing fast and deep. Pulse oximeter 99%. Venous blood looks unusually bright red."],
+        ["Tests", "Lactate 14 mmol/L, pH 7.02. Carboxyhaemoglobin normal. Alcohol zero."],
+        ["History", "It started an hour after dinner. No stove or fire indoors."],
+        ["Dinner", "She cooked a ‘bush tucker’ meal from the overgrown garden, boiled for 10 minutes. Bitter and chalky."],
+        ["Evidence", "Peelings in the bin: a long brown root with white flesh."]],
+      win: "Cyanide poisoning from bitter cassava. Its linamarin breaks down to cyanide, which stops cells using oxygen. Oxygen is in the blood (normal sats, bright red venous blood) but the cells can’t use it, so lactate soars.<br><br><b>Pearl:</b> sudden collapse with a very high lactate and normal oxygen levels, with no other cause, is cyanide until proven otherwise. In house fires, it often comes with carbon monoxide.",
+      plan: "<b>Antidote:</b> hydroxocobalamin 5 g IV over 15 minutes (70 mg/kg in children), repeated once if needed. It binds cyanide to make harmless vitamin B12, and turns skin and urine red for days.<br><b>ICU:</b> 100% oxygen, treat seizures, and watch lactate fall.<br><b>Also:</b> take blood for a cyanide level before giving the antidote, if it doesn’t cause delay.",
+      recov: "Lactate down to 3 within 2 hours of hydroxocobalamin. Pink-tinged for a week, then back to her calm, unhurried self.",
+      tip: "Buy sweet cassava, or peel, grate, soak and cook bitter cassava thoroughly. Never eat it raw or undercooked. Frozen and dried cassava products are processed already.",
+      why: { 8: "Cane toad poisoning causes a slow heart and high potassium. Inês’s heart is racing.", 4: "Angel’s trumpet causes hot dry skin and hallucinations, not a lactate of 14.", 3: "Gold tops cause hallucinations, not collapse with severe acid build-up.", 2: "Close! Cycad seeds must also be processed before eating, and cause vomiting. But they damage the liver over days, not cause collapse and a lactate of 14 within an hour.", 5: "Dengue takes days to cause fever and pain, not collapse an hour after dinner.", 7: "Leech bites bleed, but don’t cause collapse.", 1: "Lantana causes vomiting and drowsiness in children, not severe acid build-up." } },
+    { id: "ama", solver: "the cardiology and toxicology team", team: "&#129728; Cardiology and toxicology’s plan", who: "Ama", label: "Case 2 · Ama", file: "Case file 026 · Ama, crow, myth-buster, testing one myth too far", ans: 8,
+      note: "Ama the crow was found slumped on the boardwalk.",
+      clues: [["Symptoms", "Burning mouth, then repeated vomiting and dizziness. No hallucinations at all."],
+        ["Exam", "Pulse 38. BP 88/50. Pupils normal. Skin cool and sweaty."],
+        ["ECG", "Slow heart with heart block, and a scooped ST segment."],
+        ["Tests", "Potassium 6.6. A digoxin level is detectable, though she has never taken digoxin."],
+        ["History", "She was testing an internet myth that something in the rainforest gets you ‘high’."],
+        ["Evidence", "She tested it by mouth: something warty and brown, with big glands behind its eyes."]],
+      win: "Cane toad poisoning. The glands behind the eyes squirt bufadienolides, which block the heart’s sodium-potassium pump exactly like digoxin: slow heart, heart block and high potassium. They even show up on a digoxin blood test.<br><br><b>Pearl:</b> licking toads doesn’t make you high; it poisons your heart. And smart wild crows have learned to flip cane toads over and eat them from the belly, avoiding the poison glands.",
+      plan: "<b>Antidote:</b> digoxin-specific antibody fragments (Digifab), several vials IV, given in steps. The dose can’t be calculated from the level here, as the toxin only partly cross-reacts.<br><b>Also:</b> atropine for the slow heart while Fab is prepared. Treat high potassium, but the Fab is the main fix. Cardiac monitoring until the rhythm is normal.",
+      recov: "Heart rate back to 70 within an hour of the antibodies. Myth officially busted, and posted with a big warning.",
+      tip: "Don’t lick, eat or handle cane toads, and wash your hands if you touch one. Dogs that mouth toads need their gums wiped and a vet straight away.",
+      why: { 6: "Cassava cyanide causes a very high lactate and a fast heart. Ama’s heart is very slow.", 4: "Angel’s trumpet causes a racing heart and huge pupils, not a pulse of 38.", 3: "Gold tops cause hallucinations. Ama had none.", 2: "Cycad seeds cause vomiting and liver damage, not heart block.", 5: "Dengue causes fever and pain days later.", 7: "Leech bites bleed, but don’t affect the heart.", 1: "Close! Lantana berries also cause vomiting and can slow things down. But they don’t cause heart block, high potassium or a positive digoxin test." } },
+    { id: "quill", solver: "the toxicology team", team: "&#129514; Toxicology’s plan", who: "Quill", label: "Case 3 · Quill", file: "Case file 027 · Quill, lyrebird, can mimic anything, including a herbal tea recipe", ans: 4,
+      note: "Quill the lyrebird was found wandering the track at night.",
+      clues: [["Symptoms", "Agitated and confused, picking at the air, talking to someone who isn’t there."],
+        ["Exam", "Hot, dry, flushed skin. Huge pupils that barely react. Pulse 138. Temperature 38.6°C."],
+        ["Bladder", "A large, full bladder: she can’t pass urine. No bowel sounds."],
+        ["Tests", "Glucose, sodium and CK normal. ECG: fast but normal QRS."],
+        ["History", "Earlier she brewed a ‘relaxing tea’ from something growing near the cabin."],
+        ["Evidence", "The teapot holds big, droopy, trumpet-shaped white flowers."]],
+      win: "Anticholinergic poisoning from angel’s trumpet (Brugmansia). Its atropine and scopolamine block acetylcholine: ‘hot as a hare, dry as a bone, red as a beet, blind as a bat, mad as a hatter, full as a flask’.<br><br><b>Pearl:</b> dry armpits and a full bladder separate anticholinergic poisoning from stimulants and hallucinogens, which make you sweaty. Angel’s trumpet poisonings happen every year in Australia when people make it into tea.",
+      plan: "<b>Treatment:</b> benzodiazepines for agitation, a urinary catheter for the full bladder, cooling for the fever.<br><b>Antidote:</b> physostigmine, 0.5 to 1 mg IV slowly, repeated, under toxicology guidance, with atropine ready. It reverses the delirium quickly. Not used if the QRS is wide.<br><b>Also:</b> a calm, quiet room. Effects can last 1 to 3 days.",
+      recov: "Physostigmine cleared her head within minutes; a calm 2 days later she was mimicking the nurses. The tea recipe was deleted.",
+      tip: "Angel’s trumpet, datura and other nightshades are poisonous: never make teas or smoke mixes from garden plants. Keep them away from children and pets.",
+      why: { 6: "Cassava cyanide causes collapse and a very high lactate, not hot, dry skin and a full bladder.", 8: "Cane toad causes a slow heart. Quill’s is racing.", 3: "Close! Gold tops also cause hallucinations and wide pupils. But skin is usually sweaty, and they don’t cause dry skin, a fever and a full bladder.", 2: "Cycad seeds cause vomiting and liver damage, not delirium.", 5: "Dengue causes fever and pain, but not huge pupils and a full bladder.", 7: "Leech bites bleed, but don’t cause delirium.", 1: "Lantana can cause drowsiness, but not this full ‘hot, dry, red, blind, mad’ picture." } }
+  ];
+  Array.prototype.forEach.call(document.querySelectorAll('#scene > g[transform^="translate"], [id^="prop-"] > g[transform^="translate"]'), function (g) { var t = g.getAttribute("transform"); if (!/scale/.test(t)) g.setAttribute("transform", t + " scale(1.45)"); });
+  var $ = function (id) { return document.getElementById(id); };
+  var NS = "http://www.w3.org/2000/svg", C, shown, lives, pick, out, done;
+
+  var SCENE = 9, SCENE_NAME = "Canopy";
+  var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
+  function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
+  function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
+  function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
+  function celebrate(stars, name) {
+    var host = document.body, cols = ["#F5C518", "#2E8B57", "#B23A48", "#4FB3D9", "#B48CFF", "#F28C28"], h = "";
+    for (var k = 0; k < 60; k++) h += '<i class="cf" style="left:' + Math.round(Math.random() * 100) + "%;background:" + cols[k % cols.length] + ";animation-delay:" + (Math.random() * .6).toFixed(2) + "s;animation-duration:" + (1.6 + Math.random() * 1.6).toFixed(2) + 's"></i>';
+    var solved = Object.keys(TQ).filter(function (k) { return TQ[k] > 0; }).length, sceneDone = CASES.every(function (c) { return TQ[c.id] > 0; });
+    var extra = solved >= 30 ? "All 30 cases closed. Toxicology December complete! &#127942;" : sceneDone ? SCENE_NAME + " cleared: all 3 cases closed." : solved + " of 30 cases closed this December.";
+    var o = document.createElement("div"); o.className = "cel"; o.setAttribute("role", "status");
+    o.innerHTML = '<div class="cf-wrap" aria-hidden="true">' + h + '</div><div class="cel-stamp">Case closed</div><svg class="cel-m" viewBox="0 0 120 120" aria-hidden="true">' + V[C.id][1] + '</svg><div class="cel-s">' + "★".repeat(stars) + "☆".repeat(3 - stars) + '</div><p class="cel-t">' + C.who + " is on the mend, thanks to you and " + C.solver + ". " + extra + '</p><span class="cel-tap">Tap to read the plan</span>';
+    o.addEventListener("click", function () { o.remove(); });
+    host.appendChild(o); setTimeout(function () { if (o.parentNode) o.remove(); }, 6000);
+  }
+  P.forEach(function (p) { p[5] = Math.min(730, Math.max(58, p[5])); p[6] = Math.min(450, Math.max(132, p[6])); });
+  P.forEach(function (p) {
+    var g = document.createElementNS(NS, "g"); g.setAttribute("class", "tagbtn"); g.setAttribute("tabindex", "0"); g.setAttribute("role", "button"); g.setAttribute("aria-label", "Evidence " + p[0] + ": " + p[1]);
+    g.innerHTML = '<rect x="' + (p[5] - 13) + '" y="' + (p[6] - 13) + '" width="26" height="26" rx="4" fill="#F5C518" stroke="#1A1F1B" stroke-width="1.5"/><text x="' + p[5] + '" y="' + (p[6] + 5) + '" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#1A1F1B">' + p[0] + "</text>";
+    g.addEventListener("click", function () { select(p[0]); });
+    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p[0]); } });
+    $("tags").appendChild(g);
+  });
+  $("suspects").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) select(+b.getAttribute("data-n")); });
+  function drawCases() { $("cases").innerHTML = CASES.map(function (c, i) { var s = TQ[c.id]; return '<button type="button" data-i="' + i + '"' + (isOpen(i) ? "" : " disabled") + ">" + c.label + (isOpen(i) ? (s > 0 ? '<span class="st">' + "★".repeat(s) + "</span>" : s === 0 ? '<span class="st">✓</span>' : "") : " · opens " + dayOf(i) + " Dec") + "</button>"; }).join(""); }
+  drawCases();
+  $("cases").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) load(+b.getAttribute("data-i")); });
+  function load(i) {
+    C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
+    Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
+    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each suspect, reveal clues one at a time, and accuse the culprit. Fewer clues, more stars.";
+    $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
+    $("victim").innerHTML = V[C.id][0];
+    CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
+    $("suspects").innerHTML = P.map(function (p) { return '<button type="button" data-n="' + p[0] + '"><span class="n">' + p[0] + "</span>" + p[1] + "</button>"; }).join("");
+    $("dossier").innerHTML = "Tap a yellow evidence tag in the scene, or a suspect below, to read its file. When you’re sure, tap <b>Accuse</b>.";
+    $("accuse").disabled = true; $("accuse").textContent = "Accuse";
+    renderClues();
+  }
+  function select(n) {
+    var p = P[n - 1]; pick = n;
+    $("dossier").innerHTML = "<b>Evidence " + p[0] + ": " + p[1] + '</b> <span class="sci">' + p[2] + "</span><br><b>Toxin:</b> " + p[3] + "<br>" + p[4];
+    Array.prototype.forEach.call($("suspects").children, function (b) { b.style.outline = +b.getAttribute("data-n") === n ? "2px solid #F5C518" : ""; });
+    $("accuse").disabled = done || !!out[n]; $("accuse").textContent = "Accuse the " + p[1].toLowerCase();
+  }
+  function renderClues() {
+    $("clues").innerHTML = C.clues.slice(0, shown).map(function (c) { return '<li><span class="k">' + c[0] + "</span><p>" + c[1] + "</p></li>"; }).join("");
+    $("left").textContent = shown < C.clues.length ? (C.clues.length - shown) + " clues left" : "All clues revealed";
+    $("more").disabled = done || shown >= C.clues.length;
+  }
+  function planHtml() { return '<div class="recov"><b>' + C.team + "</b><br>" + C.plan + "<br><br><b>&#127973; Recovery:</b> " + C.recov + "<br><br><b>&#128161; Useful to know:</b> " + C.tip + " " + POISON + "</div>"; }
+  function recover() { $("victim").innerHTML = V[C.id][1]; }
+  $("more").onclick = function () { if (shown < C.clues.length) { shown++; renderClues(); } };
+  $("accuse").onclick = function () {
+    if (!pick || done) return;
+    var name = P[C.ans - 1][1];
+    if (pick === C.ans) {
+      done = true; var stars = Math.max(1, (shown <= 2 ? 3 : shown <= 4 ? 2 : 1) - (lives < 3 ? 1 : 0));
+      $("verdict").innerHTML = '<div class="verdict yes"><div class="stars">' + "★".repeat(stars) + "☆".repeat(3 - stars) + "</div><b>" + name + ". You and " + C.solver + " cracked it on clue " + shown + ".</b> " + C.win + "</div>" + planHtml();
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === C.ans) b.classList.add("win"); });
+      shown = C.clues.length; renderClues(); $("accuse").disabled = true; recover(); if (!(TQ[C.id] >= stars)) TQ[C.id] = stars; tqSave(); var keep = C; drawCases(); Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", CASES[k] === keep ? "true" : "false"); }); celebrate(stars);
+    } else {
+      lives--; out[pick] = 1; $("lives").textContent = "●".repeat(lives) + "○".repeat(3 - lives);
+      Array.prototype.forEach.call($("suspects").children, function (b) { if (+b.getAttribute("data-n") === pick) b.classList.add("out"); });
+      var why = C.why[pick] || "Not this time.";
+      if (!lives) { done = true; why += " Out of accusations. Luckily " + C.solver + " worked it out: " + name.toLowerCase() + "."; shown = C.clues.length; renderClues(); }
+      $("verdict").innerHTML = '<div class="verdict no"><b>Not that one.</b> ' + why + "</div>" + (lives ? "" : planHtml());
+      if (!lives) { recover(); if (TQ[C.id] === undefined) { TQ[C.id] = 0; tqSave(); } }
+      $("accuse").disabled = true;
+    }
+  };
+  (function () { var pan = $("pan"), hint = $("swipe"); if (pan.scrollWidth > pan.clientWidth) pan.scrollLeft = (pan.scrollWidth - pan.clientWidth) * 0.5;
+    setTimeout(function () { pan.addEventListener("scroll", function () { if (hint) hint.style.opacity = 0; }, { passive: true }); }, 400); setTimeout(function () { if (hint) hint.style.opacity = 0; }, 5000); })();
+  (function () { var q = +((location.search.match(/[?&]c=(\d)/) || [])[1] || 0) - 1, open = CASES.map(function (c, i) { return isOpen(i) ? i : -1; }).filter(function (i) { return i > -1; });
+    if (!open.length) { $("note").innerHTML = '<span class="lockmsg">&#128274; This scene opens on ' + dayOf(0) + " December. One new case every day of Toxicology December.</span>"; document.querySelector(".grid").hidden = true; return; }
+    load(open.indexOf(q) > -1 ? q : open[open.length - 1]); })();
+})();
+</script>
+
+</body></html>
