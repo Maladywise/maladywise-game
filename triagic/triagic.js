@@ -11,8 +11,8 @@
   function deal() { return G.shuffle(CASES.map(function (g) { return Array.isArray(g[0]) ? g[Math.floor(Math.random() * g.length)] : g; })); } // one variant per group per shift
   function reset() { S = { t: SHIFT, chaos: 0, score: 0, seen: 0, saved: 0, wrong: 0, wait: [], deck: deal(), di: 0, next: 1.5, curve: 22 + Math.random() * 12, block: null, open: null, over: false, last: performance.now(), id: 0, caf: 8, nap: 50 + Math.random() * 40, napDone: false, surgeAt: 70 + Math.random() * 40, surge: null, phone: 30 + Math.random() * 15, tired: false }; hideBanner(); }
   function draw() {
-    var f = S.t < 30 ? (30 - S.t) / 30 : 0, gm = $("tr-game");
-    gm.style.filter = f ? "blur(" + (f * 2.2).toFixed(2) + "px)" : ""; gm.classList.toggle("tr-tired", f > 0);
+    var f = S.t < 15 ? Math.min(1, (15 - S.t) / 2) : 0, gm = $("tr-game");
+    gm.style.filter = f ? "blur(" + (f * 2.4).toFixed(2) + "px)" : "";
     $("tr-time").textContent = Math.floor(S.t / 60) + ":" + ("0" + Math.floor(S.t % 60)).slice(-2);
     $("tr-score").textContent = S.score.toLocaleString("en-AU");
     $("tr-saved").textContent = S.saved;
@@ -101,7 +101,7 @@
       if (S.surge) { var left = S.surge.ids.filter(function (id) { return S.wait.some(function (x) { return x.id === id; }) || (S.open && S.open.id === id); }).length;
         if (!left) { S.surge = null; S.score += 300; G.toast("🏅 Surge cleared! +300"); draw(); } else if (S.t < S.surge.until) { S.surge = null; G.toast("Surge bonus missed."); } }
       S.phone -= dt; if (S.phone <= 0 && !S.block && !busy()) phone();
-      if (!S.tired && S.t < 30) { S.tired = true; G.toast("😵 Hour 12 of your shift. Your eyes are going…", 2600); }
+      if (!S.tired && S.t < 15) { S.tired = true; G.toast("😵 Hour 12 of your shift. Your eyes are going…", 2600); }
       if (Math.floor(S.t * 4) !== Math.floor((S.t + dt) * 4)) draw();
       if (S.chaos >= 100) return end(false);
       if (S.t <= 0) return end(true);
