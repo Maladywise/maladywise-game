@@ -1302,6 +1302,22 @@
    "date": "2026-11-21",
    "source": "news search: Contagion Live 15 Nov 2026",
    "niche": false
+  },
+  {
+   "term": "FDA approves drugs for four rare diseases (19 Nov)",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-22",
+   "source": "news search: RAPS Regulatory Focus 19 Nov 2026",
+   "niche": true
+  },
+  {
+   "term": "FDA starts review of Sandoz generic tirzepatide",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-22",
+   "source": "news search: Fierce Pharma regulatory tracker",
+   "niche": false
   }
  ],
  "used": [
