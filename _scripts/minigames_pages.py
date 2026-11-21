@@ -182,6 +182,32 @@ PAGES = {
   </section>
 """ + END % dict(p="nm", etitle="Your eponyms", again="Play again"),
   scripts='<script defer src="signs.js?v=1"></script>\n<script defer src="nomulous.js?v=1"></script>'),
+ "dxtective-gauntlet": dict(
+  title="Dxtective Gauntlet", robots="noindex", theme="#4A3480", canon="",
+  desc="Dxtective Gauntlet: Uncle Sherlock's Sunday challenge. Ten diagnosis cases in a row, one slip and it's over.",
+  foot="A teaching game. Cases are fictional.",
+  css=""":root{--mg-a:#4A3480;--mg-b:#7A5230;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}
+.gt-duo{display:flex;justify-content:center;align-items:flex-end;gap:6px}.gt-duo img{width:96px;height:96px}.gt-duo .gt-vs{font:700 20px var(--title);color:var(--mg-hi);margin-bottom:30px}
+.gt-clues{margin:0;padding-left:22px;display:grid;gap:6px;font-size:16px;line-height:1.45}
+.gt-pts{font:600 12px var(--body);background:var(--mg-soft);color:var(--mg-a);border-radius:999px;padding:2px 8px;margin-left:6px}
+.gt-say{display:flex;gap:10px;align-items:center;font-style:italic;font-size:15px}.gt-say img{width:44px;height:44px;flex:none}""",
+  body="""  <section class="mg-intro" id="gt-intro">
+    <div class="gt-duo"><img class="mg-masc" src="/assets/mascots/dx.svg" alt="Dex the fox detective" width="96" height="96"><span class="gt-vs">v</span><img class="mg-masc" src="/assets/mascots/sherlock.svg" alt="Uncle Sherlock, a giant elk in a deerstalker" width="96" height="96"></div>
+    <p class="mg-kick">&#129418; Sundays only</p>
+    <h1>Dxtective Gauntlet</h1>
+    <p class="mg-lede">Dex’s Uncle Sherlock, a giant elk with enormous antlers, drops by every Sunday with a challenge: ten cases in a row. Fewer clues, more points. One wrong answer and the run is over. Beat his score to win.</p>
+    <p class="mg-lock" id="gt-lock" hidden></p>
+    <button class="big" type="button" id="gt-play">Accept the challenge</button>
+    <p class="mg-best" id="gt-best"></p>
+    <p class="mg-small"><i>Clue 1 = 6 points, down to 1 point on clue 6.</i></p>
+  </section>
+  <section class="mg-game" id="gt-game" hidden>
+    <div class="mg-hud"><span class="mg-grow"><small>Gauntlet</small><b>Case <span id="gt-n">1/10</span></b></span><span><small>You</small><b id="gt-s">0</b></span><span><small>Sherlock</small><b id="gt-t">0</b></span></div>
+    <p class="gt-say"><img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44"><span id="gt-say"></span></p>
+    <div class="mg-card" id="gt-q"></div>
+  </section>
+""" + END % dict(p="gt", etitle="Dex v Uncle Sherlock", again="Try again"),
+  scripts='<script defer src="gauntlet.js?v=1"></script>'),
 }
 for k, v in PAGES.items():
     os.makedirs(ROOT + k, exist_ok=True)
