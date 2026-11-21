@@ -3891,107 +3891,107 @@
   "date": "2026-11-23",
   "number": 37,
   "difficulty": "Easy",
-  "theme": "Doing the numbers",
+  "theme": "Terrible baby names",
   "questions": [
    {
-    "q": "Today\u2019s date, written 11/23, gives the start of the Fibonacci sequence. Which number comes next after 5, 8, 13?",
-    "a": "21",
+    "q": "Melena sounds like a lovely name. In medicine, melaena means?",
+    "a": "Black, tarry poo from bleeding high in the gut",
     "w": [
-     "18",
-     "20",
-     "26"
+     "A dark skin mole",
+     "A type of melanoma",
+     "Very dark urine"
     ],
-    "e": "Add the last two. That\u2019s all of it, and medieval Italian rabbits never looked back."
+    "e": "Blood digested on its way down from the stomach or duodenum turns black and sticky."
    },
    {
-    "q": "The ratio of neighbouring Fibonacci numbers closes in on the golden ratio, which is about?",
-    "a": "1.618",
+    "q": "Amelia is a popular name. Amelia, the medical term, means?",
+    "a": "Being born without one or more limbs",
     "w": [
-     "1.414",
-     "2.718",
-     "3.142"
+     "Loss of memory",
+     "Absence of periods",
+     "A lack of red blood cells"
     ],
-    "e": "Beware anyone who says your navel proves it. The body is less tidy than the internet."
+    "e": "From Greek a- (without) and melos (limb)."
    },
    {
-    "q": "Body mass index is calculated as weight in kilograms divided by?",
-    "a": "Height in metres, squared",
+    "q": "Lochia could pass for a name. What is lochia?",
+    "a": "Vaginal discharge in the weeks after giving birth",
     "w": [
-     "Height in metres",
-     "Height in centimetres",
-     "Waist in metres"
+     "A lung infection",
+     "A tear duct blockage",
+     "Morning sickness"
     ],
-    "e": "A population tool from Adolphe Quetelet in the 1830s, who was an astronomer and statistician, not a doctor."
+    "e": "It starts red and fades to yellow-white over about 6 weeks."
    },
    {
-    "q": "On a fictional chart, a 20 kg child is due paracetamol at 15 mg/kg. That dose is?",
-    "a": "300 mg",
+    "q": "Chorea sounds like Cora. Chorea is?",
+    "a": "Jerky, dance-like movements you can\u2019t control",
     "w": [
-     "150 mg",
-     "200 mg",
-     "500 mg"
+     "A choir-singer\u2019s throat strain",
+     "A heart valve problem",
+     "A skin rash"
     ],
-    "e": "20 times 15. Yes, it\u2019s that simple. And yes, people still check it twice, as they should."
+    "e": "From the Greek for dance, as in choreography. Seen in Huntington disease."
    },
    {
-    "q": "Adrenaline labelled 1:1000 contains how much per millilitre?",
-    "a": "1 mg",
+    "q": "Candida might suit a fan of Voltaire. Candida is?",
+    "a": "A yeast that causes thrush",
     "w": [
-     "0.1 mg",
-     "10 mg",
-     "100 mg"
+     "A sweet-smelling breath",
+     "A type of tooth decay",
+     "A gland in the neck"
     ],
-    "e": "One gram in 1000 mL, so 1 mg/mL. Generations of students have been saved by this sentence."
+    "e": "Candida albicans lives on most people and overgrows after antibiotics or with diabetes."
    },
    {
-    "q": "A child on the 75th percentile for height is?",
-    "a": "Taller than about 75% of children the same age and sex",
+    "q": "Little Rubella, sister of Bella? Rubella is also called?",
+    "a": "German measles",
     "w": [
-     "75% of the expected height",
-     "Likely to reach 75% of adult height soon",
-     "Too tall by a quarter"
+     "Scarlet fever",
+     "Slapped cheek",
+     "Chickenpox"
     ],
-    "e": "Percentiles compare, they don\u2019t grade. Please don\u2019t tell parents their child is \u2018only\u2019 40%."
+    "e": "Mild in children, but infection early in pregnancy can harm the baby. Vaccination prevents it."
    },
    {
-    "q": "Normal saline, at 0.9%, contains how much sodium chloride per litre?",
-    "a": "9 g",
+    "q": "Tinea sounds like Tina. Tinea is?",
+    "a": "A fungal skin infection",
     "w": [
-     "0.9 g",
-     "90 g",
-     "900 mg"
+     "A ringing in the ears",
+     "A tapeworm",
+     "A tiny skin tag"
     ],
-    "e": "That 0.9% means 0.9 g per 100 mL. Multiply by ten and feel clever."
+    "e": "Tinea pedis is athlete\u2019s foot; tinea corporis is ringworm."
    },
    {
-    "q": "Smoking 20 cigarettes a day for 10 years comes to how many pack-years?",
-    "a": "10",
+    "q": "Alopecia sounds grand. Alopecia means hair loss, and the word comes from the Greek for?",
+    "a": "Fox",
     "w": [
-     "2",
-     "20",
-     "200"
+     "Bald eagle",
+     "Old man",
+     "Moon"
     ],
-    "e": "One pack a day for one year is one pack-year. Twice the packs, twice the pack-years."
+    "e": "Alopex is Greek for fox, as foxes with mange lose patches of fur."
    },
    {
-    "q": "In the adult \u2018rule of nines\u2019 for burns, one whole arm counts as?",
-    "a": "9%",
+    "q": "Chlamydia sounds like an ancient queen. Its name comes from the Greek for?",
+    "a": "Cloak",
     "w": [
-     "4.5%",
-     "18%",
-     "1%"
+     "Hidden flower",
+     "Queen",
+     "Small seed"
     ],
-    "e": "Each leg gets 18%. Handy to know, and it adds up to 100 with the groin\u2019s lonely 1%."
+    "e": "Chlamys means cloak: the bacteria seemed to drape around the cell nucleus. It\u2019s the most commonly notified STI in Australia."
    },
    {
-    "q": "Virginia Apgar\u2019s newborn score, taken at 1 and 5 minutes, has a maximum of?",
-    "a": "10",
+    "q": "Pica is short and cute. Pica is a craving to eat?",
+    "a": "Things that aren\u2019t food, like ice, chalk or dirt",
     "w": [
-     "5",
-     "15",
-     "20"
+     "Only pizza",
+     "Only sweet food",
+     "Food at night"
     ],
-    "e": "Five signs, up to 2 points each. An anaesthetist\u2019s neat bit of arithmetic that has saved many babies."
+    "e": "Named after the magpie (Latin pica), which eats almost anything. Often linked to iron deficiency."
    }
   ]
  },
@@ -11468,6 +11468,114 @@
      "Nothing"
     ],
     "e": "To prevent permanent nerve damage."
+   }
+  ]
+ },
+ {
+  "date": "2027-02-01",
+  "number": 107,
+  "difficulty": "Easy",
+  "theme": "Doing the numbers",
+  "questions": [
+   {
+    "q": "Today\u2019s date, written 11/23, gives the start of the Fibonacci sequence. Which number comes next after 5, 8, 13?",
+    "a": "21",
+    "w": [
+     "18",
+     "20",
+     "26"
+    ],
+    "e": "Add the last two. That\u2019s all of it, and medieval Italian rabbits never looked back."
+   },
+   {
+    "q": "The ratio of neighbouring Fibonacci numbers closes in on the golden ratio, which is about?",
+    "a": "1.618",
+    "w": [
+     "1.414",
+     "2.718",
+     "3.142"
+    ],
+    "e": "Beware anyone who says your navel proves it. The body is less tidy than the internet."
+   },
+   {
+    "q": "Body mass index is calculated as weight in kilograms divided by?",
+    "a": "Height in metres, squared",
+    "w": [
+     "Height in metres",
+     "Height in centimetres",
+     "Waist in metres"
+    ],
+    "e": "A population tool from Adolphe Quetelet in the 1830s, who was an astronomer and statistician, not a doctor."
+   },
+   {
+    "q": "On a fictional chart, a 20 kg child is due paracetamol at 15 mg/kg. That dose is?",
+    "a": "300 mg",
+    "w": [
+     "150 mg",
+     "200 mg",
+     "500 mg"
+    ],
+    "e": "20 times 15. Yes, it\u2019s that simple. And yes, people still check it twice, as they should."
+   },
+   {
+    "q": "Adrenaline labelled 1:1000 contains how much per millilitre?",
+    "a": "1 mg",
+    "w": [
+     "0.1 mg",
+     "10 mg",
+     "100 mg"
+    ],
+    "e": "One gram in 1000 mL, so 1 mg/mL. Generations of students have been saved by this sentence."
+   },
+   {
+    "q": "A child on the 75th percentile for height is?",
+    "a": "Taller than about 75% of children the same age and sex",
+    "w": [
+     "75% of the expected height",
+     "Likely to reach 75% of adult height soon",
+     "Too tall by a quarter"
+    ],
+    "e": "Percentiles compare, they don\u2019t grade. Please don\u2019t tell parents their child is \u2018only\u2019 40%."
+   },
+   {
+    "q": "Normal saline, at 0.9%, contains how much sodium chloride per litre?",
+    "a": "9 g",
+    "w": [
+     "0.9 g",
+     "90 g",
+     "900 mg"
+    ],
+    "e": "That 0.9% means 0.9 g per 100 mL. Multiply by ten and feel clever."
+   },
+   {
+    "q": "Smoking 20 cigarettes a day for 10 years comes to how many pack-years?",
+    "a": "10",
+    "w": [
+     "2",
+     "20",
+     "200"
+    ],
+    "e": "One pack a day for one year is one pack-year. Twice the packs, twice the pack-years."
+   },
+   {
+    "q": "In the adult \u2018rule of nines\u2019 for burns, one whole arm counts as?",
+    "a": "9%",
+    "w": [
+     "4.5%",
+     "18%",
+     "1%"
+    ],
+    "e": "Each leg gets 18%. Handy to know, and it adds up to 100 with the groin\u2019s lonely 1%."
+   },
+   {
+    "q": "Virginia Apgar\u2019s newborn score, taken at 1 and 5 minutes, has a maximum of?",
+    "a": "10",
+    "w": [
+     "5",
+     "15",
+     "20"
+    ],
+    "e": "Five signs, up to 2 points each. An anaesthetist\u2019s neat bit of arithmetic that has saved many babies."
    }
   ]
  }
