@@ -26,7 +26,7 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="../assets/mg.css?v=3">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=304"></script>
+<script defer src="../assets/shell.js?v=305"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -124,7 +124,7 @@ PAGES = {
     <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
   </section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
-  scripts='<script defer src="cases.js?v=5"></script>\n<script defer src="triagic.js?v=7"></script>'),
+  scripts='<script defer src="cases.js?v=5"></script>\n<script defer src="triagic.js?v=8"></script>'),
  "lunicorn": dict(
   title="Lunicorn", robots="index,follow", theme="#2E1F57", canon='<link rel="canonical" href="https://maladywise.com/lunicorn/">\n',
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",
