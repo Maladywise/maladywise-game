@@ -54,3 +54,4 @@ html[data-theme=dark] .mg-opts button{background:#2A2140;color:#F1ECF8;border-co
 html[data-theme=dark] .tr-pt{background:#1E1830;color:#F1ECF8}
 html[data-theme=dark] .tr-pt.bad{animation:none;background:#4A1E12}
 html[data-theme=dark] .lu-stripe i{border-color:#463A66}
+.mg-page .mw-today,.mg-page .mwx{display:none}
