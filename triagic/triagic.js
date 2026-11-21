@@ -63,10 +63,10 @@
   }
   function napOffer() { // 2: a gamble
     S.napDone = true;
-    banner('<span>&#128715; The couch in the tea room is free&hellip;</span><button type="button" class="tr-bb" id="tr-nap">Power nap (chaos &minus;20%, frozen 10s)</button><button type="button" class="tr-bb ghost" id="tr-nonap">Keep going</button>', 7000);
+    banner('<span>&#128715; The couch in the tea room is free&hellip;</span><button type="button" class="tr-bb" id="tr-nap">Power nap (chaos &minus;20%, frozen 3s)</button><button type="button" class="tr-bb ghost" id="tr-nonap">Keep going</button>', 7000);
     $("tr-nonap").onclick = hideBanner;
     $("tr-nap").onclick = function () {
-      hideBanner(); S.chaos = Math.max(0, S.chaos - 20); S.block = true; var n = 10, el = $("tr-curve"); el.hidden = false;
+      hideBanner(); S.chaos = Math.max(0, S.chaos - 20); S.block = true; var n = 3, el = $("tr-curve"); el.hidden = false;
       function zz() { el.innerHTML = '<div class="tr-cb"><span>&#128564;</span><p>Power nap&hellip; ' + n + "</p><p class=\"mg-small\">The waiting room doesn’t sleep.</p></div>"; }
       zz(); var iv = setInterval(function () { n--; if (n <= 0 || S.over) { clearInterval(iv); el.hidden = true; S.block = null; draw(); } else zz(); }, 1000);
     };

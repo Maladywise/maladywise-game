@@ -19,6 +19,7 @@ body{font:16px/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0p
 .top{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
 .top h1{font:400 clamp(30px,6vw,46px)/1 var(--display);margin:0;text-wrap:balance}
 .kick{font:500 11px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--tag);margin:0 0 6px}
+.story{font:500 18px/1.45 var(--body);margin:0;color:var(--ink)}
 .note{font-size:13px;color:#9FB8A6;margin:0;max-width:36em}
 .lives{font:500 13px var(--mono);color:var(--mist);white-space:nowrap}
 .lives b{color:var(--tox);letter-spacing:3px}
@@ -255,6 +256,7 @@ button[disabled]{opacity:.45;cursor:not-allowed}
   <div class="grid">
     <section class="file" aria-labelledby="cf">
       <p class="label" id="cfile"></p>
+      <p class="story" id="story"></p>
       <h2 id="cf">Clues</h2>
       <ol class="clues" id="clues"></ol>
       <div class="row"><button class="main" type="button" id="more">Reveal next clue</button><span class="label" id="left"></span></div>
@@ -281,7 +283,7 @@ button[disabled]{opacity:.45;cursor:not-allowed}
     [5, "Death cap", "Amanita phalloides", "Amatoxins", "Nothing for 6 to 24 hours, then violent diarrhoea and vomiting, a false recovery, then liver failure days later.", 612, 345],
     [6, "Deadly nightshade", "Atropa belladonna", "Atropine, scopolamine", "Anticholinergic: hot, flushed, dry, huge pupils, fast heart, delirium. Sweet black berries tempt children.", 728, 352],
     [7, "Yew", "Taxus baccata", "Taxines", "Seeds and leaves (not the red flesh) stop the heart suddenly. Collapse and sudden death, often with few warning signs.", 500, 204],
-    [8, "Castor oil plant", "Ricinus communis", "Ricin", "Chewed seeds release ricin. Hours later: vomiting, bloody diarrhoea, then dehydration and organ failure.", 72, 306]
+    [8, "Castor oil plant", "Ricinus communis", "Ricin", "Chewed seeds release ricin. Hours later: vomiting, bloody diarrhoea, then dehydration and organ failure.", 60, 232]
   ];
   var POISON = "In Australia, the Poisons Information Centre is 13 11 26, 24 hours a day.";
   var CASES = [
@@ -361,7 +363,7 @@ button[disabled]{opacity:.45;cursor:not-allowed}
   function load(i) {
     C = CASES[i]; shown = 1; lives = 3; pick = null; out = {}; done = false;
     Array.prototype.forEach.call($("cases").children, function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
-    $("note").textContent = C.note + " Tap the yellow evidence tags to learn about each plant, reveal clues one at a time, and accuse the plant they ate. Fewer clues, more stars.";
+    $("story").textContent = C.note; $("note").textContent = "Tap the yellow evidence tags to learn about each plant, reveal clues one at a time, and accuse the plant they ate. Fewer clues, more stars.";
     $("cfile").textContent = C.file; $("lives").textContent = "●●●"; $("verdict").innerHTML = "";
     $("victim").innerHTML = V[C.id][0];
     CASES.forEach(function (c) { var pr = $("prop-" + c.id); if (pr) pr.style.display = c === C ? "" : "none"; });
