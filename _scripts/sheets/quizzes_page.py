@@ -17,6 +17,22 @@ body = ('<p class="lede">Free practice quizzes with diagrams, real X-rays and EC
  + _c("/anatomy-quiz/", "dx", "Mixed anatomy", "Ten questions from all over the body. A good warm-up.", "anat-mixed", None)
  + _c("/physiology-quiz/", "dx", "Physiology", "How the heart, lungs, kidneys and hormones work.", "physiology", 20)
  + '</div>\n<h2>Anatomy</h2>\n<div class="dh-grid">\n' + _anat
+ + '</div>\n<h2>Imaging</h2>\n<div class="dh-grid">\n'
+ + _c("/ct-quiz/", "opacitis", "CT quiz", "Real CT scans: bleeds, clots, obstructions.", "ct", None)
+ + _c("/mri-quiz/", "neurology", "MRI quiz", "Brain and spine MRI, from MS to Chiari.", "mri", None)
+ + _c("/ultrasound-quiz/", "pregnancy", "Ultrasound quiz", "Gallstones, AAA, DVT, ectopic and FAST.", "ultrasound", None)
+ + _c("/nuclear-medicine-quiz/", "research", "Nuclear medicine quiz", "Bone scans, PET, V/Q and thyroid scans.", "nuclear", None)
+ + '</div>\n<h2>Conditions</h2>\n<div class="dh-grid">\n'
+ + _c("/asthma-quiz/", "sleep", "Asthma", "Puffers, first aid and warning signs.", "asthma", 12)
+ + _c("/type-2-diabetes-quiz/", "nutrition", "Type 2 diabetes", "HbA1c, metformin, SGLT2s and remission.", "type-2-diabetes", 12)
+ + _c("/heart-attack-quiz/", "arrhythmix", "Heart attack", "Warning signs, aspirin, stents and recovery.", "heart-attack", 12)
+ + _c("/stroke-quiz/", "neurology", "Stroke", "FAST, time windows and TIA.", "stroke", 12)
+ + _c("/adhd-quiz/", "mentalhealth", "ADHD", "Symptoms, diagnosis, medicines and myths.", "adhd", 12)
+ + _c("/pots-quiz/", "zebritis", "POTS", "The stand test, salt, fluids and exercise.", "pots", 12)
+ + _c("/myasthenia-gravis-quiz/", "neurology", "Myasthenia gravis", "Fatigable weakness, thymoma and crisis.", "myasthenia-gravis", 12)
+ + _c("/addisons-disease-quiz/", "emergency", "Addison’s disease", "Adrenal crisis and sick day rules.", "addisons-disease", 12)
+ + _c("/haemochromatosis-quiz/", "panelysis", "Haemochromatosis", "Iron overload, ferritin and venesection.", "haemochromatosis", 12)
+ + _c("/wilson-disease-quiz/", "zebritis", "Wilson disease", "Copper, eye rings and lifelong treatment.", "wilson-disease", 12)
  + '</div>\n<h2>Medicines and words</h2>\n<div class="dh-grid">\n'
  + _c("/pharmacology-quiz/", "medicines", "Pharmacology", "Drug classes, antidotes and interactions.", "pharmacology", 20)
  + _c("/medical-terminology-quiz/", "morphemia", "Medical terminology", "Prefixes, suffixes and word roots, with a cheat sheet.", "terms-prefixes", None)

@@ -7,6 +7,7 @@ from anat import QUIZZES
 from other import ECG, TERMS
 from pharm import PHARM
 from more import SIMPLE
+from conds import CONDS
 from physio import PHYS
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
@@ -290,8 +291,9 @@ PHYS_CARDS = '<h2>Choose an organ</h2><ul class="qk-cards">%s</ul><h2>Mixed phys
         q["slug"], q["emoji"], esc(q["h1"].replace(" Physiology Quiz", "")), esc(q["card"]), q["slug"], len(q["qs"]), len(q["qs"])) for q in PHYS)
 
 # ---------- simple text quizzes (more.py): first aid, physiology, abbreviations, dosage ----------
-for z in SIMPLE:
-    others = "".join('<li><a href="%s">%s</a></li>' % (o["path"], esc(o["h1"].split(":")[0])) for o in SIMPLE if o is not z)
+for z in SIMPLE + CONDS:
+    grp = CONDS if z.get("cond") else SIMPLE
+    others = "".join('<li><a href="%s">%s</a></li>' % (o["path"], esc(o["h1"].split(":")[0])) for o in grp if o is not z)
     zbody = "\n".join([
         "<h1>%s</h1>" % esc(z["h1"]),
         '<p class="lede">%s</p>' % esc(z["lede"]),
