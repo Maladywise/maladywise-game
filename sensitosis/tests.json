@@ -2036,6 +2036,110 @@
    ],
    "checked": "4 Nov 2026",
    "label": "Blood test"
+  },
+  "hoover": {
+   "test": "Hoover’s sign",
+   "condition": "functional (non-organic) leg weakness",
+   "scenario": "A ‘paralysed’ leg. The doctor asks the patient to lift the good leg against resistance and feels whether the weak leg pushes down. ‘Positive’ means: it pushes down firmly after all.",
+   "sens": {
+    "v": 63,
+    "lo": 24,
+    "hi": 91
+   },
+   "spec": {
+    "v": 100,
+    "lo": 97,
+    "hi": 100
+   },
+   "says": "When it’s positive, it’s very convincing. When it’s negative, it proves little. And it never means the person is faking.",
+   "note": "A small prospective study in suspected stroke, so the sensitivity range is very wide.",
+   "src": [
+    [
+     "McWhirter et al. 2011, J Psychosom Res (prospective cohort, suspected stroke)",
+     "https://ifp.nyu.edu/2011/journal-article-abstracts/hoovers-sign-for-the-diagnosis-of-functional-weakness-a-prospective-unblinded-cohort-study-in-patients-with-suspected-stroke/"
+    ],
+    [
+     "Review of validated functional weakness signs (PMC)",
+     "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12116663/"
+    ]
+   ],
+   "checked": "21 Nov 2026",
+   "kind": "sign"
+  },
+  "hoffmann": {
+   "test": "Hoffmann’s sign",
+   "condition": "cervical myelopathy (spinal cord squeezed in the neck)",
+   "scenario": "The doctor flicks the nail of the middle finger. ‘Positive’ means: the thumb and index finger twitch inwards.",
+   "sens": {
+    "v": 59,
+    "lo": 44,
+    "hi": 59
+   },
+   "spec": {
+    "v": 84,
+    "lo": 74,
+    "hi": 84
+   },
+   "says": "Misses about half of people with cord compression, and some healthy people have it. A clue, not a verdict: MRI decides.",
+   "note": "Single studies (Rhee 2009, Cook 2009) summarised in a 2023 meta-analysis that didn’t pool Hoffmann’s.",
+   "src": [
+    [
+     "Jiang et al. 2023, Global Spine Journal: clinical signs in degenerative cervical myelopathy (systematic review)",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC11289551"
+    ]
+   ],
+   "checked": "21 Nov 2026",
+   "kind": "sign"
+  },
+  "spurling": {
+   "test": "Spurling’s test",
+   "condition": "a pinched nerve in the neck (cervical radiculopathy)",
+   "scenario": "The doctor tilts the head towards the sore side and presses down gently. ‘Positive’ means: pain shoots down the arm.",
+   "sens": {
+    "v": 50,
+    "lo": 38,
+    "hi": 97
+   },
+   "spec": {
+    "v": 94,
+    "lo": 89,
+    "hi": 100
+   },
+   "says": "A classic rule-in test: a positive result is strong evidence. A negative one doesn’t clear you.",
+   "note": "Studies varied a lot: sensitivity 38% to 97%, specificity 89% to 100%. We show the middle of each range.",
+   "src": [
+    [
+     "Thoomes et al. 2017, The Spine Journal (systematic review)",
+     "https://research.birmingham.ac.uk/en/publications/value-of-physical-tests-in-diagnosing-cervical-radiculopathy-a-sy"
+    ]
+   ],
+   "checked": "21 Nov 2026",
+   "kind": "sign"
+  },
+  "apley": {
+   "test": "Apley grind test",
+   "condition": "a meniscal tear in the knee",
+   "scenario": "Lying face down, knee bent to 90°. The doctor presses down on the heel and twists. ‘Positive’ means: pain in the knee.",
+   "sens": {
+    "v": 61,
+    "lo": 55,
+    "hi": 66
+   },
+   "spec": {
+    "v": 70,
+    "lo": 68,
+    "hi": 72
+   },
+   "says": "Only a little better than a coin toss either way. Doctors combine it with the history and other tests, or get an MRI.",
+   "note": "Pooled from 18 studies (2,670 knees) of meniscal tests.",
+   "src": [
+    [
+     "Hegedus et al. 2007, JOSPT meta-analysis, summarised by BestBETs",
+     "https://www.bestbets.org/?p=4914"
+    ]
+   ],
+   "checked": "21 Nov 2026",
+   "kind": "sign"
   }
  }
 }
