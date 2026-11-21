@@ -20,6 +20,7 @@ CSS = """<style>
 .pr-t{width:100%;border-collapse:collapse;margin:0 0 8px}.pr-t th,.pr-t td{border:1px solid #bbb;padding:5px 6px;vertical-align:middle}
 .pr-t th{background:#F1ECF8;font-size:11.5px;font-weight:600;text-align:center}.pr-t td.n{width:22px;text-align:center;color:#555}.pr-t td.b{text-align:center;width:9%;font-size:11px;color:#555}.pr-t td.q{width:auto;min-width:45%}
 .pr-t td.b i{display:inline-block;width:13px;height:13px;border:1.5px solid #333;border-radius:2px;margin-right:4px;vertical-align:-2px}
+.pr-t td.sh{background:#CFC6DE;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .pr-score{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0}.pr-score span{border:1.5px solid #333;border-radius:6px;padding:6px 12px;font-weight:600}
 .pr-key{margin:6px 0 0;padding-left:18px}.pr-key li{margin:2px 0}
 .pr-crit h3{font-size:14.5px;margin:12px 0 4px}.pr-crit ul{margin:0 0 4px;padding-left:0;list-style:none}.pr-crit li{margin:3px 0;padding-left:22px;position:relative}
@@ -31,7 +32,7 @@ CSS = """<style>
 .pr-hub b{display:block;color:var(--brand,#4A3480)}.pr-hub span{font-size:14px}
 @media print{@page{size:A4;margin:12mm}
  body *{visibility:hidden!important}.pr-sheet,.pr-sheet *{visibility:visible!important}
- .pr-sheet{position:absolute;left:0;top:0;width:100%;border:0;border-radius:0;padding:0;font-size:10pt}.pr-t th,.pr-t td{padding:3px 5px}.pr-crit li{margin:1px 0}.pr-crit h3{margin:8px 0 3px}
+ .pr-sheet{position:absolute;left:0;top:0;width:100%;border:0;border-radius:0;padding:0;font-size:9.5pt}.pr-t th,.pr-t td{padding:3px 5px}.pr-crit li{margin:1px 0}.pr-crit h3{margin:8px 0 3px}
  html,body{background:#fff!important}}
 </style>"""
 
@@ -97,6 +98,32 @@ Q = [
   key=["Add the scores. Total 0 to 40.", "8 or more suggests hazardous or harmful drinking. 15 or more: assess for alcohol dependence.", "Questions 1 to 3 alone are the AUDIT-C (5 or more needs further assessment)."],
   credit="World Health Organization. AUDIT: The Alcohol Use Disorders Identification Test, guidelines for use in primary care (Babor et al.). Free to reproduce.",
   online=""),
+ dict(slug="epds", name="EPDS", full="Edinburgh Postnatal Depression Scale (EPDS)", what="depression in pregnancy and after birth",
+  stem="As you are pregnant or have recently had a baby, we would like to know how you are feeling. Please tick the answer that comes closest to how you have felt in the past 7 days, not just how you feel today.",
+  opts=None,
+  items=[("I have been able to laugh and see the funny side of things", [("As much as I always could", 0), ("Not quite so much now", 1), ("Definitely not so much now", 2), ("Not at all", 3)]),
+         ("I have looked forward with enjoyment to things", [("As much as I ever did", 0), ("Rather less than I used to", 1), ("Definitely less than I used to", 2), ("Hardly at all", 3)]),
+         ("I have blamed myself unnecessarily when things went wrong", [("Yes, most of the time", 3), ("Yes, some of the time", 2), ("Not very often", 1), ("No, never", 0)]),
+         ("I have been anxious or worried for no good reason", [("No, not at all", 0), ("Hardly ever", 1), ("Yes, sometimes", 2), ("Yes, very often", 3)]),
+         ("I have felt scared or panicky for no very good reason", [("Yes, quite a lot", 3), ("Yes, sometimes", 2), ("No, not much", 1), ("No, not at all", 0)]),
+         ("Things have been getting on top of me", [("Yes, most of the time I haven’t been able to cope at all", 3), ("Yes, sometimes I haven’t been coping as well as usual", 2), ("No, most of the time I have coped quite well", 1), ("No, I have been coping as well as ever", 0)]),
+         ("I have been so unhappy that I have had difficulty sleeping", [("Yes, most of the time", 3), ("Yes, sometimes", 2), ("Not very often", 1), ("No, not at all", 0)]),
+         ("I have felt sad or miserable", [("Yes, most of the time", 3), ("Yes, quite often", 2), ("Not very often", 1), ("No, not at all", 0)]),
+         ("I have been so unhappy that I have been crying", [("Yes, most of the time", 3), ("Yes, quite often", 2), ("Only occasionally", 1), ("No, never", 0)]),
+         ("The thought of harming myself has occurred to me", [("Yes, quite often", 3), ("Sometimes", 2), ("Hardly ever", 1), ("Never", 0)])],
+  extra="",
+  key=["Add the scores. Total 0 to 30.", "In Australia, 13 or more suggests probable depression; 10 to 12 needs follow-up. It doesn’t measure severity.", "Any answer other than ‘Never’ on question 10 needs a same-day conversation about safety."],
+  credit="Cox JL, Holden JM, Sagovsky R. Detection of postnatal depression: development of the 10-item Edinburgh Postnatal Depression Scale. British Journal of Psychiatry 1987;150:782–6. Reproduced without further permission, as the authors allow, with this citation.",
+  online=""),
+ dict(slug="asrs", name="ASRS screener", full="Adult ADHD Self-Report Scale screener (ASRS v1.1, Part A)", what="adult ADHD",
+  stem="Rate how you have felt and conducted yourself over the past 6 months. Shaded boxes count.",
+  opts=[("Never", 0), ("Rarely", 0), ("Sometimes", 0), ("Often", 0), ("Very often", 0)],
+  shade=[[2, 3, 4], [2, 3, 4], [2, 3, 4], [3, 4], [3, 4], [3, 4]],
+  items=["How often do you have trouble wrapping up the final details of a project, once the challenging parts have been done?", "How often do you have difficulty getting things in order when you have to do a task that requires organization?", "How often do you have problems remembering appointments or obligations?", "When you have a task that requires a lot of thought, how often do you avoid or delay getting started?", "How often do you fidget or squirm with your hands or feet when you have to sit down for a long time?", "How often do you feel overly active and compelled to do things, like you were driven by a motor?"],
+  extra="",
+  key=["Count the ticks in shaded boxes.", "4 or more suggests symptoms consistent with adult ADHD and that a full assessment is worthwhile.", "A screen only: diagnosis needs a clinical assessment, including childhood history."],
+  credit="© New York University and Ronald C. Kessler, PhD. All rights reserved. Kessler RC et al. Psychological Medicine 2005;35:245–56. Free to use; the official version is at hcp.med.harvard.edu/ncs/asrs.php.",
+  online=""),
 ]
 FREQ = [("Never", 0), ("Less than monthly", 1), ("Monthly", 2), ("Weekly", 3), ("Daily or almost daily", 4)]
 YES = [("No", 0), ("Yes, but not in the last year", 2), ("Yes, during the last year", 4)]
@@ -104,21 +131,22 @@ YES = [("No", 0), ("Yes, but not in the last year", 2), ("Yes, during the last y
 def qsheet(q):
     rows = []
     if q["opts"]:
-        head = "<tr><th></th><th style='text-align:left'>" + E(q["stem"]) + "</th>" + "".join("<th>%s<br>(%d)</th>" % (E(o), p) for o, p in q["opts"]) + "</tr>"
+        sh = q.get("shade")
+        head = "<tr><th></th><th style='text-align:left'>" + E(q["stem"]) + "</th>" + "".join(("<th>%s</th>" % E(o)) if sh else ("<th>%s<br>(%d)</th>" % (E(o), p)) for o, p in q["opts"]) + "</tr>"
         for i, it in enumerate(q["items"], 1):
-            rows.append("<tr><td class='n'>%d</td><td class='q'>%s</td>%s</tr>" % (i, E(it), "".join("<td class='b'><i></i></td>" for _ in q["opts"])))
-        rows.append("<tr><td></td><td style='text-align:right'><b>Column totals</b></td>%s</tr>" % "".join("<td class='b'>+ ____</td>" for _ in q["opts"]))
+            rows.append("<tr><td class='n'>%d</td><td class='q'>%s</td>%s</tr>" % (i, E(it), "".join("<td class='b%s'><i></i></td>" % (" sh" if sh and j in sh[i - 1] else "") for j in range(len(q["opts"])))))
+        if not sh: rows.append("<tr><td></td><td style='text-align:right'><b>Column totals</b></td>%s</tr>" % "".join("<td class='b'>+ ____</td>" for _ in q["opts"]))
         t = "<table class='pr-t'>" + head + "".join(rows) + "</table>"
     else:
         body = ""
         for i, (it, op) in enumerate(q["items"], 1):
             op = FREQ if op == "F" else YES if op == "Y" else op
-            body += "<tr><td class='n'>%d</td><td>%s</td><td>%s</td><td class='b'>____</td></tr>" % (i, E(it), " ".join('<span style="white-space:nowrap;margin-right:8px"><i style="display:inline-block;width:12px;height:12px;border:1.5px solid #333;border-radius:2px;vertical-align:-2px"></i> %s <small>(%d)</small></span>' % (E(o), p) for o, p in op))
+            body += "<tr><td class='n'>%d</td><td>%s</td><td>%s</td><td class='b'>____</td></tr>" % (i, E(it), " ".join('<span style="display:inline-block;margin:1px 10px 1px 0"><i style="display:inline-block;width:12px;height:12px;border:1.5px solid #333;border-radius:2px;vertical-align:-2px"></i> %s <small>(%d)</small></span>' % (E(o), p) for o, p in op))
         t = "<p class='pr-sub'>" + E(q["stem"]) + "</p><table class='pr-t'><tr><th></th><th style='text-align:left'>Question</th><th style='text-align:left'>Answer (points)</th><th>Score</th></tr>" + body + "</table>"
     ex = "<p>%s</p>" % q["extra"] if q["extra"] else ""
-    return ('<div class="pr-sheet"><h2>%s</h2>%s%s%s<p class="pr-score"><span>Total score: ______</span></p>'
+    return ('<div class="pr-sheet"><h2>%s</h2>%s%s%s<p class="pr-score"><span>%s: ______</span></p>'
             '<ul class="pr-key">%s</ul><p class="pr-foot">%s Printed from maladywise.com/printables/%s/. A screening tool, not a diagnosis.</p></div>') % (
-        E(q["full"]), WHO, t, ex, "".join("<li>%s</li>" % E(k) for k in q["key"]), E(q["credit"]), q["slug"])
+        E(q["full"]), WHO, t, ex, ("Ticks in shaded boxes" if q.get("shade") else "Total score"), "".join("<li>%s</li>" % E(k) for k in q["key"]), E(q["credit"]), q["slug"])
 
 for q in Q:
     main = ('<p class="meta"><a href="/printables/">Printables</a> · Questionnaire</p>\n<h1>Printable %s</h1>\n'
@@ -189,7 +217,7 @@ hub = ('<p class="meta"><a href="/tools/">Tools</a> · Printables</p>\n<h1>Print
        '<h2>Diagnostic criteria checklists</h2><ul class="pr-hub">' + "".join(li(c["slug"], c["name"], c["lede"].split(":")[0]) for c in C) + '</ul>\n'
        '<h2>Not here, and why</h2><ul>'
        '<li><b>DASS-21:</b> free for clinicians, but its authors ask that it isn’t offered to the public on websites. Ask your GP or psychologist. Details: www2.psy.unsw.edu.au/dass.</li>'
-       '<li><b>Epworth Sleepiness Scale:</b> licensed, so we can’t reproduce it. Your GP or sleep clinic will have a copy.</li>'
+       '<li><b>ASRS 18-question checklist:</b> needs permission; the free 6-question screener is here.</li><li><b>Epworth Sleepiness Scale:</b> licensed, so we can’t reproduce it. Your GP or sleep clinic will have a copy.</li>'
        '<li><b>RAADS-R:</b> copyrighted; ask the clinician doing your autism assessment.</li></ul>')
-page("", "Printables: Free Printable Health Questionnaires and Criteria", "Free printable PHQ-9, GAD-7, K10 and AUDIT questionnaires, plus checklists for fibromyalgia, hEDS, ADHD and depression criteria. One A4 page each.", hub)
+page("", "Printables: Free Printable Health Questionnaires and Criteria", "Free printable PHQ-9, GAD-7, K10, AUDIT, EPDS and ASRS questionnaires, plus checklists for fibromyalgia, hEDS, ADHD and depression criteria. One A4 page each.", hub)
 print("printables built:", len(Q) + len(C) + 1)
