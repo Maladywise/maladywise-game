@@ -1,4 +1,4 @@
-/* Fridaemia: the Friday 5pm results inbox. Open Fridays 4:30 to 7pm, the player's local time.
+/* Fridaemia: the Friday 5pm results inbox. Open all day Friday, the player's local time.
    Eight results land at knock-off time. For each: ED now, call today, or Monday is fine. Same eight for everyone that week. */
 (function () {
   var G = window.MG, $ = G.$;
@@ -32,13 +32,105 @@
     ["TSH 0.01 mU/L, free T4 mildly raised.", "38-year-old with mild palpitations, otherwise well.", CALL, "Overactive thyroid. Call to explain and start symptom control (often a beta blocker) and referral. ED only if very unwell, fast AF or a fever."],
     ["Creatinine 290 µmol/L (was 95 three months ago).", "75-year-old on an ACE inhibitor, diuretic and ibuprofen. Vomiting for 2 days.", ED, "Acute kidney injury: the ‘triple whammy’ plus dehydration. ED for fluids and monitoring. Stop all three medicines."],
     ["PSA 5.2 ng/mL.", "61-year-old, no urinary symptoms.", MON, "Raised but not urgent. Repeat and consider referral or MRI through normal channels next week."]
+,
+    ["Potassium 2.6 mmol/L.", "70-year-old on a thiazide and laxatives. Weak legs, palpitations.", ED, "Severe low potassium with symptoms can cause dangerous rhythms. ED for an ECG and IV replacement."],
+    ["Potassium 3.2 mmol/L.", "55-year-old on a thiazide. Feels well.", MON, "Mild low potassium. Oral supplements or a dose review next week."],
+    ["Potassium 5.6 mmol/L. Sample haemolysed.", "40-year-old, routine bloods, well.", MON, "Haemolysis falsely raises potassium. Repeat the test next week, collected carefully."],
+    ["Sodium 126 mmol/L (was 135 a month ago).", "78-year-old started on sertraline 3 weeks ago. Mildly unsteady.", CALL, "SSRIs can cause SIADH in older people. Call today: stop or review the SSRI, fluid restrict, recheck in a day or two. ED if confused or vomiting."],
+    ["Glucose 2.4 mmol/L on a lab sample taken this morning.", "Well 50-year-old, no diabetes. Sample sat in the courier van all day.", MON, "Delayed processing lets cells eat the glucose (pseudohypoglycaemia). Repeat with a proper sample."],
+    ["Glucose 31 mmol/L, ketones 0.4 mmol/L.", "68-year-old with type 2 diabetes, thirsty, weeing a lot, drinking well.", CALL, "Very high sugar without ketones. Call today: fluids, medicine review, repeat tomorrow. ED if drowsy, vomiting or ketones rise (risk of HHS)."],
+    ["HbA1c 6.6% (no previous result).", "52-year-old, no symptoms.", MON, "Diabetes range on one HbA1c. Confirm and start the conversation next week."],
+    ["TSH 85 mU/L, free T4 very low.", "62-year-old, very slow, cold, puffy, now drowsy and confused.", ED, "Possible myxoedema coma: a medical emergency needing IV thyroid hormone and support."],
+    ["TSH 7.2 mU/L, free T4 normal.", "35-year-old, tired, otherwise well.", MON, "Subclinical hypothyroidism. Repeat in 6 to 12 weeks with antibodies before treating."],
+    ["Free T4 high, TSH suppressed.", "30-year-old, 6 weeks postpartum, palpitations, mild.", CALL, "Postpartum thyroiditis or Graves’. Call today for a beta blocker if symptomatic and arrange follow-up."],
+    ["Haemoglobin 62 g/L (was 128 two months ago).", "70-year-old, black stools this week, dizzy.", ED, "A big drop with melaena means a GI bleed. ED for transfusion and scope."],
+    ["Haemoglobin 98 g/L, MCV 72, ferritin 6.", "45-year-old man, no symptoms.", CALL, "Iron deficiency in a man means a GI bleed or cancer until proven otherwise. Call to arrange urgent scopes."],
+    ["Haemoglobin 105 g/L, B12 90 pmol/L (low).", "58-year-old on metformin. Tingling feet.", CALL, "B12 deficiency with nerve symptoms. Call to start injections soon; nerve damage can become permanent."],
+    ["White cell count 85 × 10⁹/L, blasts present.", "24-year-old with bruising and fever.", ED, "Possible acute leukaemia. Same-day haematology via ED."],
+    ["Lymphocytes 6.2 × 10⁹/L, stable for 3 years.", "72-year-old, no symptoms.", MON, "Likely chronic lymphocytic leukaemia, slowly progressive. Routine haematology referral."],
+    ["Platelets 950 × 10⁹/L.", "65-year-old, burning red fingers, no infection.", CALL, "Possible essential thrombocythaemia. Call: aspirin may be advised and urgent haematology referral."],
+    ["Platelets 120 × 10⁹/L.", "Pregnant at 34 weeks, BP 130/80, well.", MON, "Mild gestational thrombocytopenia is common. Check the trend and BP at the next visit (sooner if BP rises or headache)."],
+    ["Neutrophils 1.1 × 10⁹/L.", "Well 30-year-old of African heritage, previous results the same.", MON, "Benign ethnic neutropenia (Duffy-null). Nothing to do."],
+    ["INR 1.4.", "On warfarin for a mechanical mitral valve, target 2.5 to 3.5.", CALL, "Subtherapeutic on a mechanical valve risks valve clots. Call today: dose increase and bridging per specialist advice."],
+    ["INR 4.1, no bleeding.", "On warfarin for AF.", CALL, "Skip a dose or two, recheck in a few days. Call to adjust; vitamin K not usually needed at this level."],
+    ["D-dimer 2.8 mg/L.", "40-year-old, sent home from a GP appointment with a sore calf.", CALL, "Raised D-dimer with a possible DVT needs a same-day or next-day ultrasound. Call today; anticoagulate if delay and high risk."],
+    ["eGFR 22 (was 65 a month ago).", "80-year-old started on an NSAID for knee pain.", ED, "Acute kidney injury. ED or same-day review: stop the NSAID, check potassium, fluids."],
+    ["eGFR 52, stable for 2 years.", "70-year-old with hypertension.", MON, "Stable CKD stage 3a. Routine monitoring, BP and ACR."],
+    ["Urine ACR 45 mg/mmol.", "48-year-old with type 2 diabetes.", MON, "Significant albuminuria: SGLT2 inhibitor and ACE inhibitor discussion. Routine visit."],
+    ["Urea 22, creatinine 160, normal last year.", "88-year-old, poor oral intake for a week, hot weather.", CALL, "Pre-renal kidney injury from dehydration. Call: fluids, hold diuretics and ACE inhibitors, recheck in 48 hours."],
+    ["ALT 340, ALP normal.", "28-year-old, tired, dark urine, recent travel to India.", CALL, "Acute hepatitis (hepatitis A or E). Call today, check INR and hepatitis serology; ED if confused or INR rising."],
+    ["ALT 62, GGT 110.", "50-year-old who drinks 4 beers a night.", MON, "Alcohol-related liver changes. Routine visit to talk about alcohol and check fibrosis."],
+    ["Bilirubin 48, ALT normal, ALP normal.", "22-year-old, well, after fasting.", MON, "Likely Gilbert syndrome. Harmless."],
+    ["Lipase 1,200 U/L.", "45-year-old, severe upper tummy pain to the back, vomiting.", ED, "Acute pancreatitis. ED for fluids and pain relief."],
+    ["Calcium 2.85, PTH high.", "60-year-old, mild aches, no confusion.", MON, "Primary hyperparathyroidism, mild. Routine endocrine referral; check bones and kidneys."],
+    ["Calcium 1.75 (corrected), tingling fingers and cramps.", "3 days after thyroid surgery.", ED, "Post-surgical hypoparathyroidism. ED for IV calcium if symptomatic."],
+    ["Magnesium 0.62 mmol/L.", "50-year-old on a PPI, well.", MON, "Mildly low. Consider stopping the PPI or oral magnesium. Routine."],
+    ["CK 1,800 U/L.", "55-year-old on a statin, mild muscle aches.", CALL, "Call today: stop the statin, check kidney function, recheck CK in a week."],
+    ["CRP 190, white cells 18.", "75-year-old, fever, confused, sample from home visit.", ED, "Probable serious infection in an older person with confusion. ED."],
+    ["CRP 12.", "35-year-old after a cold, well.", MON, "Mildly raised after a viral illness. Nothing to do."],
+    ["ESR 95, CRP 60.", "74-year-old, new headache and jaw pain chewing.", ED, "Possible giant cell arteritis: start high-dose prednisolone today and same-day review to protect vision."],
+    ["Troponin 18 ng/L (normal under 15), repeat 19.", "80-year-old with CKD, no chest pain, routine bloods.", MON, "Stable, mildly raised troponin in CKD is common. Not an acute MI pattern."],
+    ["Troponin 2,400 ng/L.", "60-year-old who had chest pain 3 days ago, now pain-free.", ED, "A missed or late heart attack still needs cardiology assessment today."],
+    ["BNP 1,800 pg/mL.", "78-year-old, ankles swelling, breathless walking to the letterbox, no breathlessness at rest.", CALL, "Likely heart failure. Call today to start a diuretic and arrange an echo; ED if breathless at rest."],
+    ["Blood culture: gram-negative rods.", "68-year-old treated yesterday for UTI, now shaky and feverish.", ED, "Bacteraemia. ED for IV antibiotics."],
+    ["Blood culture: coagulase-negative staph in 1 of 2 bottles.", "Well 45-year-old, no lines or implants.", MON, "Usually a skin contaminant. Repeat cultures only if clinically unwell."],
+    ["Urine culture: no growth.", "30-year-old with burning on urination, treated with antibiotics 2 days ago, now better.", MON, "Fine. Stop antibiotics if the course is complete."],
+    ["Urine culture: E. coli resistant to the prescribed antibiotic.", "Pregnant at 20 weeks, still has symptoms.", CALL, "UTI in pregnancy must be treated: call today to switch antibiotics. Fever or back pain means ED."],
+    ["Throat swab: group A strep.", "8-year-old, sore throat, now fine on no antibiotics.", CALL, "Call to start penicillin to prevent rheumatic fever, especially in high-risk groups."],
+    ["Chlamydia PCR positive.", "21-year-old, no symptoms.", CALL, "Call to treat (doxycycline 100 mg twice daily for 7 days) and arrange partner notification. Not urgent tonight."],
+    ["Gonorrhoea PCR positive, culture pending.", "25-year-old with discharge.", CALL, "Call to arrange ceftriaxone injection plus azithromycin and partner notification."],
+    ["HIV antibody/antigen positive (new).", "32-year-old, routine screen.", CALL, "Call to explain in person soon, confirm, and link to specialist care quickly. Don’t leave this over a weekend without contact."],
+    ["Hepatitis B surface antigen positive.", "Pregnant at 12 weeks.", CALL, "Call to arrange viral load and specialist care; the baby needs vaccine and immunoglobulin at birth."],
+    ["Pertussis PCR positive.", "Unvaccinated 6-week-old baby, coughing fits, pauses in breathing.", ED, "Whooping cough in a young infant can cause apnoea and death. ED now."],
+    ["COVID-19 PCR positive.", "78-year-old, mild symptoms day 2, on several medicines.", CALL, "Call today: antivirals (check interactions) can reduce severe outcomes in high-risk people."],
+    ["Influenza A positive.", "29-year-old, healthy, day 4, improving.", MON, "No antivirals needed for healthy adults after 48 hours. Nothing to do."],
+    ["Stool: Campylobacter.", "35-year-old, diarrhoea now settled.", MON, "Usually self-limiting. Antibiotics only if severe or immunocompromised."],
+    ["Stool: Shiga toxin-producing E. coli.", "5-year-old, bloody diarrhoea, passing less urine.", ED, "Risk of haemolytic uraemic syndrome. ED for bloods and kidney monitoring. Avoid antibiotics and antidiarrhoeals."],
+    ["Faecal occult blood (bowel screening kit) positive.", "62-year-old, no symptoms.", CALL, "Call to explain and arrange a colonoscopy within 30 days. Not an emergency."],
+    ["Pap/cervical screen: HPV 16 positive, high-grade changes.", "34-year-old.", CALL, "Call to explain and refer for colposcopy. Not an ED problem."],
+    ["Mammogram: suspicious 2 cm mass.", "55-year-old.", CALL, "Call to explain and arrange urgent breast assessment. Don’t leave a cancer suspicion unexplained over the weekend."],
+    ["CT abdomen: 5.8 cm abdominal aortic aneurysm, not leaking.", "72-year-old, no pain.", CALL, "Call to arrange vascular surgery review soon. ED immediately if new pain, collapse or back pain."],
+    ["Chest X-ray: small left pleural effusion.", "78-year-old with known heart failure, comfortable.", MON, "Likely heart failure related. Review diuretic at the next visit."],
+    ["Chest X-ray: right-sided pneumothorax, 3 cm.", "Tall 22-year-old with chest pain yesterday.", ED, "A sizeable pneumothorax needs ED assessment for aspiration or a drain."],
+    ["CT head: chronic subdural haematoma.", "84-year-old on apixaban, increasingly confused.", ED, "Needs neurosurgical assessment and anticoagulation reversal. ED now."],
+    ["Ultrasound: 7 mm gallstones, no inflammation.", "45-year-old with occasional pain after fatty meals.", MON, "Symptomatic gallstones: routine surgical referral."],
+    ["Ultrasound: thickened gallbladder wall, pericholecystic fluid.", "50-year-old, fever and right upper pain since yesterday.", ED, "Acute cholecystitis. ED for antibiotics and surgical review."],
+    ["Pelvic ultrasound: no intrauterine pregnancy, hCG 2,100.", "26-year-old, 6 weeks since last period, mild pain.", ED, "Possible ectopic pregnancy. ED for urgent gynaecology review."],
+    ["Bone density T-score −3.1.", "68-year-old woman, no fractures.", MON, "Osteoporosis: start treatment at a routine visit."],
+    ["ECG (from a pharmacy check): new AF, rate 92.", "70-year-old, no symptoms.", CALL, "New AF: call today to start stroke-risk assessment and anticoagulation discussion."],
+    ["ECG: QTc 560 ms.", "35-year-old on methadone and a new antibiotic, palpitations.", ED, "Very long QT risks torsades. ED for monitoring; stop QT-prolonging drugs."],
+    ["Holter: 3 runs of non-sustained VT.", "55-year-old with previous heart attack, dizzy spells.", CALL, "Call today and arrange urgent cardiology. ED if fainting or ongoing palpitations."],
+    ["Lithium 0.4 mmol/L (target 0.6 to 1.0).", "Stable patient.", MON, "Low level: check adherence, adjust at the next visit."],
+    ["Digoxin 3.4 nmol/L.", "82-year-old, nausea, seeing yellow, pulse 44.", ED, "Digoxin toxicity with symptoms. ED; digoxin antibodies may be needed."],
+    ["Vancomycin trough 32 mg/L.", "Home IV antibiotics patient, creatinine rising.", CALL, "Call today: hold the next dose, check kidney function, adjust with the hospital team."],
+    ["Paracetamol level 160 mg/L at 6 hours.", "17-year-old with overdose, at home, tummy upset.", ED, "Above the treatment line. ED for acetylcysteine now."],
+    ["Ferritin 1,400, transferrin saturation 78%.", "45-year-old man, tired, aching joints.", CALL, "Likely haemochromatosis. Call to arrange HFE gene test and venesection referral. Not urgent tonight."],
+    ["Prolactin 2,800 mU/L.", "28-year-old, no periods, headaches, vision problems.", CALL, "Possible pituitary tumour pressing on the optic nerves. Call to arrange urgent MRI and visual fields; ED if vision is worsening quickly."],
+    ["Cortisol 9am: 40 nmol/L.", "50-year-old, tired, dizzy, salt craving, darker skin.", ED, "Very low morning cortisol with symptoms suggests adrenal insufficiency. ED: hydrocortisone, risk of crisis."],
+    ["Testosterone 6 nmol/L.", "45-year-old man, low libido, sample taken at 4pm.", MON, "Repeat as a fasting morning sample before acting."],
+    ["PSA 48 ng/mL.", "76-year-old with new back pain.", CALL, "Possible metastatic prostate cancer. Call today: urgent urology and imaging. ED if leg weakness or bladder problems (cord compression)."],
+    ["CA-125 410 U/mL.", "62-year-old with bloating and early fullness.", CALL, "Possible ovarian cancer. Call to arrange urgent imaging and gynaecology oncology referral."],
+    ["Coeliac serology (tTG IgA) strongly positive.", "25-year-old with bloating.", MON, "Refer for gastroscopy; keep eating gluten until then."],
+    ["Pregnancy test (serum hCG) positive.", "38-year-old on methotrexate for psoriasis.", CALL, "Methotrexate is teratogenic. Call today: stop it, start folic acid 5 mg, arrange urgent review."],
+    ["Vitamin D 18 nmol/L.", "Housebound 85-year-old, frequent falls.", MON, "Severe deficiency. Start replacement next week; falls risk review."],
+    ["Lead level 2.1 µmol/L.", "2-year-old who chews old window sills.", CALL, "Very high lead in a child. Call today to remove exposure and refer urgently."],
+    ["Ammonia high.", "Known cirrhosis, more confused today, sleepy.", ED, "Hepatic encephalopathy. ED: lactulose, look for triggers (infection, bleeding)."],
+    ["Urine drug screen positive for benzodiazepines.", "Patient who was given diazepam in ED last week.", MON, "Explained. Nothing to do."],
+    ["Fasting glucose 6.4 mmol/L.", "40-year-old, overweight, well.", MON, "Impaired fasting glucose (prediabetes). Lifestyle conversation at a routine visit."],
+    ["Cholesterol: LDL 6.8 mmol/L.", "30-year-old, father had a heart attack at 45.", MON, "Likely familial hypercholesterolaemia. Routine visit to start a statin and family testing."],
+    ["Hb 168 g/L, haematocrit 0.52.", "55-year-old smoker, headaches.", CALL, "High red cell mass. Call to arrange JAK2 testing and review; ED if neurological symptoms."],
+    ["Sodium 152 mmol/L.", "90-year-old in a nursing home, drowsy, not drinking.", ED, "Severe high sodium from dehydration with drowsiness. ED for careful fluids."],
+    ["Bicarbonate 12, anion gap 24.", "19-year-old with type 1 diabetes, vomiting, sample from this morning.", ED, "Likely DKA. ED now: insulin and fluids."],
+    ["Urine: protein 3+, blood 2+.", "8-year-old, puffy face, cola-coloured urine, BP 140/95.", ED, "Nephritic syndrome with high BP in a child. ED today."],
+    ["Swab from a leg ulcer: MRSA.", "Well 70-year-old, ulcer healing, no spreading redness.", MON, "Colonisation, not infection. No antibiotics needed if healing."],
+    ["Sputum: Mycobacterium tuberculosis on PCR.", "35-year-old with cough for 2 months, lives with young children.", CALL, "Call today: TB service, start treatment, contact tracing (especially the children). Not usually an ED problem."]
   ];
   function now() {
     var q = new URLSearchParams(location.search).get("t"); // testing: ?t=open
     return q === "open" ? (function () { var d = new Date(); while (d.getDay() !== 5) d.setDate(d.getDate() - 1); d.setHours(17, 0, 0, 0); return d; })() : new Date();
   }
-  function isOpen(d) { var m = d.getHours() * 60 + d.getMinutes(); return d.getDay() === 5 && m >= 16 * 60 + 30 && m < 19 * 60; }
-  function nextOpen(d) { var n = new Date(d); n.setSeconds(0, 0); for (var i = 0; i < 8; i++) { var c = new Date(n); c.setDate(n.getDate() + i); c.setHours(16, 30, 0, 0); if (c.getDay() === 5 && c > d) return c; } return null; }
+  function isOpen(d) { return d.getDay() === 5; }
+  function nextOpen(d) { var n = new Date(d); n.setSeconds(0, 0); for (var i = 0; i < 8; i++) { var c = new Date(n); c.setDate(n.getDate() + i); c.setHours(0, 0, 0, 0); if (c.getDay() === 5 && c > d) return c; } return null; }
   var T = now(), WK = G.week(T), r = G.rng("fridaemia-" + WK);
   var SET = G.shuffle(POOL, r).slice(0, 8), idx = 0, score = 0, marks = [];
   var KEY = "mw-fridaemia-" + WK;
@@ -50,7 +142,7 @@
       var ms = n - new Date();
       if (ms <= 0) { location.reload(); return; }
       var d = Math.floor(ms / 864e5), h = Math.floor(ms / 36e5) % 24, m = Math.floor(ms / 6e4) % 60;
-      el.innerHTML = "🔒 The inbox is closed. Opens Friday at 4:30pm your time.<br><b>" + (d ? d + "d " : "") + h + "h " + m + "m</b> to go.";
+      el.innerHTML = "🔒 The inbox is closed. Opens on Friday, all day, your time.<br><b>" + (d ? d + "d " : "") + h + "h " + m + "m</b> to go.";
     }
     tick(); setInterval(tick, 30000);
   }

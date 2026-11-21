@@ -1,5 +1,5 @@
 """Builds the pages for the small time-gated / secret games (and Nomulous, private until launch): /triagic/ (secret, unlocked by typing "quiet"),
-/lunicorn/ (full-moon nights only) and /fridaemia/ (Fridays 4:30-7pm local). Run: python3 _scripts/minigames_pages.py"""
+/lunicorn/ (full-moon nights only) and /fridaemia/ (all day Friday, local). Run: python3 _scripts/minigames_pages.py"""
 import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
 HEAD = """<!doctype html>
@@ -26,7 +26,7 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="../assets/mg.css?v=3">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=301"></script>
+<script defer src="../assets/shell.js?v=302"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -34,7 +34,7 @@ HEAD = """<!doctype html>
   <footer class="site"><p class="ft-base"><span class="ft-note">%(foot)s</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 <script defer src="/assets/boot.js?v=1" data-mw="page"></script>
-<script defer src="/assets/mg.js?v=2"></script>
+<script defer src="/assets/mg.js?v=3"></script>
 %(scripts)s
 </body>
 </html>
@@ -49,14 +49,14 @@ END = """  <section class="mg-card mg-end" id="%(p)s-end" hidden>
 
 PAGES = {
  "fridaemia": dict(
-  title="Fridaemia: The 5pm Friday Results Inbox", robots="noindex", theme="#7A1F2B",
-  canon="",
-  desc="Fridaemia is a free weekly GP game, open Fridays 4:30 to 7pm only: eight results land at knock-off time. ED now, call today, or Monday?",
+  title="Fridaemia: The 5pm Friday Results Inbox", robots="index,follow", theme="#7A1F2B",
+  canon='<link rel="canonical" href="https://maladywise.com/fridaemia/">\n',
+  desc="Fridaemia is a free weekly GP game, open all day on Fridays only: eight results land at knock-off time. ED now, call today, or Monday?",
   foot="A teaching game with fictional patients. Real decisions depend on the whole patient and local guidelines.",
   css=":root{--mg-a:#7A1F2B;--mg-b:#4A1220;--mg-hi:#FFD3D8;--mg-soft:#FBEDEF}.fr-res{font:700 20px/1.35 var(--body);color:var(--mg-a)}html[data-theme=dark] .fr-res{color:var(--mg-hi)}",
   body="""  <section class="mg-intro" id="fr-intro">
     <img class="mg-masc" src="/assets/mascots/panelysis.svg" alt="Ruby the vampire, host of the blood test games" width="104" height="104">
-    <p class="mg-kick">&#128229; Fridays, 4:30 to 7pm only</p>
+    <p class="mg-kick">&#128229; Fridays only</p>
     <h1>Fridaemia</h1>
     <p class="mg-lede">It&rsquo;s 5pm on a Friday. You&rsquo;re reaching for your keys when eight results land in your inbox. For each one: ED now, call today, or Monday is fine?</p>
     <p class="mg-small">Same eight results for everyone this week. Ruby hosts.</p>
@@ -71,7 +71,7 @@ PAGES = {
 """ + END % dict(p="fr", etitle="Inbox cleared. Keys in hand.", again="Back to the start"),
   scripts='<script defer src="fridaemia.js?v=2"></script>'),
  "triagic": dict(
-  title="Triagic", robots="noindex", theme="#B3261E", canon="",
+  title="Triagic", robots="index,follow", theme="#B3261E", canon='<link rel="canonical" href="https://maladywise.com/triagic/">\n',
   desc="Shh. You said the Q word. A secret Malady Wise game.",
   foot="A secret game with fictional patients. Not medical advice.",
   css=""":root{--mg-a:#B3261E;--mg-b:#5A0F0B;--mg-hi:#FFE08A;--mg-soft:#FDECEA}
@@ -126,7 +126,7 @@ PAGES = {
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
   scripts='<script defer src="cases.js?v=5"></script>\n<script defer src="triagic.js?v=6"></script>'),
  "lunicorn": dict(
-  title="Lunicorn", robots="noindex", theme="#2E1F57", canon="",
+  title="Lunicorn", robots="index,follow", theme="#2E1F57", canon='<link rel="canonical" href="https://maladywise.com/lunicorn/">\n',
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",
   foot="A secret game. Not medical advice, just moonlight and unicorns.",
   css=""":root{--mg-a:#3B2A73;--mg-b:#120B2E;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}

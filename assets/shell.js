@@ -590,7 +590,7 @@
     ["sx_keys", "⌨️", "Typo Cat", "Let Basil type a Wordemic guess.", "global", "", 0, 1],
     ["sx_konami", "🎮", "Cheat Code", "Typed march for the mascot parade.", "global", "", 0, 1],
     ["sx_codes", "🔐", "Code Breaker", "Found 10 secret codes.", "global", "codes", 10, 1],
-    ["sx_codebook", "📖", "Codebook", "Found every secret code.", "global", "codes", 61, 1],
+    ["sx_codebook", "📖", "Codebook", "Found every secret code.", "global", "codes", 64, 1],
     ["sx_cookie", "🍪", "Cookie Monster", "Found five hidden cookies.", "global", "cookies", 5, 1],
     ["sx_jar", "🫙", "Cookie Jar", "Found 25 hidden cookies.", "global", "cookies", 25, 1],
     ["sx_owl", "🌙", "Graveyard Shift", "Saw the site’s night shift look.", "global", "", 0, 1],
@@ -601,8 +601,14 @@
     ["sx_console", "🔧", "Under the Hood", "Found the message in the console.", "global", "", 0, 1],
     ["sx_paws", "🐾", "Cat Person", "Called a cat by name.", "global", "", 0, 1],
     ["sx_cab", "🗝️", "Cabinet Keeper", "Opened the Cabinet of Curiosities.", "global", "", 0, 1],
-    ["sx_da", "✏️", "Diabolically Clever", "Solved the hidden mini cryptic without peeking.", "global", "", 0, 1]
-    // at launch of Triagic/Lunicorn add: sx_quiet You Said It, sx_moon Moonstruck, sx_bluemoon Once in a Blue Moon, sx_bloodmoon Blood Moon
+    ["sx_da", "✏️", "Diabolically Clever", "Solved the hidden mini cryptic without peeking.", "global", "", 0, 1],
+    ["sx_quiet", "🚨", "You Said It", "Said the Q word. The waiting room heard you.", "global", "", 0, 1],
+    ["sx_moon", "🦄", "Moonstruck", "Played Lunicorn under a full moon.", "global", "", 0, 1],
+    ["sx_bluemoon", "🔵", "Once in a Blue Moon", "Played the blue moon Lunicorn.", "global", "", 0, 1],
+    ["sx_bloodmoon", "🔴", "Blood Moon", "Played the blood moon Lunicorn.", "global", "", 0, 1],
+    ["tq10", "☣️", "Antidote Apprentice", "Closed 10 Toxiquest cases.", "global", "toxiq", 10],
+    ["tq20", "🧪", "Poison Pro", "Closed 20 Toxiquest cases.", "global", "toxiq", 20],
+    ["tq30", "🏆", "Toxicologist", "Closed all 30 Toxiquest cases.", "global", "toxiq", 30]
   ];
   var QZ_ANAT = "bones brain cranial-nerves digestive-system head-and-neck heart lower-limb lungs muscles skull upper-limb eye ear dermatomes spine coronary-arteries circle-of-willis".split(" ");
   function myStats(mode) {
@@ -706,6 +712,7 @@
       cookies: (get("mw-cookies", []) || []).length,
       codes: (get("mw-codes", []) || []).length,
       toxdec: (get("mw-toxdec", []) || []).length,
+      toxiq: (function () { var t = get("mw-toxiquest", {}) || {}; return Object.keys(t).filter(function (k) { return t[k] > 0; }).length; })(),
       pearls: (get("mw-pearls", []) || []).length,
       qzdone: keys.filter(function (k) { return /^qk-best-/.test(k); }).length,
       anatdone: QZ_ANAT.filter(function (q) { return get("qk-best-anat-" + q, null) != null; }).length,
@@ -1405,7 +1412,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function tiles(skip) {
       var list = order().filter(function (g) { return skip.indexOf(g.id) < 0; });
       if (!list.length) return "";
-      return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + '</span></div><div class="tl-grid">' + list.map(tile).join("") + "</div></section>";
+      return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + '</span></div><div class="tl-grid">' + hiddenTiles() + list.map(tile).join("") + "</div></section>";
     }
     function arcadeRow() {
       return '<section class="tls" id="g-arcade"><div class="t3-head"><h2>Arcade</h2><span>Bonus games. Play all day.</span></div><div class="tl-grid tl-arc">' + ARCADE.map(function (a) {
@@ -1414,21 +1421,22 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         return '<a class="tl" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '"><span class="tl-ic">' + ic + "</span><b>" + a[1] + "</b><small>" + sub + "</small></a>";
       }).join("") + "</div></section>";
     }
-    // Hidden games (testers only until launch): greyed out with a red HIDDEN stamp until their time window opens or the secret word is typed.
+    // Timed games: greyed out with a red HIDDEN stamp until their window opens (or the secret word is typed). Medical mode only.
     function hiddenOpen() {
       var n = new Date(), SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, k = Math.round((n / 864e5 - EP) / SYN - 0.5), fm = new Date((EP + (k + 0.5) * SYN) * 864e5);
-      return { triagic: !!get("mw-secret-quiet", 0) || n.getHours() === 16 || n.getHours() === 17, lunicorn: !!get("mw-secret-lunar", 0) || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
+      return { triagic: !!get("mw-secret-quiet", 0) || n.getHours() === 16 || n.getHours() === 17, fridaemia: n.getDay() === 5, lunicorn: !!get("mw-secret-lunar", 0) || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
     }
-    function hiddenRow() {
-      if (!get("mw-tester", 0)) return "";
+    function hiddenTiles() {
+      if (NORMIE) return "";
       var o = hiddenOpen(), dk = root.getAttribute("data-theme") === "dark";
-      var H = [["triagic", "Triagic", '<img src="/assets/mascots/sensitosis.svg" alt="" width="44" height="44">', "4 to 6pm daily", "#B3261E", "#FF8A80"],
-        ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44">', "Full-moon days", "#5B3A8E", "#C9A3DD"],
-        ["toxiquest", "Toxiquest", '<span style="font-size:32px">&#9763;</span>', "From 1 December", "#2E6B3A", "#8FD18A"]];
-      return '<section class="tls" id="g-hidden"><div class="t3-head"><h2>Hidden games</h2><span>Only at certain times. Or if you know the word.</span></div><div class="tl-grid tl-arc">' + H.map(function (h) {
-        var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + "</b><small>" + (on ? "Open now" : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
-        return on ? '<a class="tl" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
-      }).join("") + "</div></section>";
+      var H = [["triagic", "Triagic", '<img src="/assets/mascots/sensitosis.svg" alt="" width="44" height="44">', "4 to 6pm daily", "#B3261E", "#FF8A80", "Fast ED triage"],
+        ["fridaemia", "Fridaemia", '<span style="font-size:30px">&#128229;</span>', "Fridays only", "#8A5A00", "#F2C46B", "Friday 5pm results"],
+        ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44">', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
+        ["toxiquest", "Toxiquest", '<span style="font-size:30px">&#9763;</span>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"]];
+      return H.map(function (h) {
+        var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + "</b><small>" + (on ? h[6] + " · open now" : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
+        return on ? '<a class="tl" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
+      }).join("");
     }
     // Read this week (Medical only): newest deep dive, research week, Weekly Dose (data/home-reads.json) + next health day.
     function readsSlot() { return NORMIE ? "" : '<section class="rds" id="mw-reads" hidden><div class="t3-head"><h2>Read this week</h2><span>Short and evidence based</span></div><div class="rd-grid"></div></section>'; }
@@ -1578,7 +1586,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + pearl() + gpsBanner() + arcadeRow() + hiddenRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
+        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + pearl() + gpsBanner() + arcadeRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));
@@ -2368,7 +2376,6 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       basil: function () { flag("paws"); basilSwipe(); },
       clove: function () { flag("paws"); cloverStamp(); }
     };
-    if (!get("mw-tester", 0)) { delete CODES.quiet; delete CODES.lunar; delete CODES.toxic; } // Triagic is in private testing (21 Nov 2026): only testers get the "quiet" code
     var CODE_KEYS = Object.keys(CODES).sort(function (a, b) { return b.length - a.length; });
     window.MW_CODE_COUNT = CODE_KEYS.length;
     function runCode(code) {
@@ -2576,7 +2583,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["🐾", "Both cats", "Chaos, then paperwork.", bothCats],
         ["⌨️", "Cat on the keyboard", "Basil helps with your Wordemic guess.", catKeys],
         ["📖", "Codebook", "Secret codes you’ve found so far.", codebook],
-        ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]].concat(get("mw-tester", 0) ? [["🚨", "Triagic", "Never say the Q word in ED.", function () { CODES.quiet(); }]] : []);
+        ["✏️", "For DA", "Six cryptic clues, one nod.", daRoom]].concat([["🚨", "Triagic", "Never say the Q word in ED.", function () { CODES.quiet(); }]]);
       var H = ["🔐 There are " + CODE_KEYS.length + " secret codes. They’re ordinary words: some turn up as Wordemic and crossword answers. Hospitals have colour codes too…", "🍪 A tiny cookie hides on a few pages each day. Look closely.", "🐭 Tap any mascot that isn’t a link, 3 times, quickly.", "🐈 Tap the logo on the home page 3 times.",
         "😴 Sit very still for a while.", "📠 Visit at 5 o’clock on a Friday.", "🌙 Visit between midnight and 4am.", "🔧 Developers: open the browser console."];
       var d = document.createElement("div"); d.className = "mw-cab"; d.setAttribute("role", "dialog"); d.setAttribute("aria-modal", "true"); d.setAttribute("aria-label", "Cabinet of Curiosities");
@@ -2644,18 +2651,18 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     })();
     // --- full-moon nights (player's local time, 6pm to 6am, within a day of the full moon): Ziggy pops up once a night with a link to Lunicorn ---
     (function () {
-      if (/^\/lunicorn\//.test(location.pathname) || !get("mw-tester", 0)) return; // private testing until launch
-      var SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, n = new Date(), d = n / 864e5, k = Math.round((d - EP) / SYN - 0.5), fm = (EP + (k + 0.5) * SYN) * 864e5, h = n.getHours();
-      if (!(h >= 18 || h < 6) || Math.abs(n - fm) > 864e5) return;
+      if (/^\/lunicorn\//.test(location.pathname)) return;
+      var SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, n = new Date(), d = n / 864e5, k = Math.round((d - EP) / SYN - 0.5), fm = (EP + (k + 0.5) * SYN) * 864e5;
+      if (new Date(fm).toDateString() !== n.toDateString()) return; // full-moon day, local time
       var key = "mw-moon-" + new Date(fm).toDateString(); if (get(key, 0)) return; set(key, 1);
-      setTimeout(function () { walker(M("zebritis"), { size: 90, top: 80, hop: 16, wave: 22, steps: 26, ms: 6200 }); pill('🌕 Full moon tonight. Ziggy has turned into something… <a href="/lunicorn/">Follow her</a>', 9000); }, 2500);
+      setTimeout(function () { walker(M("zebritis"), { size: 90, top: 80, hop: 16, wave: 22, steps: 26, ms: 6200 }); pill('🌕 Full moon today. Ziggy has turned into something… <a href="/lunicorn/">Follow her</a>', 9000); }, 2500);
     })();
     // --- Friday 4:30 to 7pm local time: Fridaemia inbox is open ---
     (function () {
       var n = new Date(), m = n.getHours() * 60 + n.getMinutes();
-      if (n.getDay() !== 5 || m < 16 * 60 + 30 || m >= 19 * 60 || /^\/fridaemia\//.test(location.pathname) || !get("mw-tester", 0) || (m >= 16 * 60 + 55 && m <= 17 * 60 + 10)) return;
+      if (n.getDay() !== 5 || m < 16 * 60 + 30 || m >= 19 * 60 || /^\/fridaemia\//.test(location.pathname) || (m >= 16 * 60 + 55 && m <= 17 * 60 + 10)) return;
       var k = "mw-fridaemia-pill-" + n.toDateString(); if (get(k, 0)) return; set(k, 1);
-      setTimeout(function () { pill('📥 Eight results just landed in your inbox. <a href="/fridaemia/">Fridaemia is open</a> until 7pm.', 8000); }, 3000);
+      setTimeout(function () { pill('📥 Eight results just landed in your inbox. <a href="/fridaemia/">Fridaemia is open</a> all Friday.', 8000); }, 3000);
     })();
     // --- Friday 4:55 to 5:10pm local time ---
     (function () {
