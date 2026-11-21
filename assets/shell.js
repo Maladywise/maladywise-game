@@ -1330,7 +1330,7 @@
       var seen = get("mw-pearls", []) || []; if (seen.indexOf(key) < 0) { seen.push(key); set("mw-pearls", seen.slice(-400)); }
       if (dec) { var td = get("mw-toxdec", []) || []; if (td.indexOf(key) < 0) { td.push(key); set("mw-toxdec", td); } }
       return '<section class="mw-pearl' + (dec ? " tox" : "") + '" aria-labelledby="mw-pearl-h"><p class="mw-pearl-k">' + (dec ? "\ud83e\uddea Toxicology December \u00b7 Day " + d.getDate() + " of 31" : "\ud83d\udca1 One-minute pearl") + '</p>' +
-        '<h2 id="mw-pearl-h">' + p[0] + "</h2><p>" + p[1] + (p[2] ? ' <a href="' + p[2] + '">Test yourself &rarr;</a>' : "") + "</p></section>";
+        '<h2 id="mw-pearl-h">' + p[0] + "</h2><p>" + p[1] + "</p>" + (p[3] || p[2] ? '<p class="mw-pearl-l">' + (p[3] ? '<a href="' + p[3] + '">Read the fact sheet &rarr;</a>' : "") + (p[2] ? '<a href="' + p[2] + '">Test yourself &rarr;</a>' : "") + "</p>" : "") + "</section>";
     }
     function modeCta() { // bottom-of-home switch between Medical and Normie
       return NORMIE
