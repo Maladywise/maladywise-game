@@ -29,7 +29,7 @@
   window.MW_EINSTEIN = window.MW_EINSTEIN || {};
   if (!MW_EINSTEIN.labelosis) MW_EINSTEIN.labelosis = ["2026-11-13"];
 
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", N = 5, PASS = 3, ONE = "2026-11-15"; // from ONE: one picture a day (the first round with a diagram)
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", N = 5, PASS = 3, ONE = "2026-11-15"; // from ONE: one picture a day (the first round with a diagram)
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Anatomegaly (Normie)" : "Anatomegaly";
   // Normie wording swaps
   var T = NORMIE ? { foot: "Diagrams are simplified, original sketches, not to scale. Animal facts checked, but nature loves an exception.", noart: "No diagram for this one. Just you and your nature documentaries.", next: "Go and look at a cat’s ears. Respectfully.", emoji: " 🐙 ", masc: "/assets/mascots/normie/labelosis.svg" }
@@ -103,12 +103,34 @@
       return '<i class="' + c + '"></i>';
     }).join("");
   }
+  // A bouncing arrow from the roomier side, pointing at the highlighted structure(s), so small targets are easy to spot.
+  function pointAt(sv) {
+    if (!sv) return; var hl = sv.querySelectorAll(".hl"); if (!hl.length) return;
+    var inv = sv.getScreenCTM().inverse(), x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+    Array.prototype.forEach.call(hl, function (el) {
+      if (!el.getBBox) return; var b = el.getBBox(), m = el.getScreenCTM(); if (!m || !b.width && !b.height) return;
+      [[b.x, b.y], [b.x + b.width, b.y], [b.x, b.y + b.height], [b.x + b.width, b.y + b.height]].forEach(function (c) {
+        var pt = sv.createSVGPoint(); pt.x = c[0]; pt.y = c[1]; pt = pt.matrixTransform(m).matrixTransform(inv);
+        x0 = Math.min(x0, pt.x); y0 = Math.min(y0, pt.y); x1 = Math.max(x1, pt.x); y1 = Math.max(y1, pt.y);
+      });
+    });
+    if (x0 > x1) return;
+    var vb = sv.viewBox.baseVal, W = vb.width, H = vb.height, cy = (y0 + y1) / 2, L = Math.max(22, Math.min(W, H) * 0.17);
+    var left = (x0 - vb.x) > (vb.x + W - x1), tipX = left ? x0 - 3 : x1 + 3, dir = left ? 1 : -1, tail = tipX - dir * L;
+    var hw = L * 0.32, NS = "http://www.w3.org/2000/svg", g = document.createElementNS(NS, "g");
+    g.setAttribute("class", "lbl-arrow"); g.setAttribute("aria-hidden", "true");
+    var d = "M" + tail + " " + cy + " L" + (tipX - dir * hw) + " " + cy + " M" + tipX + " " + cy + " L" + (tipX - dir * hw) + " " + (cy - hw * 0.8) + " L" + (tipX - dir * hw) + " " + (cy + hw * 0.8) + " Z";
+    g.innerHTML = '<path d="' + d + '" fill="#E8175D" stroke="#fff" stroke-width="' + (L * 0.2) + '" stroke-linejoin="round" stroke-linecap="round" paint-order="stroke"/><path d="' + d + '" fill="#E8175D" stroke="#E8175D" stroke-width="' + (L * 0.09) + '" stroke-linejoin="round" stroke-linecap="round"/>';
+    g.style.setProperty("--dx", (dir * L * 0.18) + "px");
+    sv.appendChild(g);
+  }
   function renderRound() {
     var i = Math.min(view, N - 1), R = P.rounds[i], answered = i < st.picks.length, mine = st.picks[i];
     $("card").innerHTML = '<div class="chead"><span>' + (N === 1 ? "Today\u2019s diagram" : "Round " + (i + 1) + " of " + N) + "</span><span>" + esc(R.kind) + "</span></div>" +
       '<p class="q">' + esc(R.q) + "</p>" +
       (R.art && window.LBL_ART ? '<div class="art' + (answered ? " done" : "") + '">' + LBL_ART(R.art, R.hl) + '</div><p class="cap">' + esc((window.LBL_CAP || {})[R.art] || "") + "</p>"
         : '<div class="noart">' + (NORMIE ? PAW : /nerve/i.test(R.kind) ? NERVE : BONE) + "<span>" + T.noart + "</span></div><div style=\"height:12px\"></div>");
+    (function tryArrow(n) { var sv = $("card").querySelector(".art svg"); if (!sv || sv.querySelector(".lbl-arrow")) return; if (sv.getBoundingClientRect().width < 10) { if (n < 200) setTimeout(function () { tryArrow(n + 1); }, 100); return; } try { pointAt(sv); } catch (e) {} })(0);
     $("opts").innerHTML = options(i).map(function (o) {
       var cls = answered ? (o === R.answer ? " right" : o === mine ? " wrong" : " dim") : "";
       return '<button type="button" class="opt' + cls + '" data-o="' + esc(o) + '"' + (answered ? " disabled" : "") + ">" + esc(o) + "</button>";

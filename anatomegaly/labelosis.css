@@ -223,3 +223,7 @@ html[data-theme="dark"] #lbl .next{color:#16121F}
 #lbl .arow .badge{font-size:10px;padding:2px 8px}
 html[data-motion="reduce"] #lbl *{animation:none!important;scroll-behavior:auto!important}
 @media (prefers-reduced-motion:reduce){#lbl *{animation:none!important}}
+
+#lbl .art .lbl-arrow{animation:lblpoint 1s ease-in-out infinite;pointer-events:none}#lbl .art.done .lbl-arrow{display:none}
+@keyframes lblpoint{0%,100%{transform:translateX(0)}50%{transform:translateX(var(--dx))}}
+@media (prefers-reduced-motion:reduce){#lbl .art .lbl-arrow{animation:none}}
