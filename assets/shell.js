@@ -578,6 +578,8 @@
     ["anat11", "🦴", "Anatomy Buff", "Finish every anatomy quiz.", "global", "anatdone", 17],
     ["perf20", "🎯", "Perfect 20", "Score 20 out of 20 on any practice quiz.", "global", "qzperfect", 1],
     ["ecg20", "💓", "ECG Ace", "Score 20 out of 20 on the ECG quiz.", "global", "ecgperfect", 1],
+    ["toxdec", "🧪", "Toxicology December", "Read 20 Toxicology December pearls on the home page.", "global", "toxdec", 20],
+    ["pearl30", "💡", "Pearl Diver", "Read the one-minute pearl on 30 different days.", "global", "pearls", 30],
     ["fullbody", "🧍", "Full Body Scan", "Score 20 out of 20 on every anatomy quiz.", "global", "anatperfect", 17],
     // secret badges: shown as ??? until found (b[7] = 1)
     ["sx_night", "🦇", "Pager Goes Off", "Found the hidden Night Shift game.", "global", "", 0, 1],
@@ -703,6 +705,8 @@
       wardrun: (function () { if (!daily.length) return 0; var ok = Object.keys(dayG).filter(function (d) { return daily.every(function (id) { return (dfrom[id] && d < dfrom[id]) || (rec[id] && rec[id][d]); }); }).map(dayNum).sort(function (a, b) { return a - b; }); var b = 0, r = 0, p = null; ok.forEach(function (n) { r = p !== null && n - p === 1 ? r + 1 : 1; p = n; if (r > b) b = r; }); return b; })(),
       cookies: (get("mw-cookies", []) || []).length,
       codes: (get("mw-codes", []) || []).length,
+      toxdec: (get("mw-toxdec", []) || []).length,
+      pearls: (get("mw-pearls", []) || []).length,
       qzdone: keys.filter(function (k) { return /^qk-best-/.test(k); }).length,
       anatdone: QZ_ANAT.filter(function (q) { return get("qk-best-anat-" + q, null) != null; }).length,
       qzperfect: keys.filter(function (k) { return /^qk-best-/.test(k) && +get(k, 0) >= 20; }).length,
@@ -1319,6 +1323,15 @@
         }).join("") + "</div></section>";
     }
 
+    function pearl() { // one-minute pearl (assets/pearls.js); December = Toxicology December. Medical mode only.
+      var P = window.MW_PEARLS; if (!P || NORMIE) return "";
+      var d = new Date(), dec = d.getMonth() === 11, doy = Math.floor((d - new Date(d.getFullYear(), 0, 0)) / 864e5);
+      var p = dec ? P.december[(d.getDate() - 1) % P.december.length] : P.general[doy % P.general.length], key = today;
+      var seen = get("mw-pearls", []) || []; if (seen.indexOf(key) < 0) { seen.push(key); set("mw-pearls", seen.slice(-400)); }
+      if (dec) { var td = get("mw-toxdec", []) || []; if (td.indexOf(key) < 0) { td.push(key); set("mw-toxdec", td); } }
+      return '<section class="mw-pearl' + (dec ? " tox" : "") + '" aria-labelledby="mw-pearl-h"><p class="mw-pearl-k">' + (dec ? "\ud83e\uddea Toxicology December \u00b7 Day " + d.getDate() + " of 31" : "\ud83d\udca1 One-minute pearl") + '</p>' +
+        '<h2 id="mw-pearl-h">' + p[0] + "</h2><p>" + p[1] + (p[2] ? ' <a href="' + p[2] + '">Test yourself &rarr;</a>' : "") + "</p></section>";
+    }
     function modeCta() { // bottom-of-home switch between Medical and Normie
       return NORMIE
         ? '<a class="mw-modecta" href="/?mode=medical"><span>\ud83e\ude7a</span><b>Want the medical versions?</b> Switch back to Medical mode &rarr;</a>'
@@ -1548,7 +1561,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var snav = document.querySelector(".static-nav"); // static hub links (static_nav.py): kept in the footer across redraws
     function draw() {
       var t3 = startList();
-      main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
+      main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + pearl() + progress() +
         tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + gpsBanner() + arcadeRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
