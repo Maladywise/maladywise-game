@@ -168,7 +168,8 @@ PAGES = {
   foot="A teaching game. Signs are clues, not diagnoses on their own.",
   css=""":root{--mg-a:#4A3480;--mg-b:#2E1F57;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}
 .nm-name{margin:4px 0 2px;font:700 24px/1.2 Lora,Georgia,serif;color:var(--mg-a)}html[data-theme=dark] .nm-name{color:#C9B8F0}
-.nm-hist{font-size:14px;opacity:.9}""",
+.nm-hist{font-size:14px;opacity:.9}
+.nm-one{display:grid;gap:8px}.nm-one p{margin:0}""",
   body="""  <section class="mg-intro" id="nm-intro">
     <img class="mg-masc" src="/assets/mascots/nomulous.svg" alt="Shelby the hermit crab, who lives in borrowed shells and borrowed names" width="104" height="104">
     <p class="mg-kick">&#127963;&#65039; Name the sign</p>
@@ -183,7 +184,7 @@ PAGES = {
     <div class="mg-card" id="nm-q"></div>
   </section>
 """ + END % dict(p="nm", etitle="Your eponyms", again="Play again"),
-  scripts='<script defer src="signs.js?v=2"></script>\n<script defer src="nomulous.js?v=3"></script>'),
+  scripts='<script defer src="signs.js?v=2"></script>\n<script defer src="facts.js?v=1"></script>\n<script defer src="nomulous.js?v=4"></script>'),
  "dxtective-gauntlet": dict(
   title="Dxtective Gauntlet: Sunday Diagnosis Challenge", robots="index,follow", theme="#4A3480",
   canon='<link rel="canonical" href="https://maladywise.com/dxtective-gauntlet/">\n',

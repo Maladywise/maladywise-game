@@ -12,7 +12,7 @@
   }).catch(function () {});
   function acc(it) {
     var e = ACC[key(it[0])]; if (!e) return "";
-    return '<p class="mg-why nm-hist">&#128202; <b>How good is it?</b> Picks up ' + e.sens.v + "% of people with " + G.esc(e.condition) +
+    return '<p>&#128202; <b>How good is it?</b> Picks up ' + e.sens.v + "% of people with " + G.esc(e.condition) +
       (e.spec ? "; correctly clears " + e.spec.v + "% of people without it." : ".") + ' <a href="/sensitosis/">Play Sensitosis</a></p>';
   }
   var ORDER = G.shuffle(D, G.rng("nomulous-order-v1")), P = DAY.split("-").map(Number);
@@ -41,7 +41,8 @@
         Array.prototype.forEach.call(bs, function (x) { x.disabled = true; if (x.textContent === right) x.classList.add("ok"); });
         if (!ok) b.classList.add("no"); else score++;
         marks.push(ok ? "🟢" : "🔴"); $("nm-s").textContent = score;
-        $("nm-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + '.' + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p class="mg-why nm-hist">&#128220; ' + G.esc(it[4]) + '</p>' + acc(it) +
+        var fact = (window.NOMULOUS_FACTS || {})[it[0]];
+        $("nm-why").innerHTML = '<div class="mg-why nm-one"><p><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + "." + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p>&#128220; ' + G.esc(it[4]) + "</p>" + (fact ? '<p>&#128161; ' + G.esc(fact) + "</p>" : "") + acc(it) + "</div>" +
           '<p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="nm-next">' + (idx + 1 < Q.length ? "Next" : "Finish") + "</button></p>";
         $("nm-next").onclick = function () { idx++; if (idx < Q.length) card(); else end(); };
         $("nm-next").focus();
