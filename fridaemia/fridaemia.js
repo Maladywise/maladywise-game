@@ -146,6 +146,7 @@
     }
     tick(); setInterval(tick, 30000);
   }
+  var LOG = [];
   function card() {
     var c = SET[idx];
     $("fr-n").textContent = (idx + 1) + "/" + SET.length;
@@ -157,7 +158,7 @@
         var ok = b.getAttribute("data-k") === c[2];
         Array.prototype.forEach.call(btns, function (x) { x.disabled = true; if (x.getAttribute("data-k") === c[2]) x.classList.add("ok"); });
         if (!ok) b.classList.add("no");
-        if (ok) score++; marks.push(ok ? "🟢" : "🔴");
+        if (ok) score++; marks.push(ok ? "🟢" : "🔴"); LOG.push({ c: c, pick: b.getAttribute("data-k"), ok: ok });
         $("fr-s").textContent = score;
         $("fr-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Safe call." : "Not quite: " + LABEL[c[2]] + ".") + "</b> " + G.esc(c[3]) + '</p><p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="fr-next">' + (idx + 1 < SET.length ? "Next result" : "Clock off") + "</button></p>";
         $("fr-next").onclick = function () { idx++; if (idx < SET.length) card(); else end(); };
@@ -171,9 +172,14 @@
     $("fr-game").hidden = true; $("fr-end").hidden = false;
     $("fr-final").textContent = score + "/" + SET.length;
     $("fr-verdict").textContent = VERDICT[Math.round(score / SET.length * 8)];
+    var rv = $("fr-review"); if (!rv) { rv = document.createElement("div"); rv.id = "fr-review"; rv.className = "fr-rev"; $("fr-end").appendChild(rv); }
+    rv.innerHTML = '<p class="mg-q" style="margin-top:14px">Your inbox, result by result</p>' + LOG.map(function (x, i) {
+      return '<details class="fr-rv' + (x.ok ? " ok" : " no") + '"' + (x.ok ? "" : " open") + '><summary><span>' + (x.ok ? "&#9989;" : "&#10060;") + "</span> " + G.esc(x.c[0]) + "</summary>" +
+        '<p class="mg-case">' + G.esc(x.c[1]) + "</p><p><b>Safe call:</b> " + LABEL[x.c[2]] + (x.ok ? "" : "<br><b>You said:</b> " + LABEL[x.pick]) + '</p><p class="mg-why">' + G.esc(x.c[3]) + "</p></details>";
+    }).join("");
     $("fr-share").onclick = function () { G.share("Fridaemia " + WK.replace("-", " ") + " 📥 " + score + "/" + SET.length + "\n" + marks.join("") + "\nThe 5pm Friday inbox. maladywise.com/fridaemia/"); };
   }
-  function start() { $("fr-intro").hidden = true; $("fr-game").hidden = false; card(); }
+  function start() { idx = 0; score = 0; marks = []; LOG = []; $("fr-s").textContent = 0; $("fr-intro").hidden = true; $("fr-end").hidden = true; $("fr-game").hidden = false; card(); }
 
   var done = G.get(KEY, null);
   if (!isOpen(T)) lockView();

@@ -1,6 +1,6 @@
-/* Nomulous: name the eponymous sign, test, triad or syndrome. 3 a day, the same for everyone that day.
-   2 "name it" questions (description -> eponym) and 1 "what does it mean" question (eponym -> meaning).
-   Days walk through one fixed shuffled order, so nothing repeats until the whole bank has been used (255 entries = 85 days). */
+/* Nomulous: name the eponymous sign, test, triad or syndrome. 5 a day, the same for everyone that day.
+   3 "name it" questions (description -> eponym) and 2 "what does it mean" questions (eponym -> meaning).
+   Days walk through one fixed shuffled order, so nothing repeats until the whole bank has been used (255 entries = 51 days). */
 (function () {
   var G = window.MG, $ = G.$, D = window.NOMULOUS || [];
   var DAY = G.localDay(new Date()), r = G.rng("nomulous-" + DAY), KEY = "mw-nomulous-" + DAY;
@@ -16,8 +16,16 @@
       (e.spec ? "; correctly clears " + e.spec.v + "% of people without it." : ".") + ' <a href="/sensitosis/">Play Sensitosis</a></p>';
   }
   var ORDER = G.shuffle(D, G.rng("nomulous-order-v1")), P = DAY.split("-").map(Number);
-  var N = Math.floor(Date.UTC(P[0], P[1] - 1, P[2]) / 864e5), picks = [0, 1, 2].map(function (i) { return ORDER[(N * 3 + i) % ORDER.length]; }), idx = 0, score = 0, marks = [];
-  var Q = picks.map(function (it, i) { return { it: it, type: i === 2 ? "mean" : "name" }; });
+  var N = Math.floor(Date.UTC(P[0], P[1] - 1, P[2]) / 864e5), picks = [0, 1, 2, 3, 4].map(function (i) { return ORDER[(N * 5 + i) % ORDER.length]; }), idx = 0, score = 0, marks = [];
+  // Link the person (or people) named at the start of the history line to Wikipedia
+  function wlink(n) { return '<a href="https://en.wikipedia.org/wiki/Special:Search?search=' + encodeURIComponent(n) + '" target="_blank" rel="noopener">' + G.esc(n) + "</a>"; }
+  function hist(h) {
+    var i = h.indexOf(","), head = i > 0 ? h.slice(0, i) : "", rest = i > 0 ? h.slice(i) : h;
+    if (!head || /^(Named|Described|From|An?|The|In)\b/.test(head)) return G.esc(h);
+    var parts = head.split(/ and /), okp = parts.every(function (n) { return /^[A-ZÀ-Ž][^\s]*( [A-Za-zÀ-ž.’'-]+)+$/.test(n.trim()); });
+    return okp ? parts.map(function (n) { return wlink(n.trim()); }).join(" and ") + G.esc(rest) : G.esc(h);
+  }
+  var Q = picks.map(function (it, i) { return { it: it, type: i === 2 || i === 4 ? "mean" : "name" }; });
   var KIND = { sign: "Sign", test: "Test", triad: "Triad", syndrome: "Syndrome" };
   function same(it) { return it[1] === "triad" || it[1] === "syndrome" ? ["triad", "syndrome"] : ["sign", "test"]; }
   function card() {
@@ -42,14 +50,14 @@
         if (!ok) b.classList.add("no"); else score++;
         marks.push(ok ? "🟢" : "🔴"); $("nm-s").textContent = score;
         var fact = (window.NOMULOUS_FACTS || {})[it[0]];
-        $("nm-why").innerHTML = '<div class="mg-why nm-one"><p><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + "." + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p>&#128220; ' + G.esc(it[4]) + "</p>" + (fact ? '<p>&#128161; ' + G.esc(fact) + "</p>" : "") + acc(it) + "</div>" +
+        $("nm-why").innerHTML = '<div class="mg-why nm-one"><p><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + "." + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p>&#128220; ' + hist(it[4]) + "</p>" + (fact ? '<p>&#128161; ' + G.esc(fact) + "</p>" : "") + acc(it) + "</div>" +
           '<p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="nm-next">' + (idx + 1 < Q.length ? "Next" : "Finish") + "</button></p>";
         $("nm-next").onclick = function () { idx++; if (idx < Q.length) card(); else end(); };
         $("nm-next").focus();
       };
     });
   }
-  var VERDICT = ["Anonymous. Back to the textbook.", "A footnote. Getting there.", "Nearly famous.", "All three named. Your name goes on a sign."];
+  var VERDICT = ["Anonymous. Back to the textbook.", "A footnote. Getting there.", "Known on the ward.", "Nearly famous.", "Professor material.", "All five named. Your name goes on a sign."];
   function end() {
     G.set(KEY, { score: score, marks: marks.join("") });
     $("nm-game").hidden = true; $("nm-end").hidden = false;
@@ -59,6 +67,6 @@
   }
   function start() { idx = 0; score = 0; marks = []; r = G.rng("nomulous-" + DAY); $("nm-s").textContent = 0; $("nm-intro").hidden = true; $("nm-end").hidden = true; $("nm-game").hidden = false; card(); }
   var done = G.get(KEY, null);
-  if (done) { $("nm-play").textContent = "Play again"; $("nm-best").innerHTML = "Today: <b>" + done.score + "/3</b> " + (done.marks || ""); }
+  if (done) { $("nm-play").textContent = "Play again"; $("nm-best").innerHTML = "Today: <b>" + done.score + "/5</b> " + (done.marks || ""); }
   $("nm-play").onclick = start; $("nm-again").onclick = start;
 })();

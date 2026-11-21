@@ -53,7 +53,7 @@ PAGES = {
   canon='<link rel="canonical" href="https://maladywise.com/fridaemia/">\n',
   desc="Fridaemia is a free weekly GP game, open all day on Fridays only: eight results land at knock-off time. ED now, call today, or Monday?",
   foot="A teaching game with fictional patients. Real decisions depend on the whole patient and local guidelines.",
-  css=":root{--mg-a:#7A1F2B;--mg-b:#4A1220;--mg-hi:#FFD3D8;--mg-soft:#FBEDEF}.fr-res{font:700 20px/1.35 var(--body);color:var(--mg-a)}html[data-theme=dark] .fr-res{color:var(--mg-hi)}",
+  css=".fr-rev{display:grid;gap:6px;text-align:left;width:100%}.fr-rv{border:1px solid var(--line,#E4DCF0);border-radius:12px;padding:8px 10px;background:var(--card,#fff)}.fr-rv summary{cursor:pointer;font-weight:600;font-size:14.5px}.fr-rv.no{border-color:#E8B4A6}.fr-rv p{margin:6px 0 0;font-size:14px}:root{--mg-a:#7A1F2B;--mg-b:#4A1220;--mg-hi:#FFD3D8;--mg-soft:#FBEDEF}.fr-res{font:700 20px/1.35 var(--body);color:var(--mg-a)}html[data-theme=dark] .fr-res{color:var(--mg-hi)}",
   body="""  <section class="mg-intro" id="fr-intro">
     <img class="mg-masc" src="/assets/mascots/layla.svg" alt="Layla the sloth, who just wants to go home but checks every result first" width="104" height="104">
     <p class="mg-kick">&#128229; Fridays only</p>
@@ -69,7 +69,7 @@ PAGES = {
     <div class="mg-card" id="fr-q"></div>
   </section>
 """ + END % dict(p="fr", etitle="Inbox cleared. Keys in hand.", again="Back to the start"),
-  scripts='<script defer src="fridaemia.js?v=2"></script>'),
+  scripts='<script defer src="fridaemia.js?v=3"></script>'),
  "triagic": dict(
   title="Triagic", robots="index,follow", theme="#B3261E", canon='<link rel="canonical" href="https://maladywise.com/triagic/">\n',
   desc="Shh. You said the Q word. A secret Malady Wise game.",
@@ -160,11 +160,11 @@ PAGES = {
     <div class="mg-card" id="lu-q"></div>
   </section>
 """ + END % dict(p="lu", etitle="Your rainbow", again="Play again"),
-  scripts='<script defer src="sets.js?v=3"></script>\n<script defer src="lunicorn.js?v=4"></script>'),
+  scripts='<script defer src="sets.js?v=4"></script>\n<script defer src="lunicorn.js?v=4"></script>'),
  "nomulous": dict(
   title="Nomulous: Name the Medical Eponym", robots="index,follow", theme="#4A3480",
   canon='<link rel="canonical" href="https://maladywise.com/nomulous/">\n',
-  desc="Nomulous is a free daily medical eponym quiz: name the sign, test, triad or syndrome. Three a day, with the history behind each name.",
+  desc="Nomulous is a free daily medical eponym quiz: name the sign, test, triad or syndrome. Five a day, with the history behind each name.",
   foot="A teaching game. Signs are clues, not diagnoses on their own.",
   css=""":root{--mg-a:#4A3480;--mg-b:#2E1F57;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}
 .nm-name{margin:4px 0 2px;font:700 24px/1.2 Lora,Georgia,serif;color:var(--mg-a)}html[data-theme=dark] .nm-name{color:#C9B8F0}
@@ -174,17 +174,17 @@ PAGES = {
     <img class="mg-masc" src="/assets/mascots/nomulous.svg" alt="Shelby the hermit crab, who lives in borrowed shells and borrowed names" width="104" height="104">
     <p class="mg-kick">&#127963;&#65039; Name the sign</p>
     <h1>Nomulous</h1>
-    <p class="mg-lede">Medicine loves naming things after people. Three a day: name the sign, test, triad or syndrome, or say what it points to. Every answer comes with the story behind the name.</p>
+    <p class="mg-lede">Medicine loves naming things after people. Five a day: name the sign, test, triad or syndrome, or say what it points to. Every answer comes with the story behind the name.</p>
     <button class="big" type="button" id="nm-play">Start</button>
     <p class="mg-best" id="nm-best"></p>
     <p class="mg-small"><i>Murphy, McBurney, Charcot. Mostly men, with a few overdue exceptions.</i></p>
   </section>
   <section class="mg-game" id="nm-game" hidden>
-    <div class="mg-hud"><span class="mg-grow"><small>Nomulous</small><b>Eponyms</b></span><span><small>Question</small><b id="nm-n">1/3</b></span><span><small>Named</small><b id="nm-s">0</b></span></div>
+    <div class="mg-hud"><span class="mg-grow"><small>Nomulous</small><b>Eponyms</b></span><span><small>Question</small><b id="nm-n">1/5</b></span><span><small>Named</small><b id="nm-s">0</b></span></div>
     <div class="mg-card" id="nm-q"></div>
   </section>
 """ + END % dict(p="nm", etitle="Your eponyms", again="Play again"),
-  scripts='<script defer src="signs.js?v=2"></script>\n<script defer src="facts.js?v=1"></script>\n<script defer src="nomulous.js?v=4"></script>'),
+  scripts='<script defer src="signs.js?v=2"></script>\n<script defer src="facts.js?v=1"></script>\n<script defer src="nomulous.js?v=6"></script>'),
  "dxtective-gauntlet": dict(
   title="Dxtective Gauntlet: Sunday Diagnosis Challenge", robots="index,follow", theme="#4A3480",
   canon='<link rel="canonical" href="https://maladywise.com/dxtective-gauntlet/">\n',
