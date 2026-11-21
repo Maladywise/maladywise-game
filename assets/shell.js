@@ -908,7 +908,7 @@
     var imgs = document.querySelectorAll('img[src*="/assets/mascots/"]');
     for (var i = 0; i < imgs.length; i++) {
       var im = imgs[i]; if (im._ml) continue; im._ml = 1;
-      if (im.closest("a,button,label,.cb,.mz-hero,canvas,[data-nolink]")) continue;
+      if (im.hasAttribute("data-nolink") || im.closest("a,button,label,.cb,.mz-hero,canvas,[data-nolink],.tl-hid")) continue;
       var m = (im.getAttribute("src") || "").match(/\/assets\/mascots\/(?:normie\/)?([a-z0-9-]+)\.svg/); if (!m) continue;
       var g = window.MW_MASCOTS && MW_MASCOTS[m[1]], nm = g ? g.name : HOSTS[m[1]]; if (!nm) continue;
       var url = mascUrl({ name: nm }); if (url === location.pathname) continue;
@@ -1431,10 +1431,10 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function hiddenTiles(openOnes) {
       if (NORMIE) return "";
       var o = hiddenOpen(), dk = root.getAttribute("data-theme") === "dark";
-      var H = [["triagic", "Triagic", '<img src="/assets/mascots/triagic.svg" alt="" width="44" height="44">', "4pm to midnight", "#B3261E", "#FF8A80", "Fast ED triage"],
-        ["fridaemia", "Fridaemia", '<img src="/assets/mascots/layla.svg" alt="" width="44" height="44">', "Fridays only", "#8A5A00", "#F2C46B", "Friday 5pm results"],
-        ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44">', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
-        ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44">', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"]];
+      var H = [["triagic", "Triagic", '<img src="/assets/mascots/triagic.svg" alt="" width="44" height="44" data-nolink>', "4pm to midnight", "#B3261E", "#FF8A80", "Fast ED triage"],
+        ["fridaemia", "Fridaemia", '<img src="/assets/mascots/layla.svg" alt="" width="44" height="44" data-nolink>', "Fridays only", "#8A5A00", "#F2C46B", "Friday 5pm results"],
+        ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44" data-nolink>', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
+        ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"]];
       return H.filter(function (h) { return !!o[h[0]] === openOnes; }).map(function (h) {
         var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + "</b><small>" + (on ? h[6] + " · open now" : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
         return on ? '<a class="tl" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
