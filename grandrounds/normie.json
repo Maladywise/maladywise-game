@@ -506,129 +506,129 @@
  {
   "week": "2026-11-22",
   "number": 5,
-  "fallback": true,
   "questions": [
    {
-    "c": "Origins",
-    "q": "The sandwich is named after an 18th-century Earl of where?",
-    "a": "Sandwich",
-    "e": "Not a trick. Mostly."
+    "c": "Space",
+    "q": "Which NASA probe, launched in 1977, became the first human-made object to sit a full light-day from Earth on Wednesday?",
+    "a": "Voyager 1",
+    "e": "Accept Voyager. 18 November, about 25.9 billion km out: a message now takes 24 hours each way. Launched 5 September 1977 and still answering emails faster than your landlord."
    },
    {
-    "c": "Origins",
-    "q": "‘Kangaroo’ entered English in 1770 from ‘gangurru’, a word in which Aboriginal language of far north Queensland?",
-    "a": "Guugu Yimidhirr",
-    "e": "Recorded by Cook’s crew at the Endeavour River, near today’s Cooktown."
+    "c": "Gaming",
+    "q": "After two delays and roughly a decade of waiting, which video game finally launched on Thursday and was declared the biggest entertainment launch ever?",
+    "a": "Grand Theft Auto VI",
+    "e": "Accept GTA VI, GTA 6 or Grand Theft Auto 6. Released 19 November on PS5 and Xbox Series X|S; Rockstar’s parent Take-Two called it the largest entertainment launch of all time. Productivity worldwide fell accordingly."
    },
    {
-    "c": "Origins",
-    "q": "Which country invented paper?",
-    "a": "China",
-    "e": "Around 2,000 years ago. Credit usually goes to Cai Lun."
+    "c": "Words",
+    "q": "Cambridge Dictionary announced its 2026 Word of the Year this week, a nod to AI blurring the line between people and machines. What is the word?",
+    "a": "Human",
+    "e": "Announced 17–18 November. New dictionary additions this year include ‘air jail’ (lifting a naughty dog off the ground). If you guessed ‘robot’, you’re thinking like one."
    },
    {
-    "c": "Origins",
-    "q": "The QWERTY layout was designed for which machine?",
-    "a": "The typewriter",
-    "e": "Accept typewriter. Long before your laptop."
+    "c": "Tennis",
+    "q": "Which 19-year-old Russian won the WTA Finals at Indian Wells on her debut, without dropping a set, beating Elina Svitolina in the final?",
+    "a": "Mirra Andreeva",
+    "e": "Accept Andreeva. 7-5, 6-3, reported 16 November; unbeaten in all five matches. Her prize included a Mercedes, though she doesn’t have a driver’s licence yet. Passenger princess energy."
    },
    {
-    "c": "Origins",
-    "q": "LEGO comes from the Danish ‘leg godt’. What does that mean?",
-    "a": "Play well",
-    "e": "Accept play well. Stepping on one is not playing well."
+    "c": "Music",
+    "q": "Which British singer leads the 2027 Grammy nominations, announced on Monday, with 11 nods?",
+    "a": "RAYE",
+    "e": "Accept Raye. 16 November; Rosalía is next with nine, and seven of the eight Album of the Year nominees are women. The show is on 7 February 2027. Start practising your surprised face."
    },
    {
-    "c": "Origins",
-    "q": "Velcro was inspired by what clinging to a Swiss engineer’s dog after a walk?",
-    "a": "Burrs",
-    "e": "Accept burdock burrs or seeds. George de Mestral, 1940s."
+    "c": "Movies",
+    "q": "Ebenezer, starring Johnny Depp, topped the North American box office last weekend. It is a new take on which Charles Dickens story?",
+    "a": "A Christmas Carol",
+    "e": "Weekend of 13–15 November, about US$19 million, directed by Ti West. A ghost story about Christmas, released mid-November. Bah, humbug to anyone still saying it’s too early for carols."
    },
    {
-    "c": "Origins",
-    "q": "Bubble wrap was first invented in 1957 as what?",
-    "a": "Textured wallpaper",
-    "e": "Accept wallpaper. Nobody wanted it. Then everybody did."
+    "c": "Music",
+    "q": "Whose album you seem pretty sad for a girl so in love spent a fifth week at No. 1 on the Billboard 200, announced on Sunday?",
+    "a": "Olivia Rodrigo",
+    "e": "Accept Rodrigo. Chart announced 15 November, about 62,000 units. The title is all lower case, which is more than can be said for your group chat."
    },
    {
-    "c": "Origins",
-    "q": "Post-it Notes came from a failed attempt to make a super-strong what?",
-    "a": "Glue",
-    "e": "Accept adhesive or glue. Spencer Silver at 3M."
+    "c": "Animals",
+    "q": "Oregon Zoo announced a new baby named Rook on Wednesday, from the only species of its kind that can roll itself into a complete ball. What kind of animal is it?",
+    "a": "Three-banded armadillo",
+    "e": "Accept armadillo. Announced 18 November (born 28 September). Keeper Rachel Skrobot says they always tuck in on the same side, a bit like being left- or right-handed. Rook, after the chess piece. Not the bird. Keep up."
    },
    {
-    "c": "Origins",
-    "q": "What does the Japanese word ‘emoji’ mean?",
-    "a": "Picture character",
-    "e": "Accept picture plus character or picture letter. Nothing to do with emotion. Mind blown."
+    "c": "Football",
+    "q": "Dutch defender Veerle Buurman scored an 87th-minute winner from a Lucy Bronze corner on Wednesday to beat PSG 1-0 and send which club top of the Women’s Champions League table?",
+    "a": "Chelsea",
+    "e": "18 November. Chelsea are now unbeaten in 29 Champions League group or league-phase games. PSG’s marking at corners was, let’s say, decorative."
    },
    {
-    "c": "Origins",
-    "q": "The word ‘robot’ comes from a 1920 play by a writer from which country?",
-    "a": "Czechoslovakia",
-    "e": "Accept Czech Republic or Czechia. Karel Čapek’s R.U.R."
+    "c": "Cricket",
+    "q": "England clinched their first men’s ODI series win in Australia since 2018 on Wednesday, with a Ben Duckett century, in which city where they had never won an ODI before?",
+    "a": "Hobart",
+    "e": "18 November, Bellerive Oval: England won by 97 runs (Duckett 133, Sonny Baker 4-45) to take the series 2-1. If you said Melbourne, that’s the AFL talking."
    },
    {
-    "c": "Origins",
-    "q": "Jeans are named after which Italian city, where the cloth was made?",
-    "a": "Genoa",
-    "e": "Denim comes from ‘de Nîmes’, in France."
+    "c": "Records",
+    "q": "On Guinness World Records Day (19 November), Indonesia’s Tiji Prahyudi Mudjono set a record of 249 rope skips in one minute wearing which casual footwear?",
+    "a": "Flip-flops",
+    "e": "Accept thongs or jandals (Aussies and Kiwis, we see you). 19 November. Most of us can’t walk to the letterbox in them without losing one."
    },
    {
-    "c": "Origins",
-    "q": "The croissant’s crescent-shaped ancestor, the kipferl, came from which country?",
-    "a": "Austria",
-    "e": "Accept Austria or Vienna. France just made it flakier."
+    "c": "Records",
+    "q": "Also on Guinness World Records Day, speed-painter David Garibaldi painted which famous landmark in a record 43.5 seconds in Brooklyn?",
+    "a": "Statue of Liberty",
+    "e": "Accept Lady Liberty. 19 November: fastest painting of a landmark. She took nine years to build; he took less time than your toast."
    },
    {
-    "c": "Origins",
-    "q": "Which Australian science agency developed key Wi-Fi technology in the 1990s?",
-    "a": "CSIRO",
-    "e": "Accept CSIRO."
+    "c": "Golf",
+    "q": "Rory McIlroy finished second in Dubai on Sunday but still won the Race to Dubai for a record-equalling time. How many titles is that?",
+    "a": "8",
+    "e": "Accept eight. 15 November; it ties Colin Montgomerie’s record, and he pipped Eugenio Chacarra by about 0.1 points. Tyrrell Hatton won the tournament itself. Second place, first prize."
    },
    {
-    "c": "Origins",
-    "q": "The microwave oven was invented after radar melted what in engineer Percy Spencer’s pocket?",
-    "a": "A chocolate bar",
-    "e": "Accept chocolate or a candy bar. 1945."
+    "c": "Art",
+    "q": "A 1923 painting called Accentuated Corners (Betonte Ecken) sold for US$85.8 million at Christie’s New York on Tuesday, a record for which Russian-born abstract pioneer?",
+    "a": "Wassily Kandinsky",
+    "e": "Accept Kandinsky. 17 November. The seller bought it at auction in 1986 for about US$1 million. Best return on investment since someone bought Apple shares and forgot about them."
    },
    {
-    "c": "Origins",
-    "q": "Which board game was first called Lexiko, then Criss-Crosswords?",
-    "a": "Scrabble",
-    "e": "Alfred Butts, an out-of-work architect, 1930s."
+    "c": "Weather",
+    "q": "Which G7 capital city recorded its warmest first 18 days of November on record, averaging about 7.7 °C, beating a mark from 1975?",
+    "a": "Ottawa",
+    "e": "Reported 19 November by The Weather Network: 7.72 °C against 7.48 °C in 1975. In Canadian terms, that’s shorts weather."
    },
    {
-    "c": "Origins",
-    "q": "In Italian, the @ symbol is called ‘chiocciola’. What animal is that?",
-    "a": "A snail",
-    "e": "Accept snail. Look at it. It’s a snail."
+    "c": "Formula 1",
+    "q": "New world champion Kimi Antonelli was fastest in Las Vegas Grand Prix qualifying on Friday, but an engine penalty dropped him five places. Who inherited pole position?",
+    "a": "Max Verstappen",
+    "e": "Accept Verstappen. 20 November (local time), with George Russell alongside; the race is Saturday night in Vegas. No Ferrari made Q3. What happens in Vegas gets a five-place grid penalty."
    },
    {
-    "c": "Origins",
-    "q": "The Frisbee is named after a bakery whose empty pie tins students threw. What was the bakery called?",
-    "a": "The Frisbie Pie Company",
-    "e": "Accept Frisbie or Frisbie Baking Company. Bridgeport, Connecticut."
+    "c": "Books",
+    "q": "Hannah Lillith Assadi won the US National Book Award for Fiction this week. Name her winning novel.",
+    "a": "Paradiso 17",
+    "e": "Accept Paradiso Seventeen. Announced around 18 November in New York; Salman Rushdie received the lifetime achievement medal at the same ceremony. Your book club has a new homework assignment."
    },
    {
-    "c": "Origins",
-    "q": "The word ‘pyjamas’ came into English from which language?",
-    "a": "Hindi",
-    "e": "Accept Hindi, Urdu or Persian. ‘Leg garment’."
+    "c": "Golf",
+    "q": "Which South Korean golfer led the LPGA’s season-ending CME Group Tour Championship by three shots at halfway on Friday, helped by a hole-in-one on the 16th?",
+    "a": "A Lim Kim",
+    "e": "Accept Kim A-lim or A Lim Kim; ‘Kim’ alone is too easy a guess with this many Kims on tour. Round two, 20 November, Tiburon, Naples, Florida; two-time defending champion Jeeno Thitikul was second. The final round is Sunday."
    },
    {
-    "c": "Origins",
-    "q": "Monopoly grew out of ‘The Landlord’s Game’, patented in 1904 by which woman?",
-    "a": "Lizzie Magie",
-    "e": "Accept Elizabeth Magie. She designed it to show how landlords got rich. Decades later, a man sold a version to Parker Brothers."
+    "c": "Science",
+    "q": "Scientists reported this week a new bacterium with a tiny genome but giant proteins, living under the skin of which deep-sea sea cucumbers nicknamed after a farm animal?",
+    "a": "Sea pigs",
+    "e": "Accept Scotoplanes. Reported 17 November; the microbe, Abyssoplasma scotoplanesicola, came from sea pigs collected off northern Japan, and makes proteins up to 5,475 amino acids long (most are about 300). Oink, from the abyss."
    },
    {
     "c": "Brain-melter",
-    "q": "The word ‘nerd’ first appeared in print in a 1950 children’s book by which author?",
-    "a": "Dr Seuss",
-    "e": "‘If I Ran the Zoo’. Accept Theodor Geisel. Nerdy of you to know."
+    "q": "The Leonid meteor shower peaked on the night of 17–18 November. Name the comet whose dusty debris causes it.",
+    "a": "Comet Tempel-Tuttle",
+    "e": "Accept 55P/Tempel-Tuttle or Tempel-Tuttle. Peak around 17 November; the meteors hit the atmosphere at about 71 km/s, and the comet swings back past the Sun around 2031. If you said Halley’s, that’s the Orionids. Close, but no comet cigar."
    }
-  ]
+  ],
+  "difficulty": "Einstein"
  },
  {
   "week": "2026-11-29",
