@@ -1,5 +1,6 @@
-/* Nomulous: name the eponymous sign, test, triad or syndrome. 8 a day, the same for everyone that day.
-   5 "name it" questions (description -> eponym) and 3 "what does it mean" questions (eponym -> meaning). */
+/* Nomulous: name the eponymous sign, test, triad or syndrome. 3 a day, the same for everyone that day.
+   2 "name it" questions (description -> eponym) and 1 "what does it mean" question (eponym -> meaning).
+   Days walk through one fixed shuffled order, so nothing repeats until the whole bank has been used (255 entries = 85 days). */
 (function () {
   var G = window.MG, $ = G.$, D = window.NOMULOUS || [];
   var DAY = G.localDay(new Date()), r = G.rng("nomulous-" + DAY), KEY = "mw-nomulous-" + DAY;
@@ -14,8 +15,9 @@
     return '<p class="mg-why nm-hist">&#128202; <b>How good is it?</b> Picks up ' + e.sens.v + "% of people with " + G.esc(e.condition) +
       (e.spec ? "; correctly clears " + e.spec.v + "% of people without it." : ".") + ' <a href="/sensitosis/">Play Sensitosis</a></p>';
   }
-  var picks = G.shuffle(D, r).slice(0, 8), idx = 0, score = 0, marks = [];
-  var Q = picks.map(function (it, i) { return { it: it, type: i % 3 === 2 ? "mean" : "name" }; });
+  var ORDER = G.shuffle(D, G.rng("nomulous-order-v1")), P = DAY.split("-").map(Number);
+  var N = Math.floor(Date.UTC(P[0], P[1] - 1, P[2]) / 864e5), picks = [0, 1, 2].map(function (i) { return ORDER[(N * 3 + i) % ORDER.length]; }), idx = 0, score = 0, marks = [];
+  var Q = picks.map(function (it, i) { return { it: it, type: i === 2 ? "mean" : "name" }; });
   var KIND = { sign: "Sign", test: "Test", triad: "Triad", syndrome: "Syndrome" };
   function same(it) { return it[1] === "triad" || it[1] === "syndrome" ? ["triad", "syndrome"] : ["sign", "test"]; }
   function card() {
@@ -46,7 +48,7 @@
       };
     });
   }
-  var VERDICT = ["Anonymous.", "Barely a footnote.", "A minor eponym.", "Getting a reputation.", "Half the textbook.", "Rounds-ready.", "Professor material.", "Nearly immortal.", "Your name goes on a sign."];
+  var VERDICT = ["Anonymous. Back to the textbook.", "A footnote. Getting there.", "Nearly famous.", "All three named. Your name goes on a sign."];
   function end() {
     G.set(KEY, { score: score, marks: marks.join("") });
     $("nm-game").hidden = true; $("nm-end").hidden = false;
@@ -56,6 +58,6 @@
   }
   function start() { idx = 0; score = 0; marks = []; r = G.rng("nomulous-" + DAY); $("nm-s").textContent = 0; $("nm-intro").hidden = true; $("nm-end").hidden = true; $("nm-game").hidden = false; card(); }
   var done = G.get(KEY, null);
-  if (done) { $("nm-play").textContent = "Play again"; $("nm-best").innerHTML = "Today: <b>" + done.score + "/8</b> " + (done.marks || ""); }
+  if (done) { $("nm-play").textContent = "Play again"; $("nm-best").innerHTML = "Today: <b>" + done.score + "/3</b> " + (done.marks || ""); }
   $("nm-play").onclick = start; $("nm-again").onclick = start;
 })();

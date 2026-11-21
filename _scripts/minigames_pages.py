@@ -162,7 +162,7 @@ PAGES = {
   scripts='<script defer src="sets.js?v=3"></script>\n<script defer src="lunicorn.js?v=3"></script>'),
  "nomulous": dict(
   title="Nomulous", robots="noindex", theme="#4A3480", canon="",
-  desc="Nomulous: name the eponymous sign, test, triad or syndrome. Eight a day, with the history behind each name.",
+  desc="Nomulous: name the eponymous sign, test, triad or syndrome. Three a day, with the history behind each name.",
   foot="A teaching game. Signs are clues, not diagnoses on their own.",
   css=""":root{--mg-a:#4A3480;--mg-b:#2E1F57;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}
 .nm-name{margin:4px 0 2px;font:700 24px/1.2 Lora,Georgia,serif;color:var(--mg-a)}html[data-theme=dark] .nm-name{color:#C9B8F0}
@@ -171,17 +171,17 @@ PAGES = {
     <img class="mg-masc" src="/assets/mascots/triviosis.svg" alt="Echo the parrot, who repeats every name she hears" width="104" height="104">
     <p class="mg-kick">&#127963;&#65039; Name the sign</p>
     <h1>Nomulous</h1>
-    <p class="mg-lede">Medicine loves naming things after people. Eight a day: name the sign, test, triad or syndrome, or say what it points to. Every answer comes with the story behind the name.</p>
+    <p class="mg-lede">Medicine loves naming things after people. Three a day: name the sign, test, triad or syndrome, or say what it points to. Every answer comes with the story behind the name.</p>
     <button class="big" type="button" id="nm-play">Start</button>
     <p class="mg-best" id="nm-best"></p>
     <p class="mg-small"><i>Murphy, McBurney, Charcot. Mostly men, with a few overdue exceptions.</i></p>
   </section>
   <section class="mg-game" id="nm-game" hidden>
-    <div class="mg-hud"><span class="mg-grow"><small>Nomulous</small><b>Eponyms</b></span><span><small>Question</small><b id="nm-n">1/8</b></span><span><small>Named</small><b id="nm-s">0</b></span></div>
+    <div class="mg-hud"><span class="mg-grow"><small>Nomulous</small><b>Eponyms</b></span><span><small>Question</small><b id="nm-n">1/3</b></span><span><small>Named</small><b id="nm-s">0</b></span></div>
     <div class="mg-card" id="nm-q"></div>
   </section>
 """ + END % dict(p="nm", etitle="Your eponyms", again="Play again"),
-  scripts='<script defer src="signs.js?v=1"></script>\n<script defer src="nomulous.js?v=2"></script>'),
+  scripts='<script defer src="signs.js?v=2"></script>\n<script defer src="nomulous.js?v=3"></script>'),
  "dxtective-gauntlet": dict(
   title="Dxtective Gauntlet", robots="noindex", theme="#4A3480", canon="",
   desc="Dxtective Gauntlet: Uncle Sherlock's Sunday challenge. Ten diagnosis cases in a row, one slip and it's over.",
