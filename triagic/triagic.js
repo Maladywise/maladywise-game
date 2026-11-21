@@ -44,6 +44,7 @@
         S.seen++; S.wait = S.wait.filter(function (x) { return x !== p; });
         if (ok) { var bonus = Math.max(0, Math.round((1 - p.w / LIMIT[TC(c)]) * 100)); S.score += PTS[TC(c)] * (p.bad ? 0.5 : 1) + bonus; S.saved++; S.chaos = Math.max(0, S.chaos - 6); }
         else { b.classList.add("no"); S.wrong++; S.chaos += 10; if (TC(c) === 1) codeBlue(); else if (Math.random() < 0.4) codeBlack(); }
+        (S.log = S.log || []).push({ c: c, pick: b.textContent, ok: ok });
         S.reading = true;
         $("tr-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Nailed it." : "Not quite: " + G.esc(c[4]) + ".") + "</b> " + G.esc(c[6]) + '</p><p style="text-align:right;margin-top:10px"><button class="big" type="button" id="tr-back">Next patient</button></p>';
         $("tr-back").onclick = closeCase; $("tr-back").focus();
@@ -139,9 +140,14 @@
     $("tr-escore").textContent = S.score.toLocaleString("en-AU");
     $("tr-emsg").textContent = title + " " + S.saved + " of " + S.seen + " patients sorted" + (survived ? "." : ", then chaos won.");
     $("tr-ebest").textContent = S.score > best ? "New personal best!" : "Your best: " + Math.max(best, S.score).toLocaleString("en-AU");
+    var L = S.log || [], rv = $("tr-review"); if (!rv) { rv = document.createElement("div"); rv.id = "tr-review"; rv.className = "tr-rev"; $("tr-end").appendChild(rv); }
+    rv.innerHTML = L.length ? '<p class="mg-q" style="margin-top:14px">Your shift, patient by patient</p>' + L.map(function (x, i) {
+      return '<details class="tr-rv' + (x.ok ? " ok" : " no") + '"><summary><span>' + (x.ok ? "&#9989;" : "&#10060;") + "</span> " + x.c[0] + " " + G.esc(x.c[3]) + "</summary>" +
+        '<p class="mg-case">' + G.esc(x.c[1]) + "</p><p><b>Answer:</b> " + G.esc(x.c[4]) + (x.ok ? "" : "<br><b>You said:</b> " + G.esc(x.pick)) + '</p><p class="mg-why">' + G.esc(x.c[6]) + "</p></details>";
+    }).join("") : "";
     $("tr-share").onclick = function () { G.share("Triagic 🚨 " + (survived ? "Survived the shift" : "Chaos won") + "\n" + S.score.toLocaleString("en-AU") + " points, " + S.saved + "/" + S.seen + " sorted\nYou said the Q word, didn’t you? maladywise.com"); };
   }
-  function start() { reset(); $("tr-intro").hidden = true; $("tr-end").hidden = true; $("tr-game").hidden = false; closeCase(); arrive(); arrive(); draw(); S.last = performance.now(); requestAnimationFrame(tick); }
+  function start() { reset(); S.log = []; var rv0 = $("tr-review"); if (rv0) rv0.innerHTML = ""; $("tr-intro").hidden = true; $("tr-end").hidden = true; $("tr-game").hidden = false; closeCase(); arrive(); arrive(); draw(); S.last = performance.now(); requestAnimationFrame(tick); }
   $("tr-room").addEventListener("click", function (e) { var b = e.target.closest(".tr-pt"); if (b) openCase(+b.getAttribute("data-id")); });
   $("tr-play").onclick = start; $("tr-again").onclick = start;
   var now = new Date(), OPEN = G.get("mw-open-quiet", "") === (function () { var d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); })() || now.getHours() >= 16 || /[?&]t=open/.test(location.search);

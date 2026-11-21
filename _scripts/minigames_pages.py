@@ -74,7 +74,8 @@ PAGES = {
   title="Triagic", robots="index,follow", theme="#B3261E", canon='<link rel="canonical" href="https://maladywise.com/triagic/">\n',
   desc="Shh. You said the Q word. A secret Malady Wise game.",
   foot="A secret game with fictional patients. Not medical advice.",
-  css=""":root{--mg-a:#B3261E;--mg-b:#5A0F0B;--mg-hi:#FFE08A;--mg-soft:#FDECEA}
+  css=""".tr-rev{display:grid;gap:6px;text-align:left;width:100%}.tr-rv{border:1px solid var(--line,#E4DCF0);border-radius:12px;padding:8px 10px;background:var(--card,#fff)}.tr-rv summary{cursor:pointer;font-weight:600;font-size:14.5px}.tr-rv.no{border-color:#E8B4A6}.tr-rv p{margin:6px 0 0;font-size:14px}
+:root{--mg-a:#B3261E;--mg-b:#5A0F0B;--mg-hi:#FFE08A;--mg-soft:#FDECEA}
 .tr-bar{flex:1 1 140px;min-width:120px;height:14px;border-radius:999px;background:rgba(255,255,255,.2);overflow:hidden;position:relative}
 .tr-bar i{position:absolute;inset:0 auto 0 0;background:#FFE08A;transition:width .25s}.tr-bar.warm i{background:#FFB547}.tr-bar.hot i{background:#FF5A4E}
 .tr-room{display:grid;gap:8px}
@@ -124,7 +125,7 @@ PAGES = {
     <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
   </section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
-  scripts='<script defer src="cases.js?v=5"></script>\n<script defer src="triagic.js?v=9"></script>'),
+  scripts='<script defer src="cases.js?v=5"></script>\n<script defer src="triagic.js?v=10"></script>'),
  "lunicorn": dict(
   title="Lunicorn", robots="index,follow", theme="#2E1F57", canon='<link rel="canonical" href="https://maladywise.com/lunicorn/">\n',
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",
