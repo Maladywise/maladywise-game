@@ -280,7 +280,7 @@ button[disabled]{opacity:.45;cursor:not-allowed}
   var SCENE = 7, SCENE_NAME = "The Shed";
   var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
   function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
-  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || localStorage.getItem("mw-secret-toxic") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
   var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
   function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
   function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }

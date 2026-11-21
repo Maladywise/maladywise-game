@@ -4,13 +4,15 @@
 (function () {
   var G = window.MG, $ = G.$, CASES = window.TRIAGIC_CASES || [];
   var SHIFT = 180, MAXWAIT = 6, LIMIT = { 1: 20, 2: 35, 3: 60 }, PTS = { 1: 300, 2: 200, 3: 100 };
-  var CURVE = [["☎️", "The bed manager is on the phone. Again."], ["🖨️", "The printer has jammed. It’s always the printer."], ["👵", "A relative wants an update. On a patient you haven’t seen."],
+  var CURVE = [["🖨️", "The printer has jammed. It’s always the printer."], ["👵", "A relative wants an update. On a patient you haven’t seen."],
     ["🔔", "Fire alarm test. Nobody told you."], ["🔑", "Your password has expired. Please choose one you’ve never used before."], ["🐟", "Someone microwaved fish in the staff room."],
     ["📟", "Pager: ‘Can you please chart Panadol in bed 4?’"], ["🧾", "Coding wants you to clarify a discharge summary from 2019."]];
   var S;
   function deal() { return G.shuffle(CASES.map(function (g) { return Array.isArray(g[0]) ? g[Math.floor(Math.random() * g.length)] : g; })); } // one variant per group per shift
-  function reset() { S = { t: SHIFT, chaos: 0, score: 0, seen: 0, saved: 0, wrong: 0, wait: [], deck: deal(), di: 0, next: 1.5, curve: 22 + Math.random() * 12, block: null, open: null, over: false, last: performance.now(), id: 0 }; }
+  function reset() { S = { t: SHIFT, chaos: 0, score: 0, seen: 0, saved: 0, wrong: 0, wait: [], deck: deal(), di: 0, next: 1.5, curve: 22 + Math.random() * 12, block: null, open: null, over: false, last: performance.now(), id: 0, caf: 8, nap: 50 + Math.random() * 40, napDone: false, surgeAt: 70 + Math.random() * 40, surge: null, phone: 30 + Math.random() * 15, tired: false }; hideBanner(); }
   function draw() {
+    var f = S.t < 30 ? (30 - S.t) / 30 : 0, gm = $("tr-game");
+    gm.style.filter = f ? "blur(" + (f * 2.2).toFixed(2) + "px)" : ""; gm.classList.toggle("tr-tired", f > 0);
     $("tr-time").textContent = Math.floor(S.t / 60) + ":" + ("0" + Math.floor(S.t % 60)).slice(-2);
     $("tr-score").textContent = S.score.toLocaleString("en-AU");
     $("tr-saved").textContent = S.saved;
@@ -21,11 +23,11 @@
       return '<button type="button" class="tr-pt c' + p.c[2] + (p.bad ? " bad" : "") + '" data-id="' + p.id + '"><span class="tr-em">' + p.c[0] + '</span><span class="tr-tx"><b>Cat ' + p.c[2] + (p.bad ? " ⚠️ deteriorating" : "") + "</b>" + G.esc(p.c[1]) + '</span><i style="width:' + Math.round(f * 100) + '%"></i></button>';
     }).join("") : '<p class="tr-empty">Waiting room empty. Don’t say it.</p>';
   }
-  function arrive() {
+  function arrive(force) {
     if (S.di >= S.deck.length) { S.deck = deal(); S.di = 0; }
     var c = S.deck[S.di++];
-    if (S.wait.length >= MAXWAIT) { S.chaos += 12; G.toast("🚑 Ambulance ramped. Chaos rising."); return; }
-    S.wait.push({ id: ++S.id, c: c, w: 0, bad: false });
+    if (!force && S.wait.length >= MAXWAIT) { S.chaos += 12; G.toast("🚑 Ambulance ramped. Chaos rising."); return; }
+    var p = { id: ++S.id, c: c, w: 0, bad: false }; S.wait.push(p); return p;
   }
   function openCase(id) {
     if (S.block || S.open || S.over) return;
@@ -47,6 +49,35 @@
       };
     });
   }
+  function banner(html, ms, onTimeout) {
+    var el = $("tr-bonus"); el.innerHTML = html; el.hidden = false; clearTimeout(el._t);
+    el._t = setTimeout(function () { el.hidden = true; if (onTimeout && !S.over) onTimeout(); }, ms); return el;
+  }
+  function hideBanner() { var el = $("tr-bonus"); if (el) { clearTimeout(el._t); el.hidden = true; } }
+  function busy() { var el = $("tr-bonus"); return el && !el.hidden; }
+  function caffeine() { // 1: clear the waiting room, grab a drink
+    S.caf = 30; banner('<button type="button" class="tr-bb" id="tr-caf">&#9749; Diet cola, triple shot. <b>Tap!</b></button>', 5000);
+    $("tr-caf").onclick = function () { hideBanner(); S.score += 50; S.chaos = Math.max(0, S.chaos - 10); G.toast("☕ Caffeinated. +50, chaos down 10%."); draw(); };
+  }
+  function napOffer() { // 2: a gamble
+    S.napDone = true;
+    banner('<span>&#128715; The couch in the tea room is free&hellip;</span><button type="button" class="tr-bb" id="tr-nap">Power nap (chaos &minus;20%, frozen 10s)</button><button type="button" class="tr-bb ghost" id="tr-nonap">Keep going</button>', 7000);
+    $("tr-nonap").onclick = hideBanner;
+    $("tr-nap").onclick = function () {
+      hideBanner(); S.chaos = Math.max(0, S.chaos - 20); S.block = true; var n = 10, el = $("tr-curve"); el.hidden = false;
+      function zz() { el.innerHTML = '<div class="tr-cb"><span>&#128564;</span><p>Power nap&hellip; ' + n + "</p><p class=\"mg-small\">The waiting room doesn’t sleep.</p></div>"; }
+      zz(); var iv = setInterval(function () { n--; if (n <= 0 || S.over) { clearInterval(iv); el.hidden = true; S.block = null; draw(); } else zz(); }, 1000);
+    };
+  }
+  function surge() { // 6: three at once, clear them in 20 seconds
+    var ids = []; for (var k = 0; k < 3; k++) { var p = arrive(true); if (p) ids.push(p.id); }
+    S.surge = { ids: ids, until: S.t - 20 }; G.toast("🚑🚑🚑 Three ambulances at once. Clear them in 20 seconds for a bonus.", 3200); draw();
+  }
+  function phone() { // 7: answer within 5 seconds
+    S.phone = 35 + Math.random() * 15;
+    banner('<span>&#128222; Bed manager on line 1</span><button type="button" class="tr-bb" id="tr-ph">Answer</button>', 5000, function () { S.chaos += 5; G.toast("📵 Missed call. Chaos +5%."); });
+    $("tr-ph").onclick = function () { hideBanner(); S.score += 25; G.toast("📞 Two beds promised. Maybe. +25"); draw(); };
+  }
   function closeCase() { S.open = null; $("tr-case").hidden = true; $("tr-room").hidden = false; draw(); }
   function curveball() {
     var cb = CURVE[Math.floor(Math.random() * CURVE.length)], need = 3;
@@ -63,6 +94,14 @@
       S.curve -= dt; if (S.curve <= 0 && !S.block) { curveball(); S.curve = 25 + Math.random() * 15; }
       S.wait.forEach(function (p) { if (p === S.open) return; p.w += dt; if (!p.bad && p.w > LIMIT[p.c[2]]) { p.bad = true; S.chaos += 12; G.toast("⚠️ A Cat " + p.c[2] + " patient is deteriorating in the waiting room."); } });
       S.chaos = Math.max(0, S.chaos - dt * 0.4);
+      var played = SHIFT - S.t;
+      S.caf -= dt; if (S.caf <= 0 && !S.wait.length && !S.open && !S.block && !busy() && S.t > 6) caffeine();
+      if (!S.napDone && played > S.nap && !S.block && !busy() && !S.open) napOffer();
+      if (S.surgeAt && played > S.surgeAt && !S.block) { S.surgeAt = 0; surge(); }
+      if (S.surge) { var left = S.surge.ids.filter(function (id) { return S.wait.some(function (x) { return x.id === id; }) || (S.open && S.open.id === id); }).length;
+        if (!left) { S.surge = null; S.score += 300; G.toast("🏅 Surge cleared! +300"); draw(); } else if (S.t < S.surge.until) { S.surge = null; G.toast("Surge bonus missed."); } }
+      S.phone -= dt; if (S.phone <= 0 && !S.block && !busy()) phone();
+      if (!S.tired && S.t < 30) { S.tired = true; G.toast("😵 Hour 12 of your shift. Your eyes are going…", 2600); }
       if (Math.floor(S.t * 4) !== Math.floor((S.t + dt) * 4)) draw();
       if (S.chaos >= 100) return end(false);
       if (S.t <= 0) return end(true);
@@ -71,7 +110,7 @@
   }
   var TITLES = [[0, "Did you even clock on?"], [600, "Intern energy"], [1500, "Steady hands"], [3000, "Resus regular"], [4500, "Trauma team leader"], [6500, "ED legend. Somebody get this one a coffee."]];
   function end(survived) {
-    S.over = true; $("tr-game").hidden = true; $("tr-end").hidden = false; $("tr-curve").hidden = true;
+    S.over = true; hideBanner(); $("tr-game").style.filter = ""; $("tr-game").hidden = true; $("tr-end").hidden = false; $("tr-curve").hidden = true;
     var best = G.get("mw-triagic-best", 0); if (S.score > best) G.set("mw-triagic-best", S.score);
     var title = TITLES.filter(function (x) { return S.score >= x[0]; }).pop()[1];
     $("tr-etitle").textContent = survived ? "Shift survived." : "The department fell apart.";
@@ -83,6 +122,13 @@
   function start() { reset(); $("tr-intro").hidden = true; $("tr-end").hidden = true; $("tr-game").hidden = false; closeCase(); arrive(); arrive(); draw(); S.last = performance.now(); requestAnimationFrame(tick); }
   $("tr-room").addEventListener("click", function (e) { var b = e.target.closest(".tr-pt"); if (b) openCase(+b.getAttribute("data-id")); });
   $("tr-play").onclick = start; $("tr-again").onclick = start;
-  G.flag("quiet");
+  var now = new Date(), OPEN = !!G.get("mw-secret-quiet", 0) || now.getHours() === 16 || /[?&]t=open/.test(location.search);
+  if (!OPEN) {
+    $("tr-play").disabled = true;
+    var nx = new Date(now); nx.setHours(16, 0, 0, 0); if (nx <= now) nx.setDate(nx.getDate() + 1);
+    var tick2 = function () { var ms = nx - new Date(); if (ms <= 0) return location.reload(); var h = Math.floor(ms / 36e5), m = Math.floor(ms / 6e4) % 60;
+      $("tr-lock").innerHTML = "&#128274; The waiting room opens 4 to 5pm, your time. <b>" + h + "h " + m + "m</b> to go."; };
+    $("tr-lock").hidden = false; tick2(); setInterval(tick2, 30000);
+  }
   var best = G.get("mw-triagic-best", 0); if (best) $("tr-best").innerHTML = "Your best shift: <b>" + best.toLocaleString("en-AU") + "</b>";
 })();

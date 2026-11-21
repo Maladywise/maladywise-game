@@ -1414,6 +1414,22 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         return '<a class="tl" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '"><span class="tl-ic">' + ic + "</span><b>" + a[1] + "</b><small>" + sub + "</small></a>";
       }).join("") + "</div></section>";
     }
+    // Hidden games (testers only until launch): greyed out with a red HIDDEN stamp until their time window opens or the secret word is typed.
+    function hiddenOpen() {
+      var n = new Date(), SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, k = Math.round((n / 864e5 - EP) / SYN - 0.5), fm = new Date((EP + (k + 0.5) * SYN) * 864e5);
+      return { triagic: !!get("mw-secret-quiet", 0) || n.getHours() === 16, lunicorn: !!get("mw-secret-lunar", 0) || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
+    }
+    function hiddenRow() {
+      if (!get("mw-tester", 0)) return "";
+      var o = hiddenOpen(), dk = root.getAttribute("data-theme") === "dark";
+      var H = [["triagic", "Triagic", '<img src="/assets/mascots/sensitosis.svg" alt="" width="44" height="44">', "4 to 5pm daily", "#B3261E", "#FF8A80"],
+        ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44">', "Full-moon days", "#5B3A8E", "#C9A3DD"],
+        ["toxiquest", "Toxiquest", '<span style="font-size:32px">&#9763;</span>', "From 1 December", "#2E6B3A", "#8FD18A"]];
+      return '<section class="tls" id="g-hidden"><div class="t3-head"><h2>Hidden games</h2><span>Only at certain times. Or if you know the word.</span></div><div class="tl-grid tl-arc">' + H.map(function (h) {
+        var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + "</b><small>" + (on ? "Open now" : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
+        return on ? '<a class="tl" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
+      }).join("") + "</div></section>";
+    }
     // Read this week (Medical only): newest deep dive, research week, Weekly Dose (data/home-reads.json) + next health day.
     function readsSlot() { return NORMIE ? "" : '<section class="rds" id="mw-reads" hidden><div class="t3-head"><h2>Read this week</h2><span>Short and evidence based</span></div><div class="rd-grid"></div></section>'; }
     function fillReads() {
@@ -1562,7 +1578,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + pearl() + gpsBanner() + arcadeRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
+        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + pearl() + gpsBanner() + arcadeRow() + hiddenRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));
@@ -2343,6 +2359,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       giant: function () { pageFx("mw-giant", 3000); pill("🔭 Fee-fi-fo-fum. That’s a big website.", 3000); },
       disco: function () { pageFx("mw-disco", 4000); rain(["🪩", "🕺", "💃"], 14, { up: true, ms: 3200, stay: 4500 }); pill("🪩 Disco! 120 beats per minute, perfect for CPR.", 3800); },
       quiet: function () { if (going) return; going = true; flag("quiet"); pageFx("mw-flicker", 2000); shake(10); rain("\ud83d\udea8", 24, { spread: 900, stay: 2400 }); pill("\ud83d\udea8 You said the Q word. Every ambulance in the state is now on its way\u2026", 2400); setTimeout(function () { location.href = "/triagic/"; }, 2200); },
+      lunar: function () { if (going) return; going = true; flag("lunar"); rain(["\ud83c\udf15", "\ud83e\udd84", "\u2728"], 24, { stay: 2400 }); pill("\ud83c\udf15 Lunar. Ziggy has turned into something\u2026", 2400); setTimeout(function () { location.href = "/lunicorn/"; }, 2200); },
+      toxic: function () { if (going) return; going = true; flag("toxic"); pageFx("mw-flicker", 1600); rain(["\u2623\ufe0f", "\ud83e\uddea", "\ud83c\udf44"], 24, { stay: 2400 }); pill("\u2623\ufe0f Toxic word detected. Toxiquest is open to you.", 2400); setTimeout(function () { location.href = "/toxiquest/"; }, 2200); },
       // older secrets
       locum: function () { nightShift(); },
       scrawl: function () { scrawl(); },
@@ -2350,7 +2368,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       basil: function () { flag("paws"); basilSwipe(); },
       clove: function () { flag("paws"); cloverStamp(); }
     };
-    if (!get("mw-tester", 0)) delete CODES.quiet; // Triagic is in private testing (21 Nov 2026): only testers get the "quiet" code
+    if (!get("mw-tester", 0)) { delete CODES.quiet; delete CODES.lunar; delete CODES.toxic; } // Triagic is in private testing (21 Nov 2026): only testers get the "quiet" code
     var CODE_KEYS = Object.keys(CODES).sort(function (a, b) { return b.length - a.length; });
     window.MW_CODE_COUNT = CODE_KEYS.length;
     function runCode(code) {

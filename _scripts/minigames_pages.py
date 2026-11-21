@@ -22,11 +22,11 @@ HEAD = """<!doctype html>
 <meta name="apple-mobile-web-app-title" content="Malady Wise">
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
-<link rel="stylesheet" href="../assets/shell.css?v=249">
+<link rel="stylesheet" href="../assets/shell.css?v=250">
 <link rel="stylesheet" href="../assets/mg.css?v=3">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=299"></script>
+<script defer src="../assets/shell.js?v=300"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -90,7 +90,11 @@ PAGES = {
 .tr-cb span{font-size:42px}.tr-cb p{margin:0;font:600 17px var(--body)}
 @keyframes trshake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
 .tr-siren{animation:trsiren 1s steps(2) 3}@keyframes trsiren{50%{filter:hue-rotate(-40deg) saturate(1.6)}}
-@media (prefers-reduced-motion:reduce){.tr-pt.bad,.tr-cb,.tr-siren{animation:none}}""",
+.tr-bonus{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:40;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;max-width:calc(100% - 32px);background:#2B2340;color:#fff;border-radius:18px;padding:10px 12px;box-shadow:0 10px 30px rgba(0,0,0,.35);font:600 15px var(--body);animation:trpop .3s ease-out}
+.tr-bb{font:700 15px var(--body);border:0;border-radius:999px;padding:10px 14px;background:#FFE08A;color:#2B2340;cursor:pointer;min-height:44px}.tr-bb.ghost{background:transparent;color:#fff;border:2px solid #fff}
+@keyframes trpop{from{transform:translateX(-50%) scale(.8);opacity:0}}
+.tr-tired{animation:trwob 3s ease-in-out infinite}@keyframes trwob{25%{transform:translate(1px,-1px) rotate(.3deg)}75%{transform:translate(-1px,1px) rotate(-.3deg)}}
+@media (prefers-reduced-motion:reduce){.tr-pt.bad,.tr-cb,.tr-siren,.tr-tired,.tr-bonus{animation:none}}""",
   body="""  <section class="mg-intro tr-siren" id="tr-intro">
     <img class="mg-masc" src="/assets/mascots/sensitosis.svg" alt="Sunny the meerkat, on lookout" width="104" height="104">
     <p class="mg-kick">&#128680; You said the Q word</p>
@@ -98,6 +102,7 @@ PAGES = {
     <p class="mg-lede">Never say &ldquo;quiet&rdquo; in ED. Now the waiting room is filling up. Three minutes, one shift: tap a patient, make the call, keep the chaos under 100%.</p>
     <p class="mg-small">Cat 1 can&rsquo;t wait. Long waits, wrong calls and a full waiting room all add chaos.</p>
     <button class="big" type="button" id="tr-play">Start the shift</button>
+    <p class="mg-small" id="tr-lock" hidden></p>
     <p class="mg-best" id="tr-best"></p>
     <p class="mg-small"><i>Shh. It&rsquo;s not on the menu.</i></p>
   </section>
@@ -108,6 +113,7 @@ PAGES = {
     <div class="mg-card" id="tr-case" hidden></div>
   </section>
   <div class="tr-curve" id="tr-curve" hidden></div>
+  <div class="tr-bonus" id="tr-bonus" role="status" hidden></div>
   <section class="mg-card mg-end" id="tr-end" hidden>
     <p class="mg-q" id="tr-etitle"></p>
     <p class="mg-score" id="tr-escore"></p>
@@ -116,7 +122,7 @@ PAGES = {
     <div class="mg-btns"><button class="big" type="button" id="tr-again">Another shift</button><button class="mg-sbtn" type="button" id="tr-share">Share</button></div>
   </section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a></p>""",
-  scripts='<script defer src="cases.js?v=3"></script>\n<script defer src="triagic.js?v=2"></script>'),
+  scripts='<script defer src="cases.js?v=3"></script>\n<script defer src="triagic.js?v=3"></script>'),
  "lunicorn": dict(
   title="Lunicorn", robots="noindex", theme="#2E1F57", canon="",
   desc="Ziggy only comes out under a full moon. A secret Malady Wise game.",
@@ -151,7 +157,7 @@ PAGES = {
     <div class="mg-card" id="lu-q"></div>
   </section>
 """ + END % dict(p="lu", etitle="Your rainbow", again="Play again"),
-  scripts='<script defer src="sets.js?v=2"></script>\n<script defer src="lunicorn.js?v=1"></script>'),
+  scripts='<script defer src="sets.js?v=2"></script>\n<script defer src="lunicorn.js?v=2"></script>'),
 }
 for k, v in PAGES.items():
     os.makedirs(ROOT + k, exist_ok=True)

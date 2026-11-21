@@ -1,5 +1,5 @@
-/* Lunicorn: Ziggy’s full-moon game. Opens only on full-moon nights where the player is (6pm to 6am local time, within a day of
-   the full moon). Rainbow set normally; a Blue moon set on the second full moon of a calendar month; a Blood moon set on a total lunar eclipse. */
+/* Lunicorn: Ziggy’s full-moon game. Opens for the whole local calendar day of the full moon (24 hours), or any time
+   after the player types "lunar". Rainbow set normally; a Blue moon set on the second full moon of a calendar month; a Blood moon set on a total lunar eclipse. */
 (function () {
   var G = window.MG, $ = G.$, L = window.LUNICORN;
   var SYN = 29.530588853, EPOCH = Date.UTC(2000, 0, 6, 18, 14) / 864e5; // a known new moon, in days
@@ -12,26 +12,27 @@
     if (q === "open") return { open: true, kind: "rainbow", fm: now };
     if (q === "blue") return { open: true, kind: "blue", fm: now };
     if (q === "blood") return { open: true, kind: "blood", fm: now };
-    var fm = fullNear(now.getTime()), h = now.getHours(), night = h >= 18 || h < 6, near = Math.abs(now - fm) <= 864e5;
+    var fm = fullNear(now.getTime()), near = new Date(fm).toDateString() === now.toDateString(), code = !!G.get("mw-secret-lunar", 0);
     var kind = ECLIPSES.some(function (e) { return Math.abs(e - fm) < 864e5; }) ? "blood" : sameMonth(fm, fm - SYN * 864e5) ? "blue" : "rainbow";
-    return { open: night && near, kind: kind, fm: fm };
+    return { open: near || code, kind: near ? kind : "rainbow", fm: fm, near: near };
   }
   var NOW = new Date(), M = mode(NOW);
   var THEME = {
-    rainbow: { h: "Lunicorn", kick: "🌕 Full moon tonight", lede: "Ziggy only comes out under a full moon. Ten colours of medicine: name what’s behind each one.", n: 10 },
-    blue: { h: "Blue Moon Lunicorn", kick: "🔵 Blue moon tonight", lede: "A second full moon this month. Once in a blue moon, Ziggy turns blue. Ten blue things in medicine.", n: 10 },
-    blood: { h: "Blood Moon Lunicorn", kick: "🔴 Blood moon tonight", lede: "A total lunar eclipse turns the moon red. So does Ziggy. Ten red things in medicine.", n: 10 }
+    rainbow: { h: "Lunicorn", kick: "🌕 Full moon today", lede: "Ziggy only comes out under a full moon. Ten colours of medicine: name what’s behind each one.", n: 10 },
+    blue: { h: "Blue Moon Lunicorn", kick: "🔵 Blue moon today", lede: "A second full moon this month. Once in a blue moon, Ziggy turns blue. Ten blue things in medicine.", n: 10 },
+    blood: { h: "Blood Moon Lunicorn", kick: "🔴 Blood moon today", lede: "A total lunar eclipse turns the moon red. So does Ziggy. Ten red things in medicine.", n: 10 }
   }[M.kind];
   document.documentElement.setAttribute("data-moon", M.kind);
   var seed = "lunicorn-" + G.localDay(new Date(M.fm)) + "-" + M.kind, KEY = "mw-lunicorn-" + G.localDay(new Date(M.fm));
   var SET = G.shuffle(L[M.kind], G.rng(seed)).slice(0, THEME.n), idx = 0, score = 0, marks = [];
   $("lu-h1").textContent = THEME.h; $("lu-kick").textContent = THEME.kick; $("lu-lede").textContent = THEME.lede;
+  if (M.open && M.near === false) $("lu-kick").textContent = "🌙 You said the magic word";
 
   function closed() {
     $("lu-play").disabled = true; $("lu-kick").textContent = "🌑 Ziggy is hiding";
     var n = nextFull(NOW.getTime()), d = new Date(n);
-    $("lu-lede").textContent = "Ziggy only comes out at night under a full moon, where you are. The rest of the time, this page is just a page.";
-    $("lu-lock").innerHTML = "🔒 Next full moon: <b>" + d.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" }) + "</b>. Come back after 6pm.";
+    $("lu-lede").textContent = "Ziggy only comes out on the day of a full moon, where you are. The rest of the time, this page is just a page.";
+    $("lu-lock").innerHTML = "🔒 Next full moon: <b>" + d.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" }) + "</b>, all day.";
   }
   function card() {
     var c = SET[idx], opts = G.shuffle([c[2]].concat(c[3]));
