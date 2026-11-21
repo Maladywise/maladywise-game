@@ -3,6 +3,17 @@
 (function () {
   var G = window.MG, $ = G.$, D = window.NOMULOUS || [];
   var DAY = G.localDay(new Date()), r = G.rng("nomulous-" + DAY), KEY = "mw-nomulous-" + DAY;
+  // Accuracy from the Sensitosis bank (sourced figures), matched on the first word of the name, e.g. "Murphy".
+  var ACC = {};
+  function key(n) { return String(n).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[’']s?\b/g, "").replace(/[^a-z ]/g, " ").trim().split(/\s+/)[0]; }
+  fetch("/sensitosis/tests.json").then(function (x) { return x.ok ? x.json() : {}; }).then(function (j) {
+    var t = j.tests || {}; Object.keys(t).forEach(function (k) { var e = t[k]; if (e.kind === "sign" && e.sens) ACC[key(e.test)] = e; });
+  }).catch(function () {});
+  function acc(it) {
+    var e = ACC[key(it[0])]; if (!e) return "";
+    return '<p class="mg-why nm-hist">&#128202; <b>How good is it?</b> Picks up ' + e.sens.v + "% of people with " + G.esc(e.condition) +
+      (e.spec ? "; correctly clears " + e.spec.v + "% of people without it." : ".") + ' <a href="/sensitosis/">Play Sensitosis</a></p>';
+  }
   var picks = G.shuffle(D, r).slice(0, 8), idx = 0, score = 0, marks = [];
   var Q = picks.map(function (it, i) { return { it: it, type: i % 3 === 2 ? "mean" : "name" }; });
   var KIND = { sign: "Sign", test: "Test", triad: "Triad", syndrome: "Syndrome" };
@@ -28,8 +39,8 @@
         Array.prototype.forEach.call(bs, function (x) { x.disabled = true; if (x.textContent === right) x.classList.add("ok"); });
         if (!ok) b.classList.add("no"); else score++;
         marks.push(ok ? "🟢" : "🔴"); $("nm-s").textContent = score;
-        $("nm-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + '.' + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p class="mg-why nm-hist">&#128220; ' + G.esc(it[4]) +
-          '</p><p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="nm-next">' + (idx + 1 < Q.length ? "Next" : "Finish") + "</button></p>";
+        $("nm-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + '.' + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p class="mg-why nm-hist">&#128220; ' + G.esc(it[4]) + '</p>' + acc(it) +
+          '<p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="nm-next">' + (idx + 1 < Q.length ? "Next" : "Finish") + "</button></p>";
         $("nm-next").onclick = function () { idx++; if (idx < Q.length) card(); else end(); };
         $("nm-next").focus();
       };

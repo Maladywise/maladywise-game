@@ -181,7 +181,7 @@ PAGES = {
     <div class="mg-card" id="nm-q"></div>
   </section>
 """ + END % dict(p="nm", etitle="Your eponyms", again="Play again"),
-  scripts='<script defer src="signs.js?v=1"></script>\n<script defer src="nomulous.js?v=1"></script>'),
+  scripts='<script defer src="signs.js?v=1"></script>\n<script defer src="nomulous.js?v=2"></script>'),
  "dxtective-gauntlet": dict(
   title="Dxtective Gauntlet", robots="noindex", theme="#4A3480", canon="",
   desc="Dxtective Gauntlet: Uncle Sherlock's Sunday challenge. Ten diagnosis cases in a row, one slip and it's over.",
