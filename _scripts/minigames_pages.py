@@ -26,7 +26,7 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="../assets/mg.css?v=3">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=302"></script>
+<script defer src="../assets/shell.js?v=303"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -55,7 +55,7 @@ PAGES = {
   foot="A teaching game with fictional patients. Real decisions depend on the whole patient and local guidelines.",
   css=":root{--mg-a:#7A1F2B;--mg-b:#4A1220;--mg-hi:#FFD3D8;--mg-soft:#FBEDEF}.fr-res{font:700 20px/1.35 var(--body);color:var(--mg-a)}html[data-theme=dark] .fr-res{color:var(--mg-hi)}",
   body="""  <section class="mg-intro" id="fr-intro">
-    <img class="mg-masc" src="/assets/mascots/panelysis.svg" alt="Ruby the vampire, host of the blood test games" width="104" height="104">
+    <img class="mg-masc" src="/assets/mascots/layla.svg" alt="Layla the sloth, who just wants to go home but checks every result first" width="104" height="104">
     <p class="mg-kick">&#128229; Fridays only</p>
     <h1>Fridaemia</h1>
     <p class="mg-lede">It&rsquo;s 5pm on a Friday. You&rsquo;re reaching for your keys when eight results land in your inbox. For each one: ED now, call today, or Monday is fine?</p>
@@ -98,7 +98,7 @@ PAGES = {
 .tr-tired{animation:trwob 3s ease-in-out infinite}@keyframes trwob{25%{transform:translate(1px,-1px) rotate(.3deg)}75%{transform:translate(-1px,1px) rotate(-.3deg)}}
 @media (prefers-reduced-motion:reduce){.tr-pt.bad,.tr-cb,.tr-siren,.tr-tired,.tr-bonus{animation:none}.tr-poo{display:none}}""",
   body="""  <section class="mg-intro tr-siren" id="tr-intro">
-    <img class="mg-masc" src="/assets/mascots/sensitosis.svg" alt="Sunny the meerkat, on lookout" width="104" height="104">
+    <img class="mg-masc" src="/assets/mascots/triagic.svg" alt="Tilly the border collie, who herds every patient into the right line" width="104" height="104">
     <p class="mg-kick">&#128680; You said the Q word</p>
     <h1>Triagic</h1>
     <p class="mg-lede">Never say &ldquo;quiet&rdquo; in ED. Now the waiting room is filling up. Three minutes, one shift: tap a patient, make the call, keep the chaos under 100%.</p>
@@ -106,7 +106,7 @@ PAGES = {
     <button class="big" type="button" id="tr-play">Start the shift</button>
     <p class="mg-small" id="tr-lock" hidden></p>
     <p class="mg-best" id="tr-best"></p>
-    <p class="mg-small"><i>Shh. It&rsquo;s not on the menu.</i></p>
+    <p class="mg-small"><i>Tilly the border collie herds every patient into the right line. Help her.</i></p>
   </section>
   <section class="mg-game" id="tr-game" hidden>
     <div class="mg-hud"><span><small>Shift left</small><b id="tr-time">3:00</b></span><span><small>Score</small><b id="tr-score">0</b></span><span><small>Sorted</small><b id="tr-saved">0</b></span>
