@@ -1,0 +1,1034 @@
+[
+ {
+  "date": "2027-02-01",
+  "number": 108,
+  "difficulty": "Easy",
+  "title": "Itchy spots everywhere",
+  "answer": "Chickenpox (varicella)",
+  "accept": [
+   "chickenpox",
+   "chicken pox",
+   "varicella",
+   "varicella zoster",
+   "vzv",
+   "primary varicella"
+  ],
+  "clues": [
+   {
+    "t": "4-year-old girl, fever and grumpy for a day."
+   },
+   {
+    "t": "Itchy red spots started on her chest and back."
+   },
+   {
+    "t": "New spots keep appearing in crops over 3 days."
+   },
+   {
+    "t": "Spots turn into small clear blisters, then crust over."
+   },
+   {
+    "t": "Some are in her mouth and on her scalp."
+   },
+   {
+    "t": "She hasn’t had the varicella vaccine."
+   }
+  ],
+  "pearl": "Spots at different stages at once is the classic picture. Contagious until all are crusted. Avoid aspirin (Reye syndrome) and keep away from pregnant people and anyone with low immunity."
+ },
+ {
+  "date": "2027-02-02",
+  "number": 109,
+  "difficulty": "Easy",
+  "title": "Itching all night",
+  "answer": "Scabies",
+  "accept": [
+   "scabies",
+   "sarcoptes scabiei",
+   "sarcoptes",
+   "scabies mite",
+   "scabies infestation",
+   "crusted scabies"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old student, intensely itchy for 4 weeks."
+   },
+   {
+    "t": "The itch is much worse at night."
+   },
+   {
+    "t": "His housemates are now itchy too."
+   },
+   {
+    "t": "Small bumps between his fingers and on his wrists."
+   },
+   {
+    "t": "Tiny wavy grey lines in the finger webs."
+   },
+   {
+    "t": "Skin scraping shows a mite and eggs.",
+    "d": 1
+   }
+  ],
+  "pearl": "Treat everyone in the household at the same time (permethrin cream, repeated in a week), and hot-wash bedding and clothes. The itch can last weeks after the mites are gone."
+ },
+ {
+  "date": "2027-02-03",
+  "number": 110,
+  "difficulty": "Medium",
+  "title": "Breakbone fever",
+  "answer": "Dengue fever",
+  "accept": [
+   "dengue",
+   "dengue fever",
+   "breakbone fever",
+   "dengue virus",
+   "severe dengue"
+  ],
+  "clues": [
+   {
+    "t": "30-year-old woman, back from Bali 5 days ago."
+   },
+   {
+    "t": "High fever, severe headache and pain behind the eyes."
+   },
+   {
+    "t": "Aches in her muscles and joints."
+   },
+   {
+    "t": "A faint red rash with ‘islands of white’ on her legs."
+   },
+   {
+    "t": "Platelets 60 · white cells 2.8",
+    "d": 1
+   },
+   {
+    "t": "NS1 antigen: positive",
+    "d": 1
+   }
+  ],
+  "pearl": "Watch for warning signs as the fever drops: tummy pain, vomiting, bleeding or drowsiness. Avoid NSAIDs and aspirin. A second infection with a different type can be more severe."
+ },
+ {
+  "date": "2027-02-04",
+  "number": 111,
+  "difficulty": "Medium",
+  "title": "Changing mole",
+  "answer": "Melanoma",
+  "accept": [
+   "melanoma",
+   "malignant melanoma",
+   "cutaneous melanoma",
+   "skin cancer melanoma",
+   "superficial spreading melanoma",
+   "nodular melanoma"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old man, his partner noticed a spot on his back."
+   },
+   {
+    "t": "He has fair skin and had many bad sunburns as a child."
+   },
+   {
+    "t": "The spot has grown over 6 months and itches."
+   },
+   {
+    "t": "It’s 9 mm with an irregular edge and several shades of brown and black."
+   },
+   {
+    "t": "It looks different from all his other moles: the ‘ugly duckling’."
+   },
+   {
+    "t": "Excision: atypical melanocytes invading the dermis, 1.2 mm thick",
+    "d": 1
+   }
+  ],
+  "pearl": "Australia has one of the highest melanoma rates in the world. Thickness (Breslow depth) is the key to prognosis. Sunscreen, shade and checking your skin save lives."
+ },
+ {
+  "date": "2027-02-05",
+  "number": 112,
+  "difficulty": "Hard",
+  "title": "Fever after Africa",
+  "answer": "Falciparum malaria",
+  "accept": [
+   "malaria",
+   "falciparum malaria",
+   "plasmodium falciparum",
+   "severe malaria",
+   "p falciparum",
+   "cerebral malaria"
+  ],
+  "clues": [
+   {
+    "t": "40-year-old man, home from visiting family in Nigeria 10 days ago."
+   },
+   {
+    "t": "He didn’t take any antimalarial tablets."
+   },
+   {
+    "t": "Fevers, chills and drenching sweats."
+   },
+   {
+    "t": "Now confused and slightly jaundiced."
+   },
+   {
+    "t": "Platelets 40 · lactate 4.5 · glucose 3.0",
+    "d": 1
+   },
+   {
+    "t": "Thick and thin films: ring forms in 8% of red cells",
+    "d": 1
+   }
+  ],
+  "pearl": "Fever in a returned traveller is malaria until proven otherwise. Falciparum can kill within days; severe cases need IV artesunate. People who grew up in malaria areas lose their immunity after living away."
+ },
+ {
+  "date": "2027-02-06",
+  "number": 113,
+  "difficulty": "Hard",
+  "title": "Rose spots",
+  "answer": "Typhoid (enteric fever)",
+  "accept": [
+   "typhoid",
+   "typhoid fever",
+   "enteric fever",
+   "salmonella typhi",
+   "salmonella enterica serovar typhi",
+   "paratyphoid"
+  ],
+  "clues": [
+   {
+    "t": "28-year-old woman, back from Pakistan 2 weeks ago."
+   },
+   {
+    "t": "A fever that has climbed higher each day for a week."
+   },
+   {
+    "t": "Headache, tummy pain and constipation."
+   },
+   {
+    "t": "Her pulse is 72 despite a temperature of 40 °C."
+   },
+   {
+    "t": "A few faint pink spots on her abdomen."
+   },
+   {
+    "t": "Blood culture: Salmonella Typhi",
+    "d": 1
+   }
+  ],
+  "pearl": "Treatment depends on resistance: many strains from South Asia are resistant to common antibiotics. Vaccination before travel helps but isn’t complete protection."
+ },
+ {
+  "date": "2027-02-07",
+  "number": 114,
+  "difficulty": "Genius",
+  "title": "The ulcer that crept",
+  "answer": "Buruli ulcer",
+  "accept": [
+   "buruli ulcer",
+   "bairnsdale ulcer",
+   "daintree ulcer",
+   "mycobacterium ulcerans",
+   "m ulcerans"
+  ],
+  "clues": [
+   {
+    "t": "63-year-old woman from the Mornington Peninsula, Victoria."
+   },
+   {
+    "t": "A painless lump on her calf that has slowly opened into an ulcer."
+   },
+   {
+    "t": "The ulcer’s edges are undermined: a probe slides under the skin."
+   },
+   {
+    "t": "Two courses of antibiotics for cellulitis didn’t help."
+   },
+   {
+    "t": "She feels well otherwise."
+   },
+   {
+    "t": "Swab PCR: Mycobacterium ulcerans",
+    "d": 1
+   }
+  ],
+  "pearl": "Called Bairnsdale ulcer in Victoria and Daintree ulcer in Queensland. Possums and mosquitoes are thought to play a part in spread. Treated with months of combination antibiotics, sometimes surgery."
+ },
+ {
+  "date": "2027-02-08",
+  "number": 115,
+  "difficulty": "Easy",
+  "title": "Honey crusts",
+  "answer": "Impetigo (school sores)",
+  "accept": [
+   "impetigo",
+   "school sores",
+   "staphylococcal impetigo",
+   "streptococcal impetigo",
+   "bullous impetigo",
+   "non bullous impetigo"
+  ],
+  "clues": [
+   {
+    "t": "5-year-old boy, sores around his nose and mouth for 4 days."
+   },
+   {
+    "t": "They started after a cold with a runny nose."
+   },
+   {
+    "t": "Sores weep and form golden, honey-coloured crusts."
+   },
+   {
+    "t": "His little sister now has one on her chin."
+   },
+   {
+    "t": "He feels well and has no fever."
+   },
+   {
+    "t": "Swab grows Staphylococcus aureus.",
+    "d": 1
+   }
+  ],
+  "pearl": "Wash crusts gently and cover them. Small patches can be treated with antiseptic or antibiotic cream; widespread ones need tablets. Keep children home until treatment has started and sores are covered."
+ },
+ {
+  "date": "2027-02-09",
+  "number": 116,
+  "difficulty": "Easy",
+  "title": "The whooping",
+  "answer": "Whooping cough (pertussis)",
+  "accept": [
+   "whooping cough",
+   "pertussis",
+   "bordetella pertussis",
+   "bordetella",
+   "100 day cough",
+   "hundred day cough"
+  ],
+  "clues": [
+   {
+    "t": "Mum brings her 7-week-old baby, who has had a cold for a week."
+   },
+   {
+    "t": "Now coughing fits so long his face goes red, then blue."
+   },
+   {
+    "t": "After one fit he paused breathing for 15 seconds."
+   },
+   {
+    "t": "Between coughs he looks surprisingly well."
+   },
+   {
+    "t": "His older brother has had a cough for a month."
+   },
+   {
+    "t": "Nose swab PCR: Bordetella pertussis",
+    "d": 1
+   }
+  ],
+  "pearl": "Very young babies may not whoop; they can stop breathing instead and need hospital. Vaccination in every pregnancy protects newborns. Antibiotics for the case and close contacts."
+ },
+ {
+  "date": "2027-02-10",
+  "number": 117,
+  "difficulty": "Medium",
+  "title": "Sandpaper rash",
+  "answer": "Scarlet fever",
+  "accept": [
+   "scarlet fever",
+   "scarlatina",
+   "group a strep",
+   "group a streptococcus",
+   "strep throat with rash",
+   "streptococcus pyogenes"
+  ],
+  "clues": [
+   {
+    "t": "6-year-old boy, sore throat and fever since yesterday."
+   },
+   {
+    "t": "A fine red rash spreading from his neck to his chest."
+   },
+   {
+    "t": "The rash feels like sandpaper."
+   },
+   {
+    "t": "Flushed cheeks with a pale ring around his mouth."
+   },
+   {
+    "t": "A red, bumpy ‘strawberry’ tongue."
+   },
+   {
+    "t": "Throat swab: group A streptococcus",
+    "d": 1
+   }
+  ],
+  "pearl": "Treat with penicillin to prevent complications such as rheumatic fever. Skin may peel on the hands and feet a week or two later."
+ },
+ {
+  "date": "2027-02-11",
+  "number": 118,
+  "difficulty": "Medium",
+  "title": "Yellow after Thailand",
+  "answer": "Hepatitis A",
+  "accept": [
+   "hepatitis a",
+   "hep a",
+   "hav",
+   "hepatitis a virus",
+   "acute hepatitis a"
+  ],
+  "clues": [
+   {
+    "t": "26-year-old backpacker, returned from Thailand 4 weeks ago."
+   },
+   {
+    "t": "A week of nausea, fevers and feeling exhausted."
+   },
+   {
+    "t": "Now dark urine and pale stools."
+   },
+   {
+    "t": "His eyes have turned yellow."
+   },
+   {
+    "t": "ALT 1,850 U/L · bilirubin 90 µmol/L",
+    "d": 1
+   },
+   {
+    "t": "Hepatitis A IgM: positive",
+    "d": 1
+   }
+  ],
+  "pearl": "Spread by contaminated food and water. Almost always gets better without treatment, and gives lifelong immunity. Two vaccine doses before travel prevent it; household contacts can be vaccinated after exposure."
+ },
+ {
+  "date": "2027-02-12",
+  "number": 119,
+  "difficulty": "Hard",
+  "title": "Sunburn that isn’t",
+  "answer": "Toxic shock syndrome",
+  "accept": [
+   "toxic shock syndrome",
+   "tss",
+   "staphylococcal toxic shock",
+   "streptococcal toxic shock",
+   "toxic shock"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old woman, sudden high fever and vomiting."
+   },
+   {
+    "t": "Watery diarrhoea and muscle aches."
+   },
+   {
+    "t": "A red, sunburn-like rash all over her body."
+   },
+   {
+    "t": "BP 78/40; she’s confused."
+   },
+   {
+    "t": "She’s had a tampon in for 2 days."
+   },
+   {
+    "t": "Creatinine and liver tests rising; platelets falling",
+    "d": 1
+   }
+  ],
+  "pearl": "Remove any tampon or packing, give fluids and antibiotics including clindamycin to switch off toxin production. Skin on the hands and feet often peels 1 to 2 weeks later."
+ },
+ {
+  "date": "2027-02-13",
+  "number": 120,
+  "difficulty": "Hard",
+  "title": "Locked jaw",
+  "answer": "Tetanus",
+  "accept": [
+   "tetanus",
+   "lockjaw",
+   "clostridium tetani",
+   "generalised tetanus",
+   "generalized tetanus"
+  ],
+  "clues": [
+   {
+    "t": "70-year-old man, stood on a rusty garden stake 10 days ago."
+   },
+   {
+    "t": "He can’t open his mouth properly."
+   },
+   {
+    "t": "A fixed, grimacing smile."
+   },
+   {
+    "t": "His back arches with painful spasms when the door bangs."
+   },
+   {
+    "t": "He has never had a tetanus booster as an adult."
+   },
+   {
+    "t": "He is fully alert throughout."
+   }
+  ],
+  "pearl": "Treatment: tetanus immunoglobulin, wound cleaning, antibiotics, muscle relaxants and often ICU. Having tetanus doesn’t give immunity: vaccinate afterwards."
+ },
+ {
+  "date": "2027-02-14",
+  "number": 121,
+  "difficulty": "Genius",
+  "title": "The cheese lover’s fever",
+  "answer": "Brucellosis",
+  "accept": [
+   "brucellosis",
+   "brucella",
+   "malta fever",
+   "undulant fever",
+   "mediterranean fever brucella"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old man, fevers that come and go for 6 weeks."
+   },
+   {
+    "t": "Drenching night sweats with a strange smell."
+   },
+   {
+    "t": "Aches in his lower back and one knee."
+   },
+   {
+    "t": "He hunts feral pigs in Queensland."
+   },
+   {
+    "t": "His liver and spleen are slightly enlarged."
+   },
+   {
+    "t": "Blood culture (prolonged incubation): Brucella suis",
+    "d": 1
+   }
+  ],
+  "pearl": "In Australia, brucellosis is mostly caught from feral pigs. Overseas it comes from unpasteurised dairy. Treatment needs weeks of combined antibiotics to stop relapse. Warn the lab: it can infect lab staff."
+ },
+ {
+  "date": "2027-02-15",
+  "number": 122,
+  "difficulty": "Easy",
+  "title": "After the holidays at the pool",
+  "answer": "Swimmer’s ear (otitis externa)",
+  "accept": [
+   "swimmers ear",
+   "swimmer's ear",
+   "otitis externa",
+   "acute otitis externa",
+   "outer ear infection",
+   "ear canal infection"
+  ],
+  "clues": [
+   {
+    "t": "14-year-old, swimming squad every day this summer."
+   },
+   {
+    "t": "Painful left ear for 3 days."
+   },
+   {
+    "t": "Pulling his earlobe makes it much worse."
+   },
+   {
+    "t": "The ear canal is red and swollen with white debris."
+   },
+   {
+    "t": "The eardrum looks normal once it can be seen."
+   },
+   {
+    "t": "Itchy before it became painful."
+   }
+  ],
+  "pearl": "Clean the canal and use antibiotic–steroid ear drops. Keep the ear dry. Painful tug on the earlobe points to the canal, not the middle ear."
+ },
+ {
+  "date": "2027-02-16",
+  "number": 123,
+  "difficulty": "Easy",
+  "title": "Cruise ship chaos",
+  "answer": "Norovirus gastroenteritis",
+  "accept": [
+   "norovirus",
+   "gastroenteritis",
+   "viral gastroenteritis",
+   "gastro",
+   "norovirus gastro",
+   "winter vomiting bug",
+   "stomach flu"
+  ],
+  "clues": [
+   {
+    "t": "68-year-old woman on day 4 of a cruise."
+   },
+   {
+    "t": "Sudden vomiting started at 2am."
+   },
+   {
+    "t": "Watery diarrhoea followed within hours."
+   },
+   {
+    "t": "Dozens of passengers are sick with the same thing."
+   },
+   {
+    "t": "She’s mildly dehydrated but has no blood in her stool."
+   },
+   {
+    "t": "Stool PCR: norovirus",
+    "d": 1
+   }
+  ],
+  "pearl": "Hand sanitiser doesn’t reliably kill norovirus; soap and water does. Usually settles in 1 to 3 days. Stay home for 48 hours after symptoms stop."
+ },
+ {
+  "date": "2027-02-17",
+  "number": 124,
+  "difficulty": "Medium",
+  "title": "Hot, swollen knee",
+  "answer": "Septic arthritis",
+  "accept": [
+   "septic arthritis",
+   "infective arthritis",
+   "bacterial arthritis",
+   "septic knee",
+   "infected joint",
+   "joint infection"
+  ],
+  "clues": [
+   {
+    "t": "72-year-old man with diabetes, right knee swollen since yesterday."
+   },
+   {
+    "t": "He can barely bend it and won’t put weight on it."
+   },
+   {
+    "t": "Fever 38.6 °C."
+   },
+   {
+    "t": "The knee is hot and red; any movement is very painful."
+   },
+   {
+    "t": "Joint fluid: cloudy, white cells 85,000",
+    "d": 1
+   },
+   {
+    "t": "Gram stain: gram-positive cocci in clusters",
+    "d": 1
+   }
+  ],
+  "pearl": "A surgical emergency: a joint can be destroyed within days. Aspirate before antibiotics if possible. Gout can look identical, and the two can occur together."
+ },
+ {
+  "date": "2027-02-18",
+  "number": 125,
+  "difficulty": "Medium",
+  "title": "Moving pain",
+  "answer": "Acute appendicitis",
+  "accept": [
+   "appendicitis",
+   "acute appendicitis",
+   "inflamed appendix",
+   "appendix",
+   "appendix inflammation"
+  ],
+  "clues": [
+   {
+    "t": "17-year-old girl, tummy pain since last night."
+   },
+   {
+    "t": "It started around her belly button."
+   },
+   {
+    "t": "By morning it moved to her right lower abdomen."
+   },
+   {
+    "t": "She’s off her food and vomited once."
+   },
+   {
+    "t": "Pain gets worse with coughing and walking."
+   },
+   {
+    "t": "Ultrasound: thickened, non-compressible appendix",
+    "d": 1
+   }
+  ],
+  "pearl": "Pain that moves from the middle to the right lower abdomen is the classic story. In young women, also think of ovarian problems and ectopic pregnancy: do a pregnancy test."
+ },
+ {
+  "date": "2027-02-19",
+  "number": 126,
+  "difficulty": "Hard",
+  "title": "The bird keeper",
+  "answer": "Psittacosis",
+  "accept": [
+   "psittacosis",
+   "parrot fever",
+   "ornithosis",
+   "chlamydia psittaci",
+   "chlamydophila psittaci"
+  ],
+  "clues": [
+   {
+    "t": "52-year-old woman, fever, headache and dry cough for a week."
+   },
+   {
+    "t": "Her chest X-ray shows patchy shadowing in one lung.",
+    "d": 1
+   },
+   {
+    "t": "She didn’t improve on amoxicillin."
+   },
+   {
+    "t": "She breeds budgerigars; two died recently."
+   },
+   {
+    "t": "Her liver tests are mildly raised.",
+    "d": 1
+   },
+   {
+    "t": "PCR on a throat swab: Chlamydia psittaci",
+    "d": 1
+   }
+  ],
+  "pearl": "Caught by breathing dust from bird droppings or feathers. Treated with doxycycline. Australian outbreaks have followed exposure to wild birds while mowing or gardening."
+ },
+ {
+  "date": "2027-02-20",
+  "number": 127,
+  "difficulty": "Hard",
+  "title": "A kitten’s gift",
+  "answer": "Cat-scratch disease",
+  "accept": [
+   "cat scratch disease",
+   "cat-scratch disease",
+   "cat scratch fever",
+   "bartonella",
+   "bartonella henselae",
+   "bartonellosis"
+  ],
+  "clues": [
+   {
+    "t": "10-year-old boy, a lump in his left armpit for 3 weeks."
+   },
+   {
+    "t": "It’s 3 cm, tender and slightly red."
+   },
+   {
+    "t": "He has a mild fever and feels tired."
+   },
+   {
+    "t": "His family got a new kitten last month."
+   },
+   {
+    "t": "A small healing scratch on his left hand."
+   },
+   {
+    "t": "Bartonella henselae serology: positive",
+    "d": 1
+   }
+  ],
+  "pearl": "Usually settles by itself over weeks to months. Kittens and young cats spread it most. Antibiotics are used for larger or more widespread cases."
+ },
+ {
+  "date": "2027-02-21",
+  "number": 128,
+  "difficulty": "Genius",
+  "title": "Numb patches",
+  "answer": "Leprosy (Hansen’s disease)",
+  "accept": [
+   "leprosy",
+   "hansen's disease",
+   "hansens disease",
+   "hansen disease",
+   "mycobacterium leprae",
+   "lepromatous leprosy",
+   "tuberculoid leprosy"
+  ],
+  "clues": [
+   {
+    "t": "33-year-old man, moved to Australia from India 5 years ago."
+   },
+   {
+    "t": "Pale patches on his back and arm for a year."
+   },
+   {
+    "t": "The patches feel numb to a pin and to heat."
+   },
+   {
+    "t": "He burnt his hand on a stove without noticing."
+   },
+   {
+    "t": "The nerve behind his elbow feels thick."
+   },
+   {
+    "t": "Skin smear: acid-fast bacilli",
+    "d": 1
+   }
+  ],
+  "pearl": "Curable with multidrug therapy, and not very contagious. Most people are naturally immune. Early treatment prevents disability; stigma, not the bacteria, is often the bigger problem."
+ },
+ {
+  "date": "2027-02-22",
+  "number": 129,
+  "difficulty": "Easy",
+  "title": "Red and spreading",
+  "answer": "Cellulitis",
+  "accept": [
+   "cellulitis",
+   "skin infection",
+   "bacterial cellulitis",
+   "leg cellulitis",
+   "streptococcal cellulitis"
+  ],
+  "clues": [
+   {
+    "t": "55-year-old man, painful swollen left lower leg for 2 days."
+   },
+   {
+    "t": "He has cracked skin between his toes from tinea."
+   },
+   {
+    "t": "The leg is red, warm and tender, with a fuzzy edge."
+   },
+   {
+    "t": "He has a mild fever."
+   },
+   {
+    "t": "The redness has spread past a pen line drawn yesterday."
+   },
+   {
+    "t": "Ultrasound: no clot",
+    "d": 1
+   }
+  ],
+  "pearl": "Treat the tinea too, or it may come back. Elevate the leg. Cellulitis is almost always one-sided: two red legs are usually something else, like venous eczema."
+ },
+ {
+  "date": "2027-02-23",
+  "number": 130,
+  "difficulty": "Easy",
+  "title": "Winter wheeze in a baby",
+  "answer": "Bronchiolitis",
+  "accept": [
+   "bronchiolitis",
+   "rsv",
+   "rsv bronchiolitis",
+   "respiratory syncytial virus",
+   "viral bronchiolitis"
+  ],
+  "clues": [
+   {
+    "t": "4-month-old baby, runny nose and cough for 3 days."
+   },
+   {
+    "t": "Now breathing fast and feeding only half her usual amount."
+   },
+   {
+    "t": "Her chest sucks in between the ribs with each breath."
+   },
+   {
+    "t": "Crackles and wheeze on both sides."
+   },
+   {
+    "t": "Her toddler brother had a cold last week."
+   },
+   {
+    "t": "Nose swab: respiratory syncytial virus",
+    "d": 1
+   }
+  ],
+  "pearl": "Treatment is support: feeding, fluids and oxygen if needed. Antibiotics, salbutamol and steroids don’t help. A vaccine in pregnancy and an antibody injection for babies now prevent many cases."
+ },
+ {
+  "date": "2027-02-24",
+  "number": 131,
+  "difficulty": "Medium",
+  "title": "Chipmunk cheeks",
+  "answer": "Mumps",
+  "accept": [
+   "mumps",
+   "mumps virus",
+   "mumps parotitis",
+   "epidemic parotitis",
+   "parotitis"
+  ],
+  "clues": [
+   {
+    "t": "22-year-old university student, feverish and tired."
+   },
+   {
+    "t": "Both sides of his face below the ears are swollen and sore."
+   },
+   {
+    "t": "Eating sour food makes it hurt more."
+   },
+   {
+    "t": "Several students in his dorm have the same thing."
+   },
+   {
+    "t": "A week later, his right testicle becomes painful and swollen."
+   },
+   {
+    "t": "Saliva PCR: mumps virus",
+    "d": 1
+   }
+  ],
+  "pearl": "Two MMR doses greatly reduce the risk. Outbreaks still happen in young adults. Testicular swelling occurs in about a third of men after puberty with mumps but rarely causes infertility."
+ },
+ {
+  "date": "2027-02-25",
+  "number": 132,
+  "difficulty": "Medium",
+  "title": "Rash that won’t fade",
+  "answer": "Meningococcal disease",
+  "accept": [
+   "meningococcal disease",
+   "meningococcal sepsis",
+   "meningococcal septicaemia",
+   "meningococcal meningitis",
+   "neisseria meningitidis",
+   "meningococcus",
+   "meningococcaemia"
+  ],
+  "clues": [
+   {
+    "t": "17-year-old, felt fluey last night after a party."
+   },
+   {
+    "t": "This morning: high fever, vomiting and leg pains."
+   },
+   {
+    "t": "Cold hands and feet despite the fever."
+   },
+   {
+    "t": "Purple spots on her legs that don’t fade under a glass."
+   },
+   {
+    "t": "Now drowsy and confused."
+   },
+   {
+    "t": "Blood culture: gram-negative diplococci",
+    "d": 1
+   }
+  ],
+  "pearl": "Give antibiotics immediately; don’t wait for tests. Close contacts need preventive antibiotics. Vaccines cover the main strains, including B."
+ },
+ {
+  "date": "2027-02-26",
+  "number": 133,
+  "difficulty": "Hard",
+  "title": "After the sore throat",
+  "answer": "Acute rheumatic fever",
+  "accept": [
+   "acute rheumatic fever",
+   "rheumatic fever",
+   "arf",
+   "rheumatic carditis",
+   "sydenham chorea"
+  ],
+  "clues": [
+   {
+    "t": "12-year-old Aboriginal girl from a remote community."
+   },
+   {
+    "t": "Painful, swollen joints that move from knee to ankle to wrist."
+   },
+   {
+    "t": "Fever; she had a sore throat 3 weeks ago."
+   },
+   {
+    "t": "A new murmur at the apex.",
+    "d": 1
+   },
+   {
+    "t": "ECG: PR interval prolonged",
+    "d": 1
+   },
+   {
+    "t": "Anti-streptolysin O titre high",
+    "d": 1
+   }
+  ],
+  "pearl": "Australia has some of the world’s highest rates, mainly in Aboriginal and Torres Strait Islander communities. Monthly benzathine penicillin injections for years prevent further attacks and heart damage."
+ },
+ {
+  "date": "2027-02-27",
+  "number": 134,
+  "difficulty": "Hard",
+  "title": "Mosquito season in the Murray",
+  "answer": "Japanese encephalitis",
+  "accept": [
+   "japanese encephalitis",
+   "je",
+   "japanese encephalitis virus",
+   "jev",
+   "viral encephalitis"
+  ],
+  "clues": [
+   {
+    "t": "48-year-old pig farm worker near the Murray River, after a wet summer."
+   },
+   {
+    "t": "Fever and headache for 4 days."
+   },
+   {
+    "t": "Now confused, with a tremor and stiff limbs."
+   },
+   {
+    "t": "He had a seizure on the way to hospital."
+   },
+   {
+    "t": "CSF: lymphocytes raised, protein raised, glucose normal",
+    "d": 1
+   },
+   {
+    "t": "JEV IgM in CSF: positive",
+    "d": 1
+   }
+  ],
+  "pearl": "Spread by mosquitoes from pigs and wading birds. It reached south-eastern Australia in 2022. There’s no specific treatment, but a vaccine is available for people at risk."
+ },
+ {
+  "date": "2027-02-28",
+  "number": 135,
+  "difficulty": "Genius",
+  "title": "Fevers every few weeks",
+  "answer": "Familial Mediterranean fever",
+  "accept": [
+   "familial mediterranean fever",
+   "fmf",
+   "mefv",
+   "periodic fever syndrome",
+   "mefv mutation"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old woman of Armenian background."
+   },
+   {
+    "t": "Since childhood, 2 to 3 days of fever every few weeks."
+   },
+   {
+    "t": "Each attack comes with severe tummy pain, once mistaken for appendicitis."
+   },
+   {
+    "t": "Sometimes painful swelling of one ankle with a red patch on the shin."
+   },
+   {
+    "t": "Between attacks she’s completely well; CRP very high during attacks.",
+    "d": 1
+   },
+   {
+    "t": "Genetic test: two MEFV variants",
+    "d": 1
+   }
+  ],
+  "pearl": "Daily colchicine prevents attacks and the long-term risk of amyloidosis, which can damage the kidneys. Most common in people of Armenian, Turkish, Arab and Jewish ancestry. Today is Rare Disease Day."
+ }
+]
