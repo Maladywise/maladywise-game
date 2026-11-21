@@ -1424,7 +1424,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     // Timed games: greyed out with a red HIDDEN stamp until their window opens (or the secret word is typed). Medical mode only.
     function hiddenOpen() {
       var n = new Date(), SYN = 29.530588853, EP = Date.UTC(2000, 0, 6, 18, 14) / 864e5, k = Math.round((n / 864e5 - EP) / SYN - 0.5), fm = new Date((EP + (k + 0.5) * SYN) * 864e5);
-      return { triagic: !!get("mw-secret-quiet", 0) || n.getHours() === 16 || n.getHours() === 17, fridaemia: n.getDay() === 5, lunicorn: !!get("mw-secret-lunar", 0) || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
+      var TDAY = n.getFullYear() + "-" + (n.getMonth() + 1) + "-" + n.getDate();
+      return { triagic: get("mw-open-quiet", "") === TDAY || n.getHours() === 16 || n.getHours() === 17, fridaemia: n.getDay() === 5, lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11 };
     }
     function hiddenTiles() {
       if (NORMIE) return "";
@@ -2366,8 +2367,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       tiny: function () { pageFx("mw-tiny", 3000); pill("🔬 Honey, I shrunk the website.", 3000); },
       giant: function () { pageFx("mw-giant", 3000); pill("🔭 Fee-fi-fo-fum. That’s a big website.", 3000); },
       disco: function () { pageFx("mw-disco", 4000); rain(["🪩", "🕺", "💃"], 14, { up: true, ms: 3200, stay: 4500 }); pill("🪩 Disco! 120 beats per minute, perfect for CPR.", 3800); },
-      quiet: function () { if (going) return; going = true; flag("quiet"); pageFx("mw-flicker", 2000); shake(10); rain("\ud83d\udea8", 24, { spread: 900, stay: 2400 }); pill("\ud83d\udea8 You said the Q word. Every ambulance in the state is now on its way\u2026", 2400); setTimeout(function () { location.href = "/triagic/"; }, 2200); },
-      lunar: function () { if (going) return; going = true; flag("lunar"); rain(["\ud83c\udf15", "\ud83e\udd84", "\u2728"], 24, { stay: 2400 }); pill("\ud83c\udf15 Lunar. Ziggy has turned into something\u2026", 2400); setTimeout(function () { location.href = "/lunicorn/"; }, 2200); },
+      quiet: function () { if (going) return; going = true; flag("quiet"); set("mw-open-quiet", (function(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();})()); pageFx("mw-flicker", 2000); shake(10); rain("\ud83d\udea8", 24, { spread: 900, stay: 2400 }); pill("\ud83d\udea8 You said the Q word. Every ambulance in the state is now on its way\u2026", 2400); setTimeout(function () { location.href = "/triagic/"; }, 2200); },
+      lunar: function () { if (going) return; going = true; flag("lunar"); set("mw-open-lunar", (function(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();})()); rain(["\ud83c\udf15", "\ud83e\udd84", "\u2728"], 24, { stay: 2400 }); pill("\ud83c\udf15 Lunar. Ziggy has turned into something\u2026", 2400); setTimeout(function () { location.href = "/lunicorn/"; }, 2200); },
       toxic: function () { if (going) return; going = true; flag("toxic"); pageFx("mw-flicker", 1600); rain(["\u2623\ufe0f", "\ud83e\uddea", "\ud83c\udf44"], 24, { stay: 2400 }); pill("\u2623\ufe0f Toxic word detected. Toxiquest is open to you.", 2400); setTimeout(function () { location.href = "/toxiquest/"; }, 2200); },
       // older secrets
       locum: function () { nightShift(); },

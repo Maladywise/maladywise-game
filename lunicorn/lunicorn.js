@@ -12,7 +12,7 @@
     if (q === "open") return { open: true, kind: "rainbow", fm: now };
     if (q === "blue") return { open: true, kind: "blue", fm: now };
     if (q === "blood") return { open: true, kind: "blood", fm: now };
-    var fm = fullNear(now.getTime()), near = new Date(fm).toDateString() === now.toDateString(), code = !!G.get("mw-secret-lunar", 0);
+    var fm = fullNear(now.getTime()), near = new Date(fm).toDateString() === now.toDateString(), code = G.get("mw-open-lunar", "") === (function () { var d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); })();
     var kind = ECLIPSES.some(function (e) { return Math.abs(e - fm) < 864e5; }) ? "blood" : sameMonth(fm, fm - SYN * 864e5) ? "blue" : "rainbow";
     return { open: near || code, kind: near ? kind : "rainbow", fm: fm, near: near };
   }

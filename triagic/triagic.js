@@ -144,7 +144,7 @@
   function start() { reset(); $("tr-intro").hidden = true; $("tr-end").hidden = true; $("tr-game").hidden = false; closeCase(); arrive(); arrive(); draw(); S.last = performance.now(); requestAnimationFrame(tick); }
   $("tr-room").addEventListener("click", function (e) { var b = e.target.closest(".tr-pt"); if (b) openCase(+b.getAttribute("data-id")); });
   $("tr-play").onclick = start; $("tr-again").onclick = start;
-  var now = new Date(), OPEN = !!G.get("mw-secret-quiet", 0) || (now.getHours() === 16 || now.getHours() === 17) || /[?&]t=open/.test(location.search);
+  var now = new Date(), OPEN = G.get("mw-open-quiet", "") === (function () { var d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); })() || (now.getHours() === 16 || now.getHours() === 17) || /[?&]t=open/.test(location.search);
   if (!OPEN) {
     $("tr-play").disabled = true;
     var nx = new Date(now); nx.setHours(16, 0, 0, 0); if (nx <= now) nx.setDate(nx.getDate() + 1);
