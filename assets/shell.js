@@ -1466,7 +1466,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["fridaemia", "Fridaemia", '<img src="/assets/mascots/layla.svg" alt="" width="44" height="44" data-nolink>', "Fridays only", "#8A5A00", "#F2C46B", "Friday 5pm results"],
         ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44" data-nolink>', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
         ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"],
-        ["dxtective-gauntlet", "Gauntlet", '<img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44" data-nolink>', "Sundays only", "#4A3480", "#B9A6E8", "Dex v Uncle Sherlock"]];
+        ["dxtective-gauntlet", "Dx Gauntlet", '<img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44" data-nolink>', "Sundays only", "#4A3480", "#B9A6E8", "Ten cases, no slips"]];
       return H.filter(function (h) { return !!o[h[0]] === openOnes; }).map(function (h) {
         var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + "</b><small>" + (on ? h[6] + " · open now" : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
         return on ? '<a class="tl" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
