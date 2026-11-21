@@ -1,4 +1,4 @@
-"""Builds the pages for the small time-gated / secret games: /triagic/ (secret, unlocked by typing "quiet"),
+"""Builds the pages for the small time-gated / secret games (and Nomulous, private until launch): /triagic/ (secret, unlocked by typing "quiet"),
 /lunicorn/ (full-moon nights only) and /fridaemia/ (Fridays 4:30-7pm local). Run: python3 _scripts/minigames_pages.py"""
 import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
@@ -158,6 +158,28 @@ PAGES = {
   </section>
 """ + END % dict(p="lu", etitle="Your rainbow", again="Play again"),
   scripts='<script defer src="sets.js?v=2"></script>\n<script defer src="lunicorn.js?v=2"></script>'),
+ "nomulous": dict(
+  title="Nomulous", robots="noindex", theme="#4A3480", canon="",
+  desc="Nomulous: name the eponymous sign, test, triad or syndrome. Eight a day, with the history behind each name.",
+  foot="A teaching game. Signs are clues, not diagnoses on their own.",
+  css=""":root{--mg-a:#4A3480;--mg-b:#2E1F57;--mg-hi:#FFE08A;--mg-soft:#F1ECF8}
+.nm-name{margin:4px 0 2px;font:700 24px/1.2 Lora,Georgia,serif;color:var(--mg-a)}html[data-theme=dark] .nm-name{color:#C9B8F0}
+.nm-hist{font-size:14px;opacity:.9}""",
+  body="""  <section class="mg-intro" id="nm-intro">
+    <img class="mg-masc" src="/assets/mascots/triviosis.svg" alt="Echo the parrot, who repeats every name she hears" width="104" height="104">
+    <p class="mg-kick">&#127963;&#65039; Name the sign</p>
+    <h1>Nomulous</h1>
+    <p class="mg-lede">Medicine loves naming things after people. Eight a day: name the sign, test, triad or syndrome, or say what it points to. Every answer comes with the story behind the name.</p>
+    <button class="big" type="button" id="nm-play">Start</button>
+    <p class="mg-best" id="nm-best"></p>
+    <p class="mg-small"><i>Murphy, McBurney, Charcot. Mostly men, with a few overdue exceptions.</i></p>
+  </section>
+  <section class="mg-game" id="nm-game" hidden>
+    <div class="mg-hud"><span class="mg-grow"><small>Nomulous</small><b>Eponyms</b></span><span><small>Question</small><b id="nm-n">1/8</b></span><span><small>Named</small><b id="nm-s">0</b></span></div>
+    <div class="mg-card" id="nm-q"></div>
+  </section>
+""" + END % dict(p="nm", etitle="Your eponyms", again="Play again"),
+  scripts='<script defer src="signs.js?v=1"></script>\n<script defer src="nomulous.js?v=1"></script>'),
 }
 for k, v in PAGES.items():
     os.makedirs(ROOT + k, exist_ok=True)
