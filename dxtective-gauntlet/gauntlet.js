@@ -48,7 +48,7 @@
       '<ol class="gt-clues">' + c.clues.slice(0, shown).map(function (k) { return "<li>" + G.esc(k.t) + "</li>"; }).join("") + "</ol>" +
       '<p class="mg-q">What’s the diagnosis? <small class="gt-pts">' + (7 - shown) + " points</small></p>" +
       '<div class="mg-opts">' + q.opts.map(function (o) { return '<button type="button">' + G.esc(o) + "</button>"; }).join("") + "</div>" +
-      (shown < c.clues.length ? '<p style="text-align:right"><button class="mg-sbtn" type="button" id="gt-more">Another clue (−1)</button></p>' : "") + '<div id="gt-why"></div>';
+      (shown < c.clues.length ? '<p style="text-align:right"><button class="mg-sbtn" type="button" id="gt-more">Buy another clue · lose a point</button></p>' : "") + '<div id="gt-why"></div>';
     var more = $("gt-more"); if (more) more.onclick = function () { shown++; card(); };
     var bs = $("gt-q").querySelectorAll(".mg-opts button");
     Array.prototype.forEach.call(bs, function (b) {
