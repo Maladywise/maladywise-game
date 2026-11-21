@@ -1401,18 +1401,39 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
 
     // Compact game tiles (new home layout): mascot, name, short kind, small tag. Today's 3 are skipped.
     function shortDay(r) { return r.split(/\s*&\s*/).map(function (x) { return x.slice(0, 3); }).join(" + "); }
-    function tile(g) {
+    function tile(g, chip) {
       var st = g.live ? readStats(g) : null, dn = st && st.done, sp = g.special && g.live && g.special.dow === dow && !(g.special.from && today < g.special.from);
       var tag = sp ? g.special.short : g.weekly ? (g.relday ? shortDay(g.relday) : "Weekly") : g.live && !g.dailyLine && diffFor(g, today, dow) === "Einstein" ? EIN : !g.live ? "Soon" : "";
       var t = g.live ? "a" : "div";
       return "<" + t + ' class="tl' + (dn ? " done" : "") + (g.live ? "" : " soon") + '" data-g="' + g.id + '" style="--accent:' + accentOf(g) + '"' + (g.live ? ' href="' + g.path + '"' : "") + ">" +
         (tag ? '<span class="tl-tag">' + tag + "</span>" : "") + '<span class="tl-ic">' + (window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 46) : g.icon) + (dn ? '<span class="tick" aria-label="Done today">✓</span>' : "") + "</span>" +
-        "<b>" + g.name + "</b><small>" + (g.kind || "") + "</small></" + t + ">";
+        "<b>" + g.name + "</b><small>" + (g.kind || "") + "</small>" + (chip || "") + "</" + t + ">";
     }
+    // Games the player has hidden (mw-hide-games). They move to the "Hidden games" section at the bottom and can be shown again.
+    var TL_EDIT = false;
+    function userHidden() { var h = get("mw-hide-games", []); return Array.isArray(h) ? h : []; }
     function tiles(skip) {
-      var list = order().filter(function (g) { return skip.indexOf(g.id) < 0; });
-      if (!list.length) return "";
-      return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + '</span></div><div class="tl-grid">' + hiddenTiles(true) + list.map(tile).join("") + hiddenTiles(false) + "</div></section>";
+      var hid = userHidden(), list = order().filter(function (g) { return skip.indexOf(g.id) < 0 && hid.indexOf(g.id) < 0; });
+      if (!list.length && !hiddenTiles(true)) return "";
+      return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
+        (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move to the bottom of the page.</p>' : "") +
+        '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + hiddenTiles(true) + list.map(function (g) { return tile(g).replace(' data-g="', ' data-h="1" data-g="'); }).join("") + "</div></section>";
+    }
+    function hiddenSec() {
+      var hid = userHidden(), mine = order().filter(function (g) { return hid.indexOf(g.id) > -1; }), timed = hiddenTiles(false);
+      if (!mine.length && !timed) return "";
+      return '<section class="tls" id="g-hidden"><div class="t3-head"><h2>Hidden games</h2><span>Timed games appear when they open</span></div><div class="tl-grid">' +
+        mine.map(function (g) { return tile(g, '<span class="tl-unhide" role="button" data-tl="show" data-id="' + g.id + '">Show</span>'); }).join("") + timed + "</div></section>";
+    }
+    if (!window.MW_tlClicks) {
+      window.MW_tlClicks = 1;
+      document.addEventListener("click", function (e) {
+        var b = e.target.closest && e.target.closest("[data-tl]");
+        if (b && b.getAttribute("data-tl") === "edit") { e.preventDefault(); TL_EDIT = !TL_EDIT; draw(); var gm = document.getElementById("g-more"); if (gm) window.scrollTo(0, gm.getBoundingClientRect().top + window.pageYOffset - 100); return; }
+        if (b && b.getAttribute("data-tl") === "show") { e.preventDefault(); e.stopPropagation(); var id = b.getAttribute("data-id"); set("mw-hide-games", userHidden().filter(function (x) { return x !== id; })); draw(); return; }
+        var t = TL_EDIT && e.target.closest && e.target.closest('#g-more .tl[data-h]');
+        if (t) { e.preventDefault(); var h = userHidden(), g = t.getAttribute("data-g"); if (h.indexOf(g) < 0) h.push(g); set("mw-hide-games", h); draw(); }
+      }, true);
     }
     function arcadeRow() {
       return '<section class="tls" id="g-arcade"><div class="t3-head"><h2>Arcade</h2><span>Bonus games. Play all day.</span></div><div class="tl-grid tl-arc">' + ARCADE.map(function (a) {
@@ -1588,7 +1609,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + pearl() + gpsBanner() + arcadeRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
+        tiles(t3.map(function (o) { return o.g.id; })) + readsSlot() + pearl() + gpsBanner() + arcadeRow() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML + hiddenSec() +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));

@@ -1588,3 +1588,13 @@ html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9
 
 .tl-hid{cursor:default}.tl-hid>:not(.tl-stamp){filter:grayscale(1);opacity:.45}
 .tl-stamp{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%) rotate(-14deg);border:2.5px solid #D93025;color:#D93025;border-radius:6px;padding:2px 8px;font:800 13px/1.2 var(--body,system-ui);letter-spacing:.14em;text-transform:uppercase;background:color-mix(in srgb,var(--card) 70%,transparent);pointer-events:none}
+
+/* Hide games you don't play (home): edit button, edit mode and the Hidden games section */
+.tl-edit{font:600 12px var(--body);border:1.5px solid var(--line);background:var(--card);color:var(--brand);border-radius:99px;padding:3px 10px;margin-left:8px;cursor:pointer;vertical-align:middle}
+.tl-edit-note{margin:-4px 0 8px;font-size:13px;color:var(--muted,#6B6385)}
+.tl-editing .tl[data-h]{animation:tlwig .5s ease-in-out infinite alternate}
+.tl-editing .tl[data-h]::after{content:"\2212";position:absolute;top:-7px;left:-7px;width:22px;height:22px;border-radius:50%;background:#D93025;color:#fff;font:700 16px/22px var(--body);text-align:center;z-index:2}
+@keyframes tlwig{from{transform:rotate(-1deg)}to{transform:rotate(1deg)}}
+@media (prefers-reduced-motion:reduce){.tl-editing .tl[data-h]{animation:none}}
+#g-hidden .tl:not(.tl-hid)>:not(.tl-unhide){opacity:.7}
+.tl-unhide{margin-top:5px;font:600 11.5px var(--body);border:1.5px solid var(--brand);color:var(--brand);border-radius:99px;padding:1px 10px;cursor:pointer;background:var(--card)}
