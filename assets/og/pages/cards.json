@@ -1938,6 +1938,13 @@
 "label": "Condition",
 "title": "Measles"
 },
+"medicinal-cannabis-and-driving": {
+"url": "/medicinal-cannabis-and-driving/",
+"key": "570746078674",
+"v": "750cbe26",
+"label": "Condition",
+"title": "Medicinal cannabis and driving"
+},
 "medicine-recalls": {
 "url": "/medicine-recalls/",
 "key": "196b60ffc6b4",
@@ -2385,6 +2392,13 @@
 "v": "342fbcbe",
 "label": "Medicine",
 "title": "Magnesium supplements"
+},
+"medicines-medicinal-cannabis": {
+"url": "/medicines/medicinal-cannabis/",
+"key": "2dc5f92ae0f3",
+"v": "8a5c9290",
+"label": "Medicine",
+"title": "Medicinal cannabis"
 },
 "medicines-melatonin": {
 "url": "/medicines/melatonin/",
