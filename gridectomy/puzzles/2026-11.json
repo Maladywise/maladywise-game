@@ -2002,14 +2002,14 @@
     "r": 1,
     "c": 0,
     "len": 5,
-    "clue": "Follow up, as with a blood test result"
+    "clue": "Follow up, as with a high blood pressure reading"
    },
    {
     "n": 6,
     "r": 2,
     "c": 0,
     "len": 5,
-    "clue": "Not now"
+    "clue": "Not now (but don't leave that blood pressure check till then)"
    },
    {
     "n": 7,
@@ -2023,7 +2023,7 @@
     "r": 4,
     "c": 0,
     "len": 3,
-    "clue": "Global health body based in Geneva, for short"
+    "clue": "Body whose first report on high blood pressure (2023) found nearly half of sufferers don't know, for short"
    }
   ],
   "down": [

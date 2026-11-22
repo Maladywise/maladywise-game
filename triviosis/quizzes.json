@@ -3891,107 +3891,107 @@
   "date": "2026-11-23",
   "number": 37,
   "difficulty": "Easy",
-  "theme": "Terrible baby names",
+  "theme": "Know your numbers",
   "questions": [
    {
-    "q": "Melena sounds like a lovely name. In medicine, melaena means?",
-    "a": "Black, tarry poo from bleeding high in the gut",
+    "q": "Blood pressure is measured in millimetres of?",
+    "a": "Mercury",
     "w": [
-     "A dark skin mole",
-     "A type of melanoma",
-     "Very dark urine"
+     "Water",
+     "Saline",
+     "Oil"
     ],
-    "e": "Blood digested on its way down from the stomach or duodenum turns black and sticky."
+    "e": "Old cuffs used a column of mercury. Digital machines dropped the mercury but still report mmHg."
    },
    {
-    "q": "Amelia is a popular name. Amelia, the medical term, means?",
-    "a": "Being born without one or more limbs",
+    "q": "In a reading of 120/80, the top (systolic) number is the pressure when?",
+    "a": "The heart squeezes",
     "w": [
-     "Loss of memory",
-     "Absence of periods",
-     "A lack of red blood cells"
+     "The heart relaxes between beats",
+     "You breathe in",
+     "You stand up"
     ],
-    "e": "From Greek a- (without) and melos (limb)."
+    "e": "The bottom (diastolic) number is the pressure while the heart relaxes and refills."
    },
    {
-    "q": "Lochia could pass for a name. What is lochia?",
-    "a": "Vaginal discharge in the weeks after giving birth",
+    "q": "Australian health advice says blood pressure is high if readings are consistently above about?",
+    "a": "140/90",
     "w": [
-     "A lung infection",
-     "A tear duct blockage",
-     "Morning sickness"
+     "120/80",
+     "160/110",
+     "100/60"
     ],
-    "e": "It starts red and fades to yellow-white over about 6 weeks."
+    "e": "One reading isn't a diagnosis; it needs repeating. NHS England has just warned that emergency admissions for high blood pressure rose 77% between 2019/20 and 2025/26."
    },
    {
-    "q": "Chorea sounds like Cora. Chorea is?",
-    "a": "Jerky, dance-like movements you can\u2019t control",
+    "q": "Why is high blood pressure nicknamed a \u2018silent killer\u2019?",
+    "a": "It usually causes no symptoms",
     "w": [
-     "A choir-singer\u2019s throat strain",
-     "A heart valve problem",
-     "A skin rash"
+     "It causes sudden deafness",
+     "It only rises while you sleep",
+     "It can't be measured at rest"
     ],
-    "e": "From the Greek for dance, as in choreography. Seen in Huntington disease."
+    "e": "WHO's first report on it (2023) found nearly half of the people who have it worldwide don't know. The only way to find out is to measure it."
    },
    {
-    "q": "Candida might suit a fan of Voltaire. Candida is?",
-    "a": "A yeast that causes thrush",
+    "q": "The first ever blood pressure measurement, in the 1700s, was made by an English clergyman on a?",
+    "a": "Horse",
     "w": [
-     "A sweet-smelling breath",
-     "A type of tooth decay",
-     "A gland in the neck"
+     "Sheep",
+     "Dog",
+     "Himself"
     ],
-    "e": "Candida albicans lives on most people and overgrows after antibiotics or with diabetes."
+    "e": "Rev Stephen Hales ran a tube from a mare's artery into a glass tube about 12 feet tall and watched the blood rise and pulse. No cuff in sight."
    },
    {
-    "q": "Little Rubella, sister of Bella? Rubella is also called?",
-    "a": "German measles",
+    "q": "The tapping sounds you hear through a stethoscope while taking blood pressure are named after?",
+    "a": "Nikolai Korotkov, a Russian surgeon",
     "w": [
-     "Scarlet fever",
-     "Slapped cheek",
-     "Chickenpox"
+     "Ren\u00e9 Laennec",
+     "Scipione Riva-Rocci",
+     "William Harvey"
     ],
-    "e": "Mild in children, but infection early in pregnancy can harm the baby. Vaccination prevents it."
+    "e": "Korotkov described them in 1905. Riva-Rocci gave us the inflatable arm cuff in 1896; Laennec invented the stethoscope."
    },
    {
-    "q": "Tinea sounds like Tina. Tinea is?",
-    "a": "A fungal skin infection",
+    "q": "\u2018White coat\u2019 high blood pressure means readings are?",
+    "a": "Higher at the clinic than at home",
     "w": [
-     "A ringing in the ears",
-     "A tapeworm",
-     "A tiny skin tag"
+     "Lower at the clinic than at home",
+     "Only high in doctors",
+     "Raised by bright lights"
     ],
-    "e": "Tinea pedis is athlete\u2019s foot; tinea corporis is ringworm."
+    "e": "Home readings or a 24-hour monitor help sort it out. Bonus trap: a cuff that's too small for the arm reads falsely high."
    },
    {
-    "q": "Alopecia sounds grand. Alopecia means hair loss, and the word comes from the Greek for?",
-    "a": "Fox",
+    "q": "Salmonella bacteria are named after?",
+    "a": "Daniel Salmon, a US vet",
     "w": [
-     "Bald eagle",
-     "Old man",
-     "Moon"
+     "The fish, salmon",
+     "A Spanish town",
+     "Salami"
     ],
-    "e": "Alopex is Greek for fox, as foxes with mange lose patches of fur."
+    "e": "Daniel Elmer Salmon led the lab; his assistant Theobald Smith did much of the work. The US FDA is tracking several new Salmonella outbreaks this month."
    },
    {
-    "q": "Chlamydia sounds like an ancient queen. Its name comes from the Greek for?",
-    "a": "Cloak",
+    "q": "In November 2026 the US FDA approved cemdisiran, an RNA-silencing drug given every 3 months, for which condition?",
+    "a": "Myasthenia gravis",
     "w": [
-     "Hidden flower",
-     "Queen",
-     "Small seed"
+     "Multiple sclerosis",
+     "Muscular dystrophy",
+     "Motor neurone disease"
     ],
-    "e": "Chlamys means cloak: the bacteria seemed to drape around the cell nucleus. It\u2019s the most commonly notified STI in Australia."
+    "e": "Muscles tire with use as antibodies attack the nerve\u2013muscle junction. Cemdisiran switches off production of complement protein C5; it's the first siRNA approved for the condition."
    },
    {
-    "q": "Pica is short and cute. Pica is a craving to eat?",
-    "a": "Things that aren\u2019t food, like ice, chalk or dirt",
+    "q": "In October 2026, H5N1 bird flu was confirmed for the first time on sub-Antarctic Macquarie Island, in a kelp gull and a?",
+    "a": "Elephant seal",
     "w": [
-     "Only pizza",
-     "Only sweet food",
-     "Food at night"
+     "Polar bear",
+     "Platypus",
+     "Emperor penguin"
     ],
-    "e": "Named after the magpie (Latin pica), which eats almost anything. Often linked to iron deficiency."
+    "e": "Macquarie sits in the Southern Ocean about halfway between Tasmania and Antarctica. Polar bears live at the other end of the planet."
    }
   ]
  },
