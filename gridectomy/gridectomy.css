@@ -70,3 +70,6 @@ html[data-theme="dark"] #grx .cell.cur b{color:#fff}
 
 /* Big Gridectomy (7x7, Sundays) */
 #grx.big .grid{width:min(100%,max(260px,min(460px,calc(100svh - 470px))))}#grx.big .cell b{font-size:clamp(15px,4.6vw,24px)}#grx.big .cell i{font-size:9px}
+/* Big day on phones: drop the page title (the eyebrow already says Big Gridectomy), shorter keys, grid sized to the space left */
+@media (max-width:520px){body:has(#grx.big) .gtitle{display:none}#grx.big .wrap{gap:6px}#grx.big .key{height:42px}#grx.big .cluebar{min-height:42px}
+#grx.big .grid{width:min(100%,460px,max(200px,calc(100vh - 400px)));width:min(100%,460px,max(200px,calc(100svh - 400px)))}}

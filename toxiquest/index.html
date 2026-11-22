@@ -49,5 +49,6 @@ h1{font:400 clamp(34px,8vw,52px)/1 var(--display);margin:4px 0 0}
   document.getElementById("share").onclick = function () { var t = "Toxiquest ☣ Toxicology December\n" + c + "/30 cases closed, " + s + "/90 ★\nmaladywise.com/toxiquest/";
     if (navigator.share) navigator.share({ text: t }).catch(function () {}); else if (navigator.clipboard) navigator.clipboard.writeText(t).then(function () { document.getElementById("share").textContent = "Copied!"; }); };
 })();
-</script><!-- static-nav --><nav class="static-nav" aria-label="Site sections"><a href="/medical-games/">Puzzles</a> <a href="/conditions/" class="sn-med">Conditions</a> <a href="/medicines/" class="sn-med">Medicines</a> <a href="/blood-tests/" class="sn-med">Blood tests</a> <a href="/exercises/" class="sn-med">Exercises</a> <a href="/tools/" class="sn-med">Tools</a> <a href="/quizzes/">Quizzes</a> <a href="/specialists/" class="sn-med">Specialists</a> <a href="/days/">Health days</a></nav><!-- /static-nav -->
+</script>
+<!-- static-nav --><nav class="static-nav" aria-label="Site sections"><a href="/medical-games/">Puzzles</a> <a href="/conditions/" class="sn-med">Conditions</a> <a href="/medicines/" class="sn-med">Medicines</a> <a href="/blood-tests/" class="sn-med">Blood tests</a> <a href="/exercises/" class="sn-med">Exercises</a> <a href="/tools/" class="sn-med">Tools</a> <a href="/quizzes/">Quizzes</a> <a href="/specialists/" class="sn-med">Specialists</a> <a href="/days/">Health days</a></nav><!-- /static-nav -->
 </body></html>

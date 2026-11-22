@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block); Sundays: rows[7] = Big Gridectomy (7x7), across/down:[{n,r,c,len,clue}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10";
   // Normie mode: everyday clues from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Gridectomy (Normie)" : "Gridectomy";
   var root = document.getElementById("grx");

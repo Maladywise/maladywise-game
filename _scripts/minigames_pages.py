@@ -26,7 +26,7 @@ HEAD = """<!doctype html>
 <link rel="stylesheet" href="../assets/mg.css?v=3">
 <style>%(css)s</style>
 <script defer src="../assets/games.js?v=127"></script>
-<script defer src="../assets/shell.js?v=315"></script>
+<script defer src="../assets/shell.js?v=316"></script>
 </head>
 <body>
 <main class="wrap mg-page">

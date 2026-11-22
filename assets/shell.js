@@ -1408,14 +1408,15 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         (tag ? '<span class="tl-tag">' + tag + "</span>" : "") + '<span class="tl-ic">' + (window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 46) : g.icon) + (dn ? '<span class="tick" aria-label="Done today">✓</span>' : "") + "</span>" +
         "<b>" + g.name + "</b><small>" + (g.kind || "") + "</small>" + (chip || "") + "</" + t + ">";
     }
-    // Games the player has hidden (mw-hide-games). They move to the "Hidden games" section at the bottom and can be shown again.
+    // Games the player has hidden (mw-hide-games). They move to the "Hidden games" section below Arcade and can be shown again.
     var TL_EDIT = false;
     function userHidden() { var h = get("mw-hide-games", []); return Array.isArray(h) ? h : []; }
     function tiles(skip) {
       var hid = userHidden(), list = order().filter(function (g) { return skip.indexOf(g.id) < 0 && hid.indexOf(g.id) < 0; });
+      list.sort(function (x, y) { return (y.id === "zebritis") - (x.id === "zebritis"); }); // most played: top of the list
       if (!list.length && !hiddenTiles(true)) return "";
       return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
-        (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move to the bottom of the page.</p>' : "") +
+        (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move below Arcade.</p>' : "") +
         '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + hiddenTiles(true) + list.map(function (g) { return tile(g).replace(' data-g="', ' data-h="1" data-g="'); }).join("") + extraTiles(hid, false) + "</div></section>";
     }
     // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
