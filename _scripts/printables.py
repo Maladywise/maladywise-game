@@ -209,11 +209,27 @@ for c in C:
     main = ('<p class="meta"><a href="/printables/">Printables</a> · Criteria</p>\n<h1>Printable %s</h1>\n<p class="lede">%s</p>\n%s\n%s') % (E(c["name"]), E(c["lede"]), bar(), sheet)
     page(c["slug"], "Printable %s (Free Checklist PDF)" % c["name"], c["lede"] + " One A4 page, free to print or save as a PDF.", main)
 
+
+# ---------- POTS active stand test record (our own form, following the Australian POTS Foundation method) ----------
+rows = "".join("<tr><td>%s</td><td></td><td></td><td></td></tr>" % t for t in ["Lying, after 5 minutes", "Standing: straight away", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes", "6 minutes", "7 minutes", "8 minutes", "9 minutes", "10 minutes"])
+sheet = ('<div class="pr-sheet"><h2>POTS active stand test: record sheet</h2>' + WHO +
+  '<p class="pr-sub">Lie still for 5 minutes, then stand up without leaning or fidgeting. Have someone record heart rate (HR) and blood pressure (BP). Sit or lie down straight away if you feel faint.</p>'
+  '<table class="pr-t"><tr><th style="text-align:left">Time</th><th>Heart rate (beats/min)</th><th>Blood pressure (mmHg)</th><th style="text-align:left">Symptoms (dizzy, foggy, shaky, short of breath, colour change in legs)</th></tr>' + rows + '</table>'
+  '<p class="pr-score"><span>Highest standing HR − lying HR = ______</span><span>Lowest standing BP: ______</span></p>'
+  '<ul class="pr-key"><li>Supports POTS: heart rate rises by 30 or more (40 or more if under 19) on at least two readings within 10 minutes, without blood pressure falling by 20/10 mmHg or more.</li>'
+  '<li>One normal test doesn’t rule POTS out. Repeat on a bad day, in the morning, before caffeine and fluids.</li>'
+  '<li>Bring this sheet to your GP. It doesn’t diagnose POTS on its own: other causes need to be checked.</li></ul>'
+  '<p class="pr-foot">Method as recommended by the Australian POTS Foundation (Seeley, Healthed 2025); criteria from the Heart Rhythm Society consensus. Printed from maladywise.com/printables/pots-stand-test/.</p></div>')
+main = ('<p class="meta"><a href="/printables/">Printables</a> · Record sheet</p>\n<h1>POTS stand test record sheet</h1>\n'
+        '<p class="lede">A one-page sheet for recording lying and standing heart rate and blood pressure, the test GPs use to check for POTS.</p>\n' + bar(' <a href="/pots/">About POTS</a>') + "\n" + sheet)
+page("pots-stand-test", "POTS Stand Test Record Sheet (Free Printable PDF)", "Free printable POTS active stand test sheet: lying and standing heart rate and blood pressure every minute for 10 minutes, with what the results mean.", main)
+
 # ---------- hub ----------
 def li(slug, t, s): return '<li><a href="/printables/%s/"><b>%s</b><span>%s</span></a></li>' % (slug, E(t), E(s))
 hub = ('<p class="meta"><a href="/tools/">Tools</a> · Printables</p>\n<h1>Printables</h1>\n'
        '<p class="lede">Free one-page questionnaires and criteria checklists. Print them or save as a PDF. Nothing you fill in online is stored.</p>\n'
        '<h2>Questionnaires</h2><ul class="pr-hub">' + "".join(li(q["slug"], q["name"], q["full"].split(" (")[0]) for q in Q) + '</ul>\n'
+       '<h2>Record sheets</h2><ul class="pr-hub">' + li("pots-stand-test", "POTS stand test", "Lying and standing heart rate, 10 minutes") + '</ul>\n'
        '<h2>Diagnostic criteria checklists</h2><ul class="pr-hub">' + "".join(li(c["slug"], c["name"], c["lede"].split(":")[0]) for c in C) + '</ul>\n'
        '<h2>Not here, and why</h2><ul>'
        '<li><b>DASS-21:</b> free for clinicians, but its authors ask that it isn’t offered to the public on websites. Ask your GP or psychologist. Details: www2.psy.unsw.edu.au/dass.</li>'
