@@ -1,5 +1,5 @@
 /* Fridaemia: the Friday 5pm results inbox. Open all day Friday, the player's local time.
-   Eight results land at knock-off time. For each: ED now, call today, or Monday is fine. Same eight for everyone that week. */
+   Eight results land at knock-off time. For each: ED now, call today, or Monday is fine. Same eight for everyone that week; no repeats until the whole bank is used. */
 (function () {
   var G = window.MG, $ = G.$;
   var ED = "ed", CALL = "call", MON = "mon";
@@ -123,7 +123,50 @@
     ["Bicarbonate 12, anion gap 24.", "19-year-old with type 1 diabetes, vomiting, sample from this morning.", ED, "Likely DKA. ED now: insulin and fluids."],
     ["Urine: protein 3+, blood 2+.", "8-year-old, puffy face, cola-coloured urine, BP 140/95.", ED, "Nephritic syndrome with high BP in a child. ED today."],
     ["Swab from a leg ulcer: MRSA.", "Well 70-year-old, ulcer healing, no spreading redness.", MON, "Colonisation, not infection. No antibiotics needed if healing."],
-    ["Sputum: Mycobacterium tuberculosis on PCR.", "35-year-old with cough for 2 months, lives with young children.", CALL, "Call today: TB service, start treatment, contact tracing (especially the children). Not usually an ED problem."]
+    ["Sputum: Mycobacterium tuberculosis on PCR.", "35-year-old with cough for 2 months, lives with young children.", CALL, "Call today: TB service, start treatment, contact tracing (especially the children). Not usually an ED problem."],
+    ["Carboxyhaemoglobin 18%.", "34-year-old with headaches. Her partner and kids have them too. Gas heater on all week.", ED, "Carbon monoxide poisoning. ED for high-flow oxygen, and get the whole household out and checked tonight. Turn the heater off."],
+    ["Blood film: fragmented red cells (schistocytes), platelets 22 × 10⁹/L.", "31-year-old, bruising, new confusion this afternoon.", ED, "Suspect TTP: a blood emergency treated with urgent plasma exchange. ED now. Don’t give platelets."],
+    ["Blood culture: gram-negative diplococci.", "19-year-old seen this morning with fever and aches, sent home.", ED, "Likely meningococcus. Recall to ED immediately for IV antibiotics; close contacts need clearance antibiotics."],
+    ["Malaria film: Plasmodium falciparum, 3% of red cells.", "26-year-old, back from Papua New Guinea 10 days ago, fevers.", ED, "Falciparum can turn severe within hours. ED now for IV artesunate assessment."],
+    ["Ultrasound: no blood flow to the left testis.", "15-year-old, sudden testicular pain this afternoon.", ED, "Torsion. Surgery within about 6 hours saves the testis. ED now, nil by mouth."],
+    ["CT KUB: 6 mm stone blocking the right ureter, swollen kidney.", "48-year-old, now shivering with a fever of 38.9 °C.", ED, "An infected, blocked kidney needs urgent drainage plus IV antibiotics. ED now."],
+    ["ECG: type 1 Brugada pattern.", "29-year-old who fainted while resting yesterday. Brother died suddenly at 32.", ED, "Brugada with unexplained fainting and family sudden death risks fatal arrhythmia. ED and cardiology tonight. Treat any fever promptly."],
+    ["Staging CT: large pulmonary embolism at the split of the pulmonary arteries.", "66-year-old having cancer staging, ‘a bit puffed’.", ED, "An incidental large PE still needs urgent anticoagulation and assessment of heart strain. ED now."],
+    ["MRI spine: metastasis pressing on the spinal cord at T8.", "72-year-old with prostate cancer, legs weaker this week.", ED, "Spinal cord compression. Dexamethasone and urgent oncology or surgery decide whether he walks again. ED now."],
+    ["Haemoglobin 58 g/L (was 131 last month).", "70-year-old on aspirin and ibuprofen, black stools for 3 days.", ED, "Upper GI bleed until proven otherwise. ED for transfusion and endoscopy. Stop the ibuprofen."],
+    ["INR 3.0 (in range).", "82-year-old on warfarin who fell this morning, hit her head, now has a headache.", ED, "A head strike on an anticoagulant needs a CT head, even with an in-range INR. ED now."],
+    ["Glucose 42 mmol/L, sodium 151, osmolality 345.", "79-year-old with type 2 diabetes, drowsy and not drinking.", ED, "Hyperosmolar hyperglycaemic state. ED for slow IV fluids and monitoring. It can be deadlier than DKA."],
+    ["Blood culture: Listeria monocytogenes.", "29-year-old, 30 weeks pregnant, fever 2 days ago.", ED, "Listeria in pregnancy can harm the baby. ED for IV amoxicillin and fetal monitoring."],
+    ["Chest X-ray: free air under the diaphragm.", "68-year-old with sudden severe tummy pain this morning.", ED, "A perforated bowel or ulcer. ED now, nil by mouth, surgical review."],
+    ["Home ECG monitor: complete heart block, rate 34.", "84-year-old, dizzy and tired for a week.", ED, "Third-degree block with symptoms needs monitoring and usually a pacemaker. ED now."],
+    ["Full blood count: haemoglobin 82, platelets 40, neutrophils 0.9.", "67-year-old, tired and bruising, no fever.", CALL, "All three cell lines are low. Call today for urgent haematology review this week. ED tonight if fever or bleeding."],
+    ["Ultrasound: DVT in the left femoral vein.", "52-year-old, swollen calf after a long drive, not breathless.", CALL, "Call today and start a blood thinner (e.g. apixaban) tonight. ED if chest pain or breathlessness."],
+    ["Serum hCG 48, then 52 two days later.", "28-year-old, 6 weeks since last period, no pain or bleeding.", CALL, "A flat hCG with no pregnancy seen means an ectopic is possible. Call today, refer to the early pregnancy unit, and ED if pain, bleeding or fainting."],
+    ["Measles IgM positive.", "22-year-old with a rash, back from Bali, works in childcare.", CALL, "Call today and notify public health. Isolate until 4 days after the rash; contacts may need vaccine or immunoglobulin."],
+    ["Skin biopsy: melanoma, 1.2 mm thick.", "58-year-old, mole removed last week.", CALL, "Call to explain and arrange wider excision and specialist review. Urgent, but not an emergency."],
+    ["Ultrasound: new 3 cm liver lesion.", "64-year-old, bowel cancer treated 2 years ago.", CALL, "Possible metastasis. Call today, arrange CT and oncology review."],
+    ["Hepatitis A IgM positive.", "31-year-old cook with jaundice, feels okay.", CALL, "Call today: public health notification, exclusion from food handling, vaccine for close contacts within 2 weeks."],
+    ["INR 1.2.", "61-year-old on warfarin for a mechanical mitral valve.", CALL, "A low INR with a mechanical mitral valve risks clotting on the valve. Call today: start enoxaparin bridging and adjust warfarin."],
+    ["Phenytoin level 110 µmol/L (target 40–80).", "45-year-old, slightly unsteady, no falls, no vomiting.", CALL, "Toxic level. Call today to withhold doses and recheck. ED if confused, falling or vomiting."],
+    ["Echo: severe aortic stenosis (valve area 0.8 cm²).", "77-year-old breathless walking uphill, no fainting.", CALL, "Symptomatic severe AS needs prompt cardiology review for valve replacement. Call to arrange; avoid heavy exertion. ED if fainting or chest pain."],
+    ["Strongyloides serology positive.", "50-year-old born in Vietnam, starting high-dose prednisolone on Monday.", CALL, "Steroids can trigger fatal hyperinfection. Call today: treat with ivermectin before the steroids start."],
+    ["Potassium 5.9 mmol/L, not haemolysed.", "66-year-old on an ACE inhibitor, well, normal ECG.", CALL, "Call today: stop potassium-raising medicines and supplements, cut back high-potassium foods, repeat in 1–2 days."],
+    ["Hepatitis C RNA positive (new).", "38-year-old, well, normal liver tests.", MON, "Curable with 8–12 weeks of tablets. Call next week to discuss treatment and testing contacts."],
+    ["Faecal calprotectin 1,200 µg/g.", "24-year-old with loose stools for 6 weeks, no blood, eating well.", MON, "Suggests bowel inflammation such as Crohn’s. Refer to gastroenterology next week. Sooner if bleeding, weight loss or night symptoms."],
+    ["Skin biopsy: basal cell carcinoma.", "70-year-old, small spot on the back.", MON, "Slow-growing. Plan excision in the coming weeks."],
+    ["Thyroid ultrasound: 1.8 cm nodule, TI-RADS 5.", "44-year-old, normal thyroid tests.", MON, "Needs a fine needle biopsy, arranged next week. Not an emergency."],
+    ["Trichomonas PCR positive.", "27-year-old with discharge.", MON, "Treat with metronidazole, plus partner treatment. Monday is fine."],
+    ["Haemoglobin 92 g/L, ferritin 9.", "29-year-old, 28 weeks pregnant, tired.", MON, "Iron deficiency in pregnancy. Start iron or arrange an infusion next week."],
+    ["Urine culture: E. coli.", "74-year-old with a long-term catheter, no fever or new symptoms.", MON, "Catheters are almost always colonised. No antibiotics without symptoms."],
+    ["Lipoprotein(a) 250 nmol/L.", "45-year-old with a family history of early heart attacks.", MON, "A lifelong inherited risk. Tighten other risk factors (LDL, blood pressure, smoking) at the next visit."],
+    ["Uric acid 0.52 mmol/L.", "50-year-old, no gout ever.", MON, "High urate without gout or kidney stones usually doesn’t need medicine."],
+    ["ANA positive 1:160, speckled.", "36-year-old, well, tested for tiredness.", MON, "A low-titre positive ANA is common in healthy people. Only follow up if symptoms of autoimmune disease."],
+    ["Vitamin B12 180 pmol/L (borderline), active B12 normal.", "55-year-old, no nerve symptoms.", MON, "Normal active B12 makes true deficiency unlikely. Recheck in a few months."],
+    ["Chest X-ray: old healed rib fractures.", "60-year-old, no history of injury mentioned.", MON, "Worth asking about falls, alcohol and bone health at the next visit, and screening for safety at home."],
+    ["MRI knee: degenerative tear of the medial meniscus.", "58-year-old with knee aches, no locking.", MON, "Common with age. Physio and exercise work as well as keyhole surgery."],
+    ["CT chest: 4 mm lung nodule.", "45-year-old non-smoker.", MON, "Tiny nodules in low-risk people usually need no follow-up scan."],
+    ["Ultrasound: simple 3 cm kidney cyst.", "62-year-old, scanned for back pain.", MON, "Simple cysts are harmless and need no follow-up."],
+    ["Ultrasound: fatty liver.", "48-year-old, ALT mildly raised.", MON, "Check a fibrosis score (FIB-4), weight, diabetes and alcohol at the next visit."]
   ];
   function now() {
     var q = new URLSearchParams(location.search).get("t"); // testing: ?t=open
@@ -132,7 +175,17 @@
   function isOpen(d) { return d.getDay() === 5; }
   function nextOpen(d) { var n = new Date(d); n.setSeconds(0, 0); for (var i = 0; i < 8; i++) { var c = new Date(n); c.setDate(n.getDate() + i); c.setHours(0, 0, 0, 0); if (c.getDay() === 5 && c > d) return c; } return null; }
   var T = now(), WK = G.week(T), r = G.rng("fridaemia-" + WK);
-  var SET = G.shuffle(POOL, r).slice(0, 8), idx = 0, score = 0, marks = [];
+  // Fixed order (22 Nov 2026): each result is used once before any repeats. Results are dealt ED / call / Monday in turn,
+  // so every week gets a mix; the 20-week cycle restarts after the whole bank is used. Append new rows at the end of POOL.
+  var ORDER = (function () {
+    var o = G.rng("fridaemia-order-v1"), by = { ed: [], call: [], mon: [] }, out = [];
+    POOL.forEach(function (x) { by[x[2]].push(x); });
+    ["ed", "call", "mon"].forEach(function (k) { by[k] = G.shuffle(by[k], o); });
+    while (by.ed.length || by.call.length || by.mon.length) ["ed", "call", "mon"].forEach(function (k) { if (by[k].length) out.push(by[k].shift()); });
+    return out;
+  })();
+  var WN = Math.floor((Date.UTC(T.getFullYear(), T.getMonth(), T.getDate()) / 864e5 + 3) / 7), BLOCKS = Math.floor(ORDER.length / 8);
+  var SET = G.shuffle(ORDER.slice((WN % BLOCKS) * 8, (WN % BLOCKS) * 8 + 8), r), idx = 0, score = 0, marks = [];
   var KEY = "mw-fridaemia-" + WK;
 
   function lockView() {

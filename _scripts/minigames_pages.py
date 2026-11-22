@@ -69,7 +69,7 @@ PAGES = {
     <div class="mg-card" id="fr-q"></div>
   </section>
 """ + END % dict(p="fr", etitle="Inbox cleared. Keys in hand.", again="Back to the start"),
-  scripts='<script defer src="fridaemia.js?v=3"></script>'),
+  scripts='<script defer src="fridaemia.js?v=4"></script>'),
  "triagic": dict(
   title="Triagic", robots="index,follow", theme="#B3261E", canon='<link rel="canonical" href="https://maladywise.com/triagic/">\n',
   desc="Shh. You said the Q word. A secret Malady Wise game.",
