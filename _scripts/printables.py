@@ -56,6 +56,7 @@ def bar(extra=""):
     return '<p class="pr-bar"><button type="button" class="pr-btn" data-print>&#128424; Print or save as PDF</button>' + extra + "</p>"
 
 # ---------- questionnaires ----------
+YN = [("No", 0), ("Yes", 1)]
 Q = [
  dict(slug="phq-9", name="PHQ-9", full="Patient Health Questionnaire (PHQ-9)", what="depression",
   stem="Over the last 2 weeks, how often have you been bothered by any of the following problems?",
@@ -123,6 +124,40 @@ Q = [
   extra="",
   key=["Count the ticks in shaded boxes.", "4 or more suggests symptoms consistent with adult ADHD and that a full assessment is worthwhile.", "A screen only: diagnosis needs a clinical assessment, including childhood history."],
   credit="© New York University and Ronald C. Kessler, PhD. All rights reserved. Kessler RC et al. Psychological Medicine 2005;35:245–56. Free to use; the official version is at hcp.med.harvard.edu/ncs/asrs.php.",
+  online=""),
+ dict(slug="stop-bang", name="STOP-Bang", full="STOP-Bang questionnaire", what="obstructive sleep apnoea risk",
+  stem="Answer yes or no to each question.",
+  opts=None,
+  items=[("Snoring: Do you snore loudly (louder than talking or loud enough to be heard through closed doors)?", YN),
+         ("Tired: Do you often feel tired, fatigued or sleepy during the daytime?", YN),
+         ("Observed: Has anyone observed you stop breathing during your sleep?", YN),
+         ("Pressure: Do you have or are you being treated for high blood pressure?", YN),
+         ("BMI: Is your body mass index more than 35 kg/m²?", YN),
+         ("Age: Are you over 50 years old?", YN),
+         ("Neck: Is your neck circumference greater than 40 cm?", YN),
+         ("Gender: Are you male?", YN)],
+  extra="",
+  key=["Count the yes answers. Total 0 to 8.", "0–2 low risk · 3–4 intermediate risk · 5–8 high risk of obstructive sleep apnoea.", "Also high risk: 2 or more of the first four (STOP) plus male, BMI over 35 or neck over 40 cm. A sleep study confirms it."],
+  credit="STOP-Bang © University Health Network (Chung F et al., Anesthesiology 2008; Chest 2016). Free for clinical, academic and non-commercial use; reproduced unmodified with this notice. www.stopbang.ca",
+  online=""),
+ dict(slug="falls-risk", name="Falls risk check", full="Falls risk self-check (Stay Independent)", what="risk of falls in older adults",
+  stem="Tick yes or no for each statement.",
+  opts=None,
+  items=[("I have fallen in the past year.", [("No", 0), ("Yes", 2)]),
+         ("I use or have been advised to use a walking stick or walker to get around safely.", [("No", 0), ("Yes", 2)]),
+         ("Sometimes I feel unsteady when I am walking.", YN),
+         ("I steady myself by holding onto furniture when walking at home.", YN),
+         ("I am worried about falling.", YN),
+         ("I need to push with my hands to stand up from a chair.", YN),
+         ("I have some trouble stepping up onto a kerb.", YN),
+         ("I often have to rush to the toilet.", YN),
+         ("I have lost some feeling in my feet.", YN),
+         ("I take medicine that sometimes makes me feel light-headed or more tired than usual.", YN),
+         ("I take medicine to help me sleep or improve my mood.", YN),
+         ("I often feel sad or depressed.", YN)],
+  extra="",
+  key=["Add the points. 4 or more means you may be at risk of falling.", "Take this to your GP: many causes can be fixed (medicines, eyesight, feet, home hazards, strength and balance exercise).", "Strength and balance programs (such as tai chi) reduce falls by about a quarter."],
+  credit="Adapted from the CDC STEADI ‘Stay Independent’ brochure (Rubenstein et al., J Safety Res 2011), a US public domain resource; spelling adapted for Australia.",
   online=""),
 ]
 FREQ = [("Never", 0), ("Less than monthly", 1), ("Monthly", 2), ("Weekly", 3), ("Daily or almost daily", 4)]
@@ -224,16 +259,31 @@ main = ('<p class="meta"><a href="/printables/">Printables</a> · Record sheet</
         '<p class="lede">A one-page sheet for recording lying and standing heart rate and blood pressure, the test GPs use to check for POTS.</p>\n' + bar(' <a href="/pots/">About POTS</a>') + "\n" + sheet)
 page("pots-stand-test", "POTS Stand Test Record Sheet (Free Printable PDF)", "Free printable POTS active stand test sheet: lying and standing heart rate and blood pressure every minute for 10 minutes, with what the results mean.", main)
 
+
+# ---------- Beighton score (public domain scoring; our own layout) ----------
+bt = [("Bend the little finger back beyond 90°", True), ("Bring the thumb to touch the forearm", True), ("Elbow straightens past 10°", True), ("Knee straightens past 10°", True), ("Palms flat on the floor with knees straight", False)]
+rows = "".join("<tr><td class='n'>%d</td><td class='q'>%s</td><td class='b'><i></i></td><td class='b'>%s</td></tr>" % (i + 1, E(t), "<i></i>" if two else "–") for i, (t, two) in enumerate(bt))
+sheet = ('<div class="pr-sheet"><h2>Beighton score: joint hypermobility</h2>' + WHO +
+  '<p class="pr-sub">One point for each side that can do it. A clinician should check the angles.</p>'
+  "<table class='pr-t'><tr><th></th><th style='text-align:left'>Test</th><th>Left (1)</th><th>Right (1)</th></tr>" + rows + "</table>"
+  '<p class="pr-score"><span>Total (out of 9): ______</span></p>'
+  '<ul class="pr-key"><li>Generalised hypermobility: 5 or more in adults (6 or more before puberty; 4 or more over age 50).</li>'
+  '<li>Hypermobility on its own is common and often harmless. It matters when it comes with pain, injuries or other features: see the <a href="/printables/heds-criteria/">hEDS checklist</a>.</li></ul>'
+  '<p class="pr-foot">Beighton P et al., Ann Rheum Dis 1973; age cut-offs from the 2017 hEDS criteria (Malfait et al.). Printed from maladywise.com/printables/beighton-score/.</p></div>')
+main = ('<p class="meta"><a href="/printables/">Printables</a> · Score sheet</p>\n<h1>Printable Beighton score</h1>\n'
+        '<p class="lede">A one-page sheet for scoring joint hypermobility (the 9-point Beighton score), ready to print or save as a PDF.</p>\n' + bar(' <a href="/ehlers-danlos-syndrome/">About EDS and hypermobility</a>') + "\n" + sheet)
+page("beighton-score", "Printable Beighton Score Sheet (Free PDF)", "Free printable Beighton score sheet for joint hypermobility: 9 points, left and right, with adult, child and over-50 cut-offs.", main)
+
 # ---------- hub ----------
 def li(slug, t, s): return '<li><a href="/printables/%s/"><b>%s</b><span>%s</span></a></li>' % (slug, E(t), E(s))
 hub = ('<p class="meta"><a href="/tools/">Tools</a> · Printables</p>\n<h1>Printables</h1>\n'
        '<p class="lede">Free one-page questionnaires and criteria checklists. Print them or save as a PDF. Nothing you fill in online is stored.</p>\n'
        '<h2>Questionnaires</h2><ul class="pr-hub">' + "".join(li(q["slug"], q["name"], q["full"].split(" (")[0]) for q in Q) + '</ul>\n'
-       '<h2>Record sheets</h2><ul class="pr-hub">' + li("pots-stand-test", "POTS stand test", "Lying and standing heart rate, 10 minutes") + '</ul>\n'
+       '<h2>Record sheets</h2><ul class="pr-hub">' + li("pots-stand-test", "POTS stand test", "Lying and standing heart rate, 10 minutes") + li("beighton-score", "Beighton score", "Joint hypermobility, 9 points") + '</ul>\n'
        '<h2>Diagnostic criteria checklists</h2><ul class="pr-hub">' + "".join(li(c["slug"], c["name"], c["lede"].split(":")[0]) for c in C) + '</ul>\n'
        '<h2>Not here, and why</h2><ul>'
        '<li><b>DASS-21:</b> free for clinicians, but its authors ask that it isn’t offered to the public on websites. Ask your GP or psychologist. Details: www2.psy.unsw.edu.au/dass.</li>'
        '<li><b>ASRS 18-question checklist:</b> needs permission; the free 6-question screener is here.</li><li><b>Epworth Sleepiness Scale:</b> licensed, so we can’t reproduce it. Your GP or sleep clinic will have a copy.</li>'
        '<li><b>RAADS-R:</b> copyrighted; ask the clinician doing your autism assessment.</li></ul>')
-page("", "Printables: Free Printable Health Questionnaires and Criteria", "Free printable PHQ-9, GAD-7, K10, AUDIT, EPDS and ASRS questionnaires, plus checklists for fibromyalgia, hEDS, ADHD and depression criteria. One A4 page each.", hub)
+page("", "Printables: Free Printable Health Questionnaires and Criteria", "Free printable PHQ-9, GAD-7, K10, AUDIT, EPDS, ASRS, STOP-Bang and falls risk questionnaires, a Beighton score sheet, plus checklists for fibromyalgia, hEDS, ADHD and depression criteria. One A4 page each.", hub)
 print("printables built:", len(Q) + len(C) + 1)
