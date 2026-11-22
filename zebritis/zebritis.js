@@ -3,7 +3,7 @@
    Tiers in the data: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt).
    Scoring is scaled 1-20 by rarity within each prompt (scaleP): the data unicorn scores 20; every other answer scores 1-19
    by its rarity rank (ties share the middle rank). Bands: horse 1-4, pony 5-8, donkey 9-13, zebra 14-17, unicorn 18-20.
-   Live rarity: once a prompt has 100+ player answers that day, points come from real shares (see zApply).
+   Live rarity: once a prompt has 500+ player answers that day, points come from real shares (see zApply).
    Ranked statistics prompts (optional): answer = [name, tier, [synonyms], "Wiki_Title" or null, rank, "value"?] and prompt "src" (short source line).
    Ties share a rank number. Never reorder a: saved picks are indices into it. */
 (function () {
@@ -247,7 +247,7 @@
   // Each player's one accepted answer per prompt is counted anonymously (one count per device per prompt; only list answers,
   // sent as their index, so nothing off the list can ever be counted). Once a prompt has ZMIN answers that day, its points
   // come from real shares: named by 2.5% or fewer = 20, each further 2.5% drops a point (min 1). Below ZMIN, the data tiers stand.
-  var ZURL = "https://mw-presence.onrender.com", ZMIN = 100, zLive = {};
+  var ZURL = "https://mw-presence.onrender.com", ZMIN = 500, zLive = {};
   function zId() { var k = "mw-zid", v = load(k, ""); if (!v) { v = Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 8); put(k, v); } return v; }
   function zKey(i) { return st.swap === i ? "s" : String(i); }
   function zSend(i, a) {
