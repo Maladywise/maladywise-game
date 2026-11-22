@@ -1,0 +1,1143 @@
+[
+ {
+  "date": "2027-03-01",
+  "number": 136,
+  "difficulty": "Easy",
+  "title": "Zigzag lights",
+  "answer": "Migraine with aura",
+  "accept": [
+   "migraine",
+   "migraine with aura",
+   "classic migraine",
+   "aura",
+   "ophthalmic migraine"
+  ],
+  "clues": [
+   {
+    "t": "26-year-old woman, sudden shimmering zigzag in her vision."
+   },
+   {
+    "t": "It spread slowly across one side over 20 minutes, then faded."
+   },
+   {
+    "t": "Then a throbbing headache on one side."
+   },
+   {
+    "t": "She vomited and had to lie in a dark room."
+   },
+   {
+    "t": "Her mother gets the same headaches."
+   },
+   {
+    "t": "Neurological examination is completely normal afterwards."
+   }
+  ],
+  "pearl": "Aura builds gradually and fully reverses within an hour. Sudden aura that doesn’t build up, or comes with weakness, needs urgent review. Oestrogen-containing pills are usually avoided with aura."
+ },
+ {
+  "date": "2027-03-02",
+  "number": 137,
+  "difficulty": "Easy",
+  "title": "Hot potato voice",
+  "answer": "Strep throat (streptococcal tonsillitis)",
+  "accept": [
+   "strep throat",
+   "streptococcal tonsillitis",
+   "tonsillitis",
+   "streptococcal pharyngitis",
+   "group a strep",
+   "group a streptococcus",
+   "strep pharyngitis"
+  ],
+  "clues": [
+   {
+    "t": "15-year-old girl, sore throat and fever since yesterday."
+   },
+   {
+    "t": "It hurts to swallow, even her saliva."
+   },
+   {
+    "t": "No cough and no runny nose."
+   },
+   {
+    "t": "Swollen tender glands at the front of her neck."
+   },
+   {
+    "t": "Red tonsils with white pus on them."
+   },
+   {
+    "t": "Throat swab grows group A Streptococcus.",
+    "d": 1
+   }
+  ],
+  "pearl": "Fever, pus on the tonsils, tender neck glands and no cough together make strep more likely. Penicillin for 10 days in Aboriginal and Torres Strait Islander and other high-risk people helps prevent rheumatic fever."
+ },
+ {
+  "date": "2027-03-03",
+  "number": 138,
+  "difficulty": "Medium",
+  "title": "Rolling over in bed",
+  "answer": "Benign paroxysmal positional vertigo (BPPV)",
+  "accept": [
+   "bppv",
+   "benign paroxysmal positional vertigo",
+   "positional vertigo",
+   "canalithiasis",
+   "benign positional vertigo"
+  ],
+  "clues": [
+   {
+    "t": "62-year-old woman, the room spins when she rolls onto her right side."
+   },
+   {
+    "t": "Each spin lasts under a minute."
+   },
+   {
+    "t": "Also when she looks up to a high shelf."
+   },
+   {
+    "t": "No hearing loss, no headache, no weakness."
+   },
+   {
+    "t": "Between episodes she feels fine."
+   },
+   {
+    "t": "Dix–Hallpike test to the right brings on vertigo and a twisting nystagmus.",
+    "d": 1
+   }
+  ],
+  "pearl": "Loose crystals in the inner ear’s canal cause it. The Epley manoeuvre fixes most cases in one or two goes. Tablets for dizziness don’t help and slow recovery."
+ },
+ {
+  "date": "2027-03-04",
+  "number": 139,
+  "difficulty": "Medium",
+  "title": "Pain after the roast dinner",
+  "answer": "Acute cholecystitis",
+  "accept": [
+   "acute cholecystitis",
+   "cholecystitis",
+   "gallbladder infection",
+   "gallbladder inflammation",
+   "calculous cholecystitis"
+  ],
+  "clues": [
+   {
+    "t": "48-year-old woman, pain under her right ribs since last night."
+   },
+   {
+    "t": "It started an hour after a big fatty dinner."
+   },
+   {
+    "t": "Unlike her usual gallstone pains, it hasn’t gone away."
+   },
+   {
+    "t": "Fever 38.4 °C."
+   },
+   {
+    "t": "Pressing under her right ribs makes her stop breathing in.",
+    "d": 1
+   },
+   {
+    "t": "Ultrasound: thick-walled gallbladder with stones and fluid around it.",
+    "d": 1
+   }
+  ],
+  "pearl": "Biliary colic settles within hours; cholecystitis doesn’t and comes with fever. Murphy’s sign is the catch on breathing in. Treatment: antibiotics and gallbladder removal, often in the same admission."
+ },
+ {
+  "date": "2027-03-05",
+  "number": 140,
+  "difficulty": "Hard",
+  "title": "The eye that went grey",
+  "answer": "Multiple sclerosis",
+  "accept": [
+   "multiple sclerosis",
+   "ms",
+   "relapsing remitting multiple sclerosis",
+   "relapsing remitting ms",
+   "rrms",
+   "demyelinating disease"
+  ],
+  "clues": [
+   {
+    "t": "29-year-old woman, blurred vision in her left eye for 4 days."
+   },
+   {
+    "t": "It hurts to move the eye, and red looks washed out."
+   },
+   {
+    "t": "Two years ago, her right leg went numb for 3 weeks, then recovered."
+   },
+   {
+    "t": "Bending her neck sends a buzz down her back."
+   },
+   {
+    "t": "Hot showers make her symptoms flare briefly."
+   },
+   {
+    "t": "MRI: several white matter lesions near the ventricles, some enhancing.",
+    "d": 1
+   }
+  ],
+  "pearl": "Optic neuritis is a common first sign. Two episodes in different places at different times is the key pattern. Starting disease-modifying treatment early lowers relapses and disability."
+ },
+ {
+  "date": "2027-03-06",
+  "number": 141,
+  "difficulty": "Hard",
+  "title": "Staring eyes, shaking hands",
+  "answer": "Graves’ disease",
+  "accept": [
+   "graves disease",
+   "graves' disease",
+   "graves",
+   "hyperthyroidism",
+   "thyrotoxicosis",
+   "autoimmune hyperthyroidism",
+   "basedow disease"
+  ],
+  "clues": [
+   {
+    "t": "34-year-old woman, 6 kg weight loss despite eating more."
+   },
+   {
+    "t": "Heart racing, hands shaking, always too hot."
+   },
+   {
+    "t": "Her friends say she looks like she’s staring."
+   },
+   {
+    "t": "Her neck looks fuller, with a soft swelling that hums under the stethoscope."
+   },
+   {
+    "t": "TSH undetectable, free T4 very high.",
+    "d": 1
+   },
+   {
+    "t": "TSH receptor antibodies positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "The eye signs and the receptor antibodies separate it from other overactive thyroid causes. Smoking makes the eye disease much worse. Treatment options: carbimazole, radioactive iodine or surgery."
+ },
+ {
+  "date": "2027-03-07",
+  "number": 142,
+  "difficulty": "Genius",
+  "title": "No pulse in her arm",
+  "answer": "Takayasu arteritis",
+  "accept": [
+   "takayasu arteritis",
+   "takayasu's arteritis",
+   "takayasu",
+   "pulseless disease",
+   "aortic arch syndrome",
+   "large vessel vasculitis"
+  ],
+  "clues": [
+   {
+    "t": "24-year-old woman, months of tiredness, low fevers and weight loss."
+   },
+   {
+    "t": "Her left arm aches and goes pale when she hangs out washing."
+   },
+   {
+    "t": "The left radial pulse is weak."
+   },
+   {
+    "t": "Blood pressure: 135 in the right arm, 95 in the left."
+   },
+   {
+    "t": "A whooshing noise over her left collarbone."
+   },
+   {
+    "t": "PET-CT: inflamed, thickened aorta and left subclavian artery.",
+    "d": 1
+   }
+  ],
+  "pearl": "A vasculitis of the aorta and its branches, mostly in young women. Giant cell arteritis affects the same arteries but in people over 50. Treated with steroids and steroid-sparing drugs."
+ },
+ {
+  "date": "2027-03-08",
+  "number": 143,
+  "difficulty": "Easy",
+  "title": "Every month, worse",
+  "answer": "Endometriosis",
+  "accept": [
+   "endometriosis",
+   "endo",
+   "deep endometriosis",
+   "pelvic endometriosis",
+   "endometrioma"
+  ],
+  "clues": [
+   {
+    "t": "22-year-old woman, period pain since her teens."
+   },
+   {
+    "t": "She misses university for 2 days every month."
+   },
+   {
+    "t": "The pain starts before bleeding and lasts after it."
+   },
+   {
+    "t": "Sex is painful deep inside."
+   },
+   {
+    "t": "Bowel motions hurt during her period."
+   },
+   {
+    "t": "Laparoscopy: dark spots and scarring on the pelvic lining.",
+    "d": 1
+   }
+  ],
+  "pearl": "About 1 in 7 Australian women. Period pain that stops you doing usual things isn’t normal. Today is International Women’s Day."
+ },
+ {
+  "date": "2027-03-09",
+  "number": 144,
+  "difficulty": "Easy",
+  "title": "Burning and rushing",
+  "answer": "Cystitis (bladder infection)",
+  "accept": [
+   "cystitis",
+   "uti",
+   "urinary tract infection",
+   "bladder infection",
+   "lower urinary tract infection",
+   "acute cystitis"
+  ],
+  "clues": [
+   {
+    "t": "31-year-old woman, burning when she passes urine since this morning."
+   },
+   {
+    "t": "She’s rushing to the toilet every half hour."
+   },
+   {
+    "t": "Only a little comes out each time."
+   },
+   {
+    "t": "Lower tummy ache, no back pain."
+   },
+   {
+    "t": "No fever and no vaginal discharge."
+   },
+   {
+    "t": "Urine dipstick: nitrites and white cells positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "Simple cystitis in a non-pregnant woman is treated with a short course of antibiotics. Fever, back pain or vomiting suggest a kidney infection, which needs prompt review."
+ },
+ {
+  "date": "2027-03-10",
+  "number": 145,
+  "difficulty": "Medium",
+  "title": "Irregularly irregular",
+  "answer": "Atrial fibrillation",
+  "accept": [
+   "atrial fibrillation",
+   "af",
+   "afib",
+   "a fib",
+   "atrial fibrillation with rapid ventricular response"
+  ],
+  "clues": [
+   {
+    "t": "72-year-old man, heart fluttering on and off for a week."
+   },
+   {
+    "t": "Breathless walking up the hill to the shops."
+   },
+   {
+    "t": "He drinks most nights and has high blood pressure."
+   },
+   {
+    "t": "His pulse is fast and completely irregular."
+   },
+   {
+    "t": "No P waves on the monitor.",
+    "d": 1
+   },
+   {
+    "t": "ECG: irregularly irregular narrow complexes at 128 a minute.",
+    "d": 1
+   }
+  ],
+  "pearl": "The big risk is stroke. A CHA₂DS₂-VA score guides blood thinners. Rate or rhythm control helps symptoms. Alcohol, sleep apnoea and weight all matter."
+ },
+ {
+  "date": "2027-03-11",
+  "number": 146,
+  "difficulty": "Medium",
+  "title": "Cola-coloured urine",
+  "answer": "Post-streptococcal glomerulonephritis",
+  "accept": [
+   "post streptococcal glomerulonephritis",
+   "poststreptococcal glomerulonephritis",
+   "psgn",
+   "glomerulonephritis",
+   "acute glomerulonephritis",
+   "post infectious glomerulonephritis"
+  ],
+  "clues": [
+   {
+    "t": "8-year-old boy from a remote community."
+   },
+   {
+    "t": "His urine has turned dark brown, like cola."
+   },
+   {
+    "t": "Puffy eyes in the morning and swollen ankles."
+   },
+   {
+    "t": "Blood pressure is high for his age."
+   },
+   {
+    "t": "He had infected sores on his legs 3 weeks ago."
+   },
+   {
+    "t": "Low C3 complement; urine shows red cell casts.",
+    "d": 1
+   }
+  ],
+  "pearl": "It follows strep skin or throat infections. Most children recover fully. Treating skin sores and crowded housing are key in remote Australia. Today is World Kidney Day."
+ },
+ {
+  "date": "2027-03-12",
+  "number": 147,
+  "difficulty": "Hard",
+  "title": "Collapsed at footy training",
+  "answer": "Hypertrophic cardiomyopathy",
+  "accept": [
+   "hypertrophic cardiomyopathy",
+   "hcm",
+   "hocm",
+   "hypertrophic obstructive cardiomyopathy",
+   "asymmetric septal hypertrophy"
+  ],
+  "clues": [
+   {
+    "t": "17-year-old boy fainted mid-sprint at football training."
+   },
+   {
+    "t": "He’s had chest tightness with hard exercise for months."
+   },
+   {
+    "t": "His uncle died suddenly at 35."
+   },
+   {
+    "t": "A murmur that gets louder when he stands up."
+   },
+   {
+    "t": "ECG: very tall voltages and deep T wave inversion.",
+    "d": 1
+   },
+   {
+    "t": "Echo: septum 22 mm thick, blocking outflow on strain.",
+    "d": 1
+   }
+  ],
+  "pearl": "The most common inherited heart muscle disease, about 1 in 500. Fainting on exercise is a red flag. First-degree relatives need ECG and echo screening."
+ },
+ {
+  "date": "2027-03-13",
+  "number": 148,
+  "difficulty": "Hard",
+  "title": "Tearing through to the back",
+  "answer": "Aortic dissection",
+  "accept": [
+   "aortic dissection",
+   "dissecting aneurysm",
+   "type a aortic dissection",
+   "type b aortic dissection",
+   "acute aortic syndrome"
+  ],
+  "clues": [
+   {
+    "t": "58-year-old man, sudden severe chest pain while lifting."
+   },
+   {
+    "t": "He says it feels like tearing, going through to his back."
+   },
+   {
+    "t": "Long-standing poorly controlled blood pressure."
+   },
+   {
+    "t": "Blood pressure 170 in the right arm, 130 in the left."
+   },
+   {
+    "t": "A new early diastolic murmur.",
+    "d": 1
+   },
+   {
+    "t": "CT angiogram: a flap in the ascending aorta.",
+    "d": 1
+   }
+  ],
+  "pearl": "Sudden, worst-ever pain that moves is the clue. Blood thinners for a presumed heart attack can be disastrous here. Ascending (type A) needs urgent surgery."
+ },
+ {
+  "date": "2027-03-14",
+  "number": 149,
+  "difficulty": "Genius",
+  "title": "Burning in the sun",
+  "answer": "Erythropoietic protoporphyria",
+  "accept": [
+   "erythropoietic protoporphyria",
+   "epp",
+   "protoporphyria",
+   "porphyria",
+   "fech deficiency"
+  ],
+  "clues": [
+   {
+    "t": "12-year-old boy, screams after 15 minutes in the sun."
+   },
+   {
+    "t": "Burning, stinging pain in his hands and face."
+   },
+   {
+    "t": "Hardly any rash, just mild swelling."
+   },
+   {
+    "t": "Sunscreen doesn’t help."
+   },
+   {
+    "t": "Window glass doesn’t protect him either."
+   },
+   {
+    "t": "Very high free protoporphyrin in red cells.",
+    "d": 1
+   }
+  ],
+  "pearl": "Visible light, not just UV, triggers it, so normal sunscreens fail. Children are often disbelieved because skin looks almost normal. Afamelanotide implants help some adults; liver monitoring is needed."
+ },
+ {
+  "date": "2027-03-15",
+  "number": 150,
+  "difficulty": "Easy",
+  "title": "Numb at night",
+  "answer": "Carpal tunnel syndrome",
+  "accept": [
+   "carpal tunnel syndrome",
+   "carpal tunnel",
+   "cts",
+   "median nerve compression",
+   "median neuropathy at the wrist"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old woman, pins and needles in her right hand."
+   },
+   {
+    "t": "It wakes her at night; shaking the hand helps."
+   },
+   {
+    "t": "Thumb, index and middle fingers are affected."
+   },
+   {
+    "t": "Her little finger is fine."
+   },
+   {
+    "t": "Tapping over her wrist reproduces the tingling."
+   },
+   {
+    "t": "Nerve conduction: slowed median nerve at the wrist.",
+    "d": 1
+   }
+  ],
+  "pearl": "Common in pregnancy, diabetes and hypothyroidism. Night splints and steroid injection help many. Thumb muscle wasting means surgery shouldn’t wait."
+ },
+ {
+  "date": "2027-03-16",
+  "number": 151,
+  "difficulty": "Easy",
+  "title": "Spring sneezes",
+  "answer": "Allergic rhinitis (hay fever)",
+  "accept": [
+   "allergic rhinitis",
+   "hay fever",
+   "hayfever",
+   "seasonal allergic rhinitis",
+   "pollen allergy",
+   "seasonal allergies"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old, sneezing fits every spring."
+   },
+   {
+    "t": "Runny nose with clear watery mucus."
+   },
+   {
+    "t": "Itchy eyes and itchy roof of the mouth."
+   },
+   {
+    "t": "Worse on windy days in the park."
+   },
+   {
+    "t": "No fever, feels otherwise well."
+   },
+   {
+    "t": "Skin prick test positive to ryegrass pollen.",
+    "d": 1
+   }
+  ],
+  "pearl": "A steroid nasal spray used every day works best. Hay fever is a risk factor for thunderstorm asthma, so people with spring hay fever should have a reliever plan."
+ },
+ {
+  "date": "2027-03-17",
+  "number": 152,
+  "difficulty": "Medium",
+  "title": "Breathless after the flight",
+  "answer": "Pulmonary embolism",
+  "accept": [
+   "pulmonary embolism",
+   "pe",
+   "pulmonary embolus",
+   "pulmonary thromboembolism",
+   "venous thromboembolism",
+   "vte"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old woman, sudden breathlessness 2 days after a flight from London."
+   },
+   {
+    "t": "Sharp chest pain when she breathes in."
+   },
+   {
+    "t": "She takes the combined pill."
+   },
+   {
+    "t": "Heart rate 112, oxygen 92%."
+   },
+   {
+    "t": "Her right calf is swollen and tender."
+   },
+   {
+    "t": "CT pulmonary angiogram: clots in both lower lobe arteries.",
+    "d": 1
+   }
+  ],
+  "pearl": "Long travel, oestrogen and a swollen calf add up. Most are treated with blood thinners as an outpatient. A normal chest X-ray doesn’t rule it out."
+ },
+ {
+  "date": "2027-03-18",
+  "number": 153,
+  "difficulty": "Medium",
+  "title": "Lopsided smile",
+  "answer": "Bell’s palsy",
+  "accept": [
+   "bell's palsy",
+   "bells palsy",
+   "bell palsy",
+   "idiopathic facial palsy",
+   "facial nerve palsy",
+   "lower motor neuron facial palsy"
+  ],
+  "clues": [
+   {
+    "t": "41-year-old man, woke with his face drooping on the left."
+   },
+   {
+    "t": "He can’t close his left eye properly."
+   },
+   {
+    "t": "Drinks dribble from the corner of his mouth."
+   },
+   {
+    "t": "Ache behind his left ear yesterday."
+   },
+   {
+    "t": "He can’t wrinkle the left side of his forehead.",
+    "d": 1
+   },
+   {
+    "t": "No weakness elsewhere; ears look normal.",
+    "d": 1
+   }
+  ],
+  "pearl": "Forehead involvement points to the nerve, not a stroke, where the forehead is spared. Prednisolone within 72 hours improves recovery. Tape the eye at night to protect it."
+ },
+ {
+  "date": "2027-03-19",
+  "number": 154,
+  "difficulty": "Hard",
+  "title": "Worst headache of her life",
+  "answer": "Subarachnoid haemorrhage",
+  "accept": [
+   "subarachnoid haemorrhage",
+   "subarachnoid hemorrhage",
+   "sah",
+   "aneurysmal subarachnoid haemorrhage",
+   "ruptured aneurysm",
+   "ruptured berry aneurysm"
+  ],
+  "clues": [
+   {
+    "t": "44-year-old woman, sudden headache at the gym."
+   },
+   {
+    "t": "It hit its peak within seconds: the worst she’s ever had."
+   },
+   {
+    "t": "She vomited and her neck feels stiff."
+   },
+   {
+    "t": "She smokes and has high blood pressure."
+   },
+   {
+    "t": "She’s drowsy, but moves all four limbs."
+   },
+   {
+    "t": "CT brain: blood in the spaces around the brain.",
+    "d": 1
+   }
+  ],
+  "pearl": "Thunderclap onset is the key clue. CT within 6 hours is very sensitive; later, a lumbar puncture may be needed. Aneurysms are treated with coiling or clipping."
+ },
+ {
+  "date": "2027-03-20",
+  "number": 155,
+  "difficulty": "Hard",
+  "title": "Stiff every morning",
+  "answer": "Ankylosing spondylitis (axial spondyloarthritis)",
+  "accept": [
+   "ankylosing spondylitis",
+   "axial spondyloarthritis",
+   "as",
+   "axspa",
+   "spondyloarthritis",
+   "radiographic axial spondyloarthritis"
+  ],
+  "clues": [
+   {
+    "t": "27-year-old man, low back pain for a year."
+   },
+   {
+    "t": "Worst in the morning, stiff for over an hour."
+   },
+   {
+    "t": "It gets better with exercise, not rest."
+   },
+   {
+    "t": "He wakes in the second half of the night with pain."
+   },
+   {
+    "t": "Last year he had a painful red eye that needed drops.",
+    "d": 1
+   },
+   {
+    "t": "MRI: inflammation at both sacroiliac joints; HLA-B27 positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "Inflammatory back pain improves with movement. Anti-inflammatories and exercise first; biologics if needed. Average delay to diagnosis is years, so ask about morning stiffness."
+ },
+ {
+  "date": "2027-03-21",
+  "number": 156,
+  "difficulty": "Genius",
+  "title": "Deafness in the family",
+  "answer": "Alport syndrome",
+  "accept": [
+   "alport syndrome",
+   "alport's syndrome",
+   "hereditary nephritis",
+   "col4a5",
+   "type iv collagen nephropathy",
+   "x linked alport syndrome"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old man, blood in his urine on a routine check."
+   },
+   {
+    "t": "He’s worn hearing aids since he was 14."
+   },
+   {
+    "t": "His maternal uncle had a kidney transplant at 30."
+   },
+   {
+    "t": "His urine also shows protein."
+   },
+   {
+    "t": "Eye check: a cone-shaped bulge of the lens.",
+    "d": 1
+   },
+   {
+    "t": "Gene test: COL4A5 variant.",
+    "d": 1
+   }
+  ],
+  "pearl": "A collagen fault in the kidneys, ears and eyes. The X-linked form is most severe in males. Starting ACE inhibitors early slows kidney decline."
+ },
+ {
+  "date": "2027-03-22",
+  "number": 157,
+  "difficulty": "Easy",
+  "title": "First steps hurt",
+  "answer": "Plantar fasciitis",
+  "accept": [
+   "plantar fasciitis",
+   "plantar fasciopathy",
+   "plantar heel pain",
+   "heel spur syndrome",
+   "policeman's heel"
+  ],
+  "clues": [
+   {
+    "t": "50-year-old man, sharp heel pain for 2 months."
+   },
+   {
+    "t": "Worst with his first steps in the morning."
+   },
+   {
+    "t": "Eases after walking a bit, then aches by evening."
+   },
+   {
+    "t": "He recently took up running on the road."
+   },
+   {
+    "t": "Tender spot on the inside of the heel underneath."
+   },
+   {
+    "t": "No swelling, numbness or redness."
+   }
+  ],
+  "pearl": "Calf and foot stretches, supportive shoes and load changes work for most within a year. Heel spurs on X-ray are common and don’t cause the pain."
+ },
+ {
+  "date": "2027-03-23",
+  "number": 158,
+  "difficulty": "Easy",
+  "title": "Itchy elbows",
+  "answer": "Atopic eczema (atopic dermatitis)",
+  "accept": [
+   "eczema",
+   "atopic eczema",
+   "atopic dermatitis",
+   "dermatitis",
+   "flexural eczema"
+  ],
+  "clues": [
+   {
+    "t": "7-year-old girl, itchy rash for years that comes and goes."
+   },
+   {
+    "t": "It’s in the creases of her elbows and behind her knees."
+   },
+   {
+    "t": "The skin is dry, red and thickened from scratching."
+   },
+   {
+    "t": "Worse in winter and after hot baths."
+   },
+   {
+    "t": "She has asthma and hay fever."
+   },
+   {
+    "t": "Her dad had the same as a child."
+   }
+  ],
+  "pearl": "Daily moisturiser and a steroid cream for flares are the mainstays. Steroid creams used properly are safe. Weeping or crusted patches may be infected."
+ },
+ {
+  "date": "2027-03-24",
+  "number": 159,
+  "difficulty": "Medium",
+  "title": "Three months of coughing",
+  "answer": "Pulmonary tuberculosis",
+  "accept": [
+   "tuberculosis",
+   "tb",
+   "pulmonary tuberculosis",
+   "pulmonary tb",
+   "mycobacterium tuberculosis",
+   "active tuberculosis"
+  ],
+  "clues": [
+   {
+    "t": "36-year-old man, cough for 3 months."
+   },
+   {
+    "t": "Night sweats soak his sheets; he’s lost 7 kg."
+   },
+   {
+    "t": "He moved to Australia from Papua New Guinea last year."
+   },
+   {
+    "t": "Last week he coughed up some blood."
+   },
+   {
+    "t": "Chest X-ray: a cavity in the right upper lobe.",
+    "d": 1
+   },
+   {
+    "t": "Sputum: acid-fast bacilli, PCR positive for M. tuberculosis.",
+    "d": 1
+   }
+  ],
+  "pearl": "TB is curable with 6 months of combined antibiotics. Contacts are tested. Australia has one of the lowest rates in the world, but it’s common next door. Today is World TB Day."
+ },
+ {
+  "date": "2027-03-25",
+  "number": 160,
+  "difficulty": "Medium",
+  "title": "Irregular and spotty",
+  "answer": "Polycystic ovary syndrome (PCOS)",
+  "accept": [
+   "pcos",
+   "polycystic ovary syndrome",
+   "polycystic ovarian syndrome",
+   "polycystic ovaries",
+   "stein leventhal syndrome"
+  ],
+  "clues": [
+   {
+    "t": "24-year-old woman, periods only 4 times a year."
+   },
+   {
+    "t": "Hair growing on her chin and tummy."
+   },
+   {
+    "t": "Acne that started late in her teens."
+   },
+   {
+    "t": "Her weight has crept up and she’s struggling to lose it."
+   },
+   {
+    "t": "Free testosterone mildly raised; prolactin and thyroid normal.",
+    "d": 1
+   },
+   {
+    "t": "Ultrasound: many small follicles in both ovaries.",
+    "d": 1
+   }
+  ],
+  "pearl": "Two of three needed: irregular cycles, high androgens (blood or signs), polycystic ovaries. It raises the risk of diabetes, so check glucose. The pill, metformin and lifestyle all help."
+ },
+ {
+  "date": "2027-03-26",
+  "number": 161,
+  "difficulty": "Hard",
+  "title": "Déjà vu, then nothing",
+  "answer": "Temporal lobe epilepsy",
+  "accept": [
+   "temporal lobe epilepsy",
+   "tle",
+   "focal epilepsy",
+   "focal impaired awareness seizures",
+   "complex partial seizures",
+   "mesial temporal lobe epilepsy"
+  ],
+  "clues": [
+   {
+    "t": "33-year-old woman, episodes her husband calls ‘zoning out’."
+   },
+   {
+    "t": "Each starts with a rising feeling in her stomach and strong déjà vu."
+   },
+   {
+    "t": "Then she stares and smacks her lips for a minute."
+   },
+   {
+    "t": "She doesn’t remember it and is confused afterwards."
+   },
+   {
+    "t": "She had long seizures with fevers as a toddler."
+   },
+   {
+    "t": "MRI: hippocampal sclerosis on the left.",
+    "d": 1
+   }
+  ],
+  "pearl": "The most common focal epilepsy in adults. If tablets fail, surgery can make many people seizure-free. Today is Purple Day for epilepsy awareness."
+ },
+ {
+  "date": "2027-03-27",
+  "number": 162,
+  "difficulty": "Hard",
+  "title": "Itch without a rash",
+  "answer": "Primary biliary cholangitis",
+  "accept": [
+   "primary biliary cholangitis",
+   "pbc",
+   "primary biliary cirrhosis",
+   "autoimmune cholangitis"
+  ],
+  "clues": [
+   {
+    "t": "54-year-old woman, maddening itch for a year, worst at night."
+   },
+   {
+    "t": "No rash, just scratch marks."
+   },
+   {
+    "t": "Tired all the time."
+   },
+   {
+    "t": "Dry eyes and mouth."
+   },
+   {
+    "t": "ALP very high, bilirubin normal.",
+    "d": 1
+   },
+   {
+    "t": "Anti-mitochondrial antibodies strongly positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "An autoimmune condition of the small bile ducts, mostly in middle-aged women. Ursodeoxycholic acid slows progression. Check bone density: osteoporosis is common."
+ },
+ {
+  "date": "2027-03-28",
+  "number": 163,
+  "difficulty": "Genius",
+  "title": "Frozen in fright",
+  "answer": "Stiff person syndrome",
+  "accept": [
+   "stiff person syndrome",
+   "stiff man syndrome",
+   "sps",
+   "anti gad stiff person syndrome",
+   "moersch woltman syndrome"
+  ],
+  "clues": [
+   {
+    "t": "46-year-old woman, back and legs increasingly rigid for a year."
+   },
+   {
+    "t": "A sudden noise makes her whole body spasm and she falls stiff like a statue."
+   },
+   {
+    "t": "She’s afraid to cross roads and walks with a wide, careful gait."
+   },
+   {
+    "t": "She has type 1 diabetes."
+   },
+   {
+    "t": "EMG: continuous muscle firing at rest.",
+    "d": 1
+   },
+   {
+    "t": "Very high anti-GAD antibodies.",
+    "d": 1
+   }
+  ],
+  "pearl": "Often mistaken for anxiety at first. Diazepam and baclofen ease the stiffness; immune treatments help some. Its link with type 1 diabetes comes from the shared GAD antibody."
+ },
+ {
+  "date": "2027-03-29",
+  "number": 164,
+  "difficulty": "Easy",
+  "title": "The seal bark",
+  "answer": "Croup",
+  "accept": [
+   "croup",
+   "laryngotracheobronchitis",
+   "viral croup",
+   "laryngotracheitis",
+   "spasmodic croup"
+  ],
+  "clues": [
+   {
+    "t": "2-year-old boy, a cold for 2 days."
+   },
+   {
+    "t": "Tonight he woke with a barking cough like a seal."
+   },
+   {
+    "t": "A harsh noise when breathing in while he cries."
+   },
+   {
+    "t": "Mild fever, still drinking."
+   },
+   {
+    "t": "Settles when calm on mum’s lap."
+   },
+   {
+    "t": "Ages 6 months to 3 years is the peak."
+   }
+  ],
+  "pearl": "A single dose of oral steroid helps most children. Noise at rest, drooling or blue lips need an ambulance. Keep the child calm; steam doesn’t help."
+ },
+ {
+  "date": "2027-03-30",
+  "number": 165,
+  "difficulty": "Easy",
+  "title": "No sleep needed",
+  "answer": "Bipolar disorder (mania)",
+  "accept": [
+   "bipolar disorder",
+   "bipolar",
+   "mania",
+   "manic episode",
+   "bipolar affective disorder",
+   "bipolar i disorder",
+   "manic depression"
+  ],
+  "clues": [
+   {
+    "t": "23-year-old man, barely slept for 5 nights but full of energy."
+   },
+   {
+    "t": "Talking fast, jumping from idea to idea."
+   },
+   {
+    "t": "Spent his savings on a business plan in one night."
+   },
+   {
+    "t": "Feels he has a special mission."
+   },
+   {
+    "t": "Last year he had months of deep depression."
+   },
+   {
+    "t": "No drugs found on a urine screen."
+   }
+  ],
+  "pearl": "Mania plus past depression is the pattern. Antidepressants alone can trigger mania, so the diagnosis matters. Lithium and other mood stabilisers prevent relapse. Today is World Bipolar Day."
+ },
+ {
+  "date": "2027-03-31",
+  "number": 166,
+  "difficulty": "Medium",
+  "title": "Thirsty, then breathless",
+  "answer": "Diabetic ketoacidosis",
+  "accept": [
+   "diabetic ketoacidosis",
+   "dka",
+   "ketoacidosis",
+   "new onset type 1 diabetes",
+   "type 1 diabetes with dka"
+  ],
+  "clues": [
+   {
+    "t": "16-year-old girl, very thirsty and passing lots of urine for 3 weeks."
+   },
+   {
+    "t": "Lost 5 kg without trying."
+   },
+   {
+    "t": "Today vomiting and tummy pain."
+   },
+   {
+    "t": "Deep, sighing breaths and a fruity smell on her breath."
+   },
+   {
+    "t": "Blood glucose 28 mmol/L, ketones 5.2.",
+    "d": 1
+   },
+   {
+    "t": "Venous pH 7.12.",
+    "d": 1
+   }
+  ],
+  "pearl": "Often the first sign of type 1 diabetes. Thirst, weight loss and passing lots of urine in a young person needs a same-day finger-prick glucose. Treated with fluids, insulin and potassium."
+ }
+]

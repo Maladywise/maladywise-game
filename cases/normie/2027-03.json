@@ -1,0 +1,1054 @@
+[
+ {
+  "date": "2027-03-01",
+  "number": 129,
+  "difficulty": "Easy",
+  "title": "Flutter by",
+  "answer": "Butterfly",
+  "accept": [
+   "butterfly",
+   "butterflies",
+   "monarch butterfly"
+  ],
+  "clues": [
+   {
+    "t": "I taste with my feet."
+   },
+   {
+    "t": "I start life as an egg on a leaf."
+   },
+   {
+    "t": "Then I eat almost nonstop as a caterpillar."
+   },
+   {
+    "t": "I rebuild myself inside a chrysalis."
+   },
+   {
+    "t": "My wings are covered in tiny scales."
+   },
+   {
+    "t": "A flying insect with big colourful wings."
+   }
+  ],
+  "pearl": "Monarch butterflies migrate up to 4,000 km, and no single butterfly makes the whole round trip."
+ },
+ {
+  "date": "2027-03-02",
+  "number": 130,
+  "difficulty": "Easy",
+  "title": "Gum leaf diet",
+  "answer": "Koala",
+  "accept": [
+   "koala",
+   "koalas",
+   "koala bear",
+   "phascolarctos cinereus"
+  ],
+  "clues": [
+   {
+    "t": "I have fingerprints almost identical to a human’s."
+   },
+   {
+    "t": "My pouch opens towards my back legs."
+   },
+   {
+    "t": "I sleep up to 20 hours a day."
+   },
+   {
+    "t": "I eat almost nothing but eucalyptus leaves."
+   },
+   {
+    "t": "I’m not a bear, though people often call me one."
+   },
+   {
+    "t": "Grey, fluffy-eared Australian marsupial in a gum tree."
+   }
+  ],
+  "pearl": "Eucalyptus is low in energy and toxic to most animals, which is why koalas sleep so much."
+ },
+ {
+  "date": "2027-03-03",
+  "number": 131,
+  "difficulty": "Medium",
+  "title": "Tombs in the sand",
+  "answer": "Pyramids of Giza",
+  "accept": [
+   "pyramids of giza",
+   "pyramids",
+   "giza pyramids",
+   "great pyramid",
+   "great pyramid of giza",
+   "the pyramids"
+  ],
+  "clues": [
+   {
+    "t": "I’m the only Ancient Wonder of the World still standing."
+   },
+   {
+    "t": "My biggest member was the tallest human-made structure for about 3,800 years."
+   },
+   {
+    "t": "Workers, not slaves, built me, according to modern archaeologists."
+   },
+   {
+    "t": "A sphinx guards me."
+   },
+   {
+    "t": "I was built as tombs for pharaohs."
+   },
+   {
+    "t": "Three huge stone triangles outside Cairo."
+   }
+  ],
+  "pearl": "The Great Pyramid was built around 2560 BCE for the pharaoh Khufu."
+ },
+ {
+  "date": "2027-03-04",
+  "number": 132,
+  "difficulty": "Medium",
+  "title": "Clack clack ding",
+  "answer": "Typewriter",
+  "accept": [
+   "typewriter",
+   "typewriters",
+   "type writer"
+  ],
+  "clues": [
+   {
+    "t": "Mark Twain was one of the first authors to hand in a book written on me."
+   },
+   {
+    "t": "My key layout was designed to stop bars jamming."
+   },
+   {
+    "t": "That layout still sits on your phone: QWERTY."
+   },
+   {
+    "t": "I ding when you reach the end of a line."
+   },
+   {
+    "t": "You need ink ribbon and paper to use me."
+   },
+   {
+    "t": "A machine for typing before computers."
+   }
+  ],
+  "pearl": "Christopher Latham Sholes patented his typewriter in 1868; the QWERTY layout followed a few years later."
+ },
+ {
+  "date": "2027-03-05",
+  "number": 133,
+  "difficulty": "Hard",
+  "title": "Spotted helper",
+  "answer": "Ladybird",
+  "accept": [
+   "ladybird",
+   "ladybug",
+   "ladybirds",
+   "ladybugs",
+   "lady beetle",
+   "coccinellid"
+  ],
+  "clues": [
+   {
+    "t": "I’m a beetle, though my name says otherwise."
+   },
+   {
+    "t": "Farmers like me: I eat aphids."
+   },
+   {
+    "t": "One of me can eat thousands of aphids in my life."
+   },
+   {
+    "t": "When scared, I ooze a smelly yellow liquid from my knees."
+   },
+   {
+    "t": "Americans call me a bug."
+   },
+   {
+    "t": "Small round red beetle with black spots."
+   }
+  ],
+  "pearl": "The ‘lady’ is thought to refer to the Virgin Mary, often painted in a red cloak."
+ },
+ {
+  "date": "2027-03-06",
+  "number": 134,
+  "difficulty": "Hard",
+  "title": "Shadow clock",
+  "answer": "Sundial",
+  "accept": [
+   "sundial",
+   "sun dial",
+   "sundials",
+   "shadow clock"
+  ],
+  "clues": [
+   {
+    "t": "I’m one of the oldest timekeeping tools."
+   },
+   {
+    "t": "I don’t work at night or on cloudy days."
+   },
+   {
+    "t": "My pointer is called a gnomon."
+   },
+   {
+    "t": "In Australia, my pointer has to point south."
+   },
+   {
+    "t": "I tell the time with a shadow."
+   },
+   {
+    "t": "A clock powered by the sun."
+   }
+  ],
+  "pearl": "A sundial’s gnomon must point to the celestial pole: north in the northern hemisphere, south in the southern."
+ },
+ {
+  "date": "2027-03-07",
+  "number": 135,
+  "difficulty": "Genius",
+  "title": "Ancient computer",
+  "answer": "Antikythera mechanism",
+  "accept": [
+   "antikythera mechanism",
+   "antikythera",
+   "antikythera device",
+   "antikythera computer"
+  ],
+  "clues": [
+   {
+    "t": "Sponge divers found me in a shipwreck in 1901."
+   },
+   {
+    "t": "I’m about 2,000 years old."
+   },
+   {
+    "t": "I was a lump of corroded bronze for decades before anyone understood me."
+   },
+   {
+    "t": "X-ray scans revealed at least 30 interlocking gear wheels."
+   },
+   {
+    "t": "I predicted eclipses and tracked the planets."
+   },
+   {
+    "t": "Often called the world’s first analogue computer, from a Greek island wreck."
+   }
+  ],
+  "pearl": "Nothing with gearing this complex is known again until medieval astronomical clocks, over a thousand years later."
+ },
+ {
+  "date": "2027-03-08",
+  "number": 136,
+  "difficulty": "Easy",
+  "title": "Lady of the skies",
+  "answer": "Amelia Earhart",
+  "accept": [
+   "amelia earhart",
+   "earhart",
+   "amelia"
+  ],
+  "clues": [
+   {
+    "t": "I was born in Kansas in 1897."
+   },
+   {
+    "t": "I worked as a nurse’s aide in Canada during World War I."
+   },
+   {
+    "t": "In 1932 I became the first woman to fly solo across the Atlantic."
+   },
+   {
+    "t": "I helped found the Ninety-Nines, a group for women pilots."
+   },
+   {
+    "t": "In 1937 I vanished over the Pacific near Howland Island."
+   },
+   {
+    "t": "Famous American woman aviator who went missing on a round-the-world flight."
+   }
+  ],
+  "pearl": "Her last flight left from Lae, in what is now Papua New Guinea. Today is International Women’s Day."
+ },
+ {
+  "date": "2027-03-09",
+  "number": 137,
+  "difficulty": "Easy",
+  "title": "Bath time buddy",
+  "answer": "Rubber duck",
+  "accept": [
+   "rubber duck",
+   "rubber duckie",
+   "rubber ducky",
+   "bath duck",
+   "rubber ducks"
+  ],
+  "clues": [
+   {
+    "t": "Programmers explain their code to me to find bugs."
+   },
+   {
+    "t": "In 1992, thousands of my plastic cousins fell off a ship and floated the oceans for years."
+   },
+   {
+    "t": "Ernie from Sesame Street sang a song about me."
+   },
+   {
+    "t": "Most of me are made of plastic, not rubber."
+   },
+   {
+    "t": "I squeak when squeezed."
+   },
+   {
+    "t": "Small yellow bath toy that floats."
+   }
+  ],
+  "pearl": "The 1992 spill helped oceanographers map currents as the toys washed up on beaches worldwide."
+ },
+ {
+  "date": "2027-03-10",
+  "number": 138,
+  "difficulty": "Medium",
+  "title": "Which way?",
+  "answer": "Compass",
+  "accept": [
+   "compass",
+   "magnetic compass",
+   "compasses"
+  ],
+  "clues": [
+   {
+    "t": "Chinese inventors used me first, made with lodestone."
+   },
+   {
+    "t": "Sailors relied on me before satellites."
+   },
+   {
+    "t": "I work because the Earth is a giant magnet."
+   },
+   {
+    "t": "My needle doesn’t point to true north, but magnetic north."
+   },
+   {
+    "t": "N, E, S and W are marked on me."
+   },
+   {
+    "t": "A navigation tool with a needle that points north."
+   }
+  ],
+  "pearl": "Magnetic north wanders by tens of kilometres a year, so maps list the difference."
+ },
+ {
+  "date": "2027-03-11",
+  "number": 139,
+  "difficulty": "Medium",
+  "title": "Can’t fly, won’t fly",
+  "answer": "Kiwi (bird)",
+  "accept": [
+   "kiwi",
+   "kiwi bird",
+   "kiwis",
+   "apteryx"
+  ],
+  "clues": [
+   {
+    "t": "My nostrils are at the tip of my long beak."
+   },
+   {
+    "t": "My egg is huge: about a fifth of my body weight."
+   },
+   {
+    "t": "I come out mostly at night."
+   },
+   {
+    "t": "My wings are tiny and I can’t fly."
+   },
+   {
+    "t": "My name is also a nickname for my country’s people."
+   },
+   {
+    "t": "Brown, fluffy, flightless bird from New Zealand."
+   }
+  ],
+  "pearl": "Kiwi have nostrils at the beak tip to sniff out worms underground, unique among birds."
+ },
+ {
+  "date": "2027-03-12",
+  "number": 140,
+  "difficulty": "Hard",
+  "title": "Dots and dashes",
+  "answer": "Morse code",
+  "accept": [
+   "morse code",
+   "morse",
+   "international morse code"
+  ],
+  "clues": [
+   {
+    "t": "An American painter co-invented me in the 1830s."
+   },
+   {
+    "t": "The Titanic used me to call for help."
+   },
+   {
+    "t": "Sailors could send me with a flashing light."
+   },
+   {
+    "t": "My most famous message is three short, three long, three short."
+   },
+   {
+    "t": "Every letter is made of short and long signals."
+   },
+   {
+    "t": "Dots and dashes used for telegraph messages."
+   }
+  ],
+  "pearl": "Samuel Morse was a successful portrait painter before he turned to the telegraph."
+ },
+ {
+  "date": "2027-03-13",
+  "number": 141,
+  "difficulty": "Hard",
+  "title": "Red centre",
+  "answer": "Uluru",
+  "accept": [
+   "uluru",
+   "ayers rock",
+   "uluru ayers rock",
+   "uluru kata tjuta"
+  ],
+  "clues": [
+   {
+    "t": "I’m about 550 million years old."
+   },
+   {
+    "t": "Most of my bulk is hidden underground."
+   },
+   {
+    "t": "I glow red at sunrise and sunset."
+   },
+   {
+    "t": "Climbing me was banned in 2019."
+   },
+   {
+    "t": "I’m sacred to the Aṉangu people."
+   },
+   {
+    "t": "Giant sandstone rock in the middle of Australia."
+   }
+  ],
+  "pearl": "Uluru was handed back to its traditional owners in 1985 and is jointly managed with Parks Australia."
+ },
+ {
+  "date": "2027-03-14",
+  "number": 142,
+  "difficulty": "Genius",
+  "title": "Never ending",
+  "answer": "Pi",
+  "accept": [
+   "pi",
+   "π",
+   "pi number",
+   "3.14",
+   "archimedes constant"
+  ],
+  "clues": [
+   {
+    "t": "My digits never end and never repeat."
+   },
+   {
+    "t": "Archimedes squeezed me between two polygons."
+   },
+   {
+    "t": "People celebrate me on 14 March."
+   },
+   {
+    "t": "Computers have calculated me to over 100 trillion digits."
+   },
+   {
+    "t": "I start 3.14159."
+   },
+   {
+    "t": "The ratio of a circle’s circumference to its diameter."
+   }
+  ],
+  "pearl": "Albert Einstein was born on 14 March 1879, which makes Pi Day a double celebration for some."
+ },
+ {
+  "date": "2027-03-15",
+  "number": 143,
+  "difficulty": "Easy",
+  "title": "Beware the Ides",
+  "answer": "Julius Caesar",
+  "accept": [
+   "julius caesar",
+   "caesar",
+   "gaius julius caesar"
+  ],
+  "clues": [
+   {
+    "t": "I was kidnapped by pirates as a young man and promised to crucify them. I did."
+   },
+   {
+    "t": "The month of July is named after me."
+   },
+   {
+    "t": "I crossed the Rubicon river with my army."
+   },
+   {
+    "t": "I fixed the calendar: we still use a version of my leap year."
+   },
+   {
+    "t": "I was stabbed in the Senate on 15 March 44 BCE."
+   },
+   {
+    "t": "Roman general and dictator; ‘Et tu, Brute?’"
+   }
+  ],
+  "pearl": "Ancient writers say he was stabbed 23 times. Today is the Ides of March."
+ },
+ {
+  "date": "2027-03-16",
+  "number": 144,
+  "difficulty": "Easy",
+  "title": "Seeds on the outside",
+  "answer": "Strawberry",
+  "accept": [
+   "strawberry",
+   "strawberries"
+  ],
+  "clues": [
+   {
+    "t": "I’m not a true berry, botanically speaking."
+   },
+   {
+    "t": "I wear my seeds on the outside, about 200 of them."
+   },
+   {
+    "t": "Wimbledon serves me with cream."
+   },
+   {
+    "t": "I belong to the rose family."
+   },
+   {
+    "t": "I’m often dipped in chocolate."
+   },
+   {
+    "t": "Red, heart-shaped fruit with green leaves on top."
+   }
+  ],
+  "pearl": "A banana is a true berry; a strawberry isn’t. Botany is strange."
+ },
+ {
+  "date": "2027-03-17",
+  "number": 145,
+  "difficulty": "Medium",
+  "title": "Green for a day",
+  "answer": "Ireland",
+  "accept": [
+   "ireland",
+   "republic of ireland",
+   "eire",
+   "éire",
+   "the emerald isle",
+   "irish"
+  ],
+  "clues": [
+   {
+    "t": "Halloween traces its roots to my ancient festival of Samhain."
+   },
+   {
+    "t": "Bram Stoker, who wrote Dracula, came from me."
+   },
+   {
+    "t": "My national symbol is a harp."
+   },
+   {
+    "t": "I’m nicknamed the Emerald Isle."
+   },
+   {
+    "t": "Rivers are dyed green around the world for my patron saint."
+   },
+   {
+    "t": "Island country whose capital is Dublin."
+   }
+  ],
+  "pearl": "St Patrick’s Day is 17 March. St Patrick wasn’t Irish: he was born in Roman Britain."
+ },
+ {
+  "date": "2027-03-18",
+  "number": 146,
+  "difficulty": "Medium",
+  "title": "Small bent wire",
+  "answer": "Paper clip",
+  "accept": [
+   "paper clip",
+   "paperclip",
+   "paper clips",
+   "gem clip"
+  ],
+  "clues": [
+   {
+    "t": "Norwegians wore me as a protest symbol in World War II."
+   },
+   {
+    "t": "My most common design is called the Gem."
+   },
+   {
+    "t": "A man once traded one red one of me up to a house."
+   },
+   {
+    "t": "Microsoft once made me a cartoon helper called Clippy."
+   },
+   {
+    "t": "I’m usually made of bent steel wire."
+   },
+   {
+    "t": "Holds sheets of paper together."
+   }
+  ],
+  "pearl": "Kyle MacDonald traded a red paperclip for bigger things, 14 trades later ending with a house."
+ },
+ {
+  "date": "2027-03-19",
+  "number": 147,
+  "difficulty": "Hard",
+  "title": "The coathanger",
+  "answer": "Sydney Harbour Bridge",
+  "accept": [
+   "sydney harbour bridge",
+   "harbour bridge",
+   "the coathanger",
+   "coathanger"
+  ],
+  "clues": [
+   {
+    "t": "I opened on 19 March 1932."
+   },
+   {
+    "t": "At my opening, a man on horseback cut the ribbon before the Premier could."
+   },
+   {
+    "t": "My steel arch expands up to 18 cm on hot days."
+   },
+   {
+    "t": "I’m painted grey, and the job never really ends."
+   },
+   {
+    "t": "Tourists climb over my arch."
+   },
+   {
+    "t": "Big steel arch bridge next to the Opera House."
+   }
+  ],
+  "pearl": "Francis de Groot of the New Guard slashed the ribbon with his sword. Happy birthday, bridge."
+ },
+ {
+  "date": "2027-03-20",
+  "number": 148,
+  "difficulty": "Hard",
+  "title": "Equal day and night",
+  "answer": "Equinox",
+  "accept": [
+   "equinox",
+   "march equinox",
+   "autumn equinox",
+   "autumnal equinox",
+   "vernal equinox",
+   "spring equinox",
+   "equinoxes"
+  ],
+  "clues": [
+   {
+    "t": "I happen twice a year."
+   },
+   {
+    "t": "On me, the Sun rises almost exactly due east."
+   },
+   {
+    "t": "My name comes from Latin for ‘equal night’."
+   },
+   {
+    "t": "In Australia, my March visit starts astronomical autumn."
+   },
+   {
+    "t": "The Sun sits right above the equator on me."
+   },
+   {
+    "t": "The day when day and night are about the same length."
+   }
+  ],
+  "pearl": "Day and night aren’t exactly equal at the equinox, because the atmosphere bends sunlight over the horizon."
+ },
+ {
+  "date": "2027-03-21",
+  "number": 149,
+  "difficulty": "Genius",
+  "title": "Five, seven, five",
+  "answer": "Haiku",
+  "accept": [
+   "haiku",
+   "haikus",
+   "hokku"
+  ],
+  "clues": [
+   {
+    "t": "I come from Japan."
+   },
+   {
+    "t": "Matsuo Bashō is my most famous master."
+   },
+   {
+    "t": "His frog jumping into an old pond is my best-known example."
+   },
+   {
+    "t": "I traditionally include a word for the season."
+   },
+   {
+    "t": "I have just three lines."
+   },
+   {
+    "t": "Short poem with 5, 7 and 5 syllables."
+   }
+  ],
+  "pearl": "Today is World Poetry Day. In Japanese, haiku count sound units, not exactly syllables."
+ },
+ {
+  "date": "2027-03-22",
+  "number": 150,
+  "difficulty": "Easy",
+  "title": "Life’s essential",
+  "answer": "Water",
+  "accept": [
+   "water",
+   "h2o",
+   "h₂o"
+  ],
+  "clues": [
+   {
+    "t": "About 60% of your body is me."
+   },
+   {
+    "t": "I’m densest at 4 °C, which stops lakes freezing solid."
+   },
+   {
+    "t": "Ice floats because I expand when I freeze."
+   },
+   {
+    "t": "I cover about 71% of the Earth."
+   },
+   {
+    "t": "I can be solid, liquid or gas at everyday temperatures."
+   },
+   {
+    "t": "H₂O."
+   }
+  ],
+  "pearl": "Today is World Water Day. Only about 3% of Earth’s water is fresh, and most of that is ice."
+ },
+ {
+  "date": "2027-03-23",
+  "number": 151,
+  "difficulty": "Easy",
+  "title": "Bunch of them",
+  "answer": "Banana",
+  "accept": [
+   "banana",
+   "bananas"
+  ],
+  "clues": [
+   {
+    "t": "Botanically, I’m a berry."
+   },
+   {
+    "t": "I’m slightly radioactive, thanks to potassium."
+   },
+   {
+    "t": "My plant is technically a giant herb, not a tree."
+   },
+   {
+    "t": "Most of me sold worldwide are one variety, the Cavendish."
+   },
+   {
+    "t": "I come in bunches called hands."
+   },
+   {
+    "t": "Long yellow fruit you peel."
+   }
+  ],
+  "pearl": "Cyclone Larry in 2006 wiped out most of Australia’s crop and prices jumped to about $12 a kilo."
+ },
+ {
+  "date": "2027-03-24",
+  "number": 152,
+  "difficulty": "Medium",
+  "title": "Cube poo",
+  "answer": "Wombat",
+  "accept": [
+   "wombat",
+   "wombats",
+   "common wombat",
+   "hairy nosed wombat"
+  ],
+  "clues": [
+   {
+    "t": "My pouch faces backwards so dirt doesn’t get in while I dig."
+   },
+   {
+    "t": "I can run at up to 40 km/h."
+   },
+   {
+    "t": "My bum is a tough plate of cartilage that I use to block my burrow."
+   },
+   {
+    "t": "My poo is cube-shaped."
+   },
+   {
+    "t": "I’m a burrowing Australian marsupial."
+   },
+   {
+    "t": "Stocky, short-legged marsupial that digs."
+   }
+  ],
+  "pearl": "Wombat cubes form in the last part of the intestine, where the wall has stiffer and stretchier bands."
+ },
+ {
+  "date": "2027-03-25",
+  "number": 153,
+  "difficulty": "Medium",
+  "title": "Square pockets",
+  "answer": "Waffle",
+  "accept": [
+   "waffle",
+   "waffles",
+   "belgian waffle"
+  ],
+  "clues": [
+   {
+    "t": "I have my own international day on 25 March."
+   },
+   {
+    "t": "I’m cooked between two hot metal plates."
+   },
+   {
+    "t": "Nike’s first running shoe soles were made in one of my irons."
+   },
+   {
+    "t": "Belgium is famous for me."
+   },
+   {
+    "t": "My grid of square pockets holds syrup."
+   },
+   {
+    "t": "Crisp batter cake with a grid pattern."
+   }
+  ],
+  "pearl": "Bill Bowerman poured rubber into his wife’s waffle iron to make a grippier sole."
+ },
+ {
+  "date": "2027-03-26",
+  "number": 154,
+  "difficulty": "Hard",
+  "title": "Tiny worlds",
+  "answer": "Microscope",
+  "accept": [
+   "microscope",
+   "microscopes",
+   "light microscope",
+   "compound microscope"
+  ],
+  "clues": [
+   {
+    "t": "A Dutch cloth merchant made me famous in the 1670s."
+   },
+   {
+    "t": "He was first to see bacteria, calling them ‘little animals’."
+   },
+   {
+    "t": "Robert Hooke used me to name the cell."
+   },
+   {
+    "t": "My electron version can see individual atoms."
+   },
+   {
+    "t": "I use lenses to magnify."
+   },
+   {
+    "t": "Scientific instrument for seeing things too small for the eye."
+   }
+  ],
+  "pearl": "Antonie van Leeuwenhoek made over 500 single-lens microscopes, some magnifying about 270 times."
+ },
+ {
+  "date": "2027-03-27",
+  "number": 155,
+  "difficulty": "Hard",
+  "title": "Wooden O",
+  "answer": "Globe Theatre",
+  "accept": [
+   "globe theatre",
+   "globe theater",
+   "the globe",
+   "shakespeare's globe",
+   "shakespeares globe"
+  ],
+  "clues": [
+   {
+    "t": "I was built in London in 1599."
+   },
+   {
+    "t": "Part of me was made from the timber of an older theatre."
+   },
+   {
+    "t": "A cannon fired during a play in 1613 set my thatched roof on fire."
+   },
+   {
+    "t": "Poorer audience members stood in my yard as ‘groundlings’."
+   },
+   {
+    "t": "A reconstruction of me opened in 1997."
+   },
+   {
+    "t": "Shakespeare’s theatre."
+   }
+  ],
+  "pearl": "Today is World Theatre Day. The 1613 fire happened during Henry VIII; nobody died."
+ },
+ {
+  "date": "2027-03-28",
+  "number": 156,
+  "difficulty": "Genius",
+  "title": "Sweet cross",
+  "answer": "Hot cross bun",
+  "accept": [
+   "hot cross bun",
+   "hot cross buns",
+   "cross bun"
+  ],
+  "clues": [
+   {
+    "t": "An old nursery rhyme says I cost one a penny or two a penny."
+   },
+   {
+    "t": "Superstition said I would never go mouldy if baked on Good Friday."
+   },
+   {
+    "t": "Sailors took me to sea to prevent shipwreck."
+   },
+   {
+    "t": "Some versions of me now come with chocolate chips."
+   },
+   {
+    "t": "I’m spiced and full of fruit."
+   },
+   {
+    "t": "Sweet bun marked with a cross, eaten at Easter."
+   }
+  ],
+  "pearl": "Queen Elizabeth I once restricted their sale to funerals, Good Friday and Christmas. Happy Easter."
+ },
+ {
+  "date": "2027-03-29",
+  "number": 157,
+  "difficulty": "Easy",
+  "title": "Our Easter animal",
+  "answer": "Bilby",
+  "accept": [
+   "bilby",
+   "bilbies",
+   "greater bilby",
+   "easter bilby",
+   "macrotis"
+  ],
+  "clues": [
+   {
+    "t": "My ears are long, like a rabbit’s."
+   },
+   {
+    "t": "My pouch faces backwards."
+   },
+   {
+    "t": "I never need to drink water: I get it from my food."
+   },
+   {
+    "t": "I’m endangered, partly because of foxes and cats."
+   },
+   {
+    "t": "Australians push me as a chocolate alternative to the Easter Bunny."
+   },
+   {
+    "t": "Small desert marsupial with big ears and a long snout."
+   }
+  ],
+  "pearl": "Rabbits are a feral pest in Australia, so the Easter Bilby was promoted from the 1990s to raise conservation funds."
+ },
+ {
+  "date": "2027-03-30",
+  "number": 158,
+  "difficulty": "Easy",
+  "title": "Rub it out",
+  "answer": "Pencil",
+  "accept": [
+   "pencil",
+   "pencils",
+   "lead pencil",
+   "graphite pencil"
+  ],
+  "clues": [
+   {
+    "t": "I contain no lead at all."
+   },
+   {
+    "t": "My core is graphite mixed with clay."
+   },
+   {
+    "t": "On 30 March 1858, a patent was granted for my version with an eraser on top."
+   },
+   {
+    "t": "Most of me are painted yellow in the US."
+   },
+   {
+    "t": "I can draw a line about 56 km long."
+   },
+   {
+    "t": "Wooden writing stick you sharpen."
+   }
+  ],
+  "pearl": "Yellow pencils signalled Chinese graphite, which was prized; the colour stuck."
+ },
+ {
+  "date": "2027-03-31",
+  "number": 159,
+  "difficulty": "Medium",
+  "title": "Comes back",
+  "answer": "Boomerang",
+  "accept": [
+   "boomerang",
+   "boomerangs",
+   "returning boomerang"
+  ],
+  "clues": [
+   {
+    "t": "The oldest known version of me, made from mammoth tusk, was found in Poland."
+   },
+   {
+    "t": "Most of my Aboriginal versions were made for hunting and don’t come back."
+   },
+   {
+    "t": "I was also used as a digging tool and to make fire."
+   },
+   {
+    "t": "My returning version spins and flies in a curve."
+   },
+   {
+    "t": "Astronauts tested me on the International Space Station."
+   },
+   {
+    "t": "Curved throwing stick from Australia that comes back."
+   }
+  ],
+  "pearl": "Returning boomerangs work because spinning wings make uneven lift, which tips the flight path into a circle."
+ }
+]
