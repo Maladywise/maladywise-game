@@ -3,12 +3,12 @@
    Tiers in the data: 1 horse, 3 pony, 6 donkey, 10 zebra, 20 unicorn (one per prompt).
    Scoring is scaled 1-20 by rarity within each prompt (scaleP): the data unicorn scores 20; every other answer scores 1-19
    by its rarity rank (ties share the middle rank). Bands: horse 1-4, pony 5-8, donkey 9-13, zebra 14-17, unicorn 18-20.
-   Later: swap the rank source for real player answer shares once there are enough players.
+   Live rarity: once a prompt has 100+ player answers that day, points come from real shares (see zApply).
    Ranked statistics prompts (optional): answer = [name, tier, [synonyms], "Wiki_Title" or null, rank, "value"?] and prompt "src" (short source line).
    Ties share a rank number. Never reorder a: saved picks are indices into it. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "15", TRIES = 3, WIN = 24;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "16", TRIES = 3, WIN = 24;
   var root = document.getElementById("zbr");
   // Normie mode: everyday prompts from puzzles/normie/, stats under "n-" keys (tracking prefixed "normie/" by the shell).
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", FIRST = NORMIE ? "2026-10-24" : "2026-10-18";
@@ -166,7 +166,7 @@
         (msg ? '<p class="say' + (bad ? " bad" : "") + '">' + esc(msg) + "</p>" : '<p class="hint">Any correct answer scores. Rarer answers score more.</p>');
     } else {
       var p = st.picks[i];
-      h += p >= 0 ? '<div class="hit t' + BANDK(x.a[p][1]) + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span>" + (rk(x.a[p]) !== null ? '<span class="rkl">' + esc(rline(x, x.a[p])) + "</span>" : "") + "</div><i>+" + x.a[p][1] + "</i></div>"
+      h += p >= 0 ? '<div class="hit t' + BANDK(x.a[p][1]) + '"><span class="em">' + TIER[x.a[p][1]].e + '</span><div><b>' + esc(cap(x.a[p][0])) + '</b><span>' + esc(msg || TIER[x.a[p][1]].n + ". +" + x.a[p][1]) + "</span>" + (x._live && x.a[p]._sh != null ? '<span class="lv">Named by ' + (x.a[p]._sh < 0.01 ? "under 1" : Math.round(x.a[p]._sh * 100)) + "% of " + x._live + " players today</span>" : "") + (rk(x.a[p]) !== null ? '<span class="rkl">' + esc(rline(x, x.a[p])) + "</span>" : "") + "</div><i>+" + x.a[p][1] + "</i></div>"
         : '<div class="hit t0"><span class="em">\u274c</span><div><b>No score</b><span>' + esc(msg || "The list wins this round.") + "</span></div><i>+0</i></div>";
       if (tries.length) {
         var sent = (st.sug || {})[i] || [];
@@ -243,8 +243,32 @@
   function logAns(name) {
     if (isLive() && window.MW_track) MW_track("zebritis-answer/" + day + "/" + (st.i + 1) + "/" + norm(name).replace(/ /g, "-"), "Zebritis answer: " + P.prompts[st.i].q + " \u2192 " + name);
   }
+  // ---------- live rarity (22 Nov 2026) ----------
+  // Each player's one accepted answer per prompt is counted anonymously (one count per device per prompt; only list answers,
+  // sent as their index, so nothing off the list can ever be counted). Once a prompt has ZMIN answers that day, its points
+  // come from real shares: named by 2.5% or fewer = 20, each further 2.5% drops a point (min 1). Below ZMIN, the data tiers stand.
+  var ZURL = "https://mw-presence.onrender.com", ZMIN = 100, zLive = {};
+  function zId() { var k = "mw-zid", v = load(k, ""); if (!v) { v = Math.random().toString(36).slice(2, 12) + Math.random().toString(36).slice(2, 8); put(k, v); } return v; }
+  function zKey(i) { return st.swap === i ? "s" : String(i); }
+  function zSend(i, a) {
+    if (!isLive()) return;
+    try { fetch(ZURL + "/zpick?d=" + day + "&m=" + (NORMIE ? "n" : "m") + "&p=" + zKey(i) + "&a=" + a + "&id=" + zId(), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {}
+  }
+  function zApply() {
+    if (!P) return;
+    P.prompts.forEach(function (x, i) {
+      var c = zLive[zKey(i)]; if (!c) return;
+      var tot = 0; for (var k in c) tot += c[k]; if (tot < ZMIN) return;
+      x._live = tot;
+      x.a.forEach(function (a, j) { var sh = (c[j] || 0) / tot; a._sh = sh; a[1] = Math.max(1, 20 - Math.floor(sh / 0.025 + 1e-9)); });
+      if (st.pts && st.pts[i] != null && st.picks[i] >= 0) x.a[st.picks[i]][1] = st.pts[i];
+    });
+  }
+  function zFetch(d) {
+    try { fetch(ZURL + "/zcounts?d=" + d + "&m=" + (NORMIE ? "n" : "m"), { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (o) { if (!o || d !== day || !P) return; zLive = o.c || {}; zApply(); if (!st.done || !isLive()) render(); }).catch(function () {}); } catch (e) {}
+  }
   var pend = null;
-  function lock(p, msg) { pend = null; st.picks[st.i] = p; put(KEY, st); render(msg); }
+  function lock(p, msg) { pend = null; st.picks[st.i] = p; st.pts = st.pts || {}; st.pts[st.i] = P.prompts[st.i].a[p][1]; put(KEY, st); zSend(st.i, p); render(msg); }
   root.addEventListener("submit", function (e) {
     if (e.target.id !== "zbr-form") return; e.preventDefault();
     var inp = $("in"), g = (inp.value || "").trim(); if (!g || st.done) return;
@@ -289,7 +313,7 @@
       if (P.spare && st.swap !== undefined && st.swap !== null) P.prompts[st.swap] = P.spare;
       $("eyebrow").textContent = (isLive() ? "Zebritis" : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(P.date);
       $("badge").textContent = (P.prompts.length > 3 ? "Super \u00b7 " : "") + (P.difficulty || ""); $("badge").className = "badge" + (P.difficulty === "Einstein" ? " ein" : "");
-      render(); renderArchive();
+      zLive = {}; render(); renderArchive(); zFetch(d);
     });
   }
   function renderArchive() {

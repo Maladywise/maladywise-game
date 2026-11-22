@@ -11,6 +11,7 @@
 //   the weekly hubs workflow uses it to put the most-used hubs in the top menu.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
 //   /history?days=N returns daily totals, per-game counts and the 28-day hourly pattern for the public /site-stats/ page.
+// - Zebritis live rarity: /zpick counts one list answer per device per prompt; /zcounts returns a day's counts.
 const http = require("http");
 const crypto = require("crypto");
 const { createClient } = require("redis");
@@ -312,6 +313,32 @@ async function fbDone(id) {
   const i = memFb.findIndex((x) => x.indexOf('"id":"' + id + '"') >= 0); if (i >= 0) memFb.splice(i, 1);
 }
 
+
+// ---------- Zebritis live rarity ----------
+// One count per device per prompt per day: the device's random ID is hashed and only kept 3 days for de-duplication.
+// Only an answer's list index is stored (the client sends it only for answers on the list), never typed text.
+const zMem = new Map(), zSeen = new Set(); let zCache = new Map();
+function zDayOk(d) { if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) return false; const t = Date.parse(d + "T00:00:00Z"), n = Date.parse(sydDay() + "T00:00:00Z"); return Math.abs(t - n) <= 864e5; }
+async function zAdd(d, m, p, a, id) {
+  const h = crypto.createHash("sha256").update("zb|" + id).digest("hex").slice(0, 16), uk = "zbu:" + d + ":" + m + ":" + p + ":" + h, ck = "zb:" + d + ":" + m + ":" + p;
+  if (kv && kv.isReady) {
+    const fresh = await kv.set(uk, "1", { NX: true, EX: 3 * 86400 }); if (!fresh) return;
+    await kv.hIncrBy(ck, String(a), 1); await kv.expire(ck, 400 * 86400); zCache.delete(d + m); return;
+  }
+  if (zSeen.has(uk)) return; zSeen.add(uk);
+  const o = zMem.get(ck) || {}; o[a] = (o[a] || 0) + 1; zMem.set(ck, o); zCache.delete(d + m);
+}
+async function zCounts(d, m) {
+  const ck = d + m, hit = zCache.get(ck); if (hit && Date.now() - hit.t < 30000) return hit.v;
+  const out = {};
+  for (const p of ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "s"]) {
+    let h = null;
+    if (kv && kv.isReady) { try { h = await kv.hGetAll("zb:" + d + ":" + m + ":" + p); } catch (e) {} } else h = zMem.get("zb:" + d + ":" + m + ":" + p) || null;
+    if (h && Object.keys(h).length) { out[p] = {}; for (const k in h) out[p][k] = Number(h[k] || 0); }
+  }
+  zCache.set(ck, { t: Date.now(), v: out }); return out;
+}
+
 const server = http.createServer(async (req, res) => {
   const origin = req.headers.origin || "";
   if (ALLOWED.test(origin)) { res.setHeader("Access-Control-Allow-Origin", origin); res.setHeader("Vary", "Origin"); }
@@ -328,6 +355,16 @@ const server = http.createServer(async (req, res) => {
     if (url.pathname === "/done" && req.method === "POST") {
       if (!limited(ip, 60)) await addDone(clean(url.searchParams.get("g"), 24), url.searchParams.get("w"));
       res.writeHead(204); return res.end();
+    }
+    if (url.pathname === "/zpick" && req.method === "POST") {
+      const q = url.searchParams, d = q.get("d") || "", m = q.get("m") === "n" ? "n" : "m", p = String(q.get("p") || ""), a = Number(q.get("a")), id = clean(q.get("id"), 24);
+      if (zDayOk(d) && /^([0-9]|s)$/.test(p) && Number.isInteger(a) && a >= 0 && a < 100 && id.length >= 8 && !limited("zb" + ip, 120)) await zAdd(d, m, p, a, id);
+      res.writeHead(204); return res.end();
+    }
+    if (url.pathname === "/zcounts") {
+      const q = url.searchParams, d = q.get("d") || "", m = q.get("m") === "n" ? "n" : "m";
+      res.writeHead(200, { "Content-Type": "application/json" });
+      return res.end(JSON.stringify({ d, m, c: /^\d{4}-\d{2}-\d{2}$/.test(d) ? await zCounts(d, m) : {} }));
     }
     if (url.pathname === "/rate") { // today's solve rate for one game: {g, n: finishes with a result, w: wins}
       const g = clean(url.searchParams.get("g"), 24), d = sydDay(); let n = 0, w = 0;

@@ -113,3 +113,4 @@ html[data-theme="dark"] #zbr .hit.t20{background:linear-gradient(135deg,#3A2140,
 html[data-theme="dark"] #zbr .pill.t20{background:linear-gradient(135deg,#3A2140,#2B2445);color:#E3B8F0}
 #zbr .rest{margin:8px 0 0;font-size:14px;color:var(--muted)}
 #zbr .rsrc{margin:8px 0 0;font-size:12px;color:var(--muted);font-style:italic}
+#zbr .lv{display:block;font-size:12px;color:var(--muted)}
