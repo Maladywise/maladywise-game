@@ -1318,6 +1318,46 @@
    "date": "2026-11-22",
    "source": "news search: Fierce Pharma regulatory tracker",
    "niche": false
+  },
+  {
+   "term": "pancreatic cancer drug daraxonrasib",
+   "region": "US",
+   "approx volume": "10000+",
+   "date": "2026-11-23",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-22T15:36:11Z)",
+   "niche": true
+  },
+  {
+   "term": "pancreatic cancer pill",
+   "region": "AU",
+   "approx volume": "2000+",
+   "date": "2026-11-23",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-22T15:36:11Z)",
+   "niche": true
+  },
+  {
+   "term": "hypertension",
+   "region": "GB",
+   "approx volume": "100000+",
+   "date": "2026-11-23",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-22T15:36:11Z)",
+   "niche": false
+  },
+  {
+   "term": "salmonella",
+   "region": "US",
+   "approx volume": "1000+",
+   "date": "2026-11-23",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-22T15:36:11Z)",
+   "niche": false
+  },
+  {
+   "term": "home birth",
+   "region": "AU",
+   "approx volume": "1000+",
+   "date": "2026-11-23",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-22T15:36:11Z)",
+   "niche": false
   }
  ],
  "used": [
