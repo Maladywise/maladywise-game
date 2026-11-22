@@ -4,8 +4,12 @@
   var G = window.MG, $ = G.$, L = window.LUNICORN;
   var SYN = 29.530588853, EPOCH = Date.UTC(2000, 0, 6, 18, 14) / 864e5; // a known new moon, in days
   var ECLIPSES = ["2028-12-31T16:52Z", "2029-06-26T03:22Z", "2029-12-20T22:42Z", "2032-04-25T15:13Z", "2032-10-18T19:02Z", "2033-04-14T19:13Z", "2033-10-08T10:55Z"].map(function (s) { return Date.parse(s); }); // total lunar eclipses (NASA)
-  function fullNear(ms) { var d = ms / 864e5, k = Math.round((d - EPOCH) / SYN - 0.5); return (EPOCH + (k + 0.5) * SYN) * 864e5; }
-  function nextFull(ms) { var f = fullNear(ms); return f < ms - 864e5 ? f + SYN * 864e5 : f; }
+  // Early chances (22 Nov 2026): supermoons alternate blue / blood sets; partial and penumbral lunar eclipses get the blood set.
+  var SUPER = ["2026-11-25", "2026-12-24", "2027-01-22", "2028-02-11", "2028-03-11", "2029-03-01", "2029-04-28", "2030-04-18", "2030-05-17", "2030-06-16"];
+  var PARTIALS = ["2027-02-20T23:13Z", "2027-07-18T16:03Z", "2027-08-17T07:14Z", "2028-01-12T04:13Z", "2028-07-06T18:20Z"].map(function (s) { return Date.parse(s); });
+  var FMLIST = "2601031002 2602012209 2603031137 2604020211 2605011723 2605310845 2606292356 2607291435 2608280418 2609261648 2610260411 2611241453 2612240128 2701221217 2702202323 2703221043 2704202227 2705201058 2706190044 2707181544 2708170728 2709152303 2710151346 2711140325 2712131608 2801120402 2802101503 2803110105 2804091026 2805081948 2806070608 2807061810 2808050809 2809032347 2810031624 2811020917 2812020140 2812311648 2901300603 2902281710 2903300226 2904281036 2905271837 2906260322 2907251335 2908240151 2909221629 2910220927 2911210402 2912202246 3001191554 3002180619 3003191756 3004180319 3005171119 3006151840 3007150211 3008131044 3009112117 3010111046 3011100330 3012092240 3101081825 3102071246 3103090429 3104071721 3105070339 3106051158 3107041901 3108030145 3109010920 3109301857 3110300732 3111282318 3112281732 3201271252 3202260743 3203270046 3204251509 3205250237 3206231132 3207221851 3208210146 3209190930 3210181857 3211170641 3212162048 3301151306 3302140704 3303160137 3304141917 3305141042 3306122319 3307120928 3308101807 3309090220 3310081057 3311062031 3312060721 3401041946 3402031004 3403050209 3404031918 3405031215 3406020353 3407011744 3407310554 3408291649 3409280256 3410271242 3411252231 3412250854 3501232016 3502220853 3503232241 3504221320 3505220425 3506201937 3507201036 3508190100 3509171423 3510170235 3511151348 3512150032 3601131115".split(" "); // true full moons, UTC yymmddhhmm (PyEphem), 2026–2035
+  var fullNear = function(ms){var L=FMLIST,b=null;for(var i=0;i<L.length;i++){var s=L[i],t=Date.UTC(2000+ +s.slice(0,2),+s.slice(2,4)-1,+s.slice(4,6),+s.slice(6,8),+s.slice(8,10));if(b===null||Math.abs(t-ms)<Math.abs(b-ms))b=t;}if(b!==null&&Math.abs(b-ms)<16*864e5)return b;var SYN=29.530588853,EP=Date.UTC(2000,0,6,18,14)/864e5,k=Math.round((ms/864e5-EP)/SYN-0.5);return(EP+(k+0.5)*SYN)*864e5;}
+  function nextFull(ms) { var f = fullNear(ms); return f < ms - 864e5 ? fullNear(f + SYN * 864e5) : f; }
   function sameMonth(a, b) { a = new Date(a); b = new Date(b); return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth(); }
   function mode(now) {
     var q = new URLSearchParams(location.search).get("t"); // testing: ?t=open | blue | blood
@@ -13,8 +17,11 @@
     if (q === "blue") return { open: true, kind: "blue", fm: now };
     if (q === "blood") return { open: true, kind: "blood", fm: now };
     var fm = fullNear(now.getTime()), near = new Date(fm).toDateString() === now.toDateString(), code = G.get("mw-open-lunar", "") === (function () { var d = new Date(); return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate(); })();
+    var day = G.localDay(new Date(fm)), why = "";
     var kind = ECLIPSES.some(function (e) { return Math.abs(e - fm) < 864e5; }) ? "blood" : sameMonth(fm, fm - SYN * 864e5) ? "blue" : "rainbow";
-    return { open: near || code, kind: near ? kind : "rainbow", fm: fm, near: near };
+    if (kind === "rainbow" && PARTIALS.some(function (e) { return Math.abs(e - fm) < 864e5; })) { kind = "blood"; why = "eclipse"; }
+    if (kind === "rainbow" && SUPER.indexOf(day) >= 0) { kind = SUPER.indexOf(day) % 2 ? "blood" : "blue"; why = "super"; }
+    return { open: near || code, kind: near ? kind : "rainbow", why: near ? why : "", fm: fm, near: near };
   }
   var NOW = new Date(), M = mode(NOW);
   var THEME = {
@@ -22,6 +29,8 @@
     blue: { h: "Blue Moon Lunicorn", kick: "🔵 Blue moon today", lede: "A second full moon this month. Once in a blue moon, Ziggy turns blue. Ten blue things in medicine.", n: 10 },
     blood: { h: "Blood Moon Lunicorn", kick: "🔴 Blood moon today", lede: "A total lunar eclipse turns the moon red. So does Ziggy. Ten red things in medicine.", n: 10 }
   }[M.kind];
+  if (M.why === "super") THEME = { h: M.kind === "blue" ? "Supermoon Lunicorn" : "Supermoon Lunicorn", kick: "🌕 Supermoon today", lede: M.kind === "blue" ? "The moon is at its closest and Ziggy has turned blue for the night. Ten blue things in medicine. A rare chance at the Blue Moon badge." : "The moon is at its closest and Ziggy has gone red for the night. Ten red things in medicine. A rare chance at the Blood Moon badge.", n: 10 };
+  if (M.why === "eclipse") THEME = { h: "Eclipse Lunicorn", kick: "🌒 Lunar eclipse today", lede: "Earth’s shadow brushes the moon tonight, and Ziggy blushes red. Ten red things in medicine. A rare chance at the Blood Moon badge.", n: 10 };
   document.documentElement.setAttribute("data-moon", M.kind);
   var seed = "lunicorn-" + G.localDay(new Date(M.fm)) + "-" + M.kind, KEY = "mw-lunicorn-" + G.localDay(new Date(M.fm));
   // Rainbow: a fixed shuffled order, worked through 10 at a time, one block per full moon (120 colours = a year without repeats).
@@ -68,6 +77,30 @@
   }
   if (!M.open) closed();
   else { var prev = G.get(KEY, null); if (prev != null) $("lu-best").innerHTML = "Tonight: <b>" + prev + "/" + SET.length + "</b>. Play again?"; }
+  // Countdown to the next blue and blood moons, with an add-to-calendar file (no sign-up needed).
+  (function () {
+    var box = document.createElement("div"); box.className = "lu-next";
+    var now = NOW.getTime(), blue = null, f = nextFull(now - 864e5);
+    for (var i = 0; i < 80 && !blue; i++, f = fullNear(f + SYN * 864e5)) if (f > now - 864e5 && sameMonth(f, f - SYN * 864e5) && !ECLIPSES.some(function (e) { return Math.abs(e - f) < 864e5; })) blue = f;
+    var blood = ECLIPSES.filter(function (e) { return e > now - 864e5; })[0];
+    var early = [];
+    SUPER.forEach(function (d, i) { var t = Date.parse(d + "T12:00:00"); if (G.localDay(new Date(t)) >= G.localDay(NOW)) early.push([t, i % 2 ? "Supermoon (red set)" : "Supermoon (blue set)"]); });
+    PARTIALS.forEach(function (t) { if (G.localDay(new Date(t)) >= G.localDay(NOW)) early.push([t, "Lunar eclipse (red set)"]); });
+    early.sort(function (a, b) { return a[0] - b[0]; });
+    function nice(t) { return new Date(t).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "long", year: "numeric" }); }
+    function away(t) { if (new Date(t).toDateString() === NOW.toDateString()) return "today"; var dd = Math.ceil((t - now) / 864e5), m = Math.round((t - now) / (30.44 * 864e5)); return dd < 32 ? "in " + dd + " day" + (dd > 1 ? "s" : "") : m < 24 ? "in " + m + " months" : "in " + Math.floor(m / 12) + " years" + (m % 12 ? ", " + (m % 12) + " month" + (m % 12 > 1 ? "s" : "") : ""); }
+    function ics(t, what) {
+      var d = new Date(t), ymd = d.getFullYear() + String(d.getMonth() + 1).padStart(2, "0") + String(d.getDate()).padStart(2, "0"), n = new Date(t + 864e5), ymd2 = n.getFullYear() + String(n.getMonth() + 1).padStart(2, "0") + String(n.getDate()).padStart(2, "0");
+      var body = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Malady Wise//Lunicorn//EN", "BEGIN:VEVENT", "UID:lunicorn-" + ymd + "@maladywise.com", "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z", "DTSTART;VALUE=DATE:" + ymd, "DTEND;VALUE=DATE:" + ymd2, "SUMMARY:" + what + ": Lunicorn is open", "DESCRIPTION:Ziggy’s special set is open all day. https://maladywise.com/lunicorn/", "URL:https://maladywise.com/lunicorn/", "BEGIN:VALARM", "TRIGGER:PT9H", "ACTION:DISPLAY", "DESCRIPTION:Lunicorn is open today", "END:VALARM", "END:VEVENT", "END:VCALENDAR"].join("\r\n");
+      return "data:text/calendar;charset=utf-8," + encodeURIComponent(body);
+    }
+    function row(t, ic, what) { return t ? '<li><span>' + ic + " <b>" + what + "</b>: " + nice(t) + " <small>(" + away(t) + ")</small></span> <a class=\"lu-cal\" download=\"lunicorn-" + G.localDay(new Date(t)) + '.ics" href="' + ics(t, what) + '">📅 Add to calendar</a></li>' : ""; }
+    box.innerHTML = "<h2>Next special moons</h2><ul>" + row(blue, "🔵", "Blue moon") + row(blood, "🔴", "Blood moon") + (early[0] ? row(early[0][0], "✨", "Next early chance: " + early[0][1]) : "") + "</ul><p class=\"lu-next-note\">Blue and blood moon sets each earn a secret badge.</p>";
+    var lock = $("lu-lock"); lock.parentNode.insertBefore(box, lock.nextSibling);
+    var st = document.createElement("style");
+    st.textContent = ".lu-next{margin:18px 0 0;padding:14px 16px;border:1px solid var(--line,#E7E0F2);border-radius:14px}.lu-next h2{margin:0 0 8px;font-size:17px}.lu-next ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.lu-next li{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between}.lu-next small{opacity:.75}.lu-cal{font-size:13px;font-weight:600;white-space:nowrap}.lu-next-note{margin:10px 0 0;font-size:13px;opacity:.8}";
+    document.head.appendChild(st);
+  })();
   $("lu-play").onclick = function () { if (!$("lu-play").disabled) start(); };
   $("lu-again").onclick = function () { location.reload(); };
 })();
