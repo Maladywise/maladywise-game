@@ -39,6 +39,7 @@
       [["medical", "🩺 Medical"], ["normie", "🙂 Normie"]].map(function (o) { return '<button type="button" data-v="' + o[0] + '" aria-pressed="' + (view === o[0]) + '">' + o[1] + "</button>"; }).join("") + "</div>";
     h += '<section class="me-top"><div><b>' + st.solved + "</b><span>Puzzles solved</span></div><div><b>🔥 " + st.cur + "</b><span>Current streak</span></div><div><b>" + st.best + "</b><span>Best streak</span></div><div><b>" + st.today + "</b><span>Played today</span></div></section>";
     h += '<p class="me-quip">' + quip + "</p>";
+    if (window.MW_ward) { var wd = MW_ward(st); h += '<section class="me-card"><div class="me-h"><h2>' + (N ? "Your crew" : "Your ward") + "</h2><span>" + wd.have + " of " + wd.total + ' on shift</span></div><p class="me-wnext">' + wd.next + " Finish a game for the first time to bring its host on board.</p>" + wd.html + "</section>"; }
     h += heat(st.days);
     h += '<section class="me-card"><div class="me-h"><h2>By game</h2><span>' + (N ? "Normie mode" : "Medical mode") + '</span></div><div class="me-games">' +
       st.rows.map(function (r) {

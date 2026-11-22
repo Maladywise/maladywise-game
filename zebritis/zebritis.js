@@ -159,7 +159,7 @@
     var h = '<p class="qn">Prompt ' + (i + 1) + " of " + n + '</p><h2 class="qt">' + esc(x.q) + "</h2>";
     if (!answered) {
       var left = TRIES - tries.length;
-      h += '<form class="ask" id="zbr-form" autocomplete="off"><input id="zbr-in" type="text" inputmode="text" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Type an answer" maxlength="60" aria-label="Your answer"><button type="submit" class="go">Submit</button></form>' +
+      h += '<form class="ask" id="zbr-form" autocomplete="off"><input id="zbr-in" type="text" inputmode="text" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Type an answer" maxlength="60" aria-label="Your answer"><button type="submit" class="go">Submit</button></form>' + (NORMIE ? "" : '<p class="safe-note">Answers are counted anonymously. Please don\u2019t type patient details.</p>') +
         '<div class="zmeta"><span class="tries">' + Array(left + 1).join("\u25cf") + Array(tries.length + 1).join("\u25cb") + " " + left + (left === 1 ? " try" : " tries") + ' left</span>' + (P.spare && st.swap === undefined ? '<button type="button" class="link" id="zbr-swap">Swap prompt</button>' : "") + '<button type="button" class="link" id="zbr-skip">Give up</button></div>' +
         (pend ? '<div class="dym"><p>Did you mean <b>' + esc(cap(x.a[pend.i][0])) + '</b>?</p><button type="button" class="go" id="zbr-yes">Yes</button><button type="button" class="link" id="zbr-no">No, something else</button></div>' : "") +
                 (tries.length ? '<p class="missed">Not on the list: ' + tries.map(esc).join(", ") + "</p>" : "") +

@@ -72,3 +72,11 @@
   .me-games{grid-template-columns:1fr}
   .doc ul.me-badges{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+.me-wnext{margin:0 0 10px;font-size:14px;color:var(--muted,#6B5A93)}
+.me-ward{display:grid;grid-template-columns:repeat(auto-fill,minmax(72px,1fr));gap:8px}
+.me-wmore{margin-top:10px}.me-wmore summary{cursor:pointer;font-weight:600;font-size:14px;margin-bottom:8px}
+.mw-wd{display:grid;justify-items:center;gap:2px;text-align:center;padding:8px 4px;border-radius:12px;background:var(--soft,#F1ECF8)}
+.mw-wd img{width:44px;height:44px;filter:grayscale(1) brightness(0);opacity:.18}
+.mw-wd.got img{filter:none;opacity:1}
+.mw-wd b{font-size:12px;line-height:1.2}
+.mw-wd small{font-size:10.5px;line-height:1.25;opacity:.75}

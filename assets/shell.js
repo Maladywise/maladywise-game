@@ -463,6 +463,7 @@
     if (!st) return; var f = SCENES[id];
     var sc0 = f ? f(st) : null; if (sc0 && st.win !== false) { sc0.html += mascotCheer(id, Array.isArray(st.guesses) ? st.guesses.length === 1 : /\bgold\b/.test(sc0.cls || "")); sc0.ms = (sc0.ms || 2600) + 2000; }
     if (!sc0 && st.done && st.win === false) sc0 = loseScene(id, st);
+    if (sc0 && st.done) { var rk = resultRank(id, st, sc0); sc0.html += '<p class="cb-rank">' + rk.icon + " " + rk.t + "-level result</p>"; sc0.ms = (sc0.ms || 2600) + 600; }
     queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];
     if (g && st.win) { var t = sydToday(); if ((!g.weekly && !g.dailyLine || ((g.nmode ? window.MW_EINSTEIN_N : window.MW_EINSTEIN) || {})[g.id] && (((g.nmode ? MW_EINSTEIN_N : MW_EINSTEIN)[g.id]) || []).indexOf(t) >= 0) && diffFor(g, t, new Date(dayNum(t) * 864e5).getUTCDay()) === "Einstein") queue({ cls: "cb-ein", ms: 2200, html: '<svg class="cb-atom" viewBox="-60 -60 120 120" aria-hidden="true"><ellipse rx="52" ry="18"/><ellipse rx="52" ry="18" transform="rotate(60)"/><ellipse rx="52" ry="18" transform="rotate(120)"/><circle r="8" class="nuc"/></svg><p class="cb-cap">Einstein day, solved. Genuinely rare. Frame it.</p>' }); }
@@ -483,6 +484,62 @@
     }
   }
   window.MW_celebrate = celebrate;
+  // Share hooks (22 Nov 2026): one short line on shared results so friends know what it is at a glance.
+  (function () {
+    var HOOK = { wordemic: "The daily Wordle-style game for doctors", comorbix: "Daily connections game for doctors", morphemia: "Spelling bee for doctors", gridectomy: "Daily medical mini crossword", suturix: "Daily medical word search", sudokrine: "Sudoku with a medical twist", linkase: "Daily medical word chain", dxtective: "Daily diagnosis detective game", triviosis: "Daily medical trivia", cryptoplexy: "Medical cryptic crossword", zebritis: "Rarer answers score more", panelysis: "Daily blood test game", arrhythmix: "ECG reading game", glimpsis: "Spot the sign", opacitis: "X-ray reading game", "grand-rounds": "Sunday medical quiz", grandrounds: "Sunday medical quiz", sensitosis: "How good is that test?", anatomegaly: "Daily anatomy game", "dxtective-gauntlet": "Ten cases, no slips" };
+    var HOOK_N = { wordemic: "Daily word game", comorbix: "Daily connections game", morphemia: "Daily spelling bee", gridectomy: "Daily mini crossword", suturix: "Daily word search", sudokrine: "Sudoku with a twist", linkase: "Daily word chain", dxtective: "Daily mystery game", triviosis: "Daily trivia, weird and wonderful", cryptoplexy: "Weekly cryptic crossword", zebritis: "Rarer answers score more" };
+    var seg = location.pathname.split("/")[1] || "", hook = (NORMIE ? HOOK_N : HOOK)[seg];
+    if (!hook) return;
+    function add(t) { if (typeof t !== "string" || t.indexOf("maladywise") < 0 || t.indexOf(hook) >= 0) return t; var lines = t.split("\n"); lines.splice(1, 0, hook); return lines.join("\n"); }
+    try { if (navigator.share) { var os = navigator.share.bind(navigator); navigator.share = function (d) { if (d && d.text) d = Object.assign({}, d, { text: add(d.text) }); return os(d); }; } } catch (e) {}
+    try { if (navigator.clipboard && navigator.clipboard.writeText) { var ow = navigator.clipboard.writeText.bind(navigator.clipboard); navigator.clipboard.writeText = function (t) { return ow(add(t)); }; } } catch (e) {}
+  })();
+
+  // Result rank (22 Nov 2026): every finished puzzle gets a title from how well it went, on the result scene.
+  // Quality 0-1 from whatever the game saves: score/max, clues used, guesses, mistakes, hints; else win/gold/lose.
+  var RANKS = [["Med student", "\ud83d\udcda"], ["Intern", "\ud83e\ude7a"], ["Resident", "\ud83e\udd7c"], ["Registrar", "\ud83d\udcdf"], ["Fellow", "\ud83c\udf93"], ["Consultant", "\ud83c\udfc6"], ["Professor", "\ud83d\udc51"]];
+  var RANKS_N = [["Rookie", "\ud83c\udf31"], ["Regular", "\u2b50"], ["Sharp", "\u2728"], ["Brainbox", "\ud83e\udde0"], ["Whiz", "\u26a1"], ["Mastermind", "\ud83d\udd2e"], ["Legend", "\ud83d\udc51"]];
+  function resultQ(id, st, sc) {
+    var cl = function (x) { return Math.max(0, Math.min(1, x)); }, mx = st.max || st.total || st.of || st.outOf;
+    if (typeof st.score === "number" && mx) return cl(st.score / mx);
+    if (st.win === false) return typeof st.score === "number" && st.score > 0 ? 0.15 : 0.05;
+    var q = 0.6;
+    if (typeof st.revealed === "number") q = 1 - (st.revealed - 1) / 6;
+    else if (Array.isArray(st.guesses) && st.guesses.length) q = 1 - (st.guesses.length - 1) / 6;
+    else if (typeof st.mistakes === "number") q = 1 - st.mistakes / 4;
+    if (typeof st.hints === "number") q -= 0.08 * st.hints;
+    if (st.reveals) q -= 0.25;
+    if (sc && /\bgold\b/.test(sc.cls || "")) q = Math.max(q, 0.97);
+    return cl(Math.max(q, 0.2));
+  }
+  function resultRank(id, st, sc) {
+    var q = resultQ(id, st, sc), L = NORMIE ? RANKS_N : RANKS, cut = [0.15, 0.35, 0.5, 0.65, 0.8, 0.95], k = 0;
+    for (var i = 0; i < cut.length; i++) if (q >= cut[i]) k = i + 1;
+    return { t: L[k][0], icon: L[k][1], k: k };
+  }
+  window.MW_rank = function (id, st) { return resultRank(id, st, null); };
+
+  // Your ward (22 Nov 2026): game hosts join the first time you finish their game; section hosts join one per 5 solves.
+  var WARD_SKIP = { nomulous: 1, triagic: 1, dartfrog: 1, dactylosis: 1, mergeon: 1 };
+  function ward(st) {
+    var M = window.MW_MASCOTS || {}, played = {}, out = [], N = st.mode === "normie";
+    (st.rows || []).forEach(function (r) { if (r.played) played[r.g.id] = 1; });
+    (window.MW_GAMES || []).forEach(function (g) {
+      if (!g.live || !g.store || WARD_SKIP[g.id] || !M[g.id] || (N && !g.normie)) return;
+      out.push({ id: g.id, name: M[g.id].name, got: !!played[g.id], how: "Finish " + g.name });
+    });
+    var hosts = ["deepdives"].concat(Object.keys(HOSTS).filter(function (k) { return !WARD_SKIP[k]; })), step = 5;
+    hosts.forEach(function (k, i) { var need = (i + 1) * step; out.push({ id: k, name: k === "deepdives" ? (M.deepdives || {}).name || "Pebble" : HOSTS[k], got: st.solved >= need, how: need + " solves" }); });
+    var have = out.filter(function (x) { return x.got; }).length, next = out.filter(function (x) { return !x.got && /solves$/.test(x.how); })[0];
+    out.sort(function (a, b) { return b.got - a.got; }); // on shift first
+    var tile = function (x) {
+      return '<div class="mw-wd' + (x.got ? " got" : "") + '"><img src="/assets/mascots/' + x.id + '.svg" alt="" width="56" height="56" loading="lazy" data-nolink onerror="this.style.visibility=\'hidden\'"><b>' + (x.got ? esc2(x.name) : "???") + "</b><small>" + (x.got ? "On your ward" : esc2(x.how)) + "</small></div>";
+    };
+    var h = '<div class="me-ward">' + out.slice(0, 12).map(tile).join("") + "</div>" + (out.length > 12 ? '<details class="me-wmore"><summary>See the whole ward (' + out.length + ")</summary><div class=\"me-ward\">" + out.slice(12).map(tile).join("") + "</div></details>" : "");
+    return { have: have, total: out.length, next: next ? (parseInt(next.how, 10) - st.solved) + " more solves until " + next.name + " joins." : "Full ward. Everyone’s on shift.", html: h };
+  }
+  window.MW_ward = ward;
+
 
   // ---------- My stats + badges (all from localStorage; /me/ renders it) ----------
   // Finish log: when + which puzzle date, so archive dives and night owls can be counted. Mode-aware (mk).

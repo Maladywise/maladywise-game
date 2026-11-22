@@ -32,6 +32,7 @@
     (NORMIE ? '   <input id="dxw-guess" placeholder="What am I?\u2026" autocapitalize="off" spellcheck="false">' : '   <input id="dxw-guess" placeholder="Your diagnosis\u2026" autocapitalize="off" spellcheck="false">') +
     '   <button class="btn" type="submit">Guess</button>' +
     '   <button class="btn ghost" type="button" id="dxw-skip">Next clue</button>' +
+    (NORMIE ? '' : '   <p class="safe-note" style="flex-basis:100%;margin:6px 0 0;font-size:12px;opacity:.7">Fictional patients only. Please don\u2019t type real patient details.</p>') +
     '  </form>' +
     '  <div class="result" id="dxw-result" hidden></div>' +
     ' </section>' +
