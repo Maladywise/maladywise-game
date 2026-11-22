@@ -29,7 +29,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SKIP_DIRS = {".git", "node_modules", "_data", "__pycache__", "_scripts", "_social", ".claude", ".github"}
+SKIP_DIRS = {"toxiquest", ".git", "node_modules", "_data", "__pycache__", "_scripts", "_social", ".claude", ".github"}
 BASE = "https://maladywise.com"
 START, END = "<!-- static-nav -->", "<!-- /static-nav -->"
 BLOCK_RE = re.compile(r"\n?" + re.escape(START) + r".*?" + re.escape(END) + r"\n?", re.S)

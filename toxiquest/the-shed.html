@@ -16,7 +16,7 @@
 @media (prefers-reduced-motion:reduce){.cel *{animation:none!important}}
 .cases button[disabled]{opacity:.5;cursor:not-allowed}
 .cases button .st{color:var(--tag);margin-left:4px}
-.lockmsg{background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
+.lockmsg{display:block;background:#183024;border:1px dashed #3B5E48;border-radius:12px;padding:14px;color:var(--mist)}
 .tqcal{font:500 12px var(--mono);color:var(--tag);text-decoration:none;border:1px solid var(--tag);border-radius:999px;padding:6px 12px}
 </style>
 <title>Toxiquest: The Shed</title>
@@ -284,7 +284,7 @@ button[disabled]{opacity:.45;cursor:not-allowed}
   var SCENE = 7, SCENE_NAME = "The Shed";
   var TQ = {}; try { TQ = JSON.parse(localStorage.getItem("mw-toxiquest") || "{}") || {}; } catch (e) {}
   function tqSave() { try { localStorage.setItem("mw-toxiquest", JSON.stringify(TQ)); } catch (e) {} }
-  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || localStorage.getItem("mw-secret-toxic") === "1" || /[?&]t=all/.test(location.search); } catch (e) {}
+  var TESTER = false; try { TESTER = localStorage.getItem("mw-tester") === "1" || localStorage.getItem("mw-secret-toxic") === "1" || /[?&]t=all/.test(location.search); if (/[?&]t=all/.test(location.search)) localStorage.setItem("mw-tester", "1"); } catch (e) {}
   var ALL = TESTER || !/maladywise\.com$/.test(location.hostname);
   function dayOf(i) { return (SCENE - 1) * 3 + i + 1; }
   function isOpen(i) { return ALL || new Date() >= new Date(2026, 11, dayOf(i)); }
