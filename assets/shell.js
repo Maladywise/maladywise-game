@@ -1212,7 +1212,8 @@
   function betaTags() {
     if (!BETA) return;
     var path = location.pathname;
-    if (path === "/" || window.MW_curGame || /^\/(about|privacy|disclaimer|contact|normie|arcade)\//.test(path)) return;
+    var betaGame = /^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest)\//.test(path); // new games still in testing
+    if (!betaGame && (path === "/" || window.MW_curGame || /^\/(about|privacy|disclaimer|contact|normie|arcade)\//.test(path))) return;
     var h1 = document.querySelector("main h1, h1"); if (!h1 || h1.querySelector(".mw-beta") || document.querySelector(".beta")) return;
     h1.insertAdjacentHTML("beforeend", ' <i class="mw-beta" title="Still being built and checked. Spot something? Tell us via Contact.">Beta</i>');
   }
@@ -1484,7 +1485,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (NORMIE) return "";
       var dk = root.getAttribute("data-theme") === "dark";
       return EXTRA.filter(function (x) { return (hid.indexOf(x[0]) > -1) === hiddenOnes; }).map(function (x) {
-        return '<a class="tl" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink></span><b>' + x[1] + "</b><small>" + x[3] + "</small>" +
+        return '<a class="tl" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink></span><b>' + x[1] + ' <i class="mw-beta">Beta</i></b><small>' + x[3] + "</small>" +
           (hiddenOnes ? '<span class="tl-unhide" role="button" data-tl="show" data-id="' + x[0] + '">Show</span>' : "") + "</a>";
       }).join("");
     }
@@ -1527,7 +1528,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"],
         ["dxtective-gauntlet", "Dx Gauntlet", '<img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44" data-nolink>', "Sundays only", "#4A3480", "#B9A6E8", "Ten cases, no slips"]];
       return H.filter(function (h) { return !!o[h[0]] === openOnes; }).map(function (h) {
-        var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + "</b><small>" + (on ? h[6] : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
+        var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + (h[0] === "dxtective-gauntlet" ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + (on ? h[6] : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
         return on ? '<a class="tl" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
       }).join("");
     }
