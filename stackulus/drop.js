@@ -478,7 +478,7 @@
     $("od-over").hidden = false; $("od-again").focus({ preventScroll: true });
     track(S.mode === "endless" ? "over" : S.mode === "daily" ? "daily-over" : "practice-over");
   }
-  // Wordle-style picture of the final stack: its top 6 non-empty rows, one emoji per cell, trimmed to fit a post
+  // emoji-grid picture of the final stack: its top 6 non-empty rows, one emoji per cell, trimmed to fit a post
   var LINK = "maladywise.com/stackulus/";
   function stackRows() {
     var out = [];

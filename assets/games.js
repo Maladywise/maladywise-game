@@ -88,7 +88,7 @@ window.MW_GAMES = [
     accent: "#B23A6F", accentDark: "#E06E9E",
     icon: '<svg viewBox="0 0 48 48" fill="#fff" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="3"/><rect x="26" y="8" width="14" height="14" rx="3" opacity=".7"/><rect x="8" y="26" width="14" height="14" rx="3" opacity=".7"/><rect x="26" y="26" width="14" height="14" rx="3"/></svg>' },
   { id: "morphemia", normieMascot: true, kind: "Word builder", name: "Morphemia", path: "morphemia/", live: true, special: { dow: 1, from: "2026-11-16", short: "\ud83d\udc1d Max Monday", label: "\ud83d\udc1d Morphemia Max \u00b7 9 letters" },
-    normie: { kind: "Word builder", tagline: "Seven letters. Build as many words.", quip: "A spelling bee with an actual bee.", helpQuip: "Inventing words is frowned upon. And rejected.", labels: ["Beg", "Sta", "Mov", "Sol", "Gre", "Ama", "Gen"], help: [
+    normie: { kind: "Word builder", tagline: "Seven letters. Build as many words.", quip: "A word-building game with an actual bee.", helpQuip: "Inventing words is frowned upon. And rejected.", labels: ["Beg", "Sta", "Mov", "Sol", "Gre", "Ama", "Gen"], help: [
       "Make words of four or more letters from the seven on the hive. Normie mode: everyday words, no medicine.",
       "Every word must use the centre letter. Letters can be reused.",
       "4-letter words score 1. Longer words score one point per letter.",
@@ -99,7 +99,7 @@ window.MW_GAMES = [
       "Morphemia Max: every Monday, nine letters on a round hive and a five-letter minimum."
     ] },
     store: { stats: "mph-stats", day: "mph-day-", labels: ["Stu", "Int", "Res", "Reg", "Con", "Pro", "Gen"], distTitle: " (best rank per day)" },
-    quip: "Spelling bee for people who can pronounce sphygmomanometer.",
+    quip: "Word-building game for people who can pronounce sphygmomanometer.",
     helpQuip: "Inventing diseases is frowned upon. And rejected.",
     help: [
       "Make words of four or more letters from the seven on the hive.",

@@ -329,7 +329,7 @@ terms_body = "\n".join([
     '<p class="qk-rounds">%s<a href="#reference">Cheat sheet</a></p>' % "".join('<a href="#%s">%s</a>' % (r["id"], esc(r["h"].split(": ")[1])) for r in R),
     "\n".join(secs),
     "\n".join(ref),
-    '<p class="qk-cta"><b>Like word games?</b> Try <a href="/morphemia/">Morphemia</a>, our daily medical word puzzle, or <a href="/wordemic/">Wordemic</a>, the medical Wordle.</p>',
+    '<p class="qk-cta"><b>Like word games?</b> Try <a href="/morphemia/">Morphemia</a>, our daily medical word puzzle, or <a href="/wordemic/">Wordemic</a>, the daily medical word game.</p>',
     faq_html(TERMS["faqs"]),
     '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/anatomy-quiz/">Anatomy quizzes</a></li><li><a href="/ecg-quiz/">ECG quiz</a></li><li><a href="/x-ray-quiz/">X-ray quiz</a></li><li><a href="/anatomy-quiz/brain/">Brain anatomy quiz</a></li></ul></nav>',
     reviewed(),

@@ -1,5 +1,5 @@
 /* Dactylosis: daily fingerspelling puzzle. A word is fingerspelled one letter at a time in the two-handed manual alphabet
-   shared by Auslan, BSL and NZSL. Watch it (replays allowed), type the word. Three tries; each wrong guess gets Wordle-style
+   shared by Auslan, BSL and NZSL. Watch it (replays allowed), type the word. Three tries; each wrong guess gets word-guessing
    letter colours, then hint 1 = the clue, hint 2 = step mode (go letter by letter at your own pace).
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, word (A-Z only), ms (per letter), clue, why, pearl}.
    Normie mode: puzzles/normie/YYYY-MM.json, everyday words, "n-" storage keys. Missing Normie file -> MW_noNormie.
@@ -65,7 +65,7 @@
   };
   function say(t) { var m = $("msg"); m.textContent = t; m.classList.remove("pop"); void m.offsetWidth; if (t) m.classList.add("pop"); }
 
-  // ---------- Wordle-style colours ----------
+  // ---------- word-guessing colours ----------
   function colours(g, w) {
     var res = [], left = {}, i;
     for (i = 0; i < w.length; i++) { if (g[i] === w[i]) res[i] = "g"; else left[w[i]] = (left[w[i]] || 0) + 1; }

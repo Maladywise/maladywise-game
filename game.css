@@ -1,6 +1,6 @@
 /* Fonts are self-hosted: see the @font-face rules at the top of assets/shell.css. */
 
-/* Diagnosis Wordle — everything scoped under #dxw so it can't restyle the host site */
+/* Dxtective — everything scoped under #dxw so it can't restyle the host site */
 #dxw{all:initial;display:block;box-sizing:border-box;width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;
   --bg:#FAF7F2; --paper:#FFFFFF; --ink:#2B2340; --muted:#6B5A93; --line:#E4DCEC; --soft:#F1ECF8;
   --accent:#4A3480; --dotline:#BDB0D3; --miss:#B4472F; --hit:#2F7D4A; --empty:#E9E3EF;
