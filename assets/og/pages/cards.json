@@ -951,6 +951,13 @@
 "label": "Exercise handout",
 "title": "Kneecap Pain Exercises"
 },
+"exercises-meniscal-tear": {
+"url": "/exercises/meniscal-tear/",
+"key": "b7cbb1c86330",
+"v": "0793550f",
+"label": "Exercise handout",
+"title": "Meniscal Tear Exercises"
+},
 "exercises-neck-pain": {
 "url": "/exercises/neck-pain/",
 "key": "d31496d52741",
@@ -1651,6 +1658,13 @@
 "label": "Malady Wise mascots",
 "title": "Fig"
 },
+"mascots-fizz": {
+"url": "/mascots/fizz/",
+"key": "f3e11b37632a",
+"v": "6c4779cf",
+"label": "Exercise handout",
+"title": "Fizz"
+},
 "mascots-hana": {
 "url": "/mascots/hana/",
 "key": "fc40439db534",
@@ -1847,6 +1861,20 @@
 "label": "Malady Wise mascots",
 "title": "Saga"
 },
+"mascots-shelby": {
+"url": "/mascots/shelby/",
+"key": "3edeb55b53d0",
+"v": "e1ca5711",
+"label": "Exercise handout",
+"title": "Shelby"
+},
+"mascots-sherlock": {
+"url": "/mascots/sherlock/",
+"key": "3404e2cc68a3",
+"v": "a706c56e",
+"label": "Exercise handout",
+"title": "Uncle Sherlock"
+},
 "mascots-silk": {
 "url": "/mascots/silk/",
 "key": "a90236acb1ea",
@@ -1874,6 +1902,13 @@
 "v": "ea0cfb50",
 "label": "Malady Wise mascots",
 "title": "Tess"
+},
+"mascots-tilly": {
+"url": "/mascots/tilly/",
+"key": "a361179e6adb",
+"v": "beb835ae",
+"label": "Exercise handout",
+"title": "Tilly"
 },
 "mascots-vira": {
 "url": "/mascots/vira/",
@@ -3289,6 +3324,104 @@
 "label": "Condition",
 "title": "Premature Birth"
 },
+"printables-adhd-criteria": {
+"url": "/printables/adhd-criteria/",
+"key": "7e366ad173e2",
+"v": "025551b8",
+"label": "Exercise handout",
+"title": "Printable ADHD criteria checklist"
+},
+"printables-asrs": {
+"url": "/printables/asrs/",
+"key": "6bd7f6cb9dbb",
+"v": "84a6f1c1",
+"label": "Exercise handout",
+"title": "Printable ASRS screener"
+},
+"printables-audit": {
+"url": "/printables/audit/",
+"key": "c3be4d9ad903",
+"v": "2f1d9d35",
+"label": "Exercise handout",
+"title": "Printable AUDIT"
+},
+"printables-beighton-score": {
+"url": "/printables/beighton-score/",
+"key": "5b6bd4171e2b",
+"v": "32c86698",
+"label": "Exercise handout",
+"title": "Printable Beighton score"
+},
+"printables-depression-criteria": {
+"url": "/printables/depression-criteria/",
+"key": "2a11949123bf",
+"v": "8086ecb8",
+"label": "Exercise handout",
+"title": "Printable Depression criteria checklist"
+},
+"printables-epds": {
+"url": "/printables/epds/",
+"key": "811f9b064a8c",
+"v": "d62fe782",
+"label": "Exercise handout",
+"title": "Printable EPDS"
+},
+"printables-falls-risk": {
+"url": "/printables/falls-risk/",
+"key": "831e651d163d",
+"v": "141da7f5",
+"label": "Exercise handout",
+"title": "Printable Falls risk check"
+},
+"printables-fibromyalgia-criteria": {
+"url": "/printables/fibromyalgia-criteria/",
+"key": "c6ac9255a0ea",
+"v": "99a82f21",
+"label": "Exercise handout",
+"title": "Printable Fibromyalgia criteria"
+},
+"printables-gad-7": {
+"url": "/printables/gad-7/",
+"key": "a905d9f33dba",
+"v": "2d0613cb",
+"label": "Exercise handout",
+"title": "Printable GAD-7"
+},
+"printables-heds-criteria": {
+"url": "/printables/heds-criteria/",
+"key": "64c29fe918d8",
+"v": "2129125e",
+"label": "Exercise handout",
+"title": "Printable hEDS criteria"
+},
+"printables-k10": {
+"url": "/printables/k10/",
+"key": "3ddfeab55db4",
+"v": "9840a0a3",
+"label": "Exercise handout",
+"title": "Printable K10"
+},
+"printables-phq-9": {
+"url": "/printables/phq-9/",
+"key": "ba1123ce54e3",
+"v": "44a56293",
+"label": "Exercise handout",
+"title": "Printable PHQ-9"
+},
+"printables-pots-stand-test": {
+"url": "/printables/pots-stand-test/",
+"key": "5827a682c708",
+"v": "51904615",
+"label": "Exercise handout",
+"title": "POTS stand test record sheet"
+},
+"printables-stop-bang": {
+"url": "/printables/stop-bang/",
+"key": "e499a0379857",
+"v": "3865ab79",
+"label": "Exercise handout",
+"title": "Printable STOP-Bang"
+},
 "prostate-cancer": {
 "url": "/prostate-cancer/",
 "key": "cb8b5edde535",
@@ -3512,6 +3645,286 @@
 "v": "e4a57773",
 "label": "Condition",
 "title": "SIBO"
+},
+"signs-allens-test": {
+"url": "/signs/allens-test/",
+"key": "f760e25a9095",
+"v": "c674a82a",
+"label": "Exercise handout",
+"title": "Allen’s test"
+},
+"signs-apley-grind-test": {
+"url": "/signs/apley-grind-test/",
+"key": "d4d112847572",
+"v": "d0215027",
+"label": "Exercise handout",
+"title": "Apley grind test"
+},
+"signs-babinski-sign": {
+"url": "/signs/babinski-sign/",
+"key": "ff304f4ca78c",
+"v": "5c43c987",
+"label": "Exercise handout",
+"title": "Babinski sign"
+},
+"signs-battles-sign": {
+"url": "/signs/battles-sign/",
+"key": "997176f90d3e",
+"v": "bb7acb89",
+"label": "Exercise handout",
+"title": "Battle’s sign"
+},
+"signs-blumbergs-sign": {
+"url": "/signs/blumbergs-sign/",
+"key": "729e4a4da9d2",
+"v": "71bbe4c8",
+"label": "Exercise handout",
+"title": "Blumberg’s sign"
+},
+"signs-brudzinskis-sign": {
+"url": "/signs/brudzinskis-sign/",
+"key": "4b3535517a07",
+"v": "d265c261",
+"label": "Exercise handout",
+"title": "Brudziński’s sign"
+},
+"signs-chvosteks-sign": {
+"url": "/signs/chvosteks-sign/",
+"key": "82f847ee739a",
+"v": "a36386c9",
+"label": "Exercise handout",
+"title": "Chvostek’s sign"
+},
+"signs-cullens-sign": {
+"url": "/signs/cullens-sign/",
+"key": "ef07eee642f1",
+"v": "c1e1a5ac",
+"label": "Exercise handout",
+"title": "Cullen’s sign"
+},
+"signs-dix-hallpike-test": {
+"url": "/signs/dix-hallpike-test/",
+"key": "91c03880adb5",
+"v": "f92689b7",
+"label": "Exercise handout",
+"title": "Dix–Hallpike test"
+},
+"signs-finkelstein-test": {
+"url": "/signs/finkelstein-test/",
+"key": "e55b5eecafca",
+"v": "cfe48b60",
+"label": "Exercise handout",
+"title": "Finkelstein test"
+},
+"signs-froments-sign": {
+"url": "/signs/froments-sign/",
+"key": "b342f71c28c0",
+"v": "b9e37637",
+"label": "Exercise handout",
+"title": "Froment’s sign"
+},
+"signs-gowers-sign": {
+"url": "/signs/gowers-sign/",
+"key": "c81e0ab87bf9",
+"v": "c089f66c",
+"label": "Exercise handout",
+"title": "Gowers’ sign"
+},
+"signs-grey-turners-sign": {
+"url": "/signs/grey-turners-sign/",
+"key": "dd26b7b43f35",
+"v": "2dd2336b",
+"label": "Exercise handout",
+"title": "Grey Turner’s sign"
+},
+"signs-hoffmanns-sign": {
+"url": "/signs/hoffmanns-sign/",
+"key": "255d5f7f737f",
+"v": "fb8f89f6",
+"label": "Exercise handout",
+"title": "Hoffmann’s sign"
+},
+"signs-homans-sign": {
+"url": "/signs/homans-sign/",
+"key": "a4e03682a504",
+"v": "e7c75c19",
+"label": "Exercise handout",
+"title": "Homans’ sign"
+},
+"signs-jobes-test": {
+"url": "/signs/jobes-test/",
+"key": "92b409e43934",
+"v": "05fcfdde",
+"label": "Exercise handout",
+"title": "Jobe’s test"
+},
+"signs-kehrs-sign": {
+"url": "/signs/kehrs-sign/",
+"key": "74294da4812e",
+"v": "d9e7c120",
+"label": "Exercise handout",
+"title": "Kehr’s sign"
+},
+"signs-kernigs-sign": {
+"url": "/signs/kernigs-sign/",
+"key": "70a244f457f8",
+"v": "fbf17a5b",
+"label": "Exercise handout",
+"title": "Kernig’s sign"
+},
+"signs-lachman-test": {
+"url": "/signs/lachman-test/",
+"key": "7f8a4a2477ed",
+"v": "fcff3669",
+"label": "Exercise handout",
+"title": "Lachman test"
+},
+"signs-las-gues-sign": {
+"url": "/signs/las-gues-sign/",
+"key": "51432b78abbc",
+"v": "f4c4e083",
+"label": "Exercise handout",
+"title": "Lasègue’s sign"
+},
+"signs-lhermittes-sign": {
+"url": "/signs/lhermittes-sign/",
+"key": "b5553b26e7d5",
+"v": "b7606d0f",
+"label": "Exercise handout",
+"title": "Lhermitte’s sign"
+},
+"signs-mcburneys-point": {
+"url": "/signs/mcburneys-point/",
+"key": "460012eff8a9",
+"v": "c530729e",
+"label": "Exercise handout",
+"title": "McBurney’s point"
+},
+"signs-mcmurray-test": {
+"url": "/signs/mcmurray-test/",
+"key": "b53fa7dbd532",
+"v": "51708ba1",
+"label": "Exercise handout",
+"title": "McMurray test"
+},
+"signs-murphys-sign": {
+"url": "/signs/murphys-sign/",
+"key": "3aa153fe8e79",
+"v": "13c839b9",
+"label": "Exercise handout",
+"title": "Murphy’s sign"
+},
+"signs-neers-test": {
+"url": "/signs/neers-test/",
+"key": "66f9c689f56c",
+"v": "bed07240",
+"label": "Exercise handout",
+"title": "Neer’s test"
+},
+"signs-nikolsky-sign": {
+"url": "/signs/nikolsky-sign/",
+"key": "e9601dfa14cd",
+"v": "b83aaec2",
+"label": "Exercise handout",
+"title": "Nikolsky sign"
+},
+"signs-pembertons-sign": {
+"url": "/signs/pembertons-sign/",
+"key": "68a8412fc293",
+"v": "61b6be4b",
+"label": "Exercise handout",
+"title": "Pemberton’s sign"
+},
+"signs-phalens-test": {
+"url": "/signs/phalens-test/",
+"key": "79c0e0de09a1",
+"v": "48902ac2",
+"label": "Exercise handout",
+"title": "Phalen’s test"
+},
+"signs-rinne-test": {
+"url": "/signs/rinne-test/",
+"key": "cb53248ce4a2",
+"v": "5445c3c0",
+"label": "Exercise handout",
+"title": "Rinne test"
+},
+"signs-rombergs-sign": {
+"url": "/signs/rombergs-sign/",
+"key": "4383d5545d4a",
+"v": "baacbd00",
+"label": "Exercise handout",
+"title": "Romberg’s sign"
+},
+"signs-rovsings-sign": {
+"url": "/signs/rovsings-sign/",
+"key": "53c3997b5c72",
+"v": "e7ca6352",
+"label": "Exercise handout",
+"title": "Rovsing’s sign"
+},
+"signs-sister-mary-joseph-nodule": {
+"url": "/signs/sister-mary-joseph-nodule/",
+"key": "ff2c179f1cec",
+"v": "8d144375",
+"label": "Exercise handout",
+"title": "Sister Mary Joseph nodule"
+},
+"signs-spurlings-test": {
+"url": "/signs/spurlings-test/",
+"key": "493a1501d524",
+"v": "49006f25",
+"label": "Exercise handout",
+"title": "Spurling’s test"
+},
+"signs-steinberg-sign": {
+"url": "/signs/steinberg-sign/",
+"key": "fc62b38f52e6",
+"v": "49739e3a",
+"label": "Exercise handout",
+"title": "Steinberg sign"
+},
+"signs-thompson-test": {
+"url": "/signs/thompson-test/",
+"key": "52edaf153e6e",
+"v": "25321e54",
+"label": "Exercise handout",
+"title": "Thompson test"
+},
+"signs-tinels-sign": {
+"url": "/signs/tinels-sign/",
+"key": "8192a64102c3",
+"v": "234e235c",
+"label": "Exercise handout",
+"title": "Tinel’s sign"
+},
+"signs-trendelenburg-sign": {
+"url": "/signs/trendelenburg-sign/",
+"key": "95ad3ba660a4",
+"v": "b88cc4aa",
+"label": "Exercise handout",
+"title": "Trendelenburg sign"
+},
+"signs-trousseaus-sign": {
+"url": "/signs/trousseaus-sign/",
+"key": "cde863d70f00",
+"v": "75ab5ce5",
+"label": "Exercise handout",
+"title": "Trousseau’s sign"
+},
+"signs-virchows-node": {
+"url": "/signs/virchows-node/",
+"key": "7c6c1a47a026",
+"v": "8973efae",
+"label": "Exercise handout",
+"title": "Virchow’s node"
+},
+"signs-walker-murdoch-sign": {
+"url": "/signs/walker-murdoch-sign/",
+"key": "4840ee927bb7",
+"v": "a551d056",
+"label": "Exercise handout",
+"title": "Walker–Murdoch sign"
 },
 "sinusitis": {
 "url": "/sinusitis/",
