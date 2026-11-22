@@ -53,6 +53,19 @@ def person_back(extra=""):
     b += '<path d="M122 120 H198 L194 140 H126 Z" fill="#7A5AC9" stroke="%s" stroke-width="2.5"/>' % INK
     return b + extra
 
+def arm_side(extra=""):
+    return ('<path d="M20 120 L200 104 Q222 102 232 112 L300 100 Q312 102 304 116 L238 134 Q226 140 206 138 L20 150 Z" fill="%s" stroke="%s" stroke-width="2.5" stroke-linejoin="round"/>' % (SKIN, INK)) + extra
+def lying(extra=""):
+    b = '<rect x="10" y="150" width="300" height="12" rx="4" fill="#D9D2E6"/>'
+    b += '<circle cx="40" cy="124" r="18" fill="%s" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK)
+    b += '<path d="M58 118 H190 Q200 118 200 130 V146 H58 Z" fill="#C9B8F0" stroke="%s" stroke-width="2.5"/>' % INK
+    return b + extra
+def neck_profile(extra=""):
+    b = '<path d="M120 200 L128 140 Q100 128 100 90 Q102 40 150 34 Q200 32 208 80 Q212 100 204 112 L210 126 Q204 134 196 132 L194 146 Q186 152 172 150 L168 200 Z" fill="%s" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK)
+    b += '<path d="M128 100 Q120 112 130 120 Q138 116 136 104" fill="#EBCFB8" stroke="%s" stroke-width="2"/>' % INK
+    b += '<circle cx="180" cy="74" r="4" fill="%s"/>' % INK
+    return b + extra
+
 D = {
  "Murphy’s sign": torso(dot(122, 84) + arrow(70, 60, 112, 80) + label(60, 52, "Press here", "middle") + label(160, 214, "Patient breathes in: stops sharply", size=11)),
  "McBurney’s point": torso('<path d="M122 170 L160 128" stroke="%s" stroke-width="2" stroke-dasharray="5 4"/>' % ARR + dot(134, 156) + '<circle cx="118" cy="176" r="5" fill="%s"/>' % ARR + label(70, 190, "Hip bone (ASIS)", size=11) + label(250, 116, "Umbilicus", size=11)),
@@ -74,6 +87,26 @@ D = {
  "Trousseau’s sign": '<rect x="40" y="70" width="110" height="60" rx="10" fill="#7A5AC9" stroke="%s" stroke-width="2.5"/>' % INK + '<path d="M150 82 L250 90 Q270 92 272 104 L268 118 L150 120 Z" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M252 92 Q290 80 296 110 Q290 130 262 124" fill="%s" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK, SKIN, INK) + dot(280, 108) + label(95, 60, "Cuff inflated, 3 minutes", size=11) + label(230, 160, "Hand cramps:", size=11) + label(230, 174, "wrist and knuckles bend", size=11),
  "Battle’s sign": head_side('<ellipse cx="146" cy="138" rx="16" ry="20" fill="#6C4FA3" opacity=".55"/>' + arrow(60, 170, 132, 142) + label(64, 190, "Bruise behind the ear", size=11)),
  "Romberg’s sign": person_back('<path d="M140 140 V200 M180 140 V200" stroke="#D9B49A" stroke-width="14" stroke-linecap="round"/><path d="M146 30 H174" stroke="%s" stroke-width="3"/>' % INK + arrow(220, 60, 250, 50, MARK) + arrow(100, 60, 70, 50, MARK) + label(250, 100, "Sways or falls", size=11) + label(250, 114, "with eyes closed", size=11) + label(160, 214, "Feet together", size=11)),
+ "Homans’ sign": leg_side(arrow(300, 120, 300, 156, ARR) + label(270, 110, "Bend foot up", size=11) + dot(150, 110) + label(150, 50, "Calf pain? (unreliable)", size=11) + arrow(150, 60, 150, 92)),
+ "Lhermitte’s sign": neck_profile('<path d="M150 150 L146 200" stroke="%s" stroke-width="4" stroke-dasharray="3 6"/>' % MARK + '<path d="M140 168 l12 6 -10 6 12 6" fill="none" stroke="%s" stroke-width="3"/>' % MARK + arrow(230, 50, 220, 96) + label(260, 40, "Bend head forward", size=11) + label(165, 214, "Electric shock down the spine", size=11)),
+ "Gowers’ sign": '<circle cx="190" cy="40" r="16" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M180 56 L130 110 L110 200 M130 110 L160 200 M175 64 L150 150 M168 70 L176 150" stroke="#D9B49A" stroke-width="10" stroke-linecap="round" fill="none"/>' % (SKIN, INK) + dot(152, 150, 7) + dot(176, 148, 7) + label(250, 120, "Hands walk", size=11) + label(250, 134, "up the thighs", size=11) + label(160, 214, "Getting up from the floor", size=11),
+ "Hoffmann’s sign": hand(arrow(250, 30, 172, 42) + label(262, 24, "Flick nail", size=11) + dot(130, 52, 7) + dot(212, 100, 7) + label(70, 200, "Thumb and index", size=11) + label(70, 214, "twitch", size=11)),
+ "Spurling’s test": neck_profile(arrow(150, 0, 156, 30) + label(70, 20, "Tilt and press down", size=11) + '<path d="M166 156 Q230 170 300 150" fill="none" stroke="%s" stroke-width="3" stroke-dasharray="5 5"/>' % MARK + label(250, 190, "Pain shoots down the arm", size=11)),
+ "Allen’s test": hand('<circle cx="140" cy="196" r="9" fill="#9A93AE"/><circle cx="178" cy="196" r="9" fill="#9A93AE"/>' + label(60, 196, "Press both", size=11) + label(60, 210, "arteries", size=11) + label(262, 120, "Release one:", size=11) + label(262, 134, "colour back", size=11) + label(262, 148, "within 10 s?", size=11)),
+ "Apley grind test": '<path d="M20 150 H170 L180 160 L30 166 Z" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M170 152 L182 40 L204 42 L196 160 Z" fill="%s" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK, SKIN, INK) + arrow(193, 0, 193, 34) + label(250, 24, "Press down", size=11) + '<path d="M222 60 a16 10 0 1 1 -2 -2" fill="none" stroke="%s" stroke-width="3"/>' % ARR + label(262, 70, "and twist", size=11) + dot(176, 158) + label(100, 200, "Lying face down, knee at 90°", size=11),
+ "Pemberton’s sign": '<circle cx="160" cy="86" r="30" fill="#E58FA0" stroke="%s" stroke-width="2.5"/><path d="M126 120 H194 L204 210 H116 Z" fill="#C9B8F0" stroke="%s" stroke-width="2.5"/><path d="M128 124 L96 20 M192 124 L224 20" stroke="#D9B49A" stroke-width="14" stroke-linecap="round"/>' % (INK, INK) + label(160, 214, "Arms up for 1 minute", size=11) + label(262, 90, "Face flushes", size=11) + arrow(250, 96, 194, 90, MARK),
+ "Kehr’s sign": torso(dot(200, 84) + '<path d="M200 84 Q240 40 250 14" fill="none" stroke="%s" stroke-width="3" stroke-dasharray="5 5"/>' % MARK + dot(250, 14, 7) + label(270, 40, "Left shoulder tip", size=11) + label(140, 214, "Blood under the left diaphragm", size=11)),
+ "Blumberg’s sign": torso(arrow(130, 100, 130, 150) + arrow(150, 150, 150, 100, MARK) + label(60, 92, "Press slowly", size=11) + label(232, 96, "Let go fast:", size=11) + label(232, 110, "pain worse", size=11)),
+ "Nikolsky sign": arm_side('<path d="M120 116 Q150 112 180 116 L180 128 Q150 132 120 128 Z" fill="#E58FA0" opacity=".8"/>' + arrow(110, 70, 170, 112) + label(100, 60, "Rub gently", size=11) + label(160, 190, "Top layer of skin slides off", size=11)),
+ "Steinberg sign": hand('<path d="M190 120 Q160 130 140 128" fill="none" stroke="%s" stroke-width="6" stroke-linecap="round"/>' % MARK + label(100, 200, "Fist over thumb:", size=11) + label(100, 214, "thumb tip sticks out", size=11) + dot(122, 128, 7)),
+ "Walker–Murdoch sign": '<rect x="140" y="20" width="40" height="190" rx="18" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M118 110 Q160 60 202 110 Q160 130 118 110 Z" fill="none" stroke="%s" stroke-width="10" stroke-linecap="round"/>' % (SKIN, INK, "#D9B49A") + dot(118, 110, 7) + dot(202, 110, 7) + label(250, 90, "Thumb and little", size=11) + label(250, 104, "finger overlap", size=11) + label(160, 214, "Grasping the other wrist", size=11),
+ "Virchow’s node": neck_profile('<circle cx="160" cy="168" r="12" fill="#B7A2E0" stroke="%s" stroke-width="2"/>' % INK + arrow(240, 190, 174, 172) + label(270, 206, "Left collarbone", size=11) + label(80, 20, "Lump above the collarbone", size=11)),
+ "Sister Mary Joseph nodule": torso('<circle cx="160" cy="128" r="10" fill="#8E6BBE" stroke="%s" stroke-width="2"/>' % INK + arrow(250, 160, 172, 132) + label(262, 176, "Nodule at the", size=11) + label(262, 190, "belly button", size=11)),
+ "Lasègue’s sign": lying('<path d="M200 140 L300 60" stroke="#D9B49A" stroke-width="14" stroke-linecap="round"/><path d="M200 146 H300" stroke="#D9B49A" stroke-width="12" stroke-linecap="round" opacity=".5"/>' + arrow(250, 140, 268, 92) + label(250, 40, "Lift straight leg", size=11) + '<path d="M210 140 Q230 180 290 160" fill="none" stroke="%s" stroke-width="3" stroke-dasharray="5 5"/>' % MARK + label(150, 200, "Pain shoots below the knee", size=11)),
+ "Neer’s test": '<circle cx="100" cy="60" r="20" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M84 82 H120 L126 200 H80 Z" fill="#C9B8F0" stroke="%s" stroke-width="2.5"/><path d="M116 92 L220 20" stroke="#D9B49A" stroke-width="14" stroke-linecap="round"/>' % (SKIN, INK, INK) + dot(118, 92) + arrow(170, 120, 230, 60) + label(240, 140, "Lift the straight,", size=11) + label(240, 154, "thumb-down arm", size=11),
+ "Jobe’s test": '<circle cx="160" cy="44" r="20" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M140 66 H180 L188 200 H132 Z" fill="#C9B8F0" stroke="%s" stroke-width="2.5"/><path d="M140 80 L40 120 M180 80 L280 120" stroke="#D9B49A" stroke-width="14" stroke-linecap="round"/>' % (SKIN, INK, INK) + arrow(60, 70, 60, 106, ARR) + arrow(260, 70, 260, 106, ARR) + label(160, 214, "‘Empty can’: thumbs down, press down", size=11) + dot(180, 82),
+ "Dix–Hallpike test": lying('<path d="M40 124 L20 140" stroke="%s" stroke-width="2"/>' % INK + '<path d="M60 70 a30 30 0 0 1 -40 40" fill="none" stroke="%s" stroke-width="3"/>' % ARR + label(150, 40, "Quickly lie back,", size=11) + label(150, 54, "head turned 45° and hanging", size=11) + '<path d="M30 118 a8 8 0 1 0 12 4" fill="none" stroke="%s" stroke-width="2.5"/>' % MARK + label(150, 200, "Eyes flicker, room spins", size=11)),
+ "Rinne test": neck_profile('<path d="M110 104 L70 104 M70 104 L50 70 M70 104 L50 138" stroke="#7C6A4E" stroke-width="5" stroke-linecap="round"/>' + dot(118, 110, 6) + label(95, 180, "1. Behind the ear (bone)", size=11) + label(95, 196, "2. Beside the ear (air)", size=11) + label(250, 214, "Air louder = normal", size=11)),
 }
 
 ORDER = list(D.keys())
@@ -121,5 +154,5 @@ hub = ('<p class="meta"><a href="/medical-games/">Learn</a> · Eponymous signs</
        '<p class="lede">Medicine’s famous named signs and tests, each with a simple diagram, what it means, who it’s named after and how accurate it really is.</p>\n'
        '<p><a class="sg-play" href="/nomulous/">&#129408; Test yourself with Nomulous</a></p>\n<ul class="sg-hub">' +
        "".join('<li><a href="/signs/%s/">%s%s</a></li>' % (slug(n), svg(D[n], n), E(n)) for n in ORDER) + "</ul>")
-page("signs/", "Eponymous Medical Signs Explained, with Diagrams", "Murphy’s, McBurney’s, Babinski, Kernig, Trousseau and more: famous medical signs explained simply with diagrams, history and accuracy.", hub)
+page("signs/", "Eponymous Medical Signs Explained, with Diagrams", "Murphy’s, McBurney’s, Babinski, Kernig, Spurling, Allen’s and more: famous medical signs explained simply with diagrams, history and accuracy.", hub)
 print("signs pages:", len(ORDER) + 1)
