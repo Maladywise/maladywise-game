@@ -1505,27 +1505,37 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var hid = userHidden(), list = order().filter(function (g) { return skip.indexOf(g.id) < 0 && hid.indexOf(g.id) < 0; });
       // Popular today (24 Nov 2026): sort by today's finishes in this mode (live counts, cached on this device so the
       // page doesn't jump). Early in the day (under HOT_MIN finishes) use yesterday's ranking; with no data at all,
-      // the old order with Zebritis first. Games this player has done still sink to the end. Top game: "Hot today".
+      // the old order with Zebritis first. Games this player has done still sink to the end.
       // Extra daily games (Nomulous) and open timed games (Triagic etc.) are in the same mix; with no data, timed games lead.
       list.sort(function (x, y) { return (y.id === "zebritis") - (x.id === "zebritis"); });
       var tdone = get("mw-tdone", {}) || {};
       var items = timedList(true).map(function (h) { return { id: h[0], done: tdone[h[0]] === sydToday(), live: true, h: h }; })
-        .concat(list.map(function (g) { return { id: g.id, done: !!(readStats(g) || {}).done, live: !!g.live, g: g }; }));
+        .concat(list.map(function (g) { return { id: g.id, done: !!(readStats(g) || {}).done, live: !!g.live, g: g, off: !!g.weekly && !relToday(g) }; }));
       extraList(hid, false).forEach(function (x) { items.push({ id: x[0], done: !!get("mw-" + x[0] + "-" + sydToday(), null), live: true, x: x }); });
       items.forEach(function (it, i) { it.i = i; });
       var hot = hotRank(), hotId = "", cnt = function (it) { return hot ? hot.c[it.id] || 0 : 0; };
       items.sort(function (a, b) { return (a.done - b.done) || (cnt(b) - cnt(a)) || (a.i - b.i); });
+      // Heat badges (live counts only): the 3 most-finished unplayed games get flames (each must beat the next one down),
+      // the 3 least-finished get ice. Ice needs 7+ unplayed games so the two ends never meet.
+      var BADGE = {}, HEATB = [["\ud83d\udd25\ud83d\udd25\ud83d\udd25", "Hot today", "h1"], ["\ud83d\udd25\ud83d\udd25", "Sizzling", "h2"], ["\ud83d\udd25", "Warming up", "h3"]],
+        COLDB = [["\u2744\ufe0f\u2744\ufe0f\u2744\ufe0f", "Ice cold today", "c1"], ["\u2744\ufe0f\u2744\ufe0f", "Freezing", "c2"], ["\u2744\ufe0f", "Shivering", "c3"]];
       if (hot && hot.live) {
-        var by = items.filter(function (it) { return it.live && !it.done; }).map(function (it) { return [it.id, cnt(it)]; }).sort(function (a, b) { return b[1] - a[1]; });
-        if (by.length && by[0][1] >= HOT_LEAD && (by.length < 2 || by[0][1] > by[1][1])) hotId = by[0][0];
+        var open = items.filter(function (it) { return it.live && !it.done; });
+        for (var k = 0; k < 3 && k < open.length; k++) {
+          var n = cnt(open[k]), nx = open[k + 1] ? cnt(open[k + 1]) : -1;
+          if (n < (k ? 3 : HOT_LEAD) || n <= nx) break;
+          BADGE[open[k].id] = HEATB[k];
+        }
+        var cold = open.filter(function (it) { return !it.off && !BADGE[it.id]; }); // weekly games on their off days can't be 'cold'
+        if (open.length >= 7) for (var j = 0; j < 3 && j < cold.length; j++) BADGE[cold[cold.length - 1 - j].id] = COLDB[j];
       }
       if (!items.length) return "";
-      var HOT = '<span class="tl-hot" title="Most finished game today that you haven\u2019t played yet">\ud83d\udd25 Hot today</span>';
+      function chip(b) { return '<span class="tl-hot ' + b[2] + '" title="' + (b[2].charAt(0) === "h" ? "One of today\u2019s most-played games you haven\u2019t done yet" : "One of today\u2019s least-played games. Be a hero.") + '">' + b[0] + " " + b[1] + "</span>"; }
       return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
         (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move below Arcade.</p>' : "") +
         '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + items.map(function (it) {
-          var c = it.id === hotId ? HOT : "", h = it.g ? tile(it.g, c).replace(' data-g="', ' data-h="1" data-g="') : it.h ? timedTile(it.h, true, it.done, c) : extraTile(it.x, false, it.done, c);
-          return it.id === hotId ? h.replace('class="tl', 'class="tl tl-hotc') : h;
+          var bd = BADGE[it.id], c = bd ? chip(bd) : "", h = it.g ? tile(it.g, c).replace(' data-g="', ' data-h="1" data-g="') : it.h ? timedTile(it.h, true, it.done, c) : extraTile(it.x, false, it.done, c);
+          return bd ? h.replace('class="tl', 'class="tl tl-' + bd[2]) : h;
         }).join("") + "</div></section>";
     }
     // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
@@ -1637,6 +1647,10 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       return NORMIE ? "" : '<a class="gps-b" href="/gp-school/"><img src="/assets/mascots/morphemia.svg" alt="" width="64" height="64"><span><span class="rd-k">For doctors and students</span><b>GP School</b><small>Free, game-style GP training. Real-world patients, results and billing, with new cases every month.</small><span class="gps-go">Start your shift ›</span></span></a>';
     }
 
+    function relToday(g) { // a weekly game's release day (same test as order())
+      var DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
+      return !!(g.live && g.relday && (DAYS[g.relday] === dw || g.relday.indexOf(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][dw]) >= 0)); // "Mon & Thu" too
+    }
     function order() {
       var ORD = window.MW_ORDER || [], DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
       return MW_GAMES.filter(inMode).map(function (g, i) {
