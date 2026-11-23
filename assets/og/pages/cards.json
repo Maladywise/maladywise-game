@@ -944,12 +944,26 @@
 "label": "Exercise handout",
 "title": "Achilles Tendinopathy Exercises"
 },
+"exercises-ankle-sprain": {
+"url": "/exercises/ankle-sprain/",
+"key": "29f2a09a20ba",
+"v": "b5d76f4e",
+"label": "Exercise handout",
+"title": "Ankle Sprain Exercises"
+},
 "exercises-falls-prevention": {
 "url": "/exercises/falls-prevention/",
 "key": "55e0c6eb589e",
 "v": "ddf2a757",
 "label": "Exercise handout",
 "title": "Falls Prevention Exercises for Older Adults"
+},
+"exercises-hip-oa": {
+"url": "/exercises/hip-oa/",
+"key": "3f97e3a8bea1",
+"v": "09db95ef",
+"label": "Exercise handout",
+"title": "Hip Osteoarthritis Exercises"
 },
 "exercises-kneecap-pain": {
 "url": "/exercises/kneecap-pain/",
@@ -986,6 +1000,13 @@
 "label": "Exercise handout",
 "title": "Pelvic Floor Exercises for Men"
 },
+"exercises-plantar-heel-pain": {
+"url": "/exercises/plantar-heel-pain/",
+"key": "1dee8957189d",
+"v": "47901de2",
+"label": "Exercise handout",
+"title": "Plantar Heel Pain Exercises"
+},
 "exercises-scapula-fracture": {
 "url": "/exercises/scapula-fracture/",
 "key": "3dc697f362fb",
@@ -999,6 +1020,13 @@
 "v": "a50f3877",
 "label": "Exercise handout",
 "title": "Shoulder Impingement Exercises"
+},
+"exercises-tennis-elbow": {
+"url": "/exercises/tennis-elbow/",
+"key": "dfd50cec900c",
+"v": "72a5154f",
+"label": "Exercise handout",
+"title": "Tennis Elbow Exercises"
 },
 "explaining-adhd-autism-to-kids": {
 "url": "/explaining-adhd-autism-to-kids/",
@@ -1797,13 +1825,6 @@
 "v": "9bc71208",
 "label": "Malady Wise mascots",
 "title": "Noggin"
-},
-"mascots-norm": {
-"url": "/mascots/norm/",
-"key": "fb24ed1c4b69",
-"v": "832c1350",
-"label": "Malady Wise mascots",
-"title": "Norm"
 },
 "mascots-octavia": {
 "url": "/mascots/octavia/",
