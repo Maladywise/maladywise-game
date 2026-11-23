@@ -308,3 +308,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - At most ONE secret code word per day across all games.
 - Each code word turns up naturally as a puzzle answer 3 or 4 times a year (Wordemic, Normie Wordemic or the mini crossword).
 - Follow data/secret-seeds.json when writing new puzzle months; check with `python3 _scripts/check_secrets.py`.
+
+## Where shared code lives (24 Nov 2026, lighter pages)
+- Game "About" text and FAQs (MW_ABOUT, MW_ABOUT_N) are in `assets/about.js`, not games.js. Add or edit game About blocks there (bump its `?v=` in shell.js's loader).
+- Secrets and easter eggs (typed codes, mascot taps, cookie hunt etc.) are in `assets/secrets.js`, loaded after the page is ready. Add new codes to CODES there; `_scripts/check_secrets.py` reads that file. The night-shift dark theme stays in shell.js.
+- The one-page print for fact sheets and medicine guides is `assets/medprint.js`, loaded only on pages with `<main class="doc">`.

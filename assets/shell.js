@@ -897,6 +897,41 @@
     try { if (window.goatcounter && goatcounter.count) {} } catch (e) {}
     return L[Math.floor(Math.random() * L.length)] + " (No guess used.)";
   };
+  // ---------- challenge a friend (24 Nov 2026): Dxtective, Wordemic, Glimpsis ----------
+  // After a win, "Challenge a friend" shares /<game>/?date=D&vs=N (N = clues, guesses or tries). A friend who opens it
+  // sees "Your friend did it in N. Beat it?" above the game, and the head-to-head when they finish. Lower N is better.
+  var CHAL = {
+    dx: function (s) { return s.win ? s.revealed : 0; },
+    wordemic: function (s) { return s.win ? (s.guesses || []).length : 0; },
+    glimpsis: function (s) { return s.win ? (s.picks || []).length : 0; }
+  };
+  function chalUnit(id, n) { return id === "dx" ? "on clue " + n : id === "wordemic" ? "in " + n + " guess" + (n === 1 ? "" : "es") : "in " + n + " tr" + (n === 1 ? "y" : "ies"); }
+  function chalDay() { var d = new URLSearchParams(location.search).get("date"); return /^\d{4}-\d\d-\d\d$/.test(d || "") ? d : sydToday(); }
+  function chalState() { var g = window.MW_curGame; if (!g || !CHAL[g.id] || !g.store) return null; var st = get(g.store.day + chalDay(), null); return st && st.done ? st : null; }
+  function chalVs() { var v = parseInt(new URLSearchParams(location.search).get("vs"), 10); return v > 0 && v < 20 ? v : 0; }
+  function chalBanner() { // incoming challenge: a line above the game, updated with the result once finished
+    var g = window.MW_curGame, vs = chalVs(); if (!g || !CHAL[g.id] || !vs) return;
+    var b = document.getElementById("mw-chal"), main = document.querySelector("main"); if (!main) return;
+    if (!b) { b = document.createElement("p"); b.id = "mw-chal"; b.className = "mw-chal"; main.insertBefore(b, main.firstChild); }
+    var st = chalState(), me = st ? CHAL[g.id](st) : 0, txt;
+    if (!st) txt = "\ud83c\udfaf A friend solved this " + g.name + " " + chalUnit(g.id, vs) + ". Can you beat it?";
+    else if (!me) txt = "\ud83c\udfaf Your friend wins this one (" + chalUnit(g.id, vs) + "). Rematch tomorrow?";
+    else txt = me < vs ? "\ud83c\udfc6 You beat your friend: " + me + " vs " + vs + "." : me === vs ? "\ud83e\udd1d Dead heat: " + me + " each." : "\ud83c\udfaf Your friend edges it: " + vs + " vs your " + me + ".";
+    if (b.textContent !== txt) b.textContent = txt;
+  }
+  function chalButton(row) {
+    var g = window.MW_curGame, st = chalState(); if (!g || !st || row.querySelector(".mw-chalbtn")) return;
+    var n = CHAL[g.id](st); if (!n) return;
+    var cb = document.createElement("button"); cb.type = "button"; cb.className = "btn mw-chalbtn"; cb.textContent = "\ud83c\udfaf Challenge a friend";
+    cb.onclick = function () {
+      var url = "https://maladywise.com/" + String(g.path).replace(/^\/|\/$/g, "") + "/?date=" + chalDay() + "&vs=" + n + (NORMIE ? "&mode=normie" : "");
+      var txt = "I solved today\u2019s " + g.name + " " + chalUnit(g.id, n) + ". Can you beat it? \ud83c\udfaf";
+      try { track("challenge/" + g.id, "Challenge sent " + g.name); } catch (e) {}
+      if (navigator.share) { navigator.share({ text: txt, url: url }).catch(function () {}); return; }
+      try { navigator.clipboard.writeText(txt + " " + url).then(function () { cb.textContent = "Link copied. Send it!"; }); } catch (e) { prompt("Copy this link", url); }
+    };
+    row.appendChild(cb);
+  }
   // ---------- native share button next to every "Copy result" ----------
   function addShare(root) {
     Array.prototype.forEach.call((root || document).querySelectorAll('button[id$="-copy"]:not([data-mws])'), function (b) {
@@ -928,6 +963,7 @@
         };
         b.parentNode.appendChild(xb); xb.href = "https://x.com/intent/post"; xb.addEventListener("focus", xb.onclick); xb.addEventListener("mouseenter", xb.onclick);
       }
+      try { chalButton(b.parentNode); chalBanner(); } catch (e) {}
       if (!pre || !navigator.share) { if (/^Copy/.test(b.textContent)) b.textContent = "Share result"; return; }
       var sb = document.createElement("button"); sb.type = "button"; sb.className = b.className + " mw-share"; sb.textContent = "Share"; b.hidden = true;
       sb.onclick = function () { navigator.share({ text: pre.textContent.replace(/\s*(?:https?:\/\/)?(?:www\.)?maladywise\.com(\/\S*)?\s*$/, ""), url: shareURL() }).catch(function () {}); };
@@ -1049,12 +1085,23 @@
     return '<p class="mw-install" id="mw-install"' + (installEvt || phone ? "" : " hidden") + '><button type="button" id="mw-install-go">\ud83d\udcf2 Add Malady Wise to home screen</button><button type="button" class="nl-x" id="mw-install-x" aria-label="Hide">\u2715</button></p>';
   }
   document.addEventListener("click", function (e) {
-    var t = e.target.closest && e.target.closest("#mw-install-go, #mw-install-x"); if (!t) return;
+    var t = e.target.closest && e.target.closest("#mw-install-go, #mw-install-go2, #mw-install-x"); if (!t) return;
+    if (t.id === "mw-install-go2") { var sc = t.closest(".scrim"); if (sc) sc.remove(); }
     if (t.id === "mw-install-x") { set("mw-install-x", 1); document.getElementById("mw-install").remove(); return; }
     if (installEvt) { installEvt.prompt(); installEvt.userChoice.then(function () { installEvt = null; var c = document.getElementById("mw-install"); if (c) c.remove(); }); }
     else if (isIOS()) modal("Add to home screen", "<ol><li>Tap the <b>Share</b> button in Safari (the square with an arrow).</li><li>Scroll down and tap <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. Malady Wise now opens like an app.</li></ol>");
     else modal("Add to home screen", "<ol><li>Tap the <b>\u22ee</b> menu (top right in Chrome).</li><li>Tap <b>Add to home screen</b> or <b>Install app</b>.</li><li>Tap <b>Install</b>. Malady Wise now opens like an app.</li></ol>");
   });
+  // One-time ask on a player's 3rd day of play (24 Nov 2026): home-screen players come back far more often.
+  function installAsk() {
+    if (standalone() || get("mw-install-x", 0) || get("mw-a2hs-asked", "")) return;
+    var phone = /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent);
+    if (!phone && !installEvt) return;
+    if ((get(mk("mw-days"), []) || []).length < 3) return;
+    set("mw-a2hs-asked", sydToday());
+    modal("Three days in. Nice.", '<div class="mw-a2hs"><p>Add Malady Wise to your home screen and today\u2019s puzzles are one tap away, like an app. Free, no sign-up, no notifications.</p>' +
+      '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><button type="button" class="btn solid" id="mw-install-go2">\ud83d\udcf2 Add to home screen</button><button type="button" class="btn" data-close>Not now</button></div></div>');
+  }
   if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
     window.addEventListener("load", function () { navigator.serviceWorker.register("/sw.js").catch(function () {}); });
   }
@@ -1796,6 +1843,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var nu = box.firstElementChild; if (nu && nu.outerHTML !== el.outerHTML) el.parentNode.replaceChild(nu, el);
     };
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
+    setTimeout(function () { try { installAsk(); } catch (e) {} }, 2500);
     healthDay();
     if (!window.MW_tick) window.MW_tick = setInterval(function () {
       var c = document.getElementById("mw-count"); if (!c) return;
@@ -1898,6 +1946,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   function game(id) { setTimeout(social, 0); archiveLink(id);
     var g = MW_GAMES.filter(function (x) { return x.id === id; })[0]; window.MW_curGame = g;
     watchDone(g);
+    if (chalVs()) { var cbn = function () { try { chalBanner(); } catch (e) {} }; if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", cbn); else setTimeout(cbn, 0); }
     topBar(g);
     var today = sydToday(), dow = new Date(dayNum(today) * 864e5).getUTCDay();
     var st = readStats(g);

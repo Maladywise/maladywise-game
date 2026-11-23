@@ -2,7 +2,7 @@
 Rule (Nov 2026): at most one secret per day across all games; each code word 3-4 times a year. Plan: data/secret-seeds.json."""
 import json, glob, re, collections, sys, os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-src = open(os.path.join(ROOT, "assets/shell.js"), encoding="utf-8").read()
+src = open(os.path.join(ROOT, "assets/secrets.js"), encoding="utf-8").read()
 body = src[src.index("var CODES = {"):src.index("var CODE_KEYS")]
 CODES = set(re.findall(r"^\s{6}([a-z]+): function", body, re.M))
 hits = collections.defaultdict(list)
