@@ -722,8 +722,8 @@
 },
 "deep-dives": {
 "url": "/deep-dives/",
-"key": "e646ac25b4e5",
-"v": "eff75336",
+"key": "acf018c473f1",
+"v": "5feb61a2",
 "label": "Deep dives for clinicians",
 "title": "Evidence-dense topic reviews"
 },
@@ -733,6 +733,13 @@
 "v": "cc28b635",
 "label": "Deep dive for clinicians · #8",
 "title": "ADHD"
+},
+"deep-dives-antimicrobial-resistance": {
+"url": "/deep-dives/antimicrobial-resistance/",
+"key": "9ee2f0e89d43",
+"v": "3f77d235",
+"label": "Deep dive for clinicians · #14",
+"title": "Antimicrobial resistance in primary care"
 },
 "deep-dives-autism": {
 "url": "/deep-dives/autism/",
