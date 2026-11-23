@@ -134,6 +134,14 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Characters: default female
 - When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is drawn as a woman, but the wording stays gender-neutral ("the vet", no he/she). Keep a natural mix in fictional patient cases.
 
+## X posts: NEWS-LED MIX FROM 24 NOV 2026 (owner's decision; overrides the 17 Nov and 23 Nov X sections and every task prompt where they conflict)
+- Why: week of 16–22 Nov, timely news posts (GLP-1 thread 44, oral GLP-1 TGA approval 42, pancreatic cancer day 37 impressions) beat most puzzle posts (6–20). Puzzles stay, but news leads.
+- **7:30am: ONE puzzle a day, every day** (keep the existing puzzle rules; Thursday stays the weekly Short). Never more than one puzzle post a day.
+- **6pm: a TIMELY NEWS post most days (aim 5 of 7).** Pick from the last 7 days: TGA/FDA/EMA approvals and safety alerts, PBS listings and changes (effective date and what changes for patients), recalls, outbreaks, a notable new study, or a health topic trending in data/trends-google.json or data/trends.json. Format: post 1 a plain-English hook with the key number and no link; post 2 the "so what" for ordinary people or GPs; last post the primary source (regulator, journal, PBS) and the matching site page if one exists. Verify every number on the primary source; Ahpra/TGA-safe (no brand promotion, no treatment advice beyond general guidance).
+- The other 6pm slots: a deep-dive thread (Tue/Fri when one publishes) or a strong World Day (priority 1–2 only).
+- Mentions of Normie mode are banned (Normie is frozen). Never post or link /specialists/.
+- December 2026: 9am slots on 29 Nov, 1, 4, 7, 10, 13, 16, 19, 22, 25, 28 and 31 Dec are taken by scheduled Toxiquest posts. Don't add another post at 9am on those dates.
+
 ## X posts: TEXT-FIRST, USEFUL OVER REACH (17 Nov 2026, owner's decision; overrides everything below where they conflict)
 - Goal: posts that are **useful, interesting and informative**. Don't chase reach tricks or engagement bait.
 - **Text only by default.** No picture unless it adds something: World Day cards, deep dive cards, short videos, or `"image": true`. Puzzle posts are plain text (no puzzle card).
