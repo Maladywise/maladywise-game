@@ -234,7 +234,7 @@
   }
   // ---------- popular today: per-mode finish counts for ordering "More daily puzzles" on the home page ----------
   // Cached as mw-hot-m / mw-hot-n: {d: Sydney day, c: {gameId: finishes}, t: total, y: {d, c, t} = previous day's last counts}
-  var HOT_MIN = 10, HOT_LEAD = 5; // finishes needed before today's order is used; finishes the top game needs for the badge
+  var HOT_MIN = 10; // finishes needed before today's order (and the hot/cold badges) is used
   function hotKey() { return "mw-hot-" + (NORMIE ? "n" : "m"); }
   function hotSave(d) {
     if (!d || !d.solved || !/^\d{4}-\d{2}-\d{2}$/.test(d.day || "")) return false;
@@ -1515,18 +1515,17 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       items.forEach(function (it, i) { it.i = i; });
       var hot = hotRank(), hotId = "", cnt = function (it) { return hot ? hot.c[it.id] || 0 : 0; };
       items.sort(function (a, b) { return (a.done - b.done) || (cnt(b) - cnt(a)) || (a.i - b.i); });
-      // Heat badges (live counts only): the 3 most-finished unplayed games get flames (each must beat the next one down),
+      // Heat badges (live counts only): the 3 most-finished unplayed games get 3, 2 and 1 flames,
       // the 3 least-finished get ice. Ice needs 7+ unplayed games so the two ends never meet.
       var BADGE = {}, HEATB = [["\ud83d\udd25\ud83d\udd25\ud83d\udd25", "Hot today", "h1"], ["\ud83d\udd25\ud83d\udd25", "Sizzling", "h2"], ["\ud83d\udd25", "Warming up", "h3"]],
-        COLDB = [["\u2744\ufe0f\u2744\ufe0f\u2744\ufe0f", "Ice cold today", "c1"], ["\u2744\ufe0f\u2744\ufe0f", "Freezing", "c2"], ["\u2744\ufe0f", "Shivering", "c3"]];
+        COLDB = [["\u2744\ufe0f\u2744\ufe0f\u2744\ufe0f", "Ice cold", "c1"], ["\u2744\ufe0f\u2744\ufe0f", "Freezing", "c2"], ["\u2744\ufe0f", "Shivering", "c3"]];
       if (hot && hot.live) {
         var open = items.filter(function (it) { return it.live && !it.done; });
         for (var k = 0; k < 3 && k < open.length; k++) {
-          var n = cnt(open[k]), nx = open[k + 1] ? cnt(open[k + 1]) : -1;
-          if (n < (k ? 3 : HOT_LEAD) || n <= nx) break;
+          if (cnt(open[k]) < 1) break; // top 3 by today's finishes (ties keep list order)
           BADGE[open[k].id] = HEATB[k];
         }
-        var cold = open.filter(function (it) { return !it.off && !BADGE[it.id]; }); // weekly games on their off days can't be 'cold'
+        var cold = open.filter(function (it) { return !BADGE[it.id]; }); // every game counts, weekly ones included (owner, 24 Nov)
         if (open.length >= 7) for (var j = 0; j < 3 && j < cold.length; j++) BADGE[cold[cold.length - 1 - j].id] = COLDB[j];
       }
       if (!items.length) return "";
