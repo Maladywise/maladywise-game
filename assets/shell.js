@@ -1515,21 +1515,20 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       items.forEach(function (it, i) { it.i = i; });
       var hot = hotRank(), hotId = "", cnt = function (it) { return hot ? hot.c[it.id] || 0 : 0; };
       items.sort(function (a, b) { return (a.done - b.done) || (cnt(b) - cnt(a)) || (a.i - b.i); });
-      // Heat badges (live counts only): the 3 most-finished unplayed games get 3, 2 and 1 flames,
-      // the 3 least-finished get ice. Ice needs 7+ unplayed games so the two ends never meet.
+      // Heat badges (live counts only): the 3 most-finished games get 3, 2 and 1 flames,
+      // the 3 least-finished get ice. Ice needs 7+ games so the two ends never meet.
       var BADGE = {}, HEATB = [["\ud83d\udd25\ud83d\udd25\ud83d\udd25", "Hot today", "h1"], ["\ud83d\udd25\ud83d\udd25", "Sizzling", "h2"], ["\ud83d\udd25", "Warming up", "h3"]],
         COLDB = [["\u2744\ufe0f\u2744\ufe0f\u2744\ufe0f", "Ice cold", "c1"], ["\u2744\ufe0f\u2744\ufe0f", "Freezing", "c2"], ["\u2744\ufe0f", "Shivering", "c3"]];
       if (hot && hot.live) {
-        var open = items.filter(function (it) { return it.live && !it.done; });
-        for (var k = 0; k < 3 && k < open.length; k++) {
-          if (cnt(open[k]) < 1) break; // top 3 by today's finishes (ties keep list order)
-          BADGE[open[k].id] = HEATB[k];
-        }
-        var cold = open.filter(function (it) { return !BADGE[it.id]; }); // every game counts, weekly ones included (owner, 24 Nov)
-        if (open.length >= 7) for (var j = 0; j < 3 && j < cold.length; j++) BADGE[cold[cold.length - 1 - j].id] = COLDB[j];
+        // Badges follow the games, not this player's progress: a finished game keeps its flames or ice (owner, 24 Nov),
+        // so the next game isn't promoted when you finish one. Rank every live game by today's finishes (ties: list order).
+        var ranked = items.filter(function (it) { return it.live; }).sort(function (a, b) { return (cnt(b) - cnt(a)) || (a.i - b.i); });
+        for (var k = 0; k < 3 && k < ranked.length; k++) { if (cnt(ranked[k]) < 1) break; BADGE[ranked[k].id] = HEATB[k]; }
+        var cold = ranked.filter(function (it) { return !BADGE[it.id]; }); // every game counts, weekly ones included (owner, 24 Nov)
+        if (ranked.length >= 7) for (var j = 0; j < 3 && j < cold.length; j++) BADGE[cold[cold.length - 1 - j].id] = COLDB[j];
       }
       if (!items.length) return "";
-      function chip(b) { return '<span class="tl-hot ' + b[2] + '" title="' + (b[2].charAt(0) === "h" ? "One of today\u2019s most-played games you haven\u2019t done yet" : "One of today\u2019s least-played games. Be a hero.") + '">' + b[0] + " " + b[1] + "</span>"; }
+      function chip(b) { return '<span class="tl-hot ' + b[2] + '" title="' + (b[2].charAt(0) === "h" ? "One of today\u2019s most-played games" : "One of today\u2019s least-played games. Be a hero.") + '">' + b[0] + " " + b[1] + "</span>"; }
       return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
         (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move below Arcade.</p>' : "") +
         '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + items.map(function (it) {
