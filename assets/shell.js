@@ -209,6 +209,7 @@
     if (d.online >= LIVE.MIN_ON) bits.push('<span class="mw-dot"></span>' + d.online.toLocaleString("en-AU") + " playing now");
     if (d.today >= LIVE.MIN_TODAY) bits.push(heatHtml(d));
     var homeOnly = /^\/(index\.html)?$/.test(location.pathname); // live counts show on the home page only (18 Nov 2026)
+    if (hotSave(d) && homeOnly && window.MW_hotRedraw) window.MW_hotRedraw(); // re-sort "More daily puzzles" if the ranking moved
     var sv = homeOnly ? (d.solved || {}) : {};
     Array.prototype.forEach.call(document.querySelectorAll(".card[data-g],.t3[data-g]"), function (c) { var n = sv[c.getAttribute("data-g") + (NORMIE ? "-n" : "")] || 0, el = c.querySelector(".solvedn"); if (n < LIVE.MIN_SOLVED) { if (el) el.remove(); return; } if (!el) { el = document.createElement("span"); el.className = "solvedn"; var b = c.querySelector(".cfoot .play,.t3-tx small"); if (b) b.insertAdjacentElement("afterend", el); else return; } el.textContent = (n >= 1000 ? (Math.round(n / 100) / 10) + "k" : n) + " solved today"; });
     Array.prototype.forEach.call(document.querySelectorAll(".mw-live"), function (el) { if (!homeOnly) { el.hidden = true; el.innerHTML = ""; return; } el.innerHTML = bits.length ? '<a class="mw-live-a" href="/site-stats/" title="See games played over time">' + bits.join(" &middot; ") + "</a>" : ""; el.hidden = !bits.length; });
@@ -231,7 +232,33 @@
       }).catch(function () {});
     }, 2600);
   }
-  window.MW_liveShow = liveShow;
+  // ---------- popular today: per-mode finish counts for ordering "More daily puzzles" on the home page ----------
+  // Cached as mw-hot-m / mw-hot-n: {d: Sydney day, c: {gameId: finishes}, t: total, y: {d, c, t} = previous day's last counts}
+  var HOT_MIN = 10, HOT_LEAD = 5; // finishes needed before today's order is used; finishes the top game needs for the badge
+  function hotKey() { return "mw-hot-" + (NORMIE ? "n" : "m"); }
+  function hotSave(d) {
+    if (!d || !d.solved || !/^\d{4}-\d{2}-\d{2}$/.test(d.day || "")) return false;
+    var c = {}, t = 0;
+    Object.keys(d.solved).forEach(function (k) {
+      var n = Number(d.solved[k]) || 0, isN = /-n$/.test(k);
+      if (isN !== NORMIE || !n) return;
+      c[isN ? k.slice(0, -2) : k] = n; t += n;
+    });
+    var old = get(hotKey(), null), y = old && old.y;
+    if (old && old.d && old.d !== d.day && old.t >= HOT_MIN) y = { d: old.d, c: old.c, t: old.t };
+    var prev = JSON.stringify(old && old.d === d.day ? old.c : null);
+    set(hotKey(), { d: d.day, c: c, t: t, y: y || null });
+    return prev !== JSON.stringify(c);
+  }
+  function hotRank() {
+    var o = get(hotKey(), null), td = sydToday();
+    if (!o) return null;
+    if (o.d === td && o.t >= HOT_MIN) return { c: o.c || {}, live: 1 };
+    var y = o.d === td ? o.y : o; // before today's first fetch, the stored day may itself be yesterday
+    if (y && y.d && y.t >= HOT_MIN && dayNum(y.d) === dayNum(td) - 1) return { c: y.c || {}, live: 0 };
+    return null;
+  }
+  window.MW_liveShow = liveShow; window.MW_liveDone = liveDone; // MW_liveDone: lets extra games (Nomulous) count a finish
   setTimeout(function () { livePing(); liveStats(); }, 1200);
   setInterval(livePing, 30000); setInterval(liveStats, 60000);
   document.addEventListener("visibilitychange", function () { if (!document.hidden) { livePing(); liveStats(); } });
@@ -1473,21 +1500,39 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function userHidden() { var h = get("mw-hide-games", []); return Array.isArray(h) ? h : []; }
     function tiles(skip) {
       var hid = userHidden(), list = order().filter(function (g) { return skip.indexOf(g.id) < 0 && hid.indexOf(g.id) < 0; });
-      list.sort(function (x, y) { return (y.id === "zebritis") - (x.id === "zebritis"); }); // most played: top of the list
-      if (!list.length && !hiddenTiles(true)) return "";
+      // Popular today (24 Nov 2026): sort by today's finishes in this mode (live counts, cached on this device so the
+      // page doesn't jump). Early in the day (under HOT_MIN finishes) use yesterday's ranking; with no data at all,
+      // the old order with Zebritis first. Games this player has done still sink to the end. Top game: "Hot today".
+      // Extra daily games (Nomulous) are in the same mix; open timed games (Triagic etc.) stay up front.
+      list.sort(function (x, y) { return (y.id === "zebritis") - (x.id === "zebritis"); });
+      var items = list.map(function (g) { return { id: g.id, done: !!(readStats(g) || {}).done, live: !!g.live, g: g }; });
+      extraList(hid, false).forEach(function (x) { items.push({ id: x[0], done: !!get("mw-" + x[0] + "-" + sydToday(), null), live: true, x: x }); });
+      items.forEach(function (it, i) { it.i = i; });
+      var hot = hotRank(), hotId = "", cnt = function (it) { return hot ? hot.c[it.id] || 0 : 0; };
+      items.sort(function (a, b) { return (a.done - b.done) || (cnt(b) - cnt(a)) || (a.i - b.i); });
+      if (hot && hot.live) {
+        var by = items.filter(function (it) { return it.live && !it.done; }).map(function (it) { return [it.id, cnt(it)]; }).sort(function (a, b) { return b[1] - a[1]; });
+        if (by.length && by[0][1] >= HOT_LEAD && (by.length < 2 || by[0][1] > by[1][1])) hotId = by[0][0];
+      }
+      if (!items.length && !hiddenTiles(true)) return "";
+      var HOT = '<span class="tl-hot" title="Most finished game today that you haven\u2019t played yet">\ud83d\udd25 Hot today</span>';
       return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
         (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move below Arcade.</p>' : "") +
-        '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + hiddenTiles(true) + list.map(function (g) { return tile(g).replace(' data-g="', ' data-h="1" data-g="'); }).join("") + extraTiles(hid, false) + "</div></section>";
+        '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + hiddenTiles(true) + items.map(function (it) {
+          var h = it.g ? tile(it.g, it.id === hotId ? HOT : "").replace(' data-g="', ' data-h="1" data-g="') : extraTile(it.x, false, it.done, it.id === hotId ? HOT : "");
+          return it.id === hotId ? h.replace('class="tl', 'class="tl tl-hotc') : h;
+        }).join("") + "</div></section>";
     }
     // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
     var EXTRA = [["nomulous", "Nomulous", "nomulous", "Name the eponym", "#4A3480", "#B9A6E8"]];
-    function extraTiles(hid, hiddenOnes) {
-      if (NORMIE) return "";
+    function extraList(hid, hiddenOnes) { return NORMIE ? [] : EXTRA.filter(function (x) { return (hid.indexOf(x[0]) > -1) === hiddenOnes; }); }
+    function extraTile(x, hiddenOnes, done, chip) {
       var dk = root.getAttribute("data-theme") === "dark";
-      return EXTRA.filter(function (x) { return (hid.indexOf(x[0]) > -1) === hiddenOnes; }).map(function (x) {
-        return '<a class="tl" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink></span><b>' + x[1] + ' <i class="mw-beta">Beta</i></b><small>' + x[3] + "</small>" +
-          (hiddenOnes ? '<span class="tl-unhide" role="button" data-tl="show" data-id="' + x[0] + '">Show</span>' : "") + "</a>";
-      }).join("");
+      return '<a class="tl' + (done ? " done" : "") + '" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink>' + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + '</span><b>' + x[1] + ' <i class="mw-beta">Beta</i></b><small>' + x[3] + "</small>" + (chip || "") +
+        (hiddenOnes ? '<span class="tl-unhide" role="button" data-tl="show" data-id="' + x[0] + '">Show</span>' : "") + "</a>";
+    }
+    function extraTiles(hid, hiddenOnes) {
+      return extraList(hid, hiddenOnes).map(function (x) { return extraTile(x, hiddenOnes, false, ""); }).join("");
     }
     function hiddenSec() {
       var hid = userHidden(), mine = order().filter(function (g) { return hid.indexOf(g.id) > -1; }), timed = hiddenTiles(false);
@@ -1696,6 +1741,11 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (snav) main.querySelector("footer.site").insertBefore(snav, main.querySelector("footer.site").firstChild);
       social(); try { fillReads(); } catch (e) {}
     }
+    window.MW_hotRedraw = function () { // swap in a re-sorted "More daily puzzles" only when its order or badge changed
+      var el = document.getElementById("g-more"); if (!el) return;
+      var box = document.createElement("div"); box.innerHTML = tiles(startList().map(function (o) { return o.g.id; }));
+      var nu = box.firstElementChild; if (nu && nu.outerHTML !== el.outerHTML) el.parentNode.replaceChild(nu, el);
+    };
     draw(); liveShow(); window.MW_onTheme = function () { draw(); healthDay(); liveShow(); };
     healthDay();
     if (!window.MW_tick) window.MW_tick = setInterval(function () {

@@ -59,7 +59,9 @@
   }
   var VERDICT = ["Anonymous. Back to the textbook.", "A footnote. Getting there.", "Known on the ward.", "Nearly famous.", "Professor material.", "All five named. Your name goes on a sign."];
   function end() {
+    var first = !G.get(KEY, null);
     G.set(KEY, { score: score, marks: marks.join("") });
+    if (first && window.MW_liveDone) window.MW_liveDone("nomulous"); // counts towards "popular today" on the home page (first finish of the day only)
     $("nm-game").hidden = true; $("nm-end").hidden = false;
     $("nm-final").textContent = score + "/" + Q.length;
     $("nm-verdict").textContent = VERDICT[score];
