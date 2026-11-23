@@ -1358,6 +1358,38 @@
    "date": "2026-11-23",
    "source": "Google Trends (Health, GitHub fetch 2026-11-22T15:36:11Z)",
    "niche": false
+  },
+  {
+   "term": "FDA approves Livsayis, first siRNA therapy for generalised myasthenia gravis",
+   "region": "US",
+   "approx volume": "n/a (news)",
+   "date": "2026-11-24",
+   "source": "news search: PharmExec 19 Nov 2026",
+   "niche": true
+  },
+  {
+   "term": "propranolol recall",
+   "region": "US",
+   "approx volume": "200+",
+   "date": "2026-11-24",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-23T19:10:55Z)",
+   "niche": true
+  },
+  {
+   "term": "glp-1 receptor agonist",
+   "region": "GB",
+   "approx volume": "500+",
+   "date": "2026-11-24",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-23T19:10:55Z)",
+   "niche": false
+  },
+  {
+   "term": "doula",
+   "region": "AU",
+   "approx volume": "200+",
+   "date": "2026-11-24",
+   "source": "Google Trends (Health, GitHub fetch 2026-11-23T19:10:55Z)",
+   "niche": false
   }
  ],
  "used": [
