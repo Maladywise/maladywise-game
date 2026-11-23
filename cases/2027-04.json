@@ -1,0 +1,1129 @@
+[
+ {
+  "date": "2027-04-01",
+  "number": 167,
+  "difficulty": "Medium",
+  "title": "Rusty sputum",
+  "answer": "Community-acquired pneumonia",
+  "accept": [
+   "pneumonia",
+   "community acquired pneumonia",
+   "cap",
+   "pneumococcal pneumonia",
+   "lobar pneumonia",
+   "chest infection",
+   "lung infection"
+  ],
+  "clues": [
+   {
+    "t": "67-year-old man, fever and shaking chills since yesterday."
+   },
+   {
+    "t": "Cough bringing up rust-coloured phlegm."
+   },
+   {
+    "t": "Sharp pain on the right when he breathes in."
+   },
+   {
+    "t": "Breathing 26 a minute, oxygen 91%."
+   },
+   {
+    "t": "Crackles and dull to tap at the right base."
+   },
+   {
+    "t": "Chest X-ray: dense shadow filling the right lower lobe.",
+    "d": 1
+   }
+  ],
+  "pearl": "Confusion, fast breathing, low blood pressure and age 65+ point to a more serious pneumonia (CURB-65). Pneumococcal and flu vaccines lower the risk."
+ },
+ {
+  "date": "2027-04-02",
+  "number": 168,
+  "difficulty": "Hard",
+  "title": "After the farm visit",
+  "answer": "Haemolytic uraemic syndrome (HUS)",
+  "accept": [
+   "haemolytic uraemic syndrome",
+   "hemolytic uremic syndrome",
+   "hus",
+   "stec hus",
+   "typical hus",
+   "e coli hus"
+  ],
+  "clues": [
+   {
+    "t": "4-year-old boy, bloody diarrhoea 6 days ago after a petting zoo."
+   },
+   {
+    "t": "The diarrhoea is settling, but now he’s pale and tired."
+   },
+   {
+    "t": "He’s hardly passed urine today."
+   },
+   {
+    "t": "Small bruises on his legs."
+   },
+   {
+    "t": "Haemoglobin low, platelets 35, fragmented red cells on the film.",
+    "d": 1
+   },
+   {
+    "t": "Creatinine three times normal; stool grows Shiga toxin E. coli.",
+    "d": 1
+   }
+  ],
+  "pearl": "Low red cells from breakdown, low platelets and kidney injury after bloody diarrhoea. Antibiotics and anti-diarrhoea medicines are usually avoided. Handwashing after animal contact matters."
+ },
+ {
+  "date": "2027-04-03",
+  "number": 169,
+  "difficulty": "Hard",
+  "title": "Wobbly and muddled",
+  "answer": "Wernicke encephalopathy",
+  "accept": [
+   "wernicke encephalopathy",
+   "wernicke's encephalopathy",
+   "wernicke",
+   "thiamine deficiency",
+   "vitamin b1 deficiency",
+   "wernicke korsakoff",
+   "wernicke-korsakoff syndrome"
+  ],
+  "clues": [
+   {
+    "t": "52-year-old man brought in confused by his sister."
+   },
+   {
+    "t": "He has been drinking heavily and barely eating for months."
+   },
+   {
+    "t": "He walks with feet wide apart and sways."
+   },
+   {
+    "t": "He sees double when looking to the side."
+   },
+   {
+    "t": "Jerky eye movements and weak sideways gaze.",
+    "d": 1
+   },
+   {
+    "t": "Improves within hours of IV thiamine.",
+    "d": 1
+   }
+  ],
+  "pearl": "Confusion, unsteady walk and eye movement problems, though all three appear together in only a minority. Give thiamine before glucose to anyone at risk. Untreated, it can lead to permanent memory loss (Korsakoff)."
+ },
+ {
+  "date": "2027-04-04",
+  "number": 170,
+  "difficulty": "Genius",
+  "title": "Night sweats in a young woman",
+  "answer": "Kikuchi–Fujimoto disease",
+  "accept": [
+   "kikuchi",
+   "kikuchi disease",
+   "kikuchi fujimoto",
+   "kikuchi-fujimoto disease",
+   "histiocytic necrotising lymphadenitis",
+   "histiocytic necrotizing lymphadenitis"
+  ],
+  "clues": [
+   {
+    "t": "26-year-old woman, 2 weeks of fevers and night sweats."
+   },
+   {
+    "t": "Tender lumps on one side of her neck."
+   },
+   {
+    "t": "Low white cell count."
+   },
+   {
+    "t": "Tests for glandular fever, HIV and TB are negative."
+   },
+   {
+    "t": "Everyone is worried about lymphoma.",
+    "d": 1
+   },
+   {
+    "t": "Node biopsy: patchy necrosis with histiocytes, no neutrophils.",
+    "d": 1
+   }
+  ],
+  "pearl": "A rare, usually self-limiting cause of tender neck glands in young adults. It settles in weeks to months. It can be linked with lupus, so follow-up matters."
+ },
+ {
+  "date": "2027-04-05",
+  "number": 171,
+  "difficulty": "Easy",
+  "title": "Burning after dinner",
+  "answer": "Gastro-oesophageal reflux disease (GORD)",
+  "accept": [
+   "gord",
+   "gerd",
+   "reflux",
+   "acid reflux",
+   "gastro-oesophageal reflux disease",
+   "gastroesophageal reflux disease",
+   "heartburn",
+   "reflux disease"
+  ],
+  "clues": [
+   {
+    "t": "45-year-old man, burning behind his breastbone after meals."
+   },
+   {
+    "t": "Worse when he lies down or bends over."
+   },
+   {
+    "t": "A sour taste comes up into his mouth."
+   },
+   {
+    "t": "Worse after big late dinners, coffee and wine."
+   },
+   {
+    "t": "No weight loss and no trouble swallowing."
+   },
+   {
+    "t": "Settles well on a proton pump inhibitor.",
+    "d": 1
+   }
+  ],
+  "pearl": "Smaller meals, not eating late and raising the head of the bed help. Trouble swallowing, weight loss, vomiting blood or anaemia need a scope."
+ },
+ {
+  "date": "2027-04-06",
+  "number": 172,
+  "difficulty": "Easy",
+  "title": "Tugging at his ear",
+  "answer": "Acute otitis media",
+  "accept": [
+   "otitis media",
+   "acute otitis media",
+   "aom",
+   "middle ear infection",
+   "ear infection",
+   "glue ear infection"
+  ],
+  "clues": [
+   {
+    "t": "2-year-old boy, fever and grizzly overnight."
+   },
+   {
+    "t": "He keeps pulling at his right ear."
+   },
+   {
+    "t": "He had a runny nose last week."
+   },
+   {
+    "t": "He’s off his food and won’t sleep."
+   },
+   {
+    "t": "No discharge from the ear."
+   },
+   {
+    "t": "Otoscope: red, bulging right eardrum.",
+    "d": 1
+   }
+  ],
+  "pearl": "Most settle in 2 to 3 days with pain relief alone. Antibiotics are for under 6 months, both ears in under 2s, discharge, or Aboriginal and Torres Strait Islander children."
+ },
+ {
+  "date": "2027-04-07",
+  "number": 173,
+  "difficulty": "Medium",
+  "title": "Spots after the trip",
+  "answer": "Measles",
+  "accept": [
+   "measles",
+   "rubeola",
+   "morbilli",
+   "measles virus"
+  ],
+  "clues": [
+   {
+    "t": "19-year-old woman, home from a trip overseas 10 days ago."
+   },
+   {
+    "t": "High fever, cough, runny nose and red eyes for 3 days."
+   },
+   {
+    "t": "Now a blotchy rash starting at her hairline and spreading down."
+   },
+   {
+    "t": "She never had her childhood vaccines."
+   },
+   {
+    "t": "Tiny white spots inside her cheeks.",
+    "d": 1
+   },
+   {
+    "t": "Throat swab PCR positive for measles.",
+    "d": 1
+   }
+  ],
+  "pearl": "One of the most contagious infections known. Call ahead before going to a clinic. Two doses of MMR protect about 97% of people. Today is World Health Day."
+ },
+ {
+  "date": "2027-04-08",
+  "number": 174,
+  "difficulty": "Medium",
+  "title": "Late and in pain",
+  "answer": "Ectopic pregnancy",
+  "accept": [
+   "ectopic pregnancy",
+   "ectopic",
+   "tubal pregnancy",
+   "extrauterine pregnancy",
+   "ruptured ectopic"
+  ],
+  "clues": [
+   {
+    "t": "28-year-old woman, sharp pain low on the left side."
+   },
+   {
+    "t": "Her period is 2 weeks late."
+   },
+   {
+    "t": "Some light dark bleeding."
+   },
+   {
+    "t": "Pain in her right shoulder tip when lying down.",
+    "d": 1
+   },
+   {
+    "t": "Pregnancy test positive."
+   },
+   {
+    "t": "Ultrasound: empty uterus and free fluid in the pelvis.",
+    "d": 1
+   }
+  ],
+  "pearl": "Any woman of child-bearing age with tummy pain needs a pregnancy test. Shoulder tip pain suggests blood under the diaphragm. A rupture is an emergency."
+ },
+ {
+  "date": "2027-04-09",
+  "number": 175,
+  "difficulty": "Hard",
+  "title": "After the hotel spa",
+  "answer": "Legionnaires’ disease",
+  "accept": [
+   "legionnaires disease",
+   "legionnaires' disease",
+   "legionella",
+   "legionellosis",
+   "legionella pneumonia",
+   "legionella pneumophila"
+  ],
+  "clues": [
+   {
+    "t": "58-year-old smoker, high fever and dry cough after a work trip."
+   },
+   {
+    "t": "Watery diarrhoea and a headache."
+   },
+   {
+    "t": "He’s a bit confused."
+   },
+   {
+    "t": "His hotel had a spa and a big cooling tower.",
+    "d": 1
+   },
+   {
+    "t": "Sodium 126, liver tests raised."
+   },
+   {
+    "t": "Urine antigen test positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "A pneumonia caught from contaminated water mist, not from people. Low sodium, diarrhoea and confusion are clues. Standard penicillin doesn’t cover it."
+ },
+ {
+  "date": "2027-04-10",
+  "number": 176,
+  "difficulty": "Hard",
+  "title": "Pressure that won’t come down",
+  "answer": "Primary aldosteronism (Conn syndrome)",
+  "accept": [
+   "primary aldosteronism",
+   "primary hyperaldosteronism",
+   "conn syndrome",
+   "conn's syndrome",
+   "conns syndrome",
+   "hyperaldosteronism",
+   "aldosteronoma",
+   "aldosterone producing adenoma"
+  ],
+  "clues": [
+   {
+    "t": "41-year-old woman, high blood pressure since her 30s."
+   },
+   {
+    "t": "Still 165/100 on three medicines."
+   },
+   {
+    "t": "Muscle cramps and tiredness."
+   },
+   {
+    "t": "Potassium 3.0."
+   },
+   {
+    "t": "Aldosterone high, renin suppressed.",
+    "d": 1
+   },
+   {
+    "t": "CT: small nodule on the left adrenal gland.",
+    "d": 1
+   }
+  ],
+  "pearl": "Probably the most common cause of high blood pressure with a fixable cause, and often missed. Screen anyone with hard-to-control pressure or low potassium."
+ },
+ {
+  "date": "2027-04-11",
+  "number": 177,
+  "difficulty": "Genius",
+  "title": "Falling backwards",
+  "answer": "Progressive supranuclear palsy",
+  "accept": [
+   "progressive supranuclear palsy",
+   "psp",
+   "steele richardson olszewski syndrome",
+   "steele-richardson-olszewski"
+  ],
+  "clues": [
+   {
+    "t": "68-year-old man, several falls, always backwards."
+   },
+   {
+    "t": "He’s stiff and slow, but no tremor."
+   },
+   {
+    "t": "Levodopa didn’t help."
+   },
+   {
+    "t": "He can’t look down to see his plate or the stairs.",
+    "d": 1
+   },
+   {
+    "t": "A fixed, surprised stare.",
+    "d": 1
+   },
+   {
+    "t": "MRI: shrunken midbrain (the ‘hummingbird’ sign).",
+    "d": 1
+   }
+  ],
+  "pearl": "A Parkinson-like condition with early falls and trouble looking down. It doesn’t respond much to Parkinson’s medicines. Today is World Parkinson’s Day."
+ },
+ {
+  "date": "2027-04-12",
+  "number": 178,
+  "difficulty": "Easy",
+  "title": "Wheeze at night",
+  "answer": "Asthma",
+  "accept": [
+   "asthma",
+   "bronchial asthma",
+   "allergic asthma",
+   "childhood asthma",
+   "reactive airways disease"
+  ],
+  "clues": [
+   {
+    "t": "9-year-old girl, cough that keeps her up at night."
+   },
+   {
+    "t": "Wheezy after running at sport."
+   },
+   {
+    "t": "Worse with colds and in spring."
+   },
+   {
+    "t": "She has eczema and hay fever."
+   },
+   {
+    "t": "Her dad has asthma."
+   },
+   {
+    "t": "Spirometry improves a lot after a puff of salbutamol.",
+    "d": 1
+   }
+  ],
+  "pearl": "Most children with asthma need a daily preventer, not just a reliever. Needing a reliever more than twice a week means it isn’t controlled. A written action plan helps."
+ },
+ {
+  "date": "2027-04-13",
+  "number": 179,
+  "difficulty": "Easy",
+  "title": "Thirsty all the time",
+  "answer": "Type 2 diabetes",
+  "accept": [
+   "type 2 diabetes",
+   "diabetes",
+   "type 2 diabetes mellitus",
+   "t2dm",
+   "diabetes mellitus",
+   "diabetes type 2",
+   "adult onset diabetes"
+  ],
+  "clues": [
+   {
+    "t": "55-year-old man, always thirsty."
+   },
+   {
+    "t": "Up three times a night to pass urine."
+   },
+   {
+    "t": "Tired, and a cut on his foot is slow to heal."
+   },
+   {
+    "t": "Overweight, and his mother had ‘sugar’."
+   },
+   {
+    "t": "Fasting glucose 9.4.",
+    "d": 1
+   },
+   {
+    "t": "HbA1c 8.1%.",
+    "d": 1
+   }
+  ],
+  "pearl": "HbA1c of 6.5% or more confirms it. Exercise and weight loss help a lot, and metformin is usually first. Check eyes, feet and kidneys every year."
+ },
+ {
+  "date": "2027-04-14",
+  "number": 180,
+  "difficulty": "Medium",
+  "title": "Stiff hands every morning",
+  "answer": "Rheumatoid arthritis",
+  "accept": [
+   "rheumatoid arthritis",
+   "ra",
+   "rheumatoid",
+   "inflammatory arthritis",
+   "seropositive arthritis"
+  ],
+  "clues": [
+   {
+    "t": "44-year-old woman, sore swollen knuckles in both hands."
+   },
+   {
+    "t": "Morning stiffness for over an hour."
+   },
+   {
+    "t": "Her wrists and the balls of her feet hurt too."
+   },
+   {
+    "t": "Tired, and a low-grade temperature."
+   },
+   {
+    "t": "Squeezing across her knuckles hurts."
+   },
+   {
+    "t": "Anti-CCP antibodies strongly positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "Same joints on both sides, long morning stiffness and swollen small joints. Early treatment with methotrexate, within months, prevents joint damage."
+ },
+ {
+  "date": "2027-04-15",
+  "number": 181,
+  "difficulty": "Medium",
+  "title": "Can’t open his mouth",
+  "answer": "Peritonsillar abscess (quinsy)",
+  "accept": [
+   "quinsy",
+   "peritonsillar abscess",
+   "pta",
+   "peritonsillar abscess quinsy",
+   "tonsillar abscess"
+  ],
+  "clues": [
+   {
+    "t": "22-year-old man, sore throat for 5 days, now much worse on the left."
+   },
+   {
+    "t": "He can barely swallow and is drooling."
+   },
+   {
+    "t": "His voice sounds like he has a hot potato in his mouth."
+   },
+   {
+    "t": "He can only open his mouth a little.",
+    "d": 1
+   },
+   {
+    "t": "Fever 38.8 °C."
+   },
+   {
+    "t": "Left soft palate bulging, uvula pushed to the right.",
+    "d": 1
+   }
+  ],
+  "pearl": "A pus collection beside the tonsil. Treated by draining it and antibiotics. Trouble breathing or a stiff neck needs urgent review."
+ },
+ {
+  "date": "2027-04-16",
+  "number": 182,
+  "difficulty": "Hard",
+  "title": "Strong arms, weak legs",
+  "answer": "Coarctation of the aorta",
+  "accept": [
+   "coarctation of the aorta",
+   "coarctation",
+   "aortic coarctation",
+   "coa"
+  ],
+  "clues": [
+   {
+    "t": "17-year-old boy, high blood pressure found at a sports medical."
+   },
+   {
+    "t": "His legs ache when he runs."
+   },
+   {
+    "t": "Cold feet."
+   },
+   {
+    "t": "Arm pressure 160/90, legs much lower.",
+    "d": 1
+   },
+   {
+    "t": "Groin pulses arrive later than the wrist pulse.",
+    "d": 1
+   },
+   {
+    "t": "Echo: narrowing of the aorta after the left arm artery.",
+    "d": 1
+   }
+  ],
+  "pearl": "Always check groin pulses in a young person with high blood pressure. It is linked with Turner syndrome and bicuspid aortic valves. Fixed with a stent or surgery."
+ },
+ {
+  "date": "2027-04-17",
+  "number": 183,
+  "difficulty": "Hard",
+  "title": "Heavy periods since day one",
+  "answer": "Von Willebrand disease",
+  "accept": [
+   "von willebrand disease",
+   "von willebrand's disease",
+   "vwd",
+   "von willebrand",
+   "vwf deficiency",
+   "willebrand disease"
+  ],
+  "clues": [
+   {
+    "t": "16-year-old girl, very heavy periods since they started."
+   },
+   {
+    "t": "She soaks through pads every hour on day 2."
+   },
+   {
+    "t": "Nosebleeds that last over 10 minutes."
+   },
+   {
+    "t": "She bled for days after a tooth out."
+   },
+   {
+    "t": "Her dad bruises easily too.",
+    "d": 1
+   },
+   {
+    "t": "Low von Willebrand factor activity, platelets and clotting times normal.",
+    "d": 1
+   }
+  ],
+  "pearl": "The most common inherited bleeding disorder, often missed in women with heavy periods. Ask about bleeding history before surgery. Today is World Haemophilia Day."
+ },
+ {
+  "date": "2027-04-18",
+  "number": 184,
+  "difficulty": "Genius",
+  "title": "After the floods",
+  "answer": "Murray Valley encephalitis",
+  "accept": [
+   "murray valley encephalitis",
+   "mve",
+   "murray valley encephalitis virus",
+   "australian encephalitis"
+  ],
+  "clues": [
+   {
+    "t": "8-year-old boy from a river town in northern Victoria."
+   },
+   {
+    "t": "Fever and headache, then very drowsy."
+   },
+   {
+    "t": "A seizure on the way to hospital."
+   },
+   {
+    "t": "Lots of mosquitoes after recent floods.",
+    "d": 1
+   },
+   {
+    "t": "MRI: changes in both thalami.",
+    "d": 1
+   },
+   {
+    "t": "Spinal fluid and blood: Murray Valley encephalitis virus antibodies.",
+    "d": 1
+   }
+  ],
+  "pearl": "A mosquito-borne virus from waterbirds, spreading south after wet seasons. Most infections cause no symptoms, but encephalitis can be fatal. Prevention means avoiding mosquito bites."
+ },
+ {
+  "date": "2027-04-19",
+  "number": 185,
+  "difficulty": "Easy",
+  "title": "Hit on the footy field",
+  "answer": "Concussion",
+  "accept": [
+   "concussion",
+   "mild traumatic brain injury",
+   "mild tbi",
+   "mtbi",
+   "sport related concussion",
+   "sports concussion"
+  ],
+  "clues": [
+   {
+    "t": "15-year-old boy, head knock in a tackle at football."
+   },
+   {
+    "t": "He looked dazed for a minute."
+   },
+   {
+    "t": "Headache and feels ‘foggy’."
+   },
+   {
+    "t": "He keeps asking what the score is."
+   },
+   {
+    "t": "Light hurts his eyes."
+   },
+   {
+    "t": "Neuro examination normal, no red flags for a scan.",
+    "d": 1
+   }
+  ],
+  "pearl": "If in doubt, sit them out. A few days of relative rest, then a gradual return. Children shouldn’t return to contact sport for at least 3 weeks. Vomiting, worsening headache or drowsiness need urgent review."
+ },
+ {
+  "date": "2027-04-20",
+  "number": 186,
+  "difficulty": "Easy",
+  "title": "A ring on her arm",
+  "answer": "Ringworm (tinea corporis)",
+  "accept": [
+   "ringworm",
+   "tinea corporis",
+   "tinea",
+   "fungal skin infection",
+   "dermatophyte infection"
+  ],
+  "clues": [
+   {
+    "t": "10-year-old girl, an itchy round patch on her forearm."
+   },
+   {
+    "t": "It’s growing outwards."
+   },
+   {
+    "t": "Scaly red edge, clearer in the middle."
+   },
+   {
+    "t": "Their new kitten has a bald patch."
+   },
+   {
+    "t": "No fever, otherwise well."
+   },
+   {
+    "t": "Skin scraping shows fungal threads.",
+    "d": 1
+   }
+  ],
+  "pearl": "A fungus, not a worm. An antifungal cream for 2 to 4 weeks usually clears it. Steroid creams alone make it worse. Get the pet checked too."
+ },
+ {
+  "date": "2027-04-21",
+  "number": 187,
+  "difficulty": "Medium",
+  "title": "Pain through to the back",
+  "answer": "Acute pancreatitis",
+  "accept": [
+   "acute pancreatitis",
+   "pancreatitis",
+   "gallstone pancreatitis",
+   "alcoholic pancreatitis"
+  ],
+  "clues": [
+   {
+    "t": "49-year-old man, severe upper tummy pain since last night."
+   },
+   {
+    "t": "It goes straight through to his back."
+   },
+   {
+    "t": "Leaning forward helps a little."
+   },
+   {
+    "t": "He’s vomited many times."
+   },
+   {
+    "t": "He had a big weekend of drinking."
+   },
+   {
+    "t": "Lipase 12 times normal.",
+    "d": 1
+   }
+  ],
+  "pearl": "Gallstones and alcohol cause most cases. Treatment is fluids, pain relief and early eating when possible. Many recover in a week, but some get very sick."
+ },
+ {
+  "date": "2027-04-22",
+  "number": 188,
+  "difficulty": "Medium",
+  "title": "Pop in the chest",
+  "answer": "Spontaneous pneumothorax",
+  "accept": [
+   "pneumothorax",
+   "spontaneous pneumothorax",
+   "primary spontaneous pneumothorax",
+   "collapsed lung",
+   "ptx"
+  ],
+  "clues": [
+   {
+    "t": "21-year-old tall thin man, sudden sharp pain on the left of his chest."
+   },
+   {
+    "t": "It came on while sitting at his desk."
+   },
+   {
+    "t": "Short of breath."
+   },
+   {
+    "t": "He smokes."
+   },
+   {
+    "t": "Quieter breath sounds on the left.",
+    "d": 1
+   },
+   {
+    "t": "Chest X-ray: lung edge with no markings beyond it.",
+    "d": 1
+   }
+  ],
+  "pearl": "Most common in tall, thin young men who smoke. Small ones may be watched; larger ones are drained. Stopping smoking cuts the risk of it happening again. Avoid scuba diving."
+ },
+ {
+  "date": "2027-04-23",
+  "number": 189,
+  "difficulty": "Hard",
+  "title": "After the flu",
+  "answer": "Viral myocarditis",
+  "accept": [
+   "myocarditis",
+   "viral myocarditis",
+   "acute myocarditis",
+   "myopericarditis",
+   "inflammation of the heart muscle"
+  ],
+  "clues": [
+   {
+    "t": "24-year-old man, chest pain and breathless a week after a flu-like illness."
+   },
+   {
+    "t": "Heart racing and he can’t finish a walk."
+   },
+   {
+    "t": "No risk factors for heart disease."
+   },
+   {
+    "t": "ECG: widespread changes, extra beats.",
+    "d": 1
+   },
+   {
+    "t": "Troponin raised; coronary angiogram normal.",
+    "d": 1
+   },
+   {
+    "t": "Cardiac MRI: patchy scarring under the outer layer of the heart.",
+    "d": 1
+   }
+  ],
+  "pearl": "A common cause of sudden cardiac death in young athletes. No sport for 3 to 6 months. Most recover fully."
+ },
+ {
+  "date": "2027-04-24",
+  "number": 190,
+  "difficulty": "Hard",
+  "title": "Rash after the beach",
+  "answer": "Systemic lupus erythematosus (SLE)",
+  "accept": [
+   "lupus",
+   "systemic lupus erythematosus",
+   "sle",
+   "systemic lupus"
+  ],
+  "clues": [
+   {
+    "t": "27-year-old woman, sore swollen joints in her hands and wrists."
+   },
+   {
+    "t": "A red rash over her cheeks and nose after a beach day."
+   },
+   {
+    "t": "Mouth ulcers and hair coming out."
+   },
+   {
+    "t": "Tired, with low fevers."
+   },
+   {
+    "t": "Protein in her urine.",
+    "d": 1
+   },
+   {
+    "t": "ANA and anti-double-stranded DNA antibodies positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "Mostly affects women of child-bearing age, and more often women of Asian and Aboriginal and Torres Strait Islander background. Hydroxychloroquine helps nearly everyone with lupus. Sun protection matters."
+ },
+ {
+  "date": "2027-04-25",
+  "number": 191,
+  "difficulty": "Genius",
+  "title": "Five-day fevers in the trenches",
+  "answer": "Trench fever (Bartonella quintana)",
+  "accept": [
+   "trench fever",
+   "bartonella quintana",
+   "quintan fever",
+   "five day fever",
+   "shin bone fever",
+   "bartonella"
+  ],
+  "clues": [
+   {
+    "t": "A soldier on the Western Front in 1917."
+   },
+   {
+    "t": "Sudden fever, then it comes back every 5 days."
+   },
+   {
+    "t": "Severe pain in his shins.",
+    "d": 1
+   },
+   {
+    "t": "Headache and dizzy when standing."
+   },
+   {
+    "t": "His uniform is full of body lice.",
+    "d": 1
+   },
+   {
+    "t": "Today, blood culture would grow Bartonella quintana.",
+    "d": 1
+   }
+  ],
+  "pearl": "Spread by body lice. In World War One it laid low hundreds of thousands of soldiers. Today it is seen where housing and washing are hard to get. Today is Anzac Day."
+ },
+ {
+  "date": "2027-04-26",
+  "number": 192,
+  "difficulty": "Easy",
+  "title": "Itchy welts that move",
+  "answer": "Hives (acute urticaria)",
+  "accept": [
+   "hives",
+   "urticaria",
+   "acute urticaria",
+   "nettle rash",
+   "welts"
+  ],
+  "clues": [
+   {
+    "t": "30-year-old woman, itchy raised red welts all over."
+   },
+   {
+    "t": "Each welt fades within a day, but new ones appear elsewhere."
+   },
+   {
+    "t": "It started 3 days after a cold."
+   },
+   {
+    "t": "No swelling of her lips or tongue."
+   },
+   {
+    "t": "No trouble breathing."
+   },
+   {
+    "t": "Leaves no marks behind.",
+    "d": 1
+   }
+  ],
+  "pearl": "Most short bouts come after a virus. A non-drowsy antihistamine is the main treatment. Lip or tongue swelling, or trouble breathing, is an emergency."
+ },
+ {
+  "date": "2027-04-27",
+  "number": 193,
+  "difficulty": "Easy",
+  "title": "Shooting down the leg",
+  "answer": "Sciatica (lumbar disc prolapse)",
+  "accept": [
+   "sciatica",
+   "lumbar disc prolapse",
+   "slipped disc",
+   "herniated disc",
+   "disc herniation",
+   "lumbar radiculopathy",
+   "prolapsed disc"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old man, back pain after lifting a heavy box."
+   },
+   {
+    "t": "Now shooting pain down the back of his left leg to the foot."
+   },
+   {
+    "t": "Coughing and sneezing make it worse."
+   },
+   {
+    "t": "Tingling on the outside of his foot."
+   },
+   {
+    "t": "Raising his straight left leg brings on the pain.",
+    "d": 1
+   },
+   {
+    "t": "Normal bladder and bowel control.",
+    "d": 1
+   }
+  ],
+  "pearl": "Most settle within 6 to 12 weeks. Stay active as you can. Numbness in the saddle area or trouble passing urine needs an emergency scan."
+ },
+ {
+  "date": "2027-04-28",
+  "number": 194,
+  "difficulty": "Medium",
+  "title": "Swollen at 34 weeks",
+  "answer": "Pre-eclampsia",
+  "accept": [
+   "pre-eclampsia",
+   "preeclampsia",
+   "pre eclampsia",
+   "toxaemia of pregnancy",
+   "pregnancy induced hypertension",
+   "pet"
+  ],
+  "clues": [
+   {
+    "t": "31-year-old woman, 34 weeks pregnant with her first baby."
+   },
+   {
+    "t": "Headache that paracetamol won’t shift."
+   },
+   {
+    "t": "Seeing flashing lights."
+   },
+   {
+    "t": "Face and hands swollen this week."
+   },
+   {
+    "t": "Blood pressure 158/104.",
+    "d": 1
+   },
+   {
+    "t": "Protein in her urine, platelets falling.",
+    "d": 1
+   }
+  ],
+  "pearl": "Low-dose aspirin from early pregnancy lowers the risk in high-risk women. Delivering the baby is the cure. Headache, vision changes or upper tummy pain in late pregnancy need same-day review."
+ },
+ {
+  "date": "2027-04-29",
+  "number": 195,
+  "difficulty": "Medium",
+  "title": "A tight calf after the flight",
+  "answer": "Deep vein thrombosis (DVT)",
+  "accept": [
+   "dvt",
+   "deep vein thrombosis",
+   "deep venous thrombosis",
+   "venous thrombosis",
+   "blood clot in leg",
+   "venous thromboembolism",
+   "vte"
+  ],
+  "clues": [
+   {
+    "t": "54-year-old woman, sore swollen left calf."
+   },
+   {
+    "t": "She flew back from London 4 days ago."
+   },
+   {
+    "t": "She’s on the combined pill."
+   },
+   {
+    "t": "Her left calf is 4 cm bigger than the right.",
+    "d": 1
+   },
+   {
+    "t": "Warm and tender along the inner leg."
+   },
+   {
+    "t": "Ultrasound: clot in the left popliteal vein.",
+    "d": 1
+   }
+  ],
+  "pearl": "Long trips, surgery, cancer, pregnancy and oestrogen raise the risk. Treated with blood thinners for at least 3 months. Breathlessness or chest pain could mean a clot has moved to the lung."
+ },
+ {
+  "date": "2027-04-30",
+  "number": 196,
+  "difficulty": "Hard",
+  "title": "Blood in the nose and the urine",
+  "answer": "Granulomatosis with polyangiitis (GPA)",
+  "accept": [
+   "granulomatosis with polyangiitis",
+   "gpa",
+   "wegener's granulomatosis",
+   "wegeners",
+   "wegener granulomatosis",
+   "anca vasculitis",
+   "anca associated vasculitis"
+  ],
+  "clues": [
+   {
+    "t": "55-year-old man, months of blocked, crusty, bloody nose."
+   },
+   {
+    "t": "Ear infections that don’t clear."
+   },
+   {
+    "t": "Now coughing up blood."
+   },
+   {
+    "t": "Blood and protein in his urine.",
+    "d": 1
+   },
+   {
+    "t": "Chest CT: several nodules, some with cavities.",
+    "d": 1
+   },
+   {
+    "t": "c-ANCA (PR3) positive; kidney biopsy shows vasculitis.",
+    "d": 1
+   }
+  ],
+  "pearl": "A small vessel vasculitis of the nose, lungs and kidneys. Untreated it is often fatal; with steroids and rituximab most go into remission."
+ }
+]
