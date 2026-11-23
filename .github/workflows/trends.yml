@@ -6,7 +6,7 @@ on:
     # GitHub can skip or delay scheduled runs, so each fetch has a backup time.
     - cron: "12 18 * * *"   # 5:12am AEDT
     - cron: "47 18 * * *"   # 5:47am AEDT (before the 6:13am briefing)
-    - cron: "11 7 * * *"    # 6:11pm AEDT
+    - cron: "11 7 * * *"    # 6:11pm AEDT (GitHub often runs these hours late; the evening and morning tasks also trigger it on demand)
     - cron: "37 7 * * *"    # 6:37pm AEDT (before the 7:43pm puzzle refresh)
   workflow_dispatch:
     inputs:

@@ -1653,7 +1653,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       var ORD = window.MW_ORDER || [], DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
       return MW_GAMES.filter(inMode).map(function (g, i) {
         var st = g.live ? readStats(g) : null, k = ORD.indexOf(g.id); k = k < 0 ? 100 + i : k;
-        if (g.live && g.relday && (DAYS[g.relday] === dw || g.relday.indexOf(["Sundays", "Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays"][dw]) >= 0)) k = 0.5; // release day: right after Dxtective
+        if (relToday(g)) k = 0.5; // release day: right after Dxtective (incl. "Mon & Thu" for Arrhythmix)
         return { g: g, i: k, d: st && st.done ? 1 : 0, m: inMode(g) ? 0 : 1 };
       })
         .sort(function (a, b) { return a.m - b.m || a.d - b.d || a.i - b.i; }).map(function (x) { return x.g; });
