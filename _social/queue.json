@@ -925,6 +925,23 @@
     "Answer: intussusception, the bowel telescoping into itself. Same-day emergency department: ultrasound confirms it, and an air or contrast enema often fixes it without surgery. Redcurrant jelly stools are a late sign, so don't wait for them.",
     "Play Dxtective → https://maladywise.com/dxtective/"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "pm",
+   "note": "Fri: deep dive #14 thread (antimicrobial resistance) (6pm deep-dive slot; next free pm slot)",
+   "queued_at": "2026-11-24T12:00+11:00",
+   "thread": [
+    "1/9 Antibiotic resistance isn't a future problem. About 1 in 6 lab-confirmed bacterial infections worldwide were resistant in 2023 (WHO). Most of the fight happens in a 15-minute consult about a cough. New deep dive for clinicians 🧵",
+    "2/9 Read the deep dive → https://maladywise.com/deep-dives/antimicrobial-resistance/",
+    "3/9 Your script, your patient's resistance. After a primary care antibiotic for UTI, the odds of a resistant urinary isolate are 2.5 within 2 months and still 1.33 at 12 months (BMJ 2010 meta-analysis).",
+    "4/9 Australia: 37.1% of people had at least one PBS antimicrobial dispensed in 2024. GPs still prescribe for about 80% of acute bronchitis, where guidelines say antibiotics don't help (AURA 2026; ACSQHC).",
+    "5/9 Delayed scripts work. In the Cochrane review, antibiotic use was 31% with a delayed script vs 93% with an immediate one. Complications didn't differ, and satisfaction was similar (86% vs 91%).",
+    "6/9 Nudges work too. Australia's 2017 'Nudge vs Superbugs' letters told 6,649 high-prescribing GPs how they compared with peers. Scripts fell 9–12% over 6 months: about 126,000 fewer.",
+    "7/9 Shorter is often enough: 3 days for children's pneumonia was non-inferior to 7 (CAP-IT), and 7 days for afebrile UTI in men non-inferior to 14 (JAMA 2021).",
+    "8/9 History: penicillinase was described in 1940, before penicillin's first patient. In 1941 Oxford researchers recovered penicillin from Albert Alexander's urine to reuse it. Supplies still ran out.",
+    "9/9 Frontier: AI-designed antibiotics. Generative models produced new compounds active against gonorrhoea and MRSA in mice (Cell 2025). None has reached human trials yet. #AMR"
+   ]
   }
  ]
 }
