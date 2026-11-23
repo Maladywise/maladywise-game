@@ -10,7 +10,7 @@
 //   (about 30 seconds of a visible tab). Only the segment is stored, never the ID. /hubrank sums the last N days;
 //   the weekly hubs workflow uses it to put the most-used hubs in the top menu.
 // - Games played today (Sydney time): pages send one "done" when a puzzle is finished. Daily totals live in Render Key Value.
-//   /history?days=N returns daily totals, per-game counts and the 28-day hourly pattern for the public /site-stats/ page.
+//   /history?days=N returns daily totals, per-game counts, per-page opens (o) and the 28-day hourly pattern for the public /site-stats/ page.
 // - Zebritis live rarity: /zpick counts one list answer per device per prompt; /zcounts returns a day's counts.
 const http = require("http");
 const crypto = require("crypto");
@@ -102,7 +102,9 @@ async function history(days) {
         const g = await kv.hGetAll("games:" + d), games = {};
         for (const k in g) games[k] = Number(g[k] || 0);
         const pv = Number(await kv.get("pv:" + d) || 0);
-        out.days.push({ d, n: tot, g: games, pv });
+        const oh = await kv.hGetAll("opens:" + d), o = {};
+        for (const k in oh || {}) o[k] = Number(oh[k] || 0);
+        out.days.push({ d, n: tot, g: games, pv, o });
         if (i > 0 && i <= 28) { const hr = await kv.hGetAll("playedh:" + d); if (hr && Object.keys(hr).length) { out.hourDays++; for (const k in hr) out.hours[Number(k) % 24] += Number(hr[k] || 0); } }
       }
     } catch (e) {}
@@ -122,6 +124,13 @@ async function addView(g) {
 }
 // page views: one per page load (each tab load gets a new random id; first ping = one view)
 let memPv = 0, memPvDay = "";
+// game/page opens (24 Nov 2026): one per tab per page, counted on the first ping for that page (opens:<day> hash).
+// With games:<day> (finishes) this gives a real opened -> finished rate per game. Kept 400 days.
+async function addOpen(g) {
+  if (!g || !kv || !kv.isReady) return;
+  const d = sydDay();
+  try { await kv.hIncrBy("opens:" + d, g, 1); await kv.expire("opens:" + d, 60 * 60 * 24 * 400); } catch (e) {}
+}
 async function addPageView() {
   const d = sydDay();
   if (memPvDay !== d) { memPvDay = d; memPv = 0; }
@@ -349,7 +358,7 @@ const server = http.createServer(async (req, res) => {
   try {
     if (url.pathname === "/ping") {
       const id = clean(url.searchParams.get("id"), 24);
-      if (id && !limited(ip, 400)) { const g = clean(url.searchParams.get("g"), 24); const fresh = !seen.has(id); seen.set(id, { t: Date.now(), g }); await addView(g); if (fresh) await addPageView(); }
+      if (id && !limited(ip, 400)) { const g = clean(url.searchParams.get("g"), 24); const prev = seen.get(id), fresh = !prev; seen.set(id, { t: Date.now(), g }); await addView(g); if (fresh) await addPageView(); if (g && (!prev || prev.g !== g)) await addOpen(g); }
       res.writeHead(204); return res.end();
     }
     if (url.pathname === "/done" && req.method === "POST") {

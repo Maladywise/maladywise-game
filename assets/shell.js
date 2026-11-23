@@ -492,7 +492,7 @@
   function celebrate(id, st) {
     if (!st) return; var f = SCENES[id];
     var sc0 = f ? f(st) : null; if (sc0 && st.win !== false) { sc0.html += mascotCheer(id, Array.isArray(st.guesses) ? st.guesses.length === 1 : /\bgold\b/.test(sc0.cls || "")); sc0.ms = (sc0.ms || 2600) + 2000; }
-    if (!sc0 && st.done && st.win === false) sc0 = loseScene(id, st);
+    if (!sc0 && st.done && st.win === false && !st.banked) sc0 = loseScene(id, st); // banked = stopped by choice (Morphemia 'Done for today'): no loss scene
     if (sc0 && st.done) { var rk = resultRank(id, st, sc0); sc0.html += '<p class="cb-rank">' + rk.icon + " " + rk.t + "-level result</p>"; sc0.ms = (sc0.ms || 2600) + 600; }
     queue(sc0);
     var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0];

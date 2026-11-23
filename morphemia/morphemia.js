@@ -138,11 +138,20 @@
     var share = NAME + " #" + P.number + (isLive() ? "" : " (archive)") + " \u00b7 " + P.difficulty + " " + ICON[P.difficulty]  + "\nRank: " + rk + ((st.hints || []).length ? " \u00b7 \ud83d\udca1" + st.hints.length : "") + " \u00b7 " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (NORMIE ? (P.theme ? " \u00b7 " + nMed + " \u2b50 theme" : "") : " \u00b7 " + nMed + " medical") + "\nmaladywise.com";
     r.hidden = false;
     r.innerHTML = '<pre id="mph-share">' + esc(share) + '</pre><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn solid" type="button" id="mph-copy">Copy result</button>' +
-      (!isLive() ? '<button class="btn" type="button" id="mph-reveal">' + (st.reveal ? "Hide answers" : "Reveal all answers") + "</button>" : "") + "</div>";
+      (!isLive() ? '<button class="btn" type="button" id="mph-reveal">' + (st.reveal ? "Hide answers" : "Reveal all answers") + "</button>" : "") +
+      // "Done for today" (24 Nov 2026): most players stop before Genius, so let them bank the day. It counts as played
+      // (streak, home tick, live count); Genius still counts as the win, and they can keep finding words afterwards.
+      (isLive() && !st.done ? '<button class="btn" type="button" id="mph-stop">Done for today</button>' : "") + "</div>" +
+      (isLive() && st.done && !st.win && !st.gaveUp ? '<p class="mph-donenote" style="margin:8px 0 0;font-size:13px;opacity:.8">Banked as ' + rk + ". Keep going if you like: Genius still counts.</p>" : "");
     $("copy").onclick = function () {
       var b = this;
       function selx() { var rg = document.createRange(); rg.selectNodeContents($("share")); var w = getSelection(); w.removeAllRanges(); w.addRange(rg); b.textContent = "Selected. Copy it"; }
       try { navigator.clipboard.writeText(share).then(function () { b.textContent = "Copied"; }, selx); } catch (e) { selx(); }
+    };
+    if ($("stop")) $("stop").onclick = function () {
+      var b = this; b.blur();
+      if (!b._sure) { b._sure = 1; b.textContent = "Bank " + rk + "? Tap again"; setTimeout(function () { b._sure = 0; b.textContent = "Done for today"; }, 3000); return; }
+      recordPlay(); st.done = true; st.win = false; st.banked = true; put(KEY, st); say("Banked: " + rk + ". See you at midnight."); render();
     };
     if ($("reveal")) $("reveal").onclick = function () { st.reveal = !st.reveal; put(KEY, st); $("found").open = true; render(); };
   }

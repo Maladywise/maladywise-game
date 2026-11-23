@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, clue, rows[8], spangram, words:[{w, p:[[r,c]...]}]} (words[0] is the spangram). Saturdays: Suturix Long, rows[10] of 7 letters. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", R = 8, C = 6, PER_HINT = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", R = 8, C = 6, PER_HINT = 2; // 2 non-theme words per hint (was 3; 24 Nov 2026)
   // Normie mode: everyday themes from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Suturix (Normie)" : "Suturix";
   var root = document.getElementById("stx");
@@ -199,6 +199,15 @@
   });
   $("clear").onclick = function () { path = []; say(""); render(); };
   $("enter").onclick = function () { if (path.length && !st.done) submit(); };
+  // Stuck timer (24 Nov 2026): after 3 minutes on a visible page with no new theme word, a free hint becomes ready.
+  // Once per stuck spell; the clock restarts whenever a theme word is found or a hint is used.
+  var lastProg = Date.now(), lastFound = -1;
+  setInterval(function () {
+    if (!P || !st || st.done || !isLive() || document.hidden) { lastProg = Date.now(); return; }
+    if (st.found.length !== lastFound) { lastFound = st.found.length; lastProg = Date.now(); return; }
+    if (st.hint >= 0 || st.pts >= PER_HINT) { lastProg = Date.now(); return; }
+    if (Date.now() - lastProg >= 180000) { st.pts = PER_HINT; put(KEY, st); lastProg = Date.now(); say("Stuck? A free hint is ready. Tap Hint."); render(); }
+  }, 10000);
   $("hint").onclick = function () {
     if (st.done) return;
     if (st.hint >= 0) { say("Hint's already showing. The dashed letters spell a theme word."); return; }
