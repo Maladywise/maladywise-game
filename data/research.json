@@ -2,6 +2,48 @@
  "_about": "Research hub data. The weekly research task adds a new week at the TOP of weeks[] (3-5 studies) and keeps trials[] current. Build with: python3 _scripts/build_research.py worldwide.items lists studies or citizen-science projects anyone can join online from any country (verified on official pages).",
  "weeks": [
   {
+   "week": "17–23 November 2026",
+   "date": "2026-11-23",
+   "studies": [
+    {
+     "title": "Two labour drugs didn't help first-time mums avoid interventions",
+     "what": "SAINT: 2,963 first-time mothers having an induced labour at 11 Norwegian hospitals were randomised to sodium bicarbonate, hyoscine (Buscopan) given into a vein, both, or placebo once active labour started. Births without forceps, vacuum or caesarean were much the same in every group: 57% with both drugs, 61% with each drug alone and 56% with placebo. None of the differences were statistically significant, and serious side effects were similar.",
+     "sowhat": "If you're being induced, these add-ons aren't a proven way to make a natural birth more likely, so don't feel you're missing out if they aren't offered. Your midwife and obstetrician can talk you through what actually helps.",
+     "evidence": "Strong",
+     "evnote": "large double-blind randomised placebo-controlled trial; small benefits can't be ruled out",
+     "source": "BMJ Group summary of the BMJ paper (19 Nov 2026)",
+     "url": "https://bmjgroup.com/no-clear-benefit-from-two-drugs-intended-to-increase-spontaneous-birth-after-induction-in-first-time-mums/"
+    },
+    {
+     "title": "Your waist may say more than your BMI",
+     "what": "Health check data from more than 17 million South Korean adults, followed for nearly 14 years. Risk of death was U-shaped: lowest with a waist of 80–94 cm in men and 75–89 cm in women. Among people with a bigger-than-average waist for their BMI, every extra 5 cm was linked to a 16% higher risk of death in men and 14% in women. Very small waists were linked to higher risk too.",
+     "sowhat": "Where you carry weight matters, not just how much. A tape measure around your middle is a cheap, useful extra to the bathroom scales, but it's one clue, not a verdict. Ask your GP if you're unsure what your numbers mean.",
+     "evidence": "Moderate",
+     "evnote": "huge observational study; shows a link, not cause and effect; one Korean population, measured once",
+     "source": "BMJ Group summary of the Journal of Epidemiology & Community Health paper (18 Nov 2026)",
+     "url": "https://bmjgroup.com/large-and-very-small-waist-sizes-linked-to-heightened-death-risk-across-weight-range/"
+    },
+    {
+     "title": "Many health tests sold straight to consumers overpromise",
+     "what": "Researchers checked 50 UK websites selling health tests to healthy people. 36 claimed earlier diagnosis and better outcomes and 16 claimed a longer life, without evidence. 70% didn't explain the limits or possible harms. Offers included mammograms for average-risk women under 50 and bowel tests for under-50s, priced from about £7 to £14,000.",
+     "sowhat": "A test you buy online can mean false alarms, more tests and worry, or false reassurance. Before paying for a check-up package, ask your GP whether it's actually recommended for someone your age and risk. In Australia, free national screening programs cover bowel, breast and cervical cancer.",
+     "evidence": "Moderate",
+     "evnote": "cross-sectional review of websites, UK only; not a study of patient outcomes",
+     "source": "BMJ Group summary of the BMJ Open paper (18 Nov 2026)",
+     "url": "https://bmjgroup.com/many-claims-for-health-tests-marketed-to-uk-consumers-are-unsubstantiated/"
+    },
+    {
+     "title": "Light-and-sound headset for Alzheimer's missed its main goal",
+     "what": "HOPE: 663 people with mild to moderate Alzheimer's used an at-home device that flickers light and sound (or a sham version) for an hour a day for 12 months. It didn't beat the sham on the main measure of memory and daily function. In a pre-planned subgroup with milder disease (395 people) decline looked about 47–56% slower on some scales, but those results weren't adjusted for multiple testing. Headache, tinnitus and seizures were slightly more common with the real device.",
+     "sowhat": "You may see headlines calling this a breakthrough. It isn't proven: the main result was negative and the device isn't approved anywhere. The early-disease signal needs a new trial to confirm it. Don't buy flicker gadgets online hoping for the same effect.",
+     "evidence": "Early",
+     "evnote": "randomised sham-controlled trial missed its primary endpoint; positive findings are subgroup only; conference presentation, not yet peer-reviewed",
+     "source": "NeurologyLive report from CTAD 2026 (17 Nov 2026)",
+     "url": "https://www.neurologylive.com/view/spectris-misses-primary-end-point-pivotal-hope-trial-alzheimer-disease"
+    }
+   ]
+  },
+  {
    "week": "10–16 November 2026",
    "date": "2026-11-16",
    "studies": [
@@ -116,8 +158,16 @@
   }
  ],
  "recruiting": {
-  "checked": "2026-11-16",
+  "checked": "2026-11-23",
   "local": [
+   {
+    "name": "The BEYOND Study: COPD in non-smokers",
+    "what": "Looks at what drives COPD in people who don't smoke, compared with people without lung disease.",
+    "who": "Non-smoking adults with COPD, and non-smoking adults without COPD.",
+    "org": "HMRI",
+    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/the-beyond-study/",
+    "mode": "One visit of 1.5–2 hours at HMRI after a phone screen; possibly a second visit."
+   },
    {
     "name": "Diabetic foot ulcer trial (CYWC628)",
     "what": "Tests an experimental cell therapy added to usual wound care for slow-healing ulcers.",
@@ -215,14 +265,6 @@
     "mode": "Hunter-based. Check the listing for visit details."
    },
    {
-    "name": "Tailor and Connect: stroke rehab at home",
-    "what": "Tests home-based arm and hand rehabilitation tailored to each person, guided by wearable sensors and an app.",
-    "who": "Adults who had a stroke 3 to 18 months ago and have goals for their arm or hand.",
-    "org": "HMRI / La Trobe University",
-    "url": "https://hmri.org.au/get-involved/participate-in-research/join-a-research-study/tailor-and-connect-personalised-stroke-recovery-and-rehabilitation/",
-    "mode": "Assessments at HMRI; therapy sessions delivered remotely."
-   },
-   {
     "name": "Fruit, vegetables and COPD",
     "what": "Looks at what people with and without COPD eat, and whether fruit and veg intake is linked to symptoms.",
     "who": "Adults 40+ with diagnosed COPD on medication, or with no lung disease.",
@@ -248,6 +290,14 @@
    }
   ],
   "online": [
+   {
+    "name": "National digital asthma trial",
+    "what": "Tests free telehealth asthma education and support over 12 months.",
+    "who": "Adults 18+ with a doctor's diagnosis of asthma and a smartphone.",
+    "org": "University of Newcastle / Asthma Australia",
+    "url": "https://www.newcastle.edu.au/news/2026/07/national-digital-asthma-trial-recruiting-adults-to-breathe-easier",
+    "mode": "Online and by phone, anywhere in Australia (recruiting until June 2027)."
+   },
    {
     "name": "Diabeating Nutrition",
     "what": "Telehealth dietitian support alongside a GLP-1 medicine.",
@@ -331,7 +381,7 @@
   ]
  },
  "worldwide": {
-  "checked": "2026-11-16",
+  "checked": "2026-11-23",
   "items": [
    {
     "name": "Autism Research Centre volunteer database",
