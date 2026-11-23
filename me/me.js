@@ -35,13 +35,12 @@
     if (window.MW_markBadges) MW_markBadges(st);
     var got = st.badges.filter(function (b) { return b.got; }).length;
     var quip = st.solved === 0 ? "Clean chart. Suspiciously clean." : st.cur >= 7 ? "On a tear. Don’t stop now." : st.today ? "Clocked on today. Good." : st.cur ? "Play today to keep the streak alive." : "Streak flatlined. Resuscitate it today.";
-    var h = '<div class="me-mode" role="group" aria-label="Which stats to show">' +
-      [["medical", "🩺 Medical"], ["normie", "🙂 Normie"]].map(function (o) { return '<button type="button" data-v="' + o[0] + '" aria-pressed="' + (view === o[0]) + '">' + o[1] + "</button>"; }).join("") + "</div>";
+    var h = ""; // Normie mode frozen (24 Nov 2026): no Medical/Normie stats switch
     h += '<section class="me-top"><div><b>' + st.solved + "</b><span>Puzzles solved</span></div><div><b>🔥 " + st.cur + "</b><span>Current streak</span></div><div><b>" + st.best + "</b><span>Best streak</span></div><div><b>" + st.today + "</b><span>Played today</span></div></section>";
     h += '<p class="me-quip">' + quip + "</p>";
     if (window.MW_ward) { var wd = MW_ward(st); h += '<section class="me-card"><div class="me-h"><h2>' + (N ? "Your crew" : "Your ward") + "</h2><span>" + wd.have + " of " + wd.total + ' on shift</span></div><p class="me-wnext">' + wd.next + " Finish a game for the first time to bring its host on board.</p>" + wd.html + "</section>"; }
     h += heat(st.days);
-    h += '<section class="me-card"><div class="me-h"><h2>By game</h2><span>' + (N ? "Normie mode" : "Medical mode") + '</span></div><div class="me-games">' +
+    h += '<section class="me-card"><div class="me-h"><h2>By game</h2><span>' + (N ? "Normie" : "All games") + '</span></div><div class="me-games">' +
       st.rows.map(function (r) {
         var g = r.g, acc = dark() ? g.accentDark : g.accent;
         return '<a class="me-g' + (r.played ? "" : " none") + '" href="/' + g.path + '" style="--ga:' + acc + '"><span class="me-ic">' + g.icon + '</span><span class="me-gm"><span class="me-gn">' + esc(g.name) + (r.today ? ' <em class="me-tick" title="Done today">✓ today</em>' : "") + (r.weekly ? ' <small>Weekly</small>' : "") + "</span>" +
@@ -54,7 +53,7 @@
     h += '<section class="me-card me-save"><p><b>Saved in this browser only.</b> Clear your browser, lose your glory. Moving phones? Export here, import there.</p>' +
       '<div class="me-btns"><button type="button" class="me-btn" id="me-exp">⬇ Export my stats</button><label class="me-btn ghost" for="me-imp">⬆ Import<input type="file" id="me-imp" accept="application/json,.json" class="sr"></label></div><p class="me-msg" id="me-msg" aria-live="polite"></p></section>';
     box.innerHTML = h;
-    box.querySelector(".me-mode").onclick = function (e) { var b = e.target.closest("button"); if (!b || b.getAttribute("data-v") === view) return; view = b.getAttribute("data-v"); render(); };
+    var mm = box.querySelector(".me-mode"); if (mm) mm.onclick = function (e) { var b = e.target.closest("button"); if (!b || b.getAttribute("data-v") === view) return; view = b.getAttribute("data-v"); render(); };
     document.getElementById("me-exp").onclick = exportStats;
     document.getElementById("me-imp").onchange = importStats;
   }

@@ -7,7 +7,7 @@ SM = open(os.path.join(ROOT, "sitemap.xml"), encoding="utf-8").read()
 urls = re.findall(r"<loc>https://maladywise\.com(/[^<]*)</loc>", SM)
 
 SECTIONS = [
-    ("Daily medical puzzles and games", lambda p: p.count("/") == 2 and os.path.exists(os.path.join(ROOT, p.strip("/"), "puzzles")) or p in ("/medical-games/", "/arcade/", "/normie/") or p.rstrip("/").split("/")[-1] in ("stackulus", "mergeon", "basil-clover")),
+    ("Daily medical puzzles and games", lambda p: p.count("/") == 2 and os.path.exists(os.path.join(ROOT, p.strip("/"), "puzzles")) or p in ("/medical-games/", "/arcade/") or p.rstrip("/").split("/")[-1] in ("stackulus", "mergeon", "basil-clover")),
     ("Quizzes", lambda p: "quiz" in p and "/archive" not in p),
     ("Blood test results explained", lambda p: p.startswith("/blood-tests/")),
     ("GLP-1 medicines (semaglutide, tirzepatide)", lambda p: p.startswith("/glp-1/")),
@@ -55,7 +55,7 @@ order = ["Daily medical puzzles and games", "Quizzes", "Health fact sheets (cond
          "GLP-1 medicines (semaglutide, tirzepatide)", "Medicines", "Exercise handouts", "Calculators and tools", "Comparisons", "Deep dives for health professionals",
          "For doctors and GPs", "World health days", "Newsletter (Zebra Mail)"]
 out = ["# Malady Wise", "",
-       "> Free daily medical puzzles and games (Medical and non-medical 'Normie' modes), plus plain-English health fact sheets, blood test explainers, exercise handouts, calculators and evidence-based deep dives for clinicians. Made with AI tools and overseen by an Australian GP. General education, not personal medical advice.", "",
+       "> Free daily medical puzzles and games, plus plain-English health fact sheets, blood test explainers, exercise handouts, calculators and evidence-based deep dives for clinicians. Made with AI tools and overseen by an Australian GP. General education, not personal medical advice.", "",
        "- Audience: the public, students and health professionals worldwide; Australian details where relevant.",
        "- Spelling: Australian/British English. Units: SI.",
        "- How pages are made: https://maladywise.com/about/#how-we-make-pages",

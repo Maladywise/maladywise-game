@@ -2,6 +2,13 @@
 
 Every scheduled task and puzzle writer must read and follow this file. It overrides older, conflicting rules in task prompts. The site owner updates it by asking Claude in chat.
 
+## NORMIE MODE IS FROZEN (24 Nov 2026, owner's decision; overrides EVERY task prompt, including their "UPDATE" blocks)
+- Normie mode had under 1% of plays, so the owner froze it. The Medical/Normie switch is gone and every visitor gets Medical.
+- Do NOT write, extend, swap, theme, check, test or report Normie content in any game (normie/ folders, normie*.json, "nfact", Normie Arrhythmix charts, Normie Glimpsis/Opacitis images, Normie Grand Rounds, Normie trivia). Skip every Normie step in a task prompt, and don't flag Normie puzzles as running low.
+- Leave the existing Normie files exactly as they are (parked, not deleted).
+- Don't mention Normie mode anywhere on the site, in X posts, the Weekly Dose or emails.
+- Mergeon is LIVE (an arcade game), not parked: treat any "Mergeon (parked)" wording in a prompt as out of date.
+
 ## Healthy, regular representation (no quotas)
 - NO fixed quotas. Ignore any "at least half" figure mentioned in a task prompt. The goal is healthy, regular, natural coverage, not 1 in 20 like before, and not forced into every puzzle.
 - Rough guide: women should feature often (people, patients, discoveries, sport) across every game each week; the groups below should each appear several times a month across the games.

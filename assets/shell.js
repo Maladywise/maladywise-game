@@ -40,7 +40,11 @@
     return (window.MW_GAMES || []).some(function (g) { return String(g.path || "").replace(/\/$/, "") === seg; });
   })();
   var MODE_URL = null;
+  // Normie mode frozen (24 Nov 2026): under 1% of plays. Everyone gets Medical; a saved Normie choice is cleared.
+  // Normie puzzles stay in the repo, parked. To bring it back, restore the old MODE logic from git history.
+  var NORMIE_FROZEN = true;
   var MODE = (function () {
+    if (NORMIE_FROZEN) { try { if (get("mw-mode", "medical") !== "medical") set("mw-mode", "medical"); } catch (e) {} return "medical"; }
     var m = null; try { m = new URLSearchParams(location.search).get("mode"); } catch (e) {}
     if (m === "normie" || m === "medical") { set("mw-mode", m); MODE_URL = m; }
     if (MODE_URL) return MODE_URL;
@@ -70,7 +74,7 @@
     if (!NORMIE_PAGE && m === "normie") u.searchParams.set("mode", "normie"); // health pages are Medical unless the link asks for Normie
     setTimeout(function () { location.replace(u.pathname + (u.search || "") + u.hash); }, 60);
   }
-  window.MW_setMode = setMode;
+  window.MW_setMode = function (m) { if (NORMIE_FROZEN && m === "normie") return; setMode(m); };
   // arcade games (no daily puzzles): [path, name, mascot, tag line, accent, dark accent]. Home cards + "More games" box.
   var ARCADE = [["basil-clover", "Basil + Clover", "basil", "Basil kicks. Clover eats. Nothing is safe.", "#2B5E80", "#8EB8E8"], ["stackulus", "Stackulus", "stackulus", "Falling organs. Clear the rows.", "#7A4A92", "#C9A3DD"], ["mergeon", "Mergeon", "mergeon", "Merge microbes all the way up to a brain.", "#5E7A2E", "#A8C77A"]];
   // Mascot image: in Normie mode, games with normieMascot use the "day off" outfit (falls back to the normal one if missing).
@@ -86,6 +90,7 @@
   // Norm, the Normie host mascot. Hidden if the SVG is missing.
   function normImg(cls, w) { return '<img class="' + cls + '" src="/assets/mascots/normie/norm.svg" alt="" width="' + w + '" height="' + w + '" onerror="this.remove()">'; }
   function modeSwitch() {
+    if (NORMIE_FROZEN) return "";
     return '<div class="mw-mode" role="group" aria-label="Puzzle mode">' +
       [["medical", "\ud83e\ude7a", "Medical"], ["normie", "\ud83d\ude42", "Normie"]].map(function (o) {
         var norm = false;
@@ -637,7 +642,6 @@
     ["balance", "⚖️", "Hormone Balance", "Solve a Genius or Einstein Sudokrine (9x9) without a hint."],
     ["archive", "🗄️", "Archive Diver", "Finish five past puzzles in one day."],
     ["owl", "🦉", "Night Owl", "Finish a puzzle between midnight and 4am."],
-    ["tourist", "😎", "Normie Tourist", "Finish a puzzle in Normie mode.", "global"],
     ["both", "☯️", "Both Sides", "Finish puzzles in both modes on the same day.", "global"],
     // progressive tiers: [id, icon, name, how, scope, metric, target]
     ["s3", "🔥", "Three in a Row", "Play three days in a row.", "", "streak", 3],
@@ -1509,6 +1513,7 @@
         '<h2 id="mw-pearl-h">' + p[0] + "</h2><p>" + p[1] + "</p>" + (p[3] || p[2] ? '<p class="mw-pearl-l">' + (p[3] ? '<a href="' + p[3] + '">Read the fact sheet &rarr;</a>' : "") + (p[2] ? '<a href="' + p[2] + '">Test yourself &rarr;</a>' : "") + "</p>" : "") + "</section>";
     }
     function modeCta() { // bottom-of-home switch between Medical and Normie
+      if (NORMIE_FROZEN) return "";
       return NORMIE
         ? '<a class="mw-modecta" href="/?mode=medical"><span>\ud83e\ude7a</span><b>Want the medical versions?</b> Switch back to Medical mode &rarr;</a>'
         : '<a class="mw-modecta" href="/?mode=normie"><span>\ud83d\ude42</span><b>Not a medical person?</b> Try Normie mode: the same daily games, zero medicine &rarr;</a>';
