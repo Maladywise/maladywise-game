@@ -301,6 +301,10 @@
     // One fixed game (the first), plus two that rotate daily from the pool (MW_START.pool / poolN), so visitors meet new games.
     var pool = (NORMIE ? S.poolN : S.pool) || [];
     if (pool.length >= 2) { var dn = Math.floor(Date.parse(sydToday() + "T00:00:00Z") / 864e5), n = pool.length, a = (dn * 2) % n, b = (a + 1 + (dn % (n - 1))) % n; if (b === a) b = (a + 1) % n; want = [want[0], pool[a], pool[b]]; }
+    // First visit (24 Nov 2026): on a visitor's first day, open with a quick picture game (Glimpsis), then the usual first two.
+    var fv = get(mk("mw-first"), "");
+    if (!fv) { fv = get(mk("mw-days"), []).length ? "old" : sydToday(); set(mk("mw-first"), fv); }
+    if (fv === sydToday() && !want.some(function (w) { return w[0] === "glimpsis"; })) want = [["glimpsis", 2], want[0], want[1]];
     function byId(id) { return G.filter(function (x) { return x.id === id; })[0]; }
     function ok(g) { return g && g.live && !g.weekly && inMode(g) && !out.some(function (o) { return o.g === g; }); }
     want.forEach(function (w) { var g = byId(w[0]); if (ok(g)) out.push({ g: g, min: w[1] }); });
@@ -309,6 +313,19 @@
   }
   // Play order for Next / Stuck / Keep playing: today's 3 first (in order), then MW_ORDER.
   function playRank(id) { var i = startIds().map(function (o) { return o.g.id; }).indexOf(id); if (i >= 0) return i; i = (window.MW_ORDER || []).indexOf(id); return 10 + (i < 0 ? 99 : i); }
+  // How-to lists (24 Nov 2026): show the first 3 rules; the rest sit behind "More rules" so players get to the game faster.
+  function helpList(h) {
+    var li = function (x) { return "<li>" + x + "</li>"; };
+    if (h.length <= 4) return "<ol>" + h.map(li).join("") + "</ol>";
+    return "<ol>" + h.slice(0, 3).map(li).join("") + '</ol><details class="mw-morerules"><summary>More rules (' + (h.length - 3) + ")</summary><ol start=\"4\">" + h.slice(3).map(li).join("") + "</ol></details>";
+  }
+  // Daily games still to play today in this mode, in play order (used by Glimpsathon's end screen, etc.).
+  function nextUnplayed(exId) {
+    var t = sydToday();
+    return (window.MW_GAMES || []).filter(function (x) { if (!x.live || x.weekly || x.id === exId || !inMode(x) || (x.from && x.from > t)) return false; var r = readStats(x); return !(r && r.done); })
+      .sort(function (a, b) { return playRank(a.id) - playRank(b.id); });
+  }
+  window.MW_nextUnplayed = nextUnplayed;
   function playedDays() {
     var seen = {}; get(mk("mw-days"), []).forEach(function (d) { seen[d] = 1; });
     (window.MW_GAMES || []).forEach(function (g) {
@@ -318,6 +335,12 @@
       if (s && s.last && s.streak) for (var i = 0; i < s.streak; i++) seen[new Date((dayNum(s.last) - i) * 864e5).toISOString().slice(0, 10)] = 1;
     });
     return seen;
+  }
+  function threeRun() { // consecutive days (ending today or yesterday) with all of Today's 3 done
+    var ff = get(mk("mw-3for3"), []) || [], set3 = {}, n = 0; ff.forEach(function (d) { set3[d] = 1; });
+    var d = dayNum(sydToday()); if (!set3[sydToday()]) d--;
+    while (set3[new Date(d * 864e5).toISOString().slice(0, 10)]) { n++; d--; }
+    return n;
   }
   function siteStreak() {
     var seen = playedDays(), n = dayNum(sydToday()), k = seen[sydToday()] ? n : n - 1, c = 0;
@@ -506,6 +529,14 @@
       set(mk("mw-badge-" + sk + "-got"), 1);
       queue({ cls: "cb-badge", ms: 2400, html: '<div class="cb-medal">' + b[1] + '</div><p class="cb-cap">\ud83d\udd25 ' + sk + "-day streak. Promoted to " + b[0] + ".</p>" });
     }
+    // "3 for 3" (24 Nov 2026): all of today's 3 done. Logged in mw-3for3 (days) so the home page can show a run.
+    var t3 = startIds(), t3done = t3.length === 3 && t3.every(function (o) { var r = readStats(o.g); return r && r.done; }), ff = get(mk("mw-3for3"), []) || [];
+    if (t3done && ff.indexOf(t) < 0) {
+      ff.push(t); set(mk("mw-3for3"), ff.slice(-400)); var run = threeRun();
+      queue({ cls: "cb-wrc", ms: 2600, html: confetti(["#F59E0B", "#EA580C", "#DC2626", "#4A3480"], 40) + '<div class="cb-big">3 for 3 \ud83d\udd25</div><p class="cb-cap">' + (run > 1 ? run + " days running. Keep the fire going." : "Today\u2019s 3, done. Same again tomorrow?") + "</p>" });
+    }
+    // First finish ever: a gentle nudge to the next game
+    if (get(mk("mw-days"), []).length === 1 && !get(mk("mw-firstnudge"), 0)) { set(mk("mw-firstnudge"), 1); var nu = nextUnplayed(g.id)[0]; if (nu) queue({ cls: "cb-wrc", ms: 2200, html: '<div class="cb-big">Nice.</div><p class="cb-cap">Try another? ' + nu.name + " is next.</p>" }); }
     var daily = (window.MW_GAMES || []).filter(function (x) { return x.live && !x.weekly && x.store && inMode(x); });
     var all = daily.every(function (x) { var s2 = get(x.store.day + t, null); return s2 && s2.done; });
     if (all && get(mk("mw-wrc"), "") !== t) {
@@ -1361,7 +1392,7 @@
       if (a === "settings") settings();
       if (a === "search") siteSearch();
       if (a === "stats") statsModal(g);
-      if (a === "help") modal("How to play", mascotHelp(g) + "<ol>" + (g.help || []).map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + PLAYROW.replace("Let\u2019s play", "Back to the game"));
+      if (a === "help") modal("How to play", mascotHelp(g) + helpList(g.help || []) + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + PLAYROW.replace("Let\u2019s play", "Back to the game"));
       if (a === "archive") { if (window.MW_openArchive) window.MW_openArchive(); }
     });
     document.body.insertBefore(bar, document.body.firstChild);
@@ -1409,7 +1440,7 @@
     function todays3(list) {
       if (!list.length) return "";
       var done = list.filter(function (o) { var st = readStats(o.g); return st && st.done; }).length, mins = list.reduce(function (a, o) { return a + o.min; }, 0);
-      return '<section class="t3s" aria-labelledby="t3h"><div class="t3-head"><h2 id="t3h">Start here: today’s ' + list.length + "</h2><span>" + (done === list.length ? "All " + list.length + " done. Smug." : done ? done + " of " + list.length + " done" : "About " + mins + " minutes") + '</span></div><div class="t3-row">' +
+      return '<section class="t3s" aria-labelledby="t3h"><div class="t3-head"><h2 id="t3h">Start here: today’s ' + list.length + "</h2><span>" + (done === list.length ? "\ud83d\udd25 3 for 3" + (threeRun() > 1 ? " \u00b7 " + threeRun() + " days running" : ". Smug.") : done ? done + " of " + list.length + " done" + (threeRun() ? " \u00b7 \ud83d\udd25 " + threeRun() + "-day 3 for 3 run" : "") : "About " + mins + " minutes" + (threeRun() ? " \u00b7 \ud83d\udd25 " + threeRun() + "-day run" : "")) + '</span></div><div class="t3-row">' +
         list.map(function (o, i) {
           var g = o.g, st = readStats(g), dn = st && st.done, ein = !g.dailyLine && diffFor(g, today, dow) === "Einstein", sp = g.special && g.special.dow === dow && !(g.special.from && today < g.special.from);
           return '<a class="t3' + (dn ? " done" : "") + '" data-g="' + g.id + '" href="' + g.path + '" style="--accent:' + accentOf(g) + '">' +
@@ -1872,7 +1903,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var q = new URLSearchParams(location.search);
     function start() {
       sp.hidden = true; box.hidden = false; window.scrollTo(0, 0);
-      if (g.help && !medOnly && !get("mw-seen-" + g.id, 0)) { set("mw-seen-" + g.id, 1); setTimeout(function () { modal("How to play " + g.name, mascotHelp(g) + "<ol>" + g.help.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ol>" + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + '' + PLAYROW + '<p style="margin:8px 0 0;font-size:13px;color:var(--muted);text-align:center">Find this again under the ? icon.</p>'); }, 350); }
+      if (g.help && !medOnly && !get("mw-seen-" + g.id, 0)) { set("mw-seen-" + g.id, 1); setTimeout(function () { modal("How to play " + g.name, mascotHelp(g) + helpList(g.help) + (g.helpQuip ? '<p style="margin:0;color:var(--muted)">' + g.helpQuip + "</p>" : "") + '' + PLAYROW + '<p style="margin:8px 0 0;font-size:13px;color:var(--muted);text-align:center">Find this again under the ? icon.</p>'); }, 350); }
     }
     if (g.id !== "dx" && box && !box.querySelector(".gtitle")) {
       var gt = document.createElement("header"); gt.className = "gtitle";

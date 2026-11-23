@@ -11,7 +11,7 @@
    stored in "glm-athon-<date>" (separate from daily stats). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "6", TRIES = 3;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "7", TRIES = 3;
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), NAME = NORMIE ? "Glimpsis (Normie)" : "Glimpsis", PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/";
   var NT = { q: "What is it?", foot: "Real close-ups and microscope images of everyday things, animals and plants, from Wikimedia Commons under free licences (public domain, CC0, CC BY, CC BY-SA), credited under each image. Just for fun.", alt: "Mystery close-up for today’s puzzle", unit: "close-up" };
   var root = document.getElementById("glm");
@@ -299,6 +299,7 @@
     var box = $("sbox"); box.onclick = function () { zoom(srcOf(it.img, 2000)); }; box.onkeydown = function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); zoom(srcOf(it.img, 2000)); } };
     box.querySelector("img").onerror = function () { box.innerHTML = '<p class="err">The image didn’t load. Try refreshing.</p>'; };
     $("sback").onclick = function () { spShow(false); renderXbox(); };
+    if ($("sdaily")) $("sdaily").onclick = function () { spShow(false); renderXbox(); };
     if (done) { $("snext").onclick = function () { SP.i++; SP.sass = ""; spRender(); $("sprint").scrollIntoView({ behavior: "smooth", block: "start" }); }; var fb = $("spfb"); if (fb.scrollIntoView) fb.scrollIntoView({ behavior: "smooth", block: "nearest" }); }
     else $("sopts").onclick = function (e) {
       var b = e.target.closest(".opt"); if (!b || SP.picks[i] != null) return;
@@ -327,7 +328,15 @@
       (a ? '<pre id="glm-sshare">' + esc(share) + '</pre>' : "") +
       '<div class="btns">' + (a ? '<button class="btn" type="button" id="glm-scopy">Copy result</button>' : '<button class="btn" type="button" id="glm-again">Another round</button>') +
       '<button class="btn ghost" type="button" id="glm-sback">Back to today’s Glimpsis</button></div>' +
-      (a ? '<p class="note">One scored go per Tuesday. Want more? <button type="button" class="lnk" id="glm-sprac">Practise on past images</button>.</p>' : '<p class="note">Practice rounds don’t change your stats, streak or shares.</p>') + "</div>";
+      (a ? '<p class="note">One scored go per Tuesday. Want more? <button type="button" class="lnk" id="glm-sprac">Practise on past images</button>.</p>' : '<p class="note">Practice rounds don’t change your stats, streak or shares.</p>') +
+      // Keep playing (24 Nov 2026): Glimpsathon's end screen was a dead end. Today's daily first, then the next unplayed game.
+      (function () {
+        var dailyDone = !!(load(PFX + "glm-day-" + REAL, null) || {}).done, nx = window.MW_nextUnplayed ? MW_nextUnplayed("glimpsis") : [], h = "";
+        if (!dailyDone) h += '<button class="btn solid" type="button" id="glm-sdaily">Now today’s Glimpsis ›</button>';
+        if (nx[0]) h += '<a class="btn' + (dailyDone ? " solid" : "") + '" href="/' + nx[0].path + '?play">Next: ' + esc(nx[0].name) + " ›</a>";
+        h += '<a class="btn ghost" href="/">All puzzles</a>';
+        return '<div class="btns glm-keep" style="margin-top:12px">' + h + "</div>";
+      })() + "</div>";
     clearInterval(spTimer);
     $("sback").onclick = function () { spShow(false); renderXbox(); };
     if ($("again")) $("again").onclick = function () { startPractice(); };

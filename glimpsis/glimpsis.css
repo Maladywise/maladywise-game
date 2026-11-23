@@ -156,3 +156,4 @@ html[data-motion="reduce"] #glm *{animation:none!important;scroll-behavior:auto!
 #glm .splist .credit{padding:0;margin-top:3px;font-size:10.5px}
 #glm .sprint,#glm #glm-main{scroll-margin-top:72px}
 #glm .result .grid{margin:-6px 0 0;font-size:18px;letter-spacing:2px}
+#glm .glm-keep a.btn{text-decoration:none;display:inline-flex;align-items:center}
