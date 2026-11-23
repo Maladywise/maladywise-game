@@ -258,7 +258,10 @@
     if (y && y.d && y.t >= HOT_MIN && dayNum(y.d) === dayNum(td) - 1) return { c: y.c || {}, live: 0 };
     return null;
   }
-  window.MW_liveShow = liveShow; window.MW_liveDone = liveDone; // MW_liveDone: lets extra games (Nomulous) count a finish
+  window.MW_liveShow = liveShow; window.MW_liveDone = liveDone;
+  // Timed and extra games (Triagic, Fridaemia, Lunicorn, Toxiquest, Dx Gauntlet): count one finish a day per device,
+  // and remember it so the home page can grey the tile out (mw-tdone = {gameId: Sydney day}).
+  window.MW_timedDone = function (id) { var t = get("mw-tdone", {}) || {}, d = sydToday(); if (t[id] === d) return; t[id] = d; set("mw-tdone", t); liveDone(id); }; // MW_liveDone: lets extra games (Nomulous) count a finish
   setTimeout(function () { livePing(); liveStats(); }, 1200);
   setInterval(livePing, 30000); setInterval(liveStats, 60000);
   document.addEventListener("visibilitychange", function () { if (!document.hidden) { livePing(); liveStats(); } });
@@ -1503,9 +1506,11 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       // Popular today (24 Nov 2026): sort by today's finishes in this mode (live counts, cached on this device so the
       // page doesn't jump). Early in the day (under HOT_MIN finishes) use yesterday's ranking; with no data at all,
       // the old order with Zebritis first. Games this player has done still sink to the end. Top game: "Hot today".
-      // Extra daily games (Nomulous) are in the same mix; open timed games (Triagic etc.) stay up front.
+      // Extra daily games (Nomulous) and open timed games (Triagic etc.) are in the same mix; with no data, timed games lead.
       list.sort(function (x, y) { return (y.id === "zebritis") - (x.id === "zebritis"); });
-      var items = list.map(function (g) { return { id: g.id, done: !!(readStats(g) || {}).done, live: !!g.live, g: g }; });
+      var tdone = get("mw-tdone", {}) || {};
+      var items = timedList(true).map(function (h) { return { id: h[0], done: tdone[h[0]] === sydToday(), live: true, h: h }; })
+        .concat(list.map(function (g) { return { id: g.id, done: !!(readStats(g) || {}).done, live: !!g.live, g: g }; }));
       extraList(hid, false).forEach(function (x) { items.push({ id: x[0], done: !!get("mw-" + x[0] + "-" + sydToday(), null), live: true, x: x }); });
       items.forEach(function (it, i) { it.i = i; });
       var hot = hotRank(), hotId = "", cnt = function (it) { return hot ? hot.c[it.id] || 0 : 0; };
@@ -1514,12 +1519,12 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         var by = items.filter(function (it) { return it.live && !it.done; }).map(function (it) { return [it.id, cnt(it)]; }).sort(function (a, b) { return b[1] - a[1]; });
         if (by.length && by[0][1] >= HOT_LEAD && (by.length < 2 || by[0][1] > by[1][1])) hotId = by[0][0];
       }
-      if (!items.length && !hiddenTiles(true)) return "";
+      if (!items.length) return "";
       var HOT = '<span class="tl-hot" title="Most finished game today that you haven\u2019t played yet">\ud83d\udd25 Hot today</span>';
       return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
         (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move below Arcade.</p>' : "") +
-        '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + hiddenTiles(true) + items.map(function (it) {
-          var h = it.g ? tile(it.g, it.id === hotId ? HOT : "").replace(' data-g="', ' data-h="1" data-g="') : extraTile(it.x, false, it.done, it.id === hotId ? HOT : "");
+        '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + items.map(function (it) {
+          var c = it.id === hotId ? HOT : "", h = it.g ? tile(it.g, c).replace(' data-g="', ' data-h="1" data-g="') : it.h ? timedTile(it.h, true, it.done, c) : extraTile(it.x, false, it.done, c);
           return it.id === hotId ? h.replace('class="tl', 'class="tl tl-hotc') : h;
         }).join("") + "</div></section>";
     }
@@ -1564,19 +1569,18 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       return { triagic: get("mw-open-quiet", "") === TDAY || n.getHours() >= 16, fridaemia: n.getDay() === 5, lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11, "dxtective-gauntlet": n.getDay() === 0 };
     }
     // Open timed games go first in the grid; closed (stamped Hidden) ones go last.
-    function hiddenTiles(openOnes) {
-      if (NORMIE) return "";
-      var o = hiddenOpen(), dk = root.getAttribute("data-theme") === "dark";
-      var H = [["triagic", "Triagic", '<img src="/assets/mascots/triagic.svg" alt="" width="44" height="44" data-nolink>', "4pm to midnight", "#B3261E", "#FF8A80", "Fast ED triage"],
+    var TIMED = [["triagic", "Triagic", '<img src="/assets/mascots/triagic.svg" alt="" width="44" height="44" data-nolink>', "4pm to midnight", "#B3261E", "#FF8A80", "Fast ED triage"],
         ["fridaemia", "Fridaemia", '<img src="/assets/mascots/layla.svg" alt="" width="44" height="44" data-nolink>', "Fridays only", "#8A5A00", "#F2C46B", "Friday 5pm results"],
         ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44" data-nolink>', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
         ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"],
         ["dxtective-gauntlet", "Dx Gauntlet", '<img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44" data-nolink>', "Sundays only", "#4A3480", "#B9A6E8", "Ten cases, no slips"]];
-      return H.filter(function (h) { return !!o[h[0]] === openOnes; }).map(function (h) {
-        var on = o[h[0]], inner = '<span class="tl-ic">' + h[2] + "</span><b>" + h[1] + (h[0] === "dxtective-gauntlet" ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + (on ? h[6] : h[3]) + "</small>" + (on ? "" : '<span class="tl-stamp">Hidden</span>');
-        return on ? '<a class="tl" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
-      }).join("");
+    function timedList(openOnes) { if (NORMIE) return []; var o = hiddenOpen(); return TIMED.filter(function (h) { return !!o[h[0]] === openOnes; }); }
+    function timedTile(h, on, done, chip) {
+      var dk = root.getAttribute("data-theme") === "dark", inner = '<span class="tl-ic">' + h[2] + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</span><b>" + h[1] + (h[0] === "dxtective-gauntlet" ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + (on ? h[6] : h[3]) + "</small>" + (chip || "") + (on ? "" : '<span class="tl-stamp">Hidden</span>');
+      return on ? '<a class="tl' + (done ? " done" : "") + '" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
     }
+    // Open timed games are ranked with the other daily puzzles (tiles); closed (stamped Hidden) ones go in Hidden games.
+    function hiddenTiles(openOnes) { return timedList(openOnes).map(function (h) { return timedTile(h, openOnes, false, ""); }).join(""); }
     // Read this week (Medical only): newest deep dive, research week, Weekly Dose (data/home-reads.json) + next health day.
     function readsSlot() { return NORMIE ? "" : '<section class="rds" id="mw-reads" hidden><div class="t3-head"><h2>Read this week</h2><span>Short and evidence based</span></div><div class="rd-grid"></div></section>'; }
     function fillReads() {

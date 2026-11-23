@@ -221,7 +221,7 @@
   }
   var VERDICT = ["You’ve clocked off. So has your registration.", "The coroner would like a word.", "Rough weekend ahead. Check your phone.", "Half the inbox is on fire.", "Safe-ish. Sleep with the phone on.", "Solid. A quiet weekend, probably.", "Very safe. Your practice manager approves.", "Nearly perfect. One small wobble.", "Flawless. Zero calls from ED all weekend."];
   function end() {
-    G.set(KEY, { score: score, marks: marks.join("") });
+    G.set(KEY, { score: score, marks: marks.join("") }); if (window.MW_timedDone) window.MW_timedDone("fridaemia");
     $("fr-game").hidden = true; $("fr-end").hidden = false;
     $("fr-final").textContent = score + "/" + SET.length;
     $("fr-verdict").textContent = VERDICT[Math.round(score / SET.length * 8)];

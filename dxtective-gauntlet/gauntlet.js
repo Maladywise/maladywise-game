@@ -70,6 +70,7 @@
     });
   }
   function end(all) {
+    if (window.MW_timedDone) window.MW_timedDone("dxtective-gauntlet");
     clearInterval(AUTO);
     var win = score > TARGET, best = G.get(KEY, null);
     if (!best || score > best.score) G.set(KEY, { score: score, marks: marks.join(""), win: win });

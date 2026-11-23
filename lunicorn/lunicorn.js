@@ -64,7 +64,7 @@
     });
   }
   function end() {
-    G.set(KEY, score); G.flag("lunicorn"); if (M.kind !== "rainbow") G.flag("lunicorn-" + M.kind);
+    G.set(KEY, score); G.flag("lunicorn"); if (window.MW_timedDone) window.MW_timedDone("lunicorn"); if (M.kind !== "rainbow") G.flag("lunicorn-" + M.kind);
     $("lu-game").hidden = true; $("lu-end").hidden = false;
     $("lu-final").textContent = score + "/" + SET.length;
     $("lu-verdict").textContent = score === SET.length ? "A full rainbow. Ziggy is sparkling." : score >= 7 ? "Ziggy is impressed. Mostly." : score >= 4 ? "Some colours, some grey. Classic full moon." : "Ziggy has gone back into the clouds.";

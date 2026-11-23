@@ -132,7 +132,7 @@
   }
   var TITLES = [[0, "Did you even clock on?"], [600, "Intern energy"], [1500, "Steady hands"], [3000, "Resus regular"], [4500, "Trauma team leader"], [6500, "ED legend. Somebody get this one a coffee."]];
   function end(survived) {
-    S.over = true; hideBanner(); $("tr-game").style.filter = ""; $("tr-game").hidden = true; $("tr-end").hidden = false; $("tr-curve").hidden = true;
+    S.over = true; if (window.MW_timedDone) window.MW_timedDone("triagic"); hideBanner(); $("tr-game").style.filter = ""; $("tr-game").hidden = true; $("tr-end").hidden = false; $("tr-curve").hidden = true;
     var best = G.get("mw-triagic-best", 0); if (S.score > best) G.set("mw-triagic-best", S.score);
     var title = TITLES.filter(function (x) { return S.score >= x[0]; }).pop()[1];
     $("tr-etitle").textContent = survived ? "Shift survived." : "The department fell apart.";
