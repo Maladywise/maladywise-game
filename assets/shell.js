@@ -2510,7 +2510,6 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       bones: function () { pageFx("mw-xray", 3200); pill("🩻 X-ray vision on. No fractures seen on this page.", 3400); },
       heart: function () { ward3(); rain("❤️", 24, { up: true, ms: 3000, stay: 5000 }); pill("❤️ Sinus rhythm. Lovely.", 3000); },
       // everyday words that turn up naturally in Wordemic and the crosswords
-      chart: function () { scrawl(); pill("📋 Chart reviewed. Nobody can read the handwriting.", 3400); },
       round: function () { ["dx", "comorbix", "triviosis", "labelosis", "sensitosis"].forEach(function (id, i) { walker(M(id), { size: 70, hop: 6, ms: 7000, delay: i * 500 }); }); pill("📋 Ward round! Everyone follow the consultant. Nobody knows where we’re going.", 4200); },
       audit: function () { cloverStamp(); rain("✅", 20, { stay: 5500 }); pill("✅ Audit complete. Clover found 3 missing signatures.", 3600); },
       burps: function () { if (!RM) (document.querySelector("main") || document.body).animate([{ transform: "none" }, { transform: "scaleY(1.06) scaleX(.97)" }, { transform: "scaleY(.96) scaleX(1.03)" }, { transform: "none" }], { duration: 700 }); pill("🫧 Pardon you.", 2600); },
