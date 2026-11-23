@@ -3351,7 +3351,7 @@
   "date": "2026-11-24",
   "number": 32,
   "difficulty": "Easy",
-  "theme": "Weird weather",
+  "theme": "Weird weather (and the weekend's news)",
   "questions": [
    {
     "q": "In the Atlantic, a tropical cyclone is called a?",
@@ -3394,14 +3394,14 @@
     "e": "A wall of dust that can be over a kilometre tall. Common in Sudan and Arizona."
    },
    {
-    "q": "Fog is basically?",
-    "a": "A cloud at ground level",
+    "q": "Strictly Come Dancing's famous Blackpool week is danced in a ballroom inside what?",
+    "a": "Blackpool Tower",
     "w": [
-     "Smoke from the sea",
-     "Steam from the ground",
-     "Frozen rain"
+     "A pier theatre",
+     "A converted church",
+     "An old railway station"
     ],
-    "e": "So walking through fog is walking through a cloud. Fancy."
+    "e": "The Tower Ballroom sits at the foot of Blackpool Tower, which was inspired by the Eiffel Tower. Sequins, seaside, possibly sideways rain."
    },
    {
     "q": "Counting from lightning flash to thunder, about how many seconds equal one kilometre?",
@@ -3414,14 +3414,14 @@
     "e": "Five seconds is roughly a mile. Different units, same rumble."
    },
    {
-    "q": "When it \u2018rains fish\u2019, the likely cause is?",
-    "a": "Storm updraughts sucking them up",
+    "q": "US Thanksgiving falls on which Thursday of November?",
+    "a": "The fourth",
     "w": [
-     "Birds dropping them",
-     "Fish jumping in storms",
-     "Fishermen\u2019s pranks"
+     "The first",
+     "The second",
+     "The third"
     ],
-    "e": "It\u2019s been reported in outback Australia too. Bring an umbrella and a pan."
+    "e": "Fixed by US law in 1941, so this year it lands on 26 November. Weather forecast: heavy gravy."
    },
    {
     "q": "The hottest air temperature officially recorded on Earth, 56.7\u00b0C, was in?",

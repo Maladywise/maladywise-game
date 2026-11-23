@@ -1135,14 +1135,14 @@
     ]
    },
    {
-    "label": "Drug levels get checked",
+    "label": "Peptide hormones",
     "level": 4,
     "words": [
-     "LITHIUM",
-     "PHENYTOIN",
-     "VANCOMYCIN",
-     "GENTAMICIN",
-     "VALPROATE"
+     "INSULIN",
+     "GLUCAGON",
+     "OXYTOCIN",
+     "VASOPRESSIN",
+     "LEPTIN"
     ]
    },
    {
