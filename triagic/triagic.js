@@ -45,7 +45,6 @@
         if (ok) { var bonus = Math.max(0, Math.round((1 - p.w / LIMIT[TC(c)]) * 100)); S.score += PTS[TC(c)] * (p.bad ? 0.5 : 1) + bonus; S.saved++; S.chaos = Math.max(0, S.chaos - 6); }
         else { b.classList.add("no"); S.wrong++; S.chaos += 10; if (TC(c) === 1) codeBlue(); else if (Math.random() < 0.4) codeBlack(); }
         (S.log = S.log || []).push({ c: c, pick: b.textContent, ok: ok });
-        S.reading = true;
         $("tr-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Nailed it." : "Not quite: " + G.esc(c[4]) + ".") + "</b> " + G.esc(c[6]) + '</p><p style="text-align:right;margin-top:10px"><button class="big" type="button" id="tr-back">Next patient</button></p>';
         $("tr-back").onclick = closeCase; $("tr-back").focus();
         draw();
