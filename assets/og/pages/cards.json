@@ -447,6 +447,20 @@
 "label": "Fact sheet",
 "title": "Bunions"
 },
+"burns-and-scalds": {
+"url": "/burns-and-scalds/",
+"key": "57acb9a729fc",
+"v": "ecd4d6fa",
+"label": "Condition",
+"title": "Burns and scalds"
+},
+"button-batteries": {
+"url": "/button-batteries/",
+"key": "42dd2d2ad7e0",
+"v": "ee259117",
+"label": "Condition",
+"title": "Button batteries"
+},
 "cadmium": {
 "url": "/cadmium/",
 "key": "a1f0c6acc8f5",
@@ -495,6 +509,13 @@
 "v": "ee20a1e4",
 "label": "Condition",
 "title": "High Cholesterol"
+},
+"christmas-food-safety": {
+"url": "/christmas-food-safety/",
+"key": "b024ff7c8e0e",
+"v": "8084e4af",
+"label": "Condition",
+"title": "Christmas food safety"
 },
 "chromium": {
 "url": "/chromium/",
@@ -852,6 +873,13 @@
 "v": "045f4cef",
 "label": "For doctors",
 "title": "For doctors"
+},
+"drowning": {
+"url": "/drowning/",
+"key": "d00ff019c47f",
+"v": "a0b463fa",
+"label": "Condition",
+"title": "Drowning"
 },
 "drsabcd": {
 "url": "/drsabcd/",
@@ -1314,6 +1342,13 @@
 "v": "2110086e",
 "label": "Condition",
 "title": "Heart Failure"
+},
+"heatstroke": {
+"url": "/heatstroke/",
+"key": "94b7120607b9",
+"v": "e569791f",
+"label": "Condition",
+"title": "Heatstroke and heat exhaustion"
 },
 "heavy-metal-testing": {
 "url": "/heavy-metal-testing/",
@@ -3373,6 +3408,13 @@
 "label": "Exercise handout",
 "title": "Printable AUDIT"
 },
+"printables-autism-criteria": {
+"url": "/printables/autism-criteria/",
+"key": "822b1f1ea8d8",
+"v": "8095f347",
+"label": "Exercise handout",
+"title": "Printable Autism criteria checklist"
+},
 "printables-beighton-score": {
 "url": "/printables/beighton-score/",
 "key": "5b6bd4171e2b",
@@ -3415,6 +3457,13 @@
 "label": "Exercise handout",
 "title": "Printable GAD-7"
 },
+"printables-gca-criteria": {
+"url": "/printables/gca-criteria/",
+"key": "cc97b1a03e62",
+"v": "a5de4ec0",
+"label": "Exercise handout",
+"title": "Printable Giant cell arteritis criteria"
+},
 "printables-heds-criteria": {
 "url": "/printables/heds-criteria/",
 "key": "64c29fe918d8",
@@ -3422,12 +3471,40 @@
 "label": "Exercise handout",
 "title": "Printable hEDS criteria"
 },
+"printables-ibs-criteria": {
+"url": "/printables/ibs-criteria/",
+"key": "1d96dd038081",
+"v": "7df03604",
+"label": "Exercise handout",
+"title": "Printable IBS criteria (Rome IV)"
+},
 "printables-k10": {
 "url": "/printables/k10/",
 "key": "3ddfeab55db4",
 "v": "9840a0a3",
 "label": "Exercise handout",
 "title": "Printable K10"
+},
+"printables-mcas-criteria": {
+"url": "/printables/mcas-criteria/",
+"key": "853ae2eeb470",
+"v": "165a2879",
+"label": "Exercise handout",
+"title": "Printable MCAS criteria"
+},
+"printables-mecfs-criteria": {
+"url": "/printables/mecfs-criteria/",
+"key": "aba7786f6aa4",
+"v": "c71a8103",
+"label": "Exercise handout",
+"title": "Printable ME/CFS criteria"
+},
+"printables-pcos-criteria": {
+"url": "/printables/pcos-criteria/",
+"key": "090fbf3c59be",
+"v": "a282488f",
+"label": "Exercise handout",
+"title": "Printable PCOS criteria"
 },
 "printables-phq-9": {
 "url": "/printables/phq-9/",
@@ -3695,12 +3772,26 @@
 "label": "Exercise handout",
 "title": "Babinski sign"
 },
+"signs-barlow-test": {
+"url": "/signs/barlow-test/",
+"key": "51736fbba5d5",
+"v": "19b3c61b",
+"label": "Exercise handout",
+"title": "Barlow test"
+},
 "signs-battles-sign": {
 "url": "/signs/battles-sign/",
 "key": "997176f90d3e",
 "v": "bb7acb89",
 "label": "Exercise handout",
 "title": "Battle’s sign"
+},
+"signs-beaus-lines": {
+"url": "/signs/beaus-lines/",
+"key": "a5b05a7e1072",
+"v": "9b397638",
+"label": "Exercise handout",
+"title": "Beau’s lines"
 },
 "signs-blumbergs-sign": {
 "url": "/signs/blumbergs-sign/",
@@ -3715,6 +3806,13 @@
 "v": "d265c261",
 "label": "Exercise handout",
 "title": "Brudziński’s sign"
+},
+"signs-carnetts-sign": {
+"url": "/signs/carnetts-sign/",
+"key": "000a5abc7432",
+"v": "e519fdb5",
+"label": "Exercise handout",
+"title": "Carnett’s sign"
 },
 "signs-chvosteks-sign": {
 "url": "/signs/chvosteks-sign/",
@@ -3765,6 +3863,20 @@
 "label": "Exercise handout",
 "title": "Grey Turner’s sign"
 },
+"signs-hawkins-kennedy-test": {
+"url": "/signs/hawkins-kennedy-test/",
+"key": "27ef2f8c8e6c",
+"v": "fb423c53",
+"label": "Exercise handout",
+"title": "Hawkins–Kennedy test"
+},
+"signs-heberdens-nodes": {
+"url": "/signs/heberdens-nodes/",
+"key": "13ad00f17dfa",
+"v": "f1217803",
+"label": "Exercise handout",
+"title": "Heberden’s nodes"
+},
 "signs-hoffmanns-sign": {
 "url": "/signs/hoffmanns-sign/",
 "key": "255d5f7f737f",
@@ -3778,6 +3890,20 @@
 "v": "e7c75c19",
 "label": "Exercise handout",
 "title": "Homans’ sign"
+},
+"signs-hoovers-sign": {
+"url": "/signs/hoovers-sign/",
+"key": "a6a7e1779840",
+"v": "367e27be",
+"label": "Exercise handout",
+"title": "Hoover’s sign"
+},
+"signs-janeway-lesions": {
+"url": "/signs/janeway-lesions/",
+"key": "0c8a77664f4a",
+"v": "b6cb857f",
+"label": "Exercise handout",
+"title": "Janeway lesions"
 },
 "signs-jobes-test": {
 "url": "/signs/jobes-test/",
@@ -3835,6 +3961,13 @@
 "label": "Exercise handout",
 "title": "McMurray test"
 },
+"signs-mulders-click": {
+"url": "/signs/mulders-click/",
+"key": "a992385092c8",
+"v": "db6d83a8",
+"label": "Exercise handout",
+"title": "Mulder’s click"
+},
 "signs-murphys-sign": {
 "url": "/signs/murphys-sign/",
 "key": "3aa153fe8e79",
@@ -3855,6 +3988,27 @@
 "v": "b83aaec2",
 "label": "Exercise handout",
 "title": "Nikolsky sign"
+},
+"signs-obers-test": {
+"url": "/signs/obers-test/",
+"key": "9fd6604098af",
+"v": "2f8bc783",
+"label": "Exercise handout",
+"title": "Ober’s test"
+},
+"signs-ortolani-test": {
+"url": "/signs/ortolani-test/",
+"key": "8af444709441",
+"v": "6791ca9e",
+"label": "Exercise handout",
+"title": "Ortolani test"
+},
+"signs-patricks-test": {
+"url": "/signs/patricks-test/",
+"key": "6f93f302af71",
+"v": "9bdacd6b",
+"label": "Exercise handout",
+"title": "Patrick’s (FABER) test"
 },
 "signs-pembertons-sign": {
 "url": "/signs/pembertons-sign/",
@@ -3891,12 +4045,33 @@
 "label": "Exercise handout",
 "title": "Rovsing’s sign"
 },
+"signs-schamroths-window-test": {
+"url": "/signs/schamroths-window-test/",
+"key": "b51a6d87906f",
+"v": "f0c5b56c",
+"label": "Exercise handout",
+"title": "Schamroth’s window test"
+},
+"signs-schobers-test": {
+"url": "/signs/schobers-test/",
+"key": "6ba5c2f5b84f",
+"v": "ff99a601",
+"label": "Exercise handout",
+"title": "Schober’s test"
+},
 "signs-sister-mary-joseph-nodule": {
 "url": "/signs/sister-mary-joseph-nodule/",
 "key": "ff2c179f1cec",
 "v": "8d144375",
 "label": "Exercise handout",
 "title": "Sister Mary Joseph nodule"
+},
+"signs-speeds-test": {
+"url": "/signs/speeds-test/",
+"key": "df7e8611302f",
+"v": "c5d5599f",
+"label": "Exercise handout",
+"title": "Speed’s test"
 },
 "signs-spurlings-test": {
 "url": "/signs/spurlings-test/",
@@ -3911,6 +4086,13 @@
 "v": "49739e3a",
 "label": "Exercise handout",
 "title": "Steinberg sign"
+},
+"signs-thomas-test": {
+"url": "/signs/thomas-test/",
+"key": "62396d847ba6",
+"v": "f38c27ba",
+"label": "Exercise handout",
+"title": "Thomas test"
 },
 "signs-thompson-test": {
 "url": "/signs/thompson-test/",
@@ -3953,6 +4135,13 @@
 "v": "a551d056",
 "label": "Exercise handout",
 "title": "Walker–Murdoch sign"
+},
+"signs-weber-test": {
+"url": "/signs/weber-test/",
+"key": "914ad88a5646",
+"v": "9c6ad805",
+"label": "Exercise handout",
+"title": "Weber test"
 },
 "sinusitis": {
 "url": "/sinusitis/",
@@ -4513,6 +4702,13 @@
 "v": "f8098165",
 "label": "Condition",
 "title": "Styes"
+},
+"sunburn": {
+"url": "/sunburn/",
+"key": "074cb508250e",
+"v": "0abb61d9",
+"label": "Condition",
+"title": "Sunburn"
 },
 "sunspots": {
 "url": "/sunspots/",

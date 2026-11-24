@@ -5,7 +5,7 @@ Run: python3 _scripts/signs_pages.py"""
 import os, re, json, html, subprocess
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
 E = html.escape
-TODAY = "22 November 2026"
+TODAY = "24 November 2026"
 
 def jsdata(path, var):
     out = subprocess.run(["node", "-e", "global.window={};require(%r);console.log(JSON.stringify(window.%s))" % (ROOT + path, var)], capture_output=True, text=True).stdout
@@ -109,8 +109,32 @@ D = {
  "Rinne test": neck_profile('<path d="M110 104 L70 104 M70 104 L50 70 M70 104 L50 138" stroke="#7C6A4E" stroke-width="5" stroke-linecap="round"/>' + dot(118, 110, 6) + label(95, 180, "1. Behind the ear (bone)", size=11) + label(95, 196, "2. Beside the ear (air)", size=11) + label(250, 214, "Air louder = normal", size=11)),
 }
 
+LEG = "#D9B49A"
+def stick(x, y, extra=""):  # standing person seen from the front, head at (x, y)
+    return ('<circle cx="%d" cy="%d" r="18" fill="%s" stroke="%s" stroke-width="2.5"/>' % (x, y, SKIN, INK) +
+            '<path d="M%d %d H%d L%d %d H%d Z" fill="#C9B8F0" stroke="%s" stroke-width="2.5"/>' % (x - 20, y + 22, x + 20, x + 26, y + 120, x - 26, INK) +
+            '<path d="M%d %d V%d M%d %d V%d" stroke="%s" stroke-width="12" stroke-linecap="round"/>' % (x - 12, y + 124, y + 176, x + 12, y + 124, y + 176, LEG)) + extra
+D.update({
+ "Carnett’s sign": torso(arrow(250, 60, 186, 110) + label(262, 50, "Press the sore spot", size=11) + dot(180, 116) + label(160, 214, "Lift head to tense tummy: still sore = wall pain", size=11)),
+ "Hawkins–Kennedy test": stick(90, 40, '<path d="M110 72 L190 76" stroke="%s" stroke-width="12" stroke-linecap="round"/><path d="M190 76 L192 20" stroke="%s" stroke-width="11" stroke-linecap="round"/>' % (LEG, LEG) + '<path d="M214 26 Q236 70 206 100" fill="none" stroke="%s" stroke-width="4"/>' % ARR + arrow(212, 92, 200, 104) + dot(110, 70, 7) + label(250, 140, "Arm at 90°,", size=11) + label(250, 154, "turn it inwards", size=11) + label(250, 172, "Pain at the shoulder", size=11, col=MARK)),
+ "Speed’s test": stick(90, 40, '<path d="M110 72 L280 84" stroke="%s" stroke-width="12" stroke-linecap="round"/>' % LEG + arrow(260, 30, 260, 74) + label(262, 22, "Push down", size=11) + dot(114, 74, 7) + label(200, 150, "Patient lifts, palm up:", size=11) + label(200, 166, "pain at the front", size=11) + label(200, 180, "of the shoulder", size=11)),
+ "Patrick’s (FABER) test": lying('<path d="M200 140 H300" stroke="%s" stroke-width="12" stroke-linecap="round"/><path d="M196 132 L238 70 L268 134" stroke="%s" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>' % (LEG, LEG) + arrow(238, 20, 238, 60) + label(238, 14, "Press knee down", size=11) + dot(196, 132, 7) + label(110, 40, "Ankle on the other knee", size=11) + label(110, 196, "Groin pain = hip; buttock pain = SI joint", size=11)),
+ "Thomas test": lying('<path d="M196 132 L168 70 L140 110" stroke="%s" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M200 138 L300 112" stroke="%s" stroke-width="12" stroke-linecap="round"/>' % (LEG, LEG) + arrow(290, 150, 290, 122, MARK) + label(250, 190, "Other thigh lifts off", size=11, col=MARK) + label(150, 40, "Hug one knee to the chest", size=11)),
+ "Ober’s test": '<rect x="10" y="170" width="300" height="12" rx="4" fill="#D9D2E6"/><circle cx="44" cy="140" r="18" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M62 128 H180 V166 H62 Z" fill="#C9B8F0" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK, INK) + '<path d="M180 160 H300" stroke="%s" stroke-width="12" stroke-linecap="round"/><path d="M180 136 L296 110" stroke="%s" stroke-width="12" stroke-linecap="round"/>' % (LEG, LEG) + label(240, 70, "Let go: the top leg", size=11) + label(240, 84, "stays up = tight ITB", size=11) + arrow(280, 96, 280, 114, MARK),
+ "Ortolani test": '<circle cx="160" cy="80" r="44" fill="none" stroke="%s" stroke-width="3"/><path d="M130 80 a30 30 0 0 1 60 0" fill="#EBCFB8" stroke="%s" stroke-width="2.5"/>' % (INK, INK) + '<circle cx="214" cy="112" r="20" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M226 128 L290 200" stroke="%s" stroke-width="16" stroke-linecap="round"/>' % (SKIN, INK, LEG) + arrow(228, 150, 186, 100, MARK) + label(160, 20, "Socket", size=11) + label(90, 170, "Hip slides back in", size=11) + label(90, 184, "with a clunk", size=11),
+ "Barlow test": '<circle cx="160" cy="80" r="44" fill="none" stroke="%s" stroke-width="3"/><path d="M130 80 a30 30 0 0 1 60 0" fill="#EBCFB8" stroke="%s" stroke-width="2.5"/>' % (INK, INK) + '<circle cx="160" cy="84" r="20" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M168 102 L200 200" stroke="%s" stroke-width="16" stroke-linecap="round"/>' % (SKIN, INK, LEG) + arrow(186, 98, 232, 140, MARK) + label(160, 20, "Socket", size=11) + label(250, 170, "Push back:", size=11) + label(250, 184, "hip slips out", size=11),
+ "Weber test": '<circle cx="160" cy="120" r="66" fill="%s" stroke="%s" stroke-width="2.5"/><path d="M86 100 q-14 10 0 24 M234 100 q14 10 0 24" fill="#EBCFB8" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK, INK) + '<path d="M160 52 V26 M152 26 V8 M168 26 V8" stroke="#7C6A4E" stroke-width="5" stroke-linecap="round"/>' + dot(160, 54, 6) + '<path d="M60 96 q-12 16 0 32 M48 90 q-18 22 0 44" fill="none" stroke="%s" stroke-width="3"/>' % MARK + label(70, 200, "Louder on one side", size=11, col=MARK) + label(250, 200, "Fork on the forehead", size=11),
+ "Schober’s test": person_back('<path d="M160 64 V140" stroke="%s" stroke-width="2"/>' % INK + '<path d="M150 74 H170 M150 128 H170" stroke="%s" stroke-width="4"/>' % MARK + label(240, 80, "Mark 10 cm apart", size=11) + label(240, 150, "Bend forward: a gain", size=11) + label(240, 164, "under 5 cm suggests", size=11) + label(240, 178, "a stiff lower back", size=11)),
+ "Heberden’s nodes": hand(dot(129, 62, 6) + dot(148, 50, 6) + dot(168, 54, 6) + dot(187, 66, 6) + label(260, 40, "Bony lumps at the", size=11) + label(260, 54, "fingertip joints", size=11)),
+ "Beau’s lines": '<path d="M110 210 V70 Q110 20 160 20 Q210 20 210 70 V210 Z" fill="%s" stroke="%s" stroke-width="2.5"/><rect x="124" y="40" width="72" height="120" rx="30" fill="#F7D9E2" stroke="%s" stroke-width="2"/>' % (SKIN, INK, INK) + '<path d="M128 96 Q160 104 192 96 M128 124 Q160 132 192 124" fill="none" stroke="%s" stroke-width="4" stroke-linecap="round"/>' % MARK + label(262, 100, "Grooves across", size=11) + label(262, 114, "the nail", size=11) + label(262, 140, "~3 mm a month", size=11),
+ "Schamroth’s window test": '<path d="M40 30 H140 Q156 30 156 50 L150 92 Q146 104 140 104 H40 Z M40 116 H140 Q146 116 150 128 L156 170 Q156 190 140 190 H40 Z" fill="%s" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK) + '<path d="M148 104 L156 110 L148 116 L140 110 Z" fill="#FBF8F3" stroke="%s" stroke-width="2"/>' % INK + label(80, 212, "Normal: diamond gap", size=11) + '<path d="M180 30 H270 Q292 30 296 60 L294 104 H180 Z M180 116 H294 L296 160 Q292 190 270 190 H180 Z" fill="%s" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK) + label(240, 212, "Clubbing: no gap", size=11, col=MARK),
+ "Janeway lesions": hand(dot(148, 150, 6) + dot(166, 166, 5) + dot(140, 176, 5) + dot(170, 140, 5) + label(262, 150, "Painless spots", size=11) + label(262, 164, "on the palm", size=11)),
+ "Mulder’s click": foot_sole(arrow(40, 60, 98, 60) + arrow(280, 60, 222, 60) + label(160, 214, "Squeeze the forefoot", size=11) + dot(176, 50, 7) + label(270, 120, "Painful click", size=11, col=MARK) + label(270, 134, "between toes", size=11)),
+ "Hoover’s sign": lying('<path d="M200 146 H300" stroke="%s" stroke-width="12" stroke-linecap="round"/><path d="M200 132 L300 80" stroke="%s" stroke-width="12" stroke-linecap="round"/>' % (LEG, LEG) + arrow(300, 60, 300, 84) + label(250, 40, "Lift the good leg", size=11) + label(250, 54, "against my hand", size=11) + arrow(290, 160, 290, 192, MARK) + label(150, 196, "The 'weak' heel pushes down", size=11, col=MARK)),
+})
+
 ORDER = list(D.keys())
-def slug(n): return re.sub(r"[^a-z0-9]+", "-", n.lower().replace("’s", "s").replace("ń", "n")).strip("-")
+def slug(n): return re.sub(r"[^a-z0-9]+", "-", n.lower().replace("’s", "s").replace("ń", "n").replace("(faber) ", "")).strip("-")
 
 TPL = open(ROOT + "tools/ace-score/index.html", encoding="utf-8").read()
 HEAD = TPL[:TPL.index("<main")]
