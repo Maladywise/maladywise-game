@@ -196,15 +196,16 @@
   ];
   function heatHtml(d) {
     var n = d.today, num = n.toLocaleString("en-AU") + " games played today", h = d.heat, out;
+    var rec = !!(h && h.best && h.best.n >= LIVE.MIN_TODAY && n > h.best.n); // record day: drop the heat comment so both chips fit on one line
     // Level = today's count v the usual pace for this time of day, up to 10x (back to the ratio system, 22 Nov 2026)
     if (!h || h.days < 3 || h.expect < 3) out = "\ud83e\udde9 " + num; // not enough history yet
     else {
       var r = n / h.expect, k = 0;
       for (var i = 0; i < HEAT.length; i++) if (r >= HEAT[i][0]) k = i;
-      out = '<span class="mw-heat h' + HEAT[k][4] + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + HEAT[k][1] + " " + num + " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small></span>";
+      out = '<span class="mw-heat h' + HEAT[k][4] + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + HEAT[k][1] + " " + num + (rec ? "" : " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small>") + "</span>";
     }
     // New all-time daily record: Code purple shows as well, and stays for the rest of the day
-    if (h && h.best && h.best.n >= LIVE.MIN_TODAY && n > h.best.n)
+    if (rec)
       out += ' <span class="mw-heat h6" title="Best day before today: ' + h.best.n.toLocaleString("en-AU") + '">\ud83c\udfc6 <small>' + (NORMIE ? "New record!" : "New record. Code purple.") + "</small></span>";
     return out;
   }
@@ -1651,7 +1652,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function arcadeRow() {
       return '<section class="tls" id="g-arcade"><div class="t3-head"><h2>Arcade</h2><span>Bonus games. Play all day.</span></div><div class="tl-grid tl-arc">' + ARCADE.map(function (a) {
         var dk = root.getAttribute("data-theme") === "dark", ic = a[0] === "basil-clover" ? '<span class="tl-cats"><img src="/assets/mascots/basil.svg?v=2" alt="" width="30" height="40"><img src="/assets/mascots/clover.svg?v=1" alt="" width="29" height="38"></span>' : '<img src="/assets/mascots/' + a[0] + '.svg?v=1" alt="" width="46" height="46">';
-        var sub = { "basil-clover": "Cat chaos", stackulus: "Organ drop", mergeon: "Organ merge" }[a[0]] || "Arcade";
+        var sub = { "basil-clover": "Cat chaos", stackulus: "Block stacker", mergeon: "Organ merge" }[a[0]] || "Arcade";
         return '<a class="tl" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '"><span class="tl-ic">' + ic + "</span><b>" + a[1] + "</b><small>" + sub + "</small></a>";
       }).join("") + "</div></section>";
     }

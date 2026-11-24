@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/assets/shell.css?v=257">
 <script defer src="/assets/games.js?v=130"></script>
 <script defer src="/assets/site.js?v=89"></script>
-<script defer src="/assets/shell.js?v=332"></script>
+<script defer src="/assets/shell.js?v=333"></script>
 <script type="application/ld+json" id="mw-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}</script>
 <script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Malady Wise Stats: Games Played Every Day", "description": "Live, anonymous stats for Malady Wise: daily medical puzzles finished today, each day for the past year, by game, and when people play.", "url": "https://maladywise.com/site-stats/", "inLanguage": "en-AU", "audience": {"@type": "MedicalAudience", "audienceType": "Patient"}, "author": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Malady Wise", "item": "https://maladywise.com/"}, {"@type": "ListItem", "position": 2, "name": "Games played", "item": "https://maladywise.com/site-stats/"}]}, "about": {"@type": "WebPage", "name": "Malady Wise stats"}, "dateModified": "2026-11"}</script>
 </head>
@@ -60,12 +60,12 @@
   function nice(d, o) { return new Date(d + "T00:00:00Z").toLocaleDateString("en-AU", Object.assign({ timeZone: "UTC" }, o || { day: "numeric", month: "short" })); }
   function gname(id) { var nm = /-n$/.test(id); if (nm) { var b = gname(id.slice(0, -2)); return [b[0] + " (Normie)", b[1]]; } var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0]; return g ? [g.name, "/" + (g.path || id + "/")] : [id.charAt(0).toUpperCase() + id.slice(1), null]; }
   function bars(vals, labels, hl, h) {
-    var W = 600, H = h || 160, max = Math.max.apply(null, vals.concat([1])), n = vals.length, bw = W / n, s = "";
-    var step = Math.pow(10, Math.floor(Math.log10(max))), top = Math.ceil(max / step) * step;
-    for (var t = 0; t <= 2; t++) { var y = H - H * t / 2; s += '<line x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="var(--line)" stroke-width="1"/><text class="ax" x="' + W + '" y="' + (y - 3) + '" text-anchor="end">' + nf(top * t / 2) + "</text>"; }
-    vals.forEach(function (v, i) { var bh = v / top * H; s += '<rect class="ss-bar' + (i === hl ? " today" : "") + '" x="' + (i * bw + bw * 0.12) + '" y="' + (H - bh) + '" width="' + Math.max(1, bw * 0.76) + '" height="' + Math.max(v ? 1 : 0, bh) + '" rx="' + Math.min(3, bw * 0.3) + '"><title>' + labels[i] + ": " + nf(v) + "</title></rect>"; });
+    var W = 600, G = 40, H = h || 160, max = Math.max.apply(null, vals.concat([1])), n = vals.length, bw = (W - G) / n, s = ""; // G = left gutter for the axis numbers, so they never sit on a bar
+    var step = Math.pow(10, Math.floor(Math.log10(max))), top = Math.max(4, Math.ceil(max / step) * step);
+    for (var t = 0; t <= 2; t++) { var y = H - H * t / 2; s += '<line x1="' + G + '" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="var(--line)" stroke-width="1"/><text class="ax" x="' + (G - 6) + '" y="' + (y + 4) + '" text-anchor="end">' + nf(top * t / 2) + "</text>"; }
+    vals.forEach(function (v, i) { var bh = v / top * H; s += '<rect class="ss-bar' + (i === hl ? " today" : "") + '" x="' + (G + i * bw + bw * 0.12) + '" y="' + (H - bh) + '" width="' + Math.max(1, bw * 0.76) + '" height="' + Math.max(v ? 1 : 0, bh) + '" rx="' + Math.min(3, bw * 0.3) + '"><title>' + labels[i] + ": " + nf(v) + "</title></rect>"; });
     var every = Math.ceil(n / 5);
-    labels.forEach(function (l, i) { if (i % every === 0 || i === n - 1) s += '<text class="ax" x="' + (i * bw + bw / 2) + '" y="' + (H + 15) + '" text-anchor="middle">' + l + "</text>"; });
+    labels.forEach(function (l, i) { if (i % every === 0 || i === n - 1) s += '<text class="ax" x="' + (G + i * bw + bw / 2) + '" y="' + (H + 15) + '" text-anchor="middle">' + l + "</text>"; });
     return '<svg viewBox="-2 -6 ' + (W + 4) + " " + (H + 24) + '" role="img" aria-label="Bar chart">' + s + "</svg>";
   }
   function list(obj) {
