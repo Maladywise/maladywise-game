@@ -217,20 +217,6 @@
     var homeOnly = /^\/(index\.html)?$/.test(location.pathname); // live counts show on the home page only (18 Nov 2026)
     if (hotSave(d) && homeOnly && window.MW_hotRedraw) window.MW_hotRedraw(); // re-sort "More daily puzzles" if the ranking moved
     var sv = homeOnly ? (d.solved || {}) : {};
-    // "Hot today" (24 Nov 2026): the 1-2 most-finished games today that aren't in Today's 3. Home page only, needs 15+ finishes;
-    // a second game shows only if it's close behind the first (60%+).
-    (function () {
-      var box = document.getElementById("mw-hot"); if (!box) return;
-      var t3 = {}; try { startIds().forEach(function (o) { t3[o.g.id] = 1; }); } catch (e) {}
-      var G = {}; (window.MW_GAMES || []).forEach(function (g) { G[g.id] = g; });
-      var c = Object.keys(sv).filter(function (k) { return /-n$/.test(k) === NORMIE; }).map(function (k) { return { id: NORMIE ? k.slice(0, -2) : k, n: Number(sv[k]) || 0 }; })
-        .filter(function (x) { return x.n >= 15 && G[x.id] && !t3[x.id] && !G[x.id].hidden; }).sort(function (a, b) { return b.n - a.n; });
-      if (c.length > 1 && c[1].n < c[0].n * 0.6) c = c.slice(0, 1); else c = c.slice(0, 2);
-      if (!c.length) { box.hidden = true; box.innerHTML = ""; return; }
-      box.innerHTML = '<span class="rd-k">\ud83d\udd25 Hot today</span>' + c.map(function (x) { var g = G[x.id];
-        return '<a class="hot-a" href="' + g.path + '" style="--accent:' + accentOf(g) + '"><span class="hot-ic">' + g.icon + "</span><b>" + g.name + "</b><small>" + x.n.toLocaleString("en-AU") + " solved</small></a>"; }).join("");
-      box.hidden = false;
-    })();
     Array.prototype.forEach.call(document.querySelectorAll(".card[data-g],.t3[data-g]"), function (c) { var n = sv[c.getAttribute("data-g") + (NORMIE ? "-n" : "")] || 0, el = c.querySelector(".solvedn"); if (n < LIVE.MIN_SOLVED) { if (el) el.remove(); return; } if (!el) { el = document.createElement("span"); el.className = "solvedn"; var b = c.querySelector(".cfoot .play,.t3-tx small"); if (b) b.insertAdjacentElement("afterend", el); else return; } el.textContent = (n >= 1000 ? (Math.round(n / 100) / 10) + "k" : n) + " solved today"; });
     Array.prototype.forEach.call(document.querySelectorAll(".mw-live"), function (el) { if (!homeOnly) { el.hidden = true; el.innerHTML = ""; return; } el.innerHTML = bits.length ? '<a class="mw-live-a" href="/site-stats/" title="See games played over time">' + bits.join(" &middot; ") + "</a>" : ""; el.hidden = !bits.length; });
   }
@@ -1847,7 +1833,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     var snav = document.querySelector(".static-nav"); // static hub links (static_nav.py): kept in the footer across redraws
     function draw() {
       var t3 = startList();
-      main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() + '<div class="hot-strip" id="mw-hot" hidden></div>' +
+      main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
         tiles(t3.map(function (o) { return o.g.id; })) + arcadeRow() + hiddenSec() + gpsBanner() + readsSlot() + house() + homeBottom() + modeCta() + nlSlim() +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
