@@ -15,6 +15,7 @@
 const http = require("http");
 const crypto = require("crypto");
 const { createClient } = require("redis");
+const TZCC = (() => { try { return require("./tzcc.json"); } catch (e) { return {}; } })(); // IANA time zone -> country code, from tzdata zone.tab
 
 const PORT = process.env.PORT || 10000;
 const ALLOWED = /^https?:\/\/(localhost(:\d+)?|127\.0\.0\.1(:\d+)?|([a-z0-9-]+\.)?maladywise\.com)$/i;
@@ -104,7 +105,9 @@ async function history(days) {
         const pv = Number(await kv.get("pv:" + d) || 0);
         const oh = await kv.hGetAll("opens:" + d), o = {};
         for (const k in oh || {}) o[k] = Number(oh[k] || 0);
-        out.days.push({ d, n: tot, g: games, pv, o });
+        const ch = await kv.hGetAll("cc:" + d), c = {};
+        for (const k in ch || {}) c[k] = Number(ch[k] || 0);
+        out.days.push({ d, n: tot, g: games, pv, o, c });
         if (i > 0 && i <= 28) { const hr = await kv.hGetAll("playedh:" + d); if (hr && Object.keys(hr).length) { out.hourDays++; for (const k in hr) out.hours[Number(k) % 24] += Number(hr[k] || 0); } }
       }
     } catch (e) {}
@@ -130,6 +133,15 @@ async function addOpen(g) {
   if (!g || !kv || !kv.isReady) return;
   const d = sydDay();
   try { await kv.hIncrBy("opens:" + d, g, 1); await kv.expire("opens:" + d, 60 * 60 * 24 * 400); } catch (e) {}
+}
+// Countries (24 Nov 2026): each browser sends its time zone once per Sydney day; counted per country, no IPs stored.
+let memCc = {}, memCcDay = "";
+async function addCountry(tz) {
+  const cc = TZCC[tz] || (/^[A-Za-z_]+\/[A-Za-z_\-]+$/.test(tz || "") ? "ZZ" : ""); if (!cc) return;
+  const d = sydDay();
+  if (memCcDay !== d) { memCcDay = d; memCc = {}; }
+  memCc[cc] = (memCc[cc] || 0) + 1;
+  if (kv && kv.isReady) { try { await kv.hIncrBy("cc:" + d, cc, 1); await kv.expire("cc:" + d, 60 * 60 * 24 * 400); } catch (e) {} }
 }
 async function addPageView() {
   const d = sydDay();
@@ -358,7 +370,7 @@ const server = http.createServer(async (req, res) => {
   try {
     if (url.pathname === "/ping") {
       const id = clean(url.searchParams.get("id"), 24);
-      if (id && !limited(ip, 400)) { const g = clean(url.searchParams.get("g"), 24); const prev = seen.get(id), fresh = !prev; seen.set(id, { t: Date.now(), g }); await addView(g); if (fresh) await addPageView(); if (g && (!prev || prev.g !== g)) await addOpen(g); }
+      if (id && !limited(ip, 400)) { const g = clean(url.searchParams.get("g"), 24); const prev = seen.get(id), fresh = !prev; seen.set(id, { t: Date.now(), g }); await addView(g); if (fresh) await addPageView(); const tz = String(url.searchParams.get("tz") || "").slice(0, 40); if (tz) await addCountry(tz); if (g && (!prev || prev.g !== g)) await addOpen(g); }
       res.writeHead(204); return res.end();
     }
     if (url.pathname === "/done" && req.method === "POST") {

@@ -169,7 +169,9 @@
   var LIVE = { url: "https://mw-presence.onrender.com", id: Math.random().toString(36).slice(2, 12), last: null, MIN_ON: 5, MIN_TODAY: 10, MIN_SOLVED: 10 };
   function liveGame() { return (window.MW_curGame && MW_curGame.id) || (location.pathname === "/" ? "home" : location.pathname.split("/")[1] || "home"); }
   var PRIVATE_PAGE = /^\/mental-health-check\//.test(location.pathname); // no live-player ping or event tracking on mental health self-checks
-  function livePing() { if (document.hidden || PRIVATE_PAGE) return; try { fetch(LIVE.url + "/ping?id=" + LIVE.id + "&g=" + encodeURIComponent(liveGame()), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
+  // Once per day per browser, send the time zone so the stats page can show players by country (no IP, no location lookup).
+  function liveTz() { try { var d = new Date().toLocaleDateString("en-CA", { timeZone: "Australia/Sydney" }); if (localStorage.getItem("mw-ccday") === d) return ""; localStorage.setItem("mw-ccday", d); return "&tz=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone || ""); } catch (e) { return ""; } }
+  function livePing() { if (document.hidden || PRIVATE_PAGE) return; try { fetch(LIVE.url + "/ping?id=" + LIVE.id + "&g=" + encodeURIComponent(liveGame()) + liveTz(), { method: "POST", mode: "cors", keepalive: true }).catch(function () {}); } catch (e) {} }
   // Heat level for "games played today": today's count vs the usual pace for this time of day (server: d.heat).
   var HEAT = [ // [min ratio of the usual pace, emoji, Medical comment, Normie comment, colour band h0–h5] (20 levels, Nov 2026)
     [0, "\ud83e\udd97", "It\u2019s awfully quiet around here today", "Tumbleweeds", 0],

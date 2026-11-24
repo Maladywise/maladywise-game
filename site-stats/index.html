@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/assets/shell.css?v=263">
 <script defer src="/assets/games.js?v=130"></script>
 <script defer src="/assets/site.js?v=90"></script>
-<script defer src="/assets/shell.js?v=340"></script>
+<script defer src="/assets/shell.js?v=341"></script>
 <script type="application/ld+json" id="mw-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}</script>
 <script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Malady Wise Stats: Games Played Every Day", "description": "Live, anonymous stats for Malady Wise: daily medical puzzles finished today, each day for the past year, by game, and when people play.", "url": "https://maladywise.com/site-stats/", "inLanguage": "en-AU", "audience": {"@type": "MedicalAudience", "audienceType": "Patient"}, "author": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Malady Wise", "item": "https://maladywise.com/"}, {"@type": "ListItem", "position": 2, "name": "Games played", "item": "https://maladywise.com/site-stats/"}]}, "about": {"@type": "WebPage", "name": "Malady Wise stats"}, "dateModified": "2026-11"}</script>
 </head>
@@ -52,6 +52,11 @@
 .ss-tabs button{font:600 13px var(--body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
 .ss-tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 #ss-wait{color:var(--muted)}
+.ss-cc{list-style:none!important;padding:0!important;margin:0!important;display:grid;gap:6px}
+.ss-cc li{display:grid;grid-template-columns:24px 1fr 46px;grid-template-areas:"f n p" "f b b";align-items:center;column-gap:8px;margin:0}
+.ss-fl{grid-area:f;font-size:18px}.ss-cn{grid-area:n;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ss-cc b{grid-area:p;text-align:right;font-size:13px}
+.ss-cc i{grid-area:b;display:block;height:5px;border-radius:3px;background:var(--brand,#4A3480);opacity:.75}
+@media(min-width:1100px){main.wrap.doc{max-width:1120px}.ss-cols{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:start}.ss-side{position:sticky;top:90px}}
 </style><div id="ss"><p id="ss-wait">Loading the numbers…</p></div>
 <script>
 (function () {
@@ -91,7 +96,16 @@
     h += "<h2>Today by game</h2>" + '<div class="ss-box">' + list(T.g || {}) + "</div>";
     h += "<h2>Last 7 days by game</h2>" + '<div class="ss-box">' + list(wk) + "</div>";
     if (j.hourDays) h += "<h2>When people play</h2>" + '<div class="ss-box">' + bars(j.hours.map(function (v) { return v / j.hourDays; }), j.hours.map(function (v, i) { return (i % 12 || 12) + (i < 12 ? "am" : "pm"); }), -1, 120) + '<p class="ss-cap">Average games finished per hour, Sydney time, over the last ' + j.hourDays + " days.</p></div>";
-    box.innerHTML = h;
+    // Players by country (from 24 Nov 2026): one count per browser per day, from its time zone.
+    var cc = {}, ccDays = 0; D.slice(-7).forEach(function (x) { if (x.c && Object.keys(x.c).length) ccDays++; for (var k in (x.c || {})) cc[k] = (cc[k] || 0) + x.c[k]; });
+    var dn = null; try { dn = new Intl.DisplayNames(["en-AU"], { type: "region" }); } catch (e) {}
+    function flag(c) { return c === "ZZ" ? "\ud83c\udf10" : String.fromCodePoint.apply(null, c.split("").map(function (ch) { return 127397 + ch.charCodeAt(0); })); }
+    var ks = Object.keys(cc).sort(function (a, b) { return cc[b] - cc[a]; }), top = ks.length ? cc[ks[0]] : 1, sum = ks.reduce(function (a, k) { return a + cc[k]; }, 0);
+    var side = '<aside class="ss-side"><h2>Where players are</h2><div class="ss-box">' + (ks.length ?
+      '<ul class="ss-cc">' + ks.slice(0, 15).map(function (k) { var nm = k === "ZZ" ? "Other" : (dn ? dn.of(k) : k); return '<li><span class="ss-fl" aria-hidden="true">' + flag(k) + "</span><span class=\"ss-cn\">" + nm + '</span><i style="width:' + Math.max(4, cc[k] / top * 100) + '%"></i><b>' + Math.round(cc[k] / sum * 100) + "%</b></li>"; }).join("") + "</ul>" +
+      '<p class="ss-cap">' + ks.length + (ks.length === 1 ? " country" : " countries") + ", last " + (ccDays === 1 ? "day" : ccDays + " days") + ". From each browser’s time zone, once a day. No locations or IPs stored.</p>"
+      : '<p class="ss-cap">Counting started 24 November 2026. Check back tomorrow.</p>') + "</div></aside>";
+    box.innerHTML = '<div class="ss-cols"><div class="ss-main">' + h + "</div>" + side + "</div>";
     Array.prototype.forEach.call(box.querySelectorAll(".ss-tabs button"), function (b) { b.onclick = function () { load(+b.getAttribute("data-d")); }; });
   }
   var cache = {};
@@ -104,7 +118,7 @@
 })();
 </script><p class="meta">Counts come from finished daily puzzles (arcade games aren’t counted). No cookies, names or personal data. Your own streaks and badges live on <a href="/me/">My stats</a>.</p>
 
-<p class="meta">Updated 15 November 2026.</p>
+<p class="meta">Updated 24 November 2026.</p>
 
 <section class="related"><h2>Related</h2><ul><li><a href="/medical-games/"><span>Games</span>All puzzles</a></li><li><a href="/me/"><span>Malady Wise</span>My stats</a></li><li><a href="/about/"><span>Malady Wise</span>About</a></li></ul></section>
 <p class="print-url">maladywise.com/site-stats/</p>
