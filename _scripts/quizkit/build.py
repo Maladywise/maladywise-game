@@ -9,7 +9,8 @@ from pharm import PHARM
 from more import SIMPLE
 from conds import CONDS
 from conds2 import CONDS2
-CONDS = CONDS + CONDS2
+from conds3 import CONDS3
+CONDS = CONDS + CONDS2 + CONDS3
 from physio import PHYS
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from headkit import fix_html  # shared <head> clean-up: self-hosted fonts, deferred scripts, honest JSON-LD
