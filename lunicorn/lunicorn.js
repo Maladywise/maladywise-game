@@ -35,7 +35,7 @@
   var seed = "lunicorn-" + G.localDay(new Date(M.fm)) + "-" + M.kind, KEY = "mw-lunicorn-" + G.localDay(new Date(M.fm));
   // Rainbow: a fixed shuffled order, worked through 10 at a time, one block per full moon (120 colours = a year without repeats).
   var moonNo = Math.round((M.fm / 864e5 - EPOCH) / SYN - 0.5), ORDER = G.shuffle(L.rainbow, G.rng("lunicorn-order-v1")), blocks = Math.floor(ORDER.length / THEME.n);
-  var SET = M.kind === "rainbow" ? ORDER.slice(((moonNo % blocks) + blocks) % blocks * THEME.n, ((moonNo % blocks) + blocks) % blocks * THEME.n + THEME.n) : G.shuffle(L[M.kind], G.rng(seed)).slice(0, THEME.n), idx = 0, score = 0, marks = [];
+  var SET = M.kind === "rainbow" ? ORDER.slice(((moonNo % blocks) + blocks) % blocks * THEME.n, ((moonNo % blocks) + blocks) % blocks * THEME.n + THEME.n) : G.shuffle(L[M.kind], G.rng(seed)).slice(0, THEME.n), idx = 0, score = 0, marks = [], picks = [];
   $("lu-h1").textContent = THEME.h; $("lu-kick").textContent = THEME.kick; $("lu-lede").textContent = THEME.lede;
   if (M.open && M.near === false) $("lu-kick").textContent = "🌙 You said the magic word";
 
@@ -52,13 +52,13 @@
     var bs = $("lu-q").querySelectorAll(".mg-opts button");
     Array.prototype.forEach.call(bs, function (b) {
       b.onclick = function () {
-        var ok = b.textContent === c[2];
+        var ok = b.textContent === c[2]; picks.push(b.textContent);
         Array.prototype.forEach.call(bs, function (x) { x.disabled = true; if (x.textContent === c[2]) x.classList.add("ok"); });
         if (!ok) b.classList.add("no"); else score++;
         marks.push(ok ? "🦄" : "▫️");
         var stripe = $("lu-stripe").children[idx]; if (stripe) { stripe.style.background = ok ? c[0] : "transparent"; }
         $("lu-s").textContent = score;
-        $("lu-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Magic." : "Not quite: " + G.esc(c[2]) + ".") + "</b> " + G.esc(c[4]) + '</p><p style="text-align:right;margin-top:10px"><button class="big" type="button" id="lu-next">' + (idx + 1 < SET.length ? "Next colour" : "See your rainbow") + "</button></p>";
+        $("lu-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Magic." : "Not quite.") + "</b> It’s <b>" + G.esc(c[2]) + "</b>. " + G.esc(c[4]) + (c[5] ? ' <a class="lu-more" href="' + G.esc(c[5]) + '" target="_blank" rel="noopener">More on ' + G.esc(c[2]) + (/^https?:/.test(c[5]) ? " ↗" : " ›") + "</a>" : "") + '</p><p style="text-align:right;margin-top:10px"><button class="big" type="button" id="lu-next">' + (idx + 1 < SET.length ? "Next colour" : "See your rainbow") + "</button></p>";
         $("lu-next").onclick = function () { idx++; if (idx < SET.length) card(); else end(); }; $("lu-next").focus();
       };
     });
@@ -68,6 +68,13 @@
     $("lu-game").hidden = true; $("lu-end").hidden = false;
     $("lu-final").textContent = score + "/" + SET.length;
     $("lu-verdict").textContent = score === SET.length ? "A full rainbow. Ziggy is sparkling." : score >= 7 ? "Ziggy is impressed. Mostly." : score >= 4 ? "Some colours, some grey. Classic full moon." : "Ziggy has gone back into the clouds.";
+    // Review every answer (25 Nov 2026), with a read-more link for each.
+    var rv = document.getElementById("lu-review");
+    if (!rv) { rv = document.createElement("div"); rv.id = "lu-review"; rv.className = "lu-review"; $("lu-end").appendChild(rv); }
+    rv.innerHTML = "<h3>All the answers</h3><ol>" + SET.map(function (c, i) {
+      var ok = picks[i] === c[2];
+      return '<li><span class="lu-dot" style="background:' + c[0] + '"></span><div><p class="lu-rc">' + G.esc(c[1]) + "</p><p>" + (ok ? "🦄 " : "▫️ ") + "<b>" + G.esc(c[2]) + "</b>" + (ok || !picks[i] ? "" : ' <small>(you said ' + G.esc(picks[i]) + ")</small>") + "</p>" + '<p class="lu-rw">' + G.esc(c[4]) + (c[5] ? ' <a href="' + G.esc(c[5]) + '" target="_blank" rel="noopener">More' + (/^https?:/.test(c[5]) ? " ↗" : " ›") + "</a>" : "") + "</p></div></li>";
+    }).join("") + "</ol>";
     $("lu-share").onclick = function () { G.share(THEME.h + " 🌕🦄 " + score + "/" + SET.length + "\n" + marks.join("") + "\nOnly on full-moon nights. maladywise.com/lunicorn/"); };
   }
   function start() {
