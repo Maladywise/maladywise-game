@@ -4107,107 +4107,107 @@
   "date": "2026-11-25",
   "number": 39,
   "difficulty": "Medium",
-  "theme": "Open wide",
+  "theme": "Putting the brakes on",
   "questions": [
    {
-    "q": "Tooth enamel, the hardest tissue in the body, is mostly made of which mineral?",
-    "a": "Hydroxyapatite",
+    "q": "Sir James Black developed propranolol in the 1960s. His later Nobel-winning drug, cimetidine, blocked which receptor?",
+    "a": "Histamine H2 receptor",
     "w": [
-     "Calcium carbonate",
-     "Fluorite",
-     "Silica"
+     "Histamine H1 receptor",
+     "Dopamine D2 receptor",
+     "Serotonin 5-HT3 receptor"
     ],
-    "e": "Harder than bone, and it can\u2019t regrow once it\u2019s gone. Do be nice to it."
+    "e": "Same trick twice: find the receptor, design a blocker. H2 blockers cut stomach acid, and the 1988 Nobel Prize in Physiology or Medicine followed."
    },
    {
-    "q": "Which is usually the first permanent tooth to come through, at about 6 years?",
-    "a": "The first molar",
+    "q": "In 2008, Bordeaux doctors noticed a baby\u2019s birthmark fading after propranolol was started for a heart problem. What kind of birthmark?",
+    "a": "Infantile haemangioma",
     "w": [
-     "The upper canine",
-     "The wisdom tooth",
-     "The second premolar"
+     "Port-wine stain",
+     "Caf\u00e9-au-lait spot",
+     "Congenital melanocytic naevus"
     ],
-    "e": "It arrives behind the baby teeth without any tooth falling out first, so many parents miss it."
+    "e": "A lucky observation by paediatric dermatologist Christine L\u00e9aut\u00e9-Labr\u00e8ze\u2019s team, published in the NEJM. Oral propranolol is now first-line for problem haemangiomas."
    },
    {
-    "q": "Giving tetracycline to a child before about age 8 can cause?",
-    "a": "Permanent tooth staining",
+    "q": "Why are non-selective beta blockers like propranolol usually avoided in asthma?",
+    "a": "They can tighten the airways",
     "w": [
-     "Extra teeth",
-     "Gum overgrowth",
-     "Faster tooth eruption"
+     "They dry out the lining of the lungs",
+     "They cause oral thrush",
+     "They stop red cells carrying oxygen"
     ],
-    "e": "It binds to calcium in developing teeth. Doxycycline binds far less, which is why it gets the short courses now."
+    "e": "Blocking beta-2 receptors in airway muscle can trigger bronchospasm. Your blue reliever inhaler is a beta-2 agonist: the exact opposite job."
    },
    {
-    "q": "A child knocks out a baby tooth. Should it be put back in?",
-    "a": "No, baby teeth aren\u2019t replanted",
+    "q": "Beta blockers can dull the warning signs of a hypo. Which warning sign usually still gets through?",
+    "a": "Sweating",
     "w": [
-     "Yes, within an hour",
-     "Yes, after rinsing in milk",
-     "Only if it\u2019s a front tooth"
+     "A pounding heart",
+     "Shaky hands",
+     "A racing pulse"
     ],
-    "e": "Replanting risks the adult tooth underneath. Adult teeth are the ones you rush to put back."
+    "e": "Sweat glands are driven by sympathetic nerves that use acetylcholine, not adrenaline\u2019s beta receptors, so beta blockade leaves sweating intact."
    },
    {
-    "q": "In 1945, which city became the first in the world to add fluoride to its water?",
-    "a": "Grand Rapids",
+    "q": "Propranolol can calm which kind of tremor?",
+    "a": "Essential tremor",
     "w": [
-     "Chicago",
-     "Birmingham",
-     "Hamilton"
+     "Parkinson\u2019s resting tremor",
+     "Cerebellar intention tremor",
+     "The \u2018wing-beating\u2019 tremor of Wilson disease"
     ],
-    "e": "Michigan, 25 January. Tooth decay among children there dropped substantially over the following years."
+    "e": "Essential tremor shakes when the hands are in use (holding a cup, writing). It often runs in families and may settle a little with alcohol."
    },
    {
-    "q": "In 1866, Lucy Hobbs Taylor became the first woman in the US to?",
-    "a": "Earn a dental degree",
+    "q": "In liver cirrhosis, non-selective beta blockers lower the pressure in which vessel, to cut the risk of variceal bleeding?",
+    "a": "The portal vein",
     "w": [
-     "Pull a tooth under ether",
-     "Run a dental hospital",
-     "Open a toothpaste factory"
+     "The hepatic artery",
+     "The inferior vena cava",
+     "The internal jugular vein"
     ],
-    "e": "From the Ohio College of Dental Surgery, after being turned down once. Ida Gray became the first African American woman to do so in 1890."
+    "e": "Portal hypertension forces blood through fragile collateral veins in the oesophagus. Slowing inflow takes some pressure off them."
    },
    {
-    "q": "In 1844, dentist Horace Wells tested which anaesthetic by having his own tooth pulled?",
-    "a": "Nitrous oxide",
+    "q": "This month a US recall of one batch of propranolol extended-release capsules was over a possible?",
+    "a": "Metal contamination",
     "w": [
-     "Ether",
-     "Chloroform",
-     "Cocaine"
+     "Wrong strength on the label",
+     "Bacterial contamination",
+     "Capsules that dissolve too fast"
     ],
-    "e": "He felt nothing. His public demonstration in Boston went badly, proving audiences are harsher than molars."
+    "e": "One US lot of 60 mg capsules. Fragments could injure the mouth or gut; no harm from the recalled lot had been reported. Don\u2019t stop a beta blocker suddenly: ask your pharmacist or doctor first."
    },
    {
-    "q": "In 2023, WHO added which gangrenous disease of the mouth and face to its list of neglected tropical diseases?",
-    "a": "Noma",
+    "q": "GLP-1, the gut hormone that weight-loss injections mimic and searches for are surging in the UK, is mainly made by cells in?",
+    "a": "The intestine",
     "w": [
-     "Yaws",
-     "Buruli ulcer",
-     "Trachoma"
+     "The pancreas",
+     "The liver",
+     "The thyroid"
     ],
-    "e": "It mainly affects young children living in deep poverty, and mostly in sub-Saharan Africa."
+    "e": "Enteroendocrine L-cells, mostly in the lower small intestine and colon, release it after a meal. It boosts insulin, slows the stomach and blunts appetite."
    },
    {
-    "q": "This month the USA beat Canada 6-2 in the women\u2019s ice hockey world final in Denmark. Under IIHF rules, every senior women\u2019s player must wear?",
-    "a": "Full face protection (a cage or full visor)",
+    "q": "Bird flu is back on English poultry farms this autumn. In a name like H5N1, what does the \u2018H\u2019 stand for?",
+    "a": "Haemagglutinin",
     "w": [
-     "A half visor only",
-     "A mouthguard only",
-     "No face protection at all"
+     "Haemolysin",
+     "Histamine",
+     "Host"
     ],
-    "e": "Senior men may play in a half visor, one reason hockey is famous for gap-toothed grins. A full cage saves a lot of front teeth, and a lot of dentists\u2019 weekends."
+    "e": "The surface spike the virus uses to latch onto cells. The \u2018N\u2019 is neuraminidase, which helps new viruses break free."
    },
    {
-    "q": "Which bacterium is the classic culprit in tooth decay?",
-    "a": "Streptococcus mutans",
+    "q": "Statins lower cholesterol by blocking which liver enzyme?",
+    "a": "HMG-CoA reductase",
     "w": [
-     "Staphylococcus aureus",
-     "Lactococcus lactis",
-     "Fusobacterium necrophorum"
+     "Lipoprotein lipase",
+     "Angiotensin-converting enzyme",
+     "Cyclo-oxygenase"
     ],
-    "e": "It turns sugar to acid and sticks to teeth. Your toothbrush knows all about it."
+    "e": "It\u2019s the rate-limiting step of cholesterol making. Akira Endo found the first statin in a fungus in the 1970s."
    }
   ]
  },
