@@ -304,18 +304,55 @@
   // Games that count in the current mode (Normie mode: only Normie-capable games).
   function inMode(g) { return !NORMIE || !!g.nmode; }
   // Today's 3 (MW_START in games.js): live daily games in this mode, topped up from MW_ORDER. Shared by the home list and in-game "Next".
+  // Today's 3 (25 Nov 2026): Dxtective and Wordemic always; slot 3 is a special game open right now
+  // (Lunicorn on full-moon days, Toxiquest in December, Fridaemia on Fridays, Dx Gauntlet on Sundays),
+  // otherwise the most-played daily game (today's live counts, or yesterday's early in the day), with Zebritis as the fallback.
+  var SPECIAL3 = [["lunicorn", "Lunicorn", "Ziggy’s colours", "zebritis", "#5B3A8E", "#C9A3DD", 3],
+    ["toxiquest", "Toxiquest", "Poison mysteries", "allergy", "#2E6B3A", "#8FD18A", 4],
+    ["fridaemia", "Fridaemia", "Friday 5pm results", "layla", "#8A5A00", "#F2C46B", 4],
+    ["dxtective-gauntlet", "Dx Gauntlet", "Ten cases, no slips", "sherlock", "#4A3480", "#B9A6E8", 8]];
+  function specialNow() {
+    if (NORMIE) return null;
+    var n = new Date(), TDAY = n.getFullYear() + "-" + (n.getMonth() + 1) + "-" + n.getDate(), fm = new Date(typeof mwFullNear === "function" ? mwFullNear(n.getTime()) : 0);
+    var open = { lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11, fridaemia: n.getDay() === 5, "dxtective-gauntlet": n.getDay() === 0 };
+    var h = SPECIAL3.filter(function (x) { return open[x[0]]; })[0];
+    return h ? timedG(h) : null;
+  }
+  function timedG(h) {
+    var td = (get("mw-tdone", {}) || {})[h[0]] === sydToday();
+    return { g: { id: h[0], name: h[1], kind: h[2], path: "/" + h[0] + "/", icon: '<img src="/assets/mascots/' + h[3] + '.svg" alt="" width="44" height="44" data-nolink>', accent: h[4], accentDark: h[5], dailyLine: true, timed: true, tdone: td }, min: h[6] };
+  }
+  // That weekday's specials (STYLE.md schedule): Mon Morphemia Max + Arrhythmix; Tue Glimpsathon + Super Comorbix; Wed Super Zebritis;
+  // Thu Long Linkase + Arrhythmix; Fri Sudokrine 9x9 (Wordemic Long is already slot 2); Sat Sensitosis Saturday + Cryptoplexy; Sun Anatomegaly Full Body + Grand Rounds.
+  var DAY3 = [["labelosis", "grandrounds"], ["morphemia", "arrhythmix"], ["glimpsis", "comorbix"], ["zebritis"], ["linkase", "arrhythmix"], ["sudokrine"], ["sensitosis", "cryptogenic"]];
   function startIds() {
-    var S = window.MW_START || {}, want = ((NORMIE ? S.normie : S.medical) || [["dx", 3], ["wordemic", 3], ["triviosis", 4]]).slice(), out = [], G = window.MW_GAMES || [];
-    // One fixed game (the first), plus two that rotate daily from the pool (MW_START.pool / poolN), so visitors meet new games.
-    var pool = (NORMIE ? S.poolN : S.pool) || [];
-    if (pool.length >= 2) { var dn = Math.floor(Date.parse(sydToday() + "T00:00:00Z") / 864e5), n = pool.length, a = (dn * 2) % n, b = (a + 1 + (dn % (n - 1))) % n; if (b === a) b = (a + 1) % n; want = [want[0], pool[a], pool[b]]; }
-    // First visit (24 Nov 2026): on a visitor's first day, open with a quick picture game (Glimpsis), then the usual first two.
-    var fv = get(mk("mw-first"), "");
-    if (!fv) { fv = get(mk("mw-days"), []).length ? "old" : sydToday(); set(mk("mw-first"), fv); }
-    if (fv === sydToday() && !want.some(function (w) { return w[0] === "glimpsis"; })) want = [["glimpsis", 2], want[0], want[1]];
+    var out = [], G = window.MW_GAMES || [];
     function byId(id) { return G.filter(function (x) { return x.id === id; })[0]; }
     function ok(g) { return g && g.live && !g.weekly && inMode(g) && !out.some(function (o) { return o.g === g; }); }
-    want.forEach(function (w) { var g = byId(w[0]); if (ok(g)) out.push({ g: g, min: w[1] }); });
+    [["dx", 3], ["wordemic", 3]].forEach(function (w) { var g = byId(w[0]); if (ok(g)) out.push({ g: g, min: w[1] }); });
+    // Slot 3: Lunicorn on a full moon wins; otherwise rotate week by week through that day's specials, plus any timed game open today
+    // (Toxiquest in December, Fridaemia on Fridays, Dx Gauntlet on Sundays); with none, the most-played game.
+    var sp = specialNow();
+    if (sp && sp.g.id !== "lunicorn") sp = null;
+    if (!sp) {
+      var dn = Math.floor(Date.parse(sydToday() + "T00:00:00Z") / 864e5), dw = new Date(dn * 864e5).getUTCDay(), wk = Math.floor((dn + 3) / 7);
+      var cand = [];
+      DAY3[dw].forEach(function (id) { var g = byId(id); if (g && g.live && inMode(g) && !out.some(function (o) { return o.g === g; })) cand.push({ g: g, min: g.weekly ? 8 : 4 }); });
+      if (!NORMIE) {
+        var n = new Date(), tdx = n.getFullYear() + "-" + (n.getMonth() + 1) + "-" + n.getDate();
+        if (!!get("mw-secret-toxic", 0) || n.getMonth() === 11) cand.push(timedG(SPECIAL3[1]));
+        if (dw === 5) cand.push(timedG(SPECIAL3[2]));
+        if (dw === 0) cand.push(timedG(SPECIAL3[3]));
+      }
+      if (cand.length) sp = cand[wk % cand.length];
+    }
+    if (sp) out.push(sp);
+    else {
+      var hr = hotRank(), c = hr ? hr.c : {}, best = null;
+      Object.keys(c).forEach(function (k) { var id = NORMIE ? k.replace(/-n$/, "") : k; if (/-n$/.test(k) !== NORMIE) return; var g = byId(id); if (ok(g) && (!best || c[k] > best.n)) best = { g: g, n: c[k] }; });
+      var g3 = best ? best.g : byId("zebritis");
+      if (ok(g3)) out.push({ g: g3, min: 4 });
+    }
     (window.MW_ORDER || []).forEach(function (id) { if (out.length < 3) { var g = byId(id); if (ok(g)) out.push({ g: g, min: 4 }); } });
     return out.slice(0, 3);
   }
@@ -1499,10 +1536,10 @@
     }
     function todays3(list) {
       if (!list.length) return "";
-      var done = list.filter(function (o) { var st = readStats(o.g); return st && st.done; }).length, mins = list.reduce(function (a, o) { return a + o.min; }, 0);
+      var st3 = function (g) { return g.timed ? (g.tdone ? { done: true, win: true } : null) : readStats(g); }, done = list.filter(function (o) { var st = st3(o.g); return st && st.done; }).length, mins = list.reduce(function (a, o) { return a + o.min; }, 0);
       return '<section class="t3s" aria-labelledby="t3h"><div class="t3-head"><h2 id="t3h">Start here: today’s ' + list.length + "</h2><span>" + (done === list.length ? "\ud83d\udd25 3 for 3" + (threeRun() > 1 ? " \u00b7 " + threeRun() + " days running" : ". Smug.") : done ? done + " of " + list.length + " done" + (threeRun() ? " \u00b7 \ud83d\udd25 " + threeRun() + "-day 3 for 3 run" : "") : "About " + mins + " minutes" + (threeRun() ? " \u00b7 \ud83d\udd25 " + threeRun() + "-day run" : "")) + '</span></div><div class="t3-row">' +
         list.map(function (o, i) {
-          var g = o.g, st = readStats(g), dn = st && st.done, ein = !g.dailyLine && diffFor(g, today, dow) === "Einstein", sp = g.special && g.special.dow === dow && !(g.special.from && today < g.special.from);
+          var g = o.g, st = st3(g), dn = st && st.done, ein = !g.dailyLine && diffFor(g, today, dow) === "Einstein", sp = g.special && g.special.dow === dow && !(g.special.from && today < g.special.from);
           return '<a class="t3' + (dn ? " done" : "") + '" data-g="' + g.id + '" href="' + g.path + '" style="--accent:' + accentOf(g) + '">' +
             '<span class="t3-ic">' + (dn && window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 40, "band-masc") : g.icon) + (dn ? '<span class="tick" aria-label="Done today">✓</span>' : '<span class="t3-n" aria-hidden="true">' + (i + 1) + "</span>") + "</span>" +
             '<span class="t3-tx"><b>' + g.name + (ein ? ' <i class="t3-ein" title="Einstein day">' + EIN + "</i>" : "") + "</b><small>" + (sp ? g.special.short : g.kind) + "</small></span>" +
@@ -1601,7 +1638,8 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       // Extra daily games (Nomulous) and open timed games (Triagic etc.) are in the same mix; with no data, timed games lead.
       list.sort(function (x, y) { return (y.id === "zebritis") - (x.id === "zebritis"); });
       var tdone = get("mw-tdone", {}) || {};
-      var items = timedList(true).map(function (h) { return { id: h[0], done: tdone[h[0]] === sydToday(), live: true, h: h }; })
+      var t3ids = startIds().map(function (o) { return o.g.id; });
+      var items = timedList(true).filter(function (h) { return t3ids.indexOf(h[0]) < 0; }).map(function (h) { return { id: h[0], done: tdone[h[0]] === sydToday(), live: true, h: h }; })
         .concat(list.map(function (g) { return { id: g.id, done: !!(readStats(g) || {}).done, live: !!g.live, g: g, off: !!g.weekly && !relToday(g) }; }));
       extraList(hid, false).forEach(function (x) { items.push({ id: x[0], done: !!get("mw-" + x[0] + "-" + sydToday(), null), live: true, x: x }); });
       items.forEach(function (it, i) { it.i = i; });
