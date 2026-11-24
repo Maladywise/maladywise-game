@@ -1635,3 +1635,19 @@ html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9
 .arc-a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 14px 6px 8px;border:1px solid var(--line);border-left:4px solid var(--accent,var(--brand));border-radius:14px;background:var(--card);color:var(--ink);text-decoration:none}
 .arc-a:hover{border-color:var(--accent,var(--brand))}
 .arc-a img{flex:none}.arc-a b{font-size:15px}.arc-a small{font-size:12px;color:var(--muted)}
+
+/* Home top, decluttered (24 Nov 2026) */
+.hday-slim{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#F1ECF8;border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:8px 12px;margin:-4px 0 4px}
+:root[data-theme="dark"] .hday-slim{background:#2A2240}
+.hday-slim img{flex:none}
+.hday-slim .hs-t{flex:1 1 180px;min-width:0;font-size:15px;line-height:1.35}
+.hday-slim .hs-t .rd-k{margin-right:4px}
+.hday-slim .hs-l{display:flex;gap:12px;font-size:14px;font-weight:600;white-space:nowrap}
+.hday-slim .hs-l a{color:var(--brand);text-decoration:none}
+.mw-heat{padding:2px 8px}
+@media(max-width:520px){
+  .mw-top h1{font-size:23px;line-height:1.15}
+  .mw-top .mt-cats{width:66px;height:58px}
+  .mw-top .mt-cats img{width:34px;height:44px}
+  .mw-live{font-size:12px;gap:4px}
+}

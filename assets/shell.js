@@ -195,24 +195,24 @@
     [10, "\ud83c\udf0b", "Mass casualty. Call everyone in.", "Legendary", 5]
   ];
   function heatHtml(d) {
-    var n = d.today, num = n.toLocaleString("en-AU") + " games played today", h = d.heat, out;
+    var n = d.today, num = n.toLocaleString("en-AU") + " games today", h = d.heat, out;
     var rec = !!(h && h.best && h.best.n >= LIVE.MIN_TODAY && n > h.best.n); // record day: drop the heat comment so both chips fit on one line
     // Level = today's count v the usual pace for this time of day, up to 10x (back to the ratio system, 22 Nov 2026)
     if (!h || h.days < 3 || h.expect < 3) out = "\ud83e\udde9 " + num; // not enough history yet
     else {
       var r = n / h.expect, k = 0;
       for (var i = 0; i < HEAT.length; i++) if (r >= HEAT[i][0]) k = i;
-      out = '<span class="mw-heat h' + HEAT[k][4] + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + HEAT[k][1] + " " + num + (rec ? "" : " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small>") + "</span>";
+      out = '<span class="mw-heat h' + HEAT[k][4] + '" title="About ' + Math.round(r * 100) + '% of the usual pace for this time of day">' + (rec ? "" : HEAT[k][1] + " ") + num + (rec ? "" : " <small>" + HEAT[k][NORMIE ? 3 : 2] + "</small>") + "</span>";
     }
     // New all-time daily record: Code purple shows as well, and stays for the rest of the day
     if (rec)
-      out += ' <span class="mw-heat h6" title="Best day before today: ' + h.best.n.toLocaleString("en-AU") + '">\ud83c\udfc6 <small>' + (NORMIE ? "New record!" : "New record. Code purple.") + "</small></span>";
+      out += ' <span class="mw-heat h6" title="Best day before today: ' + h.best.n.toLocaleString("en-AU") + '">\ud83c\udfc6 <small>' + (NORMIE ? "Record!" : "Code purple") + "</small></span>";
     return out;
   }
   function liveShow() {
     var d = LIVE.last; if (!d) return;
     var bits = [];
-    if (d.online >= LIVE.MIN_ON) bits.push('<span class="mw-dot"></span>' + d.online.toLocaleString("en-AU") + " playing now");
+    if (d.online >= LIVE.MIN_ON) bits.push('<span class="mw-dot"></span>' + d.online.toLocaleString("en-AU") + " playing");
     if (d.today >= LIVE.MIN_TODAY) bits.push(heatHtml(d));
     var homeOnly = /^\/(index\.html)?$/.test(location.pathname); // live counts show on the home page only (18 Nov 2026)
     if (hotSave(d) && homeOnly && window.MW_hotRedraw) window.MW_hotRedraw(); // re-sort "More daily puzzles" if the ranking moved
@@ -1493,8 +1493,7 @@
       var H = window.MW_HOME || {}, line = (NORMIE ? H.taglineN : H.tagline) || (NORMIE ? "Free daily puzzles. No medicine required." : "Free daily medical puzzles, made by a GP.");
       return '<section class="mw-top" id="puzzles"><div class="mt-meta"><span class="mt-day">' + nice(today, { weekday: "long", day: "numeric", month: "short" }) + '</span><span class="pill daypill d-' + DIFF[dow] + '">' + DIFF[dow] + '</span><span class="nextin">New in <b id="mw-count">' + countdown() + '</b></span><span class="mw-live" hidden></span></div>' +
         '<div class="mt-head"><h1>' + line + "</h1>" + (NORMIE ? normImg("mt-norm", 52) : '<a class="mt-cats" href="/basil-clover/" aria-label="Basil + Clover arcade game"><img src="/assets/mascots/basil.svg?v=2" alt="" width="54" height="70"><img src="/assets/mascots/clover.svg?v=1" alt="" width="52" height="68"></a>') + "</div>" +
-        '<p class="mt-sub">' + (NORMIE ? DAYQ_N : DAYQ)[dow] + "</p>" +
-        (function () { var t = get(mk("mw-einstein"), []); return t.length ? '<p class="trophy">' + EIN + " Einstein badges: <b>" + t.length + "</b>. Genuinely rare. Frame them.</p>" : ""; })() + "</section>";
+        "</section>"; // the day's quip line and the Einstein badge count moved off the home page (24 Nov 2026; badges live on My stats)
     }
     function todays3(list) {
       if (!list.length) return "";
@@ -1823,6 +1822,14 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         "<h2>" + nm(lead) + "</h2><p>" + esc2(lead.blurb || "") + (themed ? " <b>Look out for themed puzzles today.</b>" : "") +
         (also.length ? ' <span class="hday-also">Also: ' + also.map(function (x) { return x.page && !NORMIE ? '<a href="' + esc2(x.page) + '">' + nm(x) + "</a>" : x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + nm(x) + "</a>" : nm(x); }).join(", ") + "</span>" : "") + "</p>" +
         '<div class="hday-row"><span class="hday-btns">' + (lead.page && !NORMIE ? '<a class="hday-go" href="' + esc2(lead.page) + '">Read our fact sheet</a>' : "") + (lead.link ? '<a class="' + (lead.page && !NORMIE ? "hday-off" : "hday-go") + '" href="' + esc2(lead.link) + '" target="_blank" rel="noopener">' + (lead.page && !NORMIE ? "Official site \u2197" : "Learn more \u2197") + "</a>" : "") + '</span><a class="hday-up" href="/days/">Coming up \u203a</a></div>' + "</section>";
+      // Slim one-line version (24 Nov 2026) unless it's a headline day: a single day (not a week), today, priority 1-2.
+      var headline = !quiet && lead.kind !== "week" && first && (lead.priority || 9) <= 2;
+      if (!headline) {
+        var go = lead.page && !NORMIE ? '<a href="' + esc2(lead.page) + '">Fact sheet ›</a>' : lead.link ? '<a href="' + esc2(lead.link) + '" target="_blank" rel="noopener">More ↗</a>' : "";
+        html = '<section class="hday-slim">' + (lead.icon ? '<img src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="30" height="30">' : "") +
+          '<span class="hs-t"><span class="rd-k">' + (lead.kind === "week" ? "This week" : lead.kind === "month" ? "This month" : "Today") + "</span> <b>" + nm(lead) + "</b>" + (themed ? " · themed puzzles" : "") + "</span>" +
+          '<span class="hs-l">' + go + ' <a href="/days/">Coming up ›</a></span></section>';
+      }
       slot.innerHTML = html;
     }
 
