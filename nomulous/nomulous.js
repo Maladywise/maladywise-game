@@ -28,6 +28,11 @@
   var Q = picks.map(function (it, i) { return { it: it, type: i === 2 || i === 4 ? "mean" : "name" }; });
   var KIND = { sign: "Sign", test: "Test", triad: "Triad", syndrome: "Syndrome" };
   function same(it) { return it[1] === "triad" || it[1] === "syndrome" ? ["triad", "syndrome"] : ["sign", "test"]; }
+  function toTop() { // after Next/Finish, bring the new question (or result) back into view, below the sticky header
+    var el = !$("nm-game").hidden ? $("nm-game") : $("nm-end"); if (!el) return;
+    var y = el.getBoundingClientRect().top + window.pageYOffset - 90;
+    if (window.pageYOffset > y) window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+  }
   function card() {
     var q = Q[idx], it = q.it, pool, opts, right;
     if (q.type === "name") {
@@ -52,7 +57,7 @@
         var fact = (window.NOMULOUS_FACTS || {})[it[0]];
         $("nm-why").innerHTML = '<div class="mg-why nm-one"><p><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + "." + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p>&#128220; ' + hist(it[4]) + "</p>" + (fact ? '<p>&#128161; ' + G.esc(fact) + "</p>" : "") + acc(it) + "</div>" +
           '<p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="nm-next">' + (idx + 1 < Q.length ? "Next" : "Finish") + "</button></p>";
-        $("nm-next").onclick = function () { idx++; if (idx < Q.length) card(); else end(); };
+        $("nm-next").onclick = function () { idx++; if (idx < Q.length) card(); else end(); toTop(); };
         $("nm-next").focus();
       };
     });
