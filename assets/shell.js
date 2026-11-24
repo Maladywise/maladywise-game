@@ -1635,11 +1635,11 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (!items.length) return "";
       function chip(b) { return '<span class="tl-hot ' + b[2] + '" title="' + (b[2].charAt(0) === "h" ? "One of today\u2019s most-played games" : "One of today\u2019s least-played games. Be a hero.") + '">' + b[0] + " " + b[1] + "</span>"; }
       return '<section class="tls" id="g-more"><div class="t3-head"><h2>More daily puzzles</h2><span>' + (NORMIE ? "All free. No medicine required." : "All free") + ' <button type="button" class="tl-edit" data-tl="edit">' + (TL_EDIT ? "Done" : "Hide games") + '</button></span></div>' +
-        (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move below Arcade.</p>' : "") +
+        (TL_EDIT ? '<p class="tl-edit-note">Tap a game to hide it. Hidden games move to the bottom of the page.</p>' : "") +
         '<div class="tl-grid' + (TL_EDIT ? " tl-editing" : "") + '">' + items.map(function (it) {
           var bd = BADGE[it.id], c = bd ? chip(bd) : "", h = it.g ? tile(it.g, c).replace(' data-g="', ' data-h="1" data-g="') : it.h ? timedTile(it.h, true, it.done, c) : extraTile(it.x, false, it.done, c);
           return bd ? h.replace('class="tl', 'class="tl tl-' + bd[2]) : h;
-        }).join("") + "</div></section>";
+        }).join("") + hiddenTiles(false) + "</div></section>"; // closed timed games sit at the end with their HIDDEN stamp (24 Nov 2026)
     }
     // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
     var EXTRA = [["nomulous", "Nomulous", "nomulous", "Name the eponym", "#4A3480", "#B9A6E8"]];
@@ -1653,10 +1653,11 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       return extraList(hid, hiddenOnes).map(function (x) { return extraTile(x, hiddenOnes, false, ""); }).join("");
     }
     function hiddenSec() {
-      var hid = userHidden(), mine = order().filter(function (g) { return hid.indexOf(g.id) > -1; }), timed = hiddenTiles(false);
-      if (!mine.length && !timed && !extraTiles(hid, true)) return "";
-      return '<section class="tls" id="g-hidden"><div class="t3-head"><h2>Hidden games</h2><span>Timed games appear when they open</span></div><div class="tl-grid">' +
-        mine.map(function (g) { return tile(g, '<span class="tl-unhide" role="button" data-tl="show" data-id="' + g.id + '">Show</span>'); }).join("") + extraTiles(hid, true) + timed + "</div></section>";
+      // Only games this player chose to hide (24 Nov 2026); locked timed games now sit at the end of "More daily puzzles".
+      var hid = userHidden(), mine = order().filter(function (g) { return hid.indexOf(g.id) > -1; });
+      if (!mine.length && !extraTiles(hid, true)) return "";
+      return '<section class="tls" id="g-hidden"><div class="t3-head"><h2>Games you’ve hidden</h2><span>Tap Show to bring one back</span></div><div class="tl-grid">' +
+        mine.map(function (g) { return tile(g, '<span class="tl-unhide" role="button" data-tl="show" data-id="' + g.id + '">Show</span>'); }).join("") + extraTiles(hid, true) + "</div></section>";
     }
     if (!window.MW_tlClicks) {
       window.MW_tlClicks = 1;
@@ -1669,10 +1670,11 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       }, true);
     }
     function arcadeRow() {
-      return '<section class="tls" id="g-arcade"><div class="t3-head"><h2>Arcade</h2><span>Bonus games. Play all day.</span></div><div class="tl-grid tl-arc">' + ARCADE.map(function (a) {
-        var dk = root.getAttribute("data-theme") === "dark", ic = a[0] === "basil-clover" ? '<span class="tl-cats"><img src="/assets/mascots/basil.svg?v=2" alt="" width="30" height="40"><img src="/assets/mascots/clover.svg?v=1" alt="" width="29" height="38"></span>' : '<img src="/assets/mascots/' + a[0] + '.svg?v=1" alt="" width="46" height="46">';
+      // One slim row (24 Nov 2026) instead of a full section with tiles.
+      return '<section class="arc-slim" id="g-arcade"><span class="rd-k">Arcade · play all day</span><div class="arc-l">' + ARCADE.map(function (a) {
+        var dk = root.getAttribute("data-theme") === "dark", ic = a[0] === "basil-clover" ? '<img src="/assets/mascots/basil.svg?v=2" alt="" width="20" height="26">' : '<img src="/assets/mascots/' + a[0] + '.svg?v=1" alt="" width="26" height="26">';
         var sub = { "basil-clover": "Cat chaos", stackulus: "Block stacker", mergeon: "Organ merge" }[a[0]] || "Arcade";
-        return '<a class="tl" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '"><span class="tl-ic">' + ic + "</span><b>" + a[1] + "</b><small>" + sub + "</small></a>";
+        return '<a class="arc-a" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '">' + ic + "<b>" + a[1] + "</b><small>" + sub + "</small></a>";
       }).join("") + "</div></section>";
     }
     // Timed games: greyed out with a red HIDDEN stamp until their window opens (or the secret word is typed). Medical mode only.

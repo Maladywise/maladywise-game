@@ -1637,3 +1637,10 @@ html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9
 .hot-ic{display:inline-flex;width:32px;height:32px;align-items:center;justify-content:center;border-radius:9px;background:var(--accent,var(--brand));color:#fff;flex:none}
 .hot-ic svg,.hot-ic img{width:20px;height:20px}
 .hot-a b{font-size:15px}.hot-a small{font-size:12px;color:var(--muted)}
+
+/* Home: slim Arcade row (24 Nov 2026) */
+.arc-slim{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:8px 0 18px}
+.arc-l{display:flex;flex-wrap:wrap;gap:8px}
+.arc-a{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 14px 6px 8px;border:1px solid var(--line);border-left:4px solid var(--accent,var(--brand));border-radius:14px;background:var(--card);color:var(--ink);text-decoration:none}
+.arc-a:hover{border-color:var(--accent,var(--brand))}
+.arc-a img{flex:none}.arc-a b{font-size:15px}.arc-a small{font-size:12px;color:var(--muted)}
