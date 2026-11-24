@@ -335,3 +335,38 @@ HD = C("huntingtons-disease", "Huntington’s Disease", "🧬",
      FAQ_ADV])
 
 CONDS3 = [AF, COPD, OSTEO, ECZEMA, IBS, OSA, GBS, KAWASAKI, MARFAN, HD]
+
+ATYP = C("atypical-presentations", "Atypical Presentations", "🕵️",
+    "Free quiz: heart attacks without chest pain, sepsis without fever, missed strokes. 12 questions on emergencies in women, older people and more.",
+    "Twelve questions, easy to hard, on emergencies that don’t look like the textbook: who gets them, what they look like, and why they get missed.",
+    [
+        Q("Roughly what share of people having a heart attack have no chest pain when they reach hospital?", "About 1 in 3", ["About 1 in 50", "About 1 in 10", "About 2 in 3"],
+          "In a US registry of over 430,000 heart attacks, 33% arrived without chest pain. They were older, more often women and more often had diabetes."),
+        Q("Which is a common non-chest-pain heart attack symptom, more often reported by women?", "Breathlessness, nausea and sweating", ["A rash on the chest", "A sore throat", "Itchy palms"],
+          "Women also more often report jaw, neck, back or arm pain and unusual tiredness."),
+        Q("Why can heart attacks be ‘silent’ in diabetes?", "Nerve damage can blunt pain signals from the heart", ["Metformin masks chest pain", "Blood vessels are wider in diabetes", "High sugar raises the pain threshold everywhere"],
+          "Autonomic neuropathy means pain may be mild or absent, so ECGs are done for vague symptoms."),
+        Q("An 88-year-old suddenly becomes confused and short of breath. Which test belongs early?", "An ECG", ["A CT head only", "A urine dipstick only", "A memory test"],
+          "Over 85, confusion, fainting or breathlessness can be the only sign of a heart attack."),
+        Q("What were heart attack patients without chest pain more likely to experience?", "Later treatment and higher death rates", ["Faster treatment", "Lower death rates", "No difference at all"],
+          "They arrived about 2.5 hours later on average and had more than double the in-hospital death rate."),
+        Q("An older woman with a urine infection has a normal temperature. What can still point to sepsis?", "New confusion, a fall or fast breathing", ["A normal temperature rules it out", "Only a rash would suggest it", "Nothing until the fever appears"],
+          "Older people may have no fever, or a low temperature. ‘Not themselves’ is a red flag."),
+        Q("What question does Australia’s Sepsis Clinical Care Standard encourage families to ask?", "‘Could it be sepsis?’", ["‘Is it a urine infection?’", "‘Do they need a blood culture?’", "‘Is it safe to go home?’"],
+          "Families often notice the change first. Asking out loud prompts a sepsis screen."),
+        Q("A US study of 300,000+ cardiac arrests found women collapsing in public were…", "Less likely to get bystander CPR", ["More likely to get CPR", "Equally likely to get CPR", "Never given a defibrillator"],
+          "Women were about 14% less likely to receive bystander CPR and defibrillation. CPR works through clothing."),
+        Q("Where can defibrillator pads go on a woman?", "Under or beside the breast; a bra can be moved", ["Only on the stomach", "Both pads on the back", "Over the bra, left in place"],
+          "Pad position is the same as for anyone: upper right chest and lower left side."),
+        Q("Which stroke sign is easily blamed on an inner-ear problem?", "Sudden dizziness with trouble walking", ["Hearing loss after a cold", "Spinning on rolling over in bed", "Ringing in both ears"],
+          "Posterior circulation strokes cause dizziness, double vision and unsteadiness, and are often missed."),
+        Q("For Aboriginal and Torres Strait Islander people, Heart Health Checks are recommended from what age?", "30", ["45", "60", "18 only if symptoms"],
+          "Heart disease and stroke come earlier. Hospital and death rates are about double those of other Australians."),
+        Q("Why can a pulse oximeter mislead in people with darker skin?", "It can overestimate oxygen, hiding low levels", ["It always reads too low", "Nail polish is the only problem", "It reads the heart rate wrong"],
+          "A 2020 NEJM study found hidden low oxygen about three times as often in Black patients as White patients with the same readings."),
+    ],
+    [("Where can I read more?", "Our fact sheet on atypical presentations covers heart attack, stroke, cardiac arrest and sepsis in women, older people and others."),
+     FAQ_ADV],
+    cta='<p class="qk-cta"><b>Want more?</b> Read the <a href="/atypical-presentations/">atypical presentations fact sheet</a> or try today’s <a href="/dxtective/">Dxtective</a> case.</p>')
+
+CONDS3.append(ATYP)

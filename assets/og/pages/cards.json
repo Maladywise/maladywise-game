@@ -153,6 +153,13 @@
 "label": "Condition",
 "title": "Atrial Fibrillation"
 },
+"atypical-presentations": {
+"url": "/atypical-presentations/",
+"key": "68d688b766ec",
+"v": "bf162997",
+"label": "Condition",
+"title": "Not textbook"
+},
 "autism": {
 "url": "/autism/",
 "key": "f807c7cccec8",
