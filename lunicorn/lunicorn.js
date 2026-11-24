@@ -45,10 +45,13 @@
     $("lu-lede").textContent = "Ziggy only comes out on the day of a full moon, where you are. The rest of the time, this page is just a page.";
     $("lu-lock").innerHTML = "🔒 Next full moon: <b>" + d.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" }) + "</b>, all day.";
   }
+  var tick = null;
+  function stopTick() { if (tick) { clearInterval(tick); tick = null; } }
   function card() {
+    stopTick(); window.scrollTo(0, Math.max(0, $("lu-q").getBoundingClientRect().top + window.pageYOffset - 90));
     var c = SET[idx], opts = G.shuffle([c[2]].concat(c[3]));
     $("lu-n").textContent = (idx + 1) + "/" + SET.length;
-    $("lu-q").innerHTML = '<span class="lu-chip" style="background:' + c[0] + '"></span><p class="mg-case">' + G.esc(c[1]) + '</p><p class="mg-q">What’s behind it?</p><div class="mg-opts">' + opts.map(function (o) { return '<button type="button">' + G.esc(o) + "</button>"; }).join("") + '</div><div id="lu-why"></div>';
+    $("lu-q").innerHTML = '<div class="lu-top"><span class="lu-chip" style="background:' + c[0] + '"></span><p class="mg-case">' + G.esc(c[1]) + '</p></div><p class="mg-q">What’s behind it?</p><div class="mg-opts">' + opts.map(function (o) { return '<button type="button">' + G.esc(o) + "</button>"; }).join("") + '</div><div id="lu-why"></div>';
     var bs = $("lu-q").querySelectorAll(".mg-opts button");
     Array.prototype.forEach.call(bs, function (b) {
       b.onclick = function () {
@@ -59,11 +62,17 @@
         var stripe = $("lu-stripe").children[idx]; if (stripe) { stripe.style.background = ok ? c[0] : "transparent"; }
         $("lu-s").textContent = score;
         $("lu-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Magic." : "Not quite.") + "</b> It’s <b>" + G.esc(c[2]) + "</b>. " + G.esc(c[4]) + (c[5] ? ' <a class="lu-more" href="' + G.esc(c[5]) + '" target="_blank" rel="noopener">More on ' + G.esc(c[2]) + (/^https?:/.test(c[5]) ? " ↗" : " ›") + "</a>" : "") + '</p><p style="text-align:right;margin-top:10px"><button class="big" type="button" id="lu-next">' + (idx + 1 < SET.length ? "Next colour" : "See your rainbow") + "</button></p>";
-        $("lu-next").onclick = function () { idx++; if (idx < SET.length) card(); else end(); }; $("lu-next").focus();
+        var nb = $("lu-next"), lbl = nb.textContent, left = 10;
+        function go() { stopTick(); idx++; if (idx < SET.length) card(); else end(); }
+        nb.onclick = go; nb.focus({ preventScroll: true });
+        nb.textContent = lbl + " (" + left + ")";
+        tick = setInterval(function () { left--; if (left <= 0) go(); else nb.textContent = lbl + " (" + left + ")"; }, 1000);
+        $("lu-why").querySelector(".mg-why").onclick = function () { if (tick) { stopTick(); nb.textContent = lbl; } };
       };
     });
   }
   function end() {
+    stopTick();
     G.set(KEY, score); G.flag("lunicorn"); if (window.MW_timedDone) window.MW_timedDone("lunicorn"); if (M.kind !== "rainbow") G.flag("lunicorn-" + M.kind);
     $("lu-game").hidden = true; $("lu-end").hidden = false;
     $("lu-final").textContent = score + "/" + SET.length;
