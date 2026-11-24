@@ -25,7 +25,9 @@
     var parts = head.split(/ and /), okp = parts.every(function (n) { return /^[A-ZÀ-Ž][^\s]*( [A-Za-zÀ-ž.’'-]+)+$/.test(n.trim()); });
     return okp ? parts.map(function (n) { return wlink(n.trim()); }).join(" and ") + G.esc(rest) : G.esc(h);
   }
-  var Q = picks.map(function (it, i) { return { it: it, type: i === 2 || i === 4 ? "mean" : "name" }; });
+  // "What does it mean?" only when the meaning doesn't repeat the eponym (e.g. Wernicke's triad → Wernicke encephalopathy would be a give-away).
+  function echo(it) { var sur = it[0].split(/[’' –-]/)[0].toLowerCase(); return sur.length > 3 && it[3].toLowerCase().indexOf(sur) > -1; }
+  var Q = picks.map(function (it, i) { return { it: it, type: (i === 2 || i === 4) && !echo(it) ? "mean" : "name" }; }), LOG = [];
   var KIND = { sign: "Sign", test: "Test", triad: "Triad", syndrome: "Syndrome" };
   function same(it) { return it[1] === "triad" || it[1] === "syndrome" ? ["triad", "syndrome"] : ["sign", "test"]; }
   function toTop() { // after Next/Finish, bring the new question (or result) back into view, below the sticky header
@@ -53,7 +55,7 @@
         var ok = b.textContent === right;
         Array.prototype.forEach.call(bs, function (x) { x.disabled = true; if (x.textContent === right) x.classList.add("ok"); });
         if (!ok) b.classList.add("no"); else score++;
-        marks.push(ok ? "🟢" : "🔴"); $("nm-s").textContent = score;
+        marks.push(ok ? "🟢" : "🔴"); $("nm-s").textContent = score; LOG[idx] = { it: it, ok: ok, pick: b.textContent, type: q.type };
         var fact = (window.NOMULOUS_FACTS || {})[it[0]];
         $("nm-why").innerHTML = '<div class="mg-why nm-one"><p><b>' + (ok ? "Named it." : "Not quite.") + " " + G.esc(it[0]) + ":</b> " + G.esc(it[3]) + "." + (q.type === "mean" ? " " + G.esc(it[2]) : "") + '</p><p>&#128220; ' + hist(it[4]) + "</p>" + (fact ? '<p>&#128161; ' + G.esc(fact) + "</p>" : "") + acc(it) + "</div>" +
           '<p style="text-align:right;margin-top:10px"><button class="big mg-next" type="button" id="nm-next">' + (idx + 1 < Q.length ? "Next" : "Finish") + "</button></p>";
@@ -70,9 +72,14 @@
     $("nm-game").hidden = true; $("nm-end").hidden = false;
     $("nm-final").textContent = score + "/" + Q.length;
     $("nm-verdict").textContent = VERDICT[score];
+    // Every answer, with what it means (25 Nov 2026)
+    var rv = $("nm-review"); if (!rv) { rv = document.createElement("div"); rv.id = "nm-review"; rv.className = "nm-review"; $("nm-end").appendChild(rv); }
+    rv.innerHTML = '<p class="mg-q" style="margin-top:14px">All the answers</p><ol class="nm-rv">' + LOG.map(function (x) {
+      return "<li><b>" + (x.ok ? "🟢 " : "🔴 ") + G.esc(x.it[0]) + "</b>: " + G.esc(x.it[3]) + "." + (x.ok ? "" : " <small>(you said " + G.esc(x.pick) + ")</small>") + '<br><span class="nm-rd">' + G.esc(x.it[2]) + "</span></li>";
+    }).join("") + "</ol>";
     $("nm-share").onclick = function () { G.share("Nomulous " + DAY + " 🏛️ " + score + "/" + Q.length + "\n" + marks.join("") + "\nName the sign. maladywise.com/nomulous/"); };
   }
-  function start() { idx = 0; score = 0; marks = []; r = G.rng("nomulous-" + DAY); $("nm-s").textContent = 0; $("nm-intro").hidden = true; $("nm-end").hidden = true; $("nm-game").hidden = false; card(); }
+  function start() { idx = 0; score = 0; marks = []; LOG = []; var rv0 = $("nm-review"); if (rv0) rv0.innerHTML = ""; r = G.rng("nomulous-" + DAY); $("nm-s").textContent = 0; $("nm-intro").hidden = true; $("nm-end").hidden = true; $("nm-game").hidden = false; card(); }
   var done = G.get(KEY, null);
   if (done) { $("nm-play").textContent = "Play again"; $("nm-best").innerHTML = "Today: <b>" + done.score + "/5</b> " + (done.marks || ""); }
   $("nm-play").onclick = start; $("nm-again").onclick = start;
