@@ -1240,6 +1240,11 @@
     }).catch(function () { btn.disabled = false; btn.textContent = "Subscribe"; msg.textContent = "Couldn't reach the mail server. Try again in a minute."; });
   });
   window.MW_NL = NL_HTML;
+  // Home page: one slim line instead of the full box (24 Nov 2026); hidden once this browser has subscribed. The after-game nudge stays the main ask.
+  function nlSlim() {
+    if (get("mw-nl-sub")) return "";
+    return NL_HTML.replace('class="nl"', 'class="nl nl-slim"').replace(/<span>The Weekly Dose:[^<]*<\/span>/, "<span>Funny weekly health news, Fridays. Free.</span>").replace("<b>Get Zebra Mail \ud83e\udd93</b>", "<b>Zebra Mail \ud83e\udd93</b>");
+  }
 
   // ---------- seasonal logo icon ----------
   // Each entry: [from, to, icon, title, flags]. MM-DD repeats yearly; YYYY-MM-DD is one-off. Later matches win.
@@ -1676,20 +1681,20 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     // Open timed games are ranked with the other daily puzzles (tiles); closed (stamped Hidden) ones go in Hidden games.
     function hiddenTiles(openOnes) { return timedList(openOnes).map(function (h) { return timedTile(h, openOnes, false, ""); }).join(""); }
     // Read this week (Medical only): newest deep dive, research week, Weekly Dose (data/home-reads.json) + next health day.
-    function readsSlot() { return NORMIE ? "" : '<section class="rds" id="mw-reads" hidden><div class="t3-head"><h2>Read this week</h2><span>Short and evidence based</span></div><div class="rd-grid"></div></section>'; }
+    function readsSlot() { return NORMIE ? "" : '<section class="rds-slim" id="mw-reads" hidden><span class="rd-k">This week</span><span class="rs-l"></span></section>'; }
+    // One slim line (24 Nov 2026): newest deep dive, the Weekly Dose and the next health day, replacing the card grid and the separate news box.
     function fillReads() {
       var box = document.getElementById("mw-reads"); if (!box) return;
-      function card(href, img, k, t, x) { return '<a class="rd" href="' + esc2(href) + '"><img src="/assets/mascots/' + img + '.svg" alt="" width="44" height="44"><span class="rd-k">' + k + "</span><b>" + esc2(t) + "</b><small>" + esc2(x) + "</small></a>"; }
+      function lk(href, ic, t) { return '<a href="' + esc2(href) + '"><span aria-hidden="true">' + ic + "</span> " + esc2(t) + "</a>"; }
       var R = null, D = null, n = 0;
       function done() {
         if (++n < 2) return;
-        var h = "";
-        if (R && R.deep) h += card(R.deep.href, "deepdives", "Deep dive", R.deep.title, R.deep.text);
-        if (R && R.guide) h += card(R.guide.href, "dx", "Health guide", R.guide.title, R.guide.text);
-        try { fillNews(R); } catch (e) {} // the Weekly Dose has its own news box further down
-        if (D) h += card("/days/", "gridectomy", "Health Calendar", "Coming up: " + D.name.replace(/\s*\([^()]+\)\s*$/, ""), nice(D.dates[today.slice(0, 4)].start, { weekday: "long", day: "numeric", month: "short" }) + ". Every health day in one place.");
-        if (!h) return;
-        box.querySelector(".rd-grid").innerHTML = h; box.hidden = false;
+        var a = [];
+        if (R && R.deep) a.push(lk(R.deep.href, "\ud83d\udc27", R.deep.title));
+        if (R && R.dose) a.push(lk(R.dose.href, "\ud83d\uddde\ufe0f", (/weekly dose/i.test(R.dose.title) ? R.dose.title : "Weekly Dose: " + R.dose.title)));
+        if (D) a.push(lk("/days/", "\ud83d\udcc5", D.name.replace(/\s*\([^()]+\)\s*$/, "") + ", " + nice(D.dates[today.slice(0, 4)].start, { day: "numeric", month: "short" })));
+        if (!a.length) return;
+        box.querySelector(".rs-l").innerHTML = a.join(""); box.hidden = false;
       }
       fetch("/data/home-reads.json", { cache: "no-cache" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { R = j; done(); }).catch(done);
       daysSoon().then(function (j) {
@@ -1827,7 +1832,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + arcadeRow() + hiddenSec() + gpsBanner() + readsSlot() + house() + newsSlot() + homeBottom() + modeCta() + NL_HTML +
+        tiles(t3.map(function (o) { return o.g.id; })) + arcadeRow() + hiddenSec() + gpsBanner() + readsSlot() + house() + homeBottom() + modeCta() + nlSlim() +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));

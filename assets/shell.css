@@ -1613,3 +1613,18 @@ html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9
 .mw-chal{margin:10px auto 0;max-width:640px;padding:9px 14px;border-radius:12px;background:color-mix(in srgb,var(--brand) 12%,transparent);color:var(--ink);font-weight:600;font-size:14.5px;text-align:center}
 .mw-a2hs .btn{cursor:pointer;padding:10px 18px;border-radius:999px;border:1.5px solid var(--brand);background:transparent;color:var(--brand);font:600 14px var(--body)}.mw-a2hs .btn.solid{background:var(--brand);color:#fff}
 :root[data-theme="dark"] .mw-a2hs .btn.solid{color:#16121F}
+
+/* Home: slim "This week" line and slim Zebra Mail bar (24 Nov 2026) */
+.rds-slim{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;padding:10px 0;border-top:1px solid var(--line)}
+.rds-slim[hidden]{display:none}
+.rds-slim .rd-k{margin-right:2px}
+.rds-slim .rs-l{display:flex;flex-wrap:wrap;gap:6px}
+.rds-slim .rs-l a{display:inline-flex;align-items:center;gap:4px;min-height:36px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font-size:14px;text-decoration:none;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rds-slim .rs-l a:hover{border-color:var(--brand)}
+.nl.nl-slim{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding:10px 14px;border-radius:14px}
+.nl.nl-slim .nl-txt{flex:1 1 220px;gap:0}
+.nl.nl-slim .nl-txt b{font-size:16px}
+.nl.nl-slim .nl-txt span{font-size:13px}
+.nl.nl-slim .mw-nl{flex:1 1 280px}
+.nl.nl-slim .mw-nl input[type=email],.nl.nl-slim .mw-nl button{padding:8px 14px}
+.nl.nl-slim .nl-msg{flex-basis:100%}
