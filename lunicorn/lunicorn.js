@@ -89,16 +89,14 @@
     early.sort(function (a, b) { return a[0] - b[0]; });
     function nice(t) { return new Date(t).toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "long", year: "numeric" }); }
     function away(t) { if (new Date(t).toDateString() === NOW.toDateString()) return "today"; var dd = Math.ceil((t - now) / 864e5), m = Math.round((t - now) / (30.44 * 864e5)); return dd < 32 ? "in " + dd + " day" + (dd > 1 ? "s" : "") : m < 24 ? "in " + m + " months" : "in " + Math.floor(m / 12) + " years" + (m % 12 ? ", " + (m % 12) + " month" + (m % 12 > 1 ? "s" : "") : ""); }
-    function ics(t, what) {
-      var d = new Date(t), ymd = d.getFullYear() + String(d.getMonth() + 1).padStart(2, "0") + String(d.getDate()).padStart(2, "0"), n = new Date(t + 864e5), ymd2 = n.getFullYear() + String(n.getMonth() + 1).padStart(2, "0") + String(n.getDate()).padStart(2, "0");
-      var body = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Malady Wise//Lunicorn//EN", "BEGIN:VEVENT", "UID:lunicorn-" + ymd + "@maladywise.com", "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g, "").slice(0, 15) + "Z", "DTSTART;VALUE=DATE:" + ymd, "DTEND;VALUE=DATE:" + ymd2, "SUMMARY:" + what + ": Lunicorn is open", "DESCRIPTION:Ziggy’s special set is open all day. https://maladywise.com/lunicorn/", "URL:https://maladywise.com/lunicorn/", "BEGIN:VALARM", "TRIGGER:PT9H", "ACTION:DISPLAY", "DESCRIPTION:Lunicorn is open today", "END:VALARM", "END:VEVENT", "END:VCALENDAR"].join("\r\n");
-      return "data:text/calendar;charset=utf-8," + encodeURIComponent(body);
-    }
-    function row(t, ic, what) { return t ? '<li><span>' + ic + " <b>" + what + "</b>: " + nice(t) + " <small>(" + away(t) + ")</small></span> <a class=\"lu-cal\" download=\"lunicorn-" + G.localDay(new Date(t)) + '.ics" href="' + ics(t, what) + '">📅 Add to calendar</a></li>' : ""; }
-    box.innerHTML = "<h2>Next special moons</h2><ul>" + row(blue, "🔵", "Blue moon") + row(blood, "🔴", "Blood moon") + (early[0] ? row(early[0][0], "✨", "Next early chance: " + early[0][1]) : "") + "</ul><p class=\"lu-next-note\">Blue and blood moon sets each earn a secret badge.</p>";
-    var lock = $("lu-lock"); lock.parentNode.insertBefore(box, lock.nextSibling);
+    // Compact (25 Nov 2026): one short list under the Play button, no calendar links, so the intro fits on a phone.
+    function short(t) { return new Date(t).toLocaleDateString("en-AU", { day: "numeric", month: "short", year: "numeric" }); }
+    function row(t, ic, what) { return t ? "<li>" + ic + " <b>" + what + "</b> " + short(t) + " <small>(" + away(t) + ")</small></li>" : ""; }
+    var e0 = early[0] && away(early[0][0]) !== "today" ? early[0] : null;
+    box.innerHTML = '<p class="lu-next-h">Next special moons</p><ul>' + (e0 ? row(e0[0], "✨", e0[1].replace(/ \(.*\)/, "")) : "") + row(blood, "🔴", "Blood moon") + row(blue, "🔵", "Blue moon") + "</ul>";
+    var play = $("lu-best"); play.parentNode.insertBefore(box, play.nextSibling);
     var st = document.createElement("style");
-    st.textContent = ".lu-next{margin:18px 0 0;padding:14px 16px;border:1px solid var(--line,#E7E0F2);border-radius:14px}.lu-next h2{margin:0 0 8px;font-size:17px}.lu-next ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.lu-next li{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;justify-content:space-between}.lu-next small{opacity:.75}.lu-cal{font-size:13px;font-weight:600;white-space:nowrap}.lu-next-note{margin:10px 0 0;font-size:13px;opacity:.8}";
+    st.textContent = ".lu-next{margin:12px auto 0;max-width:420px;font-size:13px;opacity:.9}.lu-next-h{margin:0 0 4px;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.8}.lu-next ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}.lu-next li{margin:0}.lu-next small{opacity:.75}";
     document.head.appendChild(st);
   })();
   $("lu-play").onclick = function () { if (!$("lu-play").disabled) start(); };
