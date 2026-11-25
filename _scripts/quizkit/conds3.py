@@ -370,3 +370,37 @@ ATYP = C("atypical-presentations", "Atypical Presentations", "🕵️",
     cta='<p class="qk-cta"><b>Want more?</b> Read the <a href="/atypical-presentations/">atypical presentations fact sheet</a> or try today’s <a href="/dxtective/">Dxtective</a> case.</p>')
 
 CONDS3.append(ATYP)
+
+OFFL = C("off-label-medicines", "Off-Label Medicines", "💊",
+    "Free quiz on off-label medicines: heroin for pain, blood pressure pills for hair, and which popular off-label uses failed proper trials.",
+    "Twelve questions, easy to hard, on medicines with surprising second lives, and which ones the evidence backs.",
+    [
+        Q("What does ‘off-label’ mean?", "Using a medicine outside its officially approved uses", ["Using a medicine past its expiry date", "Using a generic instead of the brand", "Using a medicine bought from overseas"],
+          "Different condition, dose, age group or route from the approved product information. Legal with a good reason and consent."),
+        Q("Which drug began as an angina treatment before its famous side effect changed its career?", "Sildenafil", ["Finasteride", "Alprostadil", "Isosorbide mononitrate"],
+          "Developed for chest pain in the 1990s. It’s also used for pulmonary arterial hypertension."),
+        Q("Minoxidil was first used as…", "A strong blood pressure tablet", ["An acne cream", "A thyroid medicine", "An anti-nausea drug"],
+          "Hair growth was a side effect. Low doses by mouth are now used off-label for hair loss."),
+        Q("In which country is diamorphine (medical heroin) a licensed painkiller?", "The United Kingdom", ["Australia", "Japan", "New Zealand"],
+          "It’s licensed for severe pain after surgery, heart attacks and at the end of life. Heroin is prohibited in Australia."),
+        Q("Which diuretic is used off-label for hormonal acne in women?", "Spironolactone", ["Furosemide", "Hydrochlorothiazide", "Indapamide"],
+          "The 2023 SAFA trial showed better acne quality of life than placebo. Not for use in pregnancy."),
+        Q("Propranolol is used off-label for performance nerves because it…", "Blunts the racing heart and tremor", ["Sedates the brain like a sleeping pill", "Lowers cortisol levels", "Boosts serotonin quickly"],
+          "It blocks adrenaline’s effects on the body, not the worry itself. Avoid with asthma."),
+        Q("Oral tranexamic acid is used off-label for which skin problem?", "Melasma", ["Psoriasis", "Rosacea", "Vitiligo"],
+          "About 12 weeks of tablets lightens patches. Not for people with a history of blood clots."),
+        Q("A large 2018 trial of prazosin for PTSD nightmares in 304 veterans found…", "No benefit over placebo", ["Nightmares halved", "It worked only in women", "It worsened blood pressure in most"],
+          "Earlier small trials looked positive. Bigger trials often shrink or erase early wins."),
+        Q("Low-dose amitriptyline helped which condition in the 2023 ATLANTIS trial?", "Irritable bowel syndrome", ["Migraine", "Insomnia in older adults", "Restless legs"],
+          "10–30 mg at night improved IBS symptoms in UK primary care."),
+        Q("Which non-hormonal options reduce menopausal hot flushes?", "Gabapentin and clonidine", ["Paracetamol and ibuprofen", "Metformin and statins", "Antihistamines and decongestants"],
+          "Useful when hormone therapy isn’t suitable. Paroxetine and some newer drugs also help."),
+        Q("Thalidomide is now approved again for…", "Myeloma, under strict pregnancy prevention", ["Morning sickness, at lower doses", "Insomnia in older people", "Nothing: it’s banned worldwide"],
+          "Its birth-defect disaster led to modern drug safety laws; it returned for myeloma and a leprosy complication."),
+        Q("Why might an off-label prescription cost more in Australia?", "The PBS usually subsidises only approved uses", ["Off-label medicines carry a special tax", "Pharmacists must compound every one", "Off-label scripts expire after a week"],
+          "Off-label use is often private, at the full price. Ask before you fill it."),
+    ],
+    [("Where can I read more?", "See our off-label medicines fact sheet for the evidence behind each use."), FAQ_ADV],
+    cta='<p class="qk-cta"><b>Want more?</b> Read the <a href="/off-label-medicines/">off-label medicines fact sheet</a> or try today’s <a href="/dxtective/">Dxtective</a> case.</p>')
+
+CONDS3.append(OFFL)
