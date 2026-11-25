@@ -171,7 +171,19 @@ window.MW_secrets = function (checkBadges, esc2, get, set, mwFullNear, root, syd
       tiny: function () { pageFx("mw-tiny", 3000); pill("🔬 Honey, I shrunk the website.", 3000); },
       giant: function () { pageFx("mw-giant", 3000); pill("🔭 Fee-fi-fo-fum. That’s a big website.", 3000); },
       disco: function () { pageFx("mw-disco", 4000); rain(["🪩", "🕺", "💃"], 14, { up: true, ms: 3200, stay: 4500 }); pill("🪩 Disco! 120 beats per minute, perfect for CPR.", 3800); },
-      quiet: function () { if (going) return; going = true; flag("quiet"); set("mw-open-quiet", (function(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();})()); pageFx("mw-flicker", 2000); shake(10); rain("\ud83d\udea8", 24, { spread: 900, stay: 2400 }); pill("\ud83d\udea8 You said the Q word. Every ambulance in the state is now on its way\u2026", 2400); setTimeout(function () { location.href = "/triagic/"; }, 2200); },
+      quiet: function () { if (going) return; going = true; flag("quiet"); set("mw-open-quiet", (function(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();})()); pageFx("mw-flicker", 2000); shake(10); rain("\ud83d\udea8", 24, { spread: 900, stay: 2400 }); pill("\ud83d\udea8 You said the Q word. Every ambulance in the state is now on its way\u2026", 2400);
+        // 25 Nov 2026: unlock only, never auto-start. Swap any Hidden tile for a live one and offer a link.
+        setTimeout(function () {
+          going = false;
+          Array.prototype.forEach.call(document.querySelectorAll(".tl-hid"), function (t) {
+            if (!/^Triagic/.test(t.getAttribute("aria-label") || "")) return;
+            var a = document.createElement("a"); a.className = "tl"; a.href = "/triagic/"; a.setAttribute("data-g", "triagic"); a.setAttribute("style", t.getAttribute("style") || "");
+            a.innerHTML = t.innerHTML; var st = a.querySelector(".tl-stamp"); if (st) st.remove(); var sm = a.querySelector("small"); if (sm) sm.textContent = "Open now";
+            t.parentNode.replaceChild(a, t);
+          });
+          if (!/^\/triagic\//.test(location.pathname)) pill("\ud83d\udea8 Triagic is open for you today. <a href=\"/triagic/\">Go to the waiting room \u203a</a>", 7000);
+          else location.reload();
+        }, 2300); },
       lunar: function () { if (going) return; going = true; flag("lunar"); set("mw-open-lunar", (function(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();})()); rain(["\ud83c\udf15", "\ud83e\udd84", "\u2728"], 24, { stay: 2400 }); pill("\ud83c\udf15 Lunar. Ziggy has turned into something\u2026", 2400); setTimeout(function () { location.href = "/lunicorn/"; }, 2200); },
       toxic: function () { if (going) return; going = true; flag("toxic"); pageFx("mw-flicker", 1600); rain(["\u2623\ufe0f", "\ud83e\uddea", "\ud83c\udf44"], 24, { stay: 2400 }); pill("\u2623\ufe0f Toxic word detected. Toxiquest is open to you.", 2400); setTimeout(function () { location.href = "/toxiquest/"; }, 2200); },
       // older secrets

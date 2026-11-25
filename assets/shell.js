@@ -2453,7 +2453,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
   // Secrets and easter eggs live in /assets/secrets.js (24 Nov 2026), loaded once the page is idle so first paint is lighter.
   (function () {
     function go() {
-      var s = document.createElement("script"); s.src = "/assets/secrets.js?v=2"; s.async = true;
+      var s = document.createElement("script"); s.src = "/assets/secrets.js?v=3"; s.async = true;
       s.onload = function () { try { window.MW_secrets(checkBadges, esc2, get, set, mwFullNear, root, sydToday); } catch (e) {} };
       document.head.appendChild(s);
     }
