@@ -34,9 +34,30 @@
     if (S.block || S.open || S.over) return;
     var p = S.wait.filter(function (x) { return x.id === id; })[0]; if (!p) return;
     S.open = p; var c = p.c, opts = G.shuffle([c[4]].concat(c[5]));
-    $("tr-case").innerHTML = '<span class="mg-tag">Cat ' + c[2] + '</span><p class="mg-case"><span class="tr-big">' + c[0] + "</span> " + G.esc(c[1]) + '</p><p class="mg-q">' + G.esc(c[3]) + '</p><div class="mg-opts">' + opts.map(function (o) { return '<button type="button">' + G.esc(o) + "</button>"; }).join("") + '</div><div id="tr-why"></div>';
+    $("tr-case").innerHTML = '<span class="mg-tag">Cat ' + c[2] + '</span><p class="mg-case"><span class="tr-big">' + c[0] + "</span> " + G.esc(c[1]) + '</p><p class="mg-q">' + G.esc(c[3]) + '</p><div class="mg-opts">' + opts.map(function (o) { return '<button type="button">' + G.esc(o) + "</button>"; }).join("") + '</div><div class="tr-life" id="tr-life"><button type="button" id="tr-skip">&#9197; Skip for now</button><button type="button" id="tr-esc">&#128222; Call consultant</button><span id="tr-lifen"></span></div><div id="tr-why"></div>';
     $("tr-case").hidden = false; $("tr-room").hidden = true;
     var bs = $("tr-case").querySelectorAll(".mg-opts button");
+    // 26 Nov 2026: lifelines, one per minute (shared). Skip sends them back to the waiting room (their wait keeps ticking);
+    // the consultant gives the answer: no points, no penalty.
+    function lifeLeft() { return S.lifeAt == null ? 0 : Math.max(0, Math.ceil((S.lifeAt + 60000 - performance.now()) / 1000)); }
+    function lifePaint() {
+      var n = lifeLeft(), sk = $("tr-skip"), es = $("tr-esc"); if (!sk) return;
+      sk.disabled = es.disabled = n > 0 || !!$("tr-back");
+      $("tr-lifen").textContent = n > 0 ? "Next call in " + n + "s" : "One per minute";
+      if (n > 0 && !$("tr-back")) setTimeout(lifePaint, 1000);
+    }
+    function lifeUsed() { S.lifeAt = performance.now(); }
+    lifePaint();
+    $("tr-skip").onclick = function () { if (lifeLeft()) return; lifeUsed(); G.toast("⏭ Back to the waiting room. Their clock is still ticking."); closeCase(); };
+    $("tr-esc").onclick = function () {
+      if (lifeLeft()) return; lifeUsed();
+      Array.prototype.forEach.call(bs, function (x) { x.disabled = true; if (x.textContent === c[4]) x.classList.add("ok"); });
+      S.seen++; S.wait = S.wait.filter(function (x) { return x !== p; });
+      (S.log = S.log || []).push({ c: c, pick: "Asked the consultant", ok: null });
+      $("tr-life").hidden = true;
+      $("tr-why").innerHTML = '<p class="mg-why"><b>📞 Consultant: “' + G.esc(c[4]) + '.”</b> ' + G.esc(c[6]) + '</p><p style="text-align:right;margin-top:10px"><button class="big" type="button" id="tr-back">Next patient</button></p>';
+      $("tr-back").onclick = closeCase; $("tr-back").focus(); draw();
+    };
     Array.prototype.forEach.call(bs, function (b) {
       b.onclick = function () {
         var ok = b.textContent === c[4];
@@ -45,6 +66,7 @@
         if (ok) { var bonus = Math.max(0, Math.round((1 - p.w / LIMIT[TC(c)]) * 100)); S.score += PTS[TC(c)] * (p.bad ? 0.5 : 1) + bonus; S.saved++; S.chaos = Math.max(0, S.chaos - 6); }
         else { b.classList.add("no"); S.wrong++; S.chaos += 10; if (TC(c) === 1) codeBlue(); else if (Math.random() < 0.4) codeBlack(); }
         (S.log = S.log || []).push({ c: c, pick: b.textContent, ok: ok });
+        if ($("tr-life")) $("tr-life").hidden = true;
         $("tr-why").innerHTML = '<p class="mg-why"><b>' + (ok ? "Nailed it." : "Not quite: " + G.esc(c[4]) + ".") + "</b> " + G.esc(c[6]) + '</p><p style="text-align:right;margin-top:10px"><button class="big" type="button" id="tr-back">Next patient</button></p>';
         $("tr-back").onclick = closeCase; $("tr-back").focus();
         draw();
@@ -141,8 +163,8 @@
     $("tr-ebest").textContent = S.score > best ? "New personal best!" : "Your best: " + Math.max(best, S.score).toLocaleString("en-AU");
     var L = S.log || [], rv = $("tr-review"); if (!rv) { rv = document.createElement("div"); rv.id = "tr-review"; rv.className = "tr-rev"; $("tr-end").appendChild(rv); }
     rv.innerHTML = L.length ? '<p class="mg-q" style="margin-top:14px">Your shift, patient by patient</p>' + L.map(function (x, i) {
-      return '<details class="tr-rv' + (x.ok ? " ok" : " no") + '"><summary><span>' + (x.ok ? "&#9989;" : "&#10060;") + "</span> " + x.c[0] + " " + G.esc(x.c[3]) + "</summary>" +
-        '<p class="mg-case">' + G.esc(x.c[1]) + "</p><p><b>Answer:</b> " + G.esc(x.c[4]) + (x.ok ? "" : "<br><b>You said:</b> " + G.esc(x.pick)) + '</p><p class="mg-why">' + G.esc(x.c[6]) + "</p></details>";
+      return '<details class="tr-rv' + (x.ok ? " ok" : x.ok === null ? "" : " no") + '"><summary><span>' + (x.ok ? "&#9989;" : x.ok === null ? "&#128222;" : "&#10060;") + "</span> " + x.c[0] + " " + G.esc(x.c[3]) + "</summary>" +
+        '<p class="mg-case">' + G.esc(x.c[1]) + "</p><p><b>Answer:</b> " + G.esc(x.c[4]) + (x.ok ? "" : x.ok === null ? "<br><b>You:</b> asked the consultant" : "<br><b>You said:</b> " + G.esc(x.pick)) + '</p><p class="mg-why">' + G.esc(x.c[6]) + "</p></details>";
     }).join("") : "";
     $("tr-share").onclick = function () { G.share("Triagic 🚨 " + (survived ? "Survived the shift" : "Chaos won") + "\n" + S.score.toLocaleString("en-AU") + " points, " + S.saved + "/" + S.seen + " sorted\nYou said the Q word, didn’t you? maladywise.com"); };
   }
