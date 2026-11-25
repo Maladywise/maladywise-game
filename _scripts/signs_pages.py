@@ -18,7 +18,13 @@ SENK = {key(v["test"]): v for v in SEN.values() if v.get("kind") == "sign"}
 
 # ---------- drawing kit (viewBox 0 0 320 220) ----------
 INK, SKIN, MARK, ARR = "#2B2340", "#F6E3D3", "#E8175D", "#4A3480"
-def svg(body, label): return '<svg viewBox="0 0 320 252" role="img" aria-label="%s" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="252" rx="14" fill="#FBF8F3"/>%s</svg>' % (E(label), body)
+def svg(body, label, cap=True):
+    # 26 Nov 2026: bottom captions are real text under the drawing (WCAG 1.4.5: no images of text), set close to it
+    # (Gestalt proximity), and the drawing area is trimmed so padding is even on all sides.
+    caps = re.findall(r"<!--CAP:(.*?)-->", body); body = re.sub(r"<!--CAP:.*?-->", "", body)
+    out = '<svg viewBox="0 0 320 216" role="img" aria-label="%s" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="216" rx="14" fill="#FBF8F3"/>%s</svg>' % (E(label), body)
+    if cap and caps: out += '<figcaption>%s</figcaption>' % "<br>".join(caps)
+    return out
 def dot(x, y, r=9): return '<circle cx="%d" cy="%d" r="%d" fill="%s" stroke="#fff" stroke-width="2.5"/><circle cx="%d" cy="%d" r="%d" fill="none" stroke="%s" stroke-width="2" opacity=".45"><animate attributeName="r" values="%d;%d;%d" dur="1.6s" repeatCount="indefinite"/></circle>' % (x, y, r, MARK, x, y, r + 5, MARK, r + 3, r + 10, r + 3)
 def arrow(x1, y1, x2, y2, col=ARR, w=4):
     import math
@@ -28,7 +34,7 @@ def arrow(x1, y1, x2, y2, col=ARR, w=4):
 def label(x, y, t, anchor="middle", size=12, col=INK):
     # 26 Nov 2026: captions near the bottom move into their own band below the drawing (no overlap),
     # and every label gets a soft halo so it stays readable over lines.
-    if y >= 196: y = 234 + round((y - 200) * 0.9)
+    if y >= 196: return "<!--CAP:%s-->" % E(t)
     return '<text x="%d" y="%d" text-anchor="%s" font-family="Poppins,Arial,sans-serif" font-size="%d" font-weight="600" fill="%s" stroke="#FBF8F3" stroke-width="5" stroke-linejoin="round" paint-order="stroke">%s</text>' % (x, y, anchor, size, col, E(t))
 def torso(extra=""):
     b = '<path d="M95 20 Q160 8 225 20 L240 120 Q250 175 228 205 L92 205 Q70 175 80 120 Z" fill="%s" stroke="%s" stroke-width="2.5"/>' % (SKIN, INK)
@@ -145,7 +151,7 @@ HEAD = TPL[:TPL.index("<main")]
 HEAD = re.sub(r'<meta property="og:image[^>]*>\n?|<meta name="twitter:image[^>]*>\n?', "", HEAD)
 HEAD = re.sub(r'<script type="application/ld\+json".*?</script>\n?', "", HEAD, flags=re.S)
 HEAD = HEAD.replace('<link rel="stylesheet" href="/tools/calckit/calc.css?v=2">\n', "")
-CSS = """<style>.sg-fig{margin:10px 0 18px;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:16px;padding:8px}.sg-fig svg{display:block;width:100%;height:auto;max-width:520px;margin:0 auto}
+CSS = """<style>.sg-fig{margin:10px 0 18px;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:16px;padding:8px}.sg-fig svg{display:block;width:100%;height:auto;max-width:520px;margin:0 auto}.sg-fig figcaption{max-width:520px;margin:10px auto 4px;padding:0 8px;text-align:center;font:600 15px/1.4 var(--body);color:var(--ink,#2B2340)}
 .sg-facts{display:grid;gap:10px;margin:0 0 16px}.sg-facts div{background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:12px 14px}.sg-facts dt{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brand,#4A3480)}.sg-facts dd{margin:3px 0 0;font-size:16px;line-height:1.5}
 .sg-hub{list-style:none!important;padding:0!important;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.sg-hub li{margin:0!important}.sg-hub a{display:block;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:8px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;text-align:center}.sg-hub svg{display:block;width:100%;height:auto;margin-bottom:4px}
 .sg-play{display:inline-block;margin:6px 0 14px;font-weight:600}</style>"""
@@ -181,6 +187,6 @@ for n in ORDER:
 hub = ('<p class="meta"><a href="/medical-games/">Learn</a> · Eponymous signs</p>\n<h1>Eponymous signs</h1>\n'
        '<p class="lede">Medicine’s famous named signs and tests, each with a simple diagram, what it means, who it’s named after and how accurate it really is.</p>\n'
        '<p><a class="sg-play" href="/nomulous/">&#129408; Test yourself with Nomulous</a></p>\n<ul class="sg-hub">' +
-       "".join('<li><a href="/signs/%s/">%s%s</a></li>' % (slug(n), svg(D[n], n), E(n)) for n in ORDER) + "</ul>")
+       "".join('<li><a href="/signs/%s/">%s%s</a></li>' % (slug(n), svg(D[n], n, False), E(n)) for n in ORDER) + "</ul>")
 page("signs/", "Eponymous Medical Signs Explained, with Diagrams", "Murphy’s, McBurney’s, Babinski, Kernig, Spurling, Allen’s and more: famous medical signs explained simply with diagrams, history and accuracy.", hub)
 print("signs pages:", len(ORDER) + 1)

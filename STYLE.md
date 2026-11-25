@@ -9,6 +9,14 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Don't mention Normie mode anywhere on the site, in X posts, the Weekly Dose or emails.
 - Mergeon is LIVE (an arcade game), not parked: treat any "Mergeon (parked)" wording in a prompt as out of date.
 
+## Design and readability rules (owner's request, 26 Nov 2026; apply to every new page, diagram and printable, and fix old ones when touched)
+- Diagrams: labels never overlap outlines or each other; give every SVG label a halo (stroke in the background colour, paint-order: stroke). Keep even padding on all sides of the drawing.
+- Captions are real HTML text in a <figcaption>, 8–12px under the image, never baked into the picture (WCAG 1.4.5, images of text). Related things sit close together, unrelated things further apart (Gestalt proximity).
+- Spacing scale: multiples of 4/8px. Body text 16px+ on screen, line-height 1.45–1.6, lines about 50–75 characters. Headings clearly larger than body, but not shouting.
+- Bold the scannable label at the start of list items (e.g. "Snoring: …"), key numbers in scoring keys, and nothing else.
+- Printables and any print view fit one A4 page, small brand line on top, heading 14–16pt, body 10–11pt, never faint grey text.
+- Check every new visual at 390px and print before publishing; look at the screenshot.
+
 ## No lazy psychogenic labels (owner's rule, 25 Nov 2026; applies to EVERY game, case, quiz, post and page)
 - Never stereotype patients, especially women and girls, with labels such as anxiety, panic, hyperventilation, "stress", FND, IBS, globus, functional or somatic symptoms, health anxiety or "hysteria" as a shortcut that dismisses them.
 - If one of these is the answer, the case must show the work-up that earned it: red flags asked, the relevant tests done and normal (e.g. ECG, glucose, ketones, D-dimer/Wells, coeliac serology, FBC, iron, pregnancy test), and the serious differentials named and excluded. Put that evidence in the clues or stem, not just the explanation.
