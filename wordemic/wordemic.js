@@ -5,7 +5,7 @@
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "16";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "17";
   var ROWS = 6, LEN = 5, NUMW = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
   // Normie mode: everyday words from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Wordemic (Normie)" : "Wordemic";
