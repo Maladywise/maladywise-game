@@ -1371,7 +1371,11 @@
   function betaTags() {
     if (!BETA) return;
     var path = location.pathname;
-    var betaGame = /^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest)\//.test(path); // new games still in testing
+    // new games still in testing; each drops its Beta tag on its launch day (local date)
+    var LAUNCH = { nomulous: "", toxiquest: "", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" };
+    var gm = path.match(/^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest)\//), dn = new Date();
+    var today = dn.getFullYear() + "-" + ("0" + (dn.getMonth() + 1)).slice(-2) + "-" + ("0" + dn.getDate()).slice(-2);
+    var betaGame = !!gm && !(LAUNCH[gm[1]] && today >= LAUNCH[gm[1]]);
     if (!betaGame && (path === "/" || window.MW_curGame || /^\/(about|privacy|disclaimer|contact|normie|arcade)\//.test(path))) return;
     var h1 = document.querySelector("main h1, h1"); if (!h1 || h1.querySelector(".mw-beta") || document.querySelector(".beta")) return;
     h1.insertAdjacentHTML("beforeend", ' <i class="mw-beta" title="Still being built and checked. Spot something? Tell us via Contact.">Beta</i>');
