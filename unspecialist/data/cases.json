@@ -576,6 +576,15 @@
     "text": "Wonders about her thyroid (her mum has hypothyroidism). Expects blood tests."
    },
    {
+    "id": "busymum",
+    "g": "h",
+    "label": "\"Being tired is normal with young kids.\"",
+    "min": 1,
+    "text": "\"Yeah, probably.\"",
+    "flag": "harm",
+    "why": "Tiredness has causes. Hers was iron deficiency from heavy periods."
+   },
+   {
     "id": "else",
     "g": "h",
     "label": "\"Anything else?\"",
@@ -1213,6 +1222,15 @@
     "text": "About 10 flushes a day. Wakes drenched most nights."
    },
    {
+    "id": "age",
+    "g": "h",
+    "label": "\"Spotting is normal at your age.\"",
+    "min": 1,
+    "text": "She seems relieved.",
+    "flag": "harm",
+    "why": "Bleeding after menopause needs investigating for endometrial cancer."
+   },
+   {
     "id": "pmh",
     "g": "h",
     "label": "Past history",
@@ -1366,6 +1384,15 @@
     "label": "Mood and interest",
     "min": 2,
     "text": "Low most days. Stopped going to training. Eating less."
+   },
+   {
+    "id": "toughen",
+    "g": "h",
+    "label": "\"Everyone has bad patches. Try to get out more.\"",
+    "min": 1,
+    "text": "\"Yeah… I'll try.\"",
+    "flag": "harm",
+    "why": "Minimising misses depression and suicide risk. Ask directly."
    },
    {
     "id": "sleephyg",
@@ -1845,6 +1872,15 @@
     "key": true,
     "text": "No record of a TSH test in 3 years.",
     "why": "People with Down syndrome have a much higher risk of hypothyroidism, rising with age."
+   },
+   {
+    "id": "downs",
+    "g": "h",
+    "label": "\"Slowing down is part of Down syndrome.\"",
+    "min": 1,
+    "text": "The support worker nods.",
+    "flag": "harm",
+    "why": "Diagnostic overshadowing: his hypothyroidism was treatable."
    },
    {
     "id": "behaviour",
@@ -3066,6 +3102,15 @@
     "text": "On her centiles."
    },
    {
+    "id": "boys",
+    "g": "h",
+    "label": "\"Kids talk when they're ready.\"",
+    "min": 1,
+    "text": "Josh looks relieved.",
+    "flag": "harm",
+    "why": "Waiting and seeing delays hearing tests and autism assessment."
+   },
+   {
     "id": "wait",
     "g": "h",
     "label": "Reassure: \"some kids talk late\"",
@@ -3934,6 +3979,15 @@
     "key": true
    },
    {
+    "id": "age2",
+    "g": "h",
+    "label": "\"That's just his dementia getting worse.\"",
+    "min": 1,
+    "text": "The daughter looks unsure.",
+    "flag": "harm",
+    "why": "Sudden confusion is delirium until proven otherwise."
+   },
+   {
     "id": "ice",
     "g": "h",
     "label": "Ideas, concerns, expectations",
@@ -4417,6 +4471,15 @@
     "why": "Trauma symptoms are common and often present as physical complaints."
    },
    {
+    "id": "stressonly",
+    "g": "h",
+    "label": "\"Headaches like this are just stress. Try to relax.\"",
+    "min": 1,
+    "text": "She looks at her husband and stops talking.",
+    "flag": "harm",
+    "why": "Explore trauma safely with an interpreter, rather than dismissing it."
+   },
+   {
     "id": "ice",
     "g": "h",
     "label": "Ideas, concerns, expectations",
@@ -4577,6 +4640,15 @@
     "why": "Non-fatal strangulation is a strong predictor of later homicide."
    },
    {
+    "id": "clumsy",
+    "g": "h",
+    "label": "\"You must be a bit clumsy.\"",
+    "min": 1,
+    "text": "She laughs nervously and pulls her sleeve down.",
+    "flag": "harm",
+    "why": "Accepting the story closes the door on disclosure."
+   },
+   {
     "id": "ice",
     "g": "h",
     "label": "Ideas, concerns, expectations",
@@ -4710,6 +4782,15 @@
     "label": "Symptoms",
     "min": 1,
     "text": "None."
+   },
+   {
+    "id": "worryless",
+    "g": "h",
+    "label": "\"Worry less; it's probably nothing.\"",
+    "min": 1,
+    "text": "\"OK…\"",
+    "flag": "harm",
+    "why": "A contact needs testing and treatment, not reassurance."
    },
    {
     "id": "prep",
@@ -4866,6 +4947,15 @@
     "min": 2,
     "text": "Wants the tummy aches to stop. Scared Mum will find out about the bullying.",
     "flag": "ice"
+   },
+   {
+    "id": "head",
+    "g": "h",
+    "label": "\"Tests are normal, so it's all in your head.\"",
+    "min": 1,
+    "text": "She shuts down and won't talk.",
+    "flag": "harm",
+    "why": "Functional pain is real. Normal tests rule things out; they don't make pain imaginary."
    },
    {
     "id": "else",
@@ -5746,6 +5836,15 @@
     "flag": "ice"
    },
    {
+    "id": "label",
+    "g": "h",
+    "label": "Write \"anxious\" in the notes",
+    "min": 1,
+    "text": "Saved. Every future doctor will read it first.",
+    "flag": "harm",
+    "why": "Labels stick and shape every later consult. Record findings, not judgements."
+   },
+   {
     "id": "hx",
     "g": "h",
     "label": "When does it happen?",
@@ -5769,6 +5868,15 @@
     "min": 2,
     "text": "\"Heavy periods. I'm tired all the time.\"",
     "flag": "else"
+   },
+   {
+    "id": "yoga",
+    "g": "h",
+    "label": "\"Have you tried yoga and breathing exercises?\"",
+    "min": 1,
+    "text": "She sighs. \"That's what the last doctor said.\"",
+    "flag": "harm",
+    "why": "Dismissal dressed as advice. Examine first: the stand test found POTS."
    },
    {
     "id": "stand",
@@ -5921,6 +6029,15 @@
     "why": "Diet doesn't explain sweating and jaw pain."
    },
    {
+    "id": "stress",
+    "g": "h",
+    "label": "\"It's probably just stress. Busy week?\"",
+    "min": 1,
+    "text": "\"I suppose so…\" She looks greyer.",
+    "flag": "harm",
+    "why": "A heart attack without chest pain is common in women and people with diabetes. ECG first."
+   },
+   {
     "id": "obs",
     "g": "e",
     "label": "Pulse, BP, sats, look at her",
@@ -6041,12 +6158,30 @@
     "why": "Impact on life matters more than how ‘normal’ the bleeding looks."
    },
    {
+    "id": "google",
+    "g": "h",
+    "label": "\"Dr Google isn't a medical degree.\"",
+    "min": 1,
+    "text": "\"I just read about endometriosis…\"",
+    "flag": "harm",
+    "why": "Her research was right. Explore what worried her instead of shutting it down."
+   },
+   {
     "id": "else",
     "g": "h",
     "label": "\"Anything else?\"",
     "min": 2,
     "text": "\"My sister has endometriosis.\"",
     "flag": "else"
+   },
+   {
+    "id": "normal",
+    "g": "h",
+    "label": "\"Period pain is normal. Some women just feel it more.\"",
+    "min": 1,
+    "text": "She goes quiet. \"OK. Sorry.\"",
+    "flag": "harm",
+    "why": "Pain that stops life isn't normal. This line is why endometriosis takes 6.5 years to diagnose."
    },
    {
     "id": "consent",
@@ -6161,6 +6296,15 @@
     "flag": "ice"
    },
    {
+    "id": "bloodsnormal",
+    "g": "h",
+    "label": "\"Your bloods last year were normal.\"",
+    "min": 1,
+    "text": "He nods, reassured.",
+    "flag": "harm",
+    "why": "Old results don't explain new symptoms."
+   },
+   {
     "id": "red",
     "g": "h",
     "label": "Red flags: night pain, weight, bladder, bowels, legs",
@@ -6168,6 +6312,15 @@
     "text": "Pain worse at night, lying down. Lost 6 kg. Legs feel heavy; a bit unsteady on the stairs.",
     "key": true,
     "why": "New features in a ‘known’ back pain are the signal."
+   },
+   {
+    "id": "rabbit",
+    "g": "h",
+    "label": "\"Let's not go down a rabbit hole. It's your usual back.\"",
+    "min": 1,
+    "text": "\"Right. Sorry, doc.\"",
+    "flag": "harm",
+    "why": "‘Frequent attender’ thinking misses new red flags."
    },
    {
     "id": "else",
