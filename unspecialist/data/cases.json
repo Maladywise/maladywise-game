@@ -7144,5 +7144,839 @@
     "url": "https://wiki.cancer.org.au/australia/Guidelines:Melanoma"
    }
   ]
+ },
+ {
+  "id": "gaz",
+  "room": "mind",
+  "cu": "Addiction",
+  "name": "Gaz",
+  "age": 52,
+  "who": "Known heavy drinker. Reception: ‘drunk again, wants a script’.",
+  "blurb": "‘Drunk again’",
+  "opening": "\"Just need me tablets, doc.\" He's unsteady and keeps looking past you.",
+  "actions": [
+   {
+    "id": "sober",
+    "g": "h",
+    "label": "Ask him to come back when he's sober",
+    "min": 1,
+    "text": "He shuffles out. Found confused at the bus stop that night.",
+    "flag": "harm",
+    "why": "Confusion plus unsteadiness in a heavy drinker can be Wernicke's: a medical emergency."
+   },
+   {
+    "id": "drink",
+    "g": "h",
+    "label": "When did he last drink? How much, how long?",
+    "min": 2,
+    "text": "Last drink 2 days ago. Ran out of money. Hasn't eaten properly for weeks.",
+    "key": true,
+    "why": "He may not be drunk at all."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks he's ‘just a bit shaky’. Wants his blood pressure tablets.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Seeing double since yesterday.\"",
+    "flag": "else"
+   },
+   {
+    "id": "neuro",
+    "g": "e",
+    "label": "Eyes, gait, orientation",
+    "min": 3,
+    "text": "Nystagmus, can't walk heel to toe, doesn't know the month.",
+    "key": true,
+    "why": "Confusion, ataxia and eye signs: Wernicke's encephalopathy until proven otherwise."
+   },
+   {
+    "id": "bal",
+    "g": "t",
+    "label": "Breath alcohol",
+    "min": 1,
+    "text": "0.00.",
+    "key": true,
+    "why": "He's not intoxicated. Something else explains this."
+   },
+   {
+    "id": "bgl",
+    "g": "t",
+    "label": "Finger-prick glucose",
+    "min": 1,
+    "text": "4.6 mmol/L.",
+    "key": true
+   },
+   {
+    "id": "sweet",
+    "g": "t",
+    "label": "Give him a sweet drink before anything else",
+    "min": 1,
+    "text": "He drinks it.",
+    "flag": "harm",
+    "why": "Glucose before thiamine can worsen Wernicke's. Thiamine first."
+   },
+   {
+    "id": "audit",
+    "g": "h",
+    "label": "Full AUDIT questionnaire now",
+    "min": 4,
+    "text": "Score 31.",
+    "flag": "low",
+    "why": "Useful later. Today he needs thiamine and a hospital."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Wernicke's encephalopathy",
+    "Alcohol withdrawal, mild",
+    "Alcohol intoxication",
+    "Stroke"
+   ],
+   "answer": 0,
+   "danger": [
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Ask him to come back sober tomorrow",
+    "Transfer to hospital for IV thiamine and assessment",
+    "Send home with oral thiamine and a script",
+    "Explain without judgement, and check understanding",
+    "Assess for withdrawal and seizure risk",
+    "High-dose parenteral thiamine now"
+   ],
+   "correct": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "danger": [
+    0,
+    2
+   ],
+   "explain": 3,
+   "critical": [
+    5
+   ]
+  },
+  "safety": {
+   "options": [
+    "Ring if the double vision lasts a week",
+    "Come back sober for his script",
+    "Go home and sleep it off",
+    "Stay with him until transfer; 000 if he worsens"
+   ],
+   "answer": 3,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "pearl": "‘Drunk’ is a label. Check alcohol, glucose, head injury and Wernicke's. Thiamine before glucose.",
+  "sources": [
+   {
+    "t": "Sechi G, Serra A. Wernicke's encephalopathy. Lancet Neurol 2007",
+    "url": "https://doi.org/10.1016/S1474-4422(07)70104-7"
+   }
+  ]
+ },
+ {
+  "id": "lan",
+  "room": "consult",
+  "cu": "Refugee and migrant health",
+  "name": "Mrs Lan",
+  "age": 74,
+  "who": "Speaks Vietnamese. Her son brings her and answers every question.",
+  "blurb": "Son does the talking",
+  "opening": "Son: \"Mum's fine. She just needs her blood pressure pills. She worries too much.\"",
+  "actions": [
+   {
+    "id": "son",
+    "g": "h",
+    "label": "Take the history from her son",
+    "min": 3,
+    "text": "\"She's fine, just tired.\" Mrs Lan looks at the floor.",
+    "flag": "low",
+    "why": "You've heard his story, not hers."
+   },
+   {
+    "id": "interp",
+    "g": "h",
+    "label": "Book a phone interpreter (TIS) for Mrs Lan",
+    "min": 1,
+    "text": "Interpreter on the line.",
+    "key": true,
+    "flag": "pc",
+    "why": "Family interpreters filter, protect and sometimes control."
+   },
+   {
+    "id": "alone",
+    "g": "h",
+    "label": "Ask to see her alone for part of the visit",
+    "min": 1,
+    "text": "Son steps out, a bit annoyed.",
+    "key": true,
+    "why": "Seeing older patients alone is routine and protective.",
+    "needs": "interp"
+   },
+   {
+    "id": "lump",
+    "g": "h",
+    "label": "Ask what she's worried about",
+    "min": 2,
+    "text": "Via interpreter: \"There's a lump in my breast. Two months. I didn't want to frighten him.\"",
+    "key": true,
+    "needs": "alone"
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Scared it's cancer, like her sister. Wants to know before telling family.",
+    "flag": "ice",
+    "needs": "alone"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"My son manages my pension. I'm fine with that.\"",
+    "flag": "else",
+    "needs": "alone"
+   },
+   {
+    "id": "exam",
+    "g": "e",
+    "label": "Breast and armpit exam, with consent and a chaperone offered",
+    "min": 2,
+    "text": "Hard, fixed 2 cm lump, upper outer left breast. A firm node in the armpit.",
+    "key": true,
+    "needs": "lump"
+   },
+   {
+    "id": "sonint",
+    "g": "h",
+    "label": "Ask her son to interpret the breast questions",
+    "min": 1,
+    "text": "He translates: \"She says no lumps.\"",
+    "flag": "harm",
+    "why": "Sensitive topics through family often get lost or changed."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Benign breast cyst",
+    "Fibroadenoma",
+    "Anxiety in an older woman",
+    "Suspected breast cancer"
+   ],
+   "answer": 3,
+   "danger": [
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Professional interpreter at every visit",
+    "Explain the plan through the interpreter; check understanding",
+    "Repeat the exam in 3 months",
+    "Urgent mammogram and ultrasound, then biopsy",
+    "Tell her son everything after she leaves",
+    "Respect her wishes about telling her family"
+   ],
+   "correct": [
+    0,
+    1,
+    3,
+    5
+   ],
+   "danger": [
+    2,
+    4
+   ],
+   "explain": 1,
+   "critical": [
+    3
+   ]
+  },
+  "safety": {
+   "options": [
+    "Wait for the hospital to call",
+    "Ask her son to ring if worried",
+    "No need to come back",
+    "Results in a few days; call via interpreter any time"
+   ],
+   "answer": 3,
+   "danger": [
+    2
+   ]
+  },
+  "pearl": "When a relative does all the talking, the patient's own story may be missing. Interpreter, time alone, then ask.",
+  "sources": [
+   {
+    "t": "TIS National: Doctors Priority Line",
+    "url": "https://www.tisnational.gov.au/"
+   }
+  ]
+ },
+ {
+  "id": "rhonda",
+  "room": "womens",
+  "cu": "Family violence and child protection",
+  "name": "Rhonda",
+  "age": 44,
+  "who": "Booked a 5-minute flu vaccine.",
+  "blurb": "Flu shot only",
+  "opening": "\"Just the flu shot, thanks. I've got to be home by 11.\"",
+  "actions": [
+   {
+    "id": "vax",
+    "g": "t",
+    "label": "Give the flu vaccine",
+    "min": 1,
+    "text": "Done. No reaction.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 1,
+    "text": "Wants it done quickly. Glances at her phone twice.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 1,
+    "text": "At the door: \"Is it normal that my husband checks my phone and bank every day?\"",
+    "key": true,
+    "flag": "else",
+    "why": "The doorknob moment is often the real reason for the visit."
+   },
+   {
+    "id": "rush",
+    "g": "h",
+    "label": "\"We're out of time. Book another appointment?\"",
+    "min": 1,
+    "text": "\"Never mind. Forget I said it.\"",
+    "flag": "harm",
+    "why": "A disclosure brushed off may never come back."
+   },
+   {
+    "id": "sit",
+    "g": "h",
+    "label": "Close the door: \"I'm glad you told me. Can we talk for a few minutes?\"",
+    "min": 2,
+    "text": "\"He says I'm hopeless with money. I'm not allowed to see my sister.\"",
+    "key": true,
+    "flag": "pc",
+    "needs": "else"
+   },
+   {
+    "id": "risk",
+    "g": "h",
+    "label": "Safety questions: fear, threats, strangulation, weapons, children",
+    "min": 3,
+    "text": "Afraid at times. He grabbed her throat once last year. Two teenagers at home.",
+    "key": true,
+    "why": "Non-fatal strangulation is a major risk factor for homicide.",
+    "needs": "sit"
+   },
+   {
+    "id": "phone",
+    "g": "h",
+    "label": "Ask if it's safe to contact her on her phone",
+    "min": 1,
+    "text": "\"No. He reads everything. Call the landline at work.\"",
+    "key": true,
+    "needs": "sit"
+   },
+   {
+    "id": "bp",
+    "g": "e",
+    "label": "Check her blood pressure while she's here",
+    "min": 2,
+    "text": "128/80.",
+    "flag": "low",
+    "why": "Not why she's here, and it eats the few minutes she has."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Normal marital conflict",
+    "Coercive control, with high-risk features",
+    "Relationship stress",
+    "Health anxiety"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Talk to her husband about it",
+    "Book a longer follow-up under another reason",
+    "Agree a safe way to contact her",
+    "Document carefully, with privacy settings",
+    "Couples counselling referral",
+    "Believe and validate; it's not her fault",
+    "Give 1800RESPECT discreetly, as she chooses"
+   ],
+   "correct": [
+    1,
+    2,
+    3,
+    5,
+    6
+   ],
+   "danger": [
+    0,
+    4
+   ],
+   "explain": 5,
+   "critical": [
+    2
+   ]
+  },
+  "safety": {
+   "options": [
+    "Send a letter to her home address",
+    "Text her a reminder about the follow-up",
+    "No need to follow up unless she asks",
+    "000 if in danger; follow up by the safe route agreed"
+   ],
+   "answer": 3,
+   "danger": [
+    0,
+    1
+   ]
+  },
+  "pearl": "Coercive control is family violence even without bruises. Strangulation history is a red flag for serious harm.",
+  "sources": [
+   {
+    "t": "RACGP White Book: abuse and violence",
+    "url": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/abuse-and-violence"
+   }
+  ]
+ },
+ {
+  "id": "trent",
+  "room": "desk",
+  "cu": "Occupational and environmental",
+  "name": "Trent",
+  "age": 49,
+  "who": "Truck driver. Needs a commercial licence medical form signed today.",
+  "blurb": "‘Can you just sign this?’",
+  "opening": "\"It's a formality, doc. Just sign here. My boss needs it by tomorrow.\"",
+  "actions": [
+   {
+    "id": "sign",
+    "g": "t",
+    "label": "Sign the form without examining him",
+    "min": 1,
+    "text": "Signed. Three weeks later he falls asleep at the wheel.",
+    "flag": "harm",
+    "why": "Signing a fitness-to-drive form unchecked is unsafe and against the standard."
+   },
+   {
+    "id": "sleep",
+    "g": "h",
+    "label": "Sleepiness and snoring (Epworth score)",
+    "min": 2,
+    "text": "Epworth 16. Partner says he stops breathing at night. Nodded off at the lights twice.",
+    "key": true,
+    "why": "Excessive sleepiness in a commercial driver needs assessment before he's cleared."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Scared of losing his job. Wants the form signed.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 1,
+    "text": "\"Wakes up with headaches most days.\"",
+    "flag": "else"
+   },
+   {
+    "id": "exam",
+    "g": "e",
+    "label": "BP, neck size, weight, vision",
+    "min": 3,
+    "text": "BP 158/96. Neck 46 cm. BMI 38. Vision fine.",
+    "key": true
+   },
+   {
+    "id": "bloods",
+    "g": "t",
+    "label": "HbA1c and lipids",
+    "min": 1,
+    "text": "HbA1c 6.3%.",
+    "key": true
+   },
+   {
+    "id": "eye",
+    "g": "t",
+    "label": "Formal eye specialist review",
+    "min": 1,
+    "text": "Referred.",
+    "flag": "low",
+    "why": "His vision is fine. The issue is sleepiness."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Probable sleep apnoea: not yet fit for commercial driving",
+    "Fit to drive commercially",
+    "Depression",
+    "Shift-work tiredness only"
+   ],
+   "answer": 0,
+   "danger": [
+    1
+   ]
+  },
+  "plan": {
+   "options": [
+    "Discuss work duties in the meantime",
+    "Conditional licence only once treated and reviewed, per the standards",
+    "Advise coffee before long drives",
+    "Urgent sleep study",
+    "Explain honestly and with support, and check he understands",
+    "Sign the form now; review after the sleep study"
+   ],
+   "correct": [
+    0,
+    1,
+    3,
+    4
+   ],
+   "danger": [
+    2,
+    5
+   ],
+   "explain": 4,
+   "critical": [
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Drink energy drinks on long runs",
+    "Only drive short trips at night",
+    "No commercial driving until reviewed; pull over if drowsy",
+    "Drive as usual; just sleep more"
+   ],
+   "answer": 2,
+   "danger": [
+    0,
+    1,
+    3
+   ]
+  },
+  "pearl": "Forms are clinical decisions. Excessive sleepiness in a commercial driver needs assessment before you sign.",
+  "sources": [
+   {
+    "t": "Austroads: Assessing Fitness to Drive",
+    "url": "https://austroads.gov.au/drivers-and-vehicles/assessing-fitness-to-drive"
+   }
+  ]
+ },
+ {
+  "id": "dale",
+  "room": "drugs",
+  "cu": "Addiction",
+  "name": "Dale",
+  "age": 41,
+  "who": "New patient. Says he's ‘moving between places’.",
+  "blurb": "Lost his oxycodone script",
+  "opening": "\"I lost my oxycodone script. My back's killing me. My old GP always gave me 80 mg.\"",
+  "actions": [
+   {
+    "id": "safescript",
+    "g": "t",
+    "label": "Check SafeScript NSW",
+    "min": 1,
+    "text": "Five prescribers and four pharmacies in 3 months.",
+    "key": true,
+    "why": "Real-time monitoring is required before prescribing Schedule 8 medicines."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Frightened of withdrawal. Ashamed. \"I didn't plan for it to go this far.\"",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I've started buying them on the street.\"",
+    "flag": "else"
+   },
+   {
+    "id": "pain",
+    "g": "h",
+    "label": "Pain history and function",
+    "min": 2,
+    "text": "Old back injury. Pain now mostly between doses.",
+    "key": true
+   },
+   {
+    "id": "wd",
+    "g": "e",
+    "label": "Withdrawal signs (COWS)",
+    "min": 2,
+    "text": "Sweaty, yawning, dilated pupils. Mild to moderate withdrawal.",
+    "key": true
+   },
+   {
+    "id": "script",
+    "g": "t",
+    "label": "Write a week of oxycodone to tide him over",
+    "min": 1,
+    "text": "Script written.",
+    "flag": "harm",
+    "why": "Feeds dependence and overdose risk. Offer treatment instead."
+   },
+   {
+    "id": "lecture",
+    "g": "h",
+    "label": "Tell him he's drug-seeking and to find another GP",
+    "min": 1,
+    "text": "He leaves angry.",
+    "flag": "harm",
+    "why": "Dependence is a medical condition. Rejection drives people to riskier supply."
+   },
+   {
+    "id": "udt",
+    "g": "t",
+    "label": "Urine drug screen",
+    "min": 1,
+    "text": "Opioids positive.",
+    "flag": "low",
+    "why": "It confirms what he's told you and doesn't change the plan."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Undertreated back pain",
+    "Opioid use disorder, with withdrawal",
+    "Anxiety disorder",
+    "Malingering"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Offer opioid agonist treatment (buprenorphine)",
+    "Explain without judgement, and check he understands",
+    "Treat withdrawal symptoms for now",
+    "A week of oxycodone, then review",
+    "Discharge him from the practice",
+    "Take-home naloxone and how to use it"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "danger": [
+    3,
+    4
+   ],
+   "explain": 1,
+   "critical": [
+    5
+   ]
+  },
+  "safety": {
+   "options": [
+    "Only come back with an old script",
+    "Naloxone, never use alone; 000 for overdose",
+    "Come back when the pain settles",
+    "No need to come back"
+   ],
+   "answer": 1,
+   "danger": [
+    3
+   ]
+  },
+  "pearl": "Real drug-seeking is still a health problem. Treat the dependence: buprenorphine, naloxone, respect.",
+  "sources": [
+   {
+    "t": "RACGP: Prescribing drugs of dependence in general practice (Part C)",
+    "url": "https://www.racgp.org.au/clinical-resources/clinical-guidelines/key-racgp-guidelines/view-all-racgp-guidelines/drugs-of-dependence"
+   }
+  ]
+ },
+ {
+  "id": "ahmed",
+  "room": "blind",
+  "cu": "Renal and urology",
+  "name": "Ahmed",
+  "age": 33,
+  "critical": true,
+  "criticalWhy": "Severe pain with vomiting and fever needs prompt assessment. Labels don't change that.",
+  "who": "Pacing and vomiting. Reception note: ‘wants strong painkillers, ?drug-seeking’.",
+  "blurb": "‘?Drug-seeking’",
+  "opening": "\"Please, I need something strong. It's my side, I can't stand still.\"",
+  "actions": [
+   {
+    "id": "refuse",
+    "g": "h",
+    "label": "\"We don't give strong painkillers here.\"",
+    "min": 1,
+    "text": "He leaves for ED. Waits 6 hours.",
+    "flag": "harm",
+    "why": "He's labelled before he's assessed."
+   },
+   {
+    "id": "hx",
+    "g": "h",
+    "label": "Pain history: where, spreading, urine",
+    "min": 2,
+    "text": "Sudden left loin pain into the groin, came in waves for 3 hours. Blood in the urine.",
+    "key": true
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks it's appendicitis. Embarrassed at reception.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 1,
+    "text": "\"I've had shivers since this morning.\"",
+    "key": true,
+    "flag": "else",
+    "why": "Fever with a stone is an emergency."
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Temperature, pulse, BP",
+    "min": 1,
+    "text": "Temp 38.6, pulse 112, BP 118/72.",
+    "key": true
+   },
+   {
+    "id": "dip",
+    "g": "t",
+    "label": "Urine dipstick",
+    "min": 1,
+    "text": "Blood +++, nitrites positive.",
+    "key": true
+   },
+   {
+    "id": "nsaid",
+    "g": "t",
+    "label": "IM or IV NSAID for the pain (if no contraindication)",
+    "min": 1,
+    "text": "Pain eases from 10 to 5.",
+    "key": true,
+    "why": "NSAIDs are first-line for renal colic."
+   },
+   {
+    "id": "xray",
+    "g": "t",
+    "label": "Plain abdominal X-ray",
+    "min": 1,
+    "text": "Requested.",
+    "flag": "low",
+    "why": "Misses many stones. Infected obstruction needs ED today."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Drug-seeking behaviour",
+    "Muscle strain",
+    "Gastroenteritis",
+    "Kidney stone with likely infection"
+   ],
+   "answer": 3,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Paracetamol and home",
+    "Same-day ED: obstructed infected kidney",
+    "Send him away to find another GP",
+    "Pain relief now (NSAID, then more if needed)",
+    "Urine culture before antibiotics, if it won't delay",
+    "Explain what's happening, and check he understands"
+   ],
+   "correct": [
+    1,
+    3,
+    4,
+    5
+   ],
+   "danger": [
+    0,
+    2
+   ],
+   "explain": 5,
+   "critical": [
+    1
+   ]
+  },
+  "safety": {
+   "options": [
+    "Drink lots of water at home",
+    "Only if the urine stays red",
+    "Come back in a week if still sore",
+    "ED today; 000 if faint, confused or rigors worsen"
+   ],
+   "answer": 3,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "pearl": "Pacing in pain looks like seeking. Renal colic makes people restless. Assess first, label never.",
+  "sources": [
+   {
+    "t": "EAU guidelines on urolithiasis",
+    "url": "https://uroweb.org/guidelines/urolithiasis"
+   }
+  ]
  }
 ]

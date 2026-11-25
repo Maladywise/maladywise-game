@@ -715,7 +715,7 @@
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON(DATA + "huddle.json?v=5"), getJSON(DATA + "cases.json?v=9"), getJSON(DATA + "results.json?v=3"), getJSON(DATA + "billing.json?v=3").catch(function () { return null; })]).then(function (r) {
+  Promise.all([getJSON(DATA + "huddle.json?v=5"), getJSON(DATA + "cases.json?v=10"), getJSON(DATA + "results.json?v=3"), getJSON(DATA + "billing.json?v=3").catch(function () { return null; })]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
     if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();
