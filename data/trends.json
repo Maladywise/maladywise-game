@@ -1454,6 +1454,46 @@
    "date": "2026-11-25",
    "source": "Fierce Pharma regulatory tracker",
    "niche": true
+  },
+  {
+   "term": "NHS weight loss jab funding",
+   "region": "GB",
+   "approx volume": "1,000+",
+   "date": "2026-11-26",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "cholesterol",
+   "region": "GB",
+   "approx volume": "1,000+",
+   "date": "2026-11-26",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "Alzheimer's disease",
+   "region": "US",
+   "approx volume": "5,000+",
+   "date": "2026-11-26",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "product recall",
+   "region": "AU",
+   "approx volume": "2,000+",
+   "date": "2026-11-26",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "seafood recall: FDA sets Class I (most serious) risk level over Listeria",
+   "region": "US",
+   "approx volume": "news",
+   "date": "2026-11-26",
+   "source": "Newsweek",
+   "niche": false
   }
  ],
  "used": [
