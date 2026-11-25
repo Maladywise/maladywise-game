@@ -14,26 +14,36 @@ TODAY = "21 November 2026"
 CSS = """<style>
 .pr-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0 16px}
 .pr-btn{font:600 15px var(--body);border:0;border-radius:999px;padding:11px 20px;background:var(--brand,#4A3480);color:#fff;cursor:pointer}
-.pr-sheet{background:#fff;color:#1a1a1a;border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:18px 18px 14px;font-size:13.5px;line-height:1.4}
-.pr-sheet h2{font-size:19px;margin:0 0 2px;color:#1a1a1a}.pr-sheet .pr-sub{margin:0 0 10px;color:#444}
-.pr-who{display:grid;grid-template-columns:2fr 1fr;gap:8px;margin:0 0 10px}.pr-who span{border-bottom:1px solid #999;padding:6px 0 2px;color:#555;font-size:12px}
-.pr-t{width:100%;border-collapse:collapse;margin:0 0 8px}.pr-t th,.pr-t td{border:1px solid #bbb;padding:5px 6px;vertical-align:middle}
-.pr-t th{background:#F1ECF8;font-size:11.5px;font-weight:600;text-align:center}.pr-t td.n{width:22px;text-align:center;color:#555}.pr-t td.b{text-align:center;width:9%;font-size:11px;color:#555}.pr-t td.q{width:auto;min-width:45%}
-.pr-t td.b i{display:inline-block;width:13px;height:13px;border:1.5px solid #333;border-radius:2px;margin-right:4px;vertical-align:-2px}
-.pr-t td.sh{background:#CFC6DE;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.pr-score{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0}.pr-score span{border:1.5px solid #333;border-radius:6px;padding:6px 12px;font-weight:600}
-.pr-key{margin:6px 0 0;padding-left:18px}.pr-key li{margin:2px 0}
-.pr-crit h3{font-size:14.5px;margin:12px 0 4px}.pr-crit ul{margin:0 0 4px;padding-left:0;list-style:none}.pr-crit li{margin:3px 0;padding-left:22px;position:relative}
-.pr-crit li::before{content:"";position:absolute;left:0;top:2px;width:12px;height:12px;border:1.5px solid #333;border-radius:2px}
-.pr-crit li.nb::before{display:none}
-.pr-foot{margin:10px 0 0;font-size:11px;color:#555;border-top:1px solid #ddd;padding-top:6px}
+.pr-sheet{background:#fff;color:#1d1a24;border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:20px 20px 16px;font-size:14px;line-height:1.5}
+.pr-sheet li,.pr-sheet p,.pr-sheet td,.pr-sheet th,.pr-sheet span,.pr-sheet h3{color:#1d1a24}.pr-sheet li{font-size:1em!important;line-height:inherit}
+.pr-brand{margin:0 0 4px;font:700 10.5px var(--body);letter-spacing:.14em;text-transform:uppercase;color:#6B5A93}
+.pr-sheet h2{font-size:18px;line-height:1.25;margin:0 0 10px;color:#2E1F57}.pr-sheet .pr-sub{margin:0 0 10px;color:#3b3646}
+.pr-who{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin:0 0 14px}.pr-who span{border-bottom:1px solid #8a8496;padding:8px 0 2px;color:#555;font-size:12px}
+.pr-t{width:100%;border-collapse:collapse;margin:0 0 10px}.pr-t th,.pr-t td{border:1px solid #cfc9d9;padding:7px 8px;vertical-align:middle}
+.pr-t tr:nth-child(even) td{background:#FAF8FD}
+.pr-t th{background:#F1ECF8;font-size:12px;font-weight:700;text-align:center;color:#2E1F57}.pr-t td.n{width:22px;text-align:center;color:#6B5A93;font-weight:700}.pr-t td.b{text-align:center;width:9%;font-size:12px;color:#555}.pr-t td.q{width:auto;min-width:45%}
+.pr-t td.q b{color:#2E1F57}.pr-t td.a{font-size:13px;min-width:150px}.pr-t.qa td.q{width:40%;min-width:0}
+.pr-opt{display:inline-block;margin:1px 12px 1px 0;white-space:nowrap}.pr-t td.b i{display:inline-block;width:13px;height:13px;border:1.5px solid #333;border-radius:2px;margin-right:5px;vertical-align:-2px}
+.pr-t td.sh{background:#CFC6DE!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.pr-score{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 8px}.pr-score span{border:1.5px solid #2E1F57;border-radius:8px;padding:7px 14px;font-weight:700}
+.pr-key{margin:6px 0 0;padding:10px 14px 10px 30px;background:#F6F3FB;border-radius:10px;-webkit-print-color-adjust:exact;print-color-adjust:exact}.pr-key li{margin:3px 0}
+.pr-crit h3{font-size:15px;margin:14px 0 6px;color:#2E1F57}.pr-hs{font-weight:500;color:#3b3646}
+.pr-crit ul{margin:0 0 4px;padding-left:0;list-style:none}.pr-crit li{margin:5px 0;padding-left:24px;position:relative}
+.pr-crit li::before{content:"";position:absolute;left:0;top:.2em;width:13px;height:13px;border:1.5px solid #333;border-radius:2px}
+.pr-crit li.nb::before{display:none}.pr-crit ul.c2{columns:2;column-gap:28px}.pr-crit ul.c2 li{break-inside:avoid}.pr-crit li b{color:#2E1F57}
+.pr-foot{margin:14px 0 0;font-size:11px;line-height:1.45;color:#5b5666;border-top:1px solid #ddd;padding-top:8px}
 .pr-hub{list-style:none!important;padding:0!important;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
 .pr-hub li{margin:0!important}.pr-hub a{display:block;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:12px 14px;text-decoration:none;color:var(--ink)}
 .pr-hub b{display:block;color:var(--brand,#4A3480)}.pr-hub span{font-size:14px}
-@media print{@page{size:A4;margin:12mm}
- body *{visibility:hidden!important}.pr-sheet,.pr-sheet *{visibility:visible!important}
- .pr-sheet{position:absolute;left:0;top:0;width:100%;border:0;border-radius:0;padding:0;font-size:9.5pt}.pr-t th,.pr-t td{padding:3px 5px}.pr-crit li{margin:1px 0}.pr-crit h3{margin:8px 0 3px}
- html,body{background:#fff!important}}
+@media print{@page{size:A4;margin:14mm 14mm 12mm}
+ html,body{background:#fff!important;height:auto!important}
+ body>*:not(main),main>*:not(.pr-sheet),.mw-secret-pill{display:none!important}
+ main{padding:0!important;margin:0!important;max-width:none!important}
+ .pr-sheet{border:0;border-radius:0;padding:4mm 0 0;font-size:10.5pt;line-height:1.45}
+ .pr-sheet h2{font-size:15pt;margin:0 0 4mm}.pr-t th,.pr-t td{padding:4px 6px}.pr-crit li{margin:2px 0}.pr-crit h3{font-size:11.5pt;margin:4mm 0 1.5mm}
+ .pr-crit{font-size:11pt}.pr-crit li{margin:1.2mm 0}
+ .pr-sheet.tight{font-size:9.5pt;line-height:1.35}.pr-sheet.tight .pr-t th,.pr-sheet.tight .pr-t td{padding:2px 5px}.pr-sheet.tight .pr-crit h3,.pr-sheet.tight h3{margin:2.5mm 0 1mm}
+ .pr-t tr,.pr-crit li{break-inside:avoid}}
 </style>"""
 
 def page(slug, title, desc, main):
@@ -49,6 +59,18 @@ def page(slug, title, desc, main):
     d = ROOT + "printables/" + (slug + "/" if slug else "")
     os.makedirs(d, exist_ok=True)
     open(d + "index.html", "w", encoding="utf-8").write(out)
+
+def L(t):
+    """Bold a leading 'Label:' (e.g. 'Snoring: Do you snore…') and number ranges in keys, for easy scanning."""
+    m = re.match(r"^([A-Z][^:]{1,38}):\s+(.*)$", t)
+    if m and not re.search(r"\d:\d", m.group(1)): return "<b>%s:</b> %s" % (E(m.group(1)), E(m.group(2)))
+    return E(t)
+def K(t):
+    out = L(t)
+    return re.sub(r"(?<![\w>])(\d+\s?(?:–|to)\s?\d+|\d+ or more)(?=\s)", r"<b>\1</b>", out)
+def H(t):
+    m = re.match(r"^(.*?):\s+(.*)$", t)
+    return ("%s<span class=\"pr-hs\">: %s</span>" % (E(m.group(1)), E(m.group(2)))) if m else E(t)
 
 WHO = '<div class="pr-who"><span>Name</span><span>Date</span></div>'
 
@@ -169,19 +191,19 @@ def qsheet(q):
         sh = q.get("shade")
         head = "<tr><th></th><th style='text-align:left'>" + E(q["stem"]) + "</th>" + "".join(("<th>%s</th>" % E(o)) if sh else ("<th>%s<br>(%d)</th>" % (E(o), p)) for o, p in q["opts"]) + "</tr>"
         for i, it in enumerate(q["items"], 1):
-            rows.append("<tr><td class='n'>%d</td><td class='q'>%s</td>%s</tr>" % (i, E(it), "".join("<td class='b%s'><i></i></td>" % (" sh" if sh and j in sh[i - 1] else "") for j in range(len(q["opts"])))))
+            rows.append("<tr><td class='n'>%d</td><td class='q'>%s</td>%s</tr>" % (i, L(it), "".join("<td class='b%s'><i></i></td>" % (" sh" if sh and j in sh[i - 1] else "") for j in range(len(q["opts"])))))
         if not sh: rows.append("<tr><td></td><td style='text-align:right'><b>Column totals</b></td>%s</tr>" % "".join("<td class='b'>+ ____</td>" for _ in q["opts"]))
         t = "<table class='pr-t'>" + head + "".join(rows) + "</table>"
     else:
         body = ""
         for i, (it, op) in enumerate(q["items"], 1):
             op = FREQ if op == "F" else YES if op == "Y" else op
-            body += "<tr><td class='n'>%d</td><td>%s</td><td>%s</td><td class='b'>____</td></tr>" % (i, E(it), " ".join('<span style="display:inline-block;margin:1px 10px 1px 0"><i style="display:inline-block;width:12px;height:12px;border:1.5px solid #333;border-radius:2px;vertical-align:-2px"></i> %s <small>(%d)</small></span>' % (E(o), p) for o, p in op))
-        t = "<p class='pr-sub'>" + E(q["stem"]) + "</p><table class='pr-t'><tr><th></th><th style='text-align:left'>Question</th><th style='text-align:left'>Answer (points)</th><th>Score</th></tr>" + body + "</table>"
+            body += "<tr><td class='n'>%d</td><td class='q'>%s</td><td class='a'>%s</td><td class='b'>____</td></tr>" % (i, L(it), " ".join('<span class="pr-opt"><i style="display:inline-block;width:12px;height:12px;border:1.5px solid #333;border-radius:2px;vertical-align:-2px"></i> %s <small>(%d)</small></span>' % (E(o), p) for o, p in op))
+        t = "<p class='pr-sub'>" + E(q["stem"]) + "</p><table class='pr-t qa'><tr><th></th><th style='text-align:left'>Question</th><th style='text-align:left'>Answer (points)</th><th>Score</th></tr>" + body + "</table>"
     ex = "<p>%s</p>" % q["extra"] if q["extra"] else ""
-    return ('<div class="pr-sheet"><h2>%s</h2>%s%s%s<p class="pr-score"><span>%s: ______</span></p>'
+    return ('<div class="pr-sheet' + (' tight' if q["slug"] in ("audit", "epds", "k10") else '') + '"><p class="pr-brand">Malady Wise · Printable</p><h2>%s</h2>%s%s%s<p class="pr-score"><span>%s: ______</span></p>'
             '<ul class="pr-key">%s</ul><p class="pr-foot">%s Printed from maladywise.com/printables/%s/. A screening tool, not a diagnosis.</p></div>') % (
-        E(q["full"]), WHO, t, ex, ("Ticks in shaded boxes" if q.get("shade") else "Total score"), "".join("<li>%s</li>" % E(k) for k in q["key"]), E(q["credit"]), q["slug"])
+        E(q["full"]), WHO, t, ex, ("Ticks in shaded boxes" if q.get("shade") else "Total score"), "".join("<li>%s</li>" % K(k) for k in q["key"]), E(q["credit"]), q["slug"])
 
 for q in Q:
     main = ('<p class="meta"><a href="/printables/">Printables</a> · Questionnaire</p>\n<h1>Printable %s</h1>\n'
@@ -299,15 +321,15 @@ for c in C:
         if h == "Safety":
             secs += '<h3>Safety</h3><ul><li class="nb">If you have thoughts of suicide, talk to someone today: Lifeline 13 11 14, or 000 in an emergency.</li></ul>'
             continue
-        secs += "<h3>%s</h3><ul>%s</ul>" % (E(h), "".join("<li>%s</li>" % E(x) for x in items))
-    sheet = '<div class="pr-sheet pr-crit"><h2>%s</h2>%s%s<p class="pr-foot">%s Printed from maladywise.com/printables/%s/. For discussion with a clinician; it can’t diagnose on its own.</p></div>' % (E(c["name"]), WHO, secs, E(c["src"]), c["slug"])
+        secs += "<h3>%s</h3><ul%s>%s</ul>" % (H(h), ' class="c2"' if len(items) > 10 and max(len(x) for x in items) < 60 else "", "".join("<li>%s</li>" % L(x) for x in items))
+    sheet = '<div class="pr-sheet pr-crit"><p class="pr-brand">Malady Wise · Checklist</p><h2>%s</h2>%s%s<p class="pr-foot">%s Printed from maladywise.com/printables/%s/. For discussion with a clinician; it can’t diagnose on its own.</p></div>' % (E(c["name"]), WHO, secs, E(c["src"]), c["slug"])
     main = ('<p class="meta"><a href="/printables/">Printables</a> · Criteria</p>\n<h1>Printable %s</h1>\n<p class="lede">%s</p>\n%s\n%s') % (E(c["name"]), E(c["lede"]), bar(), sheet)
     page(c["slug"], "Printable %s (Free Checklist PDF)" % c["name"], c["lede"] + " One A4 page, free to print or save as a PDF.", main)
 
 
 # ---------- POTS active stand test record (our own form, following the Australian POTS Foundation method) ----------
 rows = "".join("<tr><td>%s</td><td></td><td></td><td></td></tr>" % t for t in ["Lying, after 5 minutes", "Standing: straight away", "1 minute", "2 minutes", "3 minutes", "4 minutes", "5 minutes", "6 minutes", "7 minutes", "8 minutes", "9 minutes", "10 minutes"])
-sheet = ('<div class="pr-sheet"><h2>POTS active stand test: record sheet</h2>' + WHO +
+sheet = ('<div class="pr-sheet"><p class="pr-brand">Malady Wise · Record sheet</p><h2>POTS active stand test: record sheet</h2>' + WHO +
   '<p class="pr-sub">Lie still for 5 minutes, then stand up without leaning or fidgeting. Have someone record heart rate (HR) and blood pressure (BP). Sit or lie down straight away if you feel faint.</p>'
   '<table class="pr-t"><tr><th style="text-align:left">Time</th><th>Heart rate (beats/min)</th><th>Blood pressure (mmHg)</th><th style="text-align:left">Symptoms (dizzy, foggy, shaky, short of breath, colour change in legs)</th></tr>' + rows + '</table>'
   '<p class="pr-score"><span>Highest standing HR − lying HR = ______</span><span>Lowest standing BP: ______</span></p>'
@@ -323,7 +345,7 @@ page("pots-stand-test", "POTS Stand Test Record Sheet (Free Printable PDF)", "Fr
 # ---------- Beighton score (public domain scoring; our own layout) ----------
 bt = [("Bend the little finger back beyond 90°", True), ("Bring the thumb to touch the forearm", True), ("Elbow straightens past 10°", True), ("Knee straightens past 10°", True), ("Palms flat on the floor with knees straight", False)]
 rows = "".join("<tr><td class='n'>%d</td><td class='q'>%s</td><td class='b'><i></i></td><td class='b'>%s</td></tr>" % (i + 1, E(t), "<i></i>" if two else "–") for i, (t, two) in enumerate(bt))
-sheet = ('<div class="pr-sheet"><h2>Beighton score: joint hypermobility</h2>' + WHO +
+sheet = ('<div class="pr-sheet"><p class="pr-brand">Malady Wise · Score sheet</p><h2>Beighton score: joint hypermobility</h2>' + WHO +
   '<p class="pr-sub">One point for each side that can do it. A clinician should check the angles.</p>'
   "<table class='pr-t'><tr><th></th><th style='text-align:left'>Test</th><th>Left (1)</th><th>Right (1)</th></tr>" + rows + "</table>"
   '<p class="pr-score"><span>Total (out of 9): ______</span></p>'
