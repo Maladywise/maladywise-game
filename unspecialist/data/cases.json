@@ -23,6 +23,15 @@
     "text": "No problems with the tablets. Takes them every morning."
    },
    {
+    "id": "golf",
+    "g": "h",
+    "label": "Ask about his golf handicap and weekend plans",
+    "min": 2,
+    "text": "Plays off 18. Off to the coast for the weekend.",
+    "flag": "low",
+    "why": "Friendly, but it eats minutes and changes nothing."
+   },
+   {
     "id": "smoke",
     "g": "h",
     "label": "Smoking",
@@ -72,6 +81,15 @@
     "text": "Normal heart sounds, clear chest, no ankle swelling."
    },
    {
+    "id": "cxr",
+    "g": "t",
+    "label": "Order a chest X-ray",
+    "min": 1,
+    "text": "Requested.",
+    "flag": "low",
+    "why": "A chest X-ray doesn't help assess exertional chest pain."
+   },
+   {
     "id": "ecg",
     "g": "t",
     "label": "ECG",
@@ -91,52 +109,53 @@
   ],
   "dx": {
    "options": [
-    "Stable blood pressure. Script only.",
     "Probable stable angina",
-    "Chest wall (musculoskeletal) pain",
-    "Acute coronary syndrome: call 000 now"
+    "Acute coronary syndrome: call 000 now",
+    "Stable blood pressure: script only",
+    "Chest wall (musculoskeletal) pain"
    ],
-   "answer": 1,
+   "answer": 0,
    "danger": [
-    0
+    2
    ]
   },
   "plan": {
    "options": [
-    "Renew his blood pressure medicine",
+    "Start antibiotics in case it's a chest infection",
+    "Explain the plan and check he's understood",
     "Short-acting GTN spray, with clear instructions",
-    "Prompt cardiology assessment for further testing",
     "Lipids, HbA1c and kidney check, and a CVD risk review",
-    "Explain the plan and check he's understood (teach-back)",
-    "Reassure: probably just unfit. See you in 12 months",
-    "Start antibiotics"
+    "Increase his blood pressure tablet and recheck in a month",
+    "Prompt cardiology assessment for further testing",
+    "Renew his blood pressure medicine",
+    "Reassure: probably deconditioning; review in 12 months"
    ],
    "correct": [
-    0,
     1,
     2,
     3,
-    4
+    5,
+    6
    ],
    "danger": [
-    5
+    7
    ],
-   "explain": 4,
+   "explain": 1,
    "critical": [
-    2
+    5
    ]
   },
   "safety": {
    "options": [
-    "Call 000 if chest pain comes on at rest, is severe, is getting worse, or isn't fully gone within 10 minutes",
+    "Drive yourself to ED if it gets really bad",
+    "Take two paracetamol and lie down until it passes",
     "Mention it at your next review if it's still there",
-    "Take two paracetamol and lie down",
-    "Drive yourself to ED if it gets bad"
+    "000 if pain at rest, worsening, or lasting 10 minutes"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
-    2,
-    3
+    0,
+    1
    ]
   },
   "billing": {
@@ -260,6 +279,15 @@
     "proc": true
    },
    {
+    "id": "stress",
+    "g": "t",
+    "label": "Arrange an exercise stress test",
+    "min": 1,
+    "text": "Booked for next month.",
+    "flag": "harm",
+    "why": "Never stress test someone with possible unstable angina."
+   },
+   {
     "id": "trop",
     "g": "t",
     "label": "Send a troponin to the lab",
@@ -271,55 +299,55 @@
   ],
   "dx": {
    "options": [
-    "Unstable angina / acute coronary syndrome",
-    "Stable angina",
-    "Reflux",
-    "Anxiety"
+    "Reflux, worse after a heavy meal",
+    "Unstable angina (acute coronary syndrome)",
+    "Stable angina, now a bit more frequent",
+    "Anxiety about his brother's heart attack"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     2,
     3
    ]
   },
   "plan": {
    "options": [
-    "Call 000 for urgent ambulance transfer",
+    "Routine oxygen by mask, even though his sats are 96%",
     "Aspirin 300 mg, chewed or dissolved (unless contraindicated)",
-    "GTN spray while waiting, watching his blood pressure",
-    "Routine oxygen even though his sats are 96%",
     "Explain what's happening and why",
-    "Send him home with a stronger tablet",
-    "Book an outpatient stress test next month"
+    "GTN spray while waiting, watching his blood pressure",
+    "Send him home with a stronger tablet and rest",
+    "Book an outpatient exercise stress test next month",
+    "Call 000 for urgent ambulance transfer"
    ],
    "correct": [
-    0,
     1,
     2,
-    4
-   ],
-   "danger": [
-    5,
+    3,
     6
    ],
-   "explain": 4,
+   "danger": [
+    4,
+    5
+   ],
+   "explain": 2,
    "critical": [
-    0,
-    1
+    1,
+    6
    ]
   },
   "safety": {
    "options": [
-    "Stay with him, keep him monitored and send a summary with the ambulance",
+    "Come back if it happens again this week",
     "Let him wait in the car park for the ambulance",
-    "He can drive himself to hospital",
-    "Come back if it happens again"
+    "Stay with him, monitor, send a summary",
+    "He can drive himself to hospital if he's careful"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
+    0,
     1,
-    2,
     3
    ]
   },
@@ -435,57 +463,67 @@
     "flag": "low",
     "text": "Three minutes of coaxing, no sample. The clock didn't wait.",
     "why": "A urine sample was never going to change the plan for this child."
+   },
+   {
+    "id": "lp",
+    "g": "t",
+    "label": "Attempt a lumbar puncture in the clinic",
+    "min": 3,
+    "text": "Not possible here.",
+    "flag": "harm",
+    "why": "Not a GP procedure, and it delays antibiotics and transfer."
    }
   ],
   "dx": {
    "options": [
-    "Viral illness",
-    "Suspected meningococcal sepsis",
     "Urinary tract infection",
-    "Gastroenteritis"
+    "Gastroenteritis with dehydration",
+    "Suspected meningococcal sepsis",
+    "Viral illness with a high fever"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0,
+    1,
     3
    ]
   },
   "plan": {
    "options": [
-    "Call 000 for urgent transfer",
-    "Parenteral antibiotics (benzylpenicillin or ceftriaxone) now, as long as it doesn't delay transfer",
+    "Paracetamol, oral fluids and review first thing tomorrow",
+    "Oral antibiotics and home with Dad, review in 24 hours",
+    "Wait for a urine sample before deciding on antibiotics",
     "Phone the receiving hospital and hand over",
     "Explain to her dad what's happening and why",
-    "Paracetamol, fluids and review tomorrow",
-    "Oral antibiotics and home"
+    "IV or IM antibiotics now, without delaying transfer",
+    "Call 000 for urgent transfer"
    ],
    "correct": [
-    0,
-    1,
-    2,
-    3
+    3,
+    4,
+    5,
+    6
    ],
    "danger": [
-    4,
-    5
-   ],
-   "explain": 3,
-   "critical": [
     0,
     1
+   ],
+   "explain": 4,
+   "critical": [
+    5,
+    6
    ]
   },
   "safety": {
    "options": [
-    "Stay with them until the ambulance arrives",
-    "Back to the waiting room until the ambulance comes",
-    "Dad can drive her to ED if traffic's OK",
-    "Come back tomorrow if she's no better"
+    "Come back tomorrow if she's no better",
+    "Dad can drive her to ED if the traffic's OK",
+    "Stay with her until the ambulance arrives",
+    "Back to the waiting room until the ambulance comes"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
+    0,
     1,
-    2,
     3
    ]
   },
@@ -588,6 +626,15 @@
     "text": "TSH normal."
    },
    {
+    "id": "b12",
+    "g": "t",
+    "label": "Check B12, folate, vitamin D and a coeliac screen",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "Shotgun testing before the obvious cause (heavy periods) is checked. Coeliac is reasonable later if iron doesn't respond."
+   },
+   {
     "id": "hcg",
     "g": "t",
     "label": "Pregnancy test",
@@ -597,42 +644,42 @@
   ],
   "dx": {
    "options": [
-    "Burnout",
-    "Iron deficiency anaemia from heavy menstrual bleeding",
-    "Hypothyroidism",
-    "Depression"
+    "Iron deficiency from heavy periods",
+    "Depression with low energy",
+    "Burnout from shift work",
+    "Underactive thyroid (hypothyroidism)"
    ],
-   "answer": 1,
+   "answer": 0,
    "danger": []
   },
   "plan": {
    "options": [
     "Start iron replacement",
-    "Discuss treatment for the heavy bleeding (e.g. hormonal IUD, tranexamic acid, NSAIDs)",
-    "Explain the plan and check she's understood (teach-back)",
+    "Refer for gastroscopy and colonoscopy to find blood loss",
+    "Discuss treatments for the heavy bleeding",
     "Pelvic ultrasound for everyone with heavy periods, regardless",
-    "Refer for gastroscopy and colonoscopy",
-    "More red meat and an early night"
+    "Explain the plan and check she's understood",
+    "More red meat, an early night and review in 6 months"
    ],
    "correct": [
     0,
-    1,
-    2
+    2,
+    4
    ],
    "danger": [],
-   "explain": 2,
+   "explain": 4,
    "critical": [
-    1
+    2
    ]
   },
   "safety": {
    "options": [
-    "Come back sooner if you're breathless, faint, have chest pain, or the bleeding gets heavier",
-    "Nothing to worry about",
-    "See you in a year",
-    "Stop the iron if your stools go dark"
+    "See you in a year for a recheck",
+    "Stop the iron straight away if your stools go dark",
+    "Nothing to worry about: it's very common",
+    "Sooner if breathless, faint or bleeding more"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": []
   },
   "billing": {
@@ -748,6 +795,15 @@
     "text": "Tender muscles either side of the spine. Bending forward limited by pain."
    },
    {
+    "id": "codeine",
+    "g": "t",
+    "label": "Prescribe codeine for 2 weeks",
+    "min": 1,
+    "text": "Script written.",
+    "flag": "harm",
+    "why": "Opioids don't improve recovery from acute back pain and carry risks."
+   },
+   {
     "id": "xray",
     "g": "t",
     "label": "Lumbar X-ray",
@@ -768,23 +824,23 @@
   ],
   "dx": {
    "options": [
+    "Disc prolapse needing surgery",
     "Non-specific low back pain",
     "Cauda equina syndrome",
-    "Disc prolapse needing surgery",
-    "Spinal fracture"
+    "Spinal stress fracture"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": []
   },
   "plan": {
    "options": [
-    "Stay active and keep doing usual activities, modified as needed",
-    "Simple pain relief to help him keep moving",
-    "Explain the plan and why no scan is needed (teach-back)",
+    "Explain the plan and why no scan is needed",
     "Review in 1 to 2 weeks if not improving",
-    "Oxycodone for two weeks",
-    "A week of bed rest",
-    "Order an MRI"
+    "Simple pain relief to help him keep moving",
+    "Stay active and keep doing usual activities, modified as needed",
+    "A week of bed rest, then a gradual return to the gym",
+    "Oxycodone twice daily for two weeks to cover the pain",
+    "Order an MRI of the lumbar spine to check the discs"
    ],
    "correct": [
     0,
@@ -793,21 +849,21 @@
     3
    ],
    "danger": [
-    5
+    4
    ],
-   "explain": 2,
+   "explain": 0,
    "critical": []
   },
   "safety": {
    "options": [
-    "Come back the same day if you get bladder or bowel problems, numbness around the genitals or bottom, or leg weakness",
+    "No need to come back: it always settles",
+    "Take more tablets if it hurts more",
     "Come back if it's not gone in 6 months",
-    "No need to come back",
-    "Take more tablets if it hurts more"
+    "Same day for bladder, bowel, saddle numbness or weak legs"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
-    1,
+    0,
     2
    ]
   },
@@ -891,6 +947,15 @@
     "text": "Bruise over the right temple. No focal weakness."
    },
    {
+    "id": "restart",
+    "g": "t",
+    "label": "Tell her to take tonight's apixaban as usual",
+    "min": 1,
+    "text": "She says she will.",
+    "flag": "harm",
+    "why": "Anticoagulants after a head injury need a CT first."
+   },
+   {
     "id": "bsl",
     "g": "t",
     "label": "Finger-prick glucose",
@@ -909,41 +974,42 @@
   ],
   "dx": {
    "options": [
-    "Simple mechanical fall, no injury",
-    "Head injury while on an anticoagulant: needs urgent CT",
-    "Stroke",
-    "Urinary tract infection causing confusion"
+    "Stroke causing the fall",
+    "Urine infection causing confusion",
+    "Head injury on an anticoagulant: urgent CT",
+    "Simple mechanical fall, no injury"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0
+    3
    ]
   },
   "plan": {
    "options": [
-    "Same-day transfer to ED for a CT head scan",
-    "Explain the plan to June and Eleni, and check they've understood",
-    "Restart and carry on with apixaban as usual",
-    "Ice pack and home with Eleni"
+    "Carry on with apixaban as usual and review tomorrow",
+    "Observe her in the treatment room for an hour, then decide",
+    "Ice pack, simple pain relief and home with Eleni",
+    "Explain the plan to June and Eleni",
+    "Same-day transfer to ED for a CT head scan"
    ],
    "correct": [
-    0,
-    1
+    3,
+    4
    ],
    "danger": [
-    3
+    2
    ],
-   "explain": 1,
+   "explain": 3,
    "critical": [
-    0
+    4
    ]
   },
   "safety": {
    "options": [
-    "If she gets drowsier, more confused, vomits again or the headache worsens before she's seen, call 000",
-    "Watch her overnight at home",
-    "Come back next week",
-    "Let her sleep it off"
+    "000 if drowsier, confused, vomiting or worse headache",
+    "Watch her overnight at home and wake her hourly",
+    "Come back next week if she's still sore",
+    "Let her sleep it off and call in the morning"
    ],
    "answer": 0,
    "danger": [
@@ -999,6 +1065,15 @@
     "why": "Living in a high-risk setting, with family history, is what decides treatment."
    },
    {
+    "id": "school",
+    "g": "h",
+    "label": "Ask about his school reading level",
+    "min": 2,
+    "text": "Doing well, likes footy.",
+    "flag": "low",
+    "why": "Nice rapport, but not why he's here."
+   },
+   {
     "id": "skin",
     "g": "h",
     "label": "Skin sores",
@@ -1036,6 +1111,15 @@
     "text": "No murmur. No joint swelling."
    },
    {
+    "id": "asot",
+    "g": "t",
+    "label": "ASOT and anti-DNase B blood tests today",
+    "min": 1,
+    "text": "Ordered. He cries at the needle.",
+    "flag": "low",
+    "why": "Not needed to treat a sore throat in a high-risk child. Blood tests come in if you suspect rheumatic fever itself."
+   },
+   {
     "id": "swab",
     "g": "t",
     "label": "Throat swab",
@@ -1045,48 +1129,49 @@
   ],
   "dx": {
    "options": [
+    "Peritonsillar abscess (quinsy) needing drainage",
     "Viral sore throat: no treatment needed",
-    "Sore throat in a child at high risk of acute rheumatic fever",
-    "Acute rheumatic fever",
-    "Peritonsillar abscess (quinsy)"
+    "High rheumatic fever risk: treat the throat",
+    "Acute rheumatic fever, already established"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0
+    1
    ]
   },
   "plan": {
    "options": [
-    "Penicillin treatment now (first-line for sore throat in high-risk groups)",
+    "Explain to both, and answer the needle question honestly",
+    "Prescribe amoxicillin only if a rapid strep test is positive",
     "Treat the skin sores as well",
-    "Explain to Jayden and Aunty Rose, and answer the needle question honestly",
-    "Symptom relief only",
-    "Wait for the swab before deciding"
+    "Symptom relief only: paracetamol, fluids and rest",
+    "Wait for the throat swab result before deciding",
+    "Penicillin now, as he's in a high-risk group"
    ],
    "correct": [
     0,
-    1,
-    2
+    2,
+    5
    ],
    "danger": [
     3
    ],
-   "explain": 2,
+   "explain": 0,
    "critical": [
-    0
+    5
    ]
   },
   "safety": {
    "options": [
-    "Come back if he gets sore or swollen joints, breathlessness or chest pain, or isn't improving in a few days",
-    "Only come back if the throat's still sore in a month",
-    "No need to come back",
-    "Come back if he gets a cough"
+    "Back for sore joints, breathlessness, chest pain",
+    "Come back if he starts coughing",
+    "Only come back if it's still sore in a month",
+    "No need to come back: it's viral"
    ],
    "answer": 0,
    "danger": [
-    1,
-    2
+    2,
+    3
    ]
   },
   "billing": {
@@ -1175,54 +1260,73 @@
     "label": "Speculum exam (with consent)",
     "min": 3,
     "text": "Cervix looks normal. No obvious source of bleeding."
+   },
+   {
+    "id": "fsh",
+    "g": "t",
+    "label": "FSH and oestradiol levels to confirm menopause",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "At 56 with typical symptoms, hormone levels add nothing. The bleeding is the issue."
+   },
+   {
+    "id": "mht",
+    "g": "t",
+    "label": "Write the MHT script now; investigate the bleeding later",
+    "min": 1,
+    "text": "Script written.",
+    "flag": "harm",
+    "why": "Starting hormones before investigating postmenopausal bleeding can mask an endometrial cancer."
    }
   ],
   "dx": {
    "options": [
-    "Menopause symptoms: straightforward MHT",
-    "Menopause symptoms plus postmenopausal bleeding that needs investigating",
-    "Thyroid disease",
-    "Periods coming back: normal"
+    "Thyroid disease causing the flushes",
+    "Periods returning: normal at her age",
+    "Menopause symptoms plus bleeding to investigate",
+    "Menopause symptoms: start MHT today"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0,
+    1,
     3
    ]
   },
   "plan": {
    "options": [
-    "Investigate the bleeding first (transvaginal ultrasound, then gynaecology as needed)",
-    "When MHT is appropriate: combined oestrogen and progestogen, as she has a uterus",
-    "Explain the plan and check she's understood (teach-back)",
-    "Start oestrogen-only MHT today",
-    "Tell her spotting is normal after menopause"
+    "Start oestrogen-only MHT today and review in 3 months",
+    "Explain the plan and check she's understood",
+    "Investigate the bleeding first (ultrasound, then gynae)",
+    "When MHT is appropriate: oestrogen plus progestogen",
+    "Start a low-dose combined pill to control the bleeding",
+    "Tell her spotting is normal for a year after menopause"
    ],
    "correct": [
-    0,
     1,
-    2
+    2,
+    3
    ],
    "danger": [
-    3,
-    4
+    0,
+    5
    ],
-   "explain": 2,
+   "explain": 1,
    "critical": [
-    0
+    2
    ]
   },
   "safety": {
    "options": [
-    "Let us know about any further bleeding, and come back for the ultrasound results",
-    "Ignore the spotting",
-    "Come back in a year",
-    "Stop worrying about it"
+    "Ignore the spotting: it's normal on MHT",
+    "Report any more bleeding; return for the results",
+    "Only come back if the flushes get worse",
+    "Come back in a year for a script review"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
-    3
+    0,
+    2
    ]
   },
   "pearl": "MHT is the most effective treatment for hot flushes, but any unexplained vaginal bleeding gets investigated before it's prescribed. With a uterus, oestrogen always comes with a progestogen.",
@@ -1262,6 +1366,15 @@
     "label": "Mood and interest",
     "min": 2,
     "text": "Low most days. Stopped going to training. Eating less."
+   },
+   {
+    "id": "sleephyg",
+    "g": "h",
+    "label": "Long talk on sleep hygiene and screens",
+    "min": 5,
+    "text": "Sam nods politely.",
+    "flag": "low",
+    "why": "Sleep hygiene alone misses the depression and the suicidal thoughts."
    },
    {
     "id": "suicide",
@@ -1308,51 +1421,61 @@
     "label": "Depression questionnaire",
     "min": 2,
     "text": "Scores in the severe range."
+   },
+   {
+    "id": "tsh",
+    "g": "t",
+    "label": "Thyroid, iron and vitamin D tests",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "Reasonable later, but not before you've asked about mood and safety."
    }
   ],
   "dx": {
    "options": [
-    "Insomnia only",
+    "Alcohol use disorder",
+    "Insomnia only: sleep hygiene",
     "Depression with suicidal thoughts",
-    "Bipolar disorder",
-    "Alcohol use disorder"
+    "Bipolar disorder, in a high phase"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0
+    1
    ]
   },
   "plan": {
    "options": [
-    "Make a safety plan together (warning signs, people and services to contact)",
-    "Arrange psychological therapy",
     "Book a review within days, not months",
-    "Crisis contacts: Lifeline 13 11 14, or 000 in an emergency",
+    "Make a safety plan together",
+    "Arrange psychological therapy",
     "Explain the plan and check they've understood",
-    "Sleeping tablets and a review in 3 months"
+    "Sleeping tablets for a month and a review in 3 months",
+    "Refer to a sleep clinic for an overnight study first",
+    "Crisis contacts: Lifeline 13 11 14, or 000 in an emergency"
    ],
    "correct": [
     0,
     1,
     2,
     3,
-    4
+    6
    ],
    "danger": [
-    5
+    4
    ],
-   "explain": 4,
+   "explain": 3,
    "critical": [
     0,
-    2
+    1
    ]
   },
   "safety": {
    "options": [
-    "If the thoughts get stronger or you start making plans: call 000 or Lifeline (13 11 14), or go to ED",
-    "Come back if you're still not sleeping in 3 months",
-    "Try not to think about it",
-    "Have a drink to help you sleep"
+    "000, Lifeline or ED if the thoughts get stronger",
+    "Have a nightcap to help you get to sleep",
+    "Try to distract yourself and not think about it",
+    "Come back if you're still not sleeping in 3 months"
    ],
    "answer": 0,
    "danger": [
@@ -1418,6 +1541,15 @@
     "why": "Access to means is one of the most modifiable risks."
    },
    {
+    "id": "contract",
+    "g": "h",
+    "label": "Ask Sam to sign a no-harm contract",
+    "min": 1,
+    "text": "Sam signs it.",
+    "flag": "harm",
+    "why": "No-harm contracts don't keep people safe and can give false reassurance."
+   },
+   {
     "id": "support",
     "g": "h",
     "label": "Who's around?",
@@ -1461,49 +1593,50 @@
   ],
   "dx": {
    "options": [
+    "Adjustment reaction with low ongoing risk",
     "Depression with high, immediate suicide risk",
-    "Adjustment reaction, low risk",
-    "Insomnia"
+    "Insomnia, made worse by stress"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     2
    ]
   },
   "plan": {
    "options": [
-    "Urgent same-day crisis assessment (acute mental health team or ED)",
     "Sam isn't left alone: Jess stays until handover",
-    "Reduce access to means (the saved tablets)",
+    "Home tonight, with a review booked in a fortnight",
+    "Urgent same-day crisis assessment",
     "Explain what happens next, to Sam and Jess",
-    "Home with a review in a fortnight"
+    "Increase the antidepressant dose and review next week",
+    "Reduce access to means (the saved tablets)"
    ],
    "correct": [
     0,
-    1,
     2,
-    3
+    3,
+    5
    ],
    "danger": [
-    4
+    1
    ],
    "explain": 3,
    "critical": [
     0,
-    1
+    2
    ]
   },
   "safety": {
    "options": [
-    "If at any point Sam can't stay safe before the assessment: call 000",
-    "See how tonight goes",
-    "Book a fortnightly review",
-    "Leave it to Sam to decide"
+    "Book a fortnightly review to monitor",
+    "000 if Sam can't stay safe before assessment",
+    "Leave it to Sam to decide what happens next",
+    "See how tonight goes and call in the morning"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     2,
     3
    ]
@@ -1548,6 +1681,15 @@
     "why": "A cough over three weeks, especially with blood, is a TB flag."
    },
    {
+    "id": "travel",
+    "g": "h",
+    "label": "Detailed travel history for the last holiday",
+    "min": 3,
+    "text": "No holidays. Hasn't left Australia since arriving.",
+    "flag": "low",
+    "why": "His country of birth and arrival matter; holiday plans don't."
+   },
+   {
     "id": "sys",
     "g": "h",
     "label": "Fevers, sweats, weight",
@@ -1589,6 +1731,15 @@
     "text": "Crackles at the right upper chest. Temp 37.8°C."
    },
    {
+    "id": "amox",
+    "g": "t",
+    "label": "Start amoxicillin now and review in a week",
+    "min": 1,
+    "text": "Script written.",
+    "flag": "harm",
+    "why": "Antibiotics don't treat TB and can delay the diagnosis."
+   },
+   {
     "id": "cxr",
     "g": "t",
     "label": "Chest X-ray and sputum for TB",
@@ -1600,48 +1751,49 @@
   ],
   "dx": {
    "options": [
-    "Viral bronchitis",
     "Suspected pulmonary tuberculosis",
-    "Asthma",
-    "Reflux cough"
-   ],
-   "answer": 1,
-   "danger": [
-    0,
-    2
-   ]
-  },
-  "plan": {
-   "options": [
-    "Chest X-ray and sputum tests for TB",
-    "Contact the local TB (chest) clinic urgently: assessment and treatment are free",
-    "Explain the plan through the interpreter and check understanding",
-    "Cough syrup and sign the fit-for-work form"
-   ],
-   "correct": [
-    0,
-    1,
-    2
-   ],
-   "danger": [
-    3
-   ],
-   "explain": 2,
-   "critical": [
-    1
-   ]
-  },
-  "safety": {
-   "options": [
-    "Come back urgently if you cough more blood or get breathless",
-    "Come back if the cough lasts another 6 weeks",
-    "No need to come back",
-    "Just keep working"
+    "Viral bronchitis",
+    "Asthma, triggered by work dust",
+    "Reflux-related cough"
    ],
    "answer": 0,
    "danger": [
     1,
     2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Cough syrup, and sign the fit-for-work form today",
+    "Explain through the interpreter; check understanding",
+    "Chest X-ray and sputum tests for TB",
+    "Contact the TB clinic urgently: care is free",
+    "A week of amoxicillin, then review if still coughing"
+   ],
+   "correct": [
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    0
+   ],
+   "explain": 1,
+   "critical": [
+    3
+   ]
+  },
+  "safety": {
+   "options": [
+    "Keep working and return if it gets worse",
+    "Urgently if you cough more blood or get breathless",
+    "Come back if the cough lasts another 6 weeks",
+    "No need to come back once the form's done"
+   ],
+   "answer": 1,
+   "danger": [
+    2,
+    3
    ]
   },
   "pearl": "A cough of 3 weeks or more with sweats and weight loss in someone from a high-TB setting needs a chest X-ray and sputum. And a professional interpreter, not a mime.",
@@ -1695,6 +1847,15 @@
     "why": "People with Down syndrome have a much higher risk of hypothyroidism, rising with age."
    },
    {
+    "id": "behaviour",
+    "g": "h",
+    "label": "Ask the support worker about his behaviour plan",
+    "min": 3,
+    "text": "Long explanation of his weekly roster.",
+    "flag": "low",
+    "why": "Useful context, but it doesn't find the cause."
+   },
+   {
     "id": "ice",
     "g": "h",
     "label": "Ideas, concerns, expectations",
@@ -1716,6 +1877,15 @@
     "label": "Obs and examination",
     "min": 1,
     "text": "HR 56. Weight up 5 kg. Dry skin. Slow-relaxing reflexes."
+   },
+   {
+    "id": "ctbrain",
+    "g": "t",
+    "label": "Order a CT brain",
+    "min": 1,
+    "text": "Requested.",
+    "flag": "low",
+    "why": "Check the simple, reversible causes first. A CT isn't the first test for slowing down."
    },
    {
     "id": "tft",
@@ -1742,34 +1912,35 @@
   },
   "plan": {
    "options": [
-    "Start thyroid hormone replacement with a follow-up TSH",
-    "Explain to Lachlan in plain language, check he's understood, and include Kelly with his OK",
+    "Explain in plain language, with Kelly there if he agrees",
+    "Start an antidepressant and review in 6 weeks",
     "Regular thyroid checks from now on",
-    "Refer to a memory clinic for dementia"
+    "Start thyroid hormone replacement with a follow-up TSH",
+    "Refer to a memory clinic for a dementia assessment"
    ],
    "correct": [
     0,
-    1,
-    2
-   ],
-   "danger": [
+    2,
     3
    ],
-   "explain": 1,
+   "danger": [
+    4
+   ],
+   "explain": 0,
    "critical": [
-    0
+    3
    ]
   },
   "safety": {
    "options": [
-    "Repeat the blood test in about 6 weeks, and come back sooner if he's getting worse",
-    "Nothing to follow up",
-    "Come back next year",
-    "Only come back if he stops working"
+    "Nothing to follow up once he's on tablets",
+    "Come back next year for his health check",
+    "Repeat bloods in 6 weeks; sooner if worse",
+    "Only come back if he stops going to work"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
-    1
+    0
    ]
   },
   "pearl": "Don't let a disability explain away new symptoms (diagnostic overshadowing). Talk to the patient first, then the support worker, and check the thyroid.",
@@ -1873,54 +2044,54 @@
   ],
   "dx": {
    "options": [
-    "Solar keratoses only: freeze the lot",
-    "Solar keratoses, plus a hand lesion suspicious for squamous cell carcinoma",
-    "Melanoma",
-    "Seborrhoeic keratoses"
+    "Melanoma on the back of the hand",
+    "Seborrhoeic keratoses: reassure",
+    "Solar keratoses, plus a possible SCC on the hand",
+    "Solar keratoses only: freeze the lot"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0
+    3
    ]
   },
   "plan": {
    "options": [
-    "Biopsy the hand lesion and send it for histology",
     "Treat the forearm keratoses (for example, cryotherapy)",
+    "Freeze the hand lesion today and skip the biopsy",
+    "Reassure him: they're all just sunspots from age",
+    "Biopsy the hand lesion and send it for histology",
     "Review with the histology result to plan definitive treatment",
-    "Explain the plan and check he's understood (teach-back)",
-    "Sun-safe habits from here on",
-    "Freeze the hand lesion and skip the biopsy",
-    "Reassure: they're all just sunspots"
+    "Explain the plan and check he's understood",
+    "Sun-safe habits from here on"
    ],
    "correct": [
     0,
-    1,
-    2,
     3,
-    4
-   ],
-   "danger": [
+    4,
     5,
     6
    ],
-   "explain": 3,
-   "critical": [
-    0,
+   "danger": [
+    1,
     2
+   ],
+   "explain": 5,
+   "critical": [
+    3,
+    4
    ]
   },
   "safety": {
    "options": [
-    "Come back sooner if the hand spot grows or bleeds, or you notice a lump in your elbow or armpit. We'll book you in for the result.",
-    "No news is good news",
-    "Pop some cream on it and see how it goes",
-    "See you in a year"
+    "No news is good news, so don't call us",
+    "See you in a year for another skin check",
+    "Sooner if the hand spot grows, bleeds or a lump appears",
+    "Pop some cream on it and see how it goes"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
-    1,
-    3
+    0,
+    1
    ]
   },
   "billing": {
@@ -2012,6 +2183,24 @@
     "text": "\"Is it bad I haven't been taking any vitamins?\""
    },
    {
+    "id": "bhcg",
+    "g": "t",
+    "label": "Serial blood hCG levels 48 hours apart",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "With no pain or bleeding, serial hCG adds little. A dating scan does the job."
+   },
+   {
+    "id": "acne",
+    "g": "t",
+    "label": "Continue her isotretinoin for acne",
+    "min": 1,
+    "text": "Script renewed.",
+    "flag": "harm",
+    "why": "Isotretinoin is highly harmful in pregnancy. It should be stopped."
+   },
+   {
     "id": "hcg",
     "g": "t",
     "label": "Urine pregnancy test in the room",
@@ -2030,47 +2219,48 @@
   ],
   "dx": {
    "options": [
-    "Early pregnancy, about 6 weeks, no warning signs",
     "Ectopic pregnancy",
-    "Miscarriage",
-    "False positive home test"
+    "False positive home test",
+    "Miscarriage in progress",
+    "Early pregnancy, about 6 weeks"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": []
   },
   "plan": {
    "options": [
-    "Start folic acid and iodine supplements",
     "Arrange first antenatal blood tests and a dating plan",
-    "Talk through her options and choices, without assuming",
-    "Explain warning signs and when to get help (teach-back)",
-    "Tell her it's too late, the vitamins won't help now",
+    "Tell her the vitamins won't help much now, so skip them",
+    "Start folic acid and iodine supplements",
+    "Talk through her options, without assuming",
+    "Explain warning signs and when to get help",
+    "Arrange a dating ultrasound for tomorrow, just in case",
     "Book an urgent emergency department visit today"
    ],
    "correct": [
     0,
-    1,
     2,
-    3
-   ],
-   "danger": [
+    3,
     4
    ],
-   "explain": 3,
+   "danger": [
+    1
+   ],
+   "explain": 4,
    "critical": []
   },
   "safety": {
    "options": [
-    "Go to the emergency department straight away for strong one-sided tummy pain, shoulder-tip pain, heavy bleeding or fainting",
     "Come back if you're worried at the 20-week scan",
     "Bleeding in early pregnancy is always normal",
-    "No need to come back until the baby's due"
+    "No need to come back until the baby's due",
+    "ED for one-sided pain, shoulder pain, bleeding or fainting"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
+    0,
     1,
-    2,
-    3
+    2
    ]
   },
   "billing": {
@@ -2212,52 +2402,52 @@
   ],
   "dx": {
    "options": [
-    "Suitable for hormonal IUD insertion today, and due for cervical screening",
+    "Suitable for an IUD today; due for screening",
     "Not suitable: needs an ultrasound first",
-    "Possible pelvic infection: treat first",
-    "Possible early pregnancy: defer insertion"
+    "Possible early pregnancy: defer insertion",
+    "Possible pelvic infection: treat first"
    ],
    "answer": 0,
    "danger": [
-    3
+    2
    ]
   },
   "plan": {
    "options": [
-    "Insert the hormonal IUD with consent, and record batch and expiry",
-    "Take her cervical screening test today",
-    "Explain what to expect (cramping, irregular bleeding in the first months) and check understanding (teach-back)",
+    "No backup needed: it's day 3 of her cycle",
+    "Give routine antibiotics after the insertion",
+    "Explain what to expect, and check understanding",
     "Book a device check in a few weeks",
-    "Use backup contraception for 7 days, or skip it: insertion was in the first 5 days of her cycle",
-    "Routine antibiotics after insertion",
-    "Insert it without discussing side effects to save time"
+    "Insert the IUD with consent; record the batch",
+    "Insert it without discussing side effects, to save time",
+    "Take her cervical screening test today"
    ],
    "correct": [
     0,
-    1,
     2,
     3,
-    4
+    4,
+    6
    ],
    "danger": [
-    6
+    5
    ],
    "explain": 2,
    "critical": [
-    0
+    4
    ]
   },
   "safety": {
    "options": [
-    "Come back straight away for worsening pelvic pain, fever, unusual discharge, if you can't feel the strings, or think you might be pregnant",
-    "Some pain for a few months is normal, so ignore it",
-    "No need for follow-up unless it falls out",
-    "Take antibiotics if you get cramps"
+    "Take antibiotics if you get period-like cramps",
+    "No follow-up needed unless it falls out",
+    "Back for worse pain, fever, discharge or missing strings",
+    "Some pain for a few months is normal, so ignore it"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
     1,
-    2
+    3
    ]
   },
   "billing": {
@@ -2421,50 +2611,51 @@
   ],
   "dx": {
    "options": [
-    "Skin abscess, plus raised blood pressure that needs confirming",
+    "Skin abscess, plus raised BP to confirm",
     "Cellulitis needing IV antibiotics",
-    "Enlarged lymph node: urgent biopsy",
-    "Hidradenitis suppurativa only"
+    "Hidradenitis suppurativa only",
+    "Enlarged lymph node: urgent biopsy"
    ],
    "answer": 0,
    "danger": [
-    2
+    3
    ]
   },
   "plan": {
    "options": [
     "Incision and drainage",
-    "Dressing review in 1 to 2 days (packing out)",
-    "Confirm his blood pressure with home or 24-hour ambulatory monitoring, then review",
-    "Explain the plan and check he's understood (teach-back)",
-    "Antibiotics alone, no drainage",
-    "Ignore the BP: it's just the pain"
+    "Explain the plan and check he's understood",
+    "Confirm his BP with home or ambulatory monitoring",
+    "Antibiotics alone, with no drainage, and review",
+    "Ignore the blood pressure: it's just from the pain",
+    "Refer to a general surgeon for drainage next week",
+    "Dressing review in 1 to 2 days (packing out)"
    ],
    "correct": [
     0,
     1,
     2,
-    3
+    6
    ],
    "danger": [
-    5
+    4
    ],
-   "explain": 3,
+   "explain": 1,
    "critical": [
     0
    ]
   },
   "safety": {
    "options": [
-    "Come back the same day if the redness spreads, red streaks appear, you get fevers or it gets more painful. Chest pain, severe headache or weakness with high BP: call 000",
-    "Squeeze it again if it fills up",
+    "Squeeze it again at home if it fills up",
     "Finish the leftover antibiotics in your cupboard",
-    "Back in a month for the blood pressure"
+    "Back in a month for the blood pressure only",
+    "Same day if redness spreads, fever or worse pain"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
-    1,
-    2
+    0,
+    1
    ]
   },
   "billing": {
@@ -2599,10 +2790,10 @@
   ],
   "dx": {
    "options": [
-    "Benign cyst",
-    "Likely advanced pancreatic cancer: needs urgent specialist work-up",
-    "Gallstones",
-    "Pancreatitis"
+    "Benign pancreatic cyst",
+    "Likely pancreatic cancer: urgent work-up",
+    "Pancreatitis, now settling",
+    "Gallstones causing the pain"
    ],
    "answer": 1,
    "danger": [
@@ -2611,37 +2802,38 @@
   },
   "plan": {
    "options": [
-    "Urgent referral to a hepatobiliary or oncology team, and call the specialist yourself",
     "Share news in small chunks and check understanding",
+    "Arrange the specialist letter and let them explain it",
     "Offer to call her sister or husband to come in",
-    "Give a prognosis in months today",
-    "Book a follow-up within days and give her a direct number"
+    "Book a follow-up within days and give her a direct number",
+    "Give her a prognosis in months today, to be honest",
+    "Urgent specialist referral, and call them yourself"
    ],
    "correct": [
     0,
-    1,
     2,
-    4
+    3,
+    5
    ],
    "danger": [
-    3
+    4
    ],
-   "explain": 1,
+   "explain": 0,
    "critical": [
-    0
+    5
    ]
   },
   "safety": {
    "options": [
-    "Come back or call any time this week; book a review in a few days",
-    "Wait for the specialist letter",
-    "Come back in 3 months",
-    "No need to come back"
+    "Wait for the specialist letter to arrive",
+    "No need to come back: the specialist takes over",
+    "Call any time this week; review in a few days",
+    "Come back in 3 months for a repeat scan"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
+    0,
     1,
-    2,
     3
    ]
   },
@@ -2745,43 +2937,44 @@
   ],
   "dx": {
    "options": [
+    "Shoulder dislocation",
     "Frozen shoulder",
     "Rotator cuff tendinopathy",
-    "Shoulder dislocation",
     "Referred cardiac pain"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": []
   },
   "plan": {
    "options": [
-    "Explain the likely diagnosis and a 6-week physio and load plan",
+    "Urgent orthopaedic referral for possible surgery",
+    "Steroid injection today, as he's asked for one",
+    "Explain the diagnosis and a 6-week physio plan",
     "Discuss modified duties at work",
-    "Steroid injection today on demand",
-    "Simple analgesia as needed",
-    "Urgent orthopaedic referral"
+    "An ultrasound and MRI before starting any treatment",
+    "Simple analgesia as needed"
    ],
    "correct": [
-    0,
-    1,
-    3
+    2,
+    3,
+    5
    ],
    "danger": [],
-   "explain": 0,
+   "explain": 2,
    "critical": [
-    0
+    2
    ]
   },
   "safety": {
    "options": [
-    "Come back if not improving in 6 weeks, or sooner if he loses strength or can't lift his arm",
-    "Come back in a year",
-    "No need to come back",
-    "Only come back for a scan"
+    "No need to come back: it'll settle",
+    "Come back in a year if it's still sore",
+    "Back in 6 weeks, sooner if he loses strength",
+    "Only come back if he wants a scan"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
-    2
+    0
    ]
   },
   "billing": {
@@ -2884,29 +3077,30 @@
   ],
   "dx": {
    "options": [
-    "Normal late talker",
-    "Possible autism and/or hearing loss: needs assessment",
     "Selective mutism",
-    "Intellectual disability confirmed"
+    "Normal late talker: wait and see",
+    "Intellectual disability, confirmed",
+    "Possible autism or hearing loss: assess"
    ],
-   "answer": 1,
+   "answer": 3,
    "danger": [
-    0
+    1
    ]
   },
   "plan": {
    "options": [
-    "Formal hearing test (audiology)",
-    "Refer for developmental assessment (paediatrician or child development service)",
     "Speech pathology referral now, not after diagnosis",
-    "Reassure and recheck at 3",
-    "Tell Josh it's not his fault"
+    "Refer for developmental assessment (paediatrician or child development service)",
+    "Wait for the hearing test before any other referral",
+    "Reassure Josh and recheck her speech at age 3",
+    "Tell Josh it's not his fault",
+    "Formal hearing test (audiology)"
    ],
    "correct": [
     0,
     1,
-    2,
-    4
+    4,
+    5
    ],
    "danger": [
     3
@@ -2918,15 +3112,15 @@
   },
   "safety": {
    "options": [
-    "Come back if she loses any skills, or for review in 4 to 6 weeks to check referrals are moving",
-    "Come back at 4 years",
-    "No need to come back",
-    "Only if she gets an ear infection"
+    "Come back at 4 years for her health check",
+    "Only come back if she gets an ear infection",
+    "Back if she loses skills; review in 4 to 6 weeks",
+    "No need to come back: referrals are sent"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
-    1,
-    2
+    0,
+    3
    ]
   },
   "billing": {
@@ -3023,54 +3217,63 @@
     "label": "X-ray arm",
     "min": 1,
     "text": "Spiral fracture of the humerus."
+   },
+   {
+    "id": "bloodsk",
+    "g": "t",
+    "label": "Full blood count and clotting tests in the clinic",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "The hospital does this as part of the assessment. Doing it here delays the referral."
    }
   ],
   "dx": {
    "options": [
-    "Accidental fracture from rolling",
     "Suspected non-accidental injury",
-    "Bone disease",
-    "Normal bruising"
-   ],
-   "answer": 1,
-   "danger": [
-    0,
-    3
-   ]
-  },
-  "plan": {
-   "options": [
-    "Send to the children's hospital ED today for assessment (skeletal survey, child protection team)",
-    "Make a mandatory report to child protection",
-    "Support Tash, be honest that you need to involve others",
-    "Sling and review in a week",
-    "Ask Tash's partner to come in and explain"
-   ],
-   "correct": [
-    0,
-    1,
-    2
-   ],
-   "danger": [
-    3
-   ],
-   "explain": 2,
-   "critical": [
-    0,
-    1
-   ]
-  },
-  "safety": {
-   "options": [
-    "Today's plan is hospital, not home. You'll follow up with Tash after",
-    "Come back next week",
-    "No need to come back",
-    "Come back if it swells more"
+    "Normal bruising from handling",
+    "Accidental fracture from rolling off the bed",
+    "Brittle bone disease"
    ],
    "answer": 0,
    "danger": [
     1,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Children's hospital ED today for assessment",
+    "Ask Tash's partner to come in and explain the injury",
+    "Support Tash, be honest that you need to involve others",
+    "Make a mandatory report to child protection",
+    "Sling, pain relief and review in a week"
+   ],
+   "correct": [
+    0,
     2,
+    3
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 2,
+   "critical": [
+    0,
+    3
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if it swells more overnight",
+    "No need to come back once it's in a sling",
+    "Hospital today, then you follow up with Tash",
+    "Come back next week to recheck the arm"
+   ],
+   "answer": 2,
+   "danger": [
+    0,
+    1,
     3
    ]
   },
@@ -3173,52 +3376,53 @@
   ],
   "dx": {
    "options": [
-    "Insomnia only",
-    "Depression with suicidal thoughts and a plan",
     "Alcohol dependence only",
-    "Normal grief"
+    "Depression with suicidal thoughts and a plan",
+    "Normal grief after a loss",
+    "Insomnia only"
    ],
    "answer": 1,
    "danger": [
-    0,
+    2,
     3
    ]
   },
   "plan": {
    "options": [
-    "Collaborate on a written safety plan, including reducing access to medicines",
-    "Same-day contact with mental health crisis team or ED if risk can't be managed",
-    "Arrange close follow-up in days and involve a support person with consent",
-    "Start a month of sleeping tablets",
     "Refer for psychology under a mental health treatment plan",
-    "Explain that depression is treatable and check he understands the plan"
+    "Explain depression is treatable; check understanding",
+    "Follow-up in days, with a support person if he agrees",
+    "Start a month of sleeping tablets to break the cycle",
+    "Same-day crisis team or ED if risk can't be managed",
+    "Advise him to cut back on alcohol, then review in a month",
+    "A written safety plan, including access to medicines"
    ],
    "correct": [
     0,
     1,
     2,
     4,
-    5
+    6
    ],
    "danger": [
     3
    ],
-   "explain": 5,
+   "explain": 1,
    "critical": [
-    0,
-    1
+    4,
+    6
    ]
   },
   "safety": {
    "options": [
-    "Call 000 or go to ED if he feels unsafe; give Lifeline 13 11 14 and book review in a day or two",
-    "Review in 3 months",
-    "No need to come back",
-    "Come back if sleep doesn't improve"
+    "Come back if his sleep doesn't improve",
+    "000 or ED if unsafe; Lifeline; review in 1–2 days",
+    "No need to come back once the script is done",
+    "Review in 3 months to see how sleep is going"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     2,
     3
    ]
@@ -3326,46 +3530,48 @@
   "dx": {
    "options": [
     "Fatty liver from weight",
-    "Harmful alcohol use, likely dependence, with grief",
-    "Hepatitis B",
-    "Normal results"
+    "Normal results: reassure",
+    "Hepatitis B infection",
+    "Harmful alcohol use, likely dependence"
    ],
-   "answer": 1,
+   "answer": 3,
    "danger": [
-    3
+    1
    ]
   },
   "plan": {
    "options": [
+    "Discuss acamprosate or naltrexone",
+    "Refer her to a liver specialist before anything else",
+    "Advise her to stop drinking completely from today",
     "Brief intervention using motivational interviewing",
-    "Don't stop suddenly: plan supervised or medicated withdrawal",
-    "Discuss relapse prevention medicine (acamprosate or naltrexone)",
     "Offer grief support",
-    "Liver fibrosis assessment (FIB-4)"
+    "Liver fibrosis assessment (FIB-4)",
+    "Plan a supervised or medicated withdrawal"
    ],
    "correct": [
     0,
-    1,
-    2,
     3,
-    4
+    4,
+    5,
+    6
    ],
    "danger": [],
-   "explain": 0,
+   "explain": 3,
    "critical": [
-    1
+    6
    ]
   },
   "safety": {
    "options": [
-    "Seek help if she gets shaky, sweaty, confused or has a seizure when cutting down. Review in 1 to 2 weeks",
-    "Come back in a year",
-    "No need to come back",
-    "Come back once she's stopped"
+    "Come back once she's stopped drinking completely",
+    "Help if shaky, sweaty or confused; review in 1–2 weeks",
+    "Come back in a year to repeat the liver tests",
+    "No need to come back if she feels well"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     2,
     3
    ]
@@ -3434,6 +3640,15 @@
     "flag": "else"
    },
    {
+    "id": "probe",
+    "g": "e",
+    "label": "Probe the wound with a cotton bud to check depth",
+    "min": 1,
+    "text": "He winces. The wound starts bleeding again.",
+    "flag": "harm",
+    "why": "Blind probing can damage structures. Look under good light and test function instead."
+   },
+   {
     "id": "neuro",
     "g": "e",
     "label": "Check finger sensation and movement (before anaesthetic)",
@@ -3448,6 +3663,15 @@
     "label": "Test tendons individually",
     "min": 1,
     "text": "Flexors intact."
+   },
+   {
+    "id": "xray",
+    "g": "t",
+    "label": "Hand X-ray",
+    "min": 1,
+    "text": "Normal.",
+    "flag": "low",
+    "why": "A clean knife cut without a crush injury doesn't need an X-ray."
    },
    {
     "id": "sutures",
@@ -3467,49 +3691,49 @@
   ],
   "dx": {
    "options": [
-    "Simple laceration",
-    "Laceration with digital nerve injury",
-    "Tendon injury",
-    "Infection"
+    "Early wound infection",
+    "Laceration with a nerve injury",
+    "Flexor tendon injury, partial",
+    "Simple laceration, skin only"
    ],
    "answer": 1,
    "danger": [
-    0
+    3
    ]
   },
   "plan": {
    "options": [
     "Refer urgently to hand surgery for nerve repair",
-    "Tetanus booster",
-    "Clean and close the skin or dress as advised by the hand team",
-    "Suture and send back to work, no referral",
-    "Antibiotics for everyone",
-    "Explain why the nerve matters and check he understands the plan"
+    "Oral antibiotics for every hand laceration",
+    "Explain why the nerve matters; check understanding",
+    "Close or dress the wound as the hand team advises",
+    "Suture it and send him back to work, no referral",
+    "Tetanus booster"
    ],
    "correct": [
     0,
-    1,
     2,
+    3,
     5
    ],
    "danger": [
-    3
+    4
    ],
-   "explain": 5,
+   "explain": 2,
    "critical": [
     0
    ]
   },
   "safety": {
    "options": [
-    "Come back if redness, swelling, fever or pus. Attend the hand clinic",
-    "Remove sutures in 3 weeks",
-    "No need to come back",
-    "Come back in 6 months"
+    "Back for redness, pus or fever; attend hand clinic",
+    "No need to come back: it'll heal",
+    "Remove the sutures yourself in 3 weeks",
+    "Come back in 6 months to check feeling"
    ],
    "answer": 0,
    "danger": [
-    2
+    1
    ]
   },
   "billing": {
@@ -3604,44 +3828,45 @@
   ],
   "dx": {
    "options": [
-    "Viral conjunctivitis",
     "Microbial keratitis (corneal ulcer)",
-    "Dry eye",
-    "Subconjunctival haemorrhage"
+    "Subconjunctival haemorrhage",
+    "Dry eye from screens",
+    "Viral conjunctivitis"
    ],
-   "answer": 1,
+   "answer": 0,
    "danger": [
-    0,
+    1,
     3
    ]
   },
   "plan": {
    "options": [
-    "Same-day ophthalmology or eye emergency referral",
+    "Explain why it's urgent",
+    "Steroid drops to settle the inflammation",
     "Stop contact lens wear and bring the lenses and case",
-    "Chloramphenicol and review in a week",
-    "Steroid drops",
-    "Explain why it's urgent"
+    "Chloramphenicol drops and review in a week",
+    "Switch to daily disposable lenses and review",
+    "Same-day ophthalmology or eye emergency referral"
    ],
    "correct": [
     0,
-    1,
-    4
+    2,
+    5
    ],
    "danger": [
-    2,
+    1,
     3
    ],
-   "explain": 4,
+   "explain": 0,
    "critical": [
-    0
+    5
    ]
   },
   "safety": {
    "options": [
-    "Go to the eye emergency service today",
-    "Come back in a week",
-    "No need to come back",
+    "Eye emergency service today",
+    "Come back in a week if not better",
+    "No need to come back: it's viral",
     "Come back if it spreads to the other eye"
    ],
    "answer": 0,
@@ -3739,6 +3964,15 @@
     "text": "Distended, faecal loading."
    },
    {
+    "id": "sedate",
+    "g": "t",
+    "label": "Give a dose of temazepam to settle him tonight",
+    "min": 1,
+    "text": "Charted.",
+    "flag": "harm",
+    "why": "Sedatives worsen delirium and falls."
+   },
+   {
     "id": "antipsy",
     "g": "t",
     "label": "Prescribe an antipsychotic for agitation",
@@ -3750,52 +3984,53 @@
   ],
   "dx": {
    "options": [
-    "Worsening dementia",
-    "Delirium (medicine side effect and constipation)",
-    "Stroke",
-    "Depression"
+    "A small stroke in the frontal lobe",
+    "Delirium from medicines and constipation",
+    "Late-life depression",
+    "Worsening dementia, progressing fast"
    ],
    "answer": 1,
    "danger": [
-    0
+    3
    ]
   },
   "plan": {
    "options": [
+    "Explain delirium to the family and nurses",
+    "Start a low-dose antipsychotic to settle him",
     "Stop oxybutynin",
     "Treat constipation",
     "Encourage fluids and check urine and bloods",
-    "Non-drug strategies: familiar people, glasses, hearing aids, lighting",
-    "Start an antipsychotic",
-    "Explain delirium to the family and nurses, and check understanding"
+    "Refer for a CT brain and memory clinic review",
+    "Familiar people, glasses, hearing aids, good lighting"
    ],
    "correct": [
     0,
-    1,
     2,
     3,
-    5
+    4,
+    6
    ],
    "danger": [
-    4
+    1
    ],
-   "explain": 5,
+   "explain": 0,
    "critical": [
-    0
+    2
    ]
   },
   "safety": {
    "options": [
-    "Review in 24 to 48 hours; hospital if he gets worse, isn't drinking or has a fever",
-    "Review in a month",
-    "No need to come back",
-    "Review only if family ask"
+    "No need to come back: it's his dementia",
+    "Review in a month at the nursing home",
+    "Review only if the family ask for it",
+    "Review in 24–48 hours; hospital if worse"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
+    0,
     1,
-    2,
-    3
+    2
    ]
   },
   "billing": {
@@ -3872,6 +4107,15 @@
     "flag": "else"
    },
    {
+    "id": "pastonc",
+    "g": "h",
+    "label": "Go through her full oncology history from diagnosis",
+    "min": 4,
+    "text": "Kim recites 3 years of treatment.",
+    "flag": "low",
+    "why": "The letters are in the file. Focus on what's new."
+   },
+   {
     "id": "acd",
     "g": "h",
     "label": "Check advance care directive",
@@ -3884,57 +4128,67 @@
     "label": "Bowels",
     "min": 1,
     "text": "Constipated for 4 days."
+   },
+   {
+    "id": "ctabdo",
+    "g": "t",
+    "label": "CT abdomen for the back pain",
+    "min": 1,
+    "text": "Requested.",
+    "flag": "low",
+    "why": "The worry is the spinal cord. Imaging the abdomen wastes hours."
    }
   ],
   "dx": {
    "options": [
-    "Worsening bony pain only",
+    "Urine infection",
     "Malignant spinal cord compression",
     "Opioid toxicity",
-    "Urinary infection"
+    "Worsening bone pain only"
    ],
    "answer": 1,
    "danger": [
-    0
+    3
    ]
   },
   "plan": {
    "options": [
-    "Urgent discussion with palliative care and oncology about steroids and radiotherapy, in line with her wishes",
-    "High-dose dexamethasone now if appropriate",
-    "Treat constipation and bladder retention",
     "Increase opioid regularly with breakthrough doses",
-    "Nothing until next week",
-    "Explain to Rita and Kim what's happening and what the options are"
+    "Nothing new until her oncology review next week",
+    "Explain to Rita and Kim what the options are",
+    "Urgent palliative and oncology discussion, per her wishes",
+    "Treat constipation and bladder retention",
+    "High-dose dexamethasone now if appropriate",
+    "Order an outpatient MRI in the next few weeks"
    ],
    "correct": [
     0,
-    1,
     2,
     3,
+    4,
     5
    ],
    "danger": [
-    4
-   ],
-   "explain": 5,
-   "critical": [
-    0,
     1
+   ],
+   "explain": 2,
+   "critical": [
+    3,
+    5
    ]
   },
   "safety": {
    "options": [
-    "Call the community palliative team or you any time; review tomorrow",
-    "Review in a fortnight",
-    "No need to come back",
-    "Call only if she stops breathing"
+    "Review in a fortnight to adjust her medicines",
+    "No need to come back: increase the patches",
+    "Call only if she stops breathing",
+    "Call the palliative team any time; review tomorrow"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
+    0,
     1,
-    2,
-    3
+    2
    ]
   },
   "billing": {
@@ -4037,56 +4291,65 @@
     "min": 2,
     "text": "Retrieval coordinated; telehealth cardiologist advises thrombolysis.",
     "key": true
+   },
+   {
+    "id": "lipids",
+    "g": "t",
+    "label": "Fasting lipids and HbA1c",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "Not now. Every minute in a STEMI is heart muscle."
    }
   ],
   "dx": {
    "options": [
-    "Indigestion",
     "Inferior STEMI",
-    "Pericarditis",
-    "Stable angina"
+    "Stable angina",
+    "Indigestion",
+    "Pericarditis"
    ],
-   "answer": 1,
+   "answer": 0,
    "danger": [
-    0
+    2
    ]
   },
   "plan": {
    "options": [
-    "Thrombolysis (after cardiology advice and consent), then transfer for angiography",
+    "Wait an hour to see if the pain settles first",
     "Aspirin and anticoagulation as per protocol",
+    "Explain the heart attack and the treatment",
     "Organise retrieval to a PCI hospital",
-    "Drive himself to hospital",
-    "Wait to see if pain settles",
-    "Explain the heart attack and treatment, and check he understands"
+    "Thrombolysis after cardiology advice, then transfer",
+    "Let him drive himself to the nearest hospital"
    ],
    "correct": [
-    0,
     1,
     2,
-    5
-   ],
-   "danger": [
     3,
     4
    ],
-   "explain": 5,
-   "critical": [
+   "danger": [
     0,
-    2
+    5
+   ],
+   "explain": 2,
+   "critical": [
+    3,
+    4
    ]
   },
   "safety": {
    "options": [
-    "Staying with him until retrieval arrives; continuous monitoring and defibrillator ready",
-    "Go home and rest",
-    "Come back tomorrow",
-    "Drive to hospital in the morning"
+    "Go home and rest, then call if it returns",
+    "Come back tomorrow for a repeat ECG",
+    "Stay with him, monitored, defibrillator ready",
+    "Drive to hospital in the morning if still sore"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
+    0,
     1,
-    2,
     3
    ]
   },
@@ -4162,6 +4425,15 @@
     "flag": "ice"
    },
    {
+    "id": "husband",
+    "g": "h",
+    "label": "Let her husband interpret today",
+    "min": 1,
+    "text": "He answers for her. She goes quiet.",
+    "flag": "harm",
+    "why": "Family interpreters filter what's said, especially about trauma or violence."
+   },
+   {
     "id": "else",
     "g": "h",
     "label": "\"Anything else?\"",
@@ -4178,6 +4450,15 @@
     "text": "Normal."
    },
    {
+    "id": "mri",
+    "g": "t",
+    "label": "Order an MRI brain",
+    "min": 1,
+    "text": "Requested.",
+    "flag": "low",
+    "why": "No red flags. Imaging adds cost and worry, not answers."
+   },
+   {
     "id": "screen",
     "g": "t",
     "label": "Refugee health screening bloods",
@@ -4187,47 +4468,48 @@
   ],
   "dx": {
    "options": [
-    "Brain tumour",
-    "Tension headaches with likely trauma-related symptoms (PTSD)",
+    "Meningitis",
     "Migraine with aura",
-    "Meningitis"
+    "Tension headaches, likely with PTSD",
+    "Brain tumour: urgent scan"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": []
   },
   "plan": {
    "options": [
+    "Refugee health screening and catch-up vaccines",
+    "Strong opioids for the headaches, as needed",
     "Use a professional interpreter at every visit",
-    "Arrange post-arrival health screening and catch-up vaccines for the whole family",
-    "Refer to a torture and trauma counselling service",
-    "CT head today",
-    "Strong opioids for headache"
+    "Ask her husband to interpret, to save time",
+    "CT head today to rule out a tumour",
+    "Refer to a torture and trauma counselling service"
    ],
    "correct": [
     0,
-    1,
-    2
+    2,
+    5
    ],
    "danger": [
-    4
+    1
    ],
-   "explain": 0,
+   "explain": 2,
    "critical": [
-    0
+    2
    ]
   },
   "safety": {
    "options": [
-    "Come back if headaches change, wake her, or with weakness or vomiting. Review in 2 weeks with an interpreter",
-    "No need to come back",
-    "Come back in a year",
-    "Ask her husband to call"
+    "No need to come back: they'll settle",
+    "Ask her husband to call with an update",
+    "Come back in a year if they continue",
+    "Back if headaches change; review with an interpreter"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
+    0,
     1,
-    2,
-    3
+    2
    ]
   },
   "billing": {
@@ -4330,51 +4612,52 @@
   ],
   "dx": {
    "options": [
-    "Accidental injury",
-    "Intimate partner violence with high-risk features",
-    "Domestic argument, not violence",
-    "Wrist sprain only"
+    "Accidental injury from a fall",
+    "Intimate partner violence, high risk",
+    "Wrist sprain only",
+    "A domestic argument, not violence"
    ],
    "answer": 1,
    "danger": [
     0,
-    2
+    3
    ]
   },
   "plan": {
    "options": [
+    "Call the police now, whether or not she agrees",
     "Listen, believe and validate",
     "Safety plan, including a safe way to contact her",
     "Connect with specialist family violence services (1800RESPECT)",
     "Document carefully in the record, with privacy settings",
-    "Couples counselling"
+    "Suggest couples counselling to work through it"
    ],
    "correct": [
-    0,
     1,
     2,
-    3
-   ],
-   "danger": [
+    3,
     4
    ],
-   "explain": 0,
+   "danger": [
+    5
+   ],
+   "explain": 1,
    "critical": [
-    1
+    2
    ]
   },
   "safety": {
    "options": [
-    "Agree a safe way to follow up; 000 if in danger",
-    "Come back in 6 months",
-    "No need to come back",
-    "Send a reminder text"
+    "No need to come back once the wrist heals",
+    "Send a reminder text to her phone",
+    "Come back in 6 months for a review",
+    "Agree a safe way to follow up; 000 if in danger"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
+    0,
     1,
-    2,
-    3
+    2
    ]
   },
   "billing": {
@@ -4472,47 +4755,48 @@
   ],
   "dx": {
    "options": [
-    "No risk",
-    "Gonorrhoea contact: test all sites and treat as contact",
-    "Chlamydia only",
-    "HIV infection"
+    "Gonorrhoea contact: test all sites, treat",
+    "Early HIV infection: start treatment",
+    "No real risk: reassure him",
+    "Chlamydia only: doxycycline for a week"
    ],
-   "answer": 1,
+   "answer": 0,
    "danger": [
-    0
+    2
    ]
   },
   "plan": {
    "options": [
-    "Treat as a contact today (ceftriaxone IM + azithromycin as per guideline)",
-    "Test all exposed sites and blood tests",
     "Offer PrEP and hep A and B vaccination",
     "Partner notification help",
-    "Wait for results before treating"
+    "Wait for all the results before treating him",
+    "Doxycycline for 7 days, without further testing",
+    "Treat as a contact today, as per guideline",
+    "Test all exposed sites and blood tests"
    ],
    "correct": [
     0,
     1,
-    2,
-    3
+    4,
+    5
    ],
    "danger": [],
-   "explain": 2,
+   "explain": 0,
    "critical": [
-    0
+    4
    ]
   },
   "safety": {
    "options": [
-    "Test of cure as advised; no sex for 7 days after treatment and until partners treated",
-    "No follow-up needed",
-    "Come back in a year",
-    "Only if symptoms"
+    "No follow-up needed after one injection",
+    "Come back in a year for a routine sexual health check",
+    "Test of cure; no sex until he and partners are treated",
+    "Only come back if symptoms appear later on"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
-    1,
-    2
+    0,
+    1
    ]
   },
   "billing": {
@@ -4628,43 +4912,43 @@
   ],
   "dx": {
    "options": [
-    "Coeliac disease",
-    "Functional abdominal pain (tests normal), with low mood and bullying",
-    "Appendicitis",
-    "Peptic ulcer"
+    "Coeliac disease, despite normal tests",
+    "Grumbling appendicitis",
+    "Functional pain, with low mood and bullying",
+    "Peptic ulcer from stress"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    2
+    1
    ]
   },
   "plan": {
    "options": [
-    "Safety plan and close follow-up",
-    "Link to youth mental health support (headspace)",
     "With her consent, involve Mum or school",
-    "Gastroscopy",
-    "Tell Mum everything now"
+    "Safety plan and close follow-up",
+    "Refer for a gastroscopy to rule out an ulcer",
+    "Tell Mum everything now, so she can help",
+    "Link to youth mental health support (headspace)"
    ],
    "correct": [
     0,
     1,
-    2
-   ],
-   "danger": [
     4
    ],
-   "explain": 2,
+   "danger": [
+    3
+   ],
+   "explain": 0,
    "critical": [
-    0
+    1
    ]
   },
   "safety": {
    "options": [
-    "Come back by herself in a week; Kids Helpline 1800 55 1800 any time",
-    "No need to come back",
-    "Come back in 6 months",
-    "Only with Mum"
+    "Back on her own in a week; Kids Helpline any time",
+    "Come back in 6 months if the tummy aches continue",
+    "No need to come back now the tests are normal",
+    "Only come back with Mum, who can explain things"
    ],
    "answer": 0,
    "danger": [
@@ -4758,54 +5042,64 @@
     "text": "Prescribed.",
     "flag": "low",
     "why": "Infected deep diabetic ulcers with poor circulation need urgent specialist care."
+   },
+   {
+    "id": "soak",
+    "g": "t",
+    "label": "Advise soaking the foot in warm water daily",
+    "min": 1,
+    "text": "He says he'll try.",
+    "flag": "harm",
+    "why": "Soaking softens skin and can scald numb feet."
    }
   ],
   "dx": {
    "options": [
-    "Simple blister",
-    "Infected diabetic foot ulcer with likely osteomyelitis and ischaemia",
-    "Gout",
-    "Cellulitis only"
+    "Simple blister from new shoes",
+    "Cellulitis only",
+    "Infected diabetic foot ulcer, likely bone infection",
+    "Gout"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
     0
    ]
   },
   "plan": {
    "options": [
-    "Same-day referral to the high-risk foot service or hospital",
-    "Offload pressure",
     "Start antibiotics as per guideline after cultures",
+    "Refer to podiatry next month for a callus trim",
+    "Antibiotic cream and review in 2 weeks",
+    "Same-day referral to the high-risk foot service or hospital",
     "Vascular assessment",
-    "Cream and review in 2 weeks",
+    "Offload pressure",
     "Explain why it's urgent and check he understands"
    ],
    "correct": [
     0,
-    1,
-    2,
     3,
-    5
+    4,
+    5,
+    6
    ],
    "danger": [
-    4
+    2
    ],
-   "explain": 5,
+   "explain": 6,
    "critical": [
-    0
+    3
    ]
   },
   "safety": {
    "options": [
+    "No need to come back: dress it daily",
     "Today: high-risk foot service or ED",
-    "Review in a month",
-    "No need to come back",
-    "Podiatry next year"
+    "Podiatry at next year's check",
+    "Review in a month at the practice"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     2,
     3
    ]
@@ -4889,6 +5183,15 @@
     "key": true
    },
    {
+    "id": "ige",
+    "g": "t",
+    "label": "Allergy blood tests (IgE)",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "The story is dust exposure, not allergy."
+   },
+   {
     "id": "hrct",
     "g": "t",
     "label": "Chest CT (HRCT)",
@@ -4900,51 +5203,52 @@
   "dx": {
    "options": [
     "Asthma",
-    "Silicosis",
     "Anxiety",
+    "Silicosis",
     "Heart failure"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
     0,
-    2
+    1
    ]
   },
   "plan": {
    "options": [
-    "Refer to a respiratory physician",
-    "Notify under state dust disease scheme and workers compensation",
     "Advise no further exposure",
+    "Return to work with a better dust mask",
+    "Refer to a respiratory physician",
+    "Explain silicosis and what it means for work",
     "Inhalers and review in 6 months",
-    "Screen for TB (silica raises risk)",
-    "Explain silicosis, what it means for work, and check understanding"
+    "Notify the dust disease scheme and workers comp",
+    "Screen for TB (silica raises risk)"
    ],
    "correct": [
     0,
-    1,
     2,
-    4,
-    5
+    3,
+    5,
+    6
    ],
    "danger": [
-    3
+    4
    ],
-   "explain": 5,
+   "explain": 3,
    "critical": [
-    0
+    2
    ]
   },
   "safety": {
    "options": [
-    "Come back if more breathless or coughing blood; respiratory review booked",
-    "No need to come back",
-    "Come back in a year",
-    "Only if he stops work"
+    "Come back in a year for spirometry",
+    "No need to come back: inhalers will fix it",
+    "Back if more breathless or coughing blood",
+    "Only come back if he stops work"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
+    0,
     1,
-    2,
     3
    ]
   },
@@ -5033,52 +5337,61 @@
     "label": "Lipids, HbA1c, morning testosterone",
     "min": 1,
     "text": "Ordered."
+   },
+   {
+    "id": "psa",
+    "g": "t",
+    "label": "PSA test while you're at it",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "Not linked to ED. PSA testing needs its own informed discussion."
    }
   ],
   "dx": {
    "options": [
-    "Psychological ED only",
-    "ED as a marker of vascular disease, with possible angina",
-    "Low testosterone only",
-    "Normal ageing"
+    "Psychological ED from work stress",
+    "Normal ageing at 56",
+    "ED as a marker of vascular disease",
+    "Low testosterone causing it"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    3
+    1
    ]
   },
   "plan": {
    "options": [
-    "Assess cardiovascular risk and investigate the exertional chest tightness",
-    "Discuss PDE5 inhibitor once cardiac status is clear",
     "Smoking cessation support",
-    "Script for sildenafil today without further checks",
-    "Reassure"
+    "Assess CV risk and investigate the chest tightness",
+    "Script for sildenafil today, without further checks",
+    "Reassure him: it's normal at his age",
+    "Discuss PDE5 inhibitor once cardiac status is clear"
    ],
    "correct": [
     0,
     1,
-    2
-   ],
-   "danger": [
-    3,
     4
    ],
-   "explain": 1,
+   "danger": [
+    2,
+    3
+   ],
+   "explain": 4,
    "critical": [
-    0
+    1
    ]
   },
   "safety": {
    "options": [
-    "Come back with results in 1 to 2 weeks; ambulance if chest pain at rest or lasting over 10 minutes",
-    "No need to come back",
-    "Come back in a year",
-    "Only if the pills don't work"
+    "Only come back if the pills don't work",
+    "Results in 1–2 weeks; 000 for chest pain at rest",
+    "Come back in a year for another script",
+    "No need to come back if the pills work"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     2,
     3
    ]
@@ -5118,6 +5431,15 @@
   "blurb": "Repeat scripts by phone",
   "opening": "\"Can you just do my repeats over the phone, love?\"",
   "actions": [
+   {
+    "id": "pharm",
+    "g": "h",
+    "label": "Ask which pharmacy she likes",
+    "min": 1,
+    "text": "The one near the bakery.",
+    "flag": "low",
+    "why": "Doesn't change anything today."
+   },
    {
     "id": "id",
     "g": "h",
@@ -5170,6 +5492,15 @@
     "why": "Head injury on warfarin needs a CT."
    },
    {
+    "id": "repeatnow",
+    "g": "t",
+    "label": "Send all repeats now and finish the call",
+    "min": 1,
+    "text": "Scripts sent. Call ended.",
+    "flag": "harm",
+    "why": "She mentioned a fall and bruising on warfarin. That needed questions."
+   },
+   {
     "id": "escr",
     "g": "t",
     "label": "Send e-scripts",
@@ -5180,45 +5511,46 @@
   "dx": {
    "options": [
     "Routine repeat",
-    "Head injury on warfarin with a high INR",
     "Medicine side effect only",
+    "Head injury on warfarin, high INR",
     "Normal bruising"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
     0
    ]
   },
   "plan": {
    "options": [
-    "Urgent CT head today (ED)",
     "Check INR today",
-    "Send e-scripts for other medicines",
-    "Repeat scripts and review in 3 months",
+    "Withhold warfarin for 2 days and recheck the INR",
+    "Urgent CT head today (ED)",
     "Book face-to-face review after",
-    "Explain why she needs a scan today, and check she understands"
+    "Repeat scripts and review in 3 months",
+    "Send e-scripts for other medicines",
+    "Explain why she needs a scan today"
    ],
    "correct": [
     0,
-    1,
     2,
-    4,
-    5
+    3,
+    5,
+    6
    ],
    "danger": [
-    3
+    4
    ],
-   "explain": 5,
+   "explain": 6,
    "critical": [
-    0
+    2
    ]
   },
   "safety": {
    "options": [
-    "Go to ED today; call 000 if drowsy, vomiting or confused",
-    "Review in 3 months",
-    "No need to come back",
-    "Next telehealth in a month"
+    "ED today; 000 if drowsy, vomiting or confused",
+    "Next telehealth in a month",
+    "Review in 3 months by phone",
+    "No need to come back: scripts are done"
    ],
    "answer": 0,
    "danger": [
@@ -5308,6 +5640,15 @@
     "flag": "else"
    },
    {
+    "id": "stemetil",
+    "g": "t",
+    "label": "IM prochlorperazine and send her home",
+    "min": 1,
+    "text": "Given. She still can't walk straight.",
+    "flag": "harm",
+    "why": "Treating the symptom hides a stroke she can't walk with."
+   },
+   {
     "id": "epley",
     "g": "t",
     "label": "Epley manoeuvre",
@@ -5319,50 +5660,50 @@
   ],
   "dx": {
    "options": [
+    "Ménière's disease",
     "BPPV",
     "Vestibular neuritis",
-    "Posterior circulation stroke",
-    "Ménière's disease"
+    "Posterior circulation stroke"
    ],
-   "answer": 2,
+   "answer": 3,
    "danger": [
-    0
+    1
    ]
   },
   "plan": {
    "options": [
     "Ambulance to ED for stroke assessment",
-    "Prochlorperazine and home",
-    "Epley manoeuvre",
-    "Explain why it's urgent",
-    "Wait and see"
+    "Do the Epley manoeuvre now",
+    "Wait and see if it settles in an hour",
+    "Prochlorperazine and home to rest",
+    "Explain why it's urgent"
    ],
    "correct": [
     0,
-    3
+    4
    ],
    "danger": [
     1,
     2,
-    4
+    3
    ],
-   "explain": 3,
+   "explain": 4,
    "critical": [
     0
    ]
   },
   "safety": {
    "options": [
-    "Ambulance now",
     "Review tomorrow",
     "No need to come back",
-    "Come back if it lasts a week"
+    "Come back if it lasts a week",
+    "Ambulance now"
    ],
-   "answer": 0,
+   "answer": 3,
    "danger": [
+    0,
     1,
-    2,
-    3
+    2
    ]
   },
   "billing": {
@@ -5457,6 +5798,15 @@
     "why": "Iron deficiency and thyroid disease mimic and worsen POTS."
    },
    {
+    "id": "holter",
+    "g": "t",
+    "label": "Holter monitor in 6 months",
+    "min": 1,
+    "text": "Booked.",
+    "flag": "low",
+    "why": "An active stand test today answers the question faster."
+   },
+   {
     "id": "psych",
     "g": "t",
     "label": "Refer to psychology for anxiety",
@@ -5468,50 +5818,51 @@
   ],
   "dx": {
    "options": [
-    "Anxiety disorder",
-    "Probable POTS, with iron deficiency to treat",
     "Ventricular tachycardia",
-    "Hyperthyroidism"
+    "Anxiety disorder with panic",
+    "Probable POTS, plus iron deficiency",
+    "Overactive thyroid"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0
+    1
    ]
   },
   "plan": {
    "options": [
-    "Treat the iron deficiency and look for the cause (heavy periods)",
-    "Fluids 2–3 L and extra salt (if no heart, kidney or BP problem), compression, slow position changes",
-    "Recumbent exercise (rowing, recumbent bike, swimming), building up slowly",
+    "Extra fluids and salt (if safe), compression stockings",
+    "Recumbent exercise, building up slowly",
     "Refer to a cardiologist or autonomic clinic",
-    "Tell her it's anxiety and to try breathing exercises",
-    "Explain POTS, validate the symptoms, and check she's understood"
+    "Start a beta-blocker today and review in 6 months",
+    "Explain POTS and validate her symptoms",
+    "Treat the iron deficiency and look for the cause (heavy periods)",
+    "Tell her it's anxiety and to try breathing exercises"
    ],
    "correct": [
     0,
     1,
     2,
-    3,
+    4,
     5
    ],
    "danger": [
-    4
+    6
    ],
-   "explain": 5,
+   "explain": 4,
    "critical": [
-    0
+    5
    ]
   },
   "safety": {
    "options": [
-    "Urgent review or 000 for fainting with chest pain, on exertion, or with injury",
-    "Nothing to worry about",
+    "Nothing to worry about: it's very common",
+    "Urgent help if fainting with chest pain or exertion",
     "Come back if the anxiety gets worse",
-    "Stop all fluids"
+    "Cut back on fluids to stop the palpitations"
    ],
-   "answer": 0,
+   "answer": 1,
    "danger": [
-    1,
+    0,
     3
    ]
   },
@@ -5561,6 +5912,15 @@
     "flag": "else"
    },
    {
+    "id": "diet",
+    "g": "h",
+    "label": "Ask what she had for lunch",
+    "min": 1,
+    "text": "A curry.",
+    "flag": "low",
+    "why": "Diet doesn't explain sweating and jaw pain."
+   },
+   {
     "id": "obs",
     "g": "e",
     "label": "Pulse, BP, sats, look at her",
@@ -5589,49 +5949,50 @@
   ],
   "dx": {
    "options": [
-    "Gastro-oesophageal reflux",
-    "Acute coronary syndrome: call 000 now",
-    "Anxiety",
-    "Gallstones"
+    "Gallstones",
+    "Reflux (gastro-oesophageal reflux)",
+    "Acute coronary syndrome: call 000",
+    "Anxiety and stress"
    ],
-   "answer": 1,
+   "answer": 2,
    "danger": [
-    0,
-    2
+    1,
+    3
    ]
   },
   "plan": {
    "options": [
-    "Call 000",
-    "Aspirin 300 mg to chew (if not allergic)",
-    "Monitor her and send the ECG with her",
     "Let her drive home and come back if worse",
-    "Explain what's happening and check she's understood"
+    "Explain what's happening and check she's understood",
+    "Monitor her and send the ECG with her",
+    "Trial a PPI and review in the morning",
+    "Aspirin 300 mg to chew (if not allergic)",
+    "Call 000"
    ],
    "correct": [
-    0,
     1,
     2,
-    4
+    4,
+    5
    ],
    "danger": [
-    3
-   ],
-   "explain": 4,
-   "critical": [
     0
+   ],
+   "explain": 1,
+   "critical": [
+    5
    ]
   },
   "safety": {
    "options": [
-    "Stay with her until the ambulance arrives",
     "She can wait in the waiting room",
-    "Book an echo next week",
-    "Call her tomorrow"
+    "Book an echo for next week",
+    "Stay with her until the ambulance arrives",
+    "Call her tomorrow to check in"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
-    1,
+    0,
     3
    ]
   },
@@ -5706,6 +6067,15 @@
     "key": true
    },
    {
+    "id": "ca125",
+    "g": "t",
+    "label": "CA-125 blood test",
+    "min": 1,
+    "text": "Ordered.",
+    "flag": "low",
+    "why": "Not a test for endometriosis. It's often raised by benign conditions."
+   },
+   {
     "id": "us",
     "g": "t",
     "label": "Pelvic ultrasound (ideally a specialised endometriosis scan)",
@@ -5717,50 +6087,51 @@
   ],
   "dx": {
    "options": [
-    "Normal period pain",
     "Probable endometriosis",
+    "Normal period pain",
     "IBS",
     "Pelvic inflammatory disease"
-   ],
-   "answer": 1,
-   "danger": [
-    0
-   ]
-  },
-  "plan": {
-   "options": [
-    "Regular NSAIDs starting before the period",
-    "Hormonal treatment, e.g. continuous combined pill or a progestogen",
-    "Refer to a gynaecologist with an interest in endometriosis",
-    "Pelvic floor physio and pain support",
-    "Tell her pain is normal and to toughen up",
-    "Explain, believe her, and check she's understood"
-   ],
-   "correct": [
-    0,
-    1,
-    2,
-    3,
-    5
-   ],
-   "danger": [
-    4
-   ],
-   "explain": 5,
-   "critical": [
-    2
-   ]
-  },
-  "safety": {
-   "options": [
-    "Review in 3 months; sudden severe pain or fever, go to ED",
-    "No follow-up needed",
-    "Come back when she wants a baby",
-    "Only if bleeding stops"
    ],
    "answer": 0,
    "danger": [
     1
+   ]
+  },
+  "plan": {
+   "options": [
+    "Laparoscopy is needed before any treatment starts",
+    "Regular NSAIDs starting before the period",
+    "Tell her period pain is normal and to toughen up",
+    "Refer to a gynaecologist who treats endometriosis",
+    "Hormonal treatment, e.g. a continuous pill",
+    "Pelvic floor physio and pain support",
+    "Explain, believe her, and check she's understood"
+   ],
+   "correct": [
+    1,
+    3,
+    4,
+    5,
+    6
+   ],
+   "danger": [
+    2
+   ],
+   "explain": 6,
+   "critical": [
+    3
+   ]
+  },
+  "safety": {
+   "options": [
+    "Only come back if the bleeding stops completely",
+    "Review in 3 months; ED for sudden pain or fever",
+    "No follow-up needed: just stay on the pill",
+    "Come back when you want to try for a baby"
+   ],
+   "answer": 1,
+   "danger": [
+    2
    ]
   },
   "pearl": "Average diagnostic delay in Australia is 6.5 years. Pain that stops life isn't normal, and a clinical diagnosis lets treatment start before surgery.",
@@ -5831,14 +6202,23 @@
     "text": "Done.",
     "flag": "low",
     "why": "Stronger painkillers mask a spinal emergency."
+   },
+   {
+    "id": "xr",
+    "g": "t",
+    "label": "Lumbar X-ray",
+    "min": 1,
+    "text": "Mild wear and tear.",
+    "flag": "low",
+    "why": "X-rays miss early spread and cord problems. It's falsely reassuring."
    }
   ],
   "dx": {
    "options": [
-    "Chronic mechanical back pain",
-    "Suspected metastatic spinal cord compression (likely prostate cancer)",
-    "Opioid-seeking",
-    "Muscle strain"
+    "Chronic mechanical back pain flaring",
+    "Cancer pressing on the spinal cord",
+    "Opioid-seeking behaviour",
+    "Muscle strain from the garden"
    ],
    "answer": 1,
    "danger": [
@@ -5848,11 +6228,594 @@
   },
   "plan": {
    "options": [
-    "Same-day emergency referral for whole-spine MRI",
+    "Same-day emergency whole-spine MRI",
+    "Physiotherapy referral for core strengthening",
+    "Increase his pain relief and review in 4 weeks",
     "Lie flat and avoid weight bearing until assessed",
-    "Discuss dexamethasone with the on-call team",
     "Explain what's suspected, and check he's understood",
-    "Review in 4 weeks"
+    "Discuss dexamethasone with the on-call team"
+   ],
+   "correct": [
+    0,
+    3,
+    4,
+    5
+   ],
+   "danger": [
+    2
+   ],
+   "explain": 4,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Go now; 000 if legs weaken or he can't wee",
+    "Physio first, then review",
+    "Rest at home and review in a week",
+    "Come back next week if no better"
+   ],
+   "answer": 0,
+   "danger": [
+    2,
+    3
+   ]
+  },
+  "pearl": "‘Frequent attender’ is a label that stops thinking. A patient who keeps coming back is telling you the first answer didn't fit.",
+  "sources": [
+   {
+    "t": "NICE NG234: Spinal metastases and metastatic spinal cord compression",
+    "url": "https://www.nice.org.uk/guidance/ng234"
+   }
+  ]
+ },
+ {
+  "id": "beryl",
+  "room": "consult",
+  "cu": "Communication",
+  "name": "Beryl",
+  "age": 81,
+  "who": "Widowed. Lives alone. Loves a chat. Long appointments booked as short ones.",
+  "blurb": "‘Just a quick one, love’",
+  "opening": "\"Oh, it's lovely to see you. Now, did I tell you about my granddaughter's wedding? The flowers were…\"",
+  "actions": [
+   {
+    "id": "ramble",
+    "g": "h",
+    "label": "Let her tell the whole wedding story",
+    "min": 6,
+    "text": "The flowers, the cousins, the cake, the caterer's divorce. Twelve minutes in, you know nothing medical.",
+    "flag": "low",
+    "why": "Warmth matters, but you need to steer, kindly."
+   },
+   {
+    "id": "agenda",
+    "g": "h",
+    "label": "Set the agenda: \"What would you like to sort out today?\"",
+    "min": 1,
+    "text": "\"Well… my ankles are puffy and I'm puffed on the stairs. But it's nothing.\"",
+    "key": true,
+    "flag": "pc",
+    "why": "Agenda-setting early saves the consult and finds the real problem."
+   },
+   {
+    "id": "refocus",
+    "g": "h",
+    "label": "Gently refocus: \"Can I stop you there? I want to hear about your breathing\"",
+    "min": 1,
+    "text": "She laughs. \"Sorry, love, I do go on.\"",
+    "key": true,
+    "why": "Kind interruption, naming why, keeps rapport and time.",
+    "needs": "agenda"
+   },
+   {
+    "id": "sob",
+    "g": "h",
+    "label": "Breathlessness: lying flat, at night, how far she can walk",
+    "min": 2,
+    "text": "Sleeps on 3 pillows. Wakes gasping some nights. Can't walk to the letterbox without stopping.",
+    "key": true,
+    "why": "Orthopnoea and night breathlessness point to heart failure.",
+    "needs": "agenda"
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Worried she'll be ‘put in a home’. Wants to stay independent.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"My legs are like tree trunks by the evening.\"",
+    "flag": "else"
+   },
+   {
+    "id": "exam",
+    "g": "e",
+    "label": "Heart, lungs, ankles, JVP, weight",
+    "min": 3,
+    "text": "Crackles at both bases. Pitting oedema to the knees. JVP raised. Weight up 4 kg in a month.",
+    "key": true
+   },
+   {
+    "id": "ecg",
+    "g": "t",
+    "label": "ECG",
+    "min": 2,
+    "text": "Atrial fibrillation, rate 104. New.",
+    "key": true,
+    "why": "New AF can tip someone into heart failure."
+   },
+   {
+    "id": "bnp",
+    "g": "t",
+    "label": "NT-proBNP, kidney function, electrolytes, FBC, TSH",
+    "min": 1,
+    "text": "NT-proBNP very high. eGFR 48. Potassium normal.",
+    "key": true
+   },
+   {
+    "id": "photos",
+    "g": "h",
+    "label": "Look at the wedding photos on her phone",
+    "min": 3,
+    "text": "They're lovely.",
+    "flag": "low",
+    "why": "Rapport is good. Three minutes of photos isn't."
+   }
+  ],
+  "dx": {
+   "options": [
+    "New heart failure with atrial fibrillation",
+    "Chest infection",
+    "Loneliness and low mood",
+    "Dependent ankle oedema from age"
+   ],
+   "answer": 0,
+   "danger": [
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Explain the plan and check she's understood",
+    "Anticoagulation discussion for the new AF",
+    "Echocardiogram and cardiology referral",
+    "Book her next visit as a long appointment",
+    "Tell her to cut out salt and come back if worse",
+    "Compression stockings only, review in 3 months",
+    "Start a diuretic and review in a few days",
+    "Rate control for the AF"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    6,
+    7
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 0,
+   "critical": [
+    6
+   ]
+  },
+  "safety": {
+   "options": [
+    "Come back if the ankles stay puffy for another month",
+    "Call 000 if breathless at rest or chest pain; weigh daily",
+    "Nothing to worry about at her age",
+    "Put her feet up and see how she goes"
+   ],
+   "answer": 1,
+   "danger": [
+    2,
+    3
+   ]
+  },
+  "pearl": "Ramblers often bury the lead. Set the agenda early, interrupt kindly, and book longer next time.",
+  "sources": [
+   {
+    "t": "Heart Foundation: heart failure guideline",
+    "url": "https://www.heartfoundation.org.au/for-professionals/heart-failure"
+   }
+  ]
+ },
+ {
+  "id": "craig",
+  "room": "consult",
+  "cu": "Endocrine",
+  "name": "Craig",
+  "age": 47,
+  "critical": true,
+  "criticalWhy": "An aggressive, sweaty man with type 1 diabetes may be hypoglycaemic. Leaving him waiting is dangerous.",
+  "who": "Type 1 diabetes. Reception says he swore at them and ‘smells of alcohol’.",
+  "blurb": "Shouting at reception",
+  "opening": "\"I've been waiting forty bloody minutes! Just give me my script!\" He's sweaty and slurring.",
+  "actions": [
+   {
+    "id": "security",
+    "g": "h",
+    "label": "Call security and ask him to leave",
+    "min": 1,
+    "text": "He knocks over a chair on the way out. Collapses in the car park.",
+    "flag": "harm",
+    "why": "Aggression plus slurring in a person with diabetes is hypoglycaemia until proven otherwise."
+   },
+   {
+    "id": "calm",
+    "g": "h",
+    "label": "Stay calm, keep a safe distance, speak slowly",
+    "min": 1,
+    "text": "\"Sorry… I feel weird.\"",
+    "key": true,
+    "flag": "pc",
+    "why": "De-escalate first: calm voice, open posture, exit route."
+   },
+   {
+    "id": "bgl",
+    "g": "t",
+    "label": "Finger-prick blood glucose",
+    "min": 1,
+    "text": "2.1 mmol/L.",
+    "key": true,
+    "why": "Check the sugar in anyone with diabetes who's confused, aggressive or ‘drunk’."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "After glucose: embarrassed. Skipped lunch, extra insulin for a big breakfast. Scared about his licence.",
+    "flag": "ice",
+    "needs": "bgl"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I've had a few lows lately and didn't feel them coming.\"",
+    "flag": "else",
+    "needs": "bgl"
+   },
+   {
+    "id": "breath",
+    "g": "e",
+    "label": "Breathalyse him",
+    "min": 2,
+    "text": "0.00.",
+    "flag": "low",
+    "why": "The ‘alcohol’ smell was a label. Checking glucose first matters more."
+   },
+   {
+    "id": "argue",
+    "g": "h",
+    "label": "Explain the waiting-room rules firmly",
+    "min": 2,
+    "text": "He shouts louder.",
+    "flag": "low",
+    "why": "Arguing escalates. Safety first, then talk."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Alcohol intoxication",
+    "Stroke",
+    "Personality disorder",
+    "Hypoglycaemia, with reduced awareness of lows"
+   ],
+   "answer": 3,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Send him home to sleep it off",
+    "Driving: no driving until reviewed, as per fitness-to-drive standards",
+    "Explain what happened, without judgement",
+    "Fast-acting glucose by mouth, then a longer-acting carb",
+    "Recheck glucose in 15 minutes",
+    "Ban him from the practice",
+    "Review insulin doses and hypo awareness"
+   ],
+   "correct": [
+    1,
+    2,
+    3,
+    4,
+    6
+   ],
+   "danger": [
+    0,
+    5
+   ],
+   "explain": 2,
+   "critical": [
+    3
+   ]
+  },
+  "safety": {
+   "options": [
+    "No need to come back once he's eaten",
+    "Only come back if he has another episode",
+    "Come back next month to talk about the anger",
+    "Glucagon for family; diabetes team review; don't drive today"
+   ],
+   "answer": 3,
+   "danger": [
+    0
+   ]
+  },
+  "pearl": "Anger can be a symptom. Hypos, head injuries, pain and delirium all look like ‘bad behaviour’. Check the glucose.",
+  "sources": [
+   {
+    "t": "Australian Diabetes Society: hypoglycaemia",
+    "url": "https://www.diabetessociety.com.au/"
+   }
+  ]
+ },
+ {
+  "id": "mia",
+  "room": "consult",
+  "cu": "Women's health",
+  "name": "Mia",
+  "age": 31,
+  "who": "Booked a 10-minute appointment for ‘a medical certificate’.",
+  "blurb": "‘Just a certificate’",
+  "opening": "She sits down and bursts into tears. \"Sorry, sorry. I just need a certificate.\"",
+  "actions": [
+   {
+    "id": "cert",
+    "g": "h",
+    "label": "Write the certificate and move on",
+    "min": 1,
+    "text": "She takes it and leaves, still crying.",
+    "flag": "low",
+    "why": "The certificate wasn't the reason she came."
+   },
+   {
+    "id": "pause",
+    "g": "h",
+    "label": "Pause, offer tissues: \"Take your time. What's happened?\"",
+    "min": 1,
+    "text": "\"I lost the baby last week. Eight weeks. No one at work knew.\"",
+    "key": true,
+    "flag": "pc",
+    "why": "Silence and acknowledgement come before questions."
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks it was her fault for going to the gym. Wants to know if she can try again.",
+    "flag": "ice",
+    "needs": "pause"
+   },
+   {
+    "id": "phys",
+    "g": "h",
+    "label": "Bleeding, pain, fever, discharge since",
+    "min": 2,
+    "text": "Bleeding now light. No fever. Mild cramps.",
+    "key": true,
+    "why": "Check for retained tissue or infection.",
+    "needs": "pause"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"My partner won't talk about it.\"",
+    "flag": "else"
+   },
+   {
+    "id": "mood",
+    "g": "h",
+    "label": "Mood, sleep and support",
+    "min": 2,
+    "text": "Not sleeping. Crying daily. No thoughts of self-harm.",
+    "key": true,
+    "needs": "pause"
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Temperature, pulse, abdomen",
+    "min": 1,
+    "text": "Normal.",
+    "key": true
+   },
+   {
+    "id": "cheer",
+    "g": "h",
+    "label": "\"At least it was early. You can try again.\"",
+    "min": 1,
+    "text": "She goes quiet and looks at the floor.",
+    "flag": "harm",
+    "why": "Minimising early loss hurts. Name it as a real loss."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Grief after early miscarriage, recovering physically",
+    "Retained products with infection",
+    "Postnatal depression",
+    "Adjustment disorder needing medication"
+   ],
+   "answer": 0,
+   "danger": [
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Explain what's normal now, and check she's understood",
+    "The certificate, worded as she prefers",
+    "Pregnancy loss support (e.g. Pink Elephants)",
+    "Start an antidepressant today",
+    "Follow-up in 1–2 weeks, partner welcome",
+    "Reassure her it wasn't caused by the gym",
+    "Advise waiting 6 months before trying again"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4,
+    5
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 0,
+   "critical": [
+    5
+   ]
+  },
+  "safety": {
+   "options": [
+    "Only come back when you're pregnant again",
+    "ED for heavy bleeding, fever or severe pain; call if mood dips",
+    "Come back if you're still sad in 6 months",
+    "No need to come back: it's very common"
+   ],
+   "answer": 1,
+   "danger": [
+    3
+   ]
+  },
+  "pearl": "Tears at the start mean the booking reason isn't the real reason. Pause, acknowledge, then ask.",
+  "sources": [
+   {
+    "t": "Pink Elephants Support Network",
+    "url": "https://www.pinkelephants.org.au/"
+   }
+  ]
+ },
+ {
+  "id": "stavros",
+  "room": "consult",
+  "cu": "Gastro and liver",
+  "name": "Stavros",
+  "age": 68,
+  "who": "Retired builder. Brings a typed list about his bowels.",
+  "blurb": "‘About my bowels’ (again)",
+  "opening": "\"It's my bowels, doctor. Monday hard, Tuesday nothing, Wednesday…\" He keeps going back to Monday.",
+  "actions": [
+   {
+    "id": "diary",
+    "g": "h",
+    "label": "Go through his bowel diary day by day",
+    "min": 6,
+    "text": "Monday again. Then Monday's dinner. Then back to Monday.",
+    "flag": "low",
+    "why": "Perseveration burns time. Summarise and move him on."
+   },
+   {
+    "id": "summ",
+    "g": "h",
+    "label": "Summarise and redirect: \"So it's changed. Let me ask about other things\"",
+    "min": 1,
+    "text": "\"Yes, changed. Since about March.\"",
+    "key": true,
+    "flag": "pc",
+    "why": "Summarising shows you've heard, and lets you steer."
+   },
+   {
+    "id": "red",
+    "g": "h",
+    "label": "Red flags: blood, weight, appetite, family history",
+    "min": 2,
+    "text": "Dark blood mixed in. Lost 6 kg without trying. Brother had bowel cancer at 60.",
+    "key": true,
+    "needs": "summ"
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks it's ‘bad fibre’. Quietly scared because of his brother.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"I'm so tired lately.\"",
+    "flag": "else"
+   },
+   {
+    "id": "pr",
+    "g": "e",
+    "label": "Abdominal and rectal exam (with consent)",
+    "min": 2,
+    "text": "Abdomen soft. Dark blood on the glove; no mass felt.",
+    "key": true
+   },
+   {
+    "id": "fbc",
+    "g": "t",
+    "label": "FBC, iron studies, kidney and liver tests",
+    "min": 1,
+    "text": "Haemoglobin 98, ferritin 6.",
+    "key": true
+   },
+   {
+    "id": "fobt",
+    "g": "t",
+    "label": "Send a bowel screening (FIT) kit",
+    "min": 1,
+    "text": "Kit given.",
+    "flag": "low",
+    "why": "Screening kits are for people without symptoms. He needs a colonoscopy."
+   },
+   {
+    "id": "lax",
+    "g": "t",
+    "label": "Prescribe laxatives and finish",
+    "min": 1,
+    "text": "He's pleased.",
+    "flag": "harm",
+    "why": "Treating constipation misses the bleeding, weight loss and anaemia."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Suspected bowel cancer",
+    "Irritable bowel syndrome",
+    "Haemorrhoids",
+    "Constipation from low fibre"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    3
+   ]
+  },
+  "plan": {
+   "options": [
+    "Explain the concern honestly, and check understanding",
+    "Urgent colonoscopy referral",
+    "Ask a family member to come next time, if he'd like",
+    "Start iron replacement",
+    "Fibre supplement and review in 3 months",
+    "Bowel screening kit and wait for the result"
    ],
    "correct": [
     0,
@@ -5861,31 +6824,171 @@
     3
    ],
    "danger": [
-    4
+    4,
+    5
    ],
-   "explain": 3,
+   "explain": 0,
    "critical": [
-    0
+    1
    ]
   },
   "safety": {
    "options": [
-    "Go now; call 000 if legs get weaker or he can't pass urine",
-    "Rest at home",
-    "Come back next week",
-    "Physio first"
+    "No need to come back after the kit",
+    "Come back next year for his check-up",
+    "Back sooner for heavy bleeding, pain or fainting",
+    "Come back if the diary doesn't improve"
    ],
-   "answer": 0,
+   "answer": 2,
    "danger": [
+    0
+   ]
+  },
+  "pearl": "A patient stuck on one detail can still have a serious story underneath. Summarise, redirect, and ask the red-flag questions.",
+  "sources": [
+   {
+    "t": "Cancer Council: optimal care pathway for colorectal cancer",
+    "url": "https://www.cancer.org.au/health-professionals/optimal-cancer-care-pathways"
+   }
+  ]
+ },
+ {
+  "id": "jules",
+  "room": "consult",
+  "cu": "Dermatology",
+  "name": "Jules",
+  "age": 38,
+  "who": "Graphic designer. Brought a list on their phone.",
+  "blurb": "‘I've got a list’",
+  "opening": "\"OK, I've got seven things. Number one: my knee clicks.\"",
+  "actions": [
+   {
+    "id": "all7",
+    "g": "h",
+    "label": "Work through all seven, in their order",
+    "min": 8,
+    "text": "Knee, ingrown toenail, dandruff, a script, travel vaccines, a mole, eye floaters.",
+    "flag": "low",
+    "why": "You'll run out of time before the important ones."
+   },
+   {
+    "id": "prior",
+    "g": "h",
+    "label": "\"Let's hear the whole list, then pick the most important today\"",
+    "min": 2,
+    "text": "Reads them out. Pauses at number six: \"A mole on my back's changed. My partner noticed.\"",
+    "key": true,
+    "flag": "pc",
+    "why": "Hear the whole list first, then prioritise together."
+   },
+   {
+    "id": "mole",
+    "g": "h",
+    "label": "History of the mole: change, itch, bleeding",
+    "min": 1,
+    "text": "Darker and bigger over 3 months. Bled once.",
+    "key": true,
+    "needs": "prior"
+   },
+   {
+    "id": "derm",
+    "g": "e",
+    "label": "Examine the mole with a dermatoscope",
+    "min": 2,
+    "text": "8 mm, asymmetric, two colours, irregular border.",
+    "key": true,
+    "why": "Changing pigmented lesion: think melanoma.",
+    "needs": "prior"
+   },
+   {
+    "id": "floaters",
+    "g": "h",
+    "label": "Floaters: new? flashes? shadow?",
+    "min": 1,
+    "text": "Had them for years. No change, no flashes.",
+    "key": true,
+    "why": "Quickly rule out the other possibly urgent item.",
+    "needs": "prior"
+   },
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Mostly worried about the knee, for running. Didn't think the mole mattered.",
+    "flag": "ice"
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 1,
+    "text": "\"That's everything. It's all on the list!\"",
+    "flag": "else"
+   },
+   {
+    "id": "knee",
+    "g": "e",
+    "label": "Full knee examination",
+    "min": 3,
+    "text": "Normal. Some clicking.",
+    "flag": "low",
+    "why": "Fine for another day. The mole is what matters today."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Seborrhoeic keratosis",
+    "Benign mole: reassure",
+    "Suspicious lesion: possible melanoma",
+    "Dysplastic naevus: watch"
+   ],
+   "answer": 2,
+   "danger": [
+    1
+   ]
+  },
+  "plan": {
+   "options": [
+    "Freeze the mole today",
+    "Photograph and recheck in 6 months",
+    "Excision biopsy with a narrow margin, soon",
+    "Book another appointment for the rest of the list",
+    "Explain why the mole comes first today",
+    "Shave off the darkest part for testing"
+   ],
+   "correct": [
+    2,
+    3,
+    4
+   ],
+   "danger": [
+    0,
     1,
+    5
+   ],
+   "explain": 4,
+   "critical": [
     2
    ]
   },
-  "pearl": "‘Frequent attender’ is a label that stops thinking. A patient who keeps coming back is telling you the first answer didn't fit.",
+  "safety": {
+   "options": [
+    "Only come back for the knee",
+    "No need to come back for results",
+    "Results within a week; sooner if it bleeds or grows",
+    "Come back next year for a skin check"
+   ],
+   "answer": 2,
+   "danger": [
+    1
+   ]
+  },
+  "pearl": "With a list, hear the whole thing first and prioritise together. The thing they mention last is often the one that matters.",
   "sources": [
    {
-    "t": "NICE NG234: Spinal metastases and metastatic spinal cord compression",
-    "url": "https://www.nice.org.uk/guidance/ng234"
+    "t": "Cancer Council: melanoma clinical guidelines",
+    "url": "https://wiki.cancer.org.au/australia/Guidelines:Melanoma"
    }
   ]
  }

@@ -433,6 +433,7 @@
     if (lastCrit) { safety -= 30; missed.push({ t: "Triage: seen last", w: c.criticalWhy || "", red: true }); }
     var acc = (dxOk ? 50 : 0) + 50 * Math.max(0, hits - wrong) / corr.length;
     c.actions.forEach(function (a) { if (a.flag === "low" && has(a.id)) { acc -= 10; missed.push({ t: "Low-value: " + a.label, w: a.why || "" }); } });
+    c.actions.forEach(function (a) { if (a.flag === "harm" && has(a.id)) { safety -= 15; danger = true; missed.push({ t: "Harmful: " + a.label, w: a.why || "", red: true }); } });
     var over = Math.max(0, mins - CLOCK), time = 100 - 10 * over;
     var parts = [["ice", 35, has("ice")], ["explain", 35, cur.plan.indexOf(c.plan.explain) >= 0], ["else", 15, has("else")]];
     c.actions.forEach(function (a) { if (a.flag === "pc") parts.push(["pc", 15, has(a.id)]); });
@@ -663,6 +664,7 @@
     var html = "<p><b>Four short sessions a day</b>, about 15 minutes in all. New set at midnight, Sydney time.</p><ul>" +
       "<li><b>Morning huddle:</b> 5 quick questions. Ones you miss come back sooner; ones you nail drift away (spaced repetition).</li>" +
       "<li><b>Clinic Day:</b> 5 patients, seen in any order. One is time-critical, so triage matters. Each consult has a 15-minute clock: asking, examining and testing all cost minutes. Then pick a diagnosis, plan, safety-net and billing level.</li>" +
+      "<li><b>Not every question helps:</b> some cost minutes for nothing, and a few could cause harm. Patients ramble, cry, get angry or arrive with a list. Steer kindly.</li>" +
       "<li><b>Scoring:</b> Safety, Accuracy, Time, Patient-centred and Billing, each out of 100. Miss a key safety step and that patient may come back on a later day. Unhappier.</li>" +
       "<li><b>Results inbox:</b> 8 results, 60 seconds. File, Recall or Urgent.</li>" +
       "<li><b>Front desk:</b> 5 billing scenarios. Bill it right: the right item, legitimate co-claims, no audit bait. Fills the Front desk room.</li>" +
@@ -708,7 +710,7 @@
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON(DATA + "huddle.json?v=4"), getJSON(DATA + "cases.json?v=7"), getJSON(DATA + "results.json?v=3"), getJSON(DATA + "billing.json?v=3").catch(function () { return null; })]).then(function (r) {
+  Promise.all([getJSON(DATA + "huddle.json?v=5"), getJSON(DATA + "cases.json?v=8"), getJSON(DATA + "results.json?v=3"), getJSON(DATA + "billing.json?v=3").catch(function () { return null; })]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
     if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();

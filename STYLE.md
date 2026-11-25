@@ -362,3 +362,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Game "About" text and FAQs (MW_ABOUT, MW_ABOUT_N) are in `assets/about.js`, not games.js. Add or edit game About blocks there (bump its `?v=` in shell.js's loader).
 - Secrets and easter eggs (typed codes, mascot taps, cookie hunt etc.) are in `assets/secrets.js`, loaded after the page is ready. Add new codes to CODES there; `_scripts/check_secrets.py` reads that file. The night-shift dark theme stays in shell.js.
 - The one-page print for fact sheets and medicine guides is `assets/medprint.js`, loaded only on pages with `<main class="doc">`.
+
+## Answer options: similar length (26 Nov 2026)
+- In every quiz, game and GP School question, the right answer must not be the longest or most detailed option. Keep all options within a few words of each other; put the detail in the explanation.
+- Wrong options must be plausible, not silly. Mix up where the right answer sits.
+- GP School cases: include red-herring actions (flag "low": wastes time) and harmful ones (flag "harm": costs safety), and curveball patients (rambling, angry, crying, lists, perseverating).
