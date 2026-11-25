@@ -1376,6 +1376,7 @@
     var gm = path.match(/^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest)\//), dn = new Date();
     var today = dn.getFullYear() + "-" + ("0" + (dn.getMonth() + 1)).slice(-2) + "-" + ("0" + dn.getDate()).slice(-2);
     var betaGame = !!gm && !(LAUNCH[gm[1]] && today >= LAUNCH[gm[1]]);
+    if (gm && !betaGame) return; // launched: no Beta tag
     if (!betaGame && (path === "/" || window.MW_curGame || /^\/(about|privacy|disclaimer|contact|normie|arcade)\//.test(path))) return;
     var h1 = document.querySelector("main h1, h1"); if (!h1 || h1.querySelector(".mw-beta") || document.querySelector(".beta")) return;
     h1.insertAdjacentHTML("beforeend", ' <i class="mw-beta" title="Still being built and checked. Spot something? Tell us via Contact.">Beta</i>');
@@ -1718,9 +1719,10 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44" data-nolink>', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
         ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"],
         ["dxtective-gauntlet", "Dx Gauntlet", '<img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44" data-nolink>', "Sundays only", "#4A3480", "#B9A6E8", "Ten cases, no slips"]];
+    function launched(id) { var L = { fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" }[id], d = new Date(); return !!L && d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) >= L; }
     function timedList(openOnes) { if (NORMIE) return []; var o = hiddenOpen(); return TIMED.filter(function (h) { return !!o[h[0]] === openOnes; }); }
     function timedTile(h, on, done, chip) {
-      var dk = root.getAttribute("data-theme") === "dark", inner = '<span class="tl-ic">' + h[2] + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</span><b>" + h[1] + (h[0] === "dxtective-gauntlet" ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + (on ? h[6] : h[3]) + "</small>" + (chip || "") + (on ? "" : '<span class="tl-stamp">Hidden</span>');
+      var dk = root.getAttribute("data-theme") === "dark", inner = '<span class="tl-ic">' + h[2] + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</span><b>" + h[1] + (h[0] === "dxtective-gauntlet" || launched(h[0]) ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + (on ? h[6] : h[3]) + "</small>" + (chip || "") + (on ? "" : '<span class="tl-stamp">Hidden</span>');
       return on ? '<a class="tl' + (done ? " done" : "") + '" data-g="' + h[0] + '" href="/' + h[0] + '/" style="--accent:' + (dk ? h[5] : h[4]) + '">' + inner + "</a>" : '<div class="tl tl-hid" style="--accent:' + (dk ? h[5] : h[4]) + '" aria-label="' + h[1] + ', hidden: ' + h[3] + '">' + inner + "</div>";
     }
     // Open timed games are ranked with the other daily puzzles (tiles); closed (stamped Hidden) ones go in Hidden games.
