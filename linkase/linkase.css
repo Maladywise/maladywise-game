@@ -85,3 +85,10 @@ html[data-theme="dark"] #lnk .key[data-k="enter"]{background:#7E68C8}
   #lnk .pk{gap:6px}
   #lnk .pk-tog{padding:4px 12px;font-size:12px}
 }
+/* tall chains: shrink to fit one screen (--lt set by fit() in linkase.js) */
+#lnk.fit .joint{height:3px}
+#lnk.fit .link{min-height:0;padding-top:1px;padding-bottom:1px}
+#lnk.fit .tl{height:var(--lt);font-size:min(20px,calc(var(--lt) * .62))}
+#lnk.fit .link.end .full{font-size:min(18px,calc(var(--lt) * .6));padding:1px 12px}
+#lnk.fit .msg:empty{min-height:0;margin-top:-7px}
+#lnk.fit .mist .tip{display:none}

@@ -4,7 +4,7 @@
    Long Linkase (every Thursday): chain[9] with 7 hidden words, 7 strikes, flagged "long": true. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11", MAXM = 5;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "12", MAXM = 5;
   function LAST() { return P ? P.chain.length - 1 : 5; }
   function HID() { var a = []; for (var k = 1; k < LAST(); k++) a.push(k); return a; }
   // Normie mode: everyday chains from puzzles/normie/, stats under "n-" keys.
@@ -111,7 +111,35 @@
     if (st.act) { var aw = word(st.act), ar = st.w[st.act].rev; pkIn.maxLength = aw.length; pkIn.placeholder = aw.slice(0, ar) + Array(aw.length - ar + 1).join("\u00b7"); }
     pkSync();
     renderResult();
+    fit(); setTimeout(fit, 60);
   }
+  // shrink the chain so the whole game, keyboard and Enter included, fits on one screen
+  function fit() {
+    var gm = document.getElementById("lnk"); if (!gm) return;
+    gm.style.removeProperty("--lt"); gm.classList.remove("fit");
+    if (!P || st.done) return;
+    var last = pkOn ? $("pk") : $("kb"); if (!last || last.hidden) return;
+    var t0 = gm.querySelector(".link:not(.end) .tl"), th0 = t0 ? t0.getBoundingClientRect().height : 0;
+    for (var pass = 0; pass < 4; pass++) {
+      var over = last.getBoundingClientRect().bottom + window.scrollY - window.innerHeight + 6;
+      if (over <= 0) break;
+      var t = gm.querySelector(".link:not(.end) .tl"); if (!t) return;
+      var th = t.getBoundingClientRect().height, n = LAST() + 1;
+      var nh = Math.max(20, Math.floor(th - over / n));
+      if (nh >= th) {
+        // already as small as it goes (short phones, laptops): scroll the game up under the header instead, once
+        if (!fit.scrolled) { fit.scrolled = 1; var hd = gm.querySelector(".head"), bar = document.querySelector("header.site, .topbar, header");
+          if (hd) window.scrollTo(0, Math.max(0, hd.getBoundingClientRect().top + window.scrollY - (bar ? bar.getBoundingClientRect().height : 0) - 6)); }
+        return;
+      }
+      gm.classList.add("fit"); gm.style.setProperty("--lt", nh + "px");
+    }
+    // compact mode freed some space: grow the tiles back into it
+    var tt = gm.querySelector(".link:not(.end) .tl"); if (!tt || !gm.classList.contains("fit")) return;
+    var slack = window.innerHeight - 6 - (last.getBoundingClientRect().bottom + window.scrollY);
+    if (slack > 0) gm.style.setProperty("--lt", Math.min(th0, Math.floor(tt.getBoundingClientRect().height + slack / (LAST() + 1))) + "px");
+  }
+  var fitT; window.addEventListener("resize", function () { clearTimeout(fitT); fitT = setTimeout(fit, 120); });
   function renderResult() {
     var r = $("result");
     if (!st.done) { r.hidden = true; return; }
