@@ -82,5 +82,7 @@ html[data-theme="dark"] #wde .key[data-k="enter"]{background:#7E68C8}
 /* fit board + keyboard in one screen: tiles also shrink with screen height (26 Nov 2026) */
 #wde .tile{--th:calc((100dvh - var(--wde-over,505px)) / var(--rows,6) - 6px);width:max(34px,min(58px,15vw,var(--th)));height:max(34px,min(58px,15vw,var(--th)))}
 @media (max-width:600px){#wde{--wde-over:500px} #wde .tile{width:max(30px,min(52px,13.5vw,var(--th)));height:max(30px,min(52px,13.5vw,var(--th)))}}
-#wde.long{--rows:7}
-#wde.long .tile{width:max(28px,min(var(--t),var(--th)));height:max(28px,min(var(--t),var(--th)))}
+#wde.long{--rows:8}
+#wde.long .tile{width:max(26px,min(var(--t),var(--th)));height:max(26px,min(var(--t),var(--th)))}
+#wde.long{--wde-over:548px}
+@media (max-width:600px){#wde.long{--wde-over:520px}}
