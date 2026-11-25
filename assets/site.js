@@ -15,6 +15,7 @@ window.MW_HOME = {
       { t: "Conditions", href: "/conditions/", d: "Plain-English fact sheets" },
       { t: "Medicines", href: "/medicines/", d: "What it does, what to watch" },
       { t: "Exercises", href: "/exercises/", d: "Printable rehab plans" },
+      { t: "Neurodiversity", href: "/neurodiversity/", d: "ADHD, autism and more, strengths first" },
       { t: "Printables", href: "/printables/", d: "Checklists and questionnaires" },
       { t: "Specialists", href: "/specialists/", d: "Newcastle + Hunter Region", au: true }
     ] },
