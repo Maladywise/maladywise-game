@@ -214,7 +214,7 @@
   function liveShow() {
     var d = LIVE.last; if (!d) return;
     var bits = [];
-    if (d.online >= LIVE.MIN_ON) bits.push('<span class="mw-dot"></span>' + d.online.toLocaleString("en-AU") + " playing");
+    // "N playing now" count hidden (26 Nov 2026)
     if (d.today >= LIVE.MIN_TODAY) bits.push(heatHtml(d));
     var homeOnly = /^\/(index\.html)?$/.test(location.pathname); // live counts show on the home page only (18 Nov 2026)
     if (hotSave(d) && homeOnly && window.MW_hotRedraw) window.MW_hotRedraw(); // re-sort "More daily puzzles" if the ranking moved
