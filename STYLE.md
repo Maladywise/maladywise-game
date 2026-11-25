@@ -9,6 +9,15 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - Don't mention Normie mode anywhere on the site, in X posts, the Weekly Dose or emails.
 - Mergeon is LIVE (an arcade game), not parked: treat any "Mergeon (parked)" wording in a prompt as out of date.
 
+## No lazy psychogenic labels (owner's rule, 25 Nov 2026; applies to EVERY game, case, quiz, post and page)
+- Never stereotype patients, especially women and girls, with labels such as anxiety, panic, hyperventilation, "stress", FND, IBS, globus, functional or somatic symptoms, health anxiety or "hysteria" as a shortcut that dismisses them.
+- If one of these is the answer, the case must show the work-up that earned it: red flags asked, the relevant tests done and normal (e.g. ECG, glucose, ketones, D-dimer/Wells, coeliac serology, FBC, iron, pregnancy test), and the serious differentials named and excluded. Put that evidence in the clues or stem, not just the explanation.
+- FND is a rule-IN diagnosis made on positive signs by a clinician, never a diagnosis of exclusion or of who the patient is. IBS and functional disorders are positive diagnoses with real biology.
+- Explanations model trauma-informed, respectful care: believe the symptoms, explain the diagnosis, ask about trauma gently and only when relevant, and use neuro-affirming language for autistic and ADHD patients (e.g. different interoception or communication, sensory overload, meltdown/shutdown, not "behaviour" or "attention-seeking").
+- Don't let a psychiatric or neurodivergent history close the case: diagnostic overshadowing is a classic trap worth teaching.
+- Mix sexes across cases; a woman's symptoms are never "probably anxiety" because she is a woman. Where it fits, flip the stereotype (the missed heart attack, the missed coeliac, the missed endometriosis).
+- "Hysteria" only ever appears as history being critiqued.
+
 ## Healthy, regular representation (no quotas)
 - NO fixed quotas. Ignore any "at least half" figure mentioned in a task prompt. The goal is healthy, regular, natural coverage, not 1 in 20 like before, and not forced into every puzzle.
 - Rough guide: women should feature often (people, patients, discoveries, sport) across every game each week; the groups below should each appear several times a month across the games.

@@ -4592,11 +4592,29 @@
     "flag": "else"
    },
    {
+    "id": "redf",
+    "g": "h",
+    "label": "Red flags: weight, night pain, blood, periods, bowel habit",
+    "min": 2,
+    "text": "No weight loss, no night waking, no blood. Periods regular. Bowels normal.",
+    "key": true,
+    "why": "Rule out the organic causes properly before calling pain functional."
+   },
+   {
     "id": "abdo",
     "g": "e",
     "label": "Abdominal exam",
     "min": 1,
     "text": "Normal."
+   },
+   {
+    "id": "bloods",
+    "g": "t",
+    "label": "Coeliac serology, full blood count, iron, CRP, urine dipstick",
+    "min": 1,
+    "text": "All normal.",
+    "key": true,
+    "why": "Cheap first-line tests. Coeliac disease is common and easily missed in teenage girls."
    },
    {
     "id": "scope",
@@ -4611,7 +4629,7 @@
   "dx": {
    "options": [
     "Coeliac disease",
-    "Functional abdominal pain with anxiety, low mood and bullying",
+    "Functional abdominal pain (tests normal), with low mood and bullying",
     "Appendicitis",
     "Peptic ulcer"
    ],
@@ -4667,7 +4685,7 @@
     }
    ]
   },
-  "pearl": "See young people on their own for part of the consult. Explain confidentiality first.",
+  "pearl": "See young people on their own for part of the consult. Check red flags and do basic tests first: functional pain is a positive diagnosis, never ‘all in her head’, and the pain is real.",
   "sources": [
    {
     "t": "headspace",
