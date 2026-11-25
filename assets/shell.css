@@ -1413,7 +1413,7 @@ a.masc-link{display:contents;cursor:pointer}a.masc-link:focus-visible>img{outlin
 
 .mw-live a.mw-live-a{color:inherit;text-decoration:none}.mw-live a.mw-live-a:hover{text-decoration:underline;text-underline-offset:3px}
 /* secrets (shell.js "secrets") */
-.mw-secret-pill{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:95;display:flex;align-items:center;gap:8px;max-width:min(92vw,460px);background:#2E1F57;color:#fff;font:600 14.5px var(--body);line-height:1.35;padding:11px 18px;border-radius:999px;box-shadow:0 12px 34px rgba(0,0,0,.35);animation:mwpin .3s ease}
+.mw-secret-pill{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:95;display:block;box-sizing:border-box;width:max-content;max-width:min(calc(100vw - 32px),420px);background:#2E1F57;color:#fff;font:600 14.5px var(--body);line-height:1.45;text-align:center;text-wrap:balance;padding:12px 20px;border-radius:18px;box-shadow:0 12px 34px rgba(0,0,0,.35);animation:mwpin .3s ease}
 .mw-secret-pill.out{opacity:0;transition:opacity .35s}
 .mw-secret-pill a{color:#FFE08A;font-weight:700;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
 @keyframes mwpin{from{opacity:0;transform:translate(-50%,12px)}}

@@ -7,7 +7,7 @@ window.MW_secrets = function (checkBadges, esc2, get, set, mwFullNear, root, syd
     function pill(txt, ms) {
       var t = document.createElement("div"); t.className = "mw-secret-pill"; t.setAttribute("role", "status"); t.innerHTML = txt;
       // Stack above any pill already showing, so two messages never overlap (25 Nov 2026)
-      var up = 0; Array.prototype.forEach.call(document.querySelectorAll(".mw-secret-pill"), function (x) { up += x.offsetHeight + 8; });
+      var up = 0; Array.prototype.forEach.call(document.querySelectorAll(".mw-secret-pill, .mw-crowd, .mw-btoast"), function (x) { if (x.offsetParent !== null || getComputedStyle(x).position === "fixed") up += x.offsetHeight + 8; });
       if (up) t.style.bottom = (24 + up) + "px";
       document.body.appendChild(t); setTimeout(function () { t.classList.add("out"); setTimeout(function () { t.remove(); }, 400); }, ms || 3200); return t;
     }
