@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Gaslitis</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;600;700&display=swap">
+<style>
+/* Layout: one column of game cards, wrapping into a row on wide screens */
+:root{--bg:#F6F1EA;--ink:#2B2340;--muted:#6B5A93;--card:#FFFFFF;--brand:#4A3480;--plum:#7A2E5C;--teal:#0F5C4A;--on:#FFFFFF;--dot:#F2B544;
+--display:"Lora",Georgia,serif;--body:"Poppins",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16121F;--ink:#F1ECF8;--muted:#B9A8E0;--card:#211B2E;--brand:#5B43A0;--plum:#8A3A6A;--teal:#13705A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16121F;--ink:#F1ECF8;--muted:#B9A8E0;--card:#211B2E;--brand:#5B43A0;--plum:#8A3A6A;--teal:#13705A;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1000px;margin:0 auto}
+h1{font:700 34px/1.1 var(--display);margin:0 0 6px;text-wrap:balance}
+.lede{color:var(--muted);font-size:16px;margin:0 0 6px;max-width:60ch}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--muted);color:var(--muted);border-radius:999px;padding:3px 10px;margin:0 0 22px}
+.row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.c{border-radius:18px;padding:16px;min-height:280px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.e{font-size:42px;line-height:1}
+.t{font:700 21px/1.2 var(--display);text-wrap:balance}
+.b{font-size:14px;line-height:1.5}
+.f{margin-top:auto;font-size:12.5px;border-top:1px solid currentColor;border-top-color:color-mix(in srgb,currentColor 25%,transparent);padding-top:8px}
+.pt{background:var(--card);border:2px solid var(--brand);color:var(--ink)}
+.gl{background:var(--brand);color:var(--on)}.lb{background:var(--plum);color:var(--on)}.rv{background:var(--teal);color:var(--on)}
+.m{display:flex;gap:5px}.m i{width:13px;height:13px;border-radius:50%;background:var(--dot)}.m i.o{background:color-mix(in srgb,var(--on) 28%,transparent)}
+h2{font:700 20px var(--display);margin:30px 0 8px}
+ul{margin:0;padding-left:20px;line-height:1.6;max-width:65ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Gaslitis</h1>
+<p class="lede">You're the doctor. Dismiss Gerald. Then see what you missed.</p>
+<span class="tag">Private mock-up · unlisted</span>
+<div class="row">
+<div class="c pt"><span class="k">Patient</span><div class="e" aria-hidden="true">🏌️</div><div class="t">Gerald, 54</div><div class="b">CEO. Tight chest on the 9th hole. Sweaty. "Probably nothing, but my wife made me come."</div><div class="f">Hidden: what's really wrong 🔒</div></div>
+<div class="c gl"><span class="k">Dismissal card</span><div class="e" aria-hidden="true">🧘</div><div class="t">"Have you tried yoga?"</div><div class="b">Saves 5 minutes. Gerald leaves calmer and no safer.</div><div class="m" aria-label="Gaslight power 3 of 5"><i></i><i></i><i></i><i class="o"></i><i class="o"></i></div><div class="f">Gaslight power 3 · Time saved +5 min</div></div>
+<div class="c lb"><span class="k">Label card</span><div class="e" aria-hidden="true">🏷️</div><div class="t">"Classic stress. Busy man."</div><div class="b">Write it in the notes. Every future doctor reads it first.</div><div class="m" aria-label="Gaslight power 5 of 5"><i></i><i></i><i></i><i></i><i></i></div><div class="f">Gaslight power 5 · Follows him for years</div></div>
+<div class="c rv"><span class="k">The reveal</span><div class="e" aria-hidden="true">💔</div><div class="t">Unstable angina</div><div class="b">An ECG and troponin today would have caught it. Now flip it: women with these symptoms are more likely to hear exactly this.</div><div class="f">Learn more: atypical presentations →</div></div>
+</div>
+<h2>How a round works</h2>
+<ul>
+<li><b>Patient:</b> draw Gerald's complaint. The real diagnosis stays hidden.</li>
+<li><b>Dismiss:</b> play up to 3 dismissal or label cards. Each scores gaslight power and time saved.</li>
+<li><b>Reveal:</b> see what he really had, the test that would have caught it, and the real-world fact about who usually gets dismissed.</li>
+<li><b>Score:</b> high gaslight score = worst doctor. The end screen links to the GP School Blind spots room.</li>
+</ul>
+</div>
+</body>
+</html>
