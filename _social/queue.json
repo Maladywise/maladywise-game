@@ -632,6 +632,19 @@
    "queued_at": "2026-11-20T00:44+11:00"
   },
   {
+   "date": "2026-11-26",
+   "slot": "noon",
+   "pin": true,
+   "note": "Noon trend quiz: newborn vitamin K refusals (US Health 'babies vitamin k' 1,000+)",
+   "thread": [
+    "Quiz 💉 US doctors report more newborns bleeding as more parents decline the vitamin K shot at birth.\n\nWithout it, babies are about how many times more likely to get late vitamin K deficiency bleeding (CDC)?\nA) 2\nB) 10\nC) 81\nD) 1,000\n\nGuess, then check the answer below. 👇",
+    "Answer: C, about 81 times. Babies are born low on vitamin K: little crosses the placenta and breast milk has only small amounts. Late bleeding peaks at 2–8 weeks and can start in the brain. In Australia, guidelines recommend one injection at birth: ask your midwife or doctor.",
+    "Vitamin K at birth: injection vs drops, and the myths → https://maladywise.com/vitamin-k/"
+   ],
+   "queued_at": "2026-11-25T19:56+11:00",
+   "typefully_id": "12181702"
+  },
+  {
    "date": "2026-11-27",
    "slot": "am",
    "pin": true,
@@ -960,18 +973,6 @@
     "Answer: intussusception, the bowel telescoping into itself. Same-day emergency department: ultrasound confirms it, and an air or contrast enema often fixes it without surgery. Redcurrant jelly stools are a late sign, so don't wait for them.",
     "Play Dxtective → https://maladywise.com/dxtective/"
    ]
-  },
-  {
-   "date": "2026-11-26",
-   "slot": "noon",
-   "pin": true,
-   "note": "Noon trend quiz: newborn vitamin K refusals (US Health 'babies vitamin k' 1,000+)",
-   "thread": [
-    "Quiz 💉 US doctors report more newborns bleeding as more parents decline the vitamin K shot at birth.\n\nWithout it, babies are about how many times more likely to get late vitamin K deficiency bleeding (CDC)?\nA) 2\nB) 10\nC) 81\nD) 1,000\n\nGuess, then check the answer below. 👇",
-    "Answer: C, about 81 times. Babies are born low on vitamin K: little crosses the placenta and breast milk has only small amounts. Late bleeding peaks at 2–8 weeks and can start in the brain. In Australia, guidelines recommend one injection at birth: ask your midwife or doctor.",
-    "Vitamin K at birth: injection vs drops, and the myths → https://maladywise.com/vitamin-k/"
-   ],
-   "queued_at": "2026-11-25T20:15+11:00"
   }
  ]
 }
