@@ -638,7 +638,7 @@
         '<div class="us-acts">' + ["File", "Recall", "Urgent"].map(function (n) { return '<button type="button" class="' + n.toLowerCase() + (a === n ? " sel" : "") + '" aria-pressed="' + (a === n) + '" data-act="iact" data-id="' + x.id + '" data-v="' + n + '">' + n + "</button>"; }).join("") + "</div></div>";
     }).join("");
     var n = Object.keys(ib.ans).length;
-    return topRow("#", "Back", '<span class="us-clock" id="us-itimer">' + fmt(inboxLeft(ib)) + "</span>") +
+    return topRow("#", "Back", '<span class="us-clock us-ifloat" id="us-itimer" role="timer" aria-live="off">' + fmt(inboxLeft(ib)) + "</span>") +
       head("Results inbox · 60 seconds", "Yesterday's results", "File it, recall them, or call them now.") +
       '<div class="us-reslist">' + rows + "</div>" +
       '<button type="button" class="us-btn" data-act="idone">Sign off (' + n + "/8)</button>" +
@@ -648,7 +648,12 @@
     var ib = inboxDay(); if (!ib.start || ib.done) return;
     timer = setInterval(function () {
       var el = document.getElementById("us-itimer"), l = inboxLeft(ib);
-      if (el) { el.textContent = fmt(l); el.className = "us-clock" + (l <= 10 ? " over" : l <= 20 ? " low" : ""); }
+      if (el) {
+        el.textContent = l <= 10 ? String(l) : fmt(l);
+        el.className = "us-clock us-ifloat" + (l <= 10 ? " over urgent" : l <= 20 ? " low" : "");
+        // last 10 seconds: pulse gets faster and bigger as time runs out
+        if (l <= 10) { el.style.setProperty("--pd", (0.3 + l * 0.07).toFixed(2) + "s"); el.style.setProperty("--ps", (1.08 + (10 - l) * 0.025).toFixed(3)); }
+      }
       if (l <= 0) { finishInbox(true); render(); }
     }, 250);
   }

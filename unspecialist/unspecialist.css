@@ -216,3 +216,9 @@
 .us-ccv{flex:none;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--us-soft);color:var(--us-soft-ink)}
 .us-ccv.yes{background:var(--us-ok-bg);color:var(--us-ok-ink)}
 .us-ccv.no{background:var(--us-no-bg);color:var(--us-no-ink)}
+
+/* results inbox: the timer floats so it stays visible while scrolling; the last 10 seconds pulse faster and bigger */
+.us-ifloat{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:1000;font-size:20px;padding:12px 20px;box-shadow:0 6px 20px rgba(30,15,60,.3)}
+.us-ifloat.urgent{font-size:30px;min-width:72px;text-align:center;animation:usPulse var(--pd,1s) ease-in-out infinite}
+@keyframes usPulse{0%,100%{transform:scale(1)}50%{transform:scale(var(--ps,1.1));box-shadow:0 0 0 10px rgba(179,38,30,.25),0 6px 20px rgba(30,15,60,.3)}}
+@media (prefers-reduced-motion:reduce){.us-ifloat.urgent{animation:none}}
