@@ -7,48 +7,133 @@
 <title>Gaslitis</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;600;700&display=swap">
 <style>
-/* Layout: one column of game cards, wrapping into a row on wide screens */
-:root{--bg:#F6F1EA;--ink:#2B2340;--muted:#6B5A93;--card:#FFFFFF;--brand:#4A3480;--plum:#7A2E5C;--teal:#0F5C4A;--on:#FFFFFF;--dot:#F2B544;
+:root{--bg:#F6F1EA;--ink:#2B2340;--muted:#6B5A93;--card:#FFFFFF;--line:#E7E0F2;--brand:#4A3480;--plum:#7A2E5C;--teal:#0F5C4A;--on:#FFFFFF;--dot:#F2B544;--bad:#B3261E;
 --display:"Lora",Georgia,serif;--body:"Poppins",system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16121F;--ink:#F1ECF8;--muted:#B9A8E0;--card:#211B2E;--brand:#5B43A0;--plum:#8A3A6A;--teal:#13705A;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#16121F;--ink:#F1ECF8;--muted:#B9A8E0;--card:#211B2E;--brand:#5B43A0;--plum:#8A3A6A;--teal:#13705A;color-scheme:dark}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.wrap{max-width:1000px;margin:0 auto}
-h1{font:700 34px/1.1 var(--display);margin:0 0 6px;text-wrap:balance}
-.lede{color:var(--muted);font-size:16px;margin:0 0 6px;max-width:60ch}
-.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--muted);color:var(--muted);border-radius:999px;padding:3px 10px;margin:0 0 22px}
-.row{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
-.c{border-radius:18px;padding:16px;min-height:280px;display:flex;flex-direction:column;gap:6px;min-width:0}
+@media (prefers-color-scheme:dark){:root{--bg:#16121F;--ink:#F1ECF8;--muted:#B9A8E0;--card:#211B2E;--line:#3A3150;--brand:#5B43A0;--plum:#8A3A6A;--teal:#13705A;--bad:#F2877F;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);padding:24px 16px 48px}
+.wrap{max-width:720px;margin:0 auto}
+h1{font:700 32px/1.1 var(--display);margin:0 0 4px}
+.lede{color:var(--muted);margin:0 0 6px}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--muted);color:var(--muted);border-radius:999px;padding:3px 10px;margin:0 0 18px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
+.pt{background:var(--card);border:2px solid var(--brand);border-radius:18px;padding:16px;margin:0 0 14px}
 .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
-.e{font-size:42px;line-height:1}
-.t{font:700 21px/1.2 var(--display);text-wrap:balance}
-.b{font-size:14px;line-height:1.5}
-.f{margin-top:auto;font-size:12.5px;border-top:1px solid currentColor;border-top-color:color-mix(in srgb,currentColor 25%,transparent);padding-top:8px}
-.pt{background:var(--card);border:2px solid var(--brand);color:var(--ink)}
-.gl{background:var(--brand);color:var(--on)}.lb{background:var(--plum);color:var(--on)}.rv{background:var(--teal);color:var(--on)}
-.m{display:flex;gap:5px}.m i{width:13px;height:13px;border-radius:50%;background:var(--dot)}.m i.o{background:color-mix(in srgb,var(--on) 28%,transparent)}
-h2{font:700 20px var(--display);margin:30px 0 8px}
-ul{margin:0;padding-left:20px;line-height:1.6;max-width:65ch}
+.pt-h{display:flex;gap:12px;align-items:center}.pt-h .e{font-size:40px;line-height:1}
+.t{font:700 22px/1.2 var(--display);margin:2px 0}
+.say{font-size:15px;line-height:1.5;margin:10px 0 0}
+.meter{margin:12px 0 2px;font-size:13px;font-weight:600;display:flex;justify-content:space-between}
+.track{height:12px;border-radius:999px;background:var(--line);overflow:hidden}.track i{display:block;height:100%;background:var(--teal);transition:width .4s}
+.reply{margin:10px 0 0;padding:10px 12px;border-radius:12px;background:var(--bg);font-size:14px;line-height:1.45;font-style:italic;min-height:1em}
+.hand-h{display:flex;justify-content:space-between;align-items:baseline;margin:6px 0 8px}
+.hand-h b{font:700 18px var(--display)}.hand-h span{font-size:13px;color:var(--muted)}
+.hand{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.c{border:0;text-align:left;border-radius:16px;padding:12px;color:var(--on);font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-height:132px;transition:transform .15s,opacity .2s}
+.c:hover,.c:focus-visible{transform:translateY(-3px)}.c:focus-visible{outline:3px solid var(--dot);outline-offset:2px}
+.c[disabled]{opacity:.35;cursor:default;transform:none}
+.c.dis{background:var(--brand)}.c.lab{background:var(--plum)}.c.work{background:var(--teal)}
+.c .ct{font:700 16px/1.25 var(--display)}.c .cs{font-size:12px;opacity:.9;margin-top:auto}
+.m{display:flex;gap:4px}.m i{width:10px;height:10px;border-radius:50%;background:var(--dot)}
+.rv{background:var(--teal);color:var(--on);border-radius:18px;padding:16px;margin:14px 0}
+.rv.miss{background:var(--plum)}
+.rv h2{font:700 22px/1.2 var(--display);margin:4px 0 8px}.rv p{margin:0 0 8px;font-size:15px;line-height:1.5}
+.rv .flip{background:rgba(255,255,255,.14);border-radius:12px;padding:10px 12px}
+.rv a{color:var(--on)}.rv small{font-size:12px;opacity:.85}
+.go{display:block;width:100%;min-height:50px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:600 16px var(--body);cursor:pointer;margin-top:10px}
+.end{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.end h2{font:700 26px var(--display);margin:0 0 6px}.end ul{padding-left:20px;line-height:1.6}
+.end a{color:var(--muted);font-weight:600}
+.how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
+@media (prefers-reduced-motion:reduce){.c,.track i{transition:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <h1>Gaslitis</h1>
-<p class="lede">You're the doctor. Dismiss Gerald. Then see what you missed.</p>
-<span class="tag">Private mock-up · unlisted</span>
-<div class="row">
-<div class="c pt"><span class="k">Patient</span><div class="e" aria-hidden="true">🏌️</div><div class="t">Gerald, 54</div><div class="b">CEO. Tight chest on the 9th hole. Sweaty. "Probably nothing, but my wife made me come."</div><div class="f">Hidden: what's really wrong 🔒</div></div>
-<div class="c gl"><span class="k">Dismissal card</span><div class="e" aria-hidden="true">🧘</div><div class="t">"Have you tried yoga?"</div><div class="b">Saves 5 minutes. Gerald leaves calmer and no safer.</div><div class="m" aria-label="Gaslight power 3 of 5"><i></i><i></i><i></i><i class="o"></i><i class="o"></i></div><div class="f">Gaslight power 3 · Time saved +5 min</div></div>
-<div class="c lb"><span class="k">Label card</span><div class="e" aria-hidden="true">🏷️</div><div class="t">"Classic stress. Busy man."</div><div class="b">Write it in the notes. Every future doctor reads it first.</div><div class="m" aria-label="Gaslight power 5 of 5"><i></i><i></i><i></i><i></i><i></i></div><div class="f">Gaslight power 5 · Follows him for years</div></div>
-<div class="c rv"><span class="k">The reveal</span><div class="e" aria-hidden="true">💔</div><div class="t">Unstable angina</div><div class="b">An ECG and troponin today would have caught it. Now flip it: women with these symptoms are more likely to hear exactly this.</div><div class="f">Learn more: atypical presentations →</div></div>
+<p class="lede">You're the doctor. Dismiss these men. Then see what you missed.</p>
+<span class="tag">Prototype · 4 rounds · unlisted</span>
+<div id="app"></div>
+<p class="how"><b>How to play:</b> each patient arrives with some confidence. Play up to 3 cards to talk him out of being worried. Drain his confidence to zero and he leaves, dismissed. Or play the green card and actually do the work. Every reveal shows the real diagnosis, and who usually hears those lines.</p>
 </div>
-<h2>How a round works</h2>
-<ul>
-<li><b>Patient:</b> draw Gerald's complaint. The real diagnosis stays hidden.</li>
-<li><b>Dismiss:</b> play up to 3 dismissal or label cards. Each scores gaslight power and time saved.</li>
-<li><b>Reveal:</b> see what he really had, the test that would have caught it, and the real-world fact about who usually gets dismissed.</li>
-<li><b>Score:</b> high gaslight score = worst doctor. The end screen links to the GP School Blind spots room.</li>
-</ul>
-</div>
+<script>
+(function(){
+var P=[
+ {n:"Gerald",a:54,e:"🏌️",job:"CEO",say:"\"Tight chest on the 9th hole. Sweaty. Probably nothing, but my wife made me come.\"",conf:10,
+  dx:"Unstable angina",test:"An ECG and troponin today, then a cardiology review.",harm:"Two weeks later he had a heart attack on the 14th hole.",
+  flip:"Women having a heart attack more often have symptoms put down to stress or anxiety, and wait longer for treatment.",src:["Mehta LS et al. Circulation 2016","https://doi.org/10.1161/CIR.0000000000000351"],
+  work:"Do an ECG and troponin"},
+ {n:"Hamish",a:58,e:"🛥️",job:"Fund manager",say:"\"Bit of blood in my wee last week. Doesn't hurt. Probably the boat sun, eh?\"",conf:9,
+  dx:"Bladder cancer",test:"Painless visible blood in the urine over 45 needs a referral for cystoscopy and imaging.",harm:"By the time he was scoped, it had grown into the bladder wall.",
+  flip:"In a large English study, women with blood in their urine needed more GP visits before referral than men, often because it was treated as a urine infection first.",src:["Lyratzopoulos G et al. Lancet Oncol 2013","https://pubmed.ncbi.nlm.nih.gov/23798742/"],
+  work:"Refer for cystoscopy and a CT"},
+ {n:"Rupert",a:46,e:"⚖️",job:"Barrister",say:"\"My legs tingle and one eye went blurry for a week. I've been flat out in court.\"",conf:8,
+  dx:"Multiple sclerosis",test:"A neurological exam and an urgent MRI of the brain and spine.",harm:"A second attack left him with a weak right leg before anyone looked.",
+  flip:"MS is about 3 times more common in women, and early symptoms in women are often written off as anxiety or stress.",src:["MS Australia","https://www.msaustralia.org.au/"],
+  work:"Examine him and order an MRI"},
+ {n:"Clive",a:51,e:"🍷",job:"Winery owner",say:"\"Heart's racing, I'm sweaty, I've lost 6 kilos and I can't sleep. Feel wired.\"",conf:9,
+  dx:"Overactive thyroid (Graves' disease)",test:"One blood test: TSH and free T4.",harm:"He ended up in ED with atrial fibrillation.",
+  flip:"An overactive thyroid is 5 to 10 times more common in women, and its racing heart, sweats and worry are easily mistaken for anxiety.",src:["Taylor PN et al. Nat Rev Endocrinol 2018","https://doi.org/10.1038/nrendo.2018.18"],
+  work:"Check his thyroid"}
+];
+var POOL=[
+ {k:"dis",t:"\"Have you tried yoga?\"",p:2,min:3,r:"\"Yoga? I suppose I could try…\""},
+ {k:"dis",t:"\"It's probably just stress.\"",p:3,min:4,r:"\"Well, it has been a big quarter.\""},
+ {k:"dis",t:"\"Your bloods last year were normal.\"",p:3,min:2,r:"\"Oh. That's reassuring, I guess.\""},
+ {k:"dis",t:"\"Let's not go down a rabbit hole.\"",p:4,min:5,r:"\"No, no, of course. Sorry to waste your time.\""},
+ {k:"dis",t:"\"Dr Google isn't a medical degree.\"",p:4,min:3,r:"\"Fair. I did read a few things…\""},
+ {k:"dis",t:"\"You look very well for your age.\"",p:2,min:2,r:"\"Do I? Thanks, doc.\""},
+ {k:"dis",t:"\"Come back if it gets worse.\"",p:3,min:5,r:"\"Right. How much worse?\""},
+ {k:"lab",t:"Write \"anxious\" in the notes",p:5,min:1,lab:1,r:"He doesn't see it. Every future doctor will."}
+];
+var app=document.getElementById("app"),S={i:0,gas:0,min:0,saved:0,missed:0,labelled:0};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function dots(n){var h="";for(var i=0;i<n;i++)h+="<i></i>";return '<span class="m" aria-label="Gaslight power '+n+'">'+h+"</span>"}
+function round(){
+ var p=P[S.i];S.c=p.conf+(S.labelled?0:0);S.left=3;S.reply="";
+ S.hand=shuffle(POOL).slice(0,4);if(!S.hand.some(function(c){return c.lab}))S.hand[3]=POOL[7];
+ S.hand=shuffle(S.hand);S.hand.splice(Math.floor(Math.random()*5),0,{k:"work",t:p.work,p:0,min:8,work:1});
+ S.played={};draw();
+}
+function bar(){return '<div class="bar"><span class="pill">Patient '+(S.i+1)+" of "+P.length+'</span><span class="pill">🕯️ Gaslight '+S.gas+'</span><span class="pill">⏱️ '+S.min+' min saved</span></div>'}
+function draw(){
+ var p=P[S.i],pct=Math.max(0,S.c)/p.conf*100;
+ var h=bar()+'<div class="pt"><span class="k">Patient</span><div class="pt-h"><span class="e" aria-hidden="true">'+p.e+'</span><div><div class="t">'+p.n+", "+p.a+'</div><div style="font-size:13px;color:var(--muted)">'+p.job+(S.labelled?" · notes say \"anxious\"":"")+'</div></div></div><p class="say">'+esc(p.say)+'</p>'+
+ '<div class="meter"><span>His confidence something is wrong</span><span>'+Math.max(0,S.c)+"/"+p.conf+'</span></div><div class="track"><i style="width:'+pct+'%"></i></div>'+
+ (S.reply?'<div class="reply">'+esc(S.reply)+"</div>":"")+"</div>"+
+ '<div class="hand-h"><b>Your hand</b><span>'+S.left+" card"+(S.left===1?"":"s")+" left to play</span></div><div class=\"hand\">"+
+ S.hand.map(function(c,ix){var d=S.played[ix];return '<button class="c '+c.k+'" data-i="'+ix+'"'+(d?" disabled":"")+'><span class="k">'+(c.work?"Do the work":c.lab?"Label card":"Dismissal card")+'</span><span class="ct">'+esc(c.t)+'</span><span class="cs">'+(c.work?"Costs "+c.min+" min · finds the answer":dots(c.p)+" Saves "+c.min+" min")+"</span></button>"}).join("")+"</div>";
+ app.innerHTML=h;
+ app.querySelectorAll(".c").forEach(function(b){b.onclick=function(){play(+b.getAttribute("data-i"))}});
+}
+function play(ix){
+ var c=S.hand[ix];S.played[ix]=1;
+ if(c.work){S.min-=c.min;S.saved++;return reveal(true)}
+ S.c-=c.p+(S.labelled?1:0);S.gas+=c.p;S.min+=c.min;S.left--;S.reply=c.r;if(c.lab)S.labelled=1;
+ if(S.c<=0){S.missed++;return reveal(false,"He leaves, apologising for wasting your time.")}
+ if(S.left<=0){S.missed++;return reveal(false,"He's still worried, so he books a second opinion elsewhere.")}
+ draw();
+}
+function reveal(ok,why){
+ var p=P[S.i];
+ app.innerHTML=bar()+'<div class="rv'+(ok?"":" miss")+'"><span class="k">'+(ok?"You did the work":"The reveal")+'</span><h2>'+esc(p.dx)+'</h2>'+
+ (ok?"<p>Found it. "+esc(p.test)+"</p>":"<p>"+esc(why)+" "+esc(p.harm)+"</p><p><b>What would have caught it:</b> "+esc(p.test)+"</p>")+
+ '<div class="flip"><span class="k">Now flip it</span><p style="margin:4px 0 6px">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></div></div>"+
+ '<button class="go" id="nx">'+(S.i<P.length-1?"Next patient":"See your score")+"</button>";
+ document.getElementById("nx").onclick=function(){S.i++;S.i<P.length?round():end()};
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+function end(){
+ var rank=S.missed>=4?"Senior Consultant in Dismissal":S.missed>=2?"Registrar of Reassurance":S.missed===1?"Mostly a doctor":"Actual doctor";
+ app.innerHTML='<div class="end"><span class="k">Your clinic</span><h2>'+rank+'</h2><ul><li><b>Gaslight score:</b> '+S.gas+'</li><li><b>Time saved:</b> '+S.min+' min</li><li><b>Diagnoses found:</b> '+S.saved+" of "+P.length+'</li><li><b>Missed:</b> '+S.missed+'</li></ul>'+
+ '<p>Every line in this deck is something patients report hearing. In real clinics, it\'s said more often to women, people of colour, larger bodies and neurodivergent people.</p>'+
+ '<p><a href="/gp-school/">Train your blind spots in GP School</a> · <a href="/atypical-presentations/">Atypical presentations</a></p>'+
+ '<button class="go" id="again">Play again</button></div>';
+ document.getElementById("again").onclick=function(){S={i:0,gas:0,min:0,saved:0,missed:0,labelled:0};round()};
+}
+round();
+})();
+</script>
 </body>
 </html>
