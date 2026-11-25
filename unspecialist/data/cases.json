@@ -5385,5 +5385,508 @@
     "url": "https://informme.org.au/guidelines"
    }
   ]
+ },
+ {
+  "id": "dana",
+  "room": "blind",
+  "cu": "Cardiovascular",
+  "name": "Dana",
+  "age": 27,
+  "who": "Childcare worker. Notes from another clinic: ‘anxiety, reassured’ (twice).",
+  "blurb": "‘My anxiety again’",
+  "opening": "\"I keep nearly fainting at work. Last doctor said it's anxiety, but I don't feel anxious.\"",
+  "actions": [
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Worried she'll lose her job. Wants someone to take it seriously.",
+    "flag": "ice"
+   },
+   {
+    "id": "hx",
+    "g": "h",
+    "label": "When does it happen?",
+    "min": 2,
+    "text": "Standing in queues, after hot showers, standing up fast. Heart races; better lying down. Brain fog and exhaustion after.",
+    "key": true,
+    "why": "Symptoms on standing that ease lying down point to orthostatic intolerance."
+   },
+   {
+    "id": "hyper",
+    "g": "h",
+    "label": "Joints, gut, skin, family history",
+    "min": 2,
+    "text": "Very bendy since childhood, frequent sprains. Reflux and bloating. Mum ‘faints easily’.",
+    "why": "Hypermobility and gut symptoms often travel with POTS."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Heavy periods. I'm tired all the time.\"",
+    "flag": "else"
+   },
+   {
+    "id": "stand",
+    "g": "e",
+    "label": "Active stand test: lying, then standing HR and BP for 10 min",
+    "min": 4,
+    "text": "Lying: HR 68, BP 112/70. Standing at 10 min: HR 112, BP 110/74. Dizzy, legs mottled.",
+    "key": true,
+    "why": "A sustained rise of 30+ beats without a BP drop, with symptoms: consistent with POTS."
+   },
+   {
+    "id": "ecg",
+    "g": "t",
+    "label": "ECG",
+    "min": 2,
+    "text": "Sinus rhythm, normal intervals.",
+    "key": true,
+    "why": "Rule out a heart rhythm cause before naming POTS."
+   },
+   {
+    "id": "bloods",
+    "g": "t",
+    "label": "Full blood count, ferritin, TSH, electrolytes",
+    "min": 1,
+    "text": "Haemoglobin 118, ferritin 9. TSH and electrolytes normal.",
+    "key": true,
+    "why": "Iron deficiency and thyroid disease mimic and worsen POTS."
+   },
+   {
+    "id": "psych",
+    "g": "t",
+    "label": "Refer to psychology for anxiety",
+    "min": 1,
+    "text": "Referred.",
+    "flag": "low",
+    "why": "She doesn't describe anxiety. Treating a guess delays the real diagnosis."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Anxiety disorder",
+    "Probable POTS, with iron deficiency to treat",
+    "Ventricular tachycardia",
+    "Hyperthyroidism"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Treat the iron deficiency and look for the cause (heavy periods)",
+    "Fluids 2–3 L and extra salt (if no heart, kidney or BP problem), compression, slow position changes",
+    "Recumbent exercise (rowing, recumbent bike, swimming), building up slowly",
+    "Refer to a cardiologist or autonomic clinic",
+    "Tell her it's anxiety and to try breathing exercises",
+    "Explain POTS, validate the symptoms, and check she's understood"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 5,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Urgent review or 000 for fainting with chest pain, on exertion, or with injury",
+    "Nothing to worry about",
+    "Come back if the anxiety gets worse",
+    "Stop all fluids"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    3
+   ]
+  },
+  "pearl": "‘Anxiety’ isn't a diagnosis of exclusion you reach by not examining. A cuff, a clock and 10 minutes standing found the answer.",
+  "sources": [
+   {
+    "t": "Sheldon RS et al. HRS consensus on POTS. Heart Rhythm 2015",
+    "url": "https://doi.org/10.1016/j.hrthm.2015.03.029"
+   }
+  ]
+ },
+ {
+  "id": "lorraine",
+  "room": "blind",
+  "cu": "Cardiovascular",
+  "name": "Lorraine",
+  "age": 63,
+  "critical": true,
+  "criticalWhy": "A woman with diabetes and ‘indigestion’, sweating in the waiting room, may be having a heart attack.",
+  "who": "Type 2 diabetes. Reception wrote: ‘indigestion, probably stress, not urgent’.",
+  "blurb": "Indigestion. ‘Probably stress.’",
+  "opening": "\"I feel silly. It's just indigestion, and I'm so tired.\"",
+  "actions": [
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks it's the curry. Doesn't want a fuss.",
+    "flag": "ice"
+   },
+   {
+    "id": "sx",
+    "g": "h",
+    "label": "Characterise it: when, where, what with",
+    "min": 2,
+    "text": "Started 2 hours ago. Heavy feeling high in the belly, aching jaw and between the shoulders. Nauseous, vomited once.",
+    "key": true,
+    "why": "Atypical sites and nausea are common heart attack symptoms in women and people with diabetes."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 1,
+    "text": "\"I'm sweating, which is odd.\"",
+    "flag": "else"
+   },
+   {
+    "id": "obs",
+    "g": "e",
+    "label": "Pulse, BP, sats, look at her",
+    "min": 1,
+    "text": "Grey and clammy. Pulse 104, BP 152/92, sats 96%.",
+    "key": true
+   },
+   {
+    "id": "ecg",
+    "g": "t",
+    "label": "ECG",
+    "min": 2,
+    "text": "ST depression V4–V6.",
+    "key": true,
+    "why": "Any unexplained ‘indigestion’ in a high-risk patient earns an ECG within 10 minutes."
+   },
+   {
+    "id": "ppi",
+    "g": "t",
+    "label": "Antacid trial and review tomorrow",
+    "min": 1,
+    "text": "Given.",
+    "flag": "low",
+    "why": "This delays a time-critical diagnosis."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Gastro-oesophageal reflux",
+    "Acute coronary syndrome: call 000 now",
+    "Anxiety",
+    "Gallstones"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Call 000",
+    "Aspirin 300 mg to chew (if not allergic)",
+    "Monitor her and send the ECG with her",
+    "Let her drive home and come back if worse",
+    "Explain what's happening and check she's understood"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "danger": [
+    3
+   ],
+   "explain": 4,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Stay with her until the ambulance arrives",
+    "She can wait in the waiting room",
+    "Book an echo next week",
+    "Call her tomorrow"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    3
+   ]
+  },
+  "pearl": "About 1 in 3 heart attacks arrive without chest pain, more often in women, older people and people with diabetes. Reception's ‘probably stress’ is a label, not a triage.",
+  "sources": [
+   {
+    "t": "Mehta LS et al. Acute MI in women: AHA scientific statement. Circulation 2016",
+    "url": "https://doi.org/10.1161/CIR.0000000000000351"
+   }
+  ]
+ },
+ {
+  "id": "kezia",
+  "room": "blind",
+  "cu": "Women's health",
+  "name": "Kezia",
+  "age": 26,
+  "who": "Uni student. Seen 4 times in 3 years for period pain. Told ‘normal’ and to take the pill.",
+  "blurb": "‘Bad periods, again’",
+  "opening": "\"Everyone says periods hurt. But I'm missing uni every month.\"",
+  "actions": [
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Scared she's imagining it. Wants a name for it and to know about fertility.",
+    "flag": "ice"
+   },
+   {
+    "id": "mhx",
+    "g": "h",
+    "label": "Pain pattern, sex, bowels, bladder",
+    "min": 3,
+    "text": "Pain starts before bleeding, 9/10. Pain with deep sex, painful bowel motions during periods.",
+    "key": true,
+    "why": "Dysmenorrhoea plus deep dyspareunia and dyschezia strongly suggest endometriosis."
+   },
+   {
+    "id": "impact",
+    "g": "h",
+    "label": "Impact: work, study, relationships",
+    "min": 1,
+    "text": "Misses 2–3 days of uni a month. Avoids sex.",
+    "key": true,
+    "why": "Impact on life matters more than how ‘normal’ the bleeding looks."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"My sister has endometriosis.\"",
+    "flag": "else"
+   },
+   {
+    "id": "consent",
+    "g": "e",
+    "label": "Pelvic exam: trauma-informed consent first",
+    "min": 3,
+    "text": "Explained; she agreed and knew she could stop. Tender, fixed retroverted uterus; nodularity behind the cervix.",
+    "key": true,
+    "flag": "pc",
+    "why": "Explain, ask, offer a chaperone and the right to stop."
+   },
+   {
+    "id": "preg",
+    "g": "t",
+    "label": "Pregnancy test and STI screen",
+    "min": 1,
+    "text": "Negative.",
+    "key": true
+   },
+   {
+    "id": "us",
+    "g": "t",
+    "label": "Pelvic ultrasound (ideally a specialised endometriosis scan)",
+    "min": 1,
+    "text": "Booked.",
+    "key": true,
+    "why": "A normal standard ultrasound doesn't rule out endometriosis."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Normal period pain",
+    "Probable endometriosis",
+    "IBS",
+    "Pelvic inflammatory disease"
+   ],
+   "answer": 1,
+   "danger": [
+    0
+   ]
+  },
+  "plan": {
+   "options": [
+    "Regular NSAIDs starting before the period",
+    "Hormonal treatment, e.g. continuous combined pill or a progestogen",
+    "Refer to a gynaecologist with an interest in endometriosis",
+    "Pelvic floor physio and pain support",
+    "Tell her pain is normal and to toughen up",
+    "Explain, believe her, and check she's understood"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 5,
+   "critical": [
+    2
+   ]
+  },
+  "safety": {
+   "options": [
+    "Review in 3 months; sudden severe pain or fever, go to ED",
+    "No follow-up needed",
+    "Come back when she wants a baby",
+    "Only if bleeding stops"
+   ],
+   "answer": 0,
+   "danger": [
+    1
+   ]
+  },
+  "pearl": "Average diagnostic delay in Australia is 6.5 years. Pain that stops life isn't normal, and a clinical diagnosis lets treatment start before surgery.",
+  "sources": [
+   {
+    "t": "National Action Plan for Endometriosis",
+    "url": "https://www.health.gov.au/resources/publications/national-action-plan-for-endometriosis"
+   }
+  ]
+ },
+ {
+  "id": "malcolm",
+  "room": "blind",
+  "cu": "Oncology",
+  "name": "Malcolm",
+  "age": 66,
+  "who": "Notes say ‘chronic back pain, frequent attender’. Third visit this month.",
+  "blurb": "Back again with his back",
+  "opening": "\"Sorry, doc. The back again. Just need something stronger.\"",
+  "actions": [
+   {
+    "id": "ice",
+    "g": "h",
+    "label": "Ideas, concerns, expectations",
+    "min": 2,
+    "text": "Thinks he's a nuisance. Hasn't mentioned some things because ‘you're busy’.",
+    "flag": "ice"
+   },
+   {
+    "id": "red",
+    "g": "h",
+    "label": "Red flags: night pain, weight, bladder, bowels, legs",
+    "min": 3,
+    "text": "Pain worse at night, lying down. Lost 6 kg. Legs feel heavy; a bit unsteady on the stairs.",
+    "key": true,
+    "why": "New features in a ‘known’ back pain are the signal."
+   },
+   {
+    "id": "else",
+    "g": "h",
+    "label": "\"Anything else?\"",
+    "min": 2,
+    "text": "\"Getting up to wee a lot. Never had my prostate checked.\"",
+    "flag": "else"
+   },
+   {
+    "id": "neuro",
+    "g": "e",
+    "label": "Leg neuro exam and spine",
+    "min": 3,
+    "text": "Brisk knee reflexes, upgoing toes, mild weakness in both legs. Tender mid-thoracic spine.",
+    "key": true,
+    "why": "Upper motor neurone signs mean the problem is in the spinal cord."
+   },
+   {
+    "id": "psa",
+    "g": "t",
+    "label": "PSA, blood count, calcium, kidney function",
+    "min": 1,
+    "text": "PSA 240. Calcium 2.8.",
+    "key": true
+   },
+   {
+    "id": "opioid",
+    "g": "t",
+    "label": "Increase his opioid and review in 4 weeks",
+    "min": 1,
+    "text": "Done.",
+    "flag": "low",
+    "why": "Stronger painkillers mask a spinal emergency."
+   }
+  ],
+  "dx": {
+   "options": [
+    "Chronic mechanical back pain",
+    "Suspected metastatic spinal cord compression (likely prostate cancer)",
+    "Opioid-seeking",
+    "Muscle strain"
+   ],
+   "answer": 1,
+   "danger": [
+    0,
+    2
+   ]
+  },
+  "plan": {
+   "options": [
+    "Same-day emergency referral for whole-spine MRI",
+    "Lie flat and avoid weight bearing until assessed",
+    "Discuss dexamethasone with the on-call team",
+    "Explain what's suspected, and check he's understood",
+    "Review in 4 weeks"
+   ],
+   "correct": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "danger": [
+    4
+   ],
+   "explain": 3,
+   "critical": [
+    0
+   ]
+  },
+  "safety": {
+   "options": [
+    "Go now; call 000 if legs get weaker or he can't pass urine",
+    "Rest at home",
+    "Come back next week",
+    "Physio first"
+   ],
+   "answer": 0,
+   "danger": [
+    1,
+    2
+   ]
+  },
+  "pearl": "‘Frequent attender’ is a label that stops thinking. A patient who keeps coming back is telling you the first answer didn't fit.",
+  "sources": [
+   {
+    "t": "NICE NG234: Spinal metastases and metastatic spinal cord compression",
+    "url": "https://www.nice.org.uk/guidance/ng234"
+   }
+  ]
  }
 ]

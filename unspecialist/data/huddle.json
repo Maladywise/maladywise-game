@@ -2923,5 +2923,215 @@
   "answer": 2,
   "why": "Distress is often unrecognised pain. Adapt communication and look for physical causes.",
   "source": "https://www.ndis.gov.au"
+ },
+ {
+  "id": "bs1",
+  "room": "blind",
+  "q": "A 58-year-old woman with diabetes has nausea, jaw ache and unusual tiredness since lunch. No chest pain. Best next step?",
+  "options": [
+   "Antacid trial and review tomorrow",
+   "ECG now and treat as possible acute coronary syndrome",
+   "Ask about stress at home",
+   "Book a stress test next month"
+  ],
+  "answer": 1,
+  "why": "Women, older people and people with diabetes more often have heart attacks without classic chest pain, and they're treated later. Unexplained nausea, jaw or back ache, breathlessness or exhaustion earns an ECG today.",
+  "source": "https://doi.org/10.1161/CIR.0000000000000351",
+  "cu": "Cardiovascular"
+ },
+ {
+  "id": "bs2",
+  "room": "blind",
+  "q": "On average, how long does it take for endometriosis to be diagnosed in Australia after symptoms start?",
+  "options": [
+   "Under 1 year",
+   "About 2 years",
+   "About 6.5 years",
+   "It's usually picked up at the first visit"
+  ],
+  "answer": 2,
+  "why": "The National Action Plan for Endometriosis quotes an average delay of 6.5 years. Period pain that stops someone working, studying or having sex isn't ‘normal’. Believe it, treat it, and refer.",
+  "source": "https://www.health.gov.au/resources/publications/national-action-plan-for-endometriosis",
+  "cu": "Women's health"
+ },
+ {
+  "id": "bs3",
+  "room": "blind",
+  "q": "A man with schizophrenia says his chest hurts. The nurse says he ‘always complains’. What's the trap?",
+  "options": [
+   "Over-investigating him",
+   "Diagnostic overshadowing: blaming new symptoms on his mental illness",
+   "Breaching confidentiality",
+   "Prescribing too many antipsychotics"
+  ],
+  "answer": 1,
+  "why": "Diagnostic overshadowing is when a known diagnosis gets the blame for a new symptom. People with severe mental illness die 10–20 years earlier, mostly from physical illness like heart disease. Assess the chest pain like anyone else's.",
+  "source": "https://doi.org/10.1371/journal.pone.0111682",
+  "cu": "Mental health"
+ },
+ {
+  "id": "bs4",
+  "room": "blind",
+  "q": "A meta-analysis of studies that actively screened for autism found a male-to-female ratio closer to…",
+  "options": [
+   "10 to 1",
+   "6 to 1",
+   "3 to 1",
+   "1 to 1"
+  ],
+  "answer": 2,
+  "why": "Active screening finds about 3 boys to every girl, not the 4–5 to 1 seen in clinics. Autistic girls and women often mask, so they're missed or labelled with anxiety, depression or a personality disorder first.",
+  "source": "https://doi.org/10.1016/j.jaac.2017.03.013",
+  "cu": "Neurology"
+ },
+ {
+  "id": "bs5",
+  "room": "blind",
+  "q": "A Black patient's pulse oximeter reads 94%. What should you know?",
+  "options": [
+   "Oximeters are equally accurate on all skin tones",
+   "Oximeters can overestimate oxygen in darker skin, so hidden low oxygen is more likely",
+   "Oximeters underestimate oxygen in darker skin",
+   "Only use the reading on the forehead"
+  ],
+  "answer": 1,
+  "why": "In a large US study, hidden low oxygen (arterial saturation under 88% with an oximeter reading of 92–96%) was about three times as common in Black patients. If they look unwell, check a blood gas.",
+  "source": "https://doi.org/10.1056/NEJMc2029240",
+  "cu": "Respiratory"
+ },
+ {
+  "id": "bs6",
+  "room": "blind",
+  "q": "A 27-year-old woman gets palpitations and dizziness on standing. Her notes say ‘anxiety’. Simple test to do today?",
+  "options": [
+   "Repeat the anxiety questionnaire",
+   "Active stand test: lying, then standing heart rate and blood pressure for 10 minutes",
+   "Holter monitor in 6 months",
+   "Nothing: anxiety is already diagnosed"
+  ],
+  "answer": 1,
+  "why": "A sustained rise of 30 beats a minute or more within 10 minutes of standing (40 or more under 20), without a big blood pressure drop, with symptoms, suggests POTS. It needs no equipment beyond a cuff and a clock.",
+  "source": "https://doi.org/10.1016/j.hrthm.2015.03.029",
+  "cu": "Cardiovascular"
+ },
+ {
+  "id": "bs7",
+  "room": "blind",
+  "q": "A woman with a BMI of 41 is newly breathless. What does the evidence on weight bias warn about?",
+  "options": [
+   "Larger patients exaggerate symptoms",
+   "Clinicians spend less time, and symptoms get put down to weight before they're assessed",
+   "Weight loss always fixes breathlessness",
+   "Examination is pointless in larger bodies"
+  ],
+  "answer": 1,
+  "why": "Weight stigma shortens consults, delays tests and keeps people away from care. Assess breathlessness the same way you would in anyone: think PE, heart failure, anaemia and asthma before ‘lose weight’.",
+  "source": "https://doi.org/10.1111/obr.12266",
+  "cu": "Nutrition and obesity"
+ },
+ {
+  "id": "bs8",
+  "room": "blind",
+  "q": "A 45-year-old man is angry, drinking more and working 70-hour weeks. He denies feeling sad. What might you be missing?",
+  "options": [
+   "Nothing: he just needs to cut back",
+   "Depression, which in men often shows as anger, irritability, risk-taking and drinking",
+   "A personality disorder",
+   "Low testosterone, for sure"
+  ],
+  "answer": 1,
+  "why": "When anger, aggression, substance use and risk-taking are counted, men report depression about as often as women. Ask about mood, sleep and suicide directly.",
+  "source": "https://doi.org/10.1001/jamapsychiatry.2013.1985",
+  "cu": "Men's health"
+ },
+ {
+  "id": "bs9",
+  "room": "blind",
+  "q": "From what age does the Australian CVD risk guideline recommend cardiovascular risk assessment for First Nations people?",
+  "options": [
+   "30",
+   "45",
+   "60",
+   "Only with symptoms"
+  ],
+  "answer": 0,
+  "why": "From age 30 for First Nations people (45 for most others), because heart disease starts earlier. Assume nothing; offer it to everyone eligible.",
+  "source": "https://www.cvdcheck.org.au/",
+  "cu": "Aboriginal and Torres Strait Islander health"
+ },
+ {
+  "id": "bs10",
+  "room": "blind",
+  "q": "A 24-year-old woman has bloating and loose stools. Her last GP said ‘IBS’. What should come before that label?",
+  "options": [
+   "Nothing: IBS is a clinical diagnosis",
+   "Coeliac serology while she's still eating gluten, plus a blood count",
+   "A low-FODMAP diet first",
+   "Colonoscopy for everyone"
+  ],
+  "answer": 1,
+  "why": "Guidelines say test for coeliac disease before diagnosing IBS. It's common, mostly in women, and it's missed for years. A gluten-free trial before testing makes the test unreliable.",
+  "source": "https://www.nice.org.uk/guidance/cg61",
+  "cu": "Gastro and liver"
+ },
+ {
+  "id": "bs11",
+  "room": "blind",
+  "q": "The notes say ‘anxious, frequent attender’. She's back with the same symptom for the third time. Best mindset?",
+  "options": [
+   "Same as last time: reassure",
+   "Treat the bounce-back as a red flag and ask ‘what else could this be?’",
+   "Book a longer gap before she's seen again",
+   "Refer to psychology"
+  ],
+  "answer": 1,
+  "why": "Anchoring and premature closure are among the commonest causes of missed diagnosis. A patient returning with the same problem is telling you the first answer didn't fit.",
+  "source": "https://doi.org/10.1097/00001888-200308000-00003",
+  "cu": "Quality and safety"
+ },
+ {
+  "id": "bs12",
+  "room": "blind",
+  "q": "In an emergency department study of acute abdominal pain, compared with men, women were…",
+  "options": [
+   "Equally likely to get pain relief",
+   "Less likely to get opioid pain relief, and waited longer for it",
+   "More likely to get opioids",
+   "Seen faster"
+  ],
+  "answer": 1,
+  "why": "Same pain scores, less treatment and longer waits. Treat the pain that's reported, not the patient you assume is exaggerating.",
+  "source": "https://doi.org/10.1111/j.1553-2712.2008.00100.x",
+  "cu": "Pain"
+ },
+ {
+  "id": "bs13",
+  "room": "blind",
+  "q": "A woman with a history of sexual assault needs a speculum exam. Trauma-informed approach?",
+  "options": [
+   "Be quick so it's over sooner",
+   "Explain each step, offer a chaperone, let her pause or stop any time, and offer choices such as self-insertion",
+   "Avoid the exam altogether",
+   "Only do it under sedation"
+  ],
+  "answer": 1,
+  "why": "Safety, choice, collaboration, trust and empowerment. Asking permission at each step gives back control. Offer self-collected cervical screening if it suits her.",
+  "source": "https://blueknot.org.au/",
+  "cu": "Women's health"
+ },
+ {
+  "id": "bs14",
+  "room": "blind",
+  "q": "When can a functional neurological disorder (FND) be diagnosed?",
+  "options": [
+   "When the scans are normal",
+   "When the patient seems stressed",
+   "Only with positive signs on exam (e.g. Hoover's sign), after other causes have been properly considered",
+   "When symptoms don't fit a textbook"
+  ],
+  "answer": 2,
+  "why": "FND is a real, positive diagnosis, never just ‘tests normal’ or ‘stress’. It needs specific signs, and it can coexist with other neurological disease, so keep investigating new or changing symptoms.",
+  "source": "https://doi.org/10.1001/jamaneurol.2018.1264",
+  "cu": "Neurology"
  }
 ]

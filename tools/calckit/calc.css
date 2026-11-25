@@ -14,7 +14,8 @@
 .cx .checks{grid-column:1/-1;display:grid;gap:6px}
 .cx .checks label{display:flex;align-items:flex-start;gap:10px;font-weight:500;font-size:15px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:var(--bg);cursor:pointer;min-height:44px;box-sizing:border-box}
 .cx .checks input{width:20px;height:20px;flex:0 0 auto;margin-top:1px;accent-color:var(--brand)}
-.cx .checks b{color:var(--brand);font-weight:700;margin-left:auto;padding-left:8px;white-space:nowrap}
+.cx .checks span b{color:inherit;margin:0;padding:0;white-space:normal;font-weight:700}
+.cx .checks > label > b,.cx .checks b.pts{color:var(--brand);font-weight:700;margin-left:auto;padding-left:8px;white-space:nowrap}
 .cx .out{display:grid;gap:10px;margin:12px 0}
 .cx .res{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:12px;padding:10px 14px;min-width:0;overflow-wrap:anywhere}
 .cx .res h2,.cx .res h3{margin:2px 0 4px;font-size:15px}
@@ -39,4 +40,4 @@ html[data-theme="dark"] .cx .warn{color:#F0A898}
 .cx .vs h3{margin:6px 0 2px;font-size:16px}
 @media (max-width:380px){.cx .form{grid-template-columns:1fr;padding:12px}}
 .cx .ace-exit{display:inline-block;margin-top:.5em;padding:.35em .9em;border-radius:999px;background:#2B2340;color:#fff;text-decoration:none;font-weight:600}
-.cx .checks label b{color:#4A3480}
+.cx .checks label b{color:var(--brand,#4A3480)}

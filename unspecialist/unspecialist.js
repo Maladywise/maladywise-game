@@ -19,7 +19,8 @@
     { id: "womens", name: "Women's health room", sub: "Women's health" },
     { id: "mind", name: "Mind room", sub: "Mental health" },
     { id: "chronic", name: "Chronic care room", sub: "Chronic disease, prevention" },
-    { id: "outreach", name: "Outreach", sub: "Rural, First Nations, refugee health" }
+    { id: "outreach", name: "Outreach", sub: "Rural, First Nations, refugee health" },
+    { id: "blind", name: "Blind spots room", sub: "Bias, dismissal, atypical presentations" }
   ];
   var CURR = [
     ["The consult", ["Communication", "Professionalism", "Ethics and law", "Quality and safety", "Digital health", "Admin and legal", "Practice and business"]],
@@ -270,7 +271,7 @@
       (dk.ids.length ? todo("#desk", "Front desk: Bill it right", dk.done ? dOk + "/" + dk.ids.length + " billed right. The accountant is pleased." : (dk.ans.length ? "Claim " + (dk.ans.length + 1) + " of " + dk.ids.length : dk.ids.length + " claims to check. Money on the table, or a letter from Medicare?"), dk.done) : "") +
       '<a class="us-link" href="#cheat">MBS cheat sheet</a> <a class="us-link" href="#curriculum">Curriculum map</a>' +
       "</div>" +
-      '<div class="us-sec"><span class="us-kick">Your practice · 10 rooms</span><div class="us-rooms">' + rooms + "</div>" +
+      '<div class="us-sec"><span class="us-kick">Your practice · ' + ROOMS.length + ' rooms</span><div class="us-rooms">' + rooms + "</div>" +
       '<p class="us-note">Every huddle question, patient and result belongs to a room. Get them right to fill the room.</p></div>' +
       '<button type="button" class="us-link" data-act="help">How it works</button>' +
       "</div>";
@@ -707,7 +708,7 @@
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON(DATA + "huddle.json?v=3"), getJSON(DATA + "cases.json?v=6"), getJSON(DATA + "results.json?v=3"), getJSON(DATA + "billing.json?v=3").catch(function () { return null; })]).then(function (r) {
+  Promise.all([getJSON(DATA + "huddle.json?v=4"), getJSON(DATA + "cases.json?v=7"), getJSON(DATA + "results.json?v=3"), getJSON(DATA + "billing.json?v=3").catch(function () { return null; })]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
     if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();
