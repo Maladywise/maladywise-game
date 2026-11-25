@@ -79,3 +79,8 @@ html[data-theme="dark"] #wde .key[data-k="enter"]{background:#7E68C8}
 #wde.xl .row{row-gap:3px}
 #wde.long .pk-form input{letter-spacing:.12em}
 @media (max-width:600px){#wde.long .tile{--t:min(44px,calc((100vw - 40px - (var(--cols,8) - 1) * 4px) / var(--cols,8)))}}
+/* fit board + keyboard in one screen: tiles also shrink with screen height (26 Nov 2026) */
+#wde .tile{--th:calc((100dvh - var(--wde-over,505px)) / var(--rows,6) - 6px);width:max(34px,min(58px,15vw,var(--th)));height:max(34px,min(58px,15vw,var(--th)))}
+@media (max-width:600px){#wde{--wde-over:500px} #wde .tile{width:max(30px,min(52px,13.5vw,var(--th)));height:max(30px,min(52px,13.5vw,var(--th)))}}
+#wde.long{--rows:7}
+#wde.long .tile{width:max(28px,min(var(--t),var(--th)));height:max(28px,min(var(--t),var(--th)))}
