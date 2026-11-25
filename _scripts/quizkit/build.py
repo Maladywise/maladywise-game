@@ -293,6 +293,19 @@ PHYS_CARDS = '<h2>Choose an organ</h2><ul class="qk-cards">%s</ul><h2>Mixed phys
     '<li><a href="/physiology-quiz/%s/"><b>%s %s</b><span>%s</span><small data-qk-best="phys-%s" data-qk-n="%d">%d questions</small></a></li>' % (
         q["slug"], q["emoji"], esc(q["h1"].replace(" Physiology Quiz", "")), esc(q["card"]), q["slug"], len(q["qs"]), len(q["qs"])) for q in PHYS)
 
+def learn_more(z):
+    """'Learn more' box: our fact sheet plus the trusted outside sites it already lists (26 Nov 2026)."""
+    slug = z["path"].strip("/").replace("-quiz", "")
+    fp = os.path.join(ROOT, slug, "index.html")
+    if not z.get("cond") or not os.path.exists(fp): return ""
+    src = open(fp, encoding="utf-8").read()
+    t = re.search(r"<title>(.*?)</title>", src)
+    name = html.unescape(t.group(1).split(":")[0].split("|")[0].strip()) if t else slug.replace("-", " ").title()
+    items = ['<li><a href="/%s/">Malady Wise fact sheet: %s</a><span>Symptoms, tests, treatment and when to see your GP.</span></li>' % (slug, esc(name))]
+    m = re.search(r'<h2>Helpful resources</h2>\s*<ul class="res">(.*?)</ul>', src, re.S)
+    if m: items += re.findall(r"<li>.*?</li>", m.group(1), re.S)[:3]
+    return '<h2>Learn more</h2><ul class="res">%s</ul>' % "".join(items)
+
 # ---------- simple text quizzes (more.py): first aid, physiology, abbreviations, dosage ----------
 for z in SIMPLE + CONDS:
     grp = CONDS if z.get("cond") else SIMPLE
@@ -304,6 +317,7 @@ for z in SIMPLE + CONDS:
         quiz_section(z["qs"], z["qid"], z["h1"].split(":")[0], z["emoji"]),
         z["cta"],
         faq_html(z["faqs"]),
+        learn_more(z),
         '<h2>More medical quizzes</h2><nav id="more" data-label="Try another quiz"><ul><li><a href="/quizzes/">All practice quizzes</a></li>%s<li><a href="/pharmacology-quiz/">Pharmacology quiz</a></li></ul></nav>' % others,
         reviewed(" General education, not medical advice."),
     ])

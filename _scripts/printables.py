@@ -46,6 +46,35 @@ CSS = """<style>
  .pr-t tr,.pr-crit li{break-inside:avoid}}
 </style>"""
 
+# "Learn more" under each printable (screen only; print shows the sheet alone). 26 Nov 2026
+LEARN = {
+ "phq-9": [("/depression/", "Depression fact sheet"), ("https://www.beyondblue.org.au/", "Beyond Blue: support for depression and anxiety")],
+ "depression-criteria": [("/depression/", "Depression fact sheet"), ("https://www.beyondblue.org.au/", "Beyond Blue: support for depression and anxiety")],
+ "gad-7": [("/anxiety/", "Anxiety fact sheet"), ("https://www.beyondblue.org.au/", "Beyond Blue: support for anxiety")],
+ "k10": [("/mental-health-check/", "Mental health self-checks"), ("https://www.beyondblue.org.au/", "Beyond Blue: support and 24/7 counselling")],
+ "epds": [("/depression/", "Depression fact sheet"), ("https://panda.org.au/", "PANDA: perinatal anxiety and depression support")],
+ "audit": [("/alcohol/", "Alcohol fact sheet"), ("https://adf.org.au/", "Alcohol and Drug Foundation")],
+ "asrs": [("/adhd/", "ADHD fact sheet"), ("https://www.adhdaustralia.org.au/", "ADHD Australia")],
+ "adhd-criteria": [("/adhd/", "ADHD fact sheet"), ("https://www.adhdaustralia.org.au/", "ADHD Australia")],
+ "autism-criteria": [("/autism-adults/", "Autism in adults"), ("https://reframingautism.org.au/", "Reframing Autism: autistic-led support")],
+ "stop-bang": [("/sleep-apnoea/", "Sleep apnoea fact sheet"), ("https://www.sleephealthfoundation.org.au/", "Sleep Health Foundation")],
+ "falls-risk": [("https://www.nhs.uk/conditions/falls/", "NHS: preventing falls")],
+ "fibromyalgia-criteria": [("/fibromyalgia/", "Fibromyalgia fact sheet"), ("https://www.painaustralia.org.au/", "Painaustralia")],
+ "gca-criteria": [("https://www.nhs.uk/conditions/giant-cell-arteritis/", "NHS: giant cell arteritis")],
+ "heds-criteria": [("/ehlers-danlos-syndrome/", "EDS and hypermobility fact sheet"), ("https://www.ehlers-danlos.com/", "The Ehlers-Danlos Society")],
+ "beighton-score": [("/ehlers-danlos-syndrome/", "EDS and hypermobility fact sheet"), ("https://www.ehlers-danlos.com/", "The Ehlers-Danlos Society")],
+ "ibs-criteria": [("/ibs/", "IBS fact sheet"), ("https://www.monashfodmap.com/", "Monash University FODMAP diet")],
+ "mcas-criteria": [("/mcas/", "MCAS fact sheet"), ("https://tmsforacure.org/", "The Mastocytosis Society")],
+ "mecfs-criteria": [("/me-cfs/", "ME/CFS fact sheet"), ("https://www.emerge.org.au/", "Emerge Australia: ME/CFS support")],
+ "pcos-criteria": [("/pcos/", "PCOS fact sheet"), ("https://www.jeanhailes.org.au/", "Jean Hailes for Women's Health")],
+ "pots-stand-test": [("/pots/", "POTS fact sheet"), ("https://www.dysautonomiainternational.org/", "Dysautonomia International")],
+}
+def learn(slug):
+    L = LEARN.get(slug)
+    if not L: return ""
+    return '<h2 class="pr-learn">Learn more</h2><ul class="res pr-learn">' + "".join(
+        '<li><a href="%s"%s>%s</a></li>' % (u, ' rel="noopener"' if u.startswith("http") else "", E(t)) for u, t in L) + "</ul>"
+
 def page(slug, title, desc, main):
     url = "https://maladywise.com/printables/%s" % (slug + "/" if slug else "")
     h = HEAD
@@ -55,7 +84,7 @@ def page(slug, title, desc, main):
     h = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + E(title), h)
     h = re.sub(r'(<meta property="og:description" content=")[^"]*', lambda m: m.group(1) + E(desc), h)
     h = re.sub(r'(<meta property="og:url" content=")[^"]*', lambda m: m.group(1) + url, h)
-    out = h + '<main class="wrap doc">\n' + main + "\n" + CSS + '\n<p class="meta">Updated %s.</p>\n</main>\n<script>document.addEventListener("click",function(e){if(e.target.closest("[data-print]")){e.preventDefault();window.print();}});</script>\n<script>MW.page();</script>\n</body>\n</html>\n' % TODAY
+    out = h + '<main class="wrap doc">\n' + main + "\n" + learn(slug) + "\n" + CSS + '\n<p class="meta">Updated %s.</p>\n</main>\n<script>document.addEventListener("click",function(e){if(e.target.closest("[data-print]")){e.preventDefault();window.print();}});</script>\n<script>MW.page();</script>\n</body>\n</html>\n' % TODAY
     d = ROOT + "printables/" + (slug + "/" if slug else "")
     os.makedirs(d, exist_ok=True)
     open(d + "index.html", "w", encoding="utf-8").write(out)
