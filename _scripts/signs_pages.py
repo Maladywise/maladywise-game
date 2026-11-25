@@ -154,7 +154,7 @@ HEAD = HEAD.replace('<link rel="stylesheet" href="/tools/calckit/calc.css?v=2">\
 CSS = """<style>.sg-fig{margin:10px 0 18px;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:16px;padding:8px}.sg-fig svg{display:block;width:100%;height:auto;max-width:520px;margin:0 auto}.sg-fig figcaption{max-width:520px;margin:10px auto 4px;padding:0 8px;text-align:center;font:600 15px/1.4 var(--body);color:var(--ink,#2B2340)}
 .sg-facts{display:grid;gap:10px;margin:0 0 16px}.sg-facts div{background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:12px 14px}.sg-facts dt{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--brand,#4A3480)}.sg-facts dd{margin:3px 0 0;font-size:16px;line-height:1.5}
 .sg-hub{list-style:none!important;padding:0!important;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.sg-hub li{margin:0!important}.sg-hub a{display:block;background:var(--card,#fff);border:1px solid var(--line,#E7E0F2);border-radius:14px;padding:8px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;text-align:center}.sg-hub svg{display:block;width:100%;height:auto;margin-bottom:4px}
-.sg-play{display:inline-block;margin:6px 0 14px;font-weight:600}</style>"""
+.sg-play{display:inline-block;margin:6px 0 14px;font-weight:600}\n.sg-acc{position:relative;margin:4px 0 22px;padding:14px 16px 12px;border-radius:18px;background:var(--brand,#4A3480);color:#fff;box-shadow:0 4px 14px rgba(40,20,80,.18)}.sg-acc:after{content:"";position:absolute;left:28px;bottom:-9px;width:18px;height:18px;background:inherit;transform:rotate(45deg);border-radius:0 0 4px 0}.sg-acc-k{display:block;font:700 12px/1.2 var(--body);letter-spacing:.1em;text-transform:uppercase;opacity:.85;margin-bottom:8px}.sg-acc-n{display:flex;gap:10px;margin:0 0 10px}.sg-n{flex:1;background:rgba(255,255,255,.14);border-radius:12px;padding:8px 10px;text-align:center}.sg-n b{display:block;font:700 28px/1.1 var(--title,inherit)}.sg-n small{display:block;font-size:13px;opacity:.9;margin-top:2px}.sg-acc p{margin:0 0 6px;font-size:15px;line-height:1.5;color:#fff}.sg-acc .sg-acc-src{font-size:13px;opacity:.85;margin:0}.sg-acc a{color:#fff}html[data-theme="dark"] .sg-acc{color:#16121F}html[data-theme="dark"] .sg-acc p,html[data-theme="dark"] .sg-acc a{color:#16121F}html[data-theme="dark"] .sg-n{background:rgba(0,0,0,.08)}@media (prefers-color-scheme:dark){html:not([data-theme="light"]) .sg-acc,html:not([data-theme="light"]) .sg-acc p,html:not([data-theme="light"]) .sg-acc a{color:#16121F}html:not([data-theme="light"]) .sg-n{background:rgba(0,0,0,.08)}}@media print{.sg-acc{background:none;color:#000;border:1px solid #999;box-shadow:none}.sg-acc p,.sg-acc a{color:#000}.sg-acc:after{display:none}}</style>"""
 
 def page(path, title, desc, main):
     url = "https://maladywise.com/" + path
@@ -164,7 +164,9 @@ def page(path, title, desc, main):
         h = re.sub(r'(%s)[^"]*' % re.escape(a), lambda m: m.group(1) + E(desc), h)
     h = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + E(title), h)
     h = re.sub(r'(<meta property="og:url" content=")[^"]*', lambda m: m.group(1) + url, h)
-    out = h + '<main class="wrap doc">\n' + main + "\n" + CSS + '\n<p class="meta">Updated %s.</p>\n</main>\n<script>MW.page();</script>\n</body>\n</html>\n' % TODAY
+    foot = ('<footer class="site">\n<p class="ft-base"><span class="ft-note">General education, not personal medical advice.</span> '
+            '<span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>\n')
+    out = h + '<main class="wrap doc">\n' + main + "\n" + CSS + '\n<p class="meta">Updated %s.</p>\n' % TODAY + foot + '</main>\n<script defer src="/assets/boot.js?v=1" data-mw="page"></script>\n</body>\n</html>\n'
     os.makedirs(ROOT + path, exist_ok=True); open(ROOT + path + "index.html", "w", encoding="utf-8").write(out)
 
 for n in ORDER:
@@ -174,14 +176,17 @@ for n in ORDER:
     dl = "".join("<div><dt>%s</dt><dd>%s</dd></div>" % (E(a), E(b)) for a, b in rows)
     accp = ""
     if acc:
-        accp = "<h2>How accurate is it?</h2><p>In studies, it picks up about <b>%d%%</b> of people with %s%s. %s</p><p class=\"meta\">Source: <a href=\"%s\" rel=\"noopener\">%s</a></p>" % (
-            acc["sens"]["v"], E(acc["condition"]), (", and correctly clears about <b>%d%%</b> of people without it" % acc["spec"]["v"]) if acc.get("spec") else "", E(acc["says"]), E(acc["src"][0][1]), E(acc["src"][0][0]))
+        st = '<span class="sg-n"><b>%d%%</b><small>picks up</small></span>' % acc["sens"]["v"]
+        if acc.get("spec"): st += '<span class="sg-n"><b>%d%%</b><small>correctly clears</small></span>' % acc["spec"]["v"]
+        accp = ('<aside class="sg-acc" aria-label="How accurate is it?"><span class="sg-acc-k">How accurate is it?</span><div class="sg-acc-n">%s</div>'
+                '<p>In studies, it picks up about %d%% of people with %s%s. %s</p><p class="sg-acc-src">Source: <a href="%s" rel="noopener">%s</a></p></aside>') % (
+            st, acc["sens"]["v"], E(acc["condition"]), (", and correctly clears about %d%% of people without it" % acc["spec"]["v"]) if acc.get("spec") else "", E(acc["says"]), E(acc["src"][0][1]), E(acc["src"][0][0]))
     i = ORDER.index(n); prv, nxt = ORDER[i - 1], ORDER[(i + 1) % len(ORDER)]
-    main = ('<p class="meta"><a href="/signs/">Eponymous signs</a> · %s</p>\n<h1>%s</h1>\n<p class="lede">%s points to %s.</p>\n<figure class="sg-fig">%s</figure>\n<dl class="sg-facts">%s</dl>\n%s\n'
+    main = ('<p class="meta"><a href="/signs/">Eponymous signs</a> · %s</p>\n<h1>%s</h1>\n<p class="lede">%s points to %s.</p>\n%s\n<figure class="sg-fig">%s</figure>\n<dl class="sg-facts">%s</dl>\n'
             '<p><a class="sg-play" href="/nomulous/">&#129408; Test yourself: play Nomulous, the daily eponym quiz</a></p>\n'
             '<p class="meta">Signs are clues, not diagnoses on their own. A doctor puts them together with the whole story.</p>\n'
             '<nav class="mz-nav" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:18px 0"><a href="/signs/%s/">&larr; %s</a><a href="/signs/%s/">%s &rarr;</a></nav>') % (
-        E(it[1].capitalize()), E(n), E(n), E(it[3][0].lower() + it[3][1:] if not it[3][:2].isupper() else it[3]), svg(D[n], "Diagram of " + n), dl, accp, slug(prv), E(prv), slug(nxt), E(nxt))
+        E(it[1].capitalize()), E(n), E(n), E(it[3][0].lower() + it[3][1:] if not it[3][:2].isupper() else it[3]), accp, svg(D[n], "Diagram of " + n), dl, slug(prv), E(prv), slug(nxt), E(nxt))
     page("signs/%s/" % s, "%s: What It Is, How It’s Done and What It Means" % n, "%s, explained simply with a diagram: how it’s done, what a positive result points to (%s), who it’s named after and how accurate it is." % (n, it[3].lower()), main)
 
 hub = ('<p class="meta"><a href="/medical-games/">Learn</a> · Eponymous signs</p>\n<h1>Eponymous signs</h1>\n'
