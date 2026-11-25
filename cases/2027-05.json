@@ -1,0 +1,383 @@
+[
+ {
+  "date": "2027-05-01",
+  "number": 197,
+  "difficulty": "Hard",
+  "title": "Head-banging",
+  "answer": "Dental abscess",
+  "accept": [
+   "dental abscess",
+   "tooth abscess",
+   "abscessed tooth",
+   "periapical abscess",
+   "dental infection",
+   "infected tooth"
+  ],
+  "clues": [
+   {
+    "t": "28-year-old autistic woman who doesn’t use speech, brought in by her support worker."
+   },
+   {
+    "t": "For 3 days she has been banging the left side of her head and not sleeping."
+   },
+   {
+    "t": "She has stopped eating anything but yoghurt and is drooling more than usual."
+   },
+   {
+    "t": "Low-grade fever, 37.9°C."
+   },
+   {
+    "t": "She pulls away when her left jaw is touched; the cheek is slightly swollen."
+   },
+   {
+    "t": "A blackened lower left molar with a tender, fluctuant gum swelling beside it.",
+    "d": 1
+   }
+  ],
+  "pearl": "Pain shows up as behaviour change in many people who can’t easily describe it. Teeth, ears, constipation, periods and urine infections are the classic missed causes."
+ },
+ {
+  "date": "2027-05-02",
+  "number": 198,
+  "difficulty": "Genius",
+  "title": "The alarm clock",
+  "answer": "Long QT syndrome",
+  "accept": [
+   "long qt syndrome",
+   "long qt",
+   "lqts",
+   "congenital long qt syndrome",
+   "lqt2",
+   "long qt syndrome type 2",
+   "torsades de pointes"
+  ],
+  "clues": [
+   {
+    "t": "24-year-old woman, ‘fainted’ three times this year."
+   },
+   {
+    "t": "Every episode came just after a sudden loud noise: twice her phone alarm, once a fire drill."
+   },
+   {
+    "t": "During the last one her flatmate saw her jerk for 20 seconds."
+   },
+   {
+    "t": "She’s been told it’s anxiety, then epilepsy, and started on an anticonvulsant."
+   },
+   {
+    "t": "Her cousin drowned while swimming at 19."
+   },
+   {
+    "t": "ECG: corrected QT 520 ms with notched T waves.",
+    "d": 1
+   }
+  ],
+  "pearl": "Faints with jerking are often called seizures. Sudden noise triggers one genetic type, swimming another. Any faint during exercise, from a noise or with a family history of sudden death needs an ECG."
+ },
+ {
+  "date": "2027-05-03",
+  "number": 199,
+  "difficulty": "Easy",
+  "title": "Just indigestion",
+  "answer": "Heart attack (myocardial infarction)",
+  "accept": [
+   "heart attack",
+   "myocardial infarction",
+   "mi",
+   "nstemi",
+   "non st elevation myocardial infarction",
+   "acute coronary syndrome",
+   "acs",
+   "acute mi",
+   "stemi"
+  ],
+  "clues": [
+   {
+    "t": "61-year-old woman with type 2 diabetes, ‘indigestion’ since lunch."
+   },
+   {
+    "t": "Nauseous, vomited once, and feels unusually exhausted."
+   },
+   {
+    "t": "A dull ache in her jaw and between the shoulder blades."
+   },
+   {
+    "t": "No chest pain. She took an antacid, which didn’t help."
+   },
+   {
+    "t": "Clammy, pulse 104, blood pressure 150/90."
+   },
+   {
+    "t": "ECG: ST depression in V4–V6; troponin rising.",
+    "d": 1
+   }
+  ],
+  "pearl": "About 1 in 3 people having a heart attack have no chest pain on arrival. They’re more often women, older or have diabetes, and they get treated later. ECG anyone with unexplained ‘indigestion’, sweating or exhaustion."
+ },
+ {
+  "date": "2027-05-04",
+  "number": 200,
+  "difficulty": "Easy",
+  "title": "Not herself",
+  "answer": "Sepsis from a urine infection (urosepsis)",
+  "accept": [
+   "sepsis",
+   "urosepsis",
+   "urinary sepsis",
+   "septicaemia",
+   "septic shock",
+   "pyelonephritis",
+   "kidney infection",
+   "urinary tract infection",
+   "uti"
+  ],
+  "clues": [
+   {
+    "t": "89-year-old woman from home, found on the floor this morning."
+   },
+   {
+    "t": "Her daughter says she’s ‘not herself’: muddled and sleepy since yesterday."
+   },
+   {
+    "t": "Temperature 36.0°C. No cough."
+   },
+   {
+    "t": "Breathing 24 a minute, pulse 112, blood pressure 92/50."
+   },
+   {
+    "t": "Dark, smelly urine; tender in the right flank."
+   },
+   {
+    "t": "Lactate 3.4, white cells 19; urine dipstick nitrites and leucocytes positive.",
+    "d": 1
+   }
+  ],
+  "pearl": "Older people often have no fever with sepsis, and can even be cold. New confusion, a fall or fast breathing may be the first sign. Ask ‘Could it be sepsis?’"
+ },
+ {
+  "date": "2027-05-05",
+  "number": 201,
+  "difficulty": "Medium",
+  "title": "Breathless after baby",
+  "answer": "Peripartum cardiomyopathy",
+  "accept": [
+   "peripartum cardiomyopathy",
+   "postpartum cardiomyopathy",
+   "ppcm",
+   "pregnancy associated cardiomyopathy",
+   "heart failure",
+   "dilated cardiomyopathy"
+  ],
+  "clues": [
+   {
+    "t": "33-year-old woman, 5 weeks after the birth of her second baby."
+   },
+   {
+    "t": "Breathless walking up stairs, and has to sleep on three pillows."
+   },
+   {
+    "t": "Told it’s ‘just new-mum tiredness’ and lack of sleep."
+   },
+   {
+    "t": "A dry cough at night and swollen ankles."
+   },
+   {
+    "t": "Pulse 118. Crackles at both lung bases; raised neck veins."
+   },
+   {
+    "t": "Echo: enlarged left ventricle, ejection fraction 30%.",
+    "d": 1
+   }
+  ],
+  "pearl": "Heart failure in late pregnancy or the months after birth is easily blamed on normal pregnancy. Breathlessness lying flat, a night cough or a fast resting pulse needs an echo. Risk is higher with pre-eclampsia, twins and older mothers."
+ },
+ {
+  "date": "2027-05-06",
+  "number": 202,
+  "difficulty": "Medium",
+  "title": "Room spinning",
+  "answer": "Posterior circulation stroke",
+  "accept": [
+   "stroke",
+   "posterior circulation stroke",
+   "cerebellar stroke",
+   "cerebellar infarct",
+   "brainstem stroke",
+   "vertebrobasilar stroke",
+   "ischaemic stroke",
+   "posterior stroke"
+  ],
+  "clues": [
+   {
+    "t": "36-year-old woman, 3 weeks after giving birth, sudden spinning dizziness."
+   },
+   {
+    "t": "Vomiting repeatedly. Her GP thought it was an inner-ear virus."
+   },
+   {
+    "t": "Face, arms and speech seem normal."
+   },
+   {
+    "t": "She can’t walk without falling to the left."
+   },
+   {
+    "t": "Can’t sit up unsupported; clumsy left finger-nose test; eye flicker changes direction."
+   },
+   {
+    "t": "MRI: acute infarct in the left cerebellum.",
+    "d": 1
+   }
+  ],
+  "pearl": "FAST misses many strokes at the back of the brain. Dizziness plus being unable to walk is a stroke until proven otherwise. The weeks after birth carry a higher stroke risk."
+ },
+ {
+  "date": "2027-05-07",
+  "number": 203,
+  "difficulty": "Hard",
+  "title": "Heavy chest, new mum",
+  "answer": "Spontaneous coronary artery dissection (SCAD)",
+  "accept": [
+   "spontaneous coronary artery dissection",
+   "scad",
+   "coronary artery dissection",
+   "coronary dissection"
+  ],
+  "clues": [
+   {
+    "t": "38-year-old woman, 10 weeks after giving birth."
+   },
+   {
+    "t": "Chest heaviness and left arm tingling while carrying the pram up a hill."
+   },
+   {
+    "t": "Fit, never smoked, normal cholesterol and blood pressure."
+   },
+   {
+    "t": "Pain eased at rest. She nearly went home, thinking it was a panic attack."
+   },
+   {
+    "t": "Troponin rising; ECG T-wave inversion in the anterior leads."
+   },
+   {
+    "t": "Angiogram: a smooth, long narrowing of the left anterior descending artery, no plaque.",
+    "d": 1
+   }
+  ],
+  "pearl": "SCAD causes about a quarter of heart attacks in women under 50 and is the leading cause in pregnancy and after birth. Most patients have no usual risk factors, so it gets dismissed as anxiety."
+ },
+ {
+  "date": "2027-05-08",
+  "number": 204,
+  "difficulty": "Hard",
+  "title": "Pain out of proportion",
+  "answer": "Acute mesenteric ischaemia",
+  "accept": [
+   "mesenteric ischaemia",
+   "mesenteric ischemia",
+   "acute mesenteric ischaemia",
+   "mesenteric infarction",
+   "ischaemic bowel",
+   "bowel ischaemia",
+   "mesenteric embolus",
+   "dead bowel"
+  ],
+  "clues": [
+   {
+    "t": "78-year-old woman with atrial fibrillation who stopped her blood thinner last month."
+   },
+   {
+    "t": "Sudden severe pain around the belly button for 4 hours."
+   },
+   {
+    "t": "She’s writhing and vomited, but her abdomen is soft and barely tender."
+   },
+   {
+    "t": "Pulse irregular at 120."
+   },
+   {
+    "t": "Lactate 5.8, white cells 22."
+   },
+   {
+    "t": "CT angiogram: superior mesenteric artery blocked, bowel wall not enhancing.",
+    "d": 1
+   }
+  ],
+  "pearl": "Pain far worse than the examination suggests is the warning sign, especially with AF. Older people may have little tenderness. Every hour counts to save the bowel."
+ },
+ {
+  "date": "2027-05-09",
+  "number": 205,
+  "difficulty": "Genius",
+  "title": "Quietly fading",
+  "answer": "Apathetic hyperthyroidism",
+  "accept": [
+   "apathetic hyperthyroidism",
+   "hyperthyroidism",
+   "thyrotoxicosis",
+   "overactive thyroid",
+   "toxic multinodular goitre",
+   "toxic nodular goitre",
+   "graves disease"
+  ],
+  "clues": [
+   {
+    "t": "81-year-old woman referred to the memory clinic for ‘depression and decline’."
+   },
+   {
+    "t": "Lost 8 kg over 6 months despite eating normally."
+   },
+   {
+    "t": "Withdrawn, flat, sleeping a lot. Her thighs are weak climbing the stairs."
+   },
+   {
+    "t": "No tremor, no sweating, no heat intolerance."
+   },
+   {
+    "t": "New atrial fibrillation, rate 110."
+   },
+   {
+    "t": "TSH undetectable, free T4 high; nodular goitre on ultrasound.",
+    "d": 1
+   }
+  ],
+  "pearl": "In older people an overactive thyroid can look like depression or dementia, without the classic jitteriness. Check thyroid function with unexplained weight loss, new AF or low mood."
+ },
+ {
+  "date": "2027-05-10",
+  "number": 206,
+  "difficulty": "Easy",
+  "title": "The painless ulcer",
+  "answer": "Osteomyelitis of the foot (diabetic foot infection)",
+  "accept": [
+   "osteomyelitis",
+   "diabetic foot osteomyelitis",
+   "diabetic foot infection",
+   "foot osteomyelitis",
+   "bone infection",
+   "diabetic foot ulcer",
+   "infected diabetic foot ulcer"
+  ],
+  "clues": [
+   {
+    "t": "66-year-old man with type 2 diabetes for 20 years."
+   },
+   {
+    "t": "His wife noticed a smell from his sock. He feels no pain at all."
+   },
+   {
+    "t": "A deep ulcer under his big toe joint for 2 months."
+   },
+   {
+    "t": "Can’t feel a monofilament on either foot."
+   },
+   {
+    "t": "A metal probe touches bone in the base of the ulcer."
+   },
+   {
+    "t": "X-ray: bone erosion at the first metatarsal head; ESR 90.",
+    "d": 1
+   }
+  ],
+  "pearl": "Nerve damage hides pain, so serious foot infections are found by sight and smell. Check feet daily. If a probe touches bone, assume bone infection."
+ }
+]

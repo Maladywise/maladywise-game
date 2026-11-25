@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Dxtective: 10 atypical-presentation cases for 1-10 May 2027 (#197-206).
+Writes cases/2027-05.json with these days only; the monthly build appends 11-31 May from #207."""
+import json, os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/"
+
+C = [
+ ("Hard", "Head-banging", "Dental abscess", ["dental abscess", "tooth abscess", "abscessed tooth", "periapical abscess", "dental infection", "infected tooth"],
+  ["28-year-old autistic woman who doesn’t use speech, brought in by her support worker.",
+   "For 3 days she has been banging the left side of her head and not sleeping.",
+   "She has stopped eating anything but yoghurt and is drooling more than usual.",
+   "Low-grade fever, 37.9°C.",
+   "She pulls away when her left jaw is touched; the cheek is slightly swollen.",
+   "A blackened lower left molar with a tender, fluctuant gum swelling beside it."],
+  "Pain shows up as behaviour change in many people who can’t easily describe it. Teeth, ears, constipation, periods and urine infections are the classic missed causes."),
+ ("Genius", "The alarm clock", "Long QT syndrome", ["long qt syndrome", "long qt", "lqts", "congenital long qt syndrome", "lqt2", "long qt syndrome type 2", "torsades de pointes"],
+  ["24-year-old woman, ‘fainted’ three times this year.",
+   "Every episode came just after a sudden loud noise: twice her phone alarm, once a fire drill.",
+   "During the last one her flatmate saw her jerk for 20 seconds.",
+   "She’s been told it’s anxiety, then epilepsy, and started on an anticonvulsant.",
+   "Her cousin drowned while swimming at 19.",
+   "ECG: corrected QT 520 ms with notched T waves."],
+  "Faints with jerking are often called seizures. Sudden noise triggers one genetic type, swimming another. Any faint during exercise, from a noise or with a family history of sudden death needs an ECG."),
+ ("Easy", "Just indigestion", "Heart attack (myocardial infarction)", ["heart attack", "myocardial infarction", "mi", "nstemi", "non st elevation myocardial infarction", "acute coronary syndrome", "acs", "acute mi", "stemi"],
+  ["61-year-old woman with type 2 diabetes, ‘indigestion’ since lunch.",
+   "Nauseous, vomited once, and feels unusually exhausted.",
+   "A dull ache in her jaw and between the shoulder blades.",
+   "No chest pain. She took an antacid, which didn’t help.",
+   "Clammy, pulse 104, blood pressure 150/90.",
+   "ECG: ST depression in V4–V6; troponin rising."],
+  "About 1 in 3 people having a heart attack have no chest pain on arrival. They’re more often women, older or have diabetes, and they get treated later. ECG anyone with unexplained ‘indigestion’, sweating or exhaustion."),
+ ("Easy", "Not herself", "Sepsis from a urine infection (urosepsis)", ["sepsis", "urosepsis", "urinary sepsis", "septicaemia", "septic shock", "pyelonephritis", "kidney infection", "urinary tract infection", "uti"],
+  ["89-year-old woman from home, found on the floor this morning.",
+   "Her daughter says she’s ‘not herself’: muddled and sleepy since yesterday.",
+   "Temperature 36.0°C. No cough.",
+   "Breathing 24 a minute, pulse 112, blood pressure 92/50.",
+   "Dark, smelly urine; tender in the right flank.",
+   "Lactate 3.4, white cells 19; urine dipstick nitrites and leucocytes positive."],
+  "Older people often have no fever with sepsis, and can even be cold. New confusion, a fall or fast breathing may be the first sign. Ask ‘Could it be sepsis?’"),
+ ("Medium", "Breathless after baby", "Peripartum cardiomyopathy", ["peripartum cardiomyopathy", "postpartum cardiomyopathy", "ppcm", "pregnancy associated cardiomyopathy", "heart failure", "dilated cardiomyopathy"],
+  ["33-year-old woman, 5 weeks after the birth of her second baby.",
+   "Breathless walking up stairs, and has to sleep on three pillows.",
+   "Told it’s ‘just new-mum tiredness’ and lack of sleep.",
+   "A dry cough at night and swollen ankles.",
+   "Pulse 118. Crackles at both lung bases; raised neck veins.",
+   "Echo: enlarged left ventricle, ejection fraction 30%."],
+  "Heart failure in late pregnancy or the months after birth is easily blamed on normal pregnancy. Breathlessness lying flat, a night cough or a fast resting pulse needs an echo. Risk is higher with pre-eclampsia, twins and older mothers."),
+ ("Medium", "Room spinning", "Posterior circulation stroke", ["stroke", "posterior circulation stroke", "cerebellar stroke", "cerebellar infarct", "brainstem stroke", "vertebrobasilar stroke", "ischaemic stroke", "posterior stroke"],
+  ["36-year-old woman, 3 weeks after giving birth, sudden spinning dizziness.",
+   "Vomiting repeatedly. Her GP thought it was an inner-ear virus.",
+   "Face, arms and speech seem normal.",
+   "She can’t walk without falling to the left.",
+   "Can’t sit up unsupported; clumsy left finger-nose test; eye flicker changes direction.",
+   "MRI: acute infarct in the left cerebellum."],
+  "FAST misses many strokes at the back of the brain. Dizziness plus being unable to walk is a stroke until proven otherwise. The weeks after birth carry a higher stroke risk."),
+ ("Hard", "Heavy chest, new mum", "Spontaneous coronary artery dissection (SCAD)", ["spontaneous coronary artery dissection", "scad", "coronary artery dissection", "coronary dissection"],
+  ["38-year-old woman, 10 weeks after giving birth.",
+   "Chest heaviness and left arm tingling while carrying the pram up a hill.",
+   "Fit, never smoked, normal cholesterol and blood pressure.",
+   "Pain eased at rest. She nearly went home, thinking it was a panic attack.",
+   "Troponin rising; ECG T-wave inversion in the anterior leads.",
+   "Angiogram: a smooth, long narrowing of the left anterior descending artery, no plaque."],
+  "SCAD causes about a quarter of heart attacks in women under 50 and is the leading cause in pregnancy and after birth. Most patients have no usual risk factors, so it gets dismissed as anxiety."),
+ ("Hard", "Pain out of proportion", "Acute mesenteric ischaemia", ["mesenteric ischaemia", "mesenteric ischemia", "acute mesenteric ischaemia", "mesenteric infarction", "ischaemic bowel", "bowel ischaemia", "mesenteric embolus", "dead bowel"],
+  ["78-year-old woman with atrial fibrillation who stopped her blood thinner last month.",
+   "Sudden severe pain around the belly button for 4 hours.",
+   "She’s writhing and vomited, but her abdomen is soft and barely tender.",
+   "Pulse irregular at 120.",
+   "Lactate 5.8, white cells 22.",
+   "CT angiogram: superior mesenteric artery blocked, bowel wall not enhancing."],
+  "Pain far worse than the examination suggests is the warning sign, especially with AF. Older people may have little tenderness. Every hour counts to save the bowel."),
+ ("Genius", "Quietly fading", "Apathetic hyperthyroidism", ["apathetic hyperthyroidism", "hyperthyroidism", "thyrotoxicosis", "overactive thyroid", "toxic multinodular goitre", "toxic nodular goitre", "graves disease"],
+  ["81-year-old woman referred to the memory clinic for ‘depression and decline’.",
+   "Lost 8 kg over 6 months despite eating normally.",
+   "Withdrawn, flat, sleeping a lot. Her thighs are weak climbing the stairs.",
+   "No tremor, no sweating, no heat intolerance.",
+   "New atrial fibrillation, rate 110.",
+   "TSH undetectable, free T4 high; nodular goitre on ultrasound."],
+  "In older people an overactive thyroid can look like depression or dementia, without the classic jitteriness. Check thyroid function with unexplained weight loss, new AF or low mood."),
+ ("Easy", "The painless ulcer", "Osteomyelitis of the foot (diabetic foot infection)", ["osteomyelitis", "diabetic foot osteomyelitis", "diabetic foot infection", "foot osteomyelitis", "bone infection", "diabetic foot ulcer", "infected diabetic foot ulcer"],
+  ["66-year-old man with type 2 diabetes for 20 years.",
+   "His wife noticed a smell from his sock. He feels no pain at all.",
+   "A deep ulcer under his big toe joint for 2 months.",
+   "Can’t feel a monofilament on either foot.",
+   "A metal probe touches bone in the base of the ulcer.",
+   "X-ray: bone erosion at the first metatarsal head; ESR 90."],
+  "Nerve damage hides pain, so serious foot infections are found by sight and smell. Check feet daily. If a probe touches bone, assume bone infection."),
+]
+
+out = []
+for i, (diff, title, ans, acc, clues, pearl) in enumerate(C):
+    cl = [{"t": t} for t in clues]; cl[-1]["d"] = 1
+    out.append({"date": "2027-05-%02d" % (i + 1), "number": 197 + i, "difficulty": diff, "title": title, "answer": ans, "accept": acc, "clues": cl, "pearl": pearl})
+p = ROOT + "cases/2027-05.json"
+if os.path.exists(p):
+    raise SystemExit("cases/2027-05.json already exists: merge by hand")
+json.dump(out, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print("wrote", len(out), "cases")
