@@ -4323,7 +4323,7 @@
   "date": "2026-11-27",
   "number": 41,
   "difficulty": "Hard",
-  "theme": "Dear Alfred: Nobel\u2019s prizes",
+  "theme": "Prizes, painkillers and poisons",
   "questions": [
    {
     "q": "Alfred Nobel signed his famous will on 27 November 1895 in which city?",
@@ -4356,14 +4356,14 @@
     "e": "Antitoxin raised in animals rescued thousands of children. Ross and Koch got theirs soon afterwards."
    },
    {
-    "q": "The 1949 prize went to Egas Moniz, a Portuguese neurologist, for?",
-    "a": "Prefrontal leucotomy",
+    "q": "Ibuprofen was first made in 1961 by Stewart Adams and John Nicholson, working for which company?",
+    "a": "Boots",
     "w": [
-     "Electroconvulsive therapy",
-     "Lithium for mania",
-     "Insulin coma therapy"
+     "Bayer",
+     "Glaxo",
+     "Beecham"
     ],
-    "e": "Surely the prize the committee would most like back. Later campaigners asked for it to be revoked."
+    "e": "In Nottingham. Adams later tried a dose on his own hangover before a talk in Moscow. This week one US lot of 800 mg tablets was recalled over possible tiny aluminium particles."
    },
    {
     "q": "Fleming shared the 1945 prize for penicillin with?",
@@ -4376,14 +4376,14 @@
     "e": "Florey, an Australian, and Chain, a refugee from Nazi Germany, turned a mould into a medicine."
    },
    {
-    "q": "Furious that Best missed out in 1923, Banting split his prize money with him. Macleod split his with?",
-    "a": "James Collip",
+    "q": "The kidney-damaging \u2018triple whammy\u2019 is an anti-inflammatory such as ibuprofen, plus a diuretic, plus?",
+    "a": "An ACE inhibitor or sartan",
     "w": [
-     "George Minot",
-     "Frederick Sanger",
-     "Otto Loewi"
+     "A statin or a fibrate",
+     "A beta blocker or nitrate",
+     "A PPI or H2 blocker"
     ],
-    "e": "Collip purified the insulin well enough to use in people. Scientific friendships have rarely been quite so tense."
+    "e": "Each squeezes blood flow to the kidney\u2019s filters from a different angle. Riskiest when someone is also dehydrated, say with gastro."
    },
    {
     "q": "Why couldn\u2019t Rosalind Franklin share the 1962 prize given for the structure of DNA?",
@@ -4406,24 +4406,24 @@
     "e": "With her husband Carl, for how the body handles glucose. She had spent years in junior posts despite doing equal work."
    },
    {
-    "q": "Julius Wagner-Jauregg won the 1927 prize for treating neurosyphilis by deliberately giving patients?",
-    "a": "Malaria",
+    "q": "On a blood film in lead poisoning, red cells may be speckled with fine blue dots. What is this called?",
+    "a": "Basophilic stippling",
     "w": [
-     "Typhoid",
-     "Smallpox",
-     "Tetanus"
+     "Howell\u2013Jolly bodies",
+     "Heinz bodies",
+     "Pappenheimer bodies"
     ],
-    "e": "Fever therapy was, astonishingly, an advance at the time. Penicillin mercifully replaced it."
+    "e": "Leftover ribosomal RNA clumps because lead blocks the enzyme that clears it. Lead made US news this week over Army plans to destroy old lead azide explosive in Iowa."
    },
    {
-    "q": "Johannes Fibiger won the 1926 prize for showing that a roundworm causes cancer in rats. What came next?",
-    "a": "The finding turned out to be wrong",
+    "q": "Cane toad toxin acts on the heart most like which medicine, and can even cross-react with its blood test?",
+    "a": "Digoxin",
     "w": [
-     "It led to a vaccine",
-     "The worm was named after Nobel",
-     "The prize was shared with the worm\u2019s discoverer"
+     "Adrenaline",
+     "Adenosine",
+     "Amiodarone"
     ],
-    "e": "The tumours had other causes, probably including vitamin A deficiency. Peer review has a long memory."
+    "e": "Its bufagenins have digitalis-like effects, so a curious dog that mouths a toad can develop dangerous rhythms and high potassium. A classic northern Australian vet emergency."
    }
   ]
  },

@@ -1259,23 +1259,23 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Prize-winning advances (one now regretted)",
-    "level": 1,
-    "words": [
-     "LOBOTOMY",
-     "IVF",
-     "PENICILLIN",
-     "CT"
-    ]
-   },
-   {
     "label": "DNA double helix team",
-    "level": 2,
+    "level": 1,
     "words": [
      "WATSON",
      "CRICK",
      "WILKINS",
      "FRANKLIN"
+    ]
+   },
+   {
+    "label": "Pack a digoxin-like heart poison",
+    "level": 2,
+    "words": [
+     "OLEANDER",
+     "CANE TOAD",
+     "MILKWEED",
+     "LILY OF THE VALLEY"
     ]
    },
    {

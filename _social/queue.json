@@ -989,6 +989,17 @@
    ],
    "typefully_id": "12201192",
    "queued_at": "2026-11-26T12:49+11:00"
+  },
+  {
+   "date": "2026-11-27",
+   "slot": "noon",
+   "pin": true,
+   "note": "Noon trend quiz: ibuprofen recall (US Health 'ibuprofen recall' 10,000+) → NSAID triple whammy",
+   "thread": [
+    "A US ibuprofen recall is trending. Kidney quiz:\n\nThe 'triple whammy' that can injure kidneys is an anti-inflammatory like ibuprofen, plus a diuretic, plus which?\n\nA) A statin\nB) An ACE inhibitor or sartan\nC) Paracetamol\nD) An antihistamine\n\nGuess, then check the answer below. 👇",
+    "Answer: B. Each of the three cuts blood flow through the kidney's filters in a different way. Together, especially when dehydrated (gastro, a heatwave), they can cause acute kidney injury. On blood pressure tablets? Check with a pharmacist or GP before anti-inflammatories.",
+    "Anti-inflammatories (NSAIDs) guide → https://maladywise.com/medicines/nsaids/"
+   ]
   }
  ]
 }
