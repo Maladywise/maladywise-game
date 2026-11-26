@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "18";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "19";
   // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");
@@ -76,6 +76,8 @@
   var LONG = { 8: 8, 9: 10, 10: 12 };
   function longBonus(n) { return n >= 11 ? 15 : LONG[n] || 0; }
   function points(w) { var p = w.length === 4 ? 1 : w.length; p += longBonus(w.length); if (P.pangrams.indexOf(w) >= 0) p += 7; if (P.medical.indexOf(w) >= 0) p *= 2; return p; }
+  // Daily target (26 Nov 2026): a realistic rank for today's difficulty; the scale still runs to Genius.
+  function targetIdx() { var d = P && P.difficulty; return d === "Easy" ? 5 : d === "Medium" ? 4 : 3; }
   function rankIdx(score) { var pct = P.max ? score / P.max * 100 : 0, r = 0; RANKS.forEach(function (x, i) { if (pct >= x[1]) r = i; }); return r; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
@@ -103,9 +105,10 @@
     if (!P) return;
     var r = rankIdx(st.score), pct = Math.min(100, P.max ? st.score / P.max * 100 / 0.7 * 1 : 0);
     $("rank").textContent = st.found.length === P.words.length ? TOP : RANKS[r][0];
-    $("score").textContent = st.score + " pts \u00b7 Genius at " + Math.ceil(P.max * 0.7);
+    var ti = targetIdx(), tp = Math.ceil(P.max * RANKS[ti][1] / 100), hit = r >= ti;
+    $("score").textContent = st.score + " pts \u00b7 " + (hit ? "\u2705 Target hit \u00b7 " : "Target " + RANKS[ti][0] + " (" + tp + ") \u00b7 ") + "Genius " + Math.ceil(P.max * 0.7);
     $("bar").style.width = Math.min(100, st.score / (P.max * 0.7) * 100) + "%";
-    $("ticks").innerHTML = RANKS.map(function (x, i) { return '<span class="' + (i <= r ? "on" : "") + '" title="' + x[0] + '"></span>'; }).join("");
+    $("ticks").innerHTML = RANKS.map(function (x, i) { return '<span class="' + (i <= r ? "on" : "") + (i === ti ? " tgt" : "") + '" title="' + x[0] + (i === ti ? " (today\u2019s target)" : "") + '"></span>'; }).join("");
     var nMed = st.found.filter(function (w) { return P.medical.indexOf(w) >= 0; }).length;
     $("fcount").textContent = "You have found " + st.found.length + " word" + (st.found.length === 1 ? "" : "s") + (nMed ? " \u00b7 " + nMed + (NORMIE ? " theme" : " medical") : "");
     var showAll = (!isLive() && st.reveal) || st.gaveUp;
@@ -190,7 +193,7 @@
     else m = pick(SASS.good);
     m += " +" + pts;
     if (after > before) {
-      m = after === RANKS.length - 1 ? (P.difficulty === "Einstein" ? SASS.ein : SASS.genius) : m + " " + SASS.rank(RANKS[after][0]);
+      m = after === RANKS.length - 1 ? (P.difficulty === "Einstein" ? SASS.ein : SASS.genius) : m + " " + SASS.rank(RANKS[after][0]) + (before < targetIdx() && after >= targetIdx() ? " \ud83c\udfaf Today\u2019s target hit. Genius is the bonus round." : "");
       if (isLive()) {
         if (after > (st.rank || 0)) { stats.dist[after]++; if (st.rank) stats.dist[st.rank]--; put(SKEY, stats); }
         if (after === RANKS.length - 1 && !st.win) {

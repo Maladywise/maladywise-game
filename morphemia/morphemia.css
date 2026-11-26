@@ -23,6 +23,7 @@ html[data-theme="dark"] #mph{--bg:#16121F;--paper:#211B2E;--ink:#F1ECF8;--muted:
 #mph .ticks{display:flex;justify-content:space-between;margin-top:-10px;pointer-events:none}
 #mph .ticks span{width:10px;height:10px;border-radius:50%;background:var(--line);border:2px solid var(--bg)}
 #mph .ticks span.on{background:var(--gold)}
+#mph .ticks span.tgt{box-shadow:0 0 0 2px var(--teal,#2a9d8f);width:12px;height:12px}
 #mph .found{background:var(--paper);border:1px solid var(--line);border-radius:12px}
 #mph .found summary{cursor:pointer;padding:10px 14px;font-size:14px;color:var(--muted);list-style:none;display:flex;justify-content:space-between;gap:8px}
 #mph .found summary::-webkit-details-marker{display:none}

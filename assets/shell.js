@@ -1689,7 +1689,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         }).join("") + hiddenTiles(false) + "</div></section>"; // closed timed games sit at the end with their HIDDEN stamp (24 Nov 2026)
     }
     // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
-    var EXTRA = [["nomulous", "Nomulous", "nomulous", "Name the eponym", "#4A3480", "#B9A6E8"]];
+    var EXTRA = []; // Nomulous moved to Labs (26 Nov 2026)
     function extraList(hid, hiddenOnes) { return NORMIE ? [] : EXTRA.filter(function (x) { return (hid.indexOf(x[0]) > -1) === hiddenOnes; }); }
     function extraTile(x, hiddenOnes, done, chip) {
       var dk = root.getAttribute("data-theme") === "dark";
@@ -1719,7 +1719,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function arcadeRow() {
       // One slim row (24 Nov 2026) instead of a full section with tiles.
       return '<section class="arc-slim" id="g-arcade"><span class="rd-k">Arcade · play all day</span><div class="arc-l">' + ARCADE.map(function (a) {
-        var dk = root.getAttribute("data-theme") === "dark", ic = a[0] === "basil-clover" ? '<img src="/assets/mascots/basil.svg?v=2" alt="" width="20" height="26">' : '<img src="/assets/mascots/' + a[0] + '.svg?v=1" alt="" width="26" height="26">';
+        var dk = root.getAttribute("data-theme") === "dark", ic = a[0] === "basil-clover" ? '<img src="/assets/mascots/basil.svg?v=2" alt="" width="46" height="46">' : '<img src="/assets/mascots/' + a[0] + '.svg?v=1" alt="" width="26" height="26">';
         var sub = { "basil-clover": "Cat chaos", stackulus: "Block stacker", mergeon: "Organ merge" }[a[0]] || "Arcade";
         return '<a class="arc-a" data-g="' + a[0] + '" href="/' + a[0] + '/" style="--accent:' + (dk ? a[5] : a[4]) + '">' + ic + "<b>" + a[1] + "</b><small>" + sub + "</small></a>";
       }).join("") + "</div></section>";

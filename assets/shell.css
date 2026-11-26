@@ -1726,3 +1726,14 @@ html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9
 .mw-crowd.inl{position:static;transform:none;left:auto;bottom:auto;width:auto;margin:12px 0;box-shadow:none;animation:none;grid-template-columns:1fr;border-width:1px}
 /* hide the "Next case in 3h 12m" countdown under games (26 Nov 2026) */
 p.note#arx-next,p.note#cmx-next,p.note#dxw-next,p.note#glm-next,p.note#grx-next,p.note#lbl-nextday,p.note#lnk-next,p.note#mph-next,p.note#opc-next,p.note#pnl-next,p.note#skr-next,p.note#stx-next,p.note#wde-next,p.note#trv-next,p.note#sns-next,p.note#zbr-next{display:none!important}
+
+/* 26 Nov 2026: Arcade and This week use the same tile size and icon size as the daily puzzle grid */
+.arc-l,.rds-slim .rs-l{display:grid!important;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+@media(min-width:560px){.arc-l,.rds-slim .rs-l{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:900px){.arc-l,.rds-slim .rs-l{grid-template-columns:repeat(5,1fr)}}
+.arc-a,.rds-slim .rs-l a{display:flex!important;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:1px;width:auto!important;height:auto;min-height:0;padding:10px 4px 9px;border:1.5px solid var(--line);border-radius:14px;white-space:normal;font-size:13px!important;line-height:1.2;min-width:0;overflow-wrap:anywhere}
+.arc-a img,.rds-slim .rs-l a span[aria-hidden]{box-sizing:content-box;width:46px;height:46px;padding:5px;border-radius:15px;margin-bottom:4px;object-fit:contain;background:color-mix(in srgb,var(--accent,var(--brand)) 16%,transparent)}
+.rds-slim .rs-l a span[aria-hidden]{display:grid;place-items:center;font-size:30px;background:#F1ECF8}
+.arc-a b{font-size:13px;font-weight:600;line-height:1.2}
+.arc-a small{font-size:11px;line-height:1.2}
+.rds-slim .rs-l a{font-weight:600}

@@ -2,158 +2,255 @@
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow,noarchive">
-<title>Gaslitis</title>
+<link rel="canonical" href="https://maladywise.com/lab/gaslitis-r8q/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Gaslitis: Dismiss the Patient, See What You Missed | Malady Wise</title>
+<meta name="description" content="A role-reversal teaching game: play the dismissive doctor, then see the diagnosis you missed and who usually hears those lines.">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#4A3480">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Malady Wise">
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-:root{--bg:#F6F1EA;--ink:#2B2340;--muted:#6B5A93;--card:#FFFFFF;--line:#E7E0F2;--brand:#4A3480;--plum:#7A2E5C;--teal:#0F5C4A;--on:#FFFFFF;--dot:#F2B544;--bad:#B3261E;
---display:"Lora",Georgia,serif;--body:"Poppins",system-ui,sans-serif}
-@media (prefers-color-scheme:dark){:root{--bg:#16121F;--ink:#F1ECF8;--muted:#B9A8E0;--card:#211B2E;--line:#3A3150;--brand:#5B43A0;--plum:#8A3A6A;--teal:#13705A;--bad:#F2877F;color-scheme:dark}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);padding:24px 16px 48px}
-.wrap{max-width:720px;margin:0 auto}
-h1{font:700 32px/1.1 var(--display);margin:0 0 4px}
-.lede{color:var(--muted);margin:0 0 6px}
-.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--muted);color:var(--muted);border-radius:999px;padding:3px 10px;margin:0 0 18px}
-.bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
-.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
-.pt{background:var(--card);border:2px solid var(--brand);border-radius:18px;padding:16px;margin:0 0 14px}
-.k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
-.pt-h{display:flex;gap:12px;align-items:center}.pt-h .e{font-size:40px;line-height:1}
-.t{font:700 22px/1.2 var(--display);margin:2px 0}
-.say{font-size:15px;line-height:1.5;margin:10px 0 0}
-.meter{margin:12px 0 2px;font-size:13px;font-weight:600;display:flex;justify-content:space-between}
-.track{height:12px;border-radius:999px;background:var(--line);overflow:hidden}.track i{display:block;height:100%;background:var(--teal);transition:width .4s}
-.reply{margin:10px 0 0;padding:10px 12px;border-radius:12px;background:var(--bg);font-size:14px;line-height:1.45;font-style:italic;min-height:1em}
-.hand-h{display:flex;justify-content:space-between;align-items:baseline;margin:6px 0 8px}
-.hand-h b{font:700 18px var(--display)}.hand-h span{font-size:13px;color:var(--muted)}
-.hand{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
-.c{border:0;text-align:left;border-radius:16px;padding:12px;color:var(--on);font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-height:132px;transition:transform .15s,opacity .2s}
-.c:hover,.c:focus-visible{transform:translateY(-3px)}.c:focus-visible{outline:3px solid var(--dot);outline-offset:2px}
-.c[disabled]{opacity:.35;cursor:default;transform:none}
-.c.dis{background:var(--brand)}.c.lab{background:var(--plum)}.c.work{background:var(--teal)}
-.c .ct{font:700 16px/1.25 var(--display)}.c .cs{font-size:12px;opacity:.9;margin-top:auto}
-.m{display:flex;gap:4px}.m i{width:10px;height:10px;border-radius:50%;background:var(--dot)}
-.rv{background:var(--teal);color:var(--on);border-radius:18px;padding:16px;margin:14px 0}
-.rv.miss{background:var(--plum)}
-.rv h2{font:700 22px/1.2 var(--display);margin:4px 0 8px}.rv p{margin:0 0 8px;font-size:15px;line-height:1.5}
-.rv .flip{background:rgba(255,255,255,.14);border-radius:12px;padding:10px 12px}
-.rv a{color:var(--on)}.rv small{font-size:12px;opacity:.85}
-.go{display:block;width:100%;min-height:50px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:600 16px var(--body);cursor:pointer;margin-top:10px}
-.end{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
-.end h2{font:700 26px var(--display);margin:0 0 6px}.end ul{padding-left:20px;line-height:1.6}
-.end a{color:var(--muted);font-weight:600}
-.pill.tm{font-variant-numeric:tabular-nums}.pill.tm.hot{background:#B3261E;color:#fff;border-color:#B3261E}
-.how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
-@media (prefers-reduced-motion:reduce){.c,.track i{transition:none}}
-</style>
+<script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
+<link rel="stylesheet" href="/assets/shell.css?v=274">
+<link rel="stylesheet" href="/assets/mg.css?v=3">
+<style>:root{--mg-a:#7A2E5C;--mg-b:#4A1A38;--mg-hi:#FFE08A}
+#lb-game{--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;--dot:#F2B544;--plum:#7A2E5C;--teal:#0F5C4A;--on:#fff;--bad:#B3261E;--display:var(--title,Georgia,serif);--paper:var(--card)}
+#lb-game .bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+#lb-game .gpill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
+#lb-game .gpill.tm{font-variant-numeric:tabular-nums}
+#lb-game .gpill.tm.hot{background:#B3261E;color:#fff;border-color:#B3261E}
+#lb-game .pt{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:16px;margin:0 0 14px}
+#lb-game .k{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+#lb-game .pt-h{display:flex;gap:14px;align-items:center}
+#lb-game .face{flex:0 0 auto;width:84px;height:84px}
+#lb-game .face.shake{animation:gsShake .4s}
+
+@keyframes gsShake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+#lb-game .t{font:700 22px/1.2 var(--display);margin:2px 0}
+#lb-game .mood{font-size:13px;font-weight:600}
+#lb-game .say{font-size:15px;line-height:1.5;margin:10px 0 0}
+#lb-game .meter{margin:12px 0 2px;font-size:13px;font-weight:600;display:flex;justify-content:space-between}
+#lb-game .track{height:12px;border-radius:999px;background:var(--line);overflow:hidden}
+#lb-game .track i{display:block;height:100%;background:var(--teal);transition:width .4s}
+#lb-game .reply{margin:10px 0 0;padding:10px 12px;border-radius:12px;background:var(--bg);font-size:14px;line-height:1.45;font-style:italic}
+#lb-game .hand-h{display:flex;justify-content:space-between;align-items:baseline;margin:6px 0 8px}
+#lb-game .hand-h b{font:700 18px var(--display)}
+#lb-game .hand-h span{font-size:13px;color:var(--muted)}
+#lb-game .hand{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+#lb-game .c{border:0;text-align:left;border-radius:16px;padding:12px;color:#fff;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-height:140px;transition:transform .15s,opacity .2s;background:var(--cc,#4A3480)}
+#lb-game .c:hover,#lb-game .c:focus-visible{transform:translateY(-3px)}
+#lb-game .c:focus-visible{outline:3px solid var(--dot);outline-offset:2px}
+#lb-game .c[disabled]{opacity:.35;cursor:default;transform:none}
+#lb-game .c .ct{font:700 16px/1.25 var(--display)}
+#lb-game .c .cs{font-size:12px;opacity:.92;margin-top:auto}
+#lb-game .c .hm{font-size:11px;font-weight:600;background:rgba(0,0,0,.22);border-radius:999px;padding:2px 8px;align-self:flex-start}
+#lb-game .m{display:flex;gap:4px}
+#lb-game .m i{width:10px;height:10px;border-radius:50%;background:var(--dot)}
+#lb-game .rv{background:var(--teal);color:#fff;border-radius:18px;padding:16px;margin:14px 0}
+#lb-game .rv.miss{background:#6B2A4E}
+#lb-game .rv-h{display:flex;gap:14px;align-items:center}
+#lb-game .rv h2{font:700 22px/1.2 var(--display);margin:4px 0 8px}
+#lb-game .rv p{margin:0 0 8px;font-size:15px;line-height:1.5}
+#lb-game .rv .flip{background:rgba(255,255,255,.14);border-radius:12px;padding:10px 12px}
+#lb-game .rv .used{font-size:13px;margin:0 0 8px}
+#lb-game .rv a{color:#fff}
+#lb-game .rv small{font-size:12px;opacity:.88}
+#lb-game .go{display:block;width:100%;min-height:50px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:600 16px var(--body);cursor:pointer;margin-top:10px}
+#lb-game .end{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+#lb-game .end h2{font:700 26px var(--display);margin:0 0 6px}
+#lb-game .end ul{padding-left:20px;line-height:1.6;margin:8px 0}
+#lb-game .end h3{font:700 17px var(--display);margin:14px 0 4px}
+#lb-game .tally{list-style:none;padding:0!important;display:grid;gap:6px}
+#lb-game .tally li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;font-size:14px}
+#lb-game .tally li span{color:var(--muted)}
+#lb-game .end a{color:var(--muted);font-weight:600}
+#lb-game .how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
+@media (prefers-reduced-motion:reduce){#lb-game{--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;--dot:#F2B544;--plum:#7A2E5C;--teal:#0F5C4A;--on:#fff;--bad:#B3261E;--display:var(--title,Georgia,serif);--paper:var(--card)}
+#lb-game .c,#lb-game .track i{transition:none}
+#lb-game .face.shake{animation:none}}</style>
+<script defer src="/assets/games.js?v=130"></script>
+<script defer src="/assets/shell.js?v=356"></script>
 </head>
 <body>
-<div class="wrap">
-<p class="gl-back" style="margin:0 0 12px;font-size:14px"><a href="/" style="color:var(--muted)">&larr; Malady Wise</a> · <a href="/contact/" style="color:var(--muted)">Send feedback</a></p>
-<h1>Gaslitis</h1>
-<p class="lede">You're the doctor. Dismiss these men. Then see what you missed.</p>
-<span class="tag">Labs beta · 8 patients</span>
+<main class="wrap mg-page">
+  <section class="mg-intro" id="lb-intro">
+    <img class="mg-masc" src="/assets/mascots/gaslitis.svg" alt="Flick the gas lamp, who knows exactly what gaslighting looks like" width="104" height="104">
+    <p class="mg-kick">🧪 Labs beta · Role reversal</p>
+    <h1>Gaslitis</h1>
+    <p class="mg-lede">You're the doctor, and every shortcut is a bias. Dismiss eight patients, watch how they react, then see what you missed.</p>
+    <button class="big" type="button" id="lb-play">Start</button>
+    <p class="mg-small"><i>Ageism, weight bias, stigma, overshadowing, racial and gender bias. Every line is something real patients report hearing.</i></p>
+  </section>
+  <section class="lb-game" id="lb-game" hidden>
 <div id="app"></div>
-<p class="how"><b>How to play:</b> you have 25 seconds per patient. Each arrives with some confidence. Play up to 3 cards to talk him out of being worried. Drain his confidence to zero and he leaves, dismissed. Or play the green card and actually do the work. Every reveal shows the real diagnosis, and who usually hears those lines.</p>
-</div>
+<p class="how"><b>How to play:</b> 25 seconds per patient. Play up to 3 cards. Every dismissal card is a type of bias, and each one makes the patient more upset and less likely to come back. Drain their confidence and they leave. Run out of time and they're rushed out. Or play the green card and do the work. Each reveal shows the diagnosis, the harm, and the evidence on who usually gets dismissed.</p>
+
+  </section>
+  <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a> · <a href="/contact/">Send feedback</a></p>
+  <footer class="site"><p class="ft-base"><span class="ft-note">A Labs beta teaching game. Education only, not advice for an individual patient.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
+</main>
+<script defer src="/assets/boot.js?v=1" data-mw="page"></script>
 <script>
+document.getElementById("lb-play").onclick=function(){document.getElementById("lb-intro").hidden=true;var g=document.getElementById("lb-game");g.hidden=false;if(window.LB_start)LB_start();g.scrollIntoView({behavior:"smooth",block:"start"});};
+
 (function(){
+// Bias types (card colour) and the harm each tends to cause
+var B={
+ psych:{n:"Psychologising",c:"#4A3480"},
+ anchor:{n:"Anchoring",c:"#2F5D8A"},
+ age:{n:"Ageism",c:"#8A5A00"},
+ weight:{n:"Weight bias",c:"#7A3B2E"},
+ stigma:{n:"Addiction stigma",c:"#5B4A2E"},
+ shadow:{n:"Diagnostic overshadowing",c:"#4A5A2E"},
+ race:{n:"Racial bias",c:"#6B2A4E"},
+ gender:{n:"Gender bias",c:"#8A2E5C"},
+ rush:{n:"Time pressure",c:"#3E4A5C"},
+ expert:{n:"Dismissing the patient's knowledge",c:"#2E5C55"}
+};
+var H={delay:"Delayed diagnosis",pain:"Untreated pain",trust:"Lost trust",label:"Label sticks for years",danger:"Dangerous deterioration"};
+// Each patient: tone = skin colour, hair, gender for the face; bias = cards that fit this patient
 var P=[
- {n:"Gerald",a:54,e:"🏌️",job:"CEO",say:"\"Tight chest on the 9th hole. Sweaty. Probably nothing, but my wife made me come.\"",conf:10,
-  dx:"Unstable angina",test:"An ECG and troponin today, then a cardiology review.",harm:"Two weeks later he had a heart attack on the 14th hole.",
-  flip:"Women having a heart attack more often have symptoms put down to stress or anxiety, and wait longer for treatment.",src:["Mehta LS et al. Circulation 2016","https://doi.org/10.1161/CIR.0000000000000351"],
+ {n:"Gerald",a:54,g:"m",tone:"#F1C7A3",hair:"#9A9A9A",job:"CEO",say:"\"Tight chest on the golf course. Sweaty. Probably nothing.\"",conf:10,fit:["psych","rush","anchor"],
+  dx:"Unstable angina",test:"An ECG and troponin today, then a cardiology review.",harm:"Two weeks later he collapsed with a heart attack.",
+  flip:"Busy professionals get ‘stress’ too. And women with heart attacks more often have symptoms put down to stress or anxiety, and wait longer for treatment.",src:["Mehta LS et al. Circulation 2016","https://doi.org/10.1161/CIR.0000000000000351"],
   work:"Do an ECG and troponin"},
- {n:"Hamish",a:58,e:"🛥️",job:"Fund manager",say:"\"Bit of blood in my wee last week. Doesn't hurt. Probably the boat sun, eh?\"",conf:9,
-  dx:"Bladder cancer",test:"Painless visible blood in the urine over 45 needs a referral for cystoscopy and imaging.",harm:"By the time he was scoped, it had grown into the bladder wall.",
-  flip:"In a large English study, women with blood in their urine needed more GP visits before referral than men, often because it was treated as a urine infection first.",src:["Lyratzopoulos G et al. Lancet Oncol 2013","https://pubmed.ncbi.nlm.nih.gov/23798742/"],
-  work:"Refer for cystoscopy and a CT"},
- {n:"Rupert",a:46,e:"⚖️",job:"Barrister",say:"\"My legs tingle and one eye went blurry for a week. I've been flat out in court.\"",conf:8,
-  dx:"Multiple sclerosis",test:"A neurological exam and an urgent MRI of the brain and spine.",harm:"A second attack left him with a weak right leg before anyone looked.",
-  flip:"MS is about 3 times more common in women, and early symptoms in women are often written off as anxiety or stress.",src:["MS Australia","https://www.msaustralia.org.au/"],
-  work:"Examine him and order an MRI"},
- {n:"Clive",a:51,e:"🍷",job:"Winery owner",say:"\"Heart's racing, I'm sweaty, I've lost 6 kilos and I can't sleep. Feel wired.\"",conf:9,
-  dx:"Overactive thyroid (Graves' disease)",test:"One blood test: TSH and free T4.",harm:"He ended up in ED with atrial fibrillation.",
-  flip:"An overactive thyroid is 5 to 10 times more common in women, and its racing heart, sweats and worry are easily mistaken for anxiety.",src:["Taylor PN et al. Nat Rev Endocrinol 2018","https://doi.org/10.1038/nrendo.2018.18"],
-  work:"Check his thyroid"},
- {n:"Brendan",a:44,e:"💼",job:"Tech founder",say:"\"Can't focus, miss every deadline, lose my keys daily. Always been like this, but it's getting worse.\"",conf:8,
-  dx:"Adult ADHD",test:"A proper developmental history and a structured ADHD assessment.",harm:"He lost his company and his marriage before anyone assessed him.",
-  flip:"ADHD in girls and women is often missed: inattention is quieter than hyperactivity, they mask it, and anxiety or depression gets diagnosed instead.",src:["Quinn PO, Madhoo M. Prim Care Companion CNS Disord 2014","https://doi.org/10.4088/PCC.13r01596"],
-  work:"Take a developmental history"},
- {n:"Toby",a:50,e:"📈",job:"Investment banker",say:"\"Right side, coming in waves, can't sit still. Please, something strong.\"",conf:10,
-  dx:"Kidney stone (renal colic)",test:"Pain relief now, a urine test and a CT of the kidneys.",harm:"He was labelled drug-seeking and sent home. Back next day with an infected, blocked kidney.",
-  flip:"In an emergency department study of belly pain, women were less likely than men to get strong pain relief, and waited longer for it.",src:["Chen EH et al. Acad Emerg Med 2008","https://doi.org/10.1111/j.1553-2712.2008.00100.x"],
-  work:"Treat the pain and examine him"},
- {n:"Simon",a:42,e:"🏛️",job:"Architect",say:"\"Exhausted, achy joints, mouth ulcers, and a rash after the beach. Must be the long hours.\"",conf:8,
-  dx:"Lupus (SLE)",test:"Examination, urine test, blood count and an ANA blood test.",harm:"Two years later, kidney damage was found on a routine test.",
-  flip:"About 9 in 10 people with lupus are women, and many see several doctors over years before diagnosis.",src:["Lupus Foundation of America: lupus facts","https://www.lupus.org/resources/lupus-facts-and-statistics"],
-  work:"Examine, dipstick urine, order bloods"},
- {n:"Nathan",a:41,e:"⚖️",job:"Corporate lawyer",say:"\"Room started spinning an hour ago. Threw up twice. Can't walk straight.\"",conf:9,
-  dx:"Posterior circulation stroke",test:"A careful neuro exam including gait and eye movements, then urgent stroke imaging.",harm:"Sent home with 'inner-ear virus'. Back 2 days later with a bigger stroke.",
-  flip:"In a study of US emergency departments, missed strokes were more likely in women and younger people, especially with dizziness or headache.",src:["Newman-Toker DE et al. Diagnosis 2014","https://doi.org/10.1515/dx-2013-0038"],
-  work:"Check gait and eyes; stroke call"}
+ {n:"Mei",a:27,g:"f",tone:"#E8C39E",hair:"#1E1A1A",job:"Nurse",say:"\"I nearly faint every time I stand at work. My heart races. It's not in my head.\"",conf:9,fit:["psych","gender","expert"],
+  dx:"POTS (postural orthostatic tachycardia syndrome)",test:"A 10-minute active stand test: heart rate and blood pressure lying, then standing.",harm:"She went part-time, then stopped work, still undiagnosed.",
+  flip:"In a survey of 4,835 people with POTS, 94% were women, and diagnosis took a median of 2 years, often after misdiagnosis.",src:["Shaw BH et al. J Intern Med 2019","https://doi.org/10.1111/joim.12895"],
+  work:"Do a lying and standing test"},
+ {n:"Kofi",a:31,g:"m",tone:"#6B4630",hair:"#141010",job:"Engineering student",say:"\"Pain in my right side, coming in waves. I can't sit still. Please help.\"",conf:10,fit:["race","stigma","rush"],
+  dx:"Kidney stone with infection",test:"Pain relief now, urine test, temperature, and same-day imaging.",harm:"Sent home ‘drug-seeking’. Back next day with an infected, blocked kidney.",
+  flip:"Across 13 years of US emergency visits, white patients in pain were more likely to get opioid pain relief than Black or Hispanic patients, including for kidney stones.",src:["Pletcher MJ et al. JAMA 2008","https://doi.org/10.1001/jama.2007.64"],
+  work:"Treat the pain and examine"},
+ {n:"Joan",a:84,g:"f",tone:"#F3D2BA",hair:"#E8E8E8",job:"Retired teacher",say:"Her son: \"Mum's not herself since yesterday. Muddled and sleepy.\"",conf:8,fit:["age","shadow","rush"],
+  dx:"Delirium from a urine infection",test:"Observations, a confusion screen, urine and bloods, and a look for the cause today.",harm:"Labelled ‘dementia’. Found on the floor two days later, septic.",
+  flip:"Delirium is missed in many older patients, and is often mistaken for dementia or ‘just age’. It's a medical emergency with a cause.",src:["Inouye SK et al. Lancet 2014","https://doi.org/10.1016/S0140-6736(13)60688-1"],
+  work:"Look for the cause of the confusion"},
+ {n:"Kyle",a:38,g:"m",tone:"#EBC09A",hair:"#6B3E1F",job:"Truck driver",say:"\"Suddenly short of breath walking to the car. Calf's a bit sore too.\"",conf:9,fit:["weight","rush","anchor"],
+  dx:"Pulmonary embolism",test:"Assess risk (Wells score), oxygen saturation, D-dimer or a CT pulmonary angiogram.",harm:"Told to lose weight. Collapsed at the depot the next morning.",
+  flip:"Weight stigma leads to shorter consults, less examination and symptoms blamed on weight before they're assessed.",src:["Phelan SM et al. Obes Rev 2015","https://doi.org/10.1111/obr.12266"],
+  work:"Assess for a clot"},
+ {n:"Tash",a:33,g:"f",tone:"#C98E62",hair:"#2A1A12",job:"Barista, on clozapine",say:"\"My chest hurts and I can't catch my breath. Heart's pounding.\"",conf:9,fit:["shadow","psych","stigma"],
+  dx:"Myocarditis from clozapine",test:"ECG, troponin and CRP, and stop clozapine pending specialist advice.",harm:"Put down to ‘anxiety from her illness’. Admitted to ICU in heart failure.",
+  flip:"Diagnostic overshadowing means physical symptoms in people with mental illness get blamed on the mental illness. They die years earlier, mostly from physical illness.",src:["Shefer G et al. PLOS One 2014","https://doi.org/10.1371/journal.pone.0111682"],
+  work:"ECG, troponin, review the clozapine"},
+ {n:"Rob",a:49,g:"m",tone:"#E2B48C",hair:"#3A2A1A",job:"Labourer, drinks heavily",say:"Partner: \"He fell last week. Now he's slurring and vomiting. He hasn't had a drink today.\"",conf:8,fit:["stigma","anchor","rush"],
+  dx:"Subdural haematoma (bleed on the brain)",test:"A full neuro exam and an urgent CT head.",harm:"Sent home to ‘sleep it off’. Found unresponsive that night.",
+  flip:"Health professionals often hold negative attitudes to people who use alcohol or drugs, which leads to less engagement and worse care.",src:["van Boekel LC et al. Drug Alcohol Depend 2013","https://doi.org/10.1016/j.drugalcdep.2013.02.018"],
+  work:"Examine and CT head"},
+ {n:"Priya",a:41,g:"f",tone:"#B98060",hair:"#120E0E",job:"Accountant, ‘frequent attender’",say:"\"Back again, sorry. This headache is different. Worst when I lie down, and my vision blurs.\"",conf:9,fit:["anchor","gender","expert"],
+  dx:"Raised pressure in the head (venous sinus thrombosis)",test:"Check the eyes for swollen optic discs, a neuro exam, and urgent brain imaging.",harm:"Told ‘your usual migraine’. Had a seizure at work three days later.",
+  flip:"Anchoring on an old diagnosis is one of the commonest causes of missed diagnosis. A patient who comes back is telling you the first answer didn't fit.",src:["Croskerry P. Acad Med 2003","https://doi.org/10.1097/00001888-200308000-00003"],
+  work:"Examine the eyes and image"}
 ];
-var TLIM=25;
-var POOL=[
- {k:"dis",t:"\"Have you tried yoga?\"",p:2,min:3,r:"\"Yoga? I suppose I could try…\""},
- {k:"dis",t:"\"It's probably just stress.\"",p:3,min:4,r:"\"Well, it has been a big quarter.\""},
- {k:"dis",t:"\"Your bloods last year were normal.\"",p:3,min:2,r:"\"Oh. That's reassuring, I guess.\""},
- {k:"dis",t:"\"Let's not go down a rabbit hole.\"",p:4,min:5,r:"\"No, no, of course. Sorry to waste your time.\""},
- {k:"dis",t:"\"Dr Google isn't a medical degree.\"",p:4,min:3,r:"\"Fair. I did read a few things…\""},
- {k:"dis",t:"\"You look very well for your age.\"",p:2,min:2,r:"\"Do I? Thanks, doc.\""},
- {k:"dis",t:"\"Come back if it gets worse.\"",p:3,min:5,r:"\"Right. How much worse?\""},
- {k:"lab",t:"Write \"anxious\" in the notes",p:5,min:1,lab:1,r:"He doesn't see it. Every future doctor will."}
+// The deck: each card is a bias with a harm. p = confidence drained, ang = upset added, min = minutes saved
+var D=[
+ {b:"psych",t:"\"It's probably just stress.\"",h:"delay",p:3,ang:1,min:4,r:"\"Well… it has been a big month.\""},
+ {b:"psych",t:"\"Have you tried yoga?\"",h:"delay",p:2,ang:1,min:3,r:"\"Yoga? Is that it?\""},
+ {b:"psych",t:"Write \"anxious\" in the notes",h:"label",p:5,ang:0,min:1,lab:1,r:"They don't see it. Every future doctor will."},
+ {b:"psych",t:"\"Try to relax and see how you go.\"",h:"delay",p:2,ang:1,min:3,r:"\"I am trying.\""},
+ {b:"anchor",t:"\"Your bloods last year were normal.\"",h:"delay",p:3,ang:1,min:2,r:"\"Oh. OK, I guess.\""},
+ {b:"anchor",t:"\"Same as last time, then.\"",h:"delay",p:3,ang:2,min:4,r:"\"It's not the same. That's why I'm here.\""},
+ {b:"anchor",t:"\"Let's not go down a rabbit hole.\"",h:"delay",p:4,ang:1,min:5,r:"\"Sorry to waste your time.\""},
+ {b:"age",t:"\"What do you expect at this age?\"",h:"delay",p:4,ang:2,min:4,r:"\"Something better than that.\""},
+ {b:"age",t:"\"It's probably just early dementia.\"",h:"label",p:4,ang:2,min:3,r:"\"She was doing the crossword on Tuesday.\""},
+ {b:"weight",t:"\"Losing weight would fix most of this.\"",h:"delay",p:4,ang:2,min:4,r:"\"That's not why I came in.\""},
+ {b:"weight",t:"Skip the exam: \"Hard to hear much anyway.\"",h:"danger",p:3,ang:2,min:5,r:"They pull their shirt back down, embarrassed."},
+ {b:"stigma",t:"\"We don't give strong painkillers here.\"",h:"pain",p:4,ang:3,min:3,r:"\"I'm not after drugs. I'm in pain.\""},
+ {b:"stigma",t:"\"Come back when you're sober.\"",h:"danger",p:5,ang:3,min:4,r:"\"I haven't had a drink.\""},
+ {b:"shadow",t:"\"That'll be your mental health.\"",h:"delay",p:4,ang:2,min:4,r:"\"This feels physical.\""},
+ {b:"shadow",t:"\"It's just part of the condition.\"",h:"delay",p:3,ang:2,min:3,r:"\"It's new, though.\""},
+ {b:"race",t:"\"You seem to tolerate pain well.\"",h:"pain",p:3,ang:3,min:2,r:"\"I really don't.\""},
+ {b:"race",t:"\"Some cultures express pain more dramatically.\"",h:"pain",p:4,ang:3,min:2,r:"They go quiet."},
+ {b:"gender",t:"\"Probably hormones.\"",h:"delay",p:3,ang:2,min:3,r:"\"Everything's hormones, apparently.\""},
+ {b:"gender",t:"\"Men don't usually worry about these things.\"",h:"delay",p:3,ang:1,min:3,r:"\"Maybe that's the problem.\""},
+ {b:"rush",t:"\"Come back if it gets worse.\"",h:"danger",p:3,ang:1,min:5,r:"\"How much worse?\""},
+ {b:"rush",t:"\"We're out of time, book another appointment.\"",h:"trust",p:3,ang:2,min:6,r:"\"The next one's in three weeks.\""},
+ {b:"expert",t:"\"Dr Google isn't a medical degree.\"",h:"trust",p:4,ang:2,min:3,r:"\"I just wanted to ask about it.\""},
+ {b:"expert",t:"\"I think I know what's going on here.\"",h:"trust",p:3,ang:2,min:3,r:"\"Can I finish what I was saying?\""}
 ];
-var app=document.getElementById("app"),S={i:0,gas:0,min:0,saved:0,missed:0,labelled:0};
+var TLIM=25,MOODS=["Hopeful","Worried","Frustrated","Angry","Furious"];
+var app=document.getElementById("app"),S={i:-1};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
-function dots(n){var h="";for(var i=0;i<n;i++)h+="<i></i>";return '<span class="m" aria-label="Gaslight power '+n+'">'+h+"</span>"}
-function round(){
- var p=P[S.i];S.c=p.conf+(S.labelled?0:0);S.left=3;S.reply="";
- S.hand=shuffle(POOL).slice(0,4);if(!S.hand.some(function(c){return c.lab}))S.hand[3]=POOL[7];
- S.hand=shuffle(S.hand);S.hand.splice(Math.floor(Math.random()*5),0,{k:"work",t:p.work,p:0,min:8,work:1});
- S.played={};S.t=TLIM;clearInterval(S.tm);S.tm=setInterval(function(){S.t--;var e=document.getElementById("tmr");if(e){e.textContent="⏰ "+Math.max(0,S.t)+"s";e.classList.toggle("hot",S.t<=8);}if(S.t<=0){clearInterval(S.tm);S.missed++;reveal(false,"The waiting room overflowed, so you rushed him out.");}},1000);draw();
+function dots(n){var h="";for(var i=0;i<n;i++)h+="<i></i>";return '<span class="m" aria-label="Dismissal power '+n+'">'+h+"</span>"}
+// Face: mood 0 calm .. 4 furious; state "ok" relieved, "down" collapsed
+function face(p,mood,state){
+ var sk=p.tone,hr=p.hair,cheek=mood>=3?"#E0533D":"#F29A9A",red=mood>=3?.55:mood>=2?.3:0;
+ var brow=state?"":mood>=3?'<path d="M30 38l12 5M70 38l-12 5" stroke="#2B2340" stroke-width="3.2" stroke-linecap="round"/>':mood>=1?'<path d="M30 40l12-3M70 40l-12-3" stroke="#2B2340" stroke-width="3" stroke-linecap="round"/>':'<path d="M30 38q6-3 12 0M58 38q6-3 12 0" stroke="#2B2340" stroke-width="3" fill="none" stroke-linecap="round"/>';
+ var eyes=state==="down"?'<path d="M32 46l8 8M40 46l-8 8M60 46l8 8M68 46l-8 8" stroke="#2B2340" stroke-width="3" stroke-linecap="round"/>':'<circle cx="37" cy="50" r="4.2" fill="#2B2340"/><circle cx="63" cy="50" r="4.2" fill="#2B2340"/><circle cx="35.6" cy="48.6" r="1.4" fill="#fff"/><circle cx="61.6" cy="48.6" r="1.4" fill="#fff"/>';
+ var mouth=state==="ok"?'<path d="M38 66q12 10 24 0" stroke="#2B2340" stroke-width="3" fill="none" stroke-linecap="round"/>':state==="down"?'<ellipse cx="50" cy="69" rx="6" ry="3" fill="#2B2340"/>':
+  ['<path d="M40 67q10 6 20 0" stroke="#2B2340" stroke-width="3" fill="none" stroke-linecap="round"/>','<path d="M40 68h20" stroke="#2B2340" stroke-width="3" stroke-linecap="round"/>','<path d="M40 70q10-6 20 0" stroke="#2B2340" stroke-width="3" fill="none" stroke-linecap="round"/>','<path d="M38 72q12-10 24 0" stroke="#2B2340" stroke-width="3.2" fill="none" stroke-linecap="round"/>','<path d="M38 66h24v6H38z" fill="#fff" stroke="#2B2340" stroke-width="2.6"/><path d="M44 66v6M50 66v6M56 66v6" stroke="#2B2340" stroke-width="1.4"/>'][mood];
+ var hair=p.g==="f"?'<path d="M18 52q-2-34 32-36q34 2 32 36q-4-18-14-24q-18 6-36 2q-10 6-14 22z" fill="'+hr+'"/><path d="M18 52q-4 22 4 34M82 52q4 22-4 34" stroke="'+hr+'" stroke-width="7" fill="none" stroke-linecap="round"/>':'<path d="M20 44q2-28 30-28q28 0 30 28q-6-12-14-16q-16 6-32 2q-10 4-14 14z" fill="'+hr+'"/>';
+ var steam=mood>=4&&!state?'<path d="M10 20q4-6 0-12M90 20q-4-6 0-12" stroke="#E0533D" stroke-width="3" fill="none" stroke-linecap="round"/>':"";
+ var sweat=mood>=2&&mood<4&&!state?'<path d="M80 30q4 6 0 9q-4-3 0-9z" fill="#7EC8E3"/>':"";
+ var tilt=state==="down"?' transform="rotate(80 50 54)"':"";
+ return '<svg class="face" viewBox="0 0 100 100" role="img" aria-label="'+(state==="down"?"Collapsed":state==="ok"?"Relieved":MOODS[mood])+'"><g'+tilt+'><circle cx="50" cy="54" r="32" fill="'+sk+'"/><circle cx="50" cy="54" r="32" fill="#E0533D" opacity="'+(state?0:red*.35)+'"/>'+hair+brow+eyes+'<ellipse cx="30" cy="62" rx="5" ry="3" fill="'+cheek+'" opacity=".55"/><ellipse cx="70" cy="62" rx="5" ry="3" fill="'+cheek+'" opacity=".55"/>'+mouth+sweat+'</g>'+steam+(state==="down"?'<text x="50" y="96" text-anchor="middle" font-size="11" fill="#B3261E" font-weight="700">🚑</text>':"")+"</svg>";
 }
-function bar(){return '<div class="bar"><span class="pill">Patient '+(S.i+1)+" of "+P.length+'</span>'+(S.t>0?'<span class="pill tm" id="tmr">⏰ '+S.t+'s</span>':'')+'<span class="pill">🕯️ Gaslight '+S.gas+'</span><span class="pill">⏱️ '+S.min+' min saved</span></div>'}
-function draw(){
- var p=P[S.i],pct=Math.max(0,S.c)/p.conf*100;
- var h=bar()+'<div class="pt"><span class="k">Patient</span><div class="pt-h"><span class="e" aria-hidden="true">'+p.e+'</span><div><div class="t">'+p.n+", "+p.a+'</div><div style="font-size:13px;color:var(--muted)">'+p.job+(S.labelled?" · notes say \"anxious\"":"")+'</div></div></div><p class="say">'+esc(p.say)+'</p>'+
- '<div class="meter"><span>His confidence something is wrong</span><span>'+Math.max(0,S.c)+"/"+p.conf+'</span></div><div class="track"><i style="width:'+pct+'%"></i></div>'+
+function start(){S={i:0,gas:0,min:0,saved:0,missed:0,bias:{},harm:{},labelled:0};round()}
+function round(){
+ var p=P[S.i];S.c=p.conf;S.ang=0;S.left=3;S.reply="";S.used=[];
+ var fit=shuffle(D.filter(function(c){return p.fit.indexOf(c.b)>=0})).slice(0,3),rest=shuffle(D.filter(function(c){return fit.indexOf(c)<0})).slice(0,2);
+ S.hand=shuffle(fit.concat(rest));S.hand.splice(Math.floor(Math.random()*6),0,{work:1,t:p.work,min:8});
+ S.played={};S.t=TLIM;clearInterval(S.tm);
+ S.tm=setInterval(function(){S.t--;var e=document.getElementById("tmr");if(e){e.textContent="⏰ "+Math.max(0,S.t)+"s";e.classList.toggle("hot",S.t<=8);}if(S.t<=0){S.missed++;tally({b:"rush",h:"danger"});reveal(false,"The waiting room overflowed, so you rushed them out.");}},1000);
+ draw();
+}
+function bar(){return '<div class="bar"><span class="gpill">Patient '+(S.i+1)+" of "+P.length+"</span>"+(S.t>0?'<span class="gpill tm" id="tmr">⏰ '+S.t+"s</span>":"")+'<span class="gpill">🕯️ Bias '+S.gas+'</span><span class="gpill">⏱️ '+S.min+" min saved</span></div>"}
+function draw(shake){
+ var p=P[S.i],pct=Math.max(0,S.c)/p.conf*100,md=Math.min(4,S.ang);
+ app.innerHTML=bar()+'<div class="pt"><span class="k">Patient</span><div class="pt-h">'+face(p,md).replace('class="face"','class="face'+(shake?" shake":"")+'"')+'<div><div class="t">'+esc(p.n)+", "+p.a+'</div><div style="font-size:13px;color:var(--muted)">'+esc(p.job)+(S.labelled?" · notes say “anxious”":"")+'</div><div class="mood" style="color:'+["#0F6B4F","#8A6A00","#B85C00","#B3261E","#8A0F0F"][md]+'">'+MOODS[md]+"</div></div></div>"+
+ '<p class="say">'+esc(p.say)+'</p><div class="meter"><span>Confidence something is wrong</span><span>'+Math.max(0,S.c)+"/"+p.conf+'</span></div><div class="track"><i style="width:'+pct+'%"></i></div>'+
  (S.reply?'<div class="reply">'+esc(S.reply)+"</div>":"")+"</div>"+
- '<div class="hand-h"><b>Your hand</b><span>'+S.left+" card"+(S.left===1?"":"s")+" left to play</span></div><div class=\"hand\">"+
- S.hand.map(function(c,ix){var d=S.played[ix];return '<button class="c '+c.k+'" data-i="'+ix+'"'+(d?" disabled":"")+'><span class="k">'+(c.work?"Do the work":c.lab?"Label card":"Dismissal card")+'</span><span class="ct">'+esc(c.t)+'</span><span class="cs">'+(c.work?"Costs "+c.min+" min · finds the answer":dots(c.p)+" Saves "+c.min+" min")+"</span></button>"}).join("")+"</div>";
- app.innerHTML=h;
+ '<div class="hand-h"><b>Your hand</b><span>'+S.left+" card"+(S.left===1?"":"s")+' left</span></div><div class="hand">'+
+ S.hand.map(function(c,ix){
+  if(c.work)return '<button class="c" style="--cc:#0F5C4A" data-i="'+ix+'"'+(S.played[ix]?" disabled":"")+'><span class="k">Do the work</span><span class="ct">'+esc(c.t)+'</span><span class="cs">Costs '+c.min+' min · finds the answer</span></button>';
+  var bb=B[c.b];return '<button class="c" style="--cc:'+bb.c+'" data-i="'+ix+'"'+(S.played[ix]?" disabled":"")+'><span class="k">'+bb.n+'</span><span class="ct">'+esc(c.t)+'</span><span class="hm">Harm: '+H[c.h]+'</span><span class="cs">'+dots(c.p)+" Saves "+c.min+" min</span></button>";
+ }).join("")+"</div>";
  app.querySelectorAll(".c").forEach(function(b){b.onclick=function(){play(+b.getAttribute("data-i"))}});
 }
+function tally(c){S.bias[c.b]=(S.bias[c.b]||0)+1;S.harm[c.h]=(S.harm[c.h]||0)+1}
 function play(ix){
  var c=S.hand[ix];S.played[ix]=1;
  if(c.work){S.min-=c.min;S.saved++;return reveal(true)}
- S.c-=c.p+(S.labelled?1:0);S.gas+=c.p;S.min+=c.min;S.left--;S.reply=c.r;if(c.lab)S.labelled=1;
- if(S.c<=0){S.missed++;return reveal(false,"He leaves, apologising for wasting your time.")}
- if(S.left<=0){S.missed++;return reveal(false,"He's still worried, so he books a second opinion elsewhere.")}
- draw();
+ S.used.push(c);tally(c);
+ S.c-=c.p+(S.labelled?1:0);S.ang+=c.ang;S.gas+=c.p;S.min+=c.min;S.left--;S.reply=c.r;if(c.lab)S.labelled=1;
+ if(S.c<=0){S.missed++;return reveal(false,"They leave, apologising for wasting your time.")}
+ if(S.left<=0){S.missed++;return reveal(false,S.ang>=3?"They storm out and won't come back to this clinic.":"Still worried, they book a second opinion elsewhere.")}
+ draw(true);
 }
 function reveal(ok,why){
  clearInterval(S.tm);S.t=0;
  var p=P[S.i];
- app.innerHTML=bar()+'<div class="rv'+(ok?"":" miss")+'"><span class="k">'+(ok?"You did the work":"The reveal")+'</span><h2>'+esc(p.dx)+'</h2>'+
- (ok?"<p>Found it. "+esc(p.test)+"</p>":"<p>"+esc(why)+" "+esc(p.harm)+"</p><p><b>What would have caught it:</b> "+esc(p.test)+"</p>")+
- '<div class="flip"><span class="k">Now flip it</span><p style="margin:4px 0 6px">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></div></div>"+
- '<button class="go" id="nx">'+(S.i<P.length-1?"Next patient":"See your score")+"</button>";
+ var used=S.used.length?'<p class="used">You used: '+S.used.map(function(c){return "<b>"+B[c.b].n+"</b> ("+H[c.h].toLowerCase()+")"}).join(", ")+"</p>":"";
+ app.innerHTML=bar()+'<div class="rv'+(ok?"":" miss")+'"><div class="rv-h">'+face(p,0,ok?"ok":"down")+'<div><span class="k">'+(ok?"You did the work":"The reveal")+'</span><h2>'+esc(p.dx)+"</h2></div></div>"+
+ (ok?"<p>Found it. "+esc(p.test)+"</p>":"<p>"+esc(why)+" "+esc(p.harm)+"</p>"+used+"<p><b>What would have caught it:</b> "+esc(p.test)+"</p>")+
+ '<div class="flip"><span class="k">The evidence</span><p style="margin:4px 0 6px">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></div></div>"+
+ '<button class="go" id="nx">'+(S.i<P.length-1?"Next patient":"See your report")+"</button>";
  document.getElementById("nx").onclick=function(){S.i++;S.i<P.length?round():end()};
- window.scrollTo({top:0,behavior:"smooth"});
+ window.scrollTo({top:app.getBoundingClientRect().top+window.scrollY-70,behavior:"smooth"});
 }
+function list(o,names){var k=Object.keys(o).sort(function(a,b){return o[b]-o[a]});return k.length?'<ul class="tally">'+k.map(function(x){return "<li><b>"+names(x)+"</b><span>"+o[x]+"×</span></li>"}).join("")+"</ul>":"<p>None. Impressive.</p>"}
 function end(){
- var rank=S.missed>=6?"Senior Consultant in Dismissal":S.missed>=3?"Registrar of Reassurance":S.missed===1?"Mostly a doctor":"Actual doctor";
- app.innerHTML='<div class="end"><span class="k">Your clinic</span><h2>'+rank+'</h2><ul><li><b>Gaslight score:</b> '+S.gas+'</li><li><b>Time saved:</b> '+S.min+' min</li><li><b>Diagnoses found:</b> '+S.saved+" of "+P.length+'</li><li><b>Missed:</b> '+S.missed+'</li></ul>'+
- '<p>Every line in this deck is something patients report hearing. In real clinics, it\'s said more often to women, people of colour, larger bodies and neurodivergent people.</p>'+
+ var rank=S.missed>=6?"Senior Consultant in Dismissal":S.missed>=3?"Registrar of Reassurance":S.missed>=1?"Mostly a doctor":"Actual doctor";
+ app.innerHTML='<div class="end"><span class="k">Your clinic report</span><h2>'+rank+'</h2><ul><li><b>Diagnoses found:</b> '+S.saved+" of "+P.length+"</li><li><b>Missed:</b> "+S.missed+"</li><li><b>Bias points:</b> "+S.gas+"</li><li><b>Time saved:</b> "+S.min+" min</li></ul>"+
+ "<h3>Biases you used</h3>"+list(S.bias,function(x){return B[x].n})+"<h3>Harms caused</h3>"+list(S.harm,function(x){return H[x]})+
+ "<p>Every line in this deck is something real patients report hearing. Bias hits anyone: older people, larger bodies, people with mental illness or addiction, people of colour, women, and men who are told they're ‘just stressed’.</p>"+
  '<p><a href="/gp-school/">Train your blind spots in GP School</a> · <a href="/atypical-presentations/">Atypical presentations</a></p>'+
  '<button class="go" id="again">Play again</button></div>';
- document.getElementById("again").onclick=function(){S={i:0,gas:0,min:0,saved:0,missed:0,labelled:0};round()};
+ document.getElementById("again").onclick=function(){start()};
 }
-round();
+window.LB_start=function(){if(S.i<0)start()};
 })();
+
 </script>
 </body>
 </html>
