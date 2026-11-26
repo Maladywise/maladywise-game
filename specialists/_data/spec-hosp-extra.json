@@ -1048,14 +1048,15 @@
     "suburb": "Hamilton South",
     "phone": "(02) 4989 6896",
     "fax": "(02) 8072 1832",
-    "email": "",
+    "email": "info@merewethersc.com.au",
     "ereferral": "",
     "website": "https://drkenjaaback.com.au/",
     "interests": [
      "Gynaecological cancer",
      "Advanced laparoscopy",
      "Colposcopy",
-     "General gynaecology"
+     "General gynaecology",
+     "Robotic surgery"
     ],
     "practical": {
      "telehealth": null,
@@ -1076,6 +1077,7 @@
      "Women's health focus"
     ],
     "sources": [
+     "https://www.drkenjaaback.com.au/",
      "https://www.merewethersc.com.au/",
      "https://www.canrefer.org.au/specialists/ken-jaaback",
      "https://www.canrefer.org.au/services/lingard-private-hospital"
@@ -1128,9 +1130,9 @@
     "suburb": "New Lambton Heights",
     "phone": "(02) 4062 7544",
     "fax": "(02) 4062 8834",
-    "email": "",
+    "email": "admin@sorellawh.com.au",
     "ereferral": "",
-    "website": "https://sorellawh.com.au",
+    "website": "https://www.sorellawh.com.au/team/dr-yvette-ius",
     "interests": [
      "Gynaecological cancer",
      "Colposcopy",
@@ -1155,6 +1157,7 @@
      "Women's health focus"
     ],
     "sources": [
+     "https://www.sorellawh.com.au/team/dr-yvette-ius",
      "https://sorellawh.com.au",
      "https://www.canrefer.org.au/Specialists/Yvette-Ius",
      "https://specialists.healthscope.com.au/newcastle"
@@ -1399,7 +1402,7 @@
     "suburb": "Lambton",
     "phone": "02 4952 1037",
     "fax": "02 4952 1017",
-    "email": "",
+    "email": "admin@newcolpcentre.com",
     "ereferral": "",
     "website": "https://www.lambtonwomenshealth.com.au/",
     "interests": [
