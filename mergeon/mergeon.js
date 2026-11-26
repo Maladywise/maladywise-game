@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "21";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "22";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -316,8 +316,8 @@
       '<li><b>Chain reactions:</b> quick merges in a row multiply your points.</li>' +
       '<li><b>' + (NORMIE ? "🥅 Net" : "🔪 Scalpel") + ' ×3:</b> tap it, then tap any ' + thing + ' to remove it. <b>Shake ×1</b> jiggles the board to free stuck ones.</li>' +
       '<li>' + pic(WILD, 22) + ' <b>' + (NORMIE ? "Pearl" : "Stem cell") + ' (wild):</b> a rare drop that merges with any ' + thing + ' and turns it into the next one up.</li>' +
-      '<li><b>Daily run:</b> everyone gets the same drops each day. Your first game counts; after that it’s practice. Hit today’s 🎯 target for a ⭐.</li>' +
-      (featUI() ? '<li><b>🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + ':</b> ten levels in More, each with a goal and a twist. Wards 5 and 10 have a boss: merge right next to it to wear it down. Clearing wards 3, 6 and 9 unlocks costume sets.</li>' +
+      '<li><b>Daily run:</b> everyone gets the same drops each day. Your first game counts; after that it’s practice. Hit today’s 🎯 target for a ⭐. Make the ' + O[O.length - 1].n + ' to finish with a +1,000 bonus.</li>' +
+      (featUI() ? '<li><b>🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + ':</b> ten levels in More, each with a goal and a twist. Each ward has a drop limit. Wards 5 and 10 have a boss: merges next to it hurt it and shove it (pin it on a wall for double damage). ' + (NORMIE ? 'Sponges' : 'Antibiotics') + ' that land near it make it evolve, so drop them far away. Clearing wards 3, 6 and 9 unlocks costume sets.</li>' +
         '<li><b>🆚 Challenge a friend:</b> after your daily run, send a link. They get the same drops and see your score to beat.</li>' : "") +
       (String(day) >= RXDAY ? '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil slicks land and spread, and slicked creatures can’t merge." : "germs land and spread, and infected organs can’t merge.") + "<br>" + OUTK.RX.tip.join("<br>") + "<br>" + OUTK.RX.drain + "</li>" :
       '<li><b>' + (NORMIE ? "Slick Sunday" : "Outbreak Sunday") + ':</b> ' + (NORMIE ? "oil spreads between sea creatures. Merge next to it, net it, or catch a 🧽 sponge." : "germs spread between organs. Merge next to them, use the scalpel, or catch a 💊 antibiotic.") + '</li>') +
@@ -450,6 +450,8 @@
   var ODDS = [0.186, 0.186, 0.186, 0.186, 0.186, 0.03, 0.02, 0.01, 0.01], ODDS_OUT = [0.18, 0.18, 0.18, 0.18, 0.18, 0.03, 0.02, 0.01, 0.01, 0.03];
   // from 9 Nov 2026: only the five smallest drop (19.8% each); bladder, stomach and heart are made by merging only. Wild 1%; Outbreak Sunday cure 3%.
   var FIVEDAY = "2026-11-09", FIVE = true;
+  // 28 Nov 2026 (and practice/wards): pieces from Kidney up 12% bigger, a tighter overflow rule, and making the top piece finishes the run (+1,000)
+  var BIGDAY = "2026-11-28", BIG = true, BIGK = 1.12, FIN_BONUS = 1000, finished = false;
   var ODDS5 = [0.198, 0.198, 0.198, 0.198, 0.198, 0, 0, 0, 0.01], ODDS5_OUT = [0.192, 0.192, 0.192, 0.192, 0.192, 0, 0, 0, 0.01, 0.03];
   // from 15 Nov 2026 ("Treat it properly"): Outbreak Sundays drop no cures (0%); its 3% goes back to the five smallest evenly,
   // which is exactly the plain odds (ODDS5, or ODDS before 9 Nov). Doses are earned by merging instead.
@@ -465,7 +467,8 @@
   function newRun(isPractice) {
     practice = !!isPractice; over = false; score = 0; top = -1; merges = []; canDrop = true;
     rnd = mulberry32(isPractice ? (Math.random() * 4294967296) >>> 0 : dayNum(day) * 2654435761 >>> 0);
-    NOREP = practice || String(day) >= NEWDAY; NEW = NOREP; OUT = NEW && weekday(day) === 0; FIVE = practice || String(day) >= FIVEDAY;
+    NOREP = practice || String(day) >= NEWDAY; NEW = NOREP; OUT = NEW && weekday(day) === 0; FIVE = practice || String(day) >= FIVEDAY; BIG = practice || String(day) >= BIGDAY; finished = false;
+    O.forEach(function (q, i) { if (q.r0 === undefined) q.r0 = q.r; q.r = BIG && i >= 4 ? Math.round(q.r0 * BIGK) : q.r0; });
     RX = OUT && String(day) >= RXDAY; doses = 0; rxProg = 0; resCleared = 0; // practice runs on those Sundays too
     // separate PRNGs for the shake and infections, so the drop order never changes
     var seed2 = isPractice ? (Math.random() * 4294967296) >>> 0 : (dayNum(day) * 2246822519) >>> 0;
@@ -474,7 +477,7 @@
     chain = 0; lastMT = -1e9; bestChain = 1; tgt = target(day); tgtHit = false; wildUsed = false;
     // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
     SP = special(day); MUT = mutation(day); SKIN = skinOf(day) || chosenSet(); GOALS = goalsFor(day); gDone = [false, false, false];
-    BOSS = null; wardWon = false;
+    BOSS = null; wardWon = false; outOfDrops = false;
     if (WARD !== null) { var WW = WARDS[WARD]; SP = WW.sp || ""; MUT = WW.mut ? mutById(WW.mut) : null; GOALS = null; OUT = false; RX = false; tgt = WW.lv || -1; }
     madeN = []; nMerge = 0; mixN = 0; tootN = 0; slowN = 0;
     sparks = []; hidRun = { sp: {}, tc: 0 }; noPairs = {}; LEARN = featUI() && load("mrg-learn", 0) === 1; $("learn").hidden = true;
@@ -491,11 +494,11 @@
     if (mut("narrow")) C.add(engine.world, [B.rectangle(NARROW - WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W - NARROW + WALL / 2, H / 2, WALL, H * 2, opt)]);
     Ev.on(engine, "collisionStart", onHit); Ev.on(engine, "collisionActive", onHit);
     cur = roll(); nxt = roll(cur); PREV = mut("preview"); nx2 = PREV ? roll(nxt) : -1; // same chain of roll() calls, just read one ahead
-    if (WARD !== null && WARDS[WARD].boss) bossMake(WARDS[WARD].boss);
+    if (WARD !== null && WARDS[WARD].boss) bossMake(WARDS[WARD].boss, WARDS[WARD].st || 0);
     $("over").hidden = true; $("result").hidden = !(!practice && st.done); hud();
     $("mode").textContent = practice ? "Practice mode: today’s run is done, so these games don’t count. Play as often as you like." : (isLive() ? "Today’s run. Same drop order for everyone. One shot counts." : "Archive run for " + nice(day) + ". Same drops as that day.");
     $("badge").textContent = WARD !== null ? "Ward " + (WARD + 1) : practice ? "Practice" : ""; lastT = 0; acc = 0;
-    if (WARD !== null) $("mode").textContent = "Ward rounds · Ward " + (WARD + 1) + ": " + wn(WARDS[WARD]) + ". Goal: " + wardGoal(WARDS[WARD]) + ". Practice run: your daily isn’t affected.";
+    if (WARD !== null) wardNote();
     todayUI(); tbarUI(); size();
     if (!raf) raf = requestAnimationFrame(loop);
   }
@@ -507,6 +510,7 @@
   function onHit(ev) {
     ev.pairs.forEach(function (p) {
       var a = p.bodyA, b = p.bodyB;
+      if (BOSS && !BOSS.dead && (a.label === "boss" || b.label === "boss")) { var q = a.label === "boss" ? b : a; if (q.lv === CURE && !q.gone) { q.gone = true; merges.push([q, q, "cure"]); } return; }
       if (a.lv === undefined || b.lv === undefined || a.gone || b.gone) return;
       if (a.lv === CURE || b.lv === CURE) { var c = a.lv === CURE ? a : b; c.gone = true; merges.push([c, c, "cure"]); return; }
       if (a.inf || b.inf) return; // infected pieces can't merge
@@ -526,7 +530,7 @@
     var now = performance.now();
     merges.forEach(function (m) {
       var a = m[0], b = m[1], kind = m[2];
-      if (kind === "cure") { useCure(a); return; }
+      if (kind === "cure") { if (BOSS && !BOSS.dead) bossCure(a); else useCure(a); return; }
       var lv = a.lv, wild = kind === "wild";
       // a merge next to an infected piece cures it (from 15 Nov: not a resistant one)
       if (infN) pieces().forEach(function (q) { if (q.inf && !(RX && q.res) && (touching(q, a, 6) || touching(q, b, 6))) cureOne(q, OUTK.cure); });
@@ -544,6 +548,7 @@
         if (SP === "blood") bloodMerge(o, a, b, wild, m[3]);
         if (SP === "sick" && n === O.length - 1) { o.frz = steps + 50; toast(K.SICKT[n]); }
         if (n > top) { top = n; if (SASS[n]) toast(pick(SASS[n])); }
+        if (BIG && WARD === null && n === O.length - 1 && !finished) { finished = true; score += FIN_BONUS; TL.merge += FIN_BONUS; floatTxt(W / 2, H / 2 - 40, "+" + fmt(FIN_BONUS)); toastBig(NORMIE ? "WHALE OF A RUN!" : "DISCHARGED!"); confetti(); sfx("target"); setTimeout(function () { if (!over) end(); }, 1600); }
         collect(n);
         if (tgt >= 0 && n === tgt && !tgtHit) hitTarget();
         if (WARD !== null && !WARDS[WARD].boss && n >= WARDS[WARD].lv) wardWin();
@@ -588,7 +593,7 @@
     o.lv = lv; o.off = off; o.overT = 0; C.add(engine.world, o); return o;
   }
   function drop() {
-    if (!canDrop || over || arm) return;
+    if (!canDrop || over || arm || outOfDrops) return;
     var r = info(cur).r, x = aimClamp(r);
     var o = add(cur, x, DROP_Y); o.fresh = performance.now();
     if (SP === "blood") { o.bg = curG; curG = nxtG; nxtG = drawG(); }
@@ -598,6 +603,12 @@
     canDrop = false; hud(); sfx("drop");
     setTimeout(function () { canDrop = true; }, 260);
     drops++; if (drops === 1) onFirstDrop(); hidTick(); if (DEBUG) dropLog.push(o.lv);
+    if (WARD !== null) {
+      var wl = dropsLeft(); wardNote();
+      if (wl === 10 || wl === 5) toast(wl + " drops left!");
+      if (wl === 0) { outOfDrops = true; setTimeout(function () { if (!wardWon && !over) { toast("Out of drops."); setTimeout(function () { if (!wardWon && !over) wardLose(); }, 900); } }, 2600); }
+      var ab = WARDS[WARD].abx; if (ab && BOSS && !BOSS.dead && drops % ab === ab - 1) { nxt = CURE; hud(); toast(NORMIE ? "Sponge next. Keep it away from the kraken!" : "Antibiotic next. Keep it away from the superbug!"); }
+    }
     if (OUT && (drops === 15 || (drops > 15 && (drops - 15) % 20 === 0))) infect(o);
   }
   // ---------- Outbreak Sunday ----------
@@ -693,7 +704,7 @@
     for (var i = 0; i < bodies.length; i++) {
       var o = bodies[i]; if (o.lv === undefined || o.gone) continue;
       // from 9 Nov (and practice): more forgiving. A piece must poke well over the line (SLACK px) for longer (GRACE ms) before the game ends.
-      var SLACK = FIVE ? 14 : 0, GRACE = FIVE ? 3200 : 1800, FRESH = FIVE ? 2000 : 1500;
+      var SLACK = BIG ? 6 : FIVE ? 14 : 0, GRACE = BIG ? 2200 : FIVE ? 3200 : 1800, FRESH = BIG ? 1800 : FIVE ? 2000 : 1500;
       if (SP === "micro" || mut("bouncy")) { GRACE += 1000; FRESH += 600; } // floatier days settle more slowly
       if (o.fresh && now - o.fresh < FRESH) continue;
       if (o.position.y - rad(o) < LINE - SLACK) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / GRACE); if (now - o.overT > GRACE) { end(); return 1; } }
@@ -962,16 +973,17 @@
   // Ward runs are practice runs (the daily is never touched). Progress, unlocked sets and the chosen set live in this browser only.
   // lv: piece to make; mut: a weekly mutation id; sp: a weekly special; boss: boss HP; set: organ set unlocked by clearing it.
   var WARDS = [
-    { n: ["Admissions", "Rock pools"], lv: 3, d: ["A gentle first shift.", "A gentle first dip."] },
-    { n: ["Paediatrics", "Splash park"], lv: 4, mut: "bouncy" },
-    { n: ["Night shift", "Midnight reef"], lv: 4, mut: "lights", set: "hall" },
-    { n: ["Respiratory", "Windy bay"], lv: 5, mut: "gust" },
-    { n: ["Isolation ward", "The wreck"], boss: 10, d: ["A superbug has moved in. Merge right next to it to wear it down.", "A grumpy kraken has moved in. Merge right next to it to wear it down."] },
-    { n: ["Cardiology", "The current"], lv: 6, mut: "flow", set: "easter" },
-    { n: ["Space medicine", "Moon pool"], lv: 6, sp: "micro" },
-    { n: ["Blood bank", "Potluck"], lv: 7, sp: "blood" },
-    { n: ["ICU", "Storm deck"], lv: 7, mut: "quake", set: "xmas" },
-    { n: ["The final round", "The deep"], boss: 16, mut: "heavy", d: ["The superbug is back, bigger and meaner, on a heavy day.", "The kraken is back, bigger and meaner, on a heavy day."] }
+    // 27 Nov 2026: targets up a level or two, and every ward has a drop limit (dl)
+    { n: ["Admissions", "Rock pools"], lv: 5, dl: 30, d: ["A gentle first shift.", "A gentle first dip."] },
+    { n: ["Paediatrics", "Splash park"], lv: 5, dl: 28, mut: "bouncy" },
+    { n: ["Night shift", "Midnight reef"], lv: 6, dl: 40, mut: "lights", set: "hall" },
+    { n: ["Respiratory", "Windy bay"], lv: 6, dl: 38, mut: "gust" },
+    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics make it evolve, so drop them far away.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges feed it, so drop them far away."] },
+    { n: ["Cardiology", "The current"], lv: 7, dl: 50, mut: "flow", set: "easter" },
+    { n: ["Space medicine", "Moon pool"], lv: 7, dl: 50, sp: "micro" },
+    { n: ["Blood bank", "Potluck"], lv: 7, dl: 48, sp: "blood" },
+    { n: ["ICU", "Storm deck"], lv: 8, dl: 70, mut: "quake", set: "xmas" },
+    { n: ["The final round", "The deep"], boss: 16, st: 1, dl: 80, abx: 6, mut: "heavy", d: ["It's back as MRSA, on a heavy day. Every antibiotic near it turns it into something worse: VRE, then CRE.", "The kraken is back, crosser, on a heavy day. Every sponge near it makes it bigger and angrier."] }
   ];
   var WARDKEY = "mrg-wards-" + (NORMIE ? "sea" : "med"), SETKEY = "mrg-set-" + (NORMIE ? "sea" : "med"), WARD = null, BOSS = null, wardWon = false;
   function wardsCleared() { return load(WARDKEY, { n: 0 }).n || 0; }
@@ -980,7 +992,10 @@
   function setsOwned() { var c = wardsCleared(), o = {}; WARDS.forEach(function (w, i) { if (w.set && i < c) o[w.set] = 1; }); ["xmas", "hall", "easter"].forEach(function (k) { if (coll["s-" + k]) o[k] = 1; }); return o; }
   function chosenSet() { var s0 = load(SETKEY, ""); return s0 && setsOwned()[s0] ? s0 : ""; }
   function wardTwist(w) { var m = w.mut ? mutById(w.mut) : null; return m ? m.e + " " + m.n[NORMIE ? 1 : 0] + ": " + m.d[NORMIE ? 1 : 0] : w.sp && SPEC[w.sp] ? SPEC[w.sp].e + " " + SPEC[w.sp].short : ""; }
-  function wardGoal(w) { return w.boss ? (NORMIE ? "Beat the kraken" : "Beat the superbug") + (w.lv ? "" : "") : "Make " + aName(w.lv); }
+  function wardGoal(w) { return (w.boss ? (NORMIE ? "Beat the kraken" : "Beat the superbug") : "Make " + aName(w.lv)) + (w.dl ? " in " + w.dl + " drops" : ""); }
+  function dropsLeft() { return WARD !== null && WARDS[WARD].dl ? Math.max(0, WARDS[WARD].dl - drops) : -1; }
+  function wardNote() { if (WARD === null) return; var w = WARDS[WARD], l = dropsLeft(); $("mode").textContent = "Ward " + (WARD + 1) + ": " + wn(w) + " · " + wardGoal(w) + (l >= 0 ? " · " + l + " drops left" : ""); }
+  var outOfDrops = false;
   // head to head: ?vs=<score> (with ?date=) is a friend's challenge on that day's run
   var VS = (function () { var m = /[?&]vs=(\d{1,7})\b/.exec(location.search); return m ? +m[1] : null; })();
   var brnd, qrnd, drnd, hrnd, curG = 0, nxtG = 0, driftA = 0, driftP = 1200, driftPh = 0, lastQT = 0, lastNoT = 0, noPairs = {}, sparks = [], hidRun = { sp: {}, tc: 0 };
@@ -1332,46 +1347,87 @@
   function gridOf(tp) { return O.map(function (o, i) { return i <= tp ? o.e : "⬜"; }).join(""); }
   // ---------- the boss (wards 5 and 10): sits on the floor, can't be merged, worn down by merges right next to it ----------
   var BOSS_R = 58;
-  function bossMake(hp) {
-    var o = B.circle(W / 2, H - BOSS_R - 2, BOSS_R, { isStatic: true, friction: 0.3, restitution: 0.1, label: "boss" });
-    C.add(engine.world, o); BOSS = { body: o, hp: hp, max: hp, hitT: 0, spitN: 0, x0: W / 2, ph: 0, dead: false };
+  // 27 Nov 2026: the superbug evolves. Every antibiotic that lands near it (or on it) makes it a scarier bug: bigger, tougher, angrier.
+  // Merges next to it hurt it and shove it away; pinned against a wall it takes double damage.
+  var BSTAGE = NORMIE ? [
+    { n: "Kraken", c: "#B58AD8" }, { n: "Cross kraken", c: "#9A6BC8" }, { n: "Raging kraken", c: "#C2477E" }, { n: "Kraken king", c: "#8E2A5E" }, { n: "Abyss kraken", c: "#4A1F4F" }
+  ] : [
+    { n: "MSSA", c: "#8BC34A", f: "MSSA: Staph aureus that flucloxacillin still kills." },
+    { n: "MRSA", c: "#F2B544", f: "MRSA: methicillin-resistant Staph aureus. Flucloxacillin and most other beta-lactams no longer work." },
+    { n: "VRE", c: "#F07C3A", f: "VRE: vancomycin-resistant enterococcus. A key last-line drug is gone." },
+    { n: "CRE", c: "#D2384A", f: "CRE: carbapenem-resistant Enterobacterales, resistant to our broadest antibiotics." },
+    { n: "Pan-resistant", c: "#7A1F3D", f: "Pan-resistant: almost nothing works. Prevention and stewardship are the cure." }
+  ];
+  var B_SWAY = 40;
+  function bossMake(hp, stage) {
+    var r = BOSS_R + 10 * stage;
+    var o = B.circle(W / 2, H - r - 2, r, { isStatic: true, friction: 0.3, restitution: 0.1, label: "boss" });
+    C.add(engine.world, o); BOSS = { body: o, hp: hp, max: hp, hitT: 0, spitN: 0, x0: W / 2, ph: 0, dead: false, st: stage, r: r, evoT: 0 };
+    if (stage && !NORMIE) setTimeout(function () { toast(BSTAGE[stage].f); }, 2500);
+  }
+  function bossLim(b) { return [b.r + B_SWAY + 2, W - b.r - B_SWAY - 2]; }
+  function bossEvolve() {
+    var b = BOSS; if (!b || b.dead) return;
+    if (b.st >= BSTAGE.length - 1) { b.hp = Math.min(b.max, b.hp + 3); floatTxt(b.body.position.x, b.body.position.y - b.r - 10, "+3 ❤"); toast(NORMIE ? "The kraken gobbles it up. +3 health." : "Pan-resistant. It just heals. +3 health."); return; }
+    var nr = b.r + 10; Bd.scale(b.body, nr / b.r, nr / b.r); b.r = nr; b.st++;
+    b.max += 4; b.hp += 4; b.evoT = performance.now();
+    var lim = bossLim(b); b.x0 = Math.max(lim[0], Math.min(lim[1], b.x0)); Bd.setPosition(b.body, { x: b.x0, y: H - b.r - 2 });
+    shakeBoard(2); sfx("germ"); buzz([40, 30, 40]);
+    toastBig((NORMIE ? "" : "RESISTANCE! ") + BSTAGE[b.st].n.toUpperCase());
+    setTimeout(function () { toast(NORMIE ? "Bigger. Angrier. Keep sponges away from it." : BSTAGE[b.st].f); }, 1300);
+  }
+  function bossCure(c) { // an antibiotic (sponge) settled: near the bug it evolves; far away it's good stewardship
+    var b = BOSS, x = c.position.x, y = c.position.y;
+    C.remove(engine.world, c); poof(x, y, PO.r);
+    var d = Math.hypot(x - b.body.position.x, y - b.body.position.y);
+    if (d <= b.r + PO.r + 40) bossEvolve();
+    else { score += 20; TL.cure += 20; floatTxt(x, y - 10, "+20"); toast(NORMIE ? "Sponge kept clear. Nice." : "Good stewardship: no antibiotic near the bug. +20"); sfx("chime"); hud(); }
   }
   function bossHit(x, y, n) {
     var b = BOSS; if (!b || b.dead) return;
-    var d = Math.hypot(x - b.body.position.x, y - b.body.position.y), reach = BOSS_R + info(Math.min(n, O.length - 1)).r + 26;
+    var d = Math.hypot(x - b.body.position.x, y - b.body.position.y), reach = b.r + info(Math.min(n, O.length - 1)).r + 26;
     if (d > reach) return;
-    var dmg = 1 + (n >= 5 ? 1 : 0) + (n >= 8 ? 1 : 0); b.hp = Math.max(0, b.hp - dmg); b.hitT = performance.now();
-    floatTxt(b.body.position.x, b.body.position.y - BOSS_R - 10, "−" + dmg); shakeBoard(1); sfx("pop", 6); buzz(20);
+    var dir = x < b.body.position.x ? 1 : x > b.body.position.x ? -1 : (Math.random() < 0.5 ? 1 : -1), lim = bossLim(b);
+    var pinned = (dir < 0 && b.x0 <= lim[0] + 1) || (dir > 0 && b.x0 >= lim[1] - 1);
+    var dmg = (1 + (n >= 5 ? 1 : 0) + (n >= 8 ? 1 : 0)) * (pinned ? 2 : 1); b.hp = Math.max(0, b.hp - dmg); b.hitT = performance.now();
+    b.x0 = Math.max(lim[0], Math.min(lim[1], b.x0 + dir * 24)); // shoved away from the merge
+    floatTxt(b.body.position.x, b.body.position.y - b.r - 10, (pinned ? "Pinned! " : "") + "−" + dmg); shakeBoard(1); sfx("pop", 6); buzz(20);
     if (b.hp <= 0) {
-      b.dead = true; C.remove(engine.world, b.body); poof(b.body.position.x, b.body.position.y, BOSS_R); confetti(); sfx("big");
-      var pts = 50 * b.max; score += pts; TL.merge += pts; floatTxt(W / 2, H / 2, "+" + pts); hud();
-      toastBig(NORMIE ? "KRAKEN DOWN!" : "SUPERBUG BEATEN!"); setTimeout(wardWin, 900);
+      b.dead = true; C.remove(engine.world, b.body); poof(b.body.position.x, b.body.position.y, b.r); confetti(); sfx("big");
+      var pts = 50 * b.max + (b.st > (WARDS[WARD].st || 0) ? 0 : 200); score += pts; TL.merge += pts; floatTxt(W / 2, H / 2, "+" + pts); hud();
+      toastBig(NORMIE ? "KRAKEN DOWN!" : BSTAGE[b.st].n.toUpperCase() + " BEATEN!"); setTimeout(wardWin, 900);
     } else if (b.hp <= b.max / 2 && !b.half) { b.half = true; toast(NORMIE ? "The kraken is sulking. Keep going!" : "The superbug is weakening. Keep going!"); }
   }
-  function bossTick() { // once per physics step: a slow sway, and every so often it coughs out a little piece
+  function bossTick() { // once per physics step: a slow sway; it coughs out pieces (bigger and more often as it evolves); stray antibiotics settle
     var b = BOSS; if (!b || b.dead || over) return;
-    b.ph += 1; var nx = b.x0 + Math.sin(b.ph / 240) * 70;
-    Bd.setPosition(b.body, { x: nx, y: b.body.position.y });
-    var every = b.max >= 16 ? 420 : 600;
-    if (b.ph % every === 0) { var o = add(0, nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - BOSS_R - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - BOSS_R - 30, NORMIE ? "blub!" : "cough!"); }
+    b.ph += 1; var nx = b.x0 + Math.sin(b.ph / Math.max(120, 240 - b.st * 30)) * B_SWAY;
+    Bd.setPosition(b.body, { x: nx, y: H - b.r - 2 });
+    var every = Math.max(240, (b.max >= 16 ? 420 : 600) - b.st * 60);
+    if (b.ph % every === 0) { var o = add(Math.min(b.st, 2), nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - b.r - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "cough!"); }
+    if (b.ph % 20 === 0) { var now = performance.now(); pieces().forEach(function (q) { if (q.lv === CURE && !q.gone && q.fresh && now - q.fresh > 2200 && Math.abs(q.velocity.y) < 0.6) { q.gone = true; merges.push([q, q, "cure"]); } }); }
   }
   function bossDraw(now) {
     var b = BOSS; if (!b || b.dead) return;
-    var x = b.body.position.x, y = b.body.position.y, hurt = now - b.hitT < 250, k = 1 + 0.03 * Math.sin(now / 260);
-    ctx.save(); ctx.translate(x + (hurt ? Math.sin(now / 15) * 3 : 0), y); ctx.scale(k, 1 / k);
-    ctx.lineWidth = 3; ctx.strokeStyle = "#2A1E3D"; ctx.fillStyle = hurt ? "#FFB0B0" : NORMIE ? "#B58AD8" : "#8BC34A";
-    ctx.beginPath(); // spiky body (Medical) or a lumpy kraken (Normie)
-    for (var i = 0; i <= 28; i++) { var a = i / 28 * Math.PI * 2, rr = BOSS_R * (NORMIE ? (i % 2 ? 0.94 : 1.02) : (i % 2 ? 0.86 : 1.06)); ctx[i ? "lineTo" : "moveTo"](Math.cos(a) * rr, Math.sin(a) * rr); }
+    var R0 = b.r, x = b.body.position.x, y = b.body.position.y, hurt = now - b.hitT < 250, evo = now - b.evoT < 600, k = 1 + (0.03 + b.st * 0.012) * Math.sin(now / Math.max(120, 260 - b.st * 35));
+    ctx.save(); ctx.translate(x + (hurt || evo ? Math.sin(now / 15) * (evo ? 6 : 3) : 0), y); ctx.scale(k, 1 / k);
+    var sc = R0 / BOSS_R; ctx.scale(sc, sc);
+    ctx.lineWidth = 3; ctx.strokeStyle = "#2A1E3D"; ctx.fillStyle = hurt ? "#FFB0B0" : evo ? "#FFFFFF" : BSTAGE[b.st].c;
+    ctx.beginPath(); // spiky body (Medical, spikier as it evolves) or a lumpy kraken (Normie)
+    var sp = 28 + b.st * 4;
+    for (var i = 0; i <= sp; i++) { var a = i / sp * Math.PI * 2, rr = BOSS_R * (NORMIE ? (i % 2 ? 0.94 : 1.02) : (i % 2 ? 0.86 - b.st * 0.03 : 1.06 + b.st * 0.02)); ctx[i ? "lineTo" : "moveTo"](Math.cos(a) * rr, Math.sin(a) * rr); }
     ctx.closePath(); ctx.fill(); ctx.stroke();
     ctx.fillStyle = "rgba(255,255,255,.25)"; ctx.beginPath(); ctx.arc(-18, -22, 14, 0, Math.PI * 2); ctx.fill();
-    ctx.fillStyle = "#2A1E3D"; [-18, 18].forEach(function (ex) { ctx.beginPath(); ctx.arc(ex, -6, 7, 0, Math.PI * 2); ctx.fill(); });
+    ctx.fillStyle = b.st >= 2 ? "#B3001B" : "#2A1E3D"; [-18, 18].forEach(function (ex) { ctx.beginPath(); ctx.arc(ex, -6, 7 + (b.st >= 3 ? 1.5 : 0), 0, Math.PI * 2); ctx.fill(); });
     ctx.fillStyle = "#fff"; [-20, 16].forEach(function (ex) { ctx.beginPath(); ctx.arc(ex, -8, 2.4, 0, Math.PI * 2); ctx.fill(); });
-    ctx.strokeStyle = "#2A1E3D"; ctx.lineWidth = 3.5; ctx.beginPath(); ctx.moveTo(-28, -20); ctx.lineTo(-10, -14); ctx.moveTo(28, -20); ctx.lineTo(10, -14); ctx.stroke(); // angry brows
-    ctx.beginPath(); ctx.moveTo(-16, 18); ctx.quadraticCurveTo(0, hurt ? 26 : 8, 16, 18); ctx.stroke();
+    var bw = 6 + b.st * 2; // brows get steeper as it gets angrier
+    ctx.strokeStyle = "#2A1E3D"; ctx.lineWidth = 3.5 + b.st * 0.5; ctx.beginPath(); ctx.moveTo(-28, -20 - b.st * 2); ctx.lineTo(-10, -20 + bw); ctx.moveTo(28, -20 - b.st * 2); ctx.lineTo(10, -20 + bw); ctx.stroke();
+    ctx.beginPath(); if (b.st >= 2 && !hurt) { ctx.moveTo(-16, 20); ctx.lineTo(-8, 14); ctx.lineTo(0, 20); ctx.lineTo(8, 14); ctx.lineTo(16, 20); } else { ctx.moveTo(-16, 18); ctx.quadraticCurveTo(0, hurt ? 26 : 8, 16, 18); } ctx.stroke();
     ctx.restore();
-    // HP bar
-    var w = 110, f = b.hp / b.max; ctx.save(); ctx.fillStyle = "rgba(42,30,61,.75)"; ctx.fillRect(x - w / 2 - 2, y - BOSS_R - 26, w + 4, 12);
-    ctx.fillStyle = f > 0.5 ? "#E65C86" : "#F5A623"; ctx.fillRect(x - w / 2, y - BOSS_R - 24, w * f, 8); ctx.restore();
+    // name + HP bar
+    var w = 110, f = b.hp / b.max; ctx.save(); ctx.fillStyle = "rgba(42,30,61,.75)"; ctx.fillRect(x - w / 2 - 2, y - R0 - 26, w + 4, 12);
+    ctx.fillStyle = f > 0.5 ? "#E65C86" : "#F5A623"; ctx.fillRect(x - w / 2, y - R0 - 24, w * f, 8);
+    ctx.font = "700 12px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.lineWidth = 3; ctx.strokeStyle = "rgba(255,255,255,.9)"; ctx.fillStyle = "#2A1E3D";
+    ctx.strokeText(BSTAGE[b.st].n, x, y - R0 - 32); ctx.fillText(BSTAGE[b.st].n, x, y - R0 - 32); ctx.restore();
   }
   // ---------- ward win / lose, and the ward screens ----------
   function wardWin() {
@@ -1389,7 +1445,7 @@
   }
   function wardLose() {
     over = true; arm = false; tbarUI(); sfx("over"); var i = WARD;
-    $("over").innerHTML = '<div class="ovcard"><b>Ward ' + (i + 1) + " not cleared</b><span>" + esc(wardGoal(WARDS[i])) + " · " + fmt(score) + " points</span>" +
+    $("over").innerHTML = '<div class="ovcard"><b>Ward ' + (i + 1) + " not cleared</b><span>" + (outOfDrops ? "Out of drops. " : "") + esc(wardGoal(WARDS[i])) + " · " + fmt(score) + " points</span>" +
       '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-wagain">Try again</button><button class="btn" type="button" id="mrg-wall">All wards</button></div><span class="ovnote">Ward rounds never touch your daily run</span></div>';
     $("over").hidden = false;
     $("wagain").onclick = function () { startWard(i); };
@@ -1441,7 +1497,8 @@
     };
   }
   function end() {
-    if (WARD !== null) { wardLose(); return; }
+    if (WARD !== null) { if (!over) wardLose(); return; }
+    if (over) return;
     goalTick(true); sparks = [];
     over = true; arm = false; tbarUI();
     var prevHi = stats.hi || 0, best = score > prevHi && prevHi > 0;
@@ -1449,7 +1506,7 @@
     var ov = $("over"), rq = K.REACT[top >= 8 ? 2 : top >= 6 ? 1 : 0];
     ov.innerHTML = '<div class="ovcard">' + (best ? '<p class="best">🏆 Best ever!</p>' : "") +
       '<div class="react">' + pic(top >= 0 ? top : 0, 56) + '<span class="bub">' + esc(pick(rq)) + "</span></div>" +
-      "<b>Game over</b><span>" + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>" +
+      "<b>" + (finished ? (NORMIE ? "🐋 Whale of a run!" : "🎉 Discharged!") + "</b><span>Top piece made: +" + fmt(FIN_BONUS) + " bonus</span><span>" : "Game over</b><span>") + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>" +
       (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "") +
       (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "") +
       '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-ovagain">Play again</button><button class="btn" type="button" id="mrg-ovres">' + (practice ? "Results" : "Share result") + "</button></div>" +
@@ -1702,6 +1759,7 @@
   if (DEBUG) { // test hooks (?debug=1)
     var X = window.MW_mrg;
     X.spawn = function (lv, x, y) { return add(lv, x, y).id; };
+    X.ward = startWard; X.boss = function () { return BOSS ? { hp: BOSS.hp, max: BOSS.max, st: BOSS.st, r: BOSS.r, x0: Math.round(BOSS.x0), x: Math.round(BOSS.body.position.x), dead: BOSS.dead } : null; }; X.radii = function () { return O.map(function (q) { return q.r; }); };
     X.setCur = function (lv) { cur = lv; hud(); };
     X.cut = function (x, y) { return cutAt(x, y); };
     X.shake = doShake; X.end = end; X.sfx = sfxLog; X.WILD = WILD; X.CURE = CURE; X.target = target;
