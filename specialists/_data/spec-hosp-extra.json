@@ -1050,9 +1050,12 @@
     "fax": "(02) 8072 1832",
     "email": "",
     "ereferral": "",
-    "website": "",
+    "website": "https://drkenjaaback.com.au/",
     "interests": [
-     "Gynaecological cancer"
+     "Gynaecological cancer",
+     "Advanced laparoscopy",
+     "Colposcopy",
+     "General gynaecology"
     ],
     "practical": {
      "telehealth": null,
@@ -1073,10 +1076,11 @@
      "Women's health focus"
     ],
     "sources": [
+     "https://www.merewethersc.com.au/",
      "https://www.canrefer.org.au/specialists/ken-jaaback",
      "https://www.canrefer.org.au/services/lingard-private-hospital"
     ],
-    "checked": "2026-10-31",
+    "checked": "2026-11-26",
     "ahpra": "not checked"
    },
    {
@@ -1120,15 +1124,20 @@
     "name": "Dr Yvette Ius",
     "specialty": "Gynaecological oncology",
     "practice": "Sorella Women's Health",
-    "address": "Suite 1.3, Level 1, 26 Lookout Road, New Lambton Heights NSW 2305",
+    "address": "Suite 2.5, Level 2, Newcastle Private Specialist Centre, 26 Lookout Road, New Lambton Heights NSW 2305",
     "suburb": "New Lambton Heights",
     "phone": "(02) 4062 7544",
-    "fax": "(02) 4067 4120",
+    "fax": "(02) 4062 8834",
     "email": "",
     "ereferral": "",
     "website": "https://sorellawh.com.au",
     "interests": [
-     "Gynaecological cancer"
+     "Gynaecological cancer",
+     "Colposcopy",
+     "General gynaecology",
+     "Advanced laparoscopic surgery",
+     "Endometriosis",
+     "Menopause"
     ],
     "practical": {
      "telehealth": null,
@@ -1146,10 +1155,11 @@
      "Women's health focus"
     ],
     "sources": [
+     "https://sorellawh.com.au",
      "https://www.canrefer.org.au/Specialists/Yvette-Ius",
      "https://specialists.healthscope.com.au/newcastle"
     ],
-    "checked": "2026-10-31",
+    "checked": "2026-11-26",
     "ahpra": "not checked"
    },
    {
@@ -1385,15 +1395,18 @@
     "name": "Dr Geoffrey Otton",
     "specialty": "Gynaecological oncology",
     "practice": "Lambton Women's Health",
-    "address": "Suite 5, 25 Morehead Street, Lambton NSW 2299",
+    "address": "Suite 5, 25 Moorehead Street, Lambton NSW 2299",
     "suburb": "Lambton",
     "phone": "02 4952 1037",
     "fax": "02 4952 1017",
     "email": "",
     "ereferral": "",
-    "website": "",
+    "website": "https://www.lambtonwomenshealth.com.au/",
     "interests": [
      "Gynaecological oncology (gynaecological cancer)",
+     "Colposcopy",
+     "General gynaecology",
+     "Menopause",
      "Member of the Hunter New England gynaecological cancer team"
     ],
     "practical": {
@@ -1412,11 +1425,12 @@
     },
     "inclusive": [],
     "sources": [
+     "https://www.lambtonwomenshealth.com.au/",
      "https://specialists.healthscope.com.au/specialist/geoffrey-otton-med0001151064",
      "https://menopause.org.au/find-an-ams-member/item/dr-geoffrey-otton",
      "https://www.canrefer.org.au/Specialists/Geoffrey-Otton"
     ],
-    "checked": "9 November 2026",
+    "checked": "2026-11-26",
     "ahpra": "not checked",
     "listed_by": [
      {
