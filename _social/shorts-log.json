@@ -43,6 +43,14 @@
    "puzzle_date": "2026-10-25",
    "number": 1,
    "queued_at": "2026-11-19T14:30+11:00"
+  },
+  {
+   "post_date": "2026-12-03",
+   "series": "rarest",
+   "game": "zebritis",
+   "puzzle_date": "2026-10-19",
+   "number": 2,
+   "queued_at": "2026-11-26T15:09+11:00"
   }
  ]
 }
