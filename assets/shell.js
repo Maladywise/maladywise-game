@@ -1368,8 +1368,19 @@
       var sk = sky(t) || (dt.getDay() === 5 && dt.getDate() === 13 ? [t, "", "friday13", "Friday the 13th"] : null);
       if (sk) hit = sk;
     }
-    return hit ? '<img class="season" src="/assets/season/' + hit[2] + '.svg" width="30" height="30" alt="' + hit[3] + '" title="' + hit[3] + '">' : "";
+    if (!hit) return "";
+    var url = SEASON_LINKS[hit[2]], img = '<img class="season" src="/assets/season/' + hit[2] + '.svg" width="30" height="30" alt="' + hit[3] + '">';
+    // hover note on every icon; a cause with its own site opens it in a new tab (the icon sits inside the logo link, so the click is caught below)
+    return '<span class="season-w' + (url ? " season-go" : "") + '" data-tip="' + hit[3] + (url ? " \u2197" : "") + '"' + (url ? ' data-href="' + url + '" role="link" tabindex="0" aria-label="' + hit[3] + ' (opens ' + url.replace(/^https?:\/\/|\/$/g, "") + ')"' : "") + ">" + img + "</span>";
   }
+  var SEASON_LINKS = { movember: "https://au.movember.com/", naidoc: "https://www.naidoc.org.au/", earthday: "https://www.earthday.org/" }; // 27 Nov 2026
+  function seasonGo(e) {
+    var w = e.target.closest && e.target.closest(".season-go"); if (!w) return;
+    if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
+    e.preventDefault(); e.stopPropagation(); track("season-link/" + (w.querySelector("img").src.split("/").pop().replace(".svg", "")), "Season link");
+    window.open(w.getAttribute("data-href"), "_blank", "noopener");
+  }
+  document.addEventListener("click", seasonGo, true); document.addEventListener("keydown", seasonGo, true);
 
 
   // ---------- top menu (MW_HOME.nav in site.js): links and dropdown groups ----------
@@ -1563,7 +1574,7 @@
         list.map(function (o, i) {
           var g = o.g, st = st3(g), dn = st && st.done, ein = !g.dailyLine && diffFor(g, today, dow) === "Einstein", sp = g.special && g.special.dow === dow && !(g.special.from && today < g.special.from);
           return '<a class="t3' + (dn ? " done" : "") + '" data-g="' + g.id + '" href="' + g.path + '" style="--accent:' + accentOf(g) + '">' +
-            '<span class="t3-ic">' + (dn && window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 40, "band-masc") : g.icon) + (dn ? '<span class="tick" aria-label="Done today">✓</span>' : '<span class="t3-n" aria-hidden="true">' + (i + 1) + "</span>") + "</span>" +
+            '<span class="t3-ic">' + (window.MW_MASCOTS && MW_MASCOTS[g.id] ? mascImg(g.id, "", 40, "band-masc") : g.icon) + (dn ? '<span class="tick" aria-label="Done today">✓</span>' : '<span class="t3-n" aria-hidden="true">' + (i + 1) + "</span>") + "</span>" +
             '<span class="t3-tx"><b>' + g.name + (ein ? ' <i class="t3-ein" title="Einstein day">' + EIN + "</i>" : "") + "</b><small>" + (sp ? g.special.short : g.kind) + "</small></span>" +
             '<span class="t3-go">' + (dn ? (st.win ? "Solved" : "Done") : "~" + o.min + " min") + "</span></a>";
         }).join("") + "</div></section>";

@@ -1759,3 +1759,17 @@ html.medp-on .medp .medp-cols ol.ladder .alt{font-size:7.6px!important;margin:2p
 [data-theme="dark"] .tl[data-g="cryptogenic"] .tl-ic,[data-theme="dark"] .tl[data-g="gridectomy"] .tl-ic{background:#B9A6E8}
 .tl[data-g="zebritis"] .tl-ic{background:color-mix(in srgb,var(--accent) 45%,transparent)}
 .tl.done .tl-ic img{transform:scale(1.14)}
+/* 27 Nov 2026: today's 3 shows mascots (not icons) on a light tint, like the tiles; Layla (brown) gets a pale gold backdrop */
+.t3-ic:has(img){background:color-mix(in srgb,var(--accent) 24%,transparent)}
+[data-theme="dark"] .t3-ic:has(img){background:color-mix(in srgb,var(--accent) 30%,#2a2440)}
+.t3-ic img{width:46px!important;height:46px!important;transform:scale(1.1)}
+@media (max-width:899px){.t3-ic img{width:42px!important;height:42px!important}}
+a[href*="fridaemia"] .t3-ic,.tl[data-g="fridaemia"] .tl-ic{background:#F6DFA4!important}
+[data-theme="dark"] a[href*="fridaemia"] .t3-ic,[data-theme="dark"] .tl[data-g="fridaemia"] .tl-ic{background:#E8C46E!important}
+.t3.done .t3-ic{background:#DDD8E6!important}
+[data-theme="dark"] .t3.done .t3-ic{background:#3A3450!important}
+/* 27 Nov 2026: seasonal logo icon gets a hover note; causes (Movember etc.) link out */
+.season-w{position:relative;display:inline-block}
+.season-go{cursor:pointer}
+.season-w::after{content:attr(data-tip);position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);white-space:nowrap;max-width:min(80vw,320px);overflow:hidden;text-overflow:ellipsis;background:var(--ink,#2B2540);color:var(--bg,#fff);font:500 12px/1.3 Poppins,system-ui,sans-serif;letter-spacing:0;padding:6px 10px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .15s;z-index:50;text-transform:none;font-style:normal}
+.season-w:hover::after,.season-w:focus-visible::after{opacity:1}
