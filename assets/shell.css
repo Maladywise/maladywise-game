@@ -1748,3 +1748,6 @@ p.note#arx-next,p.note#cmx-next,p.note#dxw-next,p.note#glm-next,p.note#grx-next,
 .mwx-nexttop.mwx-lead .mwx-btns>:last-child:nth-child(odd){grid-column:auto}
 .doc ol.ladder .alt{margin:8px 0 0;padding:8px 10px;border-radius:10px;background:color-mix(in srgb,var(--brand,#4A3480) 7%,transparent);font-size:14px;line-height:1.4}
 html.medp-on .medp .medp-cols ol.ladder .alt{font-size:7.6px!important;margin:2px 0 0!important;padding:2px 4px!important;line-height:1.3!important}
+/* 27 Nov 2026: Basil is a pale cat, so his arcade tile gets a dark backdrop */
+.arc-a[data-g="basil-clover"] img{background:#2B5E80}
+[data-theme="dark"] .arc-a[data-g="basil-clover"] img{background:#1D4560}
