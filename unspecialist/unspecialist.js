@@ -711,14 +711,23 @@
     if (act === "iact") { var ib2 = inboxDay(); if (ib2.done) return; ib2.ans[b.getAttribute("data-id")] = b.getAttribute("data-v"); save(); render(true); return; }
     if (act === "idone") { finishInbox(); return render(); }
   });
-  window.addEventListener("hashchange", function () { render(); });
+  window.addEventListener("hashchange", function () { if (/^#(desk|cheat)/.test(location.hash) && !D.billing.scenarios.length) loadBilling(); render(); });
 
   // ---------- boot ----------
   function getJSON(u) { return fetch(u, { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(u); return r.json(); }); }
-  Promise.all([getJSON(DATA + "huddle.json?v=5"), getJSON(DATA + "cases.json?v=10"), getJSON(DATA + "results.json?v=3"), getJSON(DATA + "billing.json?v=3").catch(function () { return null; })]).then(function (r) {
+  // Billing data (163 KB) loads after the page is up, unless you've gone straight to the front desk (26 Nov 2026)
+  var BILL_VIEWS = /^#?(desk|cheat|curriculum)?$/;
+  function loadBilling() {
+    if (loadBilling.p) return loadBilling.p;
+    return (loadBilling.p = getJSON(DATA + "billing.json?v=3").then(function (b) {
+      if (b && Array.isArray(b.scenarios)) { D.billing = b; if (BILL_VIEWS.test(location.hash.split("/")[0])) render(); }
+    }).catch(function () {}));
+  }
+  if (/^#(desk|cheat)/.test(location.hash)) loadBilling();
+  Promise.all([getJSON(DATA + "huddle.json?v=5"), getJSON(DATA + "cases.json?v=10"), getJSON(DATA + "results.json?v=3")]).then(function (r) {
     D.huddle = r[0]; D.cases = r[1]; D.results = r[2];
-    if (r[3] && Array.isArray(r[3].scenarios)) D.billing = r[3];
     render();
+    setTimeout(loadBilling, 1200);
     if (!S.seenHelp) { S.seenHelp = 1; save(); setTimeout(help, 300); }
   }).catch(function () {
     app.innerHTML = '<p class="us-sub">The practice is closed: we couldn\'t load today\'s cases. Check your connection and refresh.</p>';

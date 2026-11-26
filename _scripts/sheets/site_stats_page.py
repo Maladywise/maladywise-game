@@ -60,8 +60,25 @@ _SS_JS = r'''<script>
     h += "<h2>Today by game</h2>" + '<div class="ss-box">' + list(T.g || {}) + "</div>";
     h += "<h2>Last 7 days by game</h2>" + '<div class="ss-box">' + list(wk) + "</div>";
     if (j.hourDays) h += "<h2>When people play</h2>" + '<div class="ss-box">' + bars(j.hours.map(function (v) { return v / j.hourDays; }), j.hours.map(function (v, i) { return (i % 12 || 12) + (i < 12 ? "am" : "pm"); }), -1, 120) + '<p class="ss-cap">Average games finished per hour, Sydney time, over the last ' + j.hourDays + " days.</p></div>";
+    h += '<h2>Hardest puzzles this week</h2><div class="ss-box" id="ss-hard"><p class="ss-cap">Loading…</p></div>';
     box.innerHTML = h;
     Array.prototype.forEach.call(box.querySelectorAll(".ss-tabs button"), function (b) { b.onclick = function () { load(+b.getAttribute("data-d")); }; });
+    hardest();
+  }
+  // Hardest this week: lowest solve rate over 7 days (games with 20+ results). 26 Nov 2026
+  var hardJ = null;
+  function hardest() {
+    var el = document.getElementById("ss-hard"); if (!el) return;
+    function show(j) {
+      var R = (j && j.rows) || [];
+      if (!R.length) { el.innerHTML = '<p class="ss-cap">Not enough results yet this week.</p>'; return; }
+      el.innerHTML = '<ul class="ss-list">' + R.slice(0, 5).map(function (x) { var g = gname(x.g), p = Math.round(x.w / x.n * 100);
+        return "<li>" + (g[1] ? '<a href="' + g[1] + '">' + g[0] + "</a>" : "<span>" + g[0] + "</span>") + '<i style="width:' + Math.max(2, p) + '%"></i><em>' + p + "% solved</em></li>"; }).join("") +
+        '</ul><p class="ss-cap">Share of finished games solved over the last 7 days, lowest first. Games with at least 20 results.</p>';
+    }
+    if (hardJ) return show(hardJ);
+    fetch("https://mw-presence.onrender.com/hardest?days=7", { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { hardJ = j; show(j); })
+      .catch(function () { el.innerHTML = '<p class="ss-cap">Couldn’t load this just now.</p>'; });
   }
   var cache = {};
   function load(span) {

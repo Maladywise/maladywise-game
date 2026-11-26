@@ -21,10 +21,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
-<link rel="stylesheet" href="/assets/shell.css?v=270">
+<link rel="stylesheet" href="/assets/shell.css?v=271">
 <script defer src="/assets/games.js?v=130"></script>
 <script defer src="/assets/site.js?v=94"></script>
-<script defer src="/assets/shell.js?v=353"></script>
+<script defer src="/assets/shell.js?v=354"></script>
 <script type="application/ld+json" id="mw-faq-ld">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": []}</script>
 <script type="application/ld+json" id="mw-page-ld">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Malady Wise Stats: Games Played Every Day", "description": "Live, anonymous stats for Malady Wise: daily medical puzzles finished today, each day for the past year, by game, and when people play.", "url": "https://maladywise.com/site-stats/", "inLanguage": "en-AU", "audience": {"@type": "MedicalAudience", "audienceType": "Patient"}, "author": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "publisher": {"@type": "Organization", "name": "Malady Wise", "url": "https://maladywise.com/"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Malady Wise", "item": "https://maladywise.com/"}, {"@type": "ListItem", "position": 2, "name": "Games played", "item": "https://maladywise.com/site-stats/"}]}, "about": {"@type": "WebPage", "name": "Malady Wise stats"}, "dateModified": "2026-11"}</script>
 </head>
@@ -52,24 +52,20 @@
 .ss-tabs button{font:600 13px var(--body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
 .ss-tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 #ss-wait{color:var(--muted)}
-.ss-cc{list-style:none!important;padding:0!important;margin:0!important;display:grid;gap:6px}
-.ss-cc li{display:grid;grid-template-columns:24px 1fr 46px;grid-template-areas:"f n p" "f b b";align-items:center;column-gap:8px;margin:0}
-.ss-fl{grid-area:f;font-size:18px}.ss-cn{grid-area:n;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ss-cc b{grid-area:p;text-align:right;font-size:13px}
-.ss-cc i{grid-area:b;display:block;height:5px;border-radius:3px;background:var(--brand,#4A3480);opacity:.75}
 </style><div id="ss"><p id="ss-wait">Loading the numbers…</p></div>
 <script>
 (function () {
   var API = "https://mw-presence.onrender.com/history?days=", box = document.getElementById("ss");
   function nf(n) { return Math.round(n).toLocaleString("en-AU"); }
   function nice(d, o) { return new Date(d + "T00:00:00Z").toLocaleDateString("en-AU", Object.assign({ timeZone: "UTC" }, o || { day: "numeric", month: "short" })); }
-  function gname(id) { var nm = /-n$/.test(id); if (nm) { var b = gname(id.slice(0, -2)); return [b[0] + " (Normie)", b[1]]; } var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0]; return g ? [g.name, "/" + (g.path || id + "/")] : [id.charAt(0).toUpperCase() + id.slice(1), null]; }
+  function gname(id) { var g = (window.MW_GAMES || []).filter(function (x) { return x.id === id; })[0]; return g ? [g.name, "/" + (g.path || id + "/")] : [id.charAt(0).toUpperCase() + id.slice(1), null]; }
   function bars(vals, labels, hl, h) {
-    var W = 600, G = 40, H = h || 160, max = Math.max.apply(null, vals.concat([1])), n = vals.length, bw = (W - G) / n, s = ""; // G = left gutter for the axis numbers, so they never sit on a bar
-    var step = Math.pow(10, Math.floor(Math.log10(max))), top = Math.max(4, Math.ceil(max / step) * step);
-    for (var t = 0; t <= 2; t++) { var y = H - H * t / 2; s += '<line x1="' + G + '" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="var(--line)" stroke-width="1"/><text class="ax" x="' + (G - 6) + '" y="' + (y + 4) + '" text-anchor="end">' + nf(top * t / 2) + "</text>"; }
-    vals.forEach(function (v, i) { var bh = v / top * H; s += '<rect class="ss-bar' + (i === hl ? " today" : "") + '" x="' + (G + i * bw + bw * 0.12) + '" y="' + (H - bh) + '" width="' + Math.max(1, bw * 0.76) + '" height="' + Math.max(v ? 1 : 0, bh) + '" rx="' + Math.min(3, bw * 0.3) + '"><title>' + labels[i] + ": " + nf(v) + "</title></rect>"; });
+    var W = 600, H = h || 160, max = Math.max.apply(null, vals.concat([1])), n = vals.length, bw = W / n, s = "";
+    var step = Math.pow(10, Math.floor(Math.log10(max))), top = Math.ceil(max / step) * step;
+    for (var t = 0; t <= 2; t++) { var y = H - H * t / 2; s += '<line x1="0" x2="' + W + '" y1="' + y + '" y2="' + y + '" stroke="var(--line)" stroke-width="1"/><text class="ax" x="' + W + '" y="' + (y - 3) + '" text-anchor="end">' + nf(top * t / 2) + "</text>"; }
+    vals.forEach(function (v, i) { var bh = v / top * H; s += '<rect class="ss-bar' + (i === hl ? " today" : "") + '" x="' + (i * bw + bw * 0.12) + '" y="' + (H - bh) + '" width="' + Math.max(1, bw * 0.76) + '" height="' + Math.max(v ? 1 : 0, bh) + '" rx="' + Math.min(3, bw * 0.3) + '"><title>' + labels[i] + ": " + nf(v) + "</title></rect>"; });
     var every = Math.ceil(n / 5);
-    labels.forEach(function (l, i) { if (i % every === 0 || i === n - 1) s += '<text class="ax" x="' + (G + i * bw + bw / 2) + '" y="' + (H + 15) + '" text-anchor="middle">' + l + "</text>"; });
+    labels.forEach(function (l, i) { if (i % every === 0 || i === n - 1) s += '<text class="ax" x="' + (i * bw + bw / 2) + '" y="' + (H + 15) + '" text-anchor="middle">' + l + "</text>"; });
     return '<svg viewBox="-2 -6 ' + (W + 4) + " " + (H + 24) + '" role="img" aria-label="Bar chart">' + s + "</svg>";
   }
   function list(obj) {
@@ -84,6 +80,7 @@
     var last7 = D.slice(-8, -1), avg = last7.length ? last7.reduce(function (a, x) { return a + x.n; }, 0) / last7.length : 0;
     var best = D.slice(0, -1).reduce(function (a, x) { return x.n > a.n ? x : a; }, { n: 0, d: "" });
     var total = D.reduce(function (a, x) { return a + x.n; }, 0);
+    var wk = {}; D.slice(-7).forEach(function (x) { for (var k in x.g) wk[k] = (wk[k] || 0) + x.g[k]; });
     var h = '<div class="ss-kpis">' +
       '<div class="ss-k"><b>' + nf(T.n) + "</b><span>Games played today</span></div>" +
       '<div class="ss-k"><b>' + nf(Y.n) + "</b><span>Yesterday</span></div>" +
@@ -92,18 +89,27 @@
     h += '<h2>Games played each day</h2><div class="ss-tabs" role="group" aria-label="Time span"><button type="button" data-d="30" aria-pressed="' + (span === 30) + '">30 days</button><button type="button" data-d="90" aria-pressed="' + (span === 90) + '">90 days</button><button type="button" data-d="365" aria-pressed="' + (span === 365) + '">1 year</button></div>';
     h += '<div class="ss-box">' + bars(D.map(function (x) { return x.n; }), D.map(function (x) { return nice(x.d); }), D.length - 1) + '<p class="ss-cap">Sydney days. Today so far in gold. ' + nf(total) + " games in this period.</p></div>";
     h += "<h2>Today by game</h2>" + '<div class="ss-box">' + list(T.g || {}) + "</div>";
-    // Players by country (from 24 Nov 2026): one count per browser per day, from its time zone.
-    var cc = {}, ccDays = 0; D.slice(-7).forEach(function (x) { if (x.c && Object.keys(x.c).length) ccDays++; for (var k in (x.c || {})) cc[k] = (cc[k] || 0) + x.c[k]; });
-    var dn = null; try { dn = new Intl.DisplayNames(["en-AU"], { type: "region" }); } catch (e) {}
-    function flag(c) { return c === "ZZ" ? "\ud83c\udf10" : String.fromCodePoint.apply(null, c.split("").map(function (ch) { return 127397 + ch.charCodeAt(0); })); }
-    var ks = Object.keys(cc).sort(function (a, b) { return cc[b] - cc[a]; }), top = ks.length ? cc[ks[0]] : 1, sum = ks.reduce(function (a, k) { return a + cc[k]; }, 0);
-    h += '<h2>Where players are</h2><div class="ss-box">' + (ks.length ?
-      '<ul class="ss-cc">' + ks.slice(0, 15).map(function (k) { var nm = k === "ZZ" ? "Other" : (dn ? dn.of(k) : k); return '<li><span class="ss-fl" aria-hidden="true">' + flag(k) + "</span><span class=\"ss-cn\">" + nm + '</span><i style="width:' + Math.max(4, cc[k] / top * 100) + '%"></i><b>' + Math.round(cc[k] / sum * 100) + "%</b></li>"; }).join("") + "</ul>" +
-      '<p class="ss-cap">' + ks.length + (ks.length === 1 ? " country" : " countries") + ", last " + (ccDays === 1 ? "day" : ccDays + " days") + ". From each browser’s time zone, once a day. No locations or IPs stored.</p>"
-      : '<p class="ss-cap">Counting started 24 November 2026. Check back tomorrow.</p>') + "</div>";
+    h += "<h2>Last 7 days by game</h2>" + '<div class="ss-box">' + list(wk) + "</div>";
     if (j.hourDays) h += "<h2>When people play</h2>" + '<div class="ss-box">' + bars(j.hours.map(function (v) { return v / j.hourDays; }), j.hours.map(function (v, i) { return (i % 12 || 12) + (i < 12 ? "am" : "pm"); }), -1, 120) + '<p class="ss-cap">Average games finished per hour, Sydney time, over the last ' + j.hourDays + " days.</p></div>";
+    h += '<h2>Hardest puzzles this week</h2><div class="ss-box" id="ss-hard"><p class="ss-cap">Loading…</p></div>';
     box.innerHTML = h;
     Array.prototype.forEach.call(box.querySelectorAll(".ss-tabs button"), function (b) { b.onclick = function () { load(+b.getAttribute("data-d")); }; });
+    hardest();
+  }
+  // Hardest this week: lowest solve rate over 7 days (games with 20+ results). 26 Nov 2026
+  var hardJ = null;
+  function hardest() {
+    var el = document.getElementById("ss-hard"); if (!el) return;
+    function show(j) {
+      var R = (j && j.rows) || [];
+      if (!R.length) { el.innerHTML = '<p class="ss-cap">Not enough results yet this week.</p>'; return; }
+      el.innerHTML = '<ul class="ss-list">' + R.slice(0, 5).map(function (x) { var g = gname(x.g), p = Math.round(x.w / x.n * 100);
+        return "<li>" + (g[1] ? '<a href="' + g[1] + '">' + g[0] + "</a>" : "<span>" + g[0] + "</span>") + '<i style="width:' + Math.max(2, p) + '%"></i><em>' + p + "% solved</em></li>"; }).join("") +
+        '</ul><p class="ss-cap">Share of finished games solved over the last 7 days, lowest first. Games with at least 20 results.</p>';
+    }
+    if (hardJ) return show(hardJ);
+    fetch("https://mw-presence.onrender.com/hardest?days=7", { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { hardJ = j; show(j); })
+      .catch(function () { el.innerHTML = '<p class="ss-cap">Couldn’t load this just now.</p>'; });
   }
   var cache = {};
   function load(span) {
@@ -115,7 +121,7 @@
 })();
 </script><p class="meta">Counts come from finished daily puzzles (arcade games aren’t counted). No cookies, names or personal data. Your own streaks and badges live on <a href="/me/">My stats</a>.</p>
 
-<p class="meta">Updated 24 November 2026.</p>
+<p class="meta">Updated 26 November 2026.</p>
 
 <section class="related"><h2>Related</h2><ul><li><a href="/medical-games/"><span>Games</span>All puzzles</a></li><li><a href="/me/"><span>Malady Wise</span>My stats</a></li><li><a href="/about/"><span>Malady Wise</span>About</a></li></ul></section>
 <p class="print-url">maladywise.com/site-stats/</p>

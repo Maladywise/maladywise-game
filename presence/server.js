@@ -92,6 +92,7 @@ async function heat() {
 
 // ---------- public history for /site-stats/: daily totals, per-game counts and hourly pattern (all anonymous counts) ----------
 let histCache = { t: 0, k: "", v: null };
+const hardCache = {};
 async function history(days) {
   const key = String(days);
   if (Date.now() - histCache.t < 10 * 60 * 1000 && histCache.k === key && histCache.v) return histCache.v;
@@ -397,6 +398,23 @@ const server = http.createServer(async (req, res) => {
       const days = Math.max(1, Math.min(35, Number(url.searchParams.get("days")) || 28));
       res.writeHead(200, { "Content-Type": "application/json" });
       return res.end(JSON.stringify({ days, hubs: await hubRank(days) }));
+    }
+    if (url.pathname === "/hardest") { // solve rate per game over the last N days (finishes that reported win/loss), hardest first. 26 Nov 2026
+      const days = Math.max(1, Math.min(30, Number(url.searchParams.get("days")) || 7)), tot = {};
+      if (Date.now() - (hardCache.t || 0) < 10 * 60 * 1000 && hardCache.k === days) { res.writeHead(200, { "Content-Type": "application/json" }); return res.end(hardCache.v); }
+      if (kv && kv.isReady) {
+        try {
+          for (let i = 0; i < days; i++) {
+            const d = dayAgo(i), f = await kv.hGetAll("fin2:" + d) || {}, w = await kv.hGetAll("wins:" + d) || {};
+            for (const g in f) { if (/-n$/.test(g)) continue; const t = tot[g] = tot[g] || { g, n: 0, w: 0 }; t.n += Number(f[g] || 0); t.w += Number(w[g] || 0); }
+          }
+        } catch (e) {}
+      }
+      const rows = Object.values(tot).filter((x) => x.n >= 20).sort((a, b) => a.w / a.n - b.w / b.n);
+      const body = JSON.stringify({ days, rows, day: sydDay() });
+      hardCache.t = Date.now(); hardCache.k = days; hardCache.v = body;
+      res.writeHead(200, { "Content-Type": "application/json" });
+      return res.end(body);
     }
     if (url.pathname === "/history") {
       const days = Math.max(7, Math.min(365, Number(url.searchParams.get("days")) || 90));
