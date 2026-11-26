@@ -960,6 +960,23 @@
    "queued_at": "2026-11-24T05:33+11:00"
   },
   {
+   "date": "2026-12-04",
+   "slot": "pm",
+   "note": "Fri: deep dive #15 thread (disorders of gut–brain interaction) (6pm deep-dive slot; next free pm slot)",
+   "queued_at": "2026-11-27T12:00+11:00",
+   "thread": [
+    "1/9 About 4 in 10 adults worldwide meet criteria for at least one disorder of gut–brain interaction: IBS, functional dyspepsia and friends (Rome Foundation, 33 countries). \"Functional\" never meant \"nothing there\". New deep dive for clinicians 🧵",
+    "2/9 Read the deep dive → https://maladywise.com/deep-dives/dgbi/",
+    "3/9 The biology is real. In 1973, 60 mL of air in the sigmoid colon hurt 55% of people with IBS and 6% of controls. Mast cells sitting next to colonic nerves track pain severity (Gastroenterology 2004).",
+    "4/9 After gastro, about 1 in 10 people develop IBS within a year: a fourfold risk. After protozoal infections it's 42% (Gastroenterology 2017 meta-analysis).",
+    "5/9 Make a positive diagnosis, with the right tests. Coeliac disease is about 4.5 times more common in people with IBS-type symptoms. Calprotectin ≤40 µg/g or CRP ≤0.5 mg/dL puts the chance of IBD at ≤1%.",
+    "6/9 Treatments with numbers: soluble fibre NNT 7, peppermint oil NNT 3, low-FODMAP diet RR 0.67 vs usual diet. Low-dose amitriptyline beat placebo in UK general practice (ATLANTIS, Lancet 2023).",
+    "7/9 Brain therapies for a gut disorder: CBT RR 0.61–0.62 and gut-directed hypnotherapy RR 0.67 in a network meta-analysis. At Monash, hypnotherapy matched the low-FODMAP diet: 72% vs 71% responders.",
+    "8/9 History: the FODMAP idea (Monash, 2005) was first proposed for Crohn's disease, not IBS. And cannabinoid hyperemesis was first described in South Australia in 2004: 9 of 10 patients took compulsive hot baths.",
+    "9/9 Frontier: is some IBS a local food allergy? In mice, gut infection triggered food-specific IgE confined to the gut, and that food then caused mast cell pain. Human proof is still missing (Nature 2021). https://maladywise.com/deep-dives/dgbi/"
+   ]
+  },
+  {
    "date": "2026-12-05",
    "slot": "am",
    "pin": true,
