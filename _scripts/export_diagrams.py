@@ -128,6 +128,7 @@ EXERCISES = {
 
 # deep dive folder -> (file name, alt / short caption)
 DEEP_DIVES = {
+    "dgbi": ("disorders-of-gut-brain-interaction-ibs-gut-brain-loop-diagram", "DGBI diagram: triggers, gut hypersensitivity, motility, immune and microbiome changes, two-way gut-brain signals, symptoms"),
     "antimicrobial-resistance": ("antimicrobial-resistance-selection-mechanisms-spread-diagram", "Antimicrobial resistance diagram: antibiotic exposure, selection, four resistance mechanisms, spread and resistant infection"),
     "hypermobility": ("hypermobile-eds-hsd-diagnostic-criteria-flowchart", "Hypermobility flowchart: red flags, then hEDS criteria 1 to 3; all met is hEDS, otherwise HSD"),
     "me-cfs": ("me-cfs-post-exertional-malaise-mechanisms-diagram", "ME/CFS diagram: infection trigger, immune, autonomic and metabolic changes, exertion and post-exertional malaise"),

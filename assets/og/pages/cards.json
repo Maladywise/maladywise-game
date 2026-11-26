@@ -757,8 +757,8 @@
 },
 "deep-dives": {
 "url": "/deep-dives/",
-"key": "acf018c473f1",
-"v": "5feb61a2",
+"key": "60571c497b4f",
+"v": "798a3017",
 "label": "Deep dives for clinicians",
 "title": "Evidence-dense topic reviews"
 },
@@ -796,6 +796,13 @@
 "v": "e0d72653",
 "label": "Deep dive for clinicians · #2",
 "title": "Coeliac disease"
+},
+"deep-dives-dgbi": {
+"url": "/deep-dives/dgbi/",
+"key": "e52a44c5af07",
+"v": "d9541494",
+"label": "Deep dive for clinicians · #15",
+"title": "Disorders of gut–brain interaction"
 },
 "deep-dives-hypermobility": {
 "url": "/deep-dives/hypermobility/",
