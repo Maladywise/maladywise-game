@@ -2007,8 +2007,14 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         (ng && left.length > 1 ? '<button type="button" class="mwx-skip mwx-pill2">Skip next<small>' + ng.name + '</small></button>' : "") +
         (NORMIE && (g.normie || g.nmode) ? '<button type="button" class="mwx-mode mwx-pill2">' + (NORMIE ? "\ud83e\ude7a Medical version" : "\ud83d\ude42 Normie version") + '<small>of ' + g.name + '</small></button>' : "") + '</div>';
       if (!tb) { var res = box.querySelector(".mw-sharerow"); if (!res) return; var anc = box.querySelector(".mw-ticket") || box.querySelector('pre[id$="-share"],pre[id$="-sharetext"]') || res; if (anc.compareDocumentPosition(res) & 2) anc = res; anc.insertAdjacentHTML("beforebegin", '<div id="mw-next-top" class="mwx-nexttop"></div>'); tb = document.getElementById("mw-next-top"); }
+      // One clear next step (27 Nov 2026): the Next button leads; the full list folds behind "See all".
+      if (ng && !strip.getAttribute("data-fold")) {
+        strip.setAttribute("data-fold", "1"); strip.classList.add("mwx-fold");
+        strip.insertAdjacentHTML("beforeend", '<button type="button" class="mwx-unfold">See all today\u2019s puzzles</button>');
+        strip.querySelector(".mwx-unfold").onclick = function () { strip.classList.remove("mwx-fold"); this.remove(); };
+      }
       if (tb.getAttribute("data-h") === th) return;
-      tb.innerHTML = th; tb.setAttribute("data-h", th);
+      tb.innerHTML = th; tb.setAttribute("data-h", th); tb.classList.toggle("mwx-lead", !!ng);
       var mb = tb.querySelector(".mwx-more2"); if (mb) mb.onclick = function () { track("next-unsolved/" + g.id, g.name + " next unsolved"); tb.remove(); r0.click(); window.scrollTo({ top: 0, behavior: "smooth" }); };
       var tl = tb.querySelector(".mwx-today"); if (tl) tl.onclick = function () { track("next-today/" + g.id, g.name + " next today"); };
       var mo = tb.querySelector(".mwx-mode"); if (mo) mo.onclick = function () { setMode(NORMIE ? "medical" : "normie"); };

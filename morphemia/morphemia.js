@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "19";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "20";
   // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");
@@ -196,6 +196,8 @@
       m = after === RANKS.length - 1 ? (P.difficulty === "Einstein" ? SASS.ein : SASS.genius) : m + " " + SASS.rank(RANKS[after][0]) + (before < targetIdx() && after >= targetIdx() ? " \ud83c\udfaf Today\u2019s target hit. Genius is the bonus round." : "");
       if (isLive()) {
         if (after > (st.rank || 0)) { stats.dist[after]++; if (st.rank) stats.dist[st.rank]--; put(SKEY, stats); }
+        // Hitting today's target banks the day (27 Nov 2026): counts as played on the home page and live count; Genius stays the win.
+        if (after >= targetIdx() && !st.done) { st.done = true; st.win = false; st.banked = true; }
         if (after === RANKS.length - 1 && !st.win) {
           st.done = true; st.win = true; stats.wins++; put(SKEY, stats);
           if (P.difficulty === "Einstein" && !(st.hints || []).length) { var tro = load(PFX + "mw-einstein", []); if (!tro.some(function (t) { return t.g === "morphemia" && t.d === today; })) { tro.push({ g: "morphemia", d: today }); put(PFX + "mw-einstein", tro); } }

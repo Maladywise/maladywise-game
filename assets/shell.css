@@ -1737,3 +1737,12 @@ p.note#arx-next,p.note#cmx-next,p.note#dxw-next,p.note#glm-next,p.note#grx-next,
 .arc-a b{font-size:13px;font-weight:600;line-height:1.2}
 .arc-a small{font-size:11px;line-height:1.2}
 .rds-slim .rs-l a{font-weight:600}
+
+/* 27 Nov 2026: after a puzzle, one clear Next button; other options smaller; full list folded */
+.mwx-nexttop.mwx-lead .mwx-btns .mwx-today{grid-column:1/-1;min-height:60px;font-size:16px}
+.mwx-nexttop.mwx-lead .mwx-btns .mwx-today small{font-size:12px}
+.mwx-nexttop.mwx-lead .mwx-btns>:not(.mwx-today){min-height:44px;font-size:12.5px}
+.mwx.mwx-fold .mwx-list,.mwx.mwx-fold .mwx-all{display:none}
+.mwx-unfold{display:block;margin:6px auto 0;border:0;background:none;color:var(--brand,#4A3480);font:600 14px Poppins,system-ui,sans-serif;text-decoration:underline;cursor:pointer;padding:8px}
+[data-theme="dark"] .mwx-unfold{color:#B9A6E8}
+.mwx-nexttop.mwx-lead .mwx-btns>:last-child:nth-child(odd){grid-column:auto}

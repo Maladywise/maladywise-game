@@ -19,7 +19,7 @@
 <meta name="apple-mobile-web-app-title" content="Malady Wise">
 <link rel="preload" href="/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var r=document.documentElement,t=localStorage.getItem("mw-theme");r.setAttribute("data-pre","");try{t=JSON.parse(t)}catch(e){}r.setAttribute("data-theme",t==="dark"||(t!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches)?"dark":"light")}catch(e){}</script>
-<link rel="stylesheet" href="/assets/shell.css?v=274">
+<link rel="stylesheet" href="/assets/shell.css?v=275">
 <link rel="stylesheet" href="/assets/mg.css?v=3">
 <style>:root{--mg-a:#3E5C76;--mg-b:#22384D;--mg-hi:#FFE08A}
 #lb-game{--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;--dot:#F2B544;--plum:#7A2E5C;--teal:#0F5C4A;--on:#fff;--bad:#B3261E;--display:var(--title,Georgia,serif);--paper:var(--card)}
@@ -58,9 +58,10 @@
 #lb-game .end a{color:var(--muted);font-weight:600}
 #lb-game .how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
 @media (prefers-reduced-motion:reduce){#lb-game{--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;--dot:#F2B544;--plum:#7A2E5C;--teal:#0F5C4A;--on:#fff;--bad:#B3261E;--display:var(--title,Georgia,serif);--paper:var(--card)}
-#lb-game .timer i{transition:none}}</style>
+#lb-game .timer i{transition:none}}
+.lb-vote{margin:18px auto 0;max-width:520px;text-align:center;padding:14px;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}.lb-vote b{display:block;font-size:16px}.lb-vote span{display:block;font-size:13px;color:var(--muted);margin:2px 0 10px}.lb-vote div{display:flex;gap:8px;justify-content:center}.lb-vote button{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:9px 16px;font:600 14px Poppins,system-ui,sans-serif;cursor:pointer}.lb-vote button.on{border-color:var(--brand,#4A3480);background:color-mix(in srgb,var(--brand,#4A3480) 14%,transparent)}</style>
 <script defer src="/assets/games.js?v=130"></script>
-<script defer src="/assets/shell.js?v=357"></script>
+<script defer src="/assets/shell.js?v=358"></script>
 </head>
 <body>
 <main class="wrap mg-page">
@@ -78,12 +79,14 @@
 </div>
 
   </section>
+  <section class="lb-vote" id="lb-vote"><b>Keep this game?</b><span>Labs games that get the most thumbs up join the daily puzzles.</span><div><button type="button" data-v="up" aria-label="Thumbs up">👍 Keep it</button><button type="button" data-v="down" aria-label="Thumbs down">👎 Not for me</button></div></section>
   <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a> · <a href="/contact/">Send feedback</a></p>
   <footer class="site"><p class="ft-base"><span class="ft-note">A Labs beta teaching game. Education only, not advice for an individual patient.</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>
 </main>
 <script defer src="/assets/boot.js?v=1" data-mw="page"></script>
 <script>
 document.getElementById("lb-play").onclick=function(){document.getElementById("lb-intro").hidden=true;var g=document.getElementById("lb-game");g.hidden=false;if(window.LB_start)LB_start();g.scrollIntoView({behavior:"smooth",block:"start"});};
+(function(){var k="mw-labvote-bunkemia",box=document.getElementById("lb-vote");if(!box)return;var v=null;try{v=localStorage.getItem(k)}catch(e){}function show(){box.querySelectorAll("button").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-v")===v)});if(v)box.querySelector("span").textContent="Thanks. Vote counted.";}box.querySelectorAll("button").forEach(function(b){b.onclick=function(){v=b.getAttribute("data-v");try{localStorage.setItem(k,v)}catch(e){}if(window.MW_track)MW_track("labs-vote/"+k.slice(11)+"/"+v,"Labs vote "+k.slice(11)+" "+v);show();}});show();})();
 
 (function(){
 // [kind, claim, true?, verdict line, explanation, source label, url]

@@ -32,6 +32,7 @@
 .rv.miss{background:#6B2A4E}
 .rv-h{display:flex;gap:14px;align-items:center}
 .rv h2{font:700 22px/1.2 var(--display);margin:4px 0 8px}.rv p{margin:0 0 8px;font-size:15px;line-height:1.5}
+.rv .tip{margin:10px 0 0;padding:10px 12px;border-left:4px solid var(--gold);background:rgba(255,255,255,.08);border-radius:8px;font-size:14px;line-height:1.4}
 .rv .flip{background:rgba(255,255,255,.14);border-radius:12px;padding:10px 12px}
 .rv .used{font-size:13px;margin:0 0 8px}
 .rv a{color:#fff}.rv small{font-size:12px;opacity:.88}
@@ -71,35 +72,35 @@ var P=[
  {n:"Gerald",a:54,g:"m",tone:"#F1C7A3",hair:"#9A9A9A",job:"CEO",say:"\"Tight chest on the golf course. Sweaty. Probably nothing.\"",conf:10,fit:["psych","rush","anchor"],
   dx:"Unstable angina",test:"An ECG and troponin today, then a cardiology review.",harm:"Two weeks later he collapsed with a heart attack.",
   flip:"Busy professionals get ‘stress’ too. And women with heart attacks more often have symptoms put down to stress or anxiety, and wait longer for treatment.",src:["Mehta LS et al. Circulation 2016","https://doi.org/10.1161/CIR.0000000000000351"],
-  work:"Do an ECG and troponin"},
+  tip:"Exertional chest pain is cardiac until proven otherwise, whoever says ‘probably nothing’.",work:"Do an ECG and troponin"},
  {n:"Mei",a:27,g:"f",tone:"#E8C39E",hair:"#1E1A1A",job:"Nurse",say:"\"I nearly faint every time I stand at work. My heart races. It's not in my head.\"",conf:9,fit:["psych","gender","expert"],
   dx:"POTS (postural orthostatic tachycardia syndrome)",test:"A 10-minute active stand test: heart rate and blood pressure lying, then standing.",harm:"She went part-time, then stopped work, still undiagnosed.",
   flip:"In a survey of 4,835 people with POTS, 94% were women, and diagnosis took a median of 2 years, often after misdiagnosis.",src:["Shaw BH et al. J Intern Med 2019","https://doi.org/10.1111/joim.12895"],
-  work:"Do a lying and standing test"},
+  tip:"Check heart rate lying and standing in anyone who nearly faints on standing. A rise of 30 or more beats per minute is the clue.",work:"Do a lying and standing test"},
  {n:"Kofi",a:31,g:"m",tone:"#6B4630",hair:"#141010",job:"Engineering student",say:"\"Pain in my right side, coming in waves. I can't sit still. Please help.\"",conf:10,fit:["race","stigma","rush"],
   dx:"Kidney stone with infection",test:"Pain relief now, urine test, temperature, and same-day imaging.",harm:"Sent home ‘drug-seeking’. Back next day with an infected, blocked kidney.",
   flip:"Across 13 years of US emergency visits, white patients in pain were more likely to get opioid pain relief than Black or Hispanic patients, including for kidney stones.",src:["Pletcher MJ et al. JAMA 2008","https://doi.org/10.1001/jama.2007.64"],
-  work:"Treat the pain and examine"},
+  tip:"Treat the pain you see. Writhing, colicky pain is a sign, not a request for drugs.",work:"Treat the pain and examine"},
  {n:"Joan",a:84,g:"f",tone:"#F3D2BA",hair:"#E8E8E8",job:"Retired teacher",say:"Her son: \"Mum's not herself since yesterday. Muddled and sleepy.\"",conf:8,fit:["age","shadow","rush"],
   dx:"Delirium from a urine infection",test:"Observations, a confusion screen, urine and bloods, and a look for the cause today.",harm:"Labelled ‘dementia’. Found on the floor two days later, septic.",
   flip:"Delirium is missed in many older patients, and is often mistaken for dementia or ‘just age’. It's a medical emergency with a cause.",src:["Inouye SK et al. Lancet 2014","https://doi.org/10.1016/S0140-6736(13)60688-1"],
-  work:"Look for the cause of the confusion"},
+  tip:"New confusion over hours to days is delirium until proven otherwise. Dementia comes on over months.",work:"Look for the cause of the confusion"},
  {n:"Kyle",a:38,g:"m",tone:"#EBC09A",hair:"#6B3E1F",job:"Truck driver",say:"\"Suddenly short of breath walking to the car. Calf's a bit sore too.\"",conf:9,fit:["weight","rush","anchor"],
   dx:"Pulmonary embolism",test:"Assess risk (Wells score), oxygen saturation, D-dimer or a CT pulmonary angiogram.",harm:"Told to lose weight. Collapsed at the depot the next morning.",
   flip:"Weight stigma leads to shorter consults, less examination and symptoms blamed on weight before they're assessed.",src:["Phelan SM et al. Obes Rev 2015","https://doi.org/10.1111/obr.12266"],
-  work:"Assess for a clot"},
+  tip:"Sudden breathlessness plus a sore calf is a clot until proven otherwise. Weight raises the risk; it isn't the diagnosis.",work:"Assess for a clot"},
  {n:"Tash",a:33,g:"f",tone:"#C98E62",hair:"#2A1A12",job:"Barista, on clozapine",say:"\"My chest hurts and I can't catch my breath. Heart's pounding.\"",conf:9,fit:["shadow","psych","stigma"],
   dx:"Myocarditis from clozapine",test:"ECG, troponin and CRP, and stop clozapine pending specialist advice.",harm:"Put down to ‘anxiety from her illness’. Admitted to ICU in heart failure.",
   flip:"Diagnostic overshadowing means physical symptoms in people with mental illness get blamed on the mental illness. They die years earlier, mostly from physical illness.",src:["Shefer G et al. PLOS One 2014","https://doi.org/10.1371/journal.pone.0111682"],
-  work:"ECG, troponin, review the clozapine"},
+  tip:"Chest pain and a racing heart in the first weeks of clozapine is myocarditis until proven otherwise. Check troponin and CRP.",work:"ECG, troponin, review the clozapine"},
  {n:"Rob",a:49,g:"m",tone:"#E2B48C",hair:"#3A2A1A",job:"Labourer, drinks heavily",say:"Partner: \"He fell last week. Now he's slurring and vomiting. He hasn't had a drink today.\"",conf:8,fit:["stigma","anchor","rush"],
   dx:"Subdural haematoma (bleed on the brain)",test:"A full neuro exam and an urgent CT head.",harm:"Sent home to ‘sleep it off’. Found unresponsive that night.",
   flip:"Health professionals often hold negative attitudes to people who use alcohol or drugs, which leads to less engagement and worse care.",src:["van Boekel LC et al. Drug Alcohol Depend 2013","https://doi.org/10.1016/j.drugalcdep.2013.02.018"],
-  work:"Examine and CT head"},
+  tip:"Never put new neurology down to alcohol without examining. A fall plus confusion needs a CT head.",work:"Examine and CT head"},
  {n:"Priya",a:41,g:"f",tone:"#B98060",hair:"#120E0E",job:"Accountant, ‘frequent attender’",say:"\"Back again, sorry. This headache is different. Worst when I lie down, and my vision blurs.\"",conf:9,fit:["anchor","gender","expert"],
   dx:"Raised pressure in the head (venous sinus thrombosis)",test:"Check the eyes for swollen optic discs, a neuro exam, and urgent brain imaging.",harm:"Told ‘your usual migraine’. Had a seizure at work three days later.",
   flip:"Anchoring on an old diagnosis is one of the commonest causes of missed diagnosis. A patient who comes back is telling you the first answer didn't fit.",src:["Croskerry P. Acad Med 2003","https://doi.org/10.1097/00001888-200308000-00003"],
-  work:"Examine the eyes and image"}
+  tip:"A headache the patient calls ‘different’ is a red flag, more so if it's worse lying down or the vision blurs. Look at the optic discs.",work:"Examine the eyes and image"}
 ];
 // The deck: each card is a bias with a harm. p = confidence drained, ang = upset added, min = minutes saved
 var D=[
@@ -183,7 +184,7 @@ function reveal(ok,why){
  var used=S.used.length?'<p class="used">You used: '+S.used.map(function(c){return "<b>"+B[c.b].n+"</b> ("+H[c.h].toLowerCase()+")"}).join(", ")+"</p>":"";
  app.innerHTML=bar()+'<div class="rv'+(ok?"":" miss")+'"><div class="rv-h">'+face(p,0,ok?"ok":"down")+'<div><span class="k">'+(ok?"You did the work":"The reveal")+'</span><h2>'+esc(p.dx)+"</h2></div></div>"+
  (ok?"<p>Found it. "+esc(p.test)+"</p>":"<p>"+esc(why)+" "+esc(p.harm)+"</p>"+used+"<p><b>What would have caught it:</b> "+esc(p.test)+"</p>")+
- '<div class="flip"><span class="k">The evidence</span><p style="margin:4px 0 6px">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></div></div>"+
+ '<div class="flip"><span class="k">The evidence</span><p style="margin:4px 0 6px">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></div>"+'<p class="tip"><b>💡 Teaching point:</b> '+esc(p.tip)+"</p></div>"+
  '<button class="go" id="nx">'+(S.i<P.length-1?"Next patient":"See your report")+"</button>";
  document.getElementById("nx").onclick=function(){S.i++;S.i<P.length?round():end()};
  window.scrollTo({top:app.getBoundingClientRect().top+window.scrollY-70,behavior:"smooth"});

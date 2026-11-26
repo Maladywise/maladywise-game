@@ -39,6 +39,15 @@ GAMES = [
       lede="You're the doctor, and every shortcut is a bias. Dismiss eight patients, watch how they react, then see what you missed.",
       masc="Flick the gas lamp, who knows exactly what gaslighting looks like", small="<i>Ageism, weight bias, stigma, overshadowing, racial and gender bias. Every line is something real patients report hearing.</i>", path="lab/gaslitis-r8q/"),
 ]
+VOTE_CSS = (".lb-vote{margin:18px auto 0;max-width:520px;text-align:center;padding:14px;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}"
+            ".lb-vote b{display:block;font-size:16px}.lb-vote span{display:block;font-size:13px;color:var(--muted);margin:2px 0 10px}"
+            ".lb-vote div{display:flex;gap:8px;justify-content:center}.lb-vote button{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:9px 16px;font:600 14px Poppins,system-ui,sans-serif;cursor:pointer}"
+            ".lb-vote button.on{border-color:var(--brand,#4A3480);background:color-mix(in srgb,var(--brand,#4A3480) 14%,transparent)}")
+# Thumbs poll (27 Nov 2026): counted as GoatCounter events labs-vote/<game>/up|down; one vote per browser, can change it.
+VOTE_JS = ('(function(){var k="mw-labvote-%s",box=document.getElementById("lb-vote");if(!box)return;var v=null;try{v=localStorage.getItem(k)}catch(e){}'
+           'function show(){box.querySelectorAll("button").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-v")===v)});if(v)box.querySelector("span").textContent="Thanks. Vote counted.";}'
+           'box.querySelectorAll("button").forEach(function(b){b.onclick=function(){v=b.getAttribute("data-v");try{localStorage.setItem(k,v)}catch(e){}'
+           'if(window.MW_track)MW_track("labs-vote/"+k.slice(11)+"/"+v,"Labs vote "+k.slice(11)+" "+v);show();}});show();})();\n')
 for G in GAMES:
     src = open(ROOT + "_scripts/lab_src/" + G["slug"] + ".html", encoding="utf-8").read()
     css = "\n".join(re.findall(r"<style>(.*?)</style>", src, re.S))
@@ -51,7 +60,7 @@ for G in GAMES:
     h = re.sub(r"<title>.*?</title>", "<title>%s | Malady Wise</title>" % G["title"], h)
     h = re.sub(r'<meta name="description"[^>]*>', '<meta name="description" content="%s">' % G["desc"], h)
     h = re.sub(r'<script type="application/ld\+json" id="mw-breadcrumb-ld">.*?</script>\n?', "", h, flags=re.S)
-    h = re.sub(r"<style>:root\{--mg-a.*?</style>", "<style>:root{--mg-a:%s;--mg-b:%s;--mg-hi:#FFE08A}\n%s</style>" % (G["a"], G["b"], css), h, count=1, flags=re.S)
+    h = re.sub(r"<style>:root\{--mg-a.*?</style>", "<style>:root{--mg-a:%s;--mg-b:%s;--mg-hi:#FFE08A}\n%s\n%s</style>" % (G["a"], G["b"], css, VOTE_CSS), h, count=1, flags=re.S)
     h = re.sub(r'<style>\.nm-rv.*?</style>\n?', "", h, flags=re.S)
     h = re.sub(r'<meta property="og:[^>]*>\n?|<meta name="twitter:[^>]*>\n?', "", h)
     main = ('<main class="wrap mg-page">\n  <section class="mg-intro" id="lb-intro">\n'
@@ -59,6 +68,8 @@ for G in GAMES:
             '    <p class="mg-kick">%s</p>\n    <h1>%s</h1>\n    <p class="mg-lede">%s</p>\n'
             '    <button class="big" type="button" id="lb-play">Start</button>\n    <p class="mg-small">%s</p>\n  </section>\n'
             '  <section class="lb-game" id="lb-game" hidden>\n%s\n  </section>\n'
+            '  <section class="lb-vote" id="lb-vote"><b>Keep this game?</b><span>Labs games that get the most thumbs up join the daily puzzles.</span>'
+            '<div><button type="button" data-v="up" aria-label="Thumbs up">\U0001F44D Keep it</button><button type="button" data-v="down" aria-label="Thumbs down">\U0001F44E Not for me</button></div></section>\n'
             '  <p class="mg-foot"><a href="/">&larr; Back to the puzzles</a> · <a href="/contact/">Send feedback</a></p>\n'
             ) % (G["slug"], G["masc"], G["kick"], G["h1"], G["lede"], G["small"], body)
     i = h.index('<main class="wrap mg-page">'); j = h.index("  <footer class=\"site\">")
@@ -67,7 +78,7 @@ for G in GAMES:
     # drop Nomulous scripts, add this game's script + start wiring
     h = re.sub(r'<script defer src="/assets/mg.js[^"]*"></script>\n<script defer src="signs.js[^"]*"></script>\n<script defer src="facts.js[^"]*"></script>\n<script defer src="nomulous.js[^"]*"></script>\n', "", h)
     start = ('<script>\ndocument.getElementById("lb-play").onclick=function(){document.getElementById("lb-intro").hidden=true;var g=document.getElementById("lb-game");g.hidden=false;'
-             'if(window.LB_start)LB_start();g.scrollIntoView({behavior:"smooth",block:"start"});};\n' + js + "\n</script>\n")
+             'if(window.LB_start)LB_start();g.scrollIntoView({behavior:"smooth",block:"start"});};\n' + VOTE_JS % G["slug"] + js + "\n</script>\n")
     h = h.replace("</body>", start + "</body>")
     open(ROOT + G["path"] + "index.html", "w", encoding="utf-8").write(h)
     print("wrote", G["path"])
