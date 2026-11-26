@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, rows[5] ('#' = block); Sundays: rows[7] = Big Gridectomy (7x7), across/down:[{n,r,c,len,clue}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "10";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "11";
   // Normie mode: everyday clues from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Gridectomy (Normie)" : "Gridectomy";
   var root = document.getElementById("grx");
@@ -301,5 +301,21 @@
     });
   }
   window.MW_openArchive = function () { var d = $("archive"); d.open = true; d.scrollIntoView({ behavior: "smooth", block: "start" }); };
-  buildKb(); tick(); setInterval(tick, 60000); show(today);
+  // Fit (27 Nov 2026): on short screens the sticky clue bar and keyboard covered the bottom row.
+  // Size the grid so grid + dock fit the window, then nudge the page so the whole grid sits above the dock.
+  function fit() {
+    var g = $("grid"), d = $("dock"); if (!g || !d) return;
+    var kb = d.querySelector(".kb");
+    if (!kb || kb.hidden || d.offsetParent === null) { g.style.width = ""; return; }
+    var maxW = root.classList.contains("big") ? 460 : 380, room = window.innerHeight - d.offsetHeight - 64 - (document.querySelector("header.bar") ? 61 : 0);
+    g.style.width = "min(100%," + Math.max(190, Math.min(maxW, room)) + "px)";
+    var bar = document.querySelector("header.bar"), top = (bar ? bar.getBoundingClientRect().bottom : 0) + 8;
+    var r = g.getBoundingClientRect(), limit = window.innerHeight - d.offsetHeight - 6;
+    if (r.bottom > limit && r.top > top) window.scrollBy(0, Math.min(r.top - top, r.bottom - limit));
+  }
+  var fitT; function fitSoon() { clearTimeout(fitT); fitT = setTimeout(fit, 60); }
+  window.addEventListener("resize", fitSoon);
+  if (window.ResizeObserver) new ResizeObserver(fitSoon).observe($("dock"));
+  $("grid").addEventListener("click", fitSoon);
+  buildKb(); tick(); setInterval(tick, 60000); show(today); setTimeout(fit, 300);
 })();

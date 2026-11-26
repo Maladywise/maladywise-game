@@ -1266,7 +1266,8 @@
      "CRICK",
      "WILKINS",
      "FRANKLIN"
-    ]
+    ],
+    "info": "1953: Watson and Crick built the model; Wilkins and Franklin's X-ray images (Photo 51) showed the helix."
    },
    {
     "label": "Pack a digoxin-like heart poison",
@@ -1276,7 +1277,8 @@
      "CANE TOAD",
      "MILKWEED",
      "LILY OF THE VALLEY"
-    ]
+    ],
+    "info": "All contain cardiac glycosides, which block the sodium-potassium pump just like digoxin. Cane toads ooze bufadienolides."
    },
    {
     "label": "Women who changed medicine",
@@ -1286,17 +1288,19 @@
      "ELION",
      "KARIKO",
      "MCCLINTOCK"
-    ]
+    ],
+    "info": "Tu Youyou (artemisinin), Gertrude Elion (azathioprine, aciclovir), Katalin Karikó (mRNA vaccines), Barbara McClintock (jumping genes). All Nobel winners."
    },
    {
     "label": "Anagrams of medical greats",
     "level": 4,
     "words": [
-     "CHINA",
      "HOCK",
+     "ANGEL",
      "LEAD",
-     "MORSE"
-    ]
+     "LOSER"
+    ],
+    "info": "HOCK → KOCH (TB bacillus) · LEAD → DALE (acetylcholine) · ANGEL → GALEN (Roman physician) · LOSER → OSLER (father of bedside teaching)."
    }
   ]
  },
@@ -1313,7 +1317,8 @@
      "FLASK",
      "BURETTE",
      "PIPETTE"
-    ]
+    ],
+    "info": "A burette delivers measured volumes in titrations; a pipette transfers a fixed volume."
    },
    {
     "label": "Microbe names meaning '-loving'",
@@ -1323,7 +1328,8 @@
      "PNEUMOPHILA",
      "HYDROPHILA"
     ],
-    "level": 2
+    "level": 2,
+    "info": "-phil- is Greek for 'loving'. Haemophilus loves blood (needs factors X and V), Legionella pneumophila loves lungs, Aeromonas hydrophila loves water."
    },
    {
     "label": "Signs named after food",
@@ -1333,7 +1339,8 @@
      "ANCHOVY SAUCE",
      "REDCURRANT JELLY",
      "STRAWBERRY TONGUE"
-    ]
+    ],
+    "info": "Nutmeg liver: chronic congestion (heart failure). Anchovy sauce: amoebic liver abscess pus. Redcurrant jelly: intussusception stool. Strawberry tongue: scarlet fever, Kawasaki."
    },
    {
     "label": "___ culture",
@@ -1343,7 +1350,8 @@
      "POP",
      "CANCEL",
      "SUB"
-    ]
+    ],
+    "info": "CELL culture (lab), POP culture, CANCEL culture, SUBculture (also a lab word: re-growing a colony)."
    }
   ]
  },
@@ -1360,7 +1368,8 @@
      "OMPHALOPAGUS",
      "CRANIOPAGUS",
      "PYGOPAGUS"
-    ]
+    ],
+    "info": "-pagus means 'fixed'. Joined at the chest (thoraco-), belly button (omphalo-), skull (cranio-) or buttocks (pygo-). Thoraco-omphalopagus is the most common."
    },
    {
     "label": "Kinds of twin pregnancy",
@@ -1370,7 +1379,8 @@
      "MODI",
      "MOMO",
      "DIZYGOTIC"
-    ]
+    ],
+    "info": "Didi = two placentas, two sacs. Modi = one placenta, two sacs. Momo = one of each (cord entanglement risk). Dizygotic = non-identical, from two eggs."
    },
    {
     "label": "Monochorionic twin complications",
@@ -1380,7 +1390,8 @@
      "TAPS",
      "SIUGR",
      "ACARDIAC"
-    ]
+    ],
+    "info": "TTTS = twin-twin transfusion. TAPS = twin anaemia-polycythaemia. sIUGR = selective growth restriction. Acardiac twin = TRAP sequence. All need a shared placenta."
    },
    {
     "label": "Twins: whole words saying the same bit twice",
@@ -1390,7 +1401,8 @@
      "TARTAR",
      "BERIBERI",
      "TSETSE"
-    ]
+    ],
+    "info": "MUR-MUR, TAR-TAR, BERI-BERI (Sinhalese 'I can't, I can't'), TSE-TSE."
    }
   ]
  },
@@ -1407,7 +1419,8 @@
      "HEART",
      "LUNGS",
      "OATMEAL"
-    ]
+    ],
+    "info": "Sheep's 'pluck' (liver, heart, lungs) with oatmeal, suet and onion. Burns Night favourite."
    },
    {
     "label": "Medical pioneers",
@@ -1417,17 +1430,19 @@
      "SIMPSON",
      "INGLIS",
      "LIND"
-    ]
+    ],
+    "info": "Scots all: Fleming (penicillin), Simpson (chloroform), Elsie Inglis (WW1 women's hospitals), James Lind (lemons for scurvy)."
    },
    {
-    "label": "Dialect words for feeling rough",
+    "label": "Scots words for feeling rough",
     "level": 3,
     "words": [
      "BOAK",
      "WABBIT",
      "PEELY-WALLY",
-     "OXTER"
-    ]
+     "PUGGLED"
+    ],
+    "info": "Scots: boak = retch, wabbit = exhausted, peely-wally = pale and sickly, puggled = worn out."
    },
    {
     "label": "Hiding a loch",
@@ -1437,7 +1452,8 @@
      "NUMBNESS",
      "DEAFNESS",
      "DIZZINESS"
-    ]
+    ],
+    "info": "Each hides NESS (Loch Ness): weakNESS, numbNESS, deafNESS, dizziNESS."
    }
   ]
  }

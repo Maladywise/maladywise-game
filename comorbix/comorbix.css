@@ -28,6 +28,7 @@ html[data-motion="reduce"] #cmx *{animation:none!important}
 @keyframes cmxpop{from{transform:scale(.96);opacity:.4}to{transform:none;opacity:1}}
 #cmx .solved b{display:block;font:700 13px var(--body);letter-spacing:.06em;text-transform:uppercase}
 #cmx .solved span{font-size:13px}
+#cmx .solved .cmx-info{display:block;margin-top:5px;font-size:12px;line-height:1.35;opacity:.85;max-width:46ch;margin-left:auto;margin-right:auto}
 #cmx .lv1{background:var(--l1)} #cmx .lv2{background:var(--l2)} #cmx .lv3{background:var(--l3)} #cmx .lv4{background:var(--l4)} #cmx .lv5{background:var(--l5)}
 #cmx.super .t{min-height:58px;font-size:clamp(8.5px,2.4vw,13px)} #cmx.super .t.long{font-size:clamp(7.5px,1.95vw,11px)} #cmx.super .grid{gap:5px} #cmx.super .t.xl{font-size:clamp(7px,2.05vw,10px);word-break:normal;overflow-wrap:anywhere;padding:6px 2px}
 #cmx .mist{display:flex;justify-content:center;align-items:center;gap:8px;font-size:14px;color:var(--muted)}

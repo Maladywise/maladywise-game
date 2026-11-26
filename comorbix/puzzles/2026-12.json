@@ -13,7 +13,8 @@
      "PISIFORM",
      "HAMATE",
      "CAPITATE"
-    ]
+    ],
+    "info": "Eight carpal bones. The scaphoid is the one most often broken, and it can be missed on the first X-ray."
    },
    {
     "label": "___ stones",
@@ -24,7 +25,8 @@
      "TONSIL",
      "PULP",
      "BLADDER"
-    ]
+    ],
+    "info": "GALLstones, KIDNEY stones, TONSIL stones (tonsilloliths), PULP stones (in teeth), BLADDER stones."
    },
    {
     "label": "Eponymous fractures",
@@ -35,7 +37,8 @@
      "BARTON",
      "BENNETT",
      "ROLANDO"
-    ]
+    ],
+    "info": "Colles: wrist, dorsal tilt. Smith: wrist, volar tilt. Barton: wrist rim plus dislocation. Bennett and Rolando: base of the thumb."
    },
    {
     "label": "Nobel Prize in Medicine winners",
@@ -46,7 +49,8 @@
      "ECCLES",
      "BANTING",
      "FLEMING"
-    ]
+    ],
+    "info": "Florey (penicillin) and Burnet (immune tolerance) and Eccles (synapses) were Australian. Banting (insulin) was Canadian, Fleming Scottish."
    },
    {
     "label": "HIV research pioneers",
@@ -57,7 +61,8 @@
      "BARRÉ-SINOUSSI",
      "HO",
      "COOPER"
-    ]
+    ],
+    "info": "Gallo and Montagnier, Barré-Sinoussi (Nobel 2008) found HIV. David Ho pushed combination therapy. David Cooper (Australian) led early HIV trials."
    }
   ],
   "super": true
@@ -75,7 +80,8 @@
      "OEDEMA",
      "PND",
      "FATIGUE"
-    ]
+    ],
+    "info": "PND = paroxysmal nocturnal dyspnoea: waking up gasping. Orthopnoea: breathless lying flat."
    },
    {
     "label": "Machines that back up the heart",
@@ -85,7 +91,8 @@
      "BALLOON PUMP",
      "ICD",
      "PACEMAKER"
-    ]
+    ],
+    "info": "LVAD = left ventricular assist device. Intra-aortic balloon pump. ICD shocks dangerous rhythms. Pacemakers fix slow ones."
    },
    {
     "label": "Stand-ins for other body parts",
@@ -95,7 +102,8 @@
      "COCHLEAR IMPLANT",
      "JOINT REPLACEMENT",
      "INTRAOCULAR LENS"
-    ]
+    ],
+    "info": "Dialysis does the kidney's job, cochlear implants the ear's, joint replacements the joint's, an intraocular lens the eye's own lens (after cataract surgery)."
    },
    {
     "label": "Hidden ART",
@@ -105,7 +113,8 @@
      "CARTILAGE",
      "PARTOGRAM",
      "HEARTBURN"
-    ]
+    ],
+    "info": "Each hides ART: ARTery, cARTilage, pARTogram, heARTburn."
    }
   ]
  },
@@ -122,7 +131,8 @@
      "CAPTIONS",
      "RAMPS",
      "HEARING LOOP"
-    ]
+    ],
+    "info": "A hearing loop sends sound straight to hearing aids set to the T (telecoil) setting."
    },
    {
     "label": "Sign languages",
@@ -132,7 +142,8 @@
      "ASL",
      "BSL",
      "NZSL"
-    ]
+    ],
+    "info": "Auslan (Australia), ASL (American), BSL (British), NZSL. Auslan, BSL and NZSL share a family; ASL is unrelated."
    },
    {
     "label": "Paralympic champions",
@@ -142,7 +153,8 @@
      "SAUVAGE",
      "VERGEER",
      "ALCOTT"
-    ]
+    ],
+    "info": "Tanni Grey-Thompson, Louise Sauvage, Esther Vergeer, Dylan Alcott: wheelchair racing and tennis greats."
    },
    {
     "label": "___ dog",
@@ -152,7 +164,8 @@
      "SERVICE",
      "HEARING",
      "HOT"
-    ]
+    ],
+    "info": "GUIDE dog, SERVICE dog, HEARING dog, HOT dog."
    }
   ]
  },
@@ -169,7 +182,8 @@
      "MYOSIN",
      "TROPONIN",
      "TITIN"
-    ]
+    ],
+    "info": "Titin is the largest known human protein. Troponin leaks from damaged heart muscle."
    },
    {
     "label": "Muscle fuel stores",
@@ -179,7 +193,8 @@
      "CREATINE PHOSPHATE",
      "GLYCOGEN",
      "FATTY ACIDS"
-    ]
+    ],
+    "info": "ATP lasts seconds, creatine phosphate about 10 seconds, glycogen minutes to hours, fat for the long haul."
    },
    {
     "label": "Medicines modelled on animal venom",
@@ -189,7 +204,8 @@
      "EPTIFIBATIDE",
      "ZICONOTIDE",
      "EXENATIDE"
-    ]
+    ],
+    "info": "Captopril: Brazilian pit viper. Eptifibatide: rattlesnake. Ziconotide: cone snail. Exenatide: Gila monster saliva."
    },
    {
     "label": "Start with the Greek for 'fast'",
@@ -199,7 +215,8 @@
      "TACHYPNOEA",
      "TACHYPHYLAXIS",
      "TACHYZOITE"
-    ]
+    ],
+    "info": "Tachy- = fast. Tachyphylaxis: a drug quickly stops working. Tachyzoite: the fast-dividing form of Toxoplasma."
    }
   ]
  },
@@ -216,7 +233,8 @@
      "PLATELETS",
      "BONE MARROW",
      "BREAST MILK"
-    ]
+    ],
+    "info": "Australia's Lifeblood collects plasma, platelets and breast milk; bone marrow donors join a registry."
    },
    {
     "label": "Antibiotics from soil bacteria",
@@ -226,7 +244,8 @@
      "VANCOMYCIN",
      "TETRACYCLINE",
      "ERYTHROMYCIN"
-    ]
+    ],
+    "info": "Streptomycin, vancomycin, tetracycline and erythromycin all come from soil actinomycetes."
    },
    {
     "label": "Medicines from moulds and fungi",
@@ -236,7 +255,8 @@
      "CICLOSPORIN",
      "GRISEOFULVIN",
      "LOVASTATIN"
-    ]
+    ],
+    "info": "Penicillin (Penicillium), ciclosporin (Tolypocladium), griseofulvin (Penicillium griseofulvum), lovastatin (Aspergillus)."
    },
    {
     "label": "___ bank",
@@ -246,7 +266,8 @@
      "RIVER",
      "PIGGY",
      "FOOD"
-    ]
+    ],
+    "info": "MEMORY bank, RIVER bank, PIGGY bank, FOOD bank."
    }
   ]
  },
@@ -263,7 +284,8 @@
      "SAIRAALA",
      "KRAPULA",
      "TERVEYSKESKUS"
-    ]
+    ],
+    "info": "Finnish: lääkäri = doctor, sairaala = hospital, krapula = hangover, terveyskeskus = health centre."
    },
    {
     "label": "North Karelia Project targets",
@@ -273,7 +295,8 @@
      "SALT",
      "BLOOD PRESSURE",
      "CHOLESTEROL"
-    ]
+    ],
+    "info": "Finland's 1972 North Karelia Project cut heart deaths in working-age men by about 80% over 35 years."
    },
    {
     "label": "Rare inherited diseases from one small nation",
@@ -283,7 +306,8 @@
      "MULIBREY NANISM",
      "NORTHERN EPILEPSY",
      "AGU"
-    ]
+    ],
+    "info": "Part of the 'Finnish disease heritage', about 36 rare diseases common in Finland. AGU = aspartylglucosaminuria."
    },
    {
     "label": "Hidden fish part (FIN)",
@@ -293,7 +317,8 @@
      "PARAFFIN",
      "DEFINITIVE",
      "FINGER"
-    ]
+    ],
+    "info": "Each hides FIN: FINasteride, paraFFIN, deFINitive, FINger."
    }
   ]
  },
@@ -310,7 +335,8 @@
      "FUSELAGE",
      "COCKPIT",
      "RUDDER"
-    ]
+    ],
+    "info": "The rudder steers left and right; the fuselage is the body."
    },
    {
     "label": "Flying health problems",
@@ -320,7 +346,8 @@
      "DVT",
      "BAROTRAUMA",
      "HYPOXIA"
-    ]
+    ],
+    "info": "DVT risk rises on flights over about 4 hours. Cabins are pressurised to about 2,400 m, so oxygen levels drop a little."
    },
    {
     "label": "Ways to clear your ears on descent",
@@ -330,7 +357,8 @@
      "YAWNING",
      "VALSALVA",
      "CHEWING GUM"
-    ]
+    ],
+    "info": "All open the Eustachian tube. Valsalva: pinch your nose, close your mouth, blow gently."
    },
    {
     "label": "___ pressure",
@@ -340,7 +368,8 @@
      "BLOOD",
      "PEER",
      "WATER"
-    ]
+    ],
+    "info": "AIR pressure, BLOOD pressure, PEER pressure, WATER pressure."
    }
   ]
  },
@@ -358,7 +387,8 @@
      "BYSSINOSIS",
      "BERYLLIOSIS",
      "SIDEROSIS"
-    ]
+    ],
+    "info": "Silica (stone), coal (anthrac-), cotton (byssin-), beryllium, iron (sider-)."
    },
    {
     "label": "Nail signs",
@@ -369,7 +399,8 @@
      "LEUKONYCHIA",
      "PITTING",
      "BEAU'S LINES"
-    ]
+    ],
+    "info": "Koilonychia = spoon nails (iron deficiency). Onycholysis = lifting. Leukonychia = white. Pitting = psoriasis. Beau's lines = past severe illness."
    },
    {
     "label": "Signs of endocarditis",
@@ -380,7 +411,8 @@
      "ROTH SPOTS",
      "SPLINTERS",
      "MURMUR"
-    ]
+    ],
+    "info": "Osler nodes: painful. Janeway lesions: painless. Roth spots: retina. Splinter haemorrhages under nails."
    },
    {
     "label": "Causes of clubbing",
@@ -391,7 +423,8 @@
      "CIRRHOSIS",
      "MESOTHELIOMA",
      "EMPYEMA"
-    ]
+    ],
+    "info": "Clubbing is never from COPD alone. Think cancer, pus (empyema, abscess, endocarditis), fibrosis, cirrhosis."
    },
    {
     "label": "Start with a fish",
@@ -402,7 +435,8 @@
      "RAYNAUD",
      "CODEINE",
      "CHARCOT"
-    ]
+    ],
+    "info": "CARPal, SOLEus, RAYnaud, CODeine, CHARcot."
    }
   ],
   "super": true
@@ -420,7 +454,8 @@
      "BENEFICENCE",
      "NON-MALEFICENCE",
      "JUSTICE"
-    ]
+    ],
+    "info": "Beauchamp and Childress, 1979: autonomy, beneficence, non-maleficence, justice."
    },
    {
     "label": "Observational study designs",
@@ -430,7 +465,8 @@
      "CASE-CONTROL",
      "CROSS-SECTIONAL",
      "ECOLOGICAL"
-    ]
+    ],
+    "info": "Cohort follows people forward; case-control looks back; cross-sectional is a snapshot; ecological compares groups, not people."
    },
    {
     "label": "Randomised trial designs",
@@ -440,7 +476,8 @@
      "CROSSOVER",
      "FACTORIAL",
      "CLUSTER"
-    ]
+    ],
+    "info": "Crossover: everyone gets both treatments in turn. Factorial: tests two treatments at once. Cluster: randomises groups like practices."
    },
    {
     "label": "Start with a Greek letter",
@@ -450,7 +487,8 @@
      "CHICKENPOX",
      "RHODOPSIN",
      "TAUOPATHY"
-    ]
+    ],
+    "info": "PSI-ttacosis, CHI-ckenpox, RHO-dopsin, TAU-opathy."
    }
   ]
  },
@@ -467,7 +505,8 @@
      "PRIONS",
      "HIV",
      "TELOMERASE"
-    ]
+    ],
+    "info": "Nobel Medicine prizes: H. pylori (2005, Marshall and Warren, Perth), prions (1997), HIV (2008), telomerase (2009)."
    },
    {
     "label": "Peace Prize winners in health",
@@ -477,7 +516,8 @@
      "SCHWEITZER",
      "MUKWEGE",
      "RED CROSS"
-    ]
+    ],
+    "info": "MSF (1999), Albert Schweitzer (1952), Denis Mukwege (2018), Red Cross (three times)."
    },
    {
     "label": "Chemistry breakthroughs with a health link",
@@ -487,7 +527,8 @@
      "PCR",
      "GFP",
      "PHAGE DISPLAY"
-    ]
+    ],
+    "info": "All won the Chemistry Nobel: CRISPR 2020, PCR 1993, GFP 2008, phage display 2018."
    },
    {
     "label": "Homophones of award words",
@@ -497,7 +538,8 @@
      "PIECE",
      "PRIES",
      "GOALED"
-    ]
+    ],
+    "info": "MEDDLE = medal, PIECE = peace, PRIES = prize, GOALED = gold."
    }
   ]
  },
@@ -514,7 +556,8 @@
      "HAPE",
      "HACE",
      "MONGE"
-    ]
+    ],
+    "info": "AMS = acute mountain sickness. HAPE = fluid on the lungs, HACE = brain swelling. Monge's = chronic mountain sickness."
    },
    {
     "label": "How the body adapts to altitude",
@@ -524,7 +567,8 @@
      "POLYCYTHAEMIA",
      "DIURESIS",
      "RAISED EPO"
-    ]
+    ],
+    "info": "Within hours you breathe harder; over weeks EPO rises and you make more red cells."
    },
    {
     "label": "Everest firsts",
@@ -534,7 +578,8 @@
      "NORGAY",
      "TABEI",
      "MESSNER"
-    ]
+    ],
+    "info": "Hillary and Norgay (1953), Junko Tabei (first woman, 1975), Reinhold Messner (first without oxygen, 1978)."
    },
    {
     "label": "Hidden ALP",
@@ -544,7 +589,8 @@
      "SCALPEL",
      "ALPRAZOLAM",
      "PALPABLE"
-    ]
+    ],
+    "info": "Each hides ALP: pALPitation, scALPel, ALPrazolam, pALPable."
    }
   ]
  },
@@ -561,7 +607,8 @@
      "WORKFORCE",
      "FINANCING",
      "GOVERNANCE"
-    ]
+    ],
+    "info": "WHO's six blocks also include information systems and medicines."
    },
    {
     "label": "Social determinants of health",
@@ -571,7 +618,8 @@
      "EDUCATION",
      "INCOME",
      "EMPLOYMENT"
-    ]
+    ],
+    "info": "Where people live, learn, earn and work shapes health more than health care does."
    },
    {
     "label": "Isaacs' geriatric giants",
@@ -581,7 +629,8 @@
      "INSTABILITY",
      "INCONTINENCE",
      "INTELLECTUAL IMPAIRMENT"
-    ]
+    ],
+    "info": "Bernard Isaacs, 1960s: the 'four I's' of frail older people."
    },
    {
     "label": "Anagrams of organs",
@@ -591,7 +640,8 @@
      "VILER",
      "SLUNG",
      "BAIRN"
-    ]
+    ],
+    "info": "EARTH → HEART · VILER → LIVER · SLUNG → LUNGS · BAIRN → BRAIN."
    }
   ]
  },
@@ -608,7 +658,8 @@
      "HYPOVOLAEMIA",
      "HYPOTHERMIA",
      "HYPERKALAEMIA"
-    ]
+    ],
+    "info": "Four Hs: hypoxia, hypovolaemia, hypothermia, hyper/hypokalaemia (and other metabolic)."
    },
    {
     "label": "The Ts of reversible cardiac arrest",
@@ -618,7 +669,8 @@
      "TOXINS",
      "THROMBOSIS",
      "TENSION PNEUMOTHORAX"
-    ]
+    ],
+    "info": "Four Ts: tamponade, toxins, thrombosis (heart or lung), tension pneumothorax."
    },
    {
     "label": "Resuscitation pioneers",
@@ -628,7 +680,8 @@
      "ZOLL",
      "LOWN",
      "PANTRIDGE"
-    ]
+    ],
+    "info": "Beck: first defibrillation (1947). Zoll: external pacing. Lown: DC cardioversion. Pantridge: first mobile coronary care unit (Belfast)."
    },
    {
     "label": "Hidden AMP, not a reversible cause",
@@ -638,7 +691,8 @@
      "AMPOULE",
      "CLAMP",
      "HIPPOCAMPUS"
-    ]
+    ],
+    "info": "Each hides AMP: crAMP, AMPoule, clAMP, hippocAMPus."
    }
   ]
  },
@@ -655,7 +709,8 @@
      "PHLEGM",
      "YELLOW BILE",
      "BLACK BILE"
-    ]
+    ],
+    "info": "Hippocrates and Galen: illness came from an imbalance of the four humours."
    },
    {
     "label": "Mostly abandoned treatments",
@@ -665,7 +720,8 @@
      "PURGING",
      "BLISTERING",
      "TREPANNING"
-    ]
+    ],
+    "info": "Bloodletting survives only for a few conditions, such as haemochromatosis."
    },
    {
     "label": "Causes of a severe sore throat",
@@ -675,7 +731,8 @@
      "QUINSY",
      "GLANDULAR FEVER",
      "TONSILLITIS"
-    ]
+    ],
+    "info": "Epiglottitis and quinsy can block the airway. Drooling and muffled voice are red flags."
    },
    {
     "label": "Blood ___",
@@ -685,7 +742,8 @@
      "HOUND",
      "MOON",
      "DIAMOND"
-    ]
+    ],
+    "info": "BLOOD ORANGE, BLOODHOUND, BLOOD MOON, BLOOD DIAMOND."
    }
   ]
  },
@@ -703,7 +761,8 @@
      "NIACIN",
      "COBALAMIN",
      "RETINOL"
-    ]
+    ],
+    "info": "B1 thiamine, B2 riboflavin, B3 niacin, B12 cobalamin, A retinol."
    },
    {
     "label": "Deficiency diseases",
@@ -714,7 +773,8 @@
      "PELLAGRA",
      "RICKETS",
      "WERNICKE"
-    ]
+    ],
+    "info": "Scurvy (vitamin C), beriberi and Wernicke (B1), pellagra (B3), rickets (vitamin D)."
    },
    {
     "label": "Explorers",
@@ -725,7 +785,8 @@
      "MAGELLAN",
      "TASMAN",
      "COLUMBUS"
-    ]
+    ],
+    "info": "Cook, Drake, Magellan, Tasman, Columbus. Scurvy killed more sailors than battles did."
    },
    {
     "label": "Eponymous neuroanatomy",
@@ -736,7 +797,8 @@
      "SYLVIUS",
      "ROLANDO",
      "MONRO"
-    ]
+    ],
+    "info": "Broca's area, circle of Willis, Sylvian fissure, Rolandic fissure, foramen of Monro."
    },
    {
     "label": "Hide a vehicle",
@@ -747,7 +809,8 @@
      "VANCOMYCIN",
      "CABERGOLINE",
      "TRAMADOL"
-    ]
+    ],
+    "info": "CARtilage, BUSulfan, VANcomycin, CABergoline, TRAMadol."
    }
   ],
   "super": true
@@ -765,7 +828,8 @@
      "RINNE",
      "AUDIOGRAM",
      "TYMPANOMETRY"
-    ]
+    ],
+    "info": "Weber and Rinne use a 512 Hz tuning fork to tell conductive from sensorineural loss."
    },
    {
     "label": "Causes of hearing loss",
@@ -775,7 +839,8 @@
      "PRESBYCUSIS",
      "MENIERE",
      "NOISE"
-    ]
+    ],
+    "info": "Presbycusis: age-related, high pitches first. Otosclerosis: stapes fixes in place."
    },
    {
     "label": "Composers who lost their hearing",
@@ -785,7 +850,8 @@
      "SMETANA",
      "FAURE",
      "VAUGHAN WILLIAMS"
-    ]
+    ],
+    "info": "Beethoven, Smetana, Fauré and Vaughan Williams all kept composing after losing hearing."
    },
    {
     "label": "-phobias that are symptoms, not fears",
@@ -795,7 +861,8 @@
      "OSMOPHOBIA",
      "HYDROPHOBIA"
     ],
-    "level": 4
+    "level": 4,
+    "info": "Phonophobia (sound) and photophobia (light) in migraine; osmophobia (smell); hydrophobia in rabies."
    }
   ]
  },
@@ -812,7 +879,8 @@
      "WRIGHT",
      "BLERIOT",
      "COLEMAN"
-    ]
+    ],
+    "info": "Amelia Earhart, the Wright brothers, Louis Blériot, Bessie Coleman (first Black woman pilot)."
    },
    {
     "label": "Flying Doctor pioneers",
@@ -822,7 +890,8 @@
      "TRAEGER",
      "AFFLECK",
      "WELCH"
-    ]
+    ],
+    "info": "Royal Flying Doctor Service, 1928: John Flynn's idea, Alfred Traeger's pedal radio, Arthur Affleck flew, Dr Kenyon St Vincent Welch was first doctor."
    },
    {
     "label": "Gas laws",
@@ -832,7 +901,8 @@
      "DALTON",
      "HENRY",
      "CHARLES"
-    ]
+    ],
+    "info": "Boyle (pressure-volume), Dalton (partial pressures), Henry (gas dissolving: the bends), Charles (volume-temperature)."
    },
    {
     "label": "Hidden AIR",
@@ -842,7 +912,8 @@
      "DAIRY",
      "STAIRS",
      "DESPAIR"
-    ]
+    ],
+    "info": "Each hides AIR: hAIRline fracture, dAIRy, stAIRs, despAIR."
    }
   ]
  },
@@ -859,7 +930,8 @@
      "POLIO",
      "DTPA",
      "VARICELLA"
-    ]
+    ],
+    "info": "Catch-up vaccines are free in Australia for refugees and some migrants."
    },
    {
     "label": "New-arrival refugee health screen",
@@ -869,7 +941,8 @@
      "HEPATITIS C",
      "HIV",
      "MALARIA"
-    ]
+    ],
+    "info": "Screening after arrival often includes TB, hepatitis B and C, HIV, strongyloides and malaria."
    },
    {
     "label": "Neglected tropical diseases",
@@ -879,7 +952,8 @@
      "LEISHMANIASIS",
      "TRACHOMA",
      "BURULI ULCER"
-    ]
+    ],
+    "info": "Chagas (kissing bugs), leishmaniasis (sandflies), trachoma (leading infectious blindness), Buruli ulcer (also in Victoria)."
    },
    {
     "label": "Hidden countries",
@@ -889,7 +963,8 @@
      "ABNORMALITY",
      "MALTASE",
      "WOMAN"
-    ]
+    ],
+    "info": "inCUBAtor, abnorMALIty, MALTAse, wOMAN."
    }
   ]
  },
@@ -906,7 +981,8 @@
      "TUBERCULOSIS",
      "CEREBRAL PALSY",
      "RENAL TUBULAR ACIDOSIS"
-    ]
+    ],
+    "info": "Dickens never named it. Rickets and TB are the old favourites; renal tubular acidosis was proposed in 1992."
    },
    {
     "label": "Victorian occupational diseases",
@@ -916,7 +992,8 @@
      "POTTER'S ROT",
      "GRINDER'S ASTHMA",
      "WOOLSORTER'S DISEASE"
-    ]
+    ],
+    "info": "Phossy jaw: white phosphorus in match factories. Potter's rot: silicosis. Woolsorter's disease: anthrax."
    },
    {
     "label": "Victorian public-health reformers",
@@ -926,7 +1003,8 @@
      "FARR",
      "SIMON",
      "DUNCAN"
-    ]
+    ],
+    "info": "Edwin Chadwick (sanitation), William Farr (statistics), John Simon (medical officer), William Duncan (first UK medical officer of health)."
    },
    {
     "label": "Hide Tiny Tim backwards",
@@ -936,7 +1014,8 @@
      "INTERMITTENT",
      "HEMITHORAX",
      "MITRAL"
-    ]
+    ],
+    "info": "TIM backwards is MIT: voMITing, interMITtent, heMIThorax, MITral."
    }
   ]
  },
@@ -953,7 +1032,8 @@
      "MSF",
      "UNICEF",
      "GAVI"
-    ]
+    ],
+    "info": "Gavi buys vaccines for poorer countries; UNICEF delivers many of them."
    },
    {
     "label": "Walls of the whare in Te Whare Tapa Whā",
@@ -963,7 +1043,8 @@
      "HINENGARO",
      "WHANAU",
      "WAIRUA"
-    ]
+    ],
+    "info": "Mason Durie's Māori health model: tinana (body), hinengaro (mind), whānau (family), wairua (spirit)."
    },
    {
     "label": "WHO Directors-General",
@@ -973,7 +1054,8 @@
      "BRUNDTLAND",
      "CHAN",
      "TEDROS"
-    ]
+    ],
+    "info": "Halfdan Mahler, Gro Harlem Brundtland, Margaret Chan, Tedros Adhanom Ghebreyesus."
    },
    {
     "label": "Hidden UNITY",
@@ -983,7 +1065,8 @@
      "COMMUNITY",
      "IMPUNITY",
      "OPPORTUNITY"
-    ]
+    ],
+    "info": "Each hides UNITY: immUNITY, commUNITY, impUNITY, opportUNITY."
    }
   ]
  },
@@ -1000,7 +1083,8 @@
      "ADRENALINE",
      "NORADRENALINE",
      "ACTH"
-    ]
+    ],
+    "info": "ACTH from the pituitary tells the adrenals to make cortisol."
    },
    {
     "label": "Sleep science",
@@ -1010,7 +1094,8 @@
      "REM",
      "N3",
      "CIRCADIAN"
-    ]
+    ],
+    "info": "N3 is deep sleep. Melatonin rises in the dark and sets your circadian clock."
    },
    {
     "label": "Relaxation practices",
@@ -1020,7 +1105,8 @@
      "YOGA",
      "TAI CHI",
      "BOX BREATHING"
-    ]
+    ],
+    "info": "Box breathing: in 4, hold 4, out 4, hold 4."
    },
    {
     "label": "Hidden ZEN",
@@ -1030,7 +1116,8 @@
      "BENZENE",
      "DOZEN",
      "CITIZEN"
-    ]
+    ],
+    "info": "Each hides ZEN: froZEN shoulder, benZENe, doZEN, citiZEN."
    }
   ]
  },
@@ -1048,7 +1135,8 @@
      "VIXEN",
      "COMET",
      "BLITZEN"
-    ]
+    ],
+    "info": "Rudolph joined the team later, in a 1939 story."
    },
    {
     "label": "Santa, by other names",
@@ -1059,7 +1147,8 @@
      "CLAUS",
      "PÈRE NOËL",
      "SINTERKLAAS"
-    ]
+    ],
+    "info": "Kris Kringle, St Nicholas, Santa Claus, Père Noël (France), Sinterklaas (Netherlands)."
    },
    {
     "label": "Clotting factors, by name",
@@ -1070,7 +1159,8 @@
      "HAGEMAN",
      "CHRISTMAS",
      "STUART-PROWER"
-    ]
+    ],
+    "info": "Factor I fibrinogen, II prothrombin, XII Hageman, IX Christmas, X Stuart-Prower."
    },
    {
     "label": "Famous Rudolfs",
@@ -1081,7 +1171,8 @@
      "VALENTINO",
      "DIESEL",
      "CLAUSIUS"
-    ]
+    ],
+    "info": "Rudolf Virchow (pathology, Virchow's triad), Nureyev, Valentino, Diesel (engine), Clausius (entropy)."
    },
    {
     "label": "Hide an organ",
@@ -1092,7 +1183,8 @@
      "HEARTH",
      "LUNGE",
      "GUTTER"
-    ]
+    ],
+    "info": "COLONel, LIVERpool, HEARTh, LUNGe, GUTter."
    }
   ],
   "super": true
@@ -1110,7 +1202,8 @@
      "CICLOSPORIN",
      "MYCOPHENOLATE",
      "PREDNISOLONE"
-    ]
+    ],
+    "info": "Tacrolimus and ciclosporin are calcineurin inhibitors."
    },
    {
     "label": "Parts of the nephron",
@@ -1120,7 +1213,8 @@
      "BOWMAN",
      "HENLE",
      "MACULA DENSA"
-    ]
+    ],
+    "info": "Bowman's capsule, loop of Henle, macula densa (senses salt)."
    },
    {
     "label": "Surgical pioneers",
@@ -1130,7 +1224,8 @@
      "STARZL",
      "BARNARD",
      "CALNE"
-    ]
+    ],
+    "info": "Joseph Murray: first kidney transplant (twins, 1954). Starzl: liver. Barnard: heart. Calne: introduced ciclosporin."
    },
    {
     "label": "Kidney ___",
@@ -1140,7 +1235,8 @@
      "STONE",
      "DISH",
      "PIE"
-    ]
+    ],
+    "info": "KIDNEY BEAN, KIDNEY STONE, KIDNEY DISH, steak and KIDNEY PIE."
    }
   ]
  },
@@ -1157,7 +1253,8 @@
      "BAUBLE",
      "FAIRY LIGHTS",
      "BRAZIL NUT"
-    ]
+    ],
+    "info": "Button batteries can burn through the oesophagus in 2 hours. Call 13 11 26 (Poisons) straight away."
    },
    {
     "label": "Units of energy",
@@ -1167,7 +1264,8 @@
      "CALORIE",
      "THERM",
      "BTU"
-    ]
+    ],
+    "info": "1 food Calorie (kcal) = 4.184 kJ. Therm and BTU are heating units."
    },
    {
     "label": "Energy-bearing parts of the diet",
@@ -1177,7 +1275,8 @@
      "CARBOHYDRATE",
      "PROTEIN",
      "ALCOHOL"
-    ]
+    ],
+    "info": "Per gram: fat 37 kJ, alcohol 29 kJ, protein and carbohydrate 17 kJ."
    },
    {
     "label": "Hidden ERG",
@@ -1187,7 +1286,8 @@
      "ERGOMETER",
      "SYNERGY",
      "ERGOT"
-    ]
+    ],
+    "info": "Each hides ERG: allERGy, ERGometer, synERGy, ERGot."
    }
   ]
  },
@@ -1204,7 +1304,8 @@
      "MISTLETOE",
      "IVY",
      "POINSETTIA"
-    ]
+    ],
+    "info": "Mostly cause tummy upset. Poinsettia's danger is overrated."
    },
    {
     "label": "Nursing pioneers",
@@ -1214,7 +1315,8 @@
      "NIGHTINGALE",
      "SEACOLE",
      "CAVELL"
-    ]
+    ],
+    "info": "Clara Barton (US Red Cross), Florence Nightingale, Mary Seacole, Edith Cavell."
    },
    {
     "label": "Clotting factor nicknames",
@@ -1224,7 +1326,8 @@
      "HAGEMAN",
      "STUART-PROWER",
      "ROSENTHAL"
-    ]
+    ],
+    "info": "Factor IX Christmas (first patient Stephen Christmas), XII Hageman, X Stuart-Prower, XI Rosenthal."
    },
    {
     "label": "Christmas tree ___",
@@ -1234,7 +1337,8 @@
      "BLADDER",
      "PATTERN",
      "ADAPTER"
-    ]
+    ],
+    "info": "Christmas tree CATARACT (sparkly crystals), BLADDER (neurogenic, on a cystogram), PATTERN (pityriasis rosea rash), ADAPTER (oxygen tubing)."
    }
   ]
  },
@@ -1251,7 +1355,8 @@
      "PIERRE",
      "IRENE",
      "EVE"
-    ]
+    ],
+    "info": "The Curies: Marie and Pierre, daughter Irène (Nobel too), daughter Eve (writer)."
    },
    {
     "label": "Unstable elements",
@@ -1261,7 +1366,8 @@
      "POLONIUM",
      "URANIUM",
      "CURIUM"
-    ]
+    ],
+    "info": "Marie Curie found polonium and radium. Curium is named after the Curies."
    },
    {
     "label": "External-beam radiotherapy",
@@ -1271,7 +1377,8 @@
      "COBALT",
      "GAMMA KNIFE",
      "PROTON"
-    ]
+    ],
+    "info": "Linac = linear accelerator. Gamma Knife focuses cobalt beams on the brain. Protons stop at a set depth."
    },
    {
     "label": "Boxing Day punches",
@@ -1281,7 +1388,8 @@
      "HOOK",
      "CROSS",
      "UPPERCUT"
-    ]
+    ],
+    "info": "JAB, HOOK, CROSS, UPPERCUT. Boxing Day isn't named after boxing (it's for Christmas boxes)."
    }
   ]
  },
@@ -1298,7 +1406,8 @@
      "DOUBLING TIME",
      "CASE FATALITY",
      "SEROPREVALENCE"
-    ]
+    ],
+    "info": "R0 = how many people one case infects. Seroprevalence = share with antibodies."
    },
    {
     "label": "Pandemics in history",
@@ -1308,7 +1417,8 @@
      "SPANISH FLU",
      "ANTONINE PLAGUE",
      "COVID-19"
-    ]
+    ],
+    "info": "Black Death (1340s) killed about a third of Europe. Antonine Plague (165 AD) was probably smallpox."
    },
    {
     "label": "Bradford Hill criteria",
@@ -1318,7 +1428,8 @@
      "CONSISTENCY",
      "SPECIFICITY",
      "TEMPORALITY"
-    ]
+    ],
+    "info": "Bradford Hill (1965): signs that a link is causal. Temporality (cause before effect) is the only must-have."
    },
    {
     "label": "Hidden RAT",
@@ -1328,7 +1439,8 @@
      "PERFORATION",
      "SEPARATION",
      "MIGRATION"
-    ]
+    ],
+    "info": "Each hides RAT: respiRATion, perfoRATion, sepaRATion, migRATion."
    }
   ]
  },
@@ -1345,7 +1457,8 @@
      "STORM",
      "CYCLOPS",
      "ROGUE"
-    ]
+    ],
+    "info": "Wolverine, Storm, Cyclops, Rogue."
    },
    {
     "label": "Types of gene mutation",
@@ -1355,7 +1468,8 @@
      "INSERTION",
      "SUBSTITUTION",
      "FRAMESHIFT"
-    ]
+    ],
+    "info": "A frameshift is an insertion or deletion not in multiples of three, which scrambles the rest of the gene."
    },
    {
     "label": "Real biology, superhero vibes",
@@ -1365,7 +1479,8 @@
      "TETRACHROMACY",
      "SYNAESTHESIA",
      "MYOSTATIN DEFICIENCY"
-    ]
+    ],
+    "info": "Hyperthymesia: near-total memory of your life. Tetrachromacy: a 4th colour cone. Myostatin deficiency: big muscles."
    },
    {
     "label": "___ man",
@@ -1375,7 +1490,8 @@
      "ANT",
      "SPIDER",
      "BAT"
-    ]
+    ],
+    "info": "IRON MAN, ANT-MAN, SPIDER-MAN, BATMAN."
    }
   ]
  },
@@ -1393,7 +1509,8 @@
      "RESTING",
      "CEREBELLAR",
      "ORTHOSTATIC"
-    ]
+    ],
+    "info": "Essential tremor: action, often better with alcohol. Resting tremor: Parkinson's. Intention tremor: cerebellum."
    },
    {
     "label": "Types of exercise",
@@ -1404,7 +1521,8 @@
      "RESISTANCE",
      "PLYOMETRIC",
      "ECCENTRIC"
-    ]
+    ],
+    "info": "Eccentric exercise works muscles while they lengthen (lowering a weight)."
    },
    {
     "label": "Types of amnesia",
@@ -1415,7 +1533,8 @@
      "GLOBAL",
      "DISSOCIATIVE",
      "INFANTILE"
-    ]
+    ],
+    "info": "Anterograde: can't form new memories. Retrograde: lose old ones. Infantile: nobody remembers being a baby."
    },
    {
     "label": "Types of aphasia",
@@ -1426,7 +1545,8 @@
      "CONDUCTION",
      "ANOMIC",
      "PRIMARY PROGRESSIVE"
-    ]
+    ],
+    "info": "Expressive = Broca's. Receptive = Wernicke's. Conduction: can't repeat. Anomic: word-finding."
    },
    {
     "label": "Hide a month",
@@ -1437,7 +1557,8 @@
      "AUGMENTIN",
      "OCTREOTIDE",
      "NOVOCAINE"
-    ]
+    ],
+    "info": "FEBrile, MARfan, AUGmentin, OCTreotide, NOVocaine."
    }
   ],
   "super": true
@@ -1455,7 +1576,8 @@
      "EAGLE",
      "BOGEY",
      "PAR"
-    ]
+    ],
+    "info": "Birdie = 1 under par, eagle = 2 under, bogey = 1 over."
    },
    {
     "label": "Classic endometriosis symptoms",
@@ -1465,7 +1587,8 @@
      "DYSPAREUNIA",
      "DYSCHEZIA",
      "SUBFERTILITY"
-    ]
+    ],
+    "info": "Dyschezia = pain opening bowels. Average diagnosis takes about 6.5 years in Australia."
    },
    {
     "label": "Injuries named after athletes",
@@ -1475,7 +1598,8 @@
      "JUMPER'S KNEE",
      "RUNNER'S KNEE",
      "SKIER'S THUMB"
-    ]
+    ],
+    "info": "Golfer's elbow: inner elbow tendon. Jumper's knee: patellar tendon. Skier's thumb: torn thumb ligament (UCL)."
    },
    {
     "label": "Hidden golf kit",
@@ -1485,7 +1609,8 @@
      "ENVIRONMENT",
      "COMMITTEE",
      "SPUTTERING"
-    ]
+    ],
+    "info": "CLUBfoot, envIRONment, commitTEE, sPUTTERing."
    }
   ]
  },
@@ -1502,7 +1627,8 @@
      "FRY-UP",
      "PICKLE JUICE",
      "RAW EGG"
-    ]
+    ],
+    "info": "No folk cure works. Water, food and time do."
    },
    {
     "label": "Oesophageal eponyms and disorders",
@@ -1512,7 +1638,8 @@
      "MALLORY-WEISS",
      "ACHALASIA",
      "BARRETT"
-    ]
+    ],
+    "info": "Boerhaave: full oesophageal tear. Mallory-Weiss: mucosal tear from vomiting. Barrett: acid changes the lining."
    },
    {
     "label": "Alcohol withdrawal signs",
@@ -1522,7 +1649,8 @@
      "SWEATING",
      "HALLUCINATIONS",
      "SEIZURES"
-    ]
+    ],
+    "info": "Withdrawal starts 6–24 hours after the last drink. Seizures peak at 24–48 hours."
    },
    {
     "label": "Hidden EVE",
@@ -1532,7 +1660,8 @@
      "BEVERAGE",
      "SEVERITY",
      "ELEVEN"
-    ]
+    ],
+    "info": "Each hides EVE: sleEVE, bEVErage, sEVErity, elEVEn."
    }
   ]
  }

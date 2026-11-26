@@ -2,7 +2,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, groups:[{label, level 1-4, words[4]}]} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "8", MAXM = 4, K = 4, NG = 4;
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "9", MAXM = 4, K = 4, NG = 4;
   // Normie mode: everyday groups from puzzles/normie/, stats under "n-" keys.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Comorbix (Normie)" : "Comorbix";
   var root = document.getElementById("cmx");
@@ -68,11 +68,13 @@
   // ---------- render ----------
   var ICON = { Easy: "\ud83d\udfe2", Medium: "\ud83d\udfe1", Hard: "\ud83d\udd34", Genius: "\ud83e\udde0", Einstein: "\u269b\ufe0f" };
   var SQ = ["\ud83d\udfe8", "\ud83d\udfe9", "\ud83d\udfe6", "\ud83d\udfea", "\ud83d\udfe7"];
+  // The why behind each group (27 Nov 2026): wordplay spelled out, a fact for the rest. Shown once the group is solved or revealed.
+  function info(g) { return g.info ? '<small class="cmx-info">' + esc(g.info) + "</small>" : ""; }
   function render(shake) {
     if (!P) return;
-    var h = st.solved.map(function (gi) { var g = P.groups[gi]; return '<div class="solved lv' + g.level + '"><b>' + esc(g.label) + "</b><span>" + g.words.map(esc).join(", ") + "</span></div>"; }).join("");
+    var h = st.solved.map(function (gi) { var g = P.groups[gi]; return '<div class="solved lv' + g.level + '"><b>' + esc(g.label) + "</b><span>" + g.words.map(esc).join(", ") + "</span>" + info(g) + "</div>"; }).join("");
     if (st.done && !st.win) {
-      P.groups.forEach(function (g, gi) { if (st.solved.indexOf(gi) < 0) h += '<div class="solved lv' + g.level + '"><b>' + esc(g.label) + "</b><span>" + g.words.map(esc).join(", ") + "</span></div>"; });
+      P.groups.forEach(function (g, gi) { if (st.solved.indexOf(gi) < 0) h += '<div class="solved lv' + g.level + '"><b>' + esc(g.label) + "</b><span>" + g.words.map(esc).join(", ") + "</span>" + info(g) + "</div>"; });
     } else {
       h += remaining().map(function (w) { return '<button type="button" class="t' + (w.length > 10 ? " long" : "") + (P.super && /\S{11,}/.test(w) ? " xl" : "") + (sel.indexOf(w) >= 0 ? " on" : "") + '" data-w="' + esc(w) + '">' + esc(w) + "</button>"; }).join("");
     }
@@ -192,7 +194,7 @@
       K = P.groups[0].words.length; NG = P.groups.length; MAXM = P.super ? 5 : 4;
       $("grid").style.gridTemplateColumns = "repeat(" + K + ",minmax(0,1fr))"; root.classList.toggle("super", !!P.super);
       $("intro").textContent = P.super ? "Super Comorbix: make five groups of five. Some words fit more than one group. Five mistakes." : "Make four groups of four.";
-      order = st.order && st.order.length === K * NG ? st.order : shuffle(all, seeded(dayNum(date) * 7919));
+      order = st.order && st.order.length === K * NG && st.order.every(function (w) { return groupOf(w) >= 0; }) ? st.order : shuffle(all, seeded(dayNum(date) * 7919));
       $("eyebrow").textContent = (isLive() ? (P.super ? "Super Comorbix" : "Comorbix") : "Archive") + " \u00b7 #" + P.number + " \u00b7 " + nice(date);
       var b = $("badge"); b.hidden = false; b.className = "badge " + P.difficulty; b.innerHTML = (P.difficulty === "Einstein" ? "<svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(60 12 12)\"/><ellipse cx=\"12\" cy=\"12\" rx=\"10\" ry=\"4\" transform=\"rotate(120 12 12)\"/><circle cx=\"12\" cy=\"12\" r=\"1.8\" fill=\"currentColor\"/></svg>" : "") + P.difficulty; root.classList.toggle("einstein", P.difficulty === "Einstein");
       if (!isLive()) say(st.done ? "Archive puzzle. Already done." : "Archive puzzle. Doesn't count towards your streak.");
