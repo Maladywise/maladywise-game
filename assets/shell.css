@@ -1272,7 +1272,7 @@ html.medp-on body.medp main.doc>:is(.medp-head,h1,.drug-tags,.lede,.glance,.medp
 html.medp-on .medp main.doc>.medp-upd{font-size:7.4px!important;color:#6B5A93!important;margin:2px 0 0!important}
 html.medp-on body.medp main.doc>.drug-tags{display:flex!important}
 html.medp-on .medp main.doc,html.medp-on .medp main.doc :is(p,li,dd,dt,b){color:#2B2340!important;font-family:Poppins,"Segoe UI",system-ui,sans-serif}
-html.medp-on .medp .medp-head{display:flex!important;justify-content:space-between;align-items:baseline;border-bottom:2px solid #4A3480;padding:0 70px 3px 0;margin:0 0 5px;gap:12px}
+html.medp-on .medp .medp-head{display:flex!important;justify-content:space-between;align-items:baseline;border-bottom:2px solid #4A3480;padding:0 0 3px;margin:0 68px 5px 0;gap:12px}
 html.medp-on .medp .medp-head b{font:700 17px Lora,Georgia,serif!important;color:#4A3480!important;margin-right:12px}
 html.medp-on .medp .medp-head span{font:600 7.5px Poppins,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#6B5A93}
 html.medp-on .medp .print-qr{position:absolute;top:0;right:0;width:56px;height:56px;margin:0;float:none}
