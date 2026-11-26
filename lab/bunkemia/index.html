@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Bunkemia: Myth or medicine?</title>
+<meta name="description" content="Five health claims, ten seconds each. Myth or medicine? A Malady Wise Labs beta game.">
+<style>
+:root{--bg:#F6F1EA;--ink:#2B2340;--muted:#6B5A93;--card:#FFFFFF;--line:#E7E0F2;--brand:#4A3480;--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;
+--display:Georgia,"Times New Roman",serif;--body:"Poppins",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#16121F;--ink:#F1ECF8;--muted:#B9A8E0;--card:#211B2E;--line:#3A3150;--brand:#5B43A0;--true:#1E8C6A;--false:#C0463F;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);padding:20px 16px 48px}
+.wrap{max-width:620px;margin:0 auto}
+.back{margin:0 0 12px;font-size:14px}.back a{color:var(--muted)}
+h1{font:700 34px/1.1 var(--display);margin:0}
+.lede{color:var(--muted);margin:4px 0 6px}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--muted);color:var(--muted);border-radius:999px;padding:3px 10px;margin:0 0 16px}
+.bar{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px;font-size:14px;font-weight:600}
+.dots{display:flex;gap:6px}.dots i{width:12px;height:12px;border-radius:50%;background:var(--line)}.dots i.ok{background:var(--true)}.dots i.no{background:var(--false)}.dots i.now{outline:2px solid var(--brand);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 18px;min-height:190px;display:flex;flex-direction:column;gap:10px}
+.kind{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.claim{font:700 23px/1.3 var(--display);margin:0;text-wrap:balance}
+.timer{height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:auto}.timer i{display:block;height:100%;width:100%;background:var(--gold);transform-origin:left;transition:transform 1s linear}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 0}
+.b{min-height:60px;border:0;border-radius:16px;font:700 19px var(--body);color:#fff;cursor:pointer}
+.b.t{background:var(--true)}.b.f{background:var(--false)}.b:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.b[disabled]{opacity:.45;cursor:default}
+.verdict{margin:12px 0 0;border-radius:16px;padding:14px 16px;color:#fff}
+.verdict.t{background:var(--true)}.verdict.f{background:var(--false)}
+.verdict b{display:block;font:700 20px var(--display);margin-bottom:4px}
+.verdict p{margin:0 0 6px;line-height:1.5;font-size:15px}.verdict a{color:#fff;font-size:13px}
+.you{font-size:13px;opacity:.9;margin-bottom:6px}
+.go{display:block;width:100%;min-height:52px;border:0;border-radius:999px;background:var(--ink);color:var(--bg);font:600 16px var(--body);cursor:pointer;margin-top:12px}
+.end{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}
+.end h2{font:700 28px var(--display);margin:0 0 4px}
+.grid{font-size:28px;letter-spacing:4px;margin:8px 0}
+.end ul{padding-left:20px;line-height:1.6;margin:8px 0}
+.end a{color:var(--muted);font-weight:600}
+.how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px}
+@media (prefers-reduced-motion:reduce){.timer i{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="back"><a href="/">&larr; Malady Wise</a> · <a href="/contact/">Send feedback</a></p>
+<h1>Bunkemia</h1>
+<p class="lede">Myth or medicine? Five claims. Ten seconds each.</p>
+<span class="tag">Labs beta</span>
+<div id="app"></div>
+<p class="how"><b>How to play:</b> tap <b>True</b> or <b>False</b> before the bar runs out. Each answer shows the evidence and a source. One historical claim, one herbal, one from social media, one everyday myth and a wildcard in every round. General information only, not personal medical advice.</p>
+</div>
+<script>
+(function(){
+// [kind, claim, true?, verdict line, explanation, source label, url]
+var R=[
+ [["Historical","Bloodletting was mainstream medicine for more than 2,000 years.",1,"True","From ancient Greece until the late 1800s, draining blood was standard treatment for almost everything. It mostly did harm.","Greenstone G. The history of bloodletting. BCMJ 2010","https://bcmj.org/premise/history-bloodletting"],
+  ["Herbal","Echinacea reliably prevents colds.",0,"Bunk","A Cochrane review of 24 trials found no clear benefit for preventing colds, at best a small, uncertain effect.","Karsch-Völk M et al. Cochrane Database Syst Rev 2014","https://doi.org/10.1002/14651858.CD000530.pub3"],
+  ["Social media","Taping your mouth shut at night cures sleep apnoea.",0,"Bunk","There's no good evidence it treats sleep apnoea, and it may be risky if your nose is blocked. Sleep apnoea needs a proper sleep study.","PubMed: mouth taping studies","https://pubmed.ncbi.nlm.nih.gov/?term=mouth+taping+sleep"],
+  ["Everyday","Cracking your knuckles causes arthritis.",0,"Bunk","Studies comparing habitual crackers with non-crackers found no extra arthritis. One doctor cracked one hand for 60 years as an experiment: no difference.","deWeber K et al. J Am Board Fam Med 2011","https://doi.org/10.3122/jabfm.2011.02.100156"],
+  ["Wildcard","St John's wort can stop the contraceptive pill working.",1,"True","It speeds up how the liver breaks down hormones, which can cause breakthrough bleeding and unplanned pregnancy. It interacts with many other medicines too.","PubMed: St John's wort and the pill","https://pubmed.ncbi.nlm.nih.gov/?term=St+John%27s+wort+oral+contraceptive+interaction"]],
+ [["Historical","Doctors once prescribed cigarettes for asthma.",1,"True","‘Asthma cigarettes’ containing stramonium were sold into the 1900s. Stramonium does open airways a little, but smoking it was a terrible idea.","PubMed: asthma cigarettes history","https://pubmed.ncbi.nlm.nih.gov/?term=asthma+cigarettes+stramonium+history"],
+  ["Herbal","Turmeric supplements can damage the liver.",1,"Surprisingly true","Rare but real: concentrated turmeric and curcumin supplements have been linked to drug-induced liver injury. Turmeric in cooking is fine.","PubMed: turmeric liver injury","https://pubmed.ncbi.nlm.nih.gov/?term=turmeric+curcumin+induced+liver+injury"],
+  ["Social media","Raw milk is safer and healthier than pasteurised milk.",0,"Bunk","Raw milk can carry Listeria, E. coli and Salmonella. Pasteurisation kills them without meaningfully changing nutrition.","CDC: Raw milk","https://www.cdc.gov/food-safety/foods/raw-milk.html"],
+  ["Everyday","You lose most of your body heat through your head.",0,"Bunk","Your head loses heat roughly in proportion to its surface area, about 10%. The myth came from a military study where only the head was uncovered.","Vreeman RC, Carroll AE. Festive medical myths. BMJ 2008","https://doi.org/10.1136/bmj.a2769"],
+  ["Wildcard","Hospitals still use maggots to clean wounds.",1,"Surprisingly true","Medical-grade maggots eat dead tissue and leave healthy tissue alone. They're used for some stubborn ulcers.","PubMed: maggot debridement therapy","https://pubmed.ncbi.nlm.nih.gov/?term=maggot+debridement+therapy"]],
+ [["Historical","Radioactive ‘radium water’ was sold as a health tonic.",1,"True","Radithor was marketed in the 1920s. A famous wealthy fan drank around 1,400 bottles and died of radiation poisoning in 1932.","PubMed: Radithor","https://pubmed.ncbi.nlm.nih.gov/?term=Radithor+radium"],
+  ["Herbal","Kava can cause serious liver damage.",1,"True","Rare cases of severe liver injury led several countries to restrict kava supplements. Risk seems higher with concentrated extracts.","PubMed: kava hepatotoxicity","https://pubmed.ncbi.nlm.nih.gov/?term=kava+hepatotoxicity"],
+  ["Social media","Seed oils are toxic and cause chronic disease.",0,"Bunk","Swapping saturated fat for polyunsaturated oils like canola and sunflower lowers heart disease risk in trials and large studies.","Sacks FM et al. AHA presidential advisory. Circulation 2017","https://doi.org/10.1161/CIR.0000000000000510"],
+  ["Everyday","Sugar makes children hyperactive.",0,"Bunk","A meta-analysis of blinded trials found no effect on behaviour. Parents who think their child had sugar rate them as more hyperactive, though.","Wolraich ML et al. JAMA 1995","https://doi.org/10.1001/jama.1995.03530200053037"],
+  ["Wildcard","Grapefruit juice can make some medicines dangerously strong.",1,"True","It blocks a gut enzyme that breaks down drugs like some statins and blood pressure tablets, raising their levels. One glass can last a day.","Bailey DG et al. CMAJ 2013","https://doi.org/10.1503/cmaj.120951"]],
+ [["Historical","Heroin was once sold as a cough medicine.",1,"True","Bayer marketed heroin from 1898 as a non-addictive cough suppressant, including for children. It was very much addictive.","PubMed: heroin Bayer history","https://pubmed.ncbi.nlm.nih.gov/?term=heroin+Bayer+1898+history"],
+  ["Herbal","Cranberry juice cures a bladder infection.",0,"Bunk","Cranberry products may lower the chance of repeat infections in some groups, but they don't treat an infection you already have.","Williams G et al. Cochrane Database Syst Rev 2023","https://doi.org/10.1002/14651858.CD001321.pub6"],
+  ["Social media","Cold showers stop you getting sick.",0,"Mostly bunk","In a Dutch trial, people taking cold showers took fewer sick days off, but they didn't get sick any less often.","Buijze GA et al. PLOS One 2016","https://doi.org/10.1371/journal.pone.0161749"],
+  ["Everyday","Reading in dim light damages your eyes.",0,"Bunk","It can cause eye strain and tiredness, but there's no evidence of lasting damage.","Vreeman RC, Carroll AE. Medical myths. BMJ 2007","https://doi.org/10.1136/bmj.39420.420370.25"],
+  ["Wildcard","Leeches are still used in plastic surgery.",1,"Surprisingly true","After a finger or flap is reattached, leeches can drain pooled blood from veins that haven't reconnected yet, helping the tissue survive.","PubMed: leech therapy in replantation","https://pubmed.ncbi.nlm.nih.gov/?term=leech+therapy+replantation"]],
+ [["Historical","Cigarette ads once used doctors to sell smokes.",1,"True","‘More doctors smoke Camels’ ran in the 1940s. Tobacco companies used doctors' trust to reassure smokers.","Gardner MN, Brandt AM. Am J Public Health 2006","https://doi.org/10.2105/AJPH.2004.063255"],
+  ["Herbal","Ginger can ease nausea in pregnancy.",1,"True","Several trials show ginger helps mild pregnancy nausea more than placebo. Check with a doctor or pharmacist about the dose.","Viljoen E et al. Nutr J 2014","https://doi.org/10.1186/1475-2891-13-20"],
+  ["Social media","Castor oil in your belly button detoxes your body.",0,"Bunk","Your belly button isn't a route into the body, and your liver and kidneys already do the detoxing. ‘Detox’ products lack evidence.","Klein AV, Kiat H. J Hum Nutr Diet 2015","https://doi.org/10.1111/jhn.12286"],
+  ["Everyday","You need to drink 8 glasses of water a day.",0,"Bunk","There's no evidence for the 8-glass rule. Food, tea and coffee all count, and thirst is a good guide for most healthy people.","Valtin H. Am J Physiol 2002","https://doi.org/10.1152/ajpregu.00365.2002"],
+  ["Wildcard","A poo transplant can cure a stubborn gut infection.",1,"Surprisingly true","Faecal transplants cure most recurrent C. difficile infections, beating antibiotics in a landmark trial.","van Nood E et al. N Engl J Med 2013","https://doi.org/10.1056/NEJMoa1205037"]]
+];
+var app=document.getElementById("app"),S,TIME=10,timer;
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function seedShuffle(a,seed){a=a.slice();var x=seed;for(var i=a.length-1;i>0;i--){x=(x*9301+49297)%233280;var j=Math.floor(x/233280*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function todayRound(){var d=new Date(),n=Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/864e5);return n%R.length}
+function start(r){S={r:r,i:0,res:[],q:seedShuffle(R[r],r*7+3)};ask()}
+function dots(){return '<div class="dots">'+S.q.map(function(_,k){var c=k<S.res.length?(S.res[k]?"ok":"no"):(k===S.i?"now":"");return '<i class="'+c+'"></i>'}).join("")+"</div>"}
+function ask(){
+ var c=S.q[S.i],left=TIME;
+ app.innerHTML='<div class="bar"><span>Round '+(S.r+1)+' · Claim '+(S.i+1)+' of 5</span>'+dots()+'</div><div class="card"><span class="kind">'+c[0]+'</span><p class="claim">'+esc(c[1])+'</p><div class="timer"><i id="tb"></i></div></div><div class="btns"><button class="b t" id="bt">True</button><button class="b f" id="bf">False</button></div><div id="v"></div>';
+ var tb=document.getElementById("tb");
+ requestAnimationFrame(function(){tb.style.transform="scaleX("+((left-1)/TIME)+")"});
+ clearInterval(timer);timer=setInterval(function(){left--;tb.style.transform="scaleX("+(Math.max(0,left-1)/TIME)+")";if(left<=0)answer(null)},1000);
+ document.getElementById("bt").onclick=function(){answer(1)};document.getElementById("bf").onclick=function(){answer(0)};
+}
+function answer(a){
+ clearInterval(timer);var c=S.q[S.i],ok=a===c[2];S.res.push(ok);
+ document.getElementById("bt").disabled=document.getElementById("bf").disabled=true;
+ document.getElementById("v").innerHTML='<div class="verdict '+(c[2]?"t":"f")+'"><div class="you">'+(a===null?"⏱️ Too slow":ok?"✅ You got it":"❌ Not this time")+'</div><b>'+esc(c[3])+'</b><p>'+esc(c[4])+'</p><a href="'+c[6]+'" target="_blank" rel="noopener">Source: '+esc(c[5])+'</a></div><button class="go" id="nx">'+(S.i<4?"Next claim":"See your score")+"</button>";
+ document.querySelector(".bar .dots").outerHTML=dots();
+ var nx=document.getElementById("nx");nx.focus();nx.onclick=function(){S.i++;S.i<5?ask():end()};
+}
+function end(){
+ var n=S.res.filter(Boolean).length,g=S.res.map(function(x){return x?"🟩":"🟥"}).join("");
+ var rank=n===5?"Myth slayer":n>=4?"Evidence-based":n>=3?"Sceptical in training":n>=2?"Slightly bunked":"Fully bunked";
+ var next=(S.r+1)%R.length;
+ app.innerHTML='<div class="end"><span class="kind">Round '+(S.r+1)+'</span><h2>'+n+'/5 · '+rank+'</h2><div class="grid">'+g+'</div>'+
+ '<button class="go" id="sh">Share result</button><button class="go" id="nr" style="background:var(--brand);color:#fff">Play round '+(next+1)+'</button>'+
+ '<p style="margin:14px 0 0;font-size:14px">More myths busted: <a href="/deep-dives/">Deep dives</a> · <a href="/quizzes/">Quizzes</a></p></div>';
+ document.getElementById("sh").onclick=function(){var t="Bunkemia: Myth or medicine? Round "+(S.r+1)+"\n"+g+" "+n+"/5\nmaladywise.com/lab/bunkemia/";
+  function toast(m){var d=document.createElement("div");d.className="toast";d.textContent=m;document.body.appendChild(d);setTimeout(function(){d.remove()},1800)}
+  if(navigator.share){navigator.share({text:t}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast("Copied")},function(){toast("Couldn't copy")})}};
+ document.getElementById("nr").onclick=function(){start(next)};
+}
+start(todayRound());
+})();
+</script>
+</body>
+</html>

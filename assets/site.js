@@ -48,7 +48,7 @@ window.MW_HOME = {
   sections: [
     { id: "labs", title: "🧪 Labs", note: "Beta games and ideas. <a href=\"#\" onclick=\"MW_report('idea');return false\">Tell us what you think</a>",
       items: [
-        { href: "/lab/gaslitis-r8q/", tag: "Beta", title: "Gaslitis", text: "You're the doctor. Dismiss the patient. Then see what you missed." }
+        { href: "/lab/bunkemia/", tag: "Beta", title: "Bunkemia", text: "Myth or medicine? Five health claims, ten seconds each." }
       ] }
   ]
 };
