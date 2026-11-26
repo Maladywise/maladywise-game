@@ -20,7 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = "https://maladywise.com"
 REVIEWED = "16 November 2026"
 ISO = "2026-11-16"
-QKV = "7"  # 4: redrawn rotator cuff and dermatome maps; labels shown once answered
+QKV = "8"  # 4: redrawn rotator cuff and dermatome maps; labels shown once answered
 
 
 def esc(s):

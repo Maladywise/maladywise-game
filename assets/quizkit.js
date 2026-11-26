@@ -101,6 +101,9 @@
     function end() {
       var n = qs.length, p = score / n, k = "qk-best-" + id, best = +get(k) || 0;
       if (score > best) put(k, score);
+      // Quiz log for /me/ (topic accuracy, trend). 26 Nov 2026
+      try { var ql = JSON.parse(localStorage.getItem("mw-qlog") || "[]"); var dd; try { dd = new Intl.DateTimeFormat("en-CA", { timeZone: "Australia/Sydney" }).format(new Date()); } catch (e2) { dd = new Date().toISOString().slice(0, 10); }
+        ql.push({ q: id, s: score, n: n, at: dd, h: new Date().getHours() }); localStorage.setItem("mw-qlog", JSON.stringify(ql.slice(-400))); } catch (e) {}
       stopAuto();
       var grid = qs.map(function (q, i) { return marks[i] == null ? "⬜" : marks[i] ? "🟩" : "🟥"; }).join("");
       var url = location.origin + location.pathname + (sec.id && document.querySelectorAll(".qk").length > 1 ? "#" + sec.id : "");

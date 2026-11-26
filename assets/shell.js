@@ -1241,6 +1241,19 @@
     });
   }
 
+  // ---------- learning minutes (26 Nov 2026) ----------
+  // Visible, recently active time on any page, per Sydney day, in this browser only. Read by /me/.
+  (function () {
+    var act = Date.now(), T = 15;
+    ["pointerdown", "keydown", "scroll", "touchstart"].forEach(function (e) { addEventListener(e, function () { act = Date.now(); }, { passive: true }); });
+    setInterval(function () {
+      if (document.hidden || Date.now() - act > 60000) return;
+      var o = get("mw-time", {}) || {}, d = sydToday(); o[d] = (o[d] || 0) + T;
+      var ks = Object.keys(o).sort(); while (ks.length > 400) delete o[ks.shift()];
+      set("mw-time", o);
+    }, T * 1000);
+  })();
+
   // ---------- per-game stats readers ----------
   function readStats(g) {
     if (!g || !g.store) return null;
