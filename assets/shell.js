@@ -219,7 +219,7 @@
     var homeOnly = /^\/(index\.html)?$/.test(location.pathname); // live counts show on the home page only (18 Nov 2026)
     if (hotSave(d) && homeOnly && window.MW_hotRedraw) window.MW_hotRedraw(); // re-sort "More daily puzzles" if the ranking moved
     var sv = homeOnly ? (d.solved || {}) : {};
-    Array.prototype.forEach.call(document.querySelectorAll(".card[data-g],.t3[data-g]"), function (c) { var n = sv[c.getAttribute("data-g") + (NORMIE ? "-n" : "")] || 0, el = c.querySelector(".solvedn"); if (n < LIVE.MIN_SOLVED) { if (el) el.remove(); return; } if (!el) { el = document.createElement("span"); el.className = "solvedn"; var b = c.querySelector(".cfoot .play,.t3-tx small"); if (b) b.insertAdjacentElement("afterend", el); else return; } el.textContent = (n >= 1000 ? (Math.round(n / 100) / 10) + "k" : n) + " solved today"; });
+    Array.prototype.forEach.call(document.querySelectorAll(".card[data-g]"), function (c) { var n = sv[c.getAttribute("data-g") + (NORMIE ? "-n" : "")] || 0, el = c.querySelector(".solvedn"); if (n < LIVE.MIN_SOLVED) { if (el) el.remove(); return; } if (!el) { el = document.createElement("span"); el.className = "solvedn"; var b = c.querySelector(".cfoot .play,.t3-tx small"); if (b) b.insertAdjacentElement("afterend", el); else return; } el.textContent = (n >= 1000 ? (Math.round(n / 100) / 10) + "k" : n) + " solved today"; });
     Array.prototype.forEach.call(document.querySelectorAll(".mw-live"), function (el) { if (!homeOnly) { el.hidden = true; el.innerHTML = ""; return; } el.innerHTML = bits.length ? '<a class="mw-live-a" href="/site-stats/" title="See games played over time">' + bits.join(" &middot; ") + "</a>" : ""; el.hidden = !bits.length; });
   }
   function liveStats() { if (document.hidden) return; try { fetch(LIVE.url + "/stats", { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { if (d) { LIVE.last = d; liveShow(); } }).catch(function () {}); } catch (e) {} }
@@ -1627,12 +1627,13 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function house() {
       var h = MW_SITE.house, dk = root.getAttribute("data-theme") === "dark";
       var nf = window.MW_FACTS ? Object.keys(MW_FACTS).filter(function (k) { return MW_FACTS[k].k === "fact"; }).length : 0;
-      function it(href, ext, acc, svg, b, sm) { return '<a href="' + href + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ' style="--accent:' + acc + '"><span class="ms-ic"><svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + svg + "</svg></span><span><b>" + b + "</b><small>" + sm + '</small></span><span class="ms-go" aria-hidden="true">›</span></a>'; }
-      return '<nav class="mw-strip" aria-label="More from Malady Wise">' +
-        (NORMIE ? "" : it("/quizzes/", 0, dk ? "#E59AB8" : "#B23A6F", '<path d="M10 10h28v22H22l-8 7v-7h-4z"/><path d="M20 18a4 4 0 1 1 5 4v2M25 28v.5"/>', "Practice quizzes", "Anatomy, ECG, X-ray and more")) +
-        (NORMIE ? "" : it("/conditions/", 0, dk ? "#6FB7A8" : "#2E7D6B", '<path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12"/>', "Health guides", (nf ? nf + " " : "") + "fact sheets, plus medicines")) +
+      // 27 Nov 2026: same tile size and icon box as the puzzle grid
+      function it(href, ext, acc, svg, b, sm) { return '<a class="tl" href="' + href + '"' + (ext ? ' target="_blank" rel="noopener"' : "") + ' style="--accent:' + acc + '"><span class="tl-ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + svg + "</svg></span><b>" + b + "</b><small>" + sm + "</small></a>"; }
+      return '<nav class="tl-grid mw-strip-t" aria-label="More from Malady Wise">' +
+        (NORMIE ? "" : it("/quizzes/", 0, dk ? "#E59AB8" : "#B23A6F", '<path d="M10 10h28v22H22l-8 7v-7h-4z"/><path d="M20 18a4 4 0 1 1 5 4v2M25 28v.5"/>', "Practice quizzes", "Anatomy, ECG, X-ray")) +
+        (NORMIE ? "" : it("/conditions/", 0, dk ? "#6FB7A8" : "#2E7D6B", '<path d="M14 6h16l8 8v28H14z"/><path d="M30 6v8h8M20 24h12M20 31h12"/>', "Health guides", (nf ? nf + " " : "") + "fact sheets")) +
         (h ? it(h.href, 1, dk ? h.accentDark : h.accent, '<path d="M8 20v8h6l14 9V11L14 20H8z"/><path d="M34 18a8 8 0 0 1 0 12M38 13a14 14 0 0 1 0 22"/>', h.name, "@MaladyWise on X") : "") +
-        it("https://ko-fi.com/maladywise", 1, dk ? "#D9A066" : "#A8642A", '<path d="M8 18h26v10a10 10 0 0 1-10 10h-6A10 10 0 0 1 8 28z"/><path d="M34 20h3a5 5 0 0 1 0 10h-3M16 6c0 3 2 3 2 6M24 6c0 3 2 3 2 6"/>', "Buy me a coffee", "Free, no ads. Coffee helps.") + "</nav>";
+        it("https://ko-fi.com/maladywise", 1, dk ? "#D9A066" : "#A8642A", '<path d="M8 18h26v10a10 10 0 0 1-10 10h-6A10 10 0 0 1 8 28z"/><path d="M34 20h3a5 5 0 0 1 0 10h-3M16 6c0 3 2 3 2 6M24 6c0 3 2 3 2 6"/>', "Buy me a coffee", "Free, no ads") + "</nav>";
     }
     // Game sections (MW_HOME.groups). Games not in any group land in "More puzzles" so nothing goes missing.
     var GROUPS = (window.MW_HOME && MW_HOME.groups) || [];
@@ -1880,7 +1881,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (!HD || !HD.length) return;
       var yr = today.slice(0, 4);
       var on = HD.filter(function (x) {
-        var d = x.dates && x.dates[yr]; if (!d || x.kind === "month") return false;
+        var d = x.dates && x.dates[yr]; if (!d) return false;
         if (!inRegion(regionOf(x))) return false;
         if (NORMIE && !x.normie) return false;
         return d.end ? d.start <= today && today <= d.end : d.start === today;
@@ -1888,7 +1889,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (!on.length) return;
       function sens(x) { return (x.tags || []).indexOf("sensitive") >= 0; }
       var normal = on.filter(function (x) { return !sens(x); }).sort(function (a, b) {
-        var fa = a.kind === "day" || a.dates[yr].start === today ? 0 : 1, fb = b.kind === "day" || b.dates[yr].start === today ? 0 : 1;
+        var fa = a.kind === "month" ? 2 : a.kind === "day" || a.dates[yr].start === today ? 0 : 1, fb = b.kind === "month" ? 2 : b.kind === "day" || b.dates[yr].start === today ? 0 : 1; // months never lead
         return fa - fb || (a.priority || 9) - (b.priority || 9);
       });
       var lead = normal[0] || on.filter(sens)[0], first = lead.dates[yr].start === today, quiet = sens(lead) || (lead.priority || 9) >= 4; // priority 4+ = a small nod, never the main day
@@ -1905,7 +1906,9 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (!headline) {
         var go = lead.page && !NORMIE ? '<a href="' + esc2(lead.page) + '">Fact sheet ›</a>' : lead.link ? '<a href="' + esc2(lead.link) + '" target="_blank" rel="noopener">More ↗</a>' : "";
         html = '<section class="hday-slim">' + (lead.icon ? '<img src="/assets/days/' + esc2(lead.icon) + '.svg" alt="" width="30" height="30">' : "") +
-          '<span class="hs-t"><span class="rd-k">' + (lead.kind === "week" ? "This week" : lead.kind === "month" ? "This month" : "Today") + "</span> <b>" + nm(lead) + "</b>" + (themed ? " · themed puzzles" : "") + "</span>" +
+          '<span class="hs-t"><span class="rd-k">' + (lead.kind === "week" ? "This week" : lead.kind === "month" ? "This month" : "Today") + "</span> <b>" + nm(lead) + "</b>" + (themed ? " · themed puzzles" : "") +
+          // a few other days and months alongside (27 Nov 2026)
+          (also.length ? '<span class="hs-also">' + also.slice(0, 3).map(function (x) { var t = nm(x) + (x.kind === "month" && !/month/i.test(x.name) ? " month" : ""); return x.page && !NORMIE ? '<a href="' + esc2(x.page) + '">' + t + "</a>" : x.link ? '<a href="' + esc2(x.link) + '" target="_blank" rel="noopener">' + t + "</a>" : t; }).join(" · ") + "</span>" : "") + "</span>" +
           '<span class="hs-l">' + go + ' <a href="/days/">Coming up ›</a></span></section>';
       }
       slot.innerHTML = html;

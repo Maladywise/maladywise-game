@@ -166,8 +166,8 @@ def write_soon(days):
     a, b = (TODAY - datetime.timedelta(days=1)).isoformat(), (TODAY + datetime.timedelta(days=35)).isoformat()
     out = []
     for x in days:
-        if x.get("kind") == "month":
-            continue  # the home box never shows months
+        if x.get("kind") == "month" and (x.get("priority") or 9) > 3:
+            continue  # months show only as "also" names on the home line (27 Nov 2026), and only the bigger ones
         ds = {}
         for yr, dt in (x.get("dates") or {}).items():
             if not isinstance(dt, dict) or not dt.get("start"):
