@@ -3,7 +3,7 @@
    Puzzles in puzzles/YYYY-MM.json: {date, number, difficulty, centre, outer, words[], medical[], pangrams[], max} */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "17";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "18";
   // Normie mode: everyday letters from puzzles/normie/, stats under "n-" keys, no medical double-score words.
   var NORMIE = !!(window.MW_mode && MW_mode() === "normie"), PFX = NORMIE ? "n-" : "", PDIR = NORMIE ? "puzzles/normie/" : "puzzles/", NAME = NORMIE ? "Morphemia (Normie)" : "Morphemia";
   var root = document.getElementById("mph");

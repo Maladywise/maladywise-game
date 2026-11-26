@@ -1722,3 +1722,7 @@ html[data-theme=dark] .mw-crowd{background:#1E1A2B;color:#F1ECFA;border-color:#9
 @keyframes mm-dive{0%,100%{transform:none}25%{transform:rotate(-30deg) translateY(-8px)}50%{transform:rotate(-10deg) translateY(24px) scale(.92)}75%{transform:translateY(-12px) scale(1.06)}}
 @media (prefers-reduced-motion:reduce){.cb-masc img[class^="mm-"],.cb-prop i{animation:none!important}.cb-prop{display:none}}
 
+
+.mw-crowd.inl{position:static;transform:none;left:auto;bottom:auto;width:auto;margin:12px 0;box-shadow:none;animation:none;grid-template-columns:1fr;border-width:1px}
+/* hide the "Next case in 3h 12m" countdown under games (26 Nov 2026) */
+p.note#arx-next,p.note#cmx-next,p.note#dxw-next,p.note#glm-next,p.note#grx-next,p.note#lbl-nextday,p.note#lnk-next,p.note#mph-next,p.note#opc-next,p.note#pnl-next,p.note#skr-next,p.note#stx-next,p.note#wde-next,p.note#trv-next,p.note#sns-next,p.note#zbr-next{display:none!important}

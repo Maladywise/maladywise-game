@@ -236,7 +236,11 @@
         el.innerHTML = '<span class="mw-crowd-bar"><i style="width:' + pct + '%"></i></span><span class="mw-crowd-t"></span><button type="button" aria-label="Close">\u00d7</button>';
         el.querySelector(".mw-crowd-t").textContent = msg;
         el.querySelector("button").onclick = function () { el.remove(); };
-        document.body.appendChild(el); setTimeout(function () { el.classList.add("mw-crowd-out"); setTimeout(function () { el.remove(); }, 700); }, 4500); track("crowd-rate/" + g.id, g.name + " solve rate shown");
+        // Sits in the answer panel and stays there (26 Nov 2026); floats briefly only if the page has no answer panel
+        var anc = document.getElementById("mw-next-top") || document.querySelector(".mw-sharerow");
+        if (anc && anc.offsetParent !== null) { el.classList.add("inl"); el.querySelector("button").remove(); anc.parentNode.insertBefore(el, anc); }
+        else { document.body.appendChild(el); setTimeout(function () { el.classList.add("mw-crowd-out"); setTimeout(function () { el.remove(); }, 700); }, 6000); }
+        track("crowd-rate/" + g.id, g.name + " solve rate shown");
       }).catch(function () {});
     }, 2600);
   }

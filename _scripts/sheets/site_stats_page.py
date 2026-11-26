@@ -60,10 +60,11 @@ _SS_JS = r'''<script>
     h += "<h2>Today by game</h2>" + '<div class="ss-box">' + list(T.g || {}) + "</div>";
     h += "<h2>Last 7 days by game</h2>" + '<div class="ss-box">' + list(wk) + "</div>";
     if (j.hourDays) h += "<h2>When people play</h2>" + '<div class="ss-box">' + bars(j.hours.map(function (v) { return v / j.hourDays; }), j.hours.map(function (v, i) { return (i % 12 || 12) + (i < 12 ? "am" : "pm"); }), -1, 120) + '<p class="ss-cap">Average games finished per hour, Sydney time, over the last ' + j.hourDays + " days.</p></div>";
+    h += '<h2>All time</h2><div id="ss-all"><p class="ss-cap">Loading…</p></div>';
     h += '<h2>Hardest puzzles this week</h2><div class="ss-box" id="ss-hard"><p class="ss-cap">Loading…</p></div>';
     box.innerHTML = h;
     Array.prototype.forEach.call(box.querySelectorAll(".ss-tabs button"), function (b) { b.onclick = function () { load(+b.getAttribute("data-d")); }; });
-    hardest();
+    hardest(); allTime();
   }
   // Hardest this week: lowest solve rate over 7 days (games with 20+ results). 26 Nov 2026
   var hardJ = null;
@@ -79,6 +80,20 @@ _SS_JS = r'''<script>
     if (hardJ) return show(hardJ);
     fetch("https://mw-presence.onrender.com/hardest?days=7", { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { hardJ = j; show(j); })
       .catch(function () { el.innerHTML = '<p class="ss-cap">Couldn’t load this just now.</p>'; });
+  }
+  // All-time totals, busiest day ever and this month's favourite game (from the 365-day history). 26 Nov 2026
+  var allJ = null;
+  function allTime() {
+    var el = document.getElementById("ss-all"); if (!el) return;
+    function show(j) {
+      var D = (j && j.days) || [], tot = 0, best = { n: 0, d: "" }, mon = {}, m0 = (j && j.day || "").slice(0, 7), act = 0;
+      D.forEach(function (x) { tot += x.n; if (x.n) act++; if (x.n > best.n) best = x; if (x.d.slice(0, 7) === m0) for (var k in x.g) mon[k] = (mon[k] || 0) + x.g[k]; });
+      var top = Object.keys(mon).filter(function (k) { return k !== "home"; }).sort(function (a, b) { return mon[b] - mon[a]; })[0], g = top ? gname(top) : null;
+      el.innerHTML = '<div class="ss-kpis"><div class="ss-k"><b>' + nf(tot) + '</b><span>Games played since launch</span></div><div class="ss-k"><b>' + nf(best.n) + "</b><span>Busiest day ever" + (best.d ? " (" + nice(best.d, { day: "numeric", month: "short", year: "numeric" }) + ")" : "") + '</span></div>' +
+        '<div class="ss-k"><b>' + nf(act ? tot / act : 0) + '</b><span>Average per day</span></div><div class="ss-k"><b>' + (g ? (g[1] ? '<a href="' + g[1] + '" style="color:inherit">' + g[0] + "</a>" : g[0]) : "–") + "</b><span>Most played this month" + (top ? " (" + nf(mon[top]) + ")" : "") + "</span></div></div>";
+    }
+    if (allJ) return show(allJ);
+    fetch(API + 365, { mode: "cors" }).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { allJ = j; show(j); }).catch(function () { el.innerHTML = '<p class="ss-cap">Couldn’t load this just now.</p>'; });
   }
   var cache = {};
   function load(span) {

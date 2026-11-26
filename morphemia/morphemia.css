@@ -82,3 +82,8 @@ html[data-motion="reduce"] #mph *{animation:none!important;transition:none!impor
 #mph .pk-form input{width:min(320px,100%);font:700 20px var(--body);letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:9px 12px;border-radius:12px;border:2px solid var(--accent);background:var(--paper);color:var(--ink);outline:none}
 /* Morphemia Max (Mondays): nine round cells, centre plus a ring of eight */
 #mph .hive.nine .hx{width:24%;height:24%;clip-path:circle(50% at 50% 50%);font-size:clamp(19px,6vw,26px)}
+/* result panel centred, like the other games (26 Nov 2026) */
+#mph .result{justify-items:center;text-align:center}
+#mph .result pre{text-align:center}
+#mph .result > div{justify-content:center}
+#mph .mph-donenote{text-align:center}
