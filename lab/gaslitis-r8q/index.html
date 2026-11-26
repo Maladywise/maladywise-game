@@ -44,6 +44,7 @@ h1{font:700 32px/1.1 var(--display);margin:0 0 4px}
 .end{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
 .end h2{font:700 26px var(--display);margin:0 0 6px}.end ul{padding-left:20px;line-height:1.6}
 .end a{color:var(--muted);font-weight:600}
+.pill.tm{font-variant-numeric:tabular-nums}.pill.tm.hot{background:#B3261E;color:#fff;border-color:#B3261E}
 .how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
 @media (prefers-reduced-motion:reduce){.c,.track i{transition:none}}
 </style>
@@ -53,9 +54,9 @@ h1{font:700 32px/1.1 var(--display);margin:0 0 4px}
 <p class="gl-back" style="margin:0 0 12px;font-size:14px"><a href="/" style="color:var(--muted)">&larr; Malady Wise</a> · <a href="/contact/" style="color:var(--muted)">Send feedback</a></p>
 <h1>Gaslitis</h1>
 <p class="lede">You're the doctor. Dismiss these men. Then see what you missed.</p>
-<span class="tag">Labs beta · 4 rounds</span>
+<span class="tag">Labs beta · 8 patients</span>
 <div id="app"></div>
-<p class="how"><b>How to play:</b> each patient arrives with some confidence. Play up to 3 cards to talk him out of being worried. Drain his confidence to zero and he leaves, dismissed. Or play the green card and actually do the work. Every reveal shows the real diagnosis, and who usually hears those lines.</p>
+<p class="how"><b>How to play:</b> you have 25 seconds per patient. Each arrives with some confidence. Play up to 3 cards to talk him out of being worried. Drain his confidence to zero and he leaves, dismissed. Or play the green card and actually do the work. Every reveal shows the real diagnosis, and who usually hears those lines.</p>
 </div>
 <script>
 (function(){
@@ -75,8 +76,25 @@ var P=[
  {n:"Clive",a:51,e:"🍷",job:"Winery owner",say:"\"Heart's racing, I'm sweaty, I've lost 6 kilos and I can't sleep. Feel wired.\"",conf:9,
   dx:"Overactive thyroid (Graves' disease)",test:"One blood test: TSH and free T4.",harm:"He ended up in ED with atrial fibrillation.",
   flip:"An overactive thyroid is 5 to 10 times more common in women, and its racing heart, sweats and worry are easily mistaken for anxiety.",src:["Taylor PN et al. Nat Rev Endocrinol 2018","https://doi.org/10.1038/nrendo.2018.18"],
-  work:"Check his thyroid"}
+  work:"Check his thyroid"},
+ {n:"Brendan",a:44,e:"💼",job:"Tech founder",say:"\"Can't focus, miss every deadline, lose my keys daily. Always been like this, but it's getting worse.\"",conf:8,
+  dx:"Adult ADHD",test:"A proper developmental history and a structured ADHD assessment.",harm:"He lost his company and his marriage before anyone assessed him.",
+  flip:"ADHD in girls and women is often missed: inattention is quieter than hyperactivity, they mask it, and anxiety or depression gets diagnosed instead.",src:["Quinn PO, Madhoo M. Prim Care Companion CNS Disord 2014","https://doi.org/10.4088/PCC.13r01596"],
+  work:"Take a developmental history"},
+ {n:"Toby",a:50,e:"📈",job:"Investment banker",say:"\"Right side, coming in waves, can't sit still. Please, something strong.\"",conf:10,
+  dx:"Kidney stone (renal colic)",test:"Pain relief now, a urine test and a CT of the kidneys.",harm:"He was labelled drug-seeking and sent home. Back next day with an infected, blocked kidney.",
+  flip:"In an emergency department study of belly pain, women were less likely than men to get strong pain relief, and waited longer for it.",src:["Chen EH et al. Acad Emerg Med 2008","https://doi.org/10.1111/j.1553-2712.2008.00100.x"],
+  work:"Treat the pain and examine him"},
+ {n:"Simon",a:42,e:"🏛️",job:"Architect",say:"\"Exhausted, achy joints, mouth ulcers, and a rash after the beach. Must be the long hours.\"",conf:8,
+  dx:"Lupus (SLE)",test:"Examination, urine test, blood count and an ANA blood test.",harm:"Two years later, kidney damage was found on a routine test.",
+  flip:"About 9 in 10 people with lupus are women, and many see several doctors over years before diagnosis.",src:["Lupus Foundation of America: lupus facts","https://www.lupus.org/resources/lupus-facts-and-statistics"],
+  work:"Examine, dipstick urine, order bloods"},
+ {n:"Nathan",a:41,e:"⚖️",job:"Corporate lawyer",say:"\"Room started spinning an hour ago. Threw up twice. Can't walk straight.\"",conf:9,
+  dx:"Posterior circulation stroke",test:"A careful neuro exam including gait and eye movements, then urgent stroke imaging.",harm:"Sent home with 'inner-ear virus'. Back 2 days later with a bigger stroke.",
+  flip:"In a study of US emergency departments, missed strokes were more likely in women and younger people, especially with dizziness or headache.",src:["Newman-Toker DE et al. Diagnosis 2014","https://doi.org/10.1515/dx-2013-0038"],
+  work:"Check gait and eyes; stroke call"}
 ];
+var TLIM=25;
 var POOL=[
  {k:"dis",t:"\"Have you tried yoga?\"",p:2,min:3,r:"\"Yoga? I suppose I could try…\""},
  {k:"dis",t:"\"It's probably just stress.\"",p:3,min:4,r:"\"Well, it has been a big quarter.\""},
@@ -95,9 +113,9 @@ function round(){
  var p=P[S.i];S.c=p.conf+(S.labelled?0:0);S.left=3;S.reply="";
  S.hand=shuffle(POOL).slice(0,4);if(!S.hand.some(function(c){return c.lab}))S.hand[3]=POOL[7];
  S.hand=shuffle(S.hand);S.hand.splice(Math.floor(Math.random()*5),0,{k:"work",t:p.work,p:0,min:8,work:1});
- S.played={};draw();
+ S.played={};S.t=TLIM;clearInterval(S.tm);S.tm=setInterval(function(){S.t--;var e=document.getElementById("tmr");if(e){e.textContent="⏰ "+Math.max(0,S.t)+"s";e.classList.toggle("hot",S.t<=8);}if(S.t<=0){clearInterval(S.tm);S.missed++;reveal(false,"The waiting room overflowed, so you rushed him out.");}},1000);draw();
 }
-function bar(){return '<div class="bar"><span class="pill">Patient '+(S.i+1)+" of "+P.length+'</span><span class="pill">🕯️ Gaslight '+S.gas+'</span><span class="pill">⏱️ '+S.min+' min saved</span></div>'}
+function bar(){return '<div class="bar"><span class="pill">Patient '+(S.i+1)+" of "+P.length+'</span>'+(S.t>0?'<span class="pill tm" id="tmr">⏰ '+S.t+'s</span>':'')+'<span class="pill">🕯️ Gaslight '+S.gas+'</span><span class="pill">⏱️ '+S.min+' min saved</span></div>'}
 function draw(){
  var p=P[S.i],pct=Math.max(0,S.c)/p.conf*100;
  var h=bar()+'<div class="pt"><span class="k">Patient</span><div class="pt-h"><span class="e" aria-hidden="true">'+p.e+'</span><div><div class="t">'+p.n+", "+p.a+'</div><div style="font-size:13px;color:var(--muted)">'+p.job+(S.labelled?" · notes say \"anxious\"":"")+'</div></div></div><p class="say">'+esc(p.say)+'</p>'+
@@ -117,6 +135,7 @@ function play(ix){
  draw();
 }
 function reveal(ok,why){
+ clearInterval(S.tm);S.t=0;
  var p=P[S.i];
  app.innerHTML=bar()+'<div class="rv'+(ok?"":" miss")+'"><span class="k">'+(ok?"You did the work":"The reveal")+'</span><h2>'+esc(p.dx)+'</h2>'+
  (ok?"<p>Found it. "+esc(p.test)+"</p>":"<p>"+esc(why)+" "+esc(p.harm)+"</p><p><b>What would have caught it:</b> "+esc(p.test)+"</p>")+
@@ -126,7 +145,7 @@ function reveal(ok,why){
  window.scrollTo({top:0,behavior:"smooth"});
 }
 function end(){
- var rank=S.missed>=4?"Senior Consultant in Dismissal":S.missed>=2?"Registrar of Reassurance":S.missed===1?"Mostly a doctor":"Actual doctor";
+ var rank=S.missed>=6?"Senior Consultant in Dismissal":S.missed>=3?"Registrar of Reassurance":S.missed===1?"Mostly a doctor":"Actual doctor";
  app.innerHTML='<div class="end"><span class="k">Your clinic</span><h2>'+rank+'</h2><ul><li><b>Gaslight score:</b> '+S.gas+'</li><li><b>Time saved:</b> '+S.min+' min</li><li><b>Diagnoses found:</b> '+S.saved+" of "+P.length+'</li><li><b>Missed:</b> '+S.missed+'</li></ul>'+
  '<p>Every line in this deck is something patients report hearing. In real clinics, it\'s said more often to women, people of colour, larger bodies and neurodivergent people.</p>'+
  '<p><a href="/gp-school/">Train your blind spots in GP School</a> · <a href="/atypical-presentations/">Atypical presentations</a></p>'+
