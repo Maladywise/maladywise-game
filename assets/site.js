@@ -48,9 +48,9 @@ window.MW_HOME = {
   sections: [
     { id: "labs", title: "🧪 Labs", note: "Beta games and ideas. <a href=\"#\" onclick=\"MW_report('idea');return false\">Tell us what you think</a>",
       items: [
-        { href: "/lab/bunkemia/", tag: "Beta", title: "Bunkemia", text: "Myth or medicine? Clinical claims judged on the trial evidence." },
-        { href: "/lab/gaslitis-r8q/", tag: "Beta", title: "Gaslitis", text: "Every shortcut is a bias. Dismiss eight patients and see what you missed." },
-        { href: "/nomulous/", tag: "Daily", title: "Nomulous", text: "Name the eponym. One medical namesake a day." }
+        { href: "/lab/bunkemia/", tag: "Beta", title: "Bunkemia", ic: "/assets/mascots/bunkemia.svg?v=1", k: "Myth or medicine", ac: "#2F4E6B", text: "Myth or medicine? Clinical claims judged on the trial evidence." },
+        { href: "/lab/gaslitis-r8q/", tag: "Beta", title: "Gaslitis", ic: "/assets/mascots/gaslitis.svg?v=1", k: "Spot the bias", ac: "#B7791F", text: "Every shortcut is a bias. Dismiss eight patients and see what you missed." },
+        { href: "/nomulous/", tag: "Daily", title: "Nomulous", ic: "/assets/mascots/nomulous.svg?v=1", k: "Name the eponym", ac: "#4A3480", text: "Name the eponym. One medical namesake a day." }
       ] }
   ]
 };

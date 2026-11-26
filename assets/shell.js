@@ -1587,8 +1587,12 @@
     function homeBottom() {
       var H = window.MW_HOME; if (!H) return "";
       return H.sections.map(function (sec) {
-        return '<section class="sec" id="' + sec.id + '"><div class="sec-head"><h2>' + sec.title + "</h2>" + (sec.note ? "<span>" + sec.note + "</span>" : "") + '</div><div class="sgrid">' +
-          sec.items.map(function (it) { return '<a class="scard" href="' + it.href + '"><span class="stag">' + it.tag + "</span><b>" + it.title + "</b><p>" + it.text + "</p></a>"; }).join("") + "</div></section>";
+        return '<section class="sec" id="' + sec.id + '"><div class="sec-head"><h2>' + sec.title + "</h2>" + (sec.note ? "<span>" + sec.note + "</span>" : "") + '</div><div class="' + (sec.items.every(function (it) { return it.ic; }) ? "tl-grid" : "sgrid") + '">' +
+          sec.items.map(function (it) {
+            // Items with a mascot render as puzzle-size tiles (27 Nov 2026), the rest as text cards.
+            if (it.ic) return '<a class="tl" href="' + it.href + '" title="' + it.text.replace(/"/g, "&quot;") + '" style="--accent:' + (it.ac || "#5B3FA0") + '"><span class="tl-tag">' + it.tag + '</span><span class="tl-ic"><img src="' + it.ic + '" alt="" width="46" height="46" loading="lazy"></span><b>' + it.title + "</b><small>" + (it.k || "") + "</small></a>";
+            return '<a class="scard" href="' + it.href + '"><span class="stag">' + it.tag + "</span><b>" + it.title + "</b><p>" + it.text + "</p></a>";
+          }).join("") + "</div></section>";
       }).join("");
     }
 function arcadeCards() { // the three arcade games, one card each (own "Arcade" row on the home grid)
