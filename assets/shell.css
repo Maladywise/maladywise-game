@@ -1751,3 +1751,11 @@ html.medp-on .medp .medp-cols ol.ladder .alt{font-size:7.6px!important;margin:2p
 /* 27 Nov 2026: Basil is a pale cat, so his arcade tile gets a dark backdrop */
 .arc-a[data-g="basil-clover"] img{background:#2B5E80}
 [data-theme="dark"] .arc-a[data-g="basil-clover"] img{background:#1D4560}
+
+/* 27 Nov 2026: mascots read better on tiles: bigger in the box, stronger backdrop, fixes for dark-on-dark mascots */
+.tl-ic{background:color-mix(in srgb,var(--accent) 24%,transparent)}
+.tl-ic img{width:56px;height:56px;transform:scale(1.14);transform-origin:50% 60%}
+[data-theme="dark"] .tl-ic{background:color-mix(in srgb,var(--accent) 30%,#2a2440)}
+[data-theme="dark"] .tl[data-g="cryptogenic"] .tl-ic,[data-theme="dark"] .tl[data-g="gridectomy"] .tl-ic{background:#B9A6E8}
+.tl[data-g="zebritis"] .tl-ic{background:color-mix(in srgb,var(--accent) 45%,transparent)}
+.tl.done .tl-ic img{transform:scale(1.14)}
