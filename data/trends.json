@@ -1494,6 +1494,70 @@
    "date": "2026-11-26",
    "source": "Newsweek",
    "niche": false
+  },
+  {
+   "term": "ibuprofen recall",
+   "region": "US",
+   "approx volume": "20,000+",
+   "date": "2026-11-27",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "Loeys-Dietz syndrome",
+   "region": "US",
+   "approx volume": "10,000+",
+   "date": "2026-11-27",
+   "source": "Google Trends (Health)",
+   "niche": true
+  },
+  {
+   "term": "Loeys-Dietz syndrome",
+   "region": "GB",
+   "approx volume": "1,000+",
+   "date": "2026-11-27",
+   "source": "Google Trends (Health)",
+   "niche": true
+  },
+  {
+   "term": "predicting heart attacks decades ahead",
+   "region": "GB",
+   "approx volume": "10,000+",
+   "date": "2026-11-27",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "vitamin k",
+   "region": "AU",
+   "approx volume": "5,000+",
+   "date": "2026-11-27",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "flu season",
+   "region": "US",
+   "approx volume": "500+",
+   "date": "2026-11-27",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "norovirus",
+   "region": "GB",
+   "approx volume": "100+",
+   "date": "2026-11-27",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "FDA investigating two new Salmonella outbreaks",
+   "region": "US",
+   "approx volume": "news",
+   "date": "2026-11-27",
+   "source": "Food Safety News",
+   "niche": false
   }
  ],
  "used": [
