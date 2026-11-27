@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "29";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "30";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -300,7 +300,7 @@
     ' <div class="chain" id="mrg-chain"></div>' +
     ' <p class="note" id="mrg-mode"></p>' +
     ' <div class="result" id="mrg-result" hidden></div>' +
-    ' <p class="note" id="mrg-nextday"></p>' +
+    ' <p class="note" id="mrg-nextday" hidden></p>' + // hidden 28 Nov 2026
     ' <details class="archive" id="mrg-archive"><summary>Past puzzles</summary><div class="alist" id="mrg-alist"></div></details>' +
     "</div>";
   var $ = function (id) { return document.getElementById("mrg-" + id); };
