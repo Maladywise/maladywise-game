@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "30";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "31";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -201,7 +201,7 @@
   var MUTS = [
     { id: "bouncy", e: "🏀", n: ["Bouncy castle", "Bouncy castle"], d: ["Pieces bounce like mad.", "Everything has extra spring."] },
     { id: "slippery", e: "⛸️", n: ["Ice rink", "Ice rink"], d: ["Almost no friction: pieces slide right across.", "Almost no friction: creatures slide right across."] },
-    { id: "narrow", e: "📏", n: ["Tight squeeze", "Narrow tank"], d: ["The board is a bit narrower.", "The tank is a bit narrower."] },
+    { id: "narrow", e: "📏", n: ["Tight squeeze", "Narrow tank"], d: ["The board is much narrower.", "The tank is much narrower."] },
     { id: "double", e: "✖️", n: ["Double chains", "Double chains"], d: ["Chain reaction bonuses score double.", "Chain reaction bonuses score double."] },
     { id: "preview", e: "👀", n: ["Sneak peek", "Sneak peek"], d: ["See the next two pieces.", "See the next two creatures."] },
     { id: "slowmo", e: "🐌", n: ["Slow-mo merges", "Slow-mo merges"], d: ["Time slows for a moment after each merge.", "Time slows for a moment after each merge."] },
@@ -984,7 +984,7 @@
   }
 
   // ---------- weekly features: runtime ----------
-  var BG = K.BG, SPEC = K.SPEC, HID = K.HID, NARROW = 24;
+  var BG = K.BG, SPEC = K.SPEC, HID = K.HID, NARROW = 48; // 28 Nov 2026: twice as tight (was 24)
   var ernd = Math.random, TILT = 1, FLOW = 1, envFx = [], lights = [];
   var SP = "", MUT = null, SKIN = "", GOALS = null, gDone = [], madeN = [], nMerge = 0, mixN = 0, tootN = 0, slowN = 0, PREV = false, nx2 = -1;
   // ---------- Ward rounds: a 10-ward campaign (Nov 2026). Each ward has a target piece and a twist; wards 5 and 10 have a boss. ----------
