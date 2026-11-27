@@ -433,5 +433,49 @@
     "ahpra": "not checked"
    }
   ]
+ },
+ "tests-sleep": {
+  "name": "Sleep studies",
+  "people": [
+   {
+    "name": "Sleep Dynamics",
+    "specialty": "Sleep studies",
+    "practice": "Sleep Dynamics",
+    "address": "PO Box 178, Toronto NSW 2283 (postal)",
+    "suburb": "Toronto",
+    "phone": "(02) 4044 1260",
+    "fax": "(02) 4044 1263",
+    "email": "",
+    "ereferral": "",
+    "website": "https://sleepdynamics.com.au",
+    "interests": [
+     "Home sleep apnoea testing",
+     "In-hospital sleep testing",
+     "CPAP device management and trial devices and masks",
+     "Covers Newcastle to Muswellbrook (as stated)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://sleepdynamics.com.au/"
+    ],
+    "checked": "2026-11-28",
+    "ahpra": "not checked"
+   }
+  ]
  }
 }
