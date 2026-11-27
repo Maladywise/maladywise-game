@@ -205,3 +205,9 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 @media (prefers-reduced-motion:reduce){#mrg .mbar .dl-low b{animation:none}}
 #mrg .mrg-help-wards,.mrg-help-wards{display:block;width:100%;margin-top:8px;padding:11px 14px;border:1.5px solid var(--line,#ddd);border-radius:999px;background:transparent;color:var(--ink,#2B2540);font:600 15px Poppins,system-ui,sans-serif;cursor:pointer}
 .mrg-help-wards small{font-weight:500;color:var(--muted,#6b6480);margin-left:4px}
+/* 28 Nov 2026: Blood Bank / Potluck compatibility key */
+#mrg .bgkey{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 6px;margin:2px 0 -2px;font:500 12px/1.2 var(--body);color:var(--muted)}
+#mrg .bgkey b{width:100%;text-align:center;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+#mrg .bgkey .bgr{display:inline-flex;align-items:center;gap:4px;padding:2px 6px 2px 2px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
+#mrg .bgkey .bgr i{font-style:normal;font-weight:700;color:#fff;padding:1px 6px;border-radius:999px;font-size:11px}
+#mrg .bgkey .bgr.on{border-color:currentColor;color:var(--ink,inherit);font-weight:700}

@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "28";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "29";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -293,6 +293,7 @@
     '<div class="wrap">' +
     ' <div class="head"><span class="eyebrow" id="mrg-eyebrow">Mergeon</span><span class="hr"><span class="badge" id="mrg-badge"></span><button type="button" class="mute" id="mrg-help" aria-label="How to play">?</button><button type="button" class="mute" id="mrg-more" aria-label="More: goals, collection and learn mode" hidden>⋯</button><button type="button" class="mute" id="mrg-mute">🔊</button></span></div>' +
     ' <p class="today" id="mrg-today" hidden></p>' +
+    ' <div class="bgkey" id="mrg-bgkey" hidden></div>' +
     ' <div class="mbar"><div><span class="lab">Score</span><b id="mrg-score">0</b></div><div><span class="lab">' + K.top + '</span><b id="mrg-top">–</b></div><div class="nx"><span class="lab">Next</span><b id="mrg-next">–</b></div></div>' +
     ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="fact" id="mrg-fact" role="status" hidden></div><div class="learn" id="mrg-learn" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
     ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button><button type="button" class="tool" id="mrg-wards" hidden>🏥 Wards</button></span></div>' +
@@ -873,7 +874,19 @@
     }
   }
   function shakeBoard(k) { if (quiet()) return; var b = $("board"); b.classList.remove("shk1", "shk2"); void b.offsetWidth; b.classList.add(k > 1 ? "shk2" : "shk1"); }
+  // 28 Nov 2026: Blood Bank / Potluck key: who can give to whom; the piece in hand is highlighted
+  var BGTO = NORMIE ? null : { 0: "everyone", 4: "all +", 1: "A, AB", 5: "A+, AB+", 2: "B, AB", 6: "B+, AB+", 3: "AB", 7: "AB+ only" }, BGORD = NORMIE ? [0, 1, 2, 3] : [0, 4, 1, 5, 2, 6, 3, 7];
+  function bgKeyUI() {
+    var k = $("bgkey"); if (!k) return;
+    if (SP !== "blood") { k.hidden = true; return; }
+    var rows = BGORD.map(function (g) {
+      var to = BGTO ? BGTO[g] : (function () { var r = []; for (var j = 0; j < BG.names.length; j++) if (bgOK(g, j)) r.push(BG.names[j]); return r.length === BG.names.length ? "everyone" : r.join(", "); })();
+      return '<span class="bgr' + (g === curG && cur < O.length ? " on" : "") + '"><i style="background:' + BG.col[g] + '">' + esc(BG.names[g]) + "</i>→ " + esc(to) + "</span>";
+    });
+    k.innerHTML = "<b>" + (NORMIE ? "Goes with" : "Gives to") + "</b>" + rows.join(""); k.hidden = false;
+  }
   function hud() {
+    bgKeyUI();
     $("score").textContent = fmt(score); wildTip();
     // Ward rounds (27 Nov 2026): the middle box becomes a big drops-left counter, red at 5 or fewer
     var dl = dropsLeft(), tb = $("top").parentNode;
@@ -1056,7 +1069,7 @@
     if (SP === "mut" && MUT) h = MUT.e + " " + (isLive() ? "Today’s mutation" : "Mutation") + ": <b>" + esc(MUT.n[L]) + "</b>. " + esc(MUT.d[L]);
     else if (SPEC[SP]) h = SPEC[SP].e + " <b>" + esc(SPEC[SP].n) + "</b>: " + esc(SPEC[SP].line);
     t.innerHTML = h; t.hidden = !h;
-    $("more").hidden = !featUI();
+    $("more").hidden = !featUI(); bgKeyUI();
   }
   // Sick Day Friday (Normie: Grumpy Friday): gentle, seeded quirks (qrnd only)
   function sickTick() {
