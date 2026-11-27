@@ -1558,6 +1558,62 @@
    "date": "2026-11-27",
    "source": "Food Safety News",
    "niche": false
+  },
+  {
+   "term": "Australian doctors ICU delirium study",
+   "region": "AU",
+   "approx volume": "5,000+",
+   "date": "2026-11-28",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "Loeys-Dietz syndrome",
+   "region": "US",
+   "approx volume": "20,000+",
+   "date": "2026-11-28",
+   "source": "Google Trends (Health)",
+   "niche": true
+  },
+  {
+   "term": "Loeys-Dietz syndrome",
+   "region": "GB",
+   "approx volume": "2,000+",
+   "date": "2026-11-28",
+   "source": "Google Trends (Health)",
+   "niche": true
+  },
+  {
+   "term": "obicetrapib",
+   "region": "GB",
+   "approx volume": "2,000+",
+   "date": "2026-11-28",
+   "source": "Google Trends (Health)",
+   "niche": true
+  },
+  {
+   "term": "flu cases / NHS flu hospital admissions",
+   "region": "GB",
+   "approx volume": "20,000+",
+   "date": "2026-11-28",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "ibuprofen recall",
+   "region": "US",
+   "approx volume": "200,000+",
+   "date": "2026-11-28",
+   "source": "Google Trends (Health)",
+   "niche": false
+  },
+  {
+   "term": "cardiac surgery",
+   "region": "GB",
+   "approx volume": "2,000+",
+   "date": "2026-11-28",
+   "source": "Google Trends (Health)",
+   "niche": false
   }
  ],
  "used": [
