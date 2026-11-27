@@ -3,13 +3,9 @@ name: Queue X posts in Typefully
 # as image post + link-in-first-reply threads (day cards, page og images or game cards via _scripts/day_card.py),
 # plus auto World Day posts on empty dates. Weekly Short entries ("short" in the queue) are rendered to MP4
 # here (Playwright + ffmpeg, never committed) and uploaded as post 1's video.
+# PAUSED 27 Nov 2026 (owner: X posts are drafted for review only, nothing auto-posts). To resume, restore:
+#  schedule: cron "23 18 * * *" and "23 23 * * *"; push to main on paths ["_social/queue.json"]
 on:
-  schedule:
-    - cron: "23 18 * * *"   # about 5:23am Sydney (summer), daily
-    - cron: "23 23 * * *"   # about 10:23am Sydney: second daily check of the queue
-  push:
-    branches: [main]
-    paths: ["_social/queue.json"]
   workflow_dispatch:
     inputs:
       days:

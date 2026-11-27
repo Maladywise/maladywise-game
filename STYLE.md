@@ -2,6 +2,12 @@
 
 Every scheduled task and puzzle writer must read and follow this file. It overrides older, conflicting rules in task prompts. The site owner updates it by asking Claude in chat.
 
+## X: WORLD-DAY DRAFTS FOR REVIEW ONLY (27 Nov 2026, owner's decision; overrides EVERY X section below and every task prompt)
+- The owner deleted all upcoming posts because the X tone was off. From now on NOTHING is posted or scheduled automatically: write no entries to _social/queue.json and create nothing in Typefully. Skip every X step in task prompts (daily puzzles, 6pm posts, noon trend/pearl quizzes, weekly Shorts, Friday batches, late posts) and don't touch _social/pearls-used.json.
+- Instead, once a week a scheduled task lists the coming week's world health days and notable world days (data/health-days.json and data/world-days.json, Sat to Fri) and drafts posts for each day, sent to the owner for review. The owner schedules any they like by hand.
+- Draft format (the owner liked this, 27 Nov): post 1 = a short hook plus one guess question (A–C options or true/false), ending "👇", no link; post 2 = the answer with 2–3 verified numbers in plain words and a short source ("Source: Kirby Institute, Sept 2026"). No site links by default, at most one emoji per post, no hashtags, each post ≤280 characters. Sensitive days: no post. Priority 4–5 days: optional history or fun nods. Calendar-only cultural days (e.g. Hanukkah): no post.
+- Verify every fact on a reputable page before drafting; label anything not re-checked as unverified. Flag calendar errors you find (e.g. a wrong date in health-days.json).
+
 ## NORMIE MODE IS FROZEN (24 Nov 2026, owner's decision; overrides EVERY task prompt, including their "UPDATE" blocks)
 - Normie mode had under 1% of plays, so the owner froze it. The Medical/Normie switch is gone and every visitor gets Medical.
 - Do NOT write, extend, swap, theme, check, test or report Normie content in any game (normie/ folders, normie*.json, "nfact", Normie Arrhythmix charts, Normie Glimpsis/Opacitis images, Normie Grand Rounds, Normie trivia). Skip every Normie step in a task prompt, and don't flag Normie puzzles as running low.

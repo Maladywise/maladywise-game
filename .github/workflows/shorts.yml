@@ -4,9 +4,8 @@ name: Weekly X Short
 # (or the next free weekday that week) to _social/queue.json, with "short": {series, puzzle_date}.
 # The MP4 is NOT committed: typefully_push.py renders it again and uploads it to Typefully.
 # The rendered preview is kept as a workflow artifact for 14 days.
+# PAUSED 27 Nov 2026 (owner: X drafts for review only). To resume, restore: schedule cron "17 22 * * 3"
 on:
-  schedule:
-    - cron: "17 22 * * 3"   # Thursday about 9:17am Sydney (summer; 8:17am in winter), before the Friday batch
   workflow_dispatch:
     inputs:
       date:
