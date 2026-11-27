@@ -1648,18 +1648,18 @@
    {
     "name": "Dr Alexander Gordon",
     "specialty": "Respiratory and sleep medicine",
-    "practice": "Rooms, Charlestown (Newcastle Lung Group per Doctify)",
-    "address": "50 Smith Street, Charlestown NSW 2290",
-    "suburb": "Charlestown",
-    "phone": "",
+    "practice": "New Sleep",
+    "address": "Suite 12, Level 1, Key West building, 69 Parry Street, Newcastle NSW",
+    "suburb": "Newcastle",
+    "phone": "02 5007 5337",
     "fax": "",
-    "email": "",
-    "ereferral": "",
-    "website": "",
+    "email": "admin@newsleep.com.au",
+    "ereferral": "Referral forms on the practice website; send via HealthLink or Medical Objects",
+    "website": "https://www.newsleep.com.au",
     "interests": [
-     "Airways disease",
-     "Respiratory infections",
-     "Sleep medicine"
+     "Sleep medicine (his main focus)",
+     "Combined sleep and respiratory disorders",
+     "Home sleep studies"
     ],
     "practical": {
      "telehealth": null,
@@ -1675,10 +1675,11 @@
     },
     "inclusive": [],
     "sources": [
-     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-alexander-gordon/",
-     "https://www.doctify.com/au/practice/newcastle-lung-group"
+     "https://www.newsleep.com.au/about-the-team",
+     "https://www.newsleep.com.au/referral-forms",
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-alexander-gordon/"
     ],
-    "checked": "2026-10-31",
+    "checked": "27 November 2026",
     "ahpra": "not checked"
    },
    {

@@ -903,5 +903,15 @@
    "quote": "Yes. Our Merewether clinic has ramp access, wide doors and a disability accessible toilet.",
    "url": "https://hunterclinicalservices.com.au/helpful-information/"
   }
+ },
+ "New Sleep": {
+  "ereferral": {
+   "systems": [
+    "HealthLink",
+    "Medical Objects"
+   ],
+   "quote": "Completed forms can sent via Healthlink or Medical Objects",
+   "url": "https://www.newsleep.com.au/referral-forms"
+  }
  }
 }
