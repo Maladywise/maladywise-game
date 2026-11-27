@@ -156,6 +156,17 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 ## Characters: default female
 - When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is drawn as a woman, but the wording stays gender-neutral ("the vet", no he/she). Keep a natural mix in fictional patient cases.
 
+## X posts: USEFUL TEACHING, SELF-CONTAINED (27 Nov 2026, owner's decision; overrides EVERY older X section below and every task prompt where they conflict)
+- Purpose: X is for genuinely useful puzzles, information and teaching, NOT for driving site traffic. Every post must be complete on X: the answer, the teaching point and a one-line source live in the post or its first reply. A site link is optional, only ever in the LAST post of a thread, and never in post 1 or 2.
+- Volume: 1–2 posts a day, no filler. At most 2 teaching threads a week.
+- Daily rhythm:
+  - 7:30am Sydney, every day: a puzzle, answer and teaching point in reply 1. Format by weekday: Mon case puzzle; Tue spot the sign (image if available); Wed zebra case; Thu quick case or Zebritis-style "name one"; Fri sign or eponym; Sat trivia; Sun a harder case for clinicians.
+  - 6pm Sydney: Tue and Fri = teaching thread (6–8 numbered posts, one hard number per post, link only in the last post); Mon/Wed/Thu/Sat/Sun = optional single "Pearl 💡" or "Myth or medicine?" (verdict and source in reply).
+  - Launch/promo posts (Toxiquest, Fridaemia, Lunicorn, Triagic) and health-day posts may add a third post on their day.
+- Every number and claim verified against a current, reputable source; cite it in a few words ("Cochrane 2023", "INBUILD, NEJM 2019"). Australian spelling. No patient advice; doses as general guidance.
+- No "which mascot are you" posts, no "play today's puzzles" filler posts, no Zebra Mail posts. Never link /specialists/.
+- Before adding a post, check Typefully (social set 354708) for the slot: never two posts in one slot.
+
 ## X posts: NEWS-LED MIX FROM 24 NOV 2026 (owner's decision; overrides the 17 Nov and 23 Nov X sections and every task prompt where they conflict)
 - Why: week of 16–22 Nov, timely news posts (GLP-1 thread 44, oral GLP-1 TGA approval 42, pancreatic cancer day 37 impressions) beat most puzzle posts (6–20). Puzzles stay, but news leads.
 - **7:30am: ONE puzzle a day, every day** (keep the existing puzzle rules; Thursday stays the weekly Short). Never more than one puzzle post a day.
