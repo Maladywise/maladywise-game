@@ -3597,6 +3597,13 @@
 "label": "Condition",
 "title": "PTSD"
 },
+"pulmonary-fibrosis": {
+"url": "/pulmonary-fibrosis/",
+"key": "c54e2784ebed",
+"v": "104dbf28",
+"label": "Condition",
+"title": "Pulmonary Fibrosis"
+},
 "quit-smoking": {
 "url": "/quit-smoking/",
 "key": "c9197548e983",
