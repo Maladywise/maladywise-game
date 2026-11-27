@@ -4431,107 +4431,107 @@
   "date": "2026-11-28",
   "number": 42,
   "difficulty": "Hard",
-  "theme": "The dose makes the poison",
+  "theme": "Twists in the family tree",
   "questions": [
    {
-    "q": "\u2018The dose makes the poison\u2019 is a paraphrase of which 16th-century Swiss physician?",
-    "a": "Paracelsus",
+    "q": "Loeys\u2013Dietz syndrome was first described in 2005 by a team based at which institution?",
+    "a": "Johns Hopkins",
     "w": [
-     "Galen",
-     "Avicenna",
-     "Hippocrates"
+     "Mayo Clinic",
+     "Great Ormond Street",
+     "Karolinska Institute"
     ],
-    "e": "Water, oxygen and your favourite vitamin can all confirm he had a point."
+    "e": "Reported in Nature Genetics by Bart Loeys and Hal Dietz's team. Loeys now leads a cardiogenomics group in Antwerp."
    },
    {
-    "q": "Who is regarded as the father of modern toxicology, author of \u2018Trait\u00e9 des poisons\u2019 (1813)?",
-    "a": "Mathieu Orfila",
+    "q": "The genes behind Loeys\u2013Dietz syndrome all sit in which signalling pathway?",
+    "a": "TGF-beta",
     "w": [
-     "James Marsh",
-     "Robert Christison",
-     "Paracelsus"
+     "Wnt",
+     "Notch",
+     "Hedgehog"
     ],
-    "e": "A Spanish-born Parisian chemist who became a star witness in poisoning trials."
+    "e": "Transforming growth factor-beta. The same pathway is overactive in Marfan syndrome, which is why the two look so alike."
    },
    {
-    "q": "Prussian blue is an antidote for poisoning with which metal?",
-    "a": "Thallium",
+    "q": "Which mouth finding is a classic clue to Loeys\u2013Dietz syndrome?",
+    "a": "A split uvula",
     "w": [
-     "Lead",
-     "Arsenic",
-     "Copper"
+     "A furry black tongue",
+     "A map-like tongue",
+     "A bony palate lump"
     ],
-    "e": "The pigment traps thallium in the gut. A painter\u2019s favourite gets a second job."
+    "e": "A bifid uvula. With widely spaced eyes and twisty arteries, it makes up the classic triad. Easy to spot, easy to miss."
    },
    {
-    "q": "Hydroxocobalamin, a form of vitamin B12, is an antidote for which poison?",
-    "a": "Cyanide",
+    "q": "On scans, the arteries in Loeys\u2013Dietz syndrome are typically?",
+    "a": "Twisty, tortuous",
     "w": [
-     "Carbon monoxide",
-     "Iron",
-     "Lithium"
+     "Beaded like pearls",
+     "Heavily calcified",
+     "Narrow and absent"
     ],
-    "e": "It grabs cyanide to make harmless cyanocobalamin. It also turns patients and their urine red for a while."
+    "e": "Arterial tortuosity, often in the neck. Beading is fibromuscular dysplasia. Aneurysms can turn up in arteries throughout the body."
    },
    {
-    "q": "Calcium gluconate gel is the specific treatment for skin burns from which acid?",
-    "a": "Hydrofluoric acid",
+    "q": "Marfan syndrome, Loeys\u2013Dietz's better-known cousin, is caused by variants in the gene for which protein?",
+    "a": "Fibrillin-1",
     "w": [
-     "Sulfuric acid",
-     "Hydrochloric acid",
-     "Nitric acid"
+     "Collagen III",
+     "Elastin",
+     "Lamin A"
     ],
-    "e": "The fluoride ion mops up calcium in the tissues, which is what makes this burn so nasty."
+    "e": "FBN1. Collagen III is vascular Ehlers\u2013Danlos, elastin is Williams syndrome and supravalvular stenosis, lamin A is progeria."
    },
    {
-    "q": "Japan\u2019s itai-itai (\u2018it hurts, it hurts\u2019) disease, in the Jinzu river basin, was caused by?",
-    "a": "Cadmium",
+    "q": "In 2006, which blood pressure medicine prevented aortic aneurysm in Marfan mice by acting as a TGF-beta antagonist?",
+    "a": "Losartan",
     "w": [
-     "Mercury",
-     "Lead",
-     "Thallium"
+     "Amlodipine",
+     "Hydralazine",
+     "Clonidine"
     ],
-    "e": "Mining waste in rice paddies softened bones. Women who\u2019d had many children were hit hardest."
+    "e": "The 2006 Science paper from Dietz's lab used an angiotensin II receptor blocker. Mice first, people later."
    },
    {
-    "q": "Eating unripe ackee, the national fruit of Jamaica, can cause a dangerous drop in?",
-    "a": "Blood sugar",
+    "q": "Which chromosomal condition in women brings a bicuspid aortic valve and a raised risk of aortic dissection?",
+    "a": "Turner syndrome",
     "w": [
-     "Blood pressure",
-     "Sodium",
-     "Platelets"
+     "Klinefelter syndrome",
+     "Triple X syndrome",
+     "Fragile X syndrome"
     ],
-    "e": "Hypoglycin A blocks fat metabolism. Once called Jamaican vomiting sickness."
+    "e": "45,X. Heart and aorta imaging is part of lifelong care."
    },
    {
-    "q": "Alice Hamilton, the pioneer of occupational toxicology, was in 1919 the first woman appointed to the faculty of?",
-    "a": "Harvard",
+    "q": "Delirium in ICU is in the news. The quick 4AT screen tests attention by asking the patient to?",
+    "a": "Say the months backwards",
     "w": [
-     "Oxford",
-     "Johns Hopkins",
-     "The Sorbonne"
+     "Count back from 100 by 7",
+     "Spell WORLD backwards",
+     "Recall three words later"
     ],
-    "e": "She investigated lead in factories for decades. Harvard, in return, kept her out of the Faculty Club and its commencement parade."
+    "e": "Starting at December. The four A's: Alertness, AMT4, Attention and Acute change. A score of 4 or more suggests delirium."
    },
    {
-    "q": "Agatha Christie picked up her knowledge of poisons working in which job during World War I?",
-    "a": "Hospital dispensary assistant",
+    "q": "Storm season is here. Melbourne's thunderstorm asthma epidemic of 21 November 2016 was blamed on pollen from?",
+    "a": "Ryegrass",
     "w": [
-     "Police laboratory assistant",
-     "Mortuary attendant",
-     "University chemistry tutor"
+     "Wattle",
+     "Birch",
+     "Plane trees"
     ],
-    "e": "Which is why so many of her victims are so pharmacologically correct."
+    "e": "Perennial ryegrass. Storm winds and moisture are thought to burst the grains into tiny bits that reach deep into the lungs."
    },
    {
-    "q": "\u2018Hot as a hare, blind as a bat, dry as a bone, red as a beet, mad as a hatter\u2019 describes which toxidrome?",
-    "a": "Anticholinergic",
+    "q": "UK drivers' eyesight rules are trending. You must be able to read a number plate from how far away?",
+    "a": "20 metres",
     "w": [
-     "Cholinergic",
-     "Opioid",
-     "Serotonergic"
+     "10 metres",
+     "30 metres",
+     "50 metres"
     ],
-    "e": "Fever, big pupils, dry skin, flushing and delirium. Deadly nightshade could do the lot."
+    "e": "About the length of five parked cars, says the DVLA. Glasses or contacts are fine if you need them."
    }
   ]
  },

@@ -1310,15 +1310,15 @@
   "difficulty": "Hard",
   "groups": [
    {
-    "label": "Lab glassware",
+    "label": "Parts of the aorta",
     "level": 1,
     "words": [
-     "BEAKER",
-     "FLASK",
-     "BURETTE",
-     "PIPETTE"
+     "ROOT",
+     "ARCH",
+     "ISTHMUS",
+     "BIFURCATION"
     ],
-    "info": "A burette delivers measured volumes in titrations; a pipette transfers a fixed volume."
+    "info": "Root (with the sinuses of Valsalva, where Marfan-type aneurysms often start), arch, isthmus (just past the left subclavian artery, the usual site of coarctation) and bifurcation (into the common iliac arteries, around L4)."
    },
    {
     "label": "Microbe names meaning '-loving'",
