@@ -30,6 +30,7 @@ CSS = """<style>
 .pr-crit h3{font-size:15px;margin:14px 0 6px;color:#2E1F57}.pr-hs{font-weight:500;color:#3b3646}
 .pr-crit ul{margin:0 0 4px;padding-left:0;list-style:none}.pr-crit li{margin:5px 0;padding-left:24px;position:relative}
 .pr-crit li::before{content:"";position:absolute;left:0;top:.2em;width:13px;height:13px;border:1.5px solid #333;border-radius:2px}
+.pr-af h3{font-size:14px;margin:12px 0 4px;color:#2E1F57}.pr-chk{margin:0 0 4px;padding:0;list-style:none}.pr-chk li{margin:4px 0;padding-left:24px;position:relative}.pr-chk.c2{columns:2;column-gap:24px}.pr-chk.c2 li{break-inside:avoid}.pr-chk li i{position:absolute;left:0;top:.2em;width:13px;height:13px;border:1.5px solid #333;border-radius:2px}
 .pr-crit li.nb::before{display:none}.pr-crit ul.c2{columns:2;column-gap:28px}.pr-crit ul.c2 li{break-inside:avoid}.pr-crit li b{color:#2E1F57}
 .pr-foot{margin:14px 0 0;font-size:11px;line-height:1.45;color:#5b5666;border-top:1px solid #ddd;padding-top:8px}
 .pr-hub{list-style:none!important;padding:0!important;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
@@ -42,6 +43,7 @@ CSS = """<style>
  .pr-sheet{border:0;border-radius:0;padding:4mm 0 0;font-size:10.5pt;line-height:1.45}
  .pr-sheet h2{font-size:15pt;margin:0 0 4mm}.pr-t th,.pr-t td{padding:4px 6px}.pr-crit li{margin:2px 0}.pr-crit h3{font-size:11.5pt;margin:4mm 0 1.5mm}
  .pr-crit{font-size:11pt}.pr-crit li{margin:1.2mm 0}
+ .pr-af{font-size:9.3pt;line-height:1.3}.pr-af h3{font-size:10.5pt;margin:2.5mm 0 1mm}.pr-af .pr-chk li{margin:.6mm 0}.pr-af .pr-t th,.pr-af .pr-t td{padding:1.5px 5px}.pr-af .pr-key{padding:4px 10px 4px 24px}.pr-af .pr-sub{margin:0 0 2mm}
  .pr-sheet.tight{font-size:9.5pt;line-height:1.35}.pr-sheet.tight .pr-t th,.pr-sheet.tight .pr-t td{padding:2px 5px}.pr-sheet.tight .pr-crit h3,.pr-sheet.tight h3{margin:2.5mm 0 1mm}
  .pr-t tr,.pr-crit li{break-inside:avoid}}
 </style>"""
@@ -385,12 +387,43 @@ main = ('<p class="meta"><a href="/printables/">Printables</a> · Score sheet</p
         '<p class="lede">A one-page sheet for scoring joint hypermobility (the 9-point Beighton score), ready to print or save as a PDF.</p>\n' + bar(' <a href="/ehlers-danlos-syndrome/">About EDS and hypermobility</a>') + "\n" + sheet)
 page("beighton-score", "Printable Beighton Score Sheet (Free PDF)", "Free printable Beighton score sheet for joint hypermobility: 9 points, left and right, with adult, child and over-50 cut-offs.", main)
 
+
+# ---------- New AF work-up checklist (for clinicians; 28 Nov 2026, owner's request) ----------
+def tick(items, c2=False): return "<ul class='pr-chk%s'>" % (" c2" if c2 else "") + "" + "".join("<li><i></i>%s</li>" % x for x in items) + "</ul>"
+cha = [("C", "Congestive heart failure (or LV dysfunction)", 1), ("H", "Hypertension", 1), ("A₂", "Age 75 or over", 2), ("D", "Diabetes", 1),
+       ("S₂", "Prior stroke, TIA or thromboembolism", 2), ("V", "Vascular disease (MI, peripheral artery disease, aortic plaque)", 1), ("A", "Age 65 to 74", 1)]
+crow = "".join("<tr><td class='n'>%s</td><td class='q'>%s</td><td class='b'>%d</td><td class='b'><i></i></td></tr>" % (a, E(b), c) for a, b, c in cha)
+sheet = ('<div class="pr-sheet pr-af"><p class="pr-brand">Malady Wise · Clinician checklist</p><h2>New atrial fibrillation: work-up checklist</h2>'
+  '<p class="pr-sub">Patient: ____________________ Date: ____________ AF type: first detected / paroxysmal / persistent / permanent</p>'
+  '<h3>Urgent first</h3>' + tick(["Unstable (low BP, chest pain, heart failure, syncope) or rate over 150: send to the emergency department",
+                                   "Onset under 48 hours and very symptomatic: discuss with ED or cardiology about cardioversion"]) +
+  '<h3>Tests</h3>' + tick(["12-lead ECG (QT, LVH, pre-excitation)", "FBC", "UEC, eGFR, CrCl (Cockcroft-Gault)",
+                           "LFTs", "TSH", "HbA1c or glucose", "Coags (baseline INR/APTT)", "Magnesium and calcium", "Lipids",
+                           "Transthoracic echo", "BNP if heart failure suspected", "Troponin only if ACS suspected"], True) +
+  '<h3>Stroke risk: CHA₂DS₂-VA</h3><table class="pr-t"><tr><th></th><th style="text-align:left">Risk factor</th><th>Points</th><th>✓</th></tr>' + crow + '</table>'
+  '<p class="pr-score"><span>Total (out of 8): ______</span></p>'
+  '<ul class="pr-key"><li>2 or more: anticoagulation recommended. 1: consider it. 0: no anticoagulant. (Sex isn’t counted.)</li>'
+  '<li>A DOAC is preferred over warfarin unless there’s a mechanical valve or moderate–severe mitral stenosis. Aspirin isn’t stroke prevention in AF.</li></ul>'
+  '<h3>Bleeding risk</h3>' + tick(["Fix what can be fixed: blood pressure, alcohol, NSAIDs or antiplatelets, anaemia, labile INR, kidney and liver function",
+                                    "A high bleeding score is a reason to review more often, not on its own a reason to withhold anticoagulation"]) +
+  '<h3>Rate and rhythm</h3>' + tick(["Rate control: beta-blocker, or diltiazem/verapamil if no heart failure with reduced EF; digoxin as an add-on",
+                                      "Lenient target: resting heart rate under 110 if symptoms are controlled",
+                                      "Refer for rhythm control (cardioversion, drugs, ablation) if still symptomatic, young, new heart failure, or AF diagnosed within the last year",
+                                      "Before elective cardioversion: anticoagulated for 3 weeks, or a TOE"]) +
+  '<h3>Risk factors (they change AF burden)</h3>' + tick(["Weight: aim for 10% loss if overweight", "Alcohol: cut down or stop", "Blood pressure to target",
+                                                            "Screen for sleep apnoea (STOP-Bang)", "Regular moderate exercise", "Smoking"], True) +
+  '<p class="pr-foot">Based on the NHFA/CSANZ Australian atrial fibrillation guideline (2018) and the ESC AF guideline (2024). Check current Therapeutic Guidelines and product information for doses. Printed from maladywise.com/printables/new-af-checklist/.</p></div>')
+main = ('<p class="meta"><a href="/printables/">Printables</a> · For clinicians</p>\n<h1>New AF work-up checklist</h1>\n'
+        '<p class="lede">A one-page checklist for newly diagnosed atrial fibrillation: urgent signs, bloods and tests, CHA₂DS₂-VA, bleeding risk, rate and rhythm, and risk factors.</p>\n' + bar(' <a href="/atrial-fibrillation/">About AF (patients)</a>') + "\n" + sheet)
+page("new-af-checklist", "New Atrial Fibrillation Work-up Checklist (Free Printable PDF)", "Free one-page checklist for new atrial fibrillation: ECG and bloods, echo, CHA2DS2-VA stroke score, bleeding risk, rate and rhythm control and risk factors. Based on Australian and ESC guidelines.", main)
+
 # ---------- hub ----------
 def li(slug, t, s): return '<li><a href="/printables/%s/"><b>%s</b><span>%s</span></a></li>' % (slug, E(t), E(s))
 hub = ('<p class="meta"><a href="/tools/">Tools</a> · Printables</p>\n<h1>Printables</h1>\n'
        '<p class="lede">Free one-page questionnaires and criteria checklists. Print them or save as a PDF. Nothing you fill in online is stored.</p>\n'
        '<h2>Questionnaires</h2><ul class="pr-hub">' + "".join(li(q["slug"], q["name"], q["full"].split(" (")[0]) for q in Q) + '</ul>\n'
        '<h2>Record sheets</h2><ul class="pr-hub">' + li("pots-stand-test", "POTS stand test", "Lying and standing heart rate, 10 minutes") + li("beighton-score", "Beighton score", "Joint hypermobility, 9 points") + '</ul>\n'
+       '<h2>For clinicians</h2><ul class="pr-hub">' + li("new-af-checklist", "New AF work-up", "Tests, CHA₂DS₂-VA, bleeding, rate and rhythm") + '</ul>\n'
        '<h2>Diagnostic criteria checklists</h2><ul class="pr-hub">' + "".join(li(c["slug"], c["name"], c["lede"].split(":")[0]) for c in C) + '</ul>\n'
        '<h2>Not here, and why</h2><ul>'
        '<li><b>DASS-21:</b> free for clinicians, but its authors ask that it isn’t offered to the public on websites. Ask your GP or psychologist. Details: www2.psy.unsw.edu.au/dass.</li>'
