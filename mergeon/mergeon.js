@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "27";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "28";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -175,7 +175,7 @@
     donorT: "Plain: goes with everything.", recipT: "Spicy: gets along with everyone.", mixed: "Tasty pairing!" };
   function bgOK(d, r) { return (d & ~r) === 0; } // donor d can give to recipient r
   MED.SPEC = {
-    micro: { e: "🚀", n: "Microgravity Monday", short: "Microgravity", line: "floaty pieces and a gentle drift.",
+    micro: { e: "🚀", n: "Microgravity Monday", short: "Microgravity", line: "a tenth of normal gravity and a gentle drift.",
       fact: { t: "Microgravity", x: "In space, body fluids shift towards the head (hello, puffy face), weight-bearing bones lose about 1–1.5% of their density a month, and some astronauts get eye changes called SANS." } },
     blood: { e: "🩸", n: "Blood Bank Wednesday", short: "Blood Bank", line: "compatible groups only.",
       fact: { t: "Blood groups", x: "Your group comes from A and B markers on red cells plus the Rh factor (the + or −). O negative red cells can go to almost anyone in an emergency. In Australia, donations are collected by Lifeblood." } },
@@ -183,7 +183,7 @@
       fact: { t: "Why we feel sick", x: "Feeling rotten is partly your immune system’s plan. Fever makes life harder for many germs and speeds up immune cells, and ‘sickness behaviour’ (tired, off your food) saves energy for the fight." } }
   };
   SEA.SPEC = {
-    micro: { e: "🌙", n: "Moon Monday", short: "Moon", line: "floaty pieces and a gentle drift.",
+    micro: { e: "🌙", n: "Moon Monday", short: "Moon", line: "one-sixth gravity, like the Moon, and a gentle drift.",
       fact: { t: "Moon gravity", x: "Gravity on the Moon is about one-sixth of Earth’s. Apollo astronauts found it easier to bunny-hop than walk." } },
     blood: { e: "🥘", n: "Potluck Wednesday", short: "Potluck", line: "matching flavours only.",
       fact: { t: "Potluck", x: "The word ‘potluck’ goes back to the 1500s: a guest got whatever luck had put in the pot." } },
@@ -485,10 +485,10 @@
     DRAIN = !NOFEAT && String(day) >= DRAINDAY; drained = 0;
     JUICE = goalsOn(day); meter = 0; feverS = 0; dangerT = 0; lastSave = -1e9; saves = 0; TL = { merge: 0, combo: 0, fever: 0, cure: 0, waste: 0, save: 0 };
     var dh = 0; "drain".split("").forEach(function (c) { dh = (Math.imul(dh, 31) + c.charCodeAt(0)) | 0; }); xrnd = mulberry32((seed2 ^ dh ^ 0x7F4A7C15) >>> 0);
-    driftA = 0.035 + drnd() * 0.02; driftP = 900 + drnd() * 600; driftPh = drnd() * Math.PI * 2;
+    driftA = 0.012 + drnd() * 0.008; driftP = 900 + drnd() * 600; driftPh = drnd() * Math.PI * 2;
     if (SP === "blood") { curG = drawG(); nxtG = drawG(); }
     shakeLeft = NEW ? 1 : 0; cuts = NEW ? 3 : 0; arm = false; parts = []; nextBeat = 0; drops = 0; steps = 0; infN = 0; infCleared = 0;
-    engine = E.create(); engine.gravity.y = SP === "micro" ? 0.6 : mut("heavy") ? 1.6 : mut("water") ? 0.75 : 1.15; if (mut("tilt")) engine.gravity.x = 0.2 * TILT; engine.positionIterations = 8; engine.velocityIterations = 6;
+    engine = E.create(); engine.gravity.y = SP === "micro" ? (NORMIE ? 0.19 : 0.115) : mut("heavy") ? 1.6 : mut("water") ? 0.75 : 1.15; if (mut("tilt")) engine.gravity.x = 0.2 * TILT; engine.positionIterations = 8; engine.velocityIterations = 6;
     var opt = { isStatic: true, friction: mut("slippery") ? 0 : 0.2, restitution: mut("bouncy") ? 0.8 : 0.1, label: "wall" };
     C.add(engine.world, [B.rectangle(W / 2, H + WALL / 2, W + WALL * 2, WALL, opt), B.rectangle(-WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W + WALL / 2, H / 2, WALL, H * 2, opt)]);
     if (mut("narrow")) C.add(engine.world, [B.rectangle(NARROW - WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W - NARROW + WALL / 2, H / 2, WALL, H * 2, opt)]);
@@ -579,7 +579,7 @@
   }
   function add(lv, x, y) {
     var rs = 0.1, fr = 0.12, fa = 0.004, fs = 0.5;
-    if (SP === "micro") { rs = 0.05; fa = 0.012; }
+    if (SP === "micro") { rs = 0.05; fa = 0.002; }
     if (mut("bouncy")) rs = 0.8; // 28 Nov 2026: twice the bounce height (was 0.55) if (mut("slippery")) { fr = 0.004; fs = 0.05; } if (mut("heavy")) { rs = 0; fa = 0.002; }
     if (mut("water")) fa = 0.05; if (mut("jelly")) { rs = 0; fr = 1; fs = 2; fa = 0.03; }
     if (SP === "sick" && lv < O.length && QUIRK[lv] === "slip") fr = 0.03;
@@ -704,7 +704,7 @@
       var o = bodies[i]; if (o.lv === undefined || o.gone) continue;
       // from 9 Nov (and practice): more forgiving. A piece must poke well over the line (SLACK px) for longer (GRACE ms) before the game ends.
       var SLACK = BIG ? 6 : FIVE ? 14 : 0, GRACE = BIG ? 2200 : FIVE ? 3200 : 1800, FRESH = BIG ? 1800 : FIVE ? 2000 : 1500;
-      if (SP === "micro" || mut("bouncy")) { GRACE += mut("bouncy") ? 1800 : 1000; FRESH += mut("bouncy") ? 1000 : 600; } // floatier days settle more slowly
+      if (SP === "micro" || mut("bouncy")) { GRACE += mut("bouncy") ? 1800 : 3500; FRESH += mut("bouncy") ? 1000 : 3000; } // floatier days settle more slowly
       if (o.fresh && now - o.fresh < FRESH) continue;
       if (o.position.y - rad(o) < LINE - SLACK) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / GRACE); if (now - o.overT > GRACE) { end(); return 1; } }
       else o.overT = 0;
