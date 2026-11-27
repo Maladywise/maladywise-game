@@ -1,0 +1,437 @@
+{
+ "ortho-hip-knee": {
+  "name": "Orthopaedics: hip and knee",
+  "people": [
+   {
+    "name": "Dr Brenton Johns",
+    "specialty": "Orthopaedic surgeon",
+    "practice": "Gateshead Orthopaedics",
+    "address": "Level 2, 6-8 Sydney Street",
+    "suburb": "Gateshead",
+    "phone": "02 4961 6966",
+    "fax": "02 4923 8323",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-brenton-johns/",
+    "interests": [
+     "knee",
+     "hip"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.ramsayhealth.com.au/en/specialists-and-practitioners/dr-brenton-johns/",
+     "https://www.healthdirect.gov.au/australian-health-services/healthcare-service/gateshead-2290-nsw/gateshead-orthopedics/orthopaedic-service/e2d66041-94fc-04d2-3927-d0f4c315c168"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "general-medicine": {
+  "name": "General medicine",
+  "people": [
+   {
+    "name": "Dr Shyam Gangadharan",
+    "specialty": "General physician",
+    "practice": "Mind-Care",
+    "address": "Level 3, 28-38 Smart Street",
+    "suburb": "Charlestown",
+    "phone": "02 4943 4111",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-shyam-gangadharan",
+    "interests": [
+     "stroke and TIA",
+     "headache and migraine",
+     "tremor",
+     "seizures",
+     "functional neurological disorders",
+     "cognitive impairment",
+     "breathlessness",
+     "neuro-oncology"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [
+      "Lake Macquarie Private Hospital",
+      "Warners Bay Private Hospital"
+     ],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://prod2.ramsayhealth.com.au/en/specialists-and-practitioners/dr-shyam-gangadharan",
+     "https://mind-care.net.au"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "psychology": {
+  "name": "Psychology",
+  "people": [
+   {
+    "name": "Danielle Gessler",
+    "specialty": "Clinical psychologist",
+    "practice": "The Jarrah Tree Practice",
+    "address": "Suite A, Level 1, 118 Belford Street",
+    "suburb": "Broadmeadow",
+    "phone": "(02) 4003 4143",
+    "fax": "02 9171 6549",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.jarrahtreepractice.com",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.jarrahtreepractice.com"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Trudy Murphy",
+    "specialty": "Psychologist",
+    "practice": "Trudy Murphy Psychology",
+    "address": "Suite 15, Level 2, 10 Bradford Close",
+    "suburb": "Kotara",
+    "phone": "0485 583 583",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.trudymurphy.com",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "16 and over",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.trudymurphy.com"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Daniel Mackertich",
+    "specialty": "Psychologist",
+    "practice": "The Base Health",
+    "address": "3 Tudor Street",
+    "suburb": "Newcastle West",
+    "phone": "02 4963 1387",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.thebasehealth.com.au/team/daniel-mackertich",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://www.thebasehealth.com.au/team"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Thriving Minds Clinic",
+    "specialty": "Psychology practice",
+    "practice": "Thriving Minds Clinic",
+    "address": "1/1 Albion Street",
+    "suburb": "Maitland",
+    "phone": "02 4072 8122",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://thrivingmindsclinic.com.au",
+    "interests": [
+     "CBT",
+     "EMDR",
+     "ACT",
+     "mindfulness"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://thrivingmindsclinic.com.au"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-paediatric": {
+  "name": "Speech pathology (children)",
+  "people": [
+   {
+    "name": "Jess Kiely",
+    "specialty": "Speech pathologist",
+    "practice": "The Willow Tree Clinic",
+    "address": "Level 2, Suite 2, 10 Bradford Close",
+    "suburb": "Kotara",
+    "phone": "(02) 4989 7878",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.thewillowtreeclinic.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://thewillowtreeclinic.com.au/our-team/",
+     "https://www.thewillowtreeclinic.com.au"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Abbey McPherson",
+    "specialty": "Speech pathologist",
+    "practice": "The Willow Tree Clinic",
+    "address": "Level 2, Suite 2, 10 Bradford Close",
+    "suburb": "Kotara",
+    "phone": "(02) 4989 7878",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.thewillowtreeclinic.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://thewillowtreeclinic.com.au/our-team/",
+     "https://www.thewillowtreeclinic.com.au"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Connie Close",
+    "specialty": "Speech pathologist",
+    "practice": "The Willow Tree Clinic",
+    "address": "Level 2, Suite 2, 10 Bradford Close",
+    "suburb": "Kotara",
+    "phone": "(02) 4989 7878",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://www.thewillowtreeclinic.com.au",
+    "interests": [],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://thewillowtreeclinic.com.au/our-team/",
+     "https://www.thewillowtreeclinic.com.au"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   },
+   {
+    "name": "Let's Eat! Feeding Clinic",
+    "specialty": "Speech pathology: feeding and swallowing",
+    "practice": "Let's Eat! Feeding Clinic",
+    "address": "33a Morehead Street",
+    "suburb": "Lambton",
+    "phone": "(02) 4911 2364",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://letseatfeeding.com.au",
+    "interests": [
+     "feeding therapy",
+     "swallowing (dysphagia)"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "infancy to aged care",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://letseatfeeding.com.au",
+     "https://letseatfeeding.com.au/contact-us/"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   }
+  ]
+ },
+ "speech-pathology-adult": {
+  "name": "Speech pathology (adults)",
+  "people": [
+   {
+    "name": "Let's Eat! Feeding Clinic",
+    "specialty": "Speech pathology: feeding and swallowing",
+    "practice": "Let's Eat! Feeding Clinic",
+    "address": "33a Morehead Street",
+    "suburb": "Lambton",
+    "phone": "(02) 4911 2364",
+    "fax": "",
+    "email": "",
+    "ereferral": "",
+    "website": "https://letseatfeeding.com.au",
+    "interests": [
+     "aged care dysphagia",
+     "swallowing (dysphagia)",
+     "feeding therapy"
+    ],
+    "practical": {
+     "telehealth": null,
+     "bulk_billing": "unknown",
+     "wait": "",
+     "ages": "infancy to aged care",
+     "hospitals": [],
+     "languages": [],
+     "after_hours": null,
+     "weekend": null,
+     "ndis": null,
+     "medicare_cdm": null,
+     "new_patients": null,
+     "np_note": "",
+     "np_checked": ""
+    },
+    "inclusive": [],
+    "sources": [
+     "https://letseatfeeding.com.au",
+     "https://letseatfeeding.com.au/contact-us/"
+    ],
+    "checked": "2026-11-27",
+    "ahpra": "not checked"
+   }
+  ]
+ }
+}
