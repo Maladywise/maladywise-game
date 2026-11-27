@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "22";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "23";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -604,7 +604,7 @@
     setTimeout(function () { canDrop = true; }, 260);
     drops++; if (drops === 1) onFirstDrop(); hidTick(); if (DEBUG) dropLog.push(o.lv);
     if (WARD !== null) {
-      var wl = dropsLeft(); wardNote();
+      var wl = dropsLeft(); wardNote(); hud();
       if (wl === 10 || wl === 5) toast(wl + " drops left!");
       if (wl === 0) { outOfDrops = true; setTimeout(function () { if (!wardWon && !over) { toast("Out of drops."); setTimeout(function () { if (!wardWon && !over) wardLose(); }, 900); } }, 2600); }
       var ab = WARDS[WARD].abx; if (ab && BOSS && !BOSS.dead && drops % ab === ab - 1) { nxt = CURE; hud(); toast(NORMIE ? "Sponge next. Keep it away from the kraken!" : "Antibiotic next. Keep it away from the superbug!"); }
@@ -875,7 +875,11 @@
   function shakeBoard(k) { if (quiet()) return; var b = $("board"); b.classList.remove("shk1", "shk2"); void b.offsetWidth; b.classList.add(k > 1 ? "shk2" : "shk1"); }
   function hud() {
     $("score").textContent = fmt(score); wildTip();
-    $("top").innerHTML = top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
+    // Ward rounds (27 Nov 2026): the middle box becomes a big drops-left counter, red at 5 or fewer
+    var dl = dropsLeft(), tb = $("top").parentNode;
+    tb.classList.toggle("dl", dl >= 0); tb.classList.toggle("dl-low", dl >= 0 && dl <= 5);
+    tb.querySelector(".lab").textContent = dl >= 0 ? "Drops left" : K.top;
+    $("top").innerHTML = dl >= 0 ? String(dl) : top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
     $("next").innerHTML = pic(nxt, 26) + (PREV ? pic(nx2, 18) : "") + (SP === "blood" && nxt < O.length ? '<small class="bgt" style="background:' + BG.col[nxtG] + '">' + BG.names[nxtG] + "</small>" : "");
   }
   function toast(m) {
