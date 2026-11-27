@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "26";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "27";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -199,7 +199,7 @@
     "Pufferfish dripped on the floor. Rude.", "Octopus let off an ink puff. Charming.", "Turtle’s in a huff.", "Bless you, shark.", "Orca sprayed everyone from the blowhole.", "Whale’s gone all frosty."];
   // Daily mutations (Tue/Thu/Sat). Physics or scoring tweaks only; never the drop order.
   var MUTS = [
-    { id: "bouncy", e: "🏀", n: ["Bouncy castle", "Bouncy castle"], d: ["Pieces have extra spring.", "Everything has extra spring."] },
+    { id: "bouncy", e: "🏀", n: ["Bouncy castle", "Bouncy castle"], d: ["Pieces bounce like mad.", "Everything has extra spring."] },
     { id: "slippery", e: "⛸️", n: ["Ice rink", "Ice rink"], d: ["Almost no friction: pieces slide right across.", "Almost no friction: creatures slide right across."] },
     { id: "narrow", e: "📏", n: ["Tight squeeze", "Narrow tank"], d: ["The board is a bit narrower.", "The tank is a bit narrower."] },
     { id: "double", e: "✖️", n: ["Double chains", "Double chains"], d: ["Chain reaction bonuses score double.", "Chain reaction bonuses score double."] },
@@ -489,7 +489,7 @@
     if (SP === "blood") { curG = drawG(); nxtG = drawG(); }
     shakeLeft = NEW ? 1 : 0; cuts = NEW ? 3 : 0; arm = false; parts = []; nextBeat = 0; drops = 0; steps = 0; infN = 0; infCleared = 0;
     engine = E.create(); engine.gravity.y = SP === "micro" ? 0.6 : mut("heavy") ? 1.6 : mut("water") ? 0.75 : 1.15; if (mut("tilt")) engine.gravity.x = 0.2 * TILT; engine.positionIterations = 8; engine.velocityIterations = 6;
-    var opt = { isStatic: true, friction: mut("slippery") ? 0 : 0.2, restitution: mut("bouncy") ? 0.4 : 0.1, label: "wall" };
+    var opt = { isStatic: true, friction: mut("slippery") ? 0 : 0.2, restitution: mut("bouncy") ? 0.8 : 0.1, label: "wall" };
     C.add(engine.world, [B.rectangle(W / 2, H + WALL / 2, W + WALL * 2, WALL, opt), B.rectangle(-WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W + WALL / 2, H / 2, WALL, H * 2, opt)]);
     if (mut("narrow")) C.add(engine.world, [B.rectangle(NARROW - WALL / 2, H / 2, WALL, H * 2, opt), B.rectangle(W - NARROW + WALL / 2, H / 2, WALL, H * 2, opt)]);
     Ev.on(engine, "collisionStart", onHit); Ev.on(engine, "collisionActive", onHit);
@@ -580,7 +580,7 @@
   function add(lv, x, y) {
     var rs = 0.1, fr = 0.12, fa = 0.004, fs = 0.5;
     if (SP === "micro") { rs = 0.05; fa = 0.012; }
-    if (mut("bouncy")) rs = 0.55; if (mut("slippery")) { fr = 0.004; fs = 0.05; } if (mut("heavy")) { rs = 0; fa = 0.002; }
+    if (mut("bouncy")) rs = 0.8; // 28 Nov 2026: twice the bounce height (was 0.55) if (mut("slippery")) { fr = 0.004; fs = 0.05; } if (mut("heavy")) { rs = 0; fa = 0.002; }
     if (mut("water")) fa = 0.05; if (mut("jelly")) { rs = 0; fr = 1; fs = 2; fa = 0.03; }
     if (SP === "sick" && lv < O.length && QUIRK[lv] === "slip") fr = 0.03;
     var r = info(lv).r, opt = { restitution: rs, friction: fr, frictionStatic: fs, frictionAir: fa, density: 0.0012 + (lv < O.length ? lv : 0) * 0.0002, slop: 0.01 }, o = null, off = { x: 0, y: 0 };
@@ -704,7 +704,7 @@
       var o = bodies[i]; if (o.lv === undefined || o.gone) continue;
       // from 9 Nov (and practice): more forgiving. A piece must poke well over the line (SLACK px) for longer (GRACE ms) before the game ends.
       var SLACK = BIG ? 6 : FIVE ? 14 : 0, GRACE = BIG ? 2200 : FIVE ? 3200 : 1800, FRESH = BIG ? 1800 : FIVE ? 2000 : 1500;
-      if (SP === "micro" || mut("bouncy")) { GRACE += 1000; FRESH += 600; } // floatier days settle more slowly
+      if (SP === "micro" || mut("bouncy")) { GRACE += mut("bouncy") ? 1800 : 1000; FRESH += mut("bouncy") ? 1000 : 600; } // floatier days settle more slowly
       if (o.fresh && now - o.fresh < FRESH) continue;
       if (o.position.y - rad(o) < LINE - SLACK) { o.overT = o.overT || now; danger = Math.max(danger, 0.001, (now - o.overT) / GRACE); if (now - o.overT > GRACE) { end(); return 1; } }
       else o.overT = 0;
