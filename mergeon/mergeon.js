@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "23";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "24";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -295,7 +295,7 @@
     ' <p class="today" id="mrg-today" hidden></p>' +
     ' <div class="mbar"><div><span class="lab">Score</span><b id="mrg-score">0</b></div><div><span class="lab">' + K.top + '</span><b id="mrg-top">–</b></div><div class="nx"><span class="lab">Next</span><b id="mrg-next">–</b></div></div>' +
     ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="fact" id="mrg-fact" role="status" hidden></div><div class="learn" id="mrg-learn" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
-    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button></span></div>' +
+    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button><button type="button" class="tool" id="mrg-wards" hidden>🏥 Wards</button></span></div>' +
     ' <div class="chain" id="mrg-chain"></div>' +
     ' <p class="note" id="mrg-mode"></p>' +
     ' <div class="result" id="mrg-result" hidden></div>' +
@@ -328,13 +328,13 @@
         "<li><b>Fever:</b> chains of 3+ merges fill the slim meter at the top. Fill it for 10 s of double points. Pull the pile back from the line for a <b>Saved!</b> bonus.</li>" +
         "<li><b>" + esc(K.GOALW) + ":</b> 3 small goals a day (tap 📋). Tick all 3 in your daily run for a sticker. Sparkles hide bonus finds for your 📖 collection.</li>" +
         '<li><label class="mrg-help-learn"><input type="checkbox" id="mrg-help-learn"' + (LEARN ? " checked" : "") + "> <b>Learn mode:</b> names on pieces and a fact with each merge.</label></li>" : "") +
-      '</ul></details><button type="button" class="mrg-help-go" id="mrg-help-go">Let’s play</button></div>';
+      '</ul></details><button type="button" class="mrg-help-go" id="mrg-help-go">Let’s play</button>' + (featUI() ? '<button type="button" class="mrg-help-wards" id="mrg-help-wards">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + ' <small>' + wardsCleared() + '/10 cleared</small></button>' : '') + '</div>';
   }
   function showHelp() {
     var o = document.getElementById("mrg-help-ov"); if (o) o.remove();
     o = document.createElement("div"); o.id = "mrg-help-ov"; o.className = "mrg-help-ov"; o.innerHTML = helpHTML(); document.body.appendChild(o);
     var close = function () { o.remove(); try { localStorage.setItem("mrg-help-seen", "1"); } catch (e) {} };
-    o.addEventListener("click", function (e) { if (e.target === o || e.target.id === "mrg-help-go") close(); });
+    o.addEventListener("click", function (e) { var hw = e.target.closest && e.target.closest("#mrg-help-wards"); if (hw) { close(); openWards(); return; } if (e.target === o || e.target.id === "mrg-help-go") close(); });
     document.addEventListener("keydown", function k(e) { if (e.key === "Escape") { close(); document.removeEventListener("keydown", k); } });
     var b = document.getElementById("mrg-help-go"); if (b) b.focus();
     var lt = document.getElementById("mrg-help-learn"); if (lt) lt.onchange = function () { setLearn(this.checked); };
@@ -949,6 +949,7 @@
   $("cut").onclick = function () { if (!cuts || over) return; arm = arm === "cut" ? false : "cut"; if (arm) { toast(K.TOOL.hint); factQ = []; nextFact(); } tbarUI(); this.blur(); };
   $("rx").onclick = function () { if (!RX || over || (!doses && arm !== "rx")) return; arm = arm === "rx" ? false : "rx"; if (arm) { toast(RXK.ready); factQ = []; nextFact(); } tbarUI(); this.blur(); };
   $("shake").onclick = function () { doShake(); this.blur(); };
+  $("wards").hidden = !featUI(); $("wards").onclick = function () { openWards(); this.blur(); }; // 27 Nov 2026: ward rounds one tap away
   function cutAt(px, py) {
     var bs = pieces(), hit = null, best = 1e9;
     bs.forEach(function (o) { var dx = o.position.x - px, dy = o.position.y - py, d = Math.sqrt(dx * dx + dy * dy) - rad(o); if (d < 12 && d < best) { best = d; hit = o; } });

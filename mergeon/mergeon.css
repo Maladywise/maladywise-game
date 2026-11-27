@@ -203,3 +203,5 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 #mrg .mbar .dl-low b{color:#D2384A;animation:mrgpulse 1s ease-in-out infinite}
 @keyframes mrgpulse{50%{transform:scale(1.12)}}
 @media (prefers-reduced-motion:reduce){#mrg .mbar .dl-low b{animation:none}}
+#mrg .mrg-help-wards,.mrg-help-wards{display:block;width:100%;margin-top:8px;padding:11px 14px;border:1.5px solid var(--line,#ddd);border-radius:999px;background:transparent;color:var(--ink,#2B2540);font:600 15px Poppins,system-ui,sans-serif;cursor:pointer}
+.mrg-help-wards small{font-weight:500;color:var(--muted,#6b6480);margin-left:4px}
