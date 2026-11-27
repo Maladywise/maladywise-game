@@ -2516,6 +2516,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       if (get("mw-theme", "system") === "system") root.setAttribute("data-theme", "dark");
       root.classList.add("mw-night");
       flag("nightmode");
+      if (document.querySelector("#mrg, canvas, [data-game]")) return; // 28 Nov 2026: never pop over a game board
       if (!sessionStorage || sessionStorage.getItem("mw-night-seen")) return;
       try { sessionStorage.setItem("mw-night-seen", "1"); } catch (e) {}
       setTimeout(function () { pill('<img src="/assets/mascots/grandrounds.svg" alt="" width="28" height="28"> Night shift. Locum’s on. Go to bed soon.', 4200); }, 1200);

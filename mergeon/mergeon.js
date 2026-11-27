@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "32";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "33";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -295,8 +295,8 @@
     ' <p class="today" id="mrg-today" hidden></p>' +
     ' <div class="bgkey" id="mrg-bgkey" hidden></div>' +
     ' <div class="mbar"><div><span class="lab">Score</span><b id="mrg-score">0</b></div><div><span class="lab">' + K.top + '</span><b id="mrg-top">–</b></div><div class="nx"><span class="lab">Next</span><b id="mrg-next">–</b></div></div>' +
-    ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="fact" id="mrg-fact" role="status" hidden></div><div class="learn" id="mrg-learn" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
-    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button><button type="button" class="tool" id="mrg-wards" hidden>🏥 Wards</button></span></div>' +
+    ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="learn" id="mrg-learn" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
+    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button><button type="button" class="tool" id="mrg-wards" hidden>🏥 Wards</button></span><div class="fact" id="mrg-fact" role="status" hidden></div></div>' +
     ' <div class="chain" id="mrg-chain"></div>' +
     ' <p class="note" id="mrg-mode"></p>' +
     ' <div class="result" id="mrg-result" hidden></div>' +
@@ -329,13 +329,13 @@
         "<li><b>Fever:</b> chains of 3+ merges fill the slim meter at the top. Fill it for 10 s of double points. Pull the pile back from the line for a <b>Saved!</b> bonus.</li>" +
         "<li><b>" + esc(K.GOALW) + ":</b> 3 small goals a day (tap 📋). Tick all 3 in your daily run for a sticker. Sparkles hide bonus finds for your 📖 collection.</li>" +
         '<li><label class="mrg-help-learn"><input type="checkbox" id="mrg-help-learn"' + (LEARN ? " checked" : "") + "> <b>Learn mode:</b> names on pieces and a fact with each merge.</label></li>" : "") +
-      '</ul></details><button type="button" class="mrg-help-go" id="mrg-help-go">Let’s play</button>' + (featUI() ? '<button type="button" class="mrg-help-wards" id="mrg-help-wards">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + ' <small>' + wardsCleared() + '/10 cleared</small></button>' : '') + '</div>';
+      '</ul></details><button type="button" class="mrg-help-go" id="mrg-help-go">Let’s play</button>' + (featUI() ? '<button type="button" class="mrg-help-wards" id="mrg-help-wards">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + ' <small>' + wardsCleared() + '/' + WARDS.length + ' cleared</small></button><button type="button" class="mrg-help-wards" id="mrg-help-zen">🧘 Zen mode <small>no line, no score</small></button>' : '') + '</div>';
   }
   function showHelp() {
     var o = document.getElementById("mrg-help-ov"); if (o) o.remove();
     o = document.createElement("div"); o.id = "mrg-help-ov"; o.className = "mrg-help-ov"; o.innerHTML = helpHTML(); document.body.appendChild(o);
     var close = function () { o.remove(); try { localStorage.setItem("mrg-help-seen", "1"); } catch (e) {} };
-    o.addEventListener("click", function (e) { var hw = e.target.closest && e.target.closest("#mrg-help-wards"); if (hw) { close(); openWards(); return; } if (e.target === o || e.target.id === "mrg-help-go") { close(); if (e.target.id === "mrg-help-go") setTimeout(focusBoard, 60); } });
+    o.addEventListener("click", function (e) { var hw = e.target.closest && e.target.closest("#mrg-help-wards"); if (hw) { close(); openWards(); return; } if (e.target.closest && e.target.closest("#mrg-help-zen")) { close(); startZen(); return; } if (e.target === o || e.target.id === "mrg-help-go") { close(); if (e.target.id === "mrg-help-go") setTimeout(focusBoard, 60); } });
     document.addEventListener("keydown", function k(e) { if (e.key === "Escape") { close(); document.removeEventListener("keydown", k); } });
     var b = document.getElementById("mrg-help-go"); if (b) b.focus();
     var lt = document.getElementById("mrg-help-learn"); if (lt) lt.onchange = function () { setLearn(this.checked); };
@@ -479,7 +479,12 @@
     // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
     SP = special(day); MUT = mutation(day); SKIN = skinOf(day) || chosenSet(); GOALS = goalsFor(day); gDone = [false, false, false];
     BOSS = null; wardWon = false; outOfDrops = false;
-    if (WARD !== null) { var WW = WARDS[WARD]; SP = WW.sp || ""; MUT = WW.mut ? mutById(WW.mut) : null; GOALS = null; OUT = false; RX = false; tgt = WW.lv || -1; }
+    MUT2 = null; LINE = 96;
+    if (WARD !== null) { var WW = WARDS[WARD], wm = [].concat(WW.mut || []); SP = WW.sp || ""; MUT = wm[0] ? mutById(wm[0]) : null; MUT2 = wm[1] ? mutById(wm[1]) : null; GOALS = null; OUT = false; RX = false; tgt = WW.lv || -1;
+      if (WW.line) LINE = WW.line;
+      if (WW.flip) O.forEach(function (q, i) { q.r = FLIPR[i]; }); // upside-down round: microbe biggest, brain smallest
+      if (WW.mini) O.forEach(function (q) { q.r = Math.round(q.r * 0.72); }); }
+    if (ZEN) { SP = ""; MUT = null; GOALS = null; OUT = false; RX = false; tgt = -1; }
     madeN = []; nMerge = 0; mixN = 0; tootN = 0; slowN = 0;
     sparks = []; hidRun = { sp: {}, tc: 0 }; noPairs = {}; LEARN = featUI() && load("mrg-learn", 0) === 1; $("learn").hidden = true;
     brnd = mulberry32((seed2 ^ 0x85EBCA6B) >>> 0); qrnd = mulberry32((seed2 ^ 0xC2B2AE35) >>> 0); drnd = mulberry32((seed2 ^ 0x165667B1) >>> 0); hrnd = mulberry32((seed2 ^ 0x68E31DA4) >>> 0);
@@ -557,7 +562,7 @@
       var L = Math.min(n, O.length - 1);
       madeN[n] = (madeN[n] || 0) + 1; nMerge++; if (!big) learnFact(n); if (mut("slowmo")) slowN = 24;
       hidMerge(x, y, n);
-      if (BOSS) bossHit(x, y, n);
+      if (BOSS) { kidHit(x, y, n); bossHit(x, y, n); }
       burst(x, y, L); floatTxt(x, y - 12, "+" + pts);
       if (!big) sfx("pop", L);
       if (L >= 7) { shakeBoard(L >= 9 ? 2 : 1); buzz(L >= 9 ? [30, 40, 30] : 25); }
@@ -700,6 +705,7 @@
     sfx(n ? "chime" : "snip");
   }
   function checkOver(now) {
+    if (ZEN) return 0;
     var bodies = C.allBodies(engine.world), danger = 0;
     for (var i = 0; i < bodies.length; i++) {
       var o = bodies[i]; if (o.lv === undefined || o.gone) continue;
@@ -726,6 +732,7 @@
         E.update(engine, 1000 / 60); doMerges(); acc -= 1000 / 60; steps++; if (RX) rxTick(); else if (OUT && infN && steps % 600 === 0) spread();
         if (feverS > 0 && --feverS === 0) endFever();
         if (BOSS) bossTick();
+        if (WARD !== null && WARDS[WARD].time) timeTick();
         if (MUT) envTick();
         if (SP === "sick") sickTick(); if (DRAIN && infN) drainTick(); if (SP === "micro" && steps === 10800) hidTick();
       }
@@ -891,10 +898,11 @@
     bgKeyUI();
     $("score").textContent = fmt(score); wildTip();
     // Ward rounds (27 Nov 2026): the middle box becomes a big drops-left counter, red at 5 or fewer
-    var dl = dropsLeft(), tb = $("top").parentNode;
-    tb.classList.toggle("dl", dl >= 0); tb.classList.toggle("dl-low", dl >= 0 && dl <= 5);
-    tb.querySelector(".lab").textContent = dl >= 0 ? "Drops left" : K.top;
-    $("top").innerHTML = dl >= 0 ? String(dl) : top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
+    var dl = dropsLeft(), tl = timeLeft(), tb = $("top").parentNode;
+    tb.classList.toggle("dl", dl >= 0 || tl >= 0); tb.classList.toggle("dl-low", (dl >= 0 && dl <= 5) || (tl >= 0 && tl <= 15));
+    tb.querySelector(".lab").textContent = tl >= 0 ? "Time left" : dl >= 0 ? "Drops left" : K.top;
+    $("top").innerHTML = tl >= 0 ? mmss(tl) : dl >= 0 ? String(dl) : top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
+    if (ZEN) $("score").textContent = "🧘";
     $("next").innerHTML = pic(nxt, 26) + (PREV ? pic(nx2, 18) : "") + (SP === "blood" && nxt < O.length ? '<small class="bgt" style="background:' + BG.col[nxtG] + '">' + BG.names[nxtG] + "</small>" : "");
   }
   function toast(m) {
@@ -988,6 +996,7 @@
   // ---------- weekly features: runtime ----------
   var BG = K.BG, SPEC = K.SPEC, HID = K.HID, NARROW = 48; // 28 Nov 2026: twice as tight (was 24)
   var ernd = Math.random, TILT = 1, FLOW = 1, envFx = [], lights = [];
+  var ZEN = false, MUT2 = null, FLIPR = [60, 54, 48, 43, 38, 33, 29, 25, 22, 19, 16]; // 28 Nov 2026: zen mode, a second ward twist, flipped sizes
   var SP = "", MUT = null, SKIN = "", GOALS = null, gDone = [], madeN = [], nMerge = 0, mixN = 0, tootN = 0, slowN = 0, PREV = false, nx2 = -1;
   // ---------- Ward rounds: a 10-ward campaign (Nov 2026). Each ward has a target piece and a twist; wards 5 and 10 have a boss. ----------
   // Ward runs are practice runs (the daily is never touched). Progress, unlocked sets and the chosen set live in this browser only.
@@ -998,12 +1007,23 @@
     { n: ["Paediatrics", "Splash park"], lv: 5, dl: 28, mut: "bouncy" },
     { n: ["Night shift", "Midnight reef"], lv: 6, dl: 40, mut: "lights", set: "hall" },
     { n: ["Respiratory", "Windy bay"], lv: 6, dl: 38, mut: "gust" },
-    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics fall from the sky: block them with organs so they land far from it. Green narrow-spectrum is mild, red last-line evolves it twice.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges fall from the sky: block them so they land far from it. Red mega sponges feed it twice."] },
+    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, kids: 3, eat: 1, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics fall from the sky: block them with organs so they land far from it. Green narrow-spectrum is mild, red last-line evolves it twice.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges fall from the sky: block them so they land far from it. Red mega sponges feed it twice."] },
     { n: ["Cardiology", "The current"], lv: 7, dl: 50, mut: "flow", set: "easter" },
     { n: ["Space medicine", "Moon pool"], lv: 7, dl: 50, sp: "micro" },
     { n: ["Blood bank", "Potluck"], lv: 7, dl: 48, sp: "blood" },
     { n: ["ICU", "Storm deck"], lv: 8, dl: 70, mut: "quake", set: "xmas" },
-    { n: ["The final round", "The deep"], boss: 16, st: 1, dl: 80, abx: 6, mut: "heavy", d: ["It's back as MRSA, on a heavy day. More last-line antibiotics fall, and each near it turns it into something worse: VRE, then CRE.", "The kraken is back, crosser, on a heavy day. More mega sponges fall, and each near it makes it bigger and angrier."] }
+    { n: ["The final round", "The deep"], boss: 16, st: 1, dl: 80, abx: 6, kids: 4, eat: 2, mut: "heavy", d: ["It's back as MRSA, on a heavy day. More last-line antibiotics fall, and each near it turns it into something worse: VRE, then CRE.", "The kraken is back, crosser, on a heavy day. More mega sponges fall, and each near it makes it bigger and angrier."] },
+    // 28 Nov 2026: wards 11-20, two twists at once, and new ward types (flip, mini, low line, timer)
+    { n: ["Upside down", "Topsy-turvy"], lv: 8, dl: 60, flip: true, d: ["Everything’s flipped. Microbes are huge and the brain is tiny, so every merge frees up room.", "Everything’s flipped. Plankton are huge and whales are tiny, so every merge frees up room."] },
+    { n: ["Emergency", "Shipwreck cove"], lv: 7, dl: 50, mut: ["bouncy", "narrow"] },
+    { n: ["Neonatal ICU", "Tiny tide pools"], lv: 8, dl: 60, mini: true, mut: "slippery", set: "hall" },
+    { n: ["Gastroenterology", "Murky lagoon"], lv: 7, dl: 50, mut: ["acid", "water"] },
+    { n: ["Outbreak ward", "Kraken’s nest"], boss: 24, st: 0, dl: 70, abx: 7, kids: 4, eat: 2, mut: "slippery", d: ["The superbug is breeding. Baby bugs pop out and eat small organs, and pile up in your way. Merge next to them to pop them.", "The kraken is breeding. Baby krakens pop out and gobble small creatures. Merge next to them to pop them."] },
+    { n: ["Day surgery", "Shallow reef"], lv: 7, dl: 50, line: 170 },
+    { n: ["Triage", "Rescue race"], lv: 7, time: 120, d: ["Patients are piling up. Make a Heart before the clock runs out.", "The tide is turning. Make a turtle before the clock runs out."] },
+    { n: ["Rehab", "Sticky shallows"], lv: 8, dl: 65, mut: ["jelly", "tilt"], set: "easter" },
+    { n: ["Space station", "Upside-down moon"], lv: 8, dl: 60, flip: true, sp: "micro" },
+    { n: ["Superbug HQ", "Kraken’s lair"], boss: 34, st: 2, dl: 90, abx: 5, kids: 6, eat: 3, mut: "quake", set: "xmas", d: ["The final boss starts as VRE, on a shaky ward. Baby bugs eat anything up to a gallbladder, and last-line antibiotics keep falling.", "The kraken king starts crosser than ever. Baby krakens gobble anything up to a crab, and mega sponges keep falling."] }
   ];
   var WARDKEY = "mrg-wards-" + (NORMIE ? "sea" : "med"), SETKEY = "mrg-set-" + (NORMIE ? "sea" : "med"), WARD = null, BOSS = null, wardWon = false;
   function wardsCleared() { return load(WARDKEY, { n: 0 }).n || 0; }
@@ -1011,10 +1031,27 @@
   function mutById(id) { for (var i = 0; i < MUTS.length; i++) if (MUTS[i].id === id) return MUTS[i]; return null; }
   function setsOwned() { var c = wardsCleared(), o = {}; WARDS.forEach(function (w, i) { if (w.set && i < c) o[w.set] = 1; }); ["xmas", "hall", "easter"].forEach(function (k) { if (coll["s-" + k]) o[k] = 1; }); return o; }
   function chosenSet() { var s0 = load(SETKEY, ""); return s0 && setsOwned()[s0] ? s0 : ""; }
-  function wardTwist(w) { var m = w.mut ? mutById(w.mut) : null; return m ? m.e + " " + m.n[NORMIE ? 1 : 0] + ": " + m.d[NORMIE ? 1 : 0] : w.sp && SPEC[w.sp] ? SPEC[w.sp].e + " " + SPEC[w.sp].short : ""; }
-  function wardGoal(w) { return (w.boss ? (NORMIE ? "Beat the kraken" : "Beat the superbug") : "Make " + aName(w.lv)) + (w.dl ? " in " + w.dl + " drops" : ""); }
+  function wardTwist(w) {
+    var L = NORMIE ? 1 : 0, t = [].concat(w.mut || []).map(mutById).filter(Boolean).map(function (m) { return m.e + " " + m.n[L] + ": " + m.d[L]; });
+    if (w.sp && SPEC[w.sp]) t.push(SPEC[w.sp].e + " " + SPEC[w.sp].short + ": " + SPEC[w.sp].line);
+    if (w.flip) t.push(NORMIE ? "🙃 Topsy-turvy: plankton are huge and whales are tiny." : "🙃 Upside down: microbes are huge and the brain is tiny.");
+    if (w.mini) t.push(NORMIE ? "🔬 Tiny: everything is smaller." : "🔬 Tiny patients: every piece is smaller.");
+    if (w.line) t.push("📉 Low ceiling: the danger line is much lower.");
+    if (w.time) t.push("⏱️ Against the clock: no drop limit, just " + (w.time / 60) + " minutes.");
+    if (w.kids) t.push(NORMIE ? "🐙 Baby krakens pop out and gobble small creatures. Merge next to them to pop them." : "🦠 Baby bugs pop out and eat small organs. Merge next to them to pop them.");
+    return t.join(" ");
+  }
+  function wardGoal(w) { return (w.boss ? (NORMIE ? "Beat the kraken" : "Beat the superbug") : "Make " + aName(w.lv)) + (w.time ? " in " + (w.time / 60) + " minutes" : w.dl ? " in " + w.dl + " drops" : ""); }
+  function timeLeft() { return WARD !== null && WARDS[WARD].time ? Math.max(0, WARDS[WARD].time - Math.floor(steps / 60)) : -1; }
+  var lastTL = -1, outOfTime = false;
+  function timeTick() {
+    var t = timeLeft(); if (t === lastTL) return; lastTL = t; hud(); wardNote();
+    if (t === 30 || t === 10) toast(t + " seconds left!");
+    if (t === 0 && !wardWon && !over) { outOfTime = true; toast("Time’s up."); setTimeout(function () { if (!wardWon && !over) wardLose(); }, 700); }
+  }
+  function mmss(t) { return Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); }
   function dropsLeft() { return WARD !== null && WARDS[WARD].dl ? Math.max(0, WARDS[WARD].dl - drops) : -1; }
-  function wardNote() { if (WARD === null) return; var w = WARDS[WARD], l = dropsLeft(); $("mode").textContent = "Ward " + (WARD + 1) + ": " + wn(w) + " · " + wardGoal(w) + (l >= 0 ? " · " + l + " drops left" : ""); }
+  function wardNote() { if (WARD === null) return; var w = WARDS[WARD], l = dropsLeft(), t = timeLeft(); $("mode").textContent = "Ward " + (WARD + 1) + ": " + wn(w) + " · " + wardGoal(w) + (t >= 0 ? " · " + mmss(t) + " left" : l >= 0 ? " · " + l + " drops left" : ""); }
   var outOfDrops = false;
   // head to head: ?vs=<score> (with ?date=) is a friend's challenge on that day's run
   var VS = (function () { var m = /[?&]vs=(\d{1,7})\b/.exec(location.search); return m ? +m[1] : null; })();
@@ -1061,7 +1098,7 @@
     }
   }
   function wildTip() { if (featUI() && (cur === WILD || nxt === WILD) && !coll["t-wild"]) { coll["t-wild"] = 1; put(CKEY, coll); toast(K.WTIP); } }
-  function mut(id) { return !!(MUT && MUT.id === id); }
+  function mut(id) { return !!((MUT && MUT.id === id) || (MUT2 && MUT2.id === id)); }
   function drawG() { var tot = 0, i, x; for (i = 0; i < BG.w.length; i++) tot += BG.w[i]; x = brnd() * tot; for (i = 0; i < BG.w.length; i++) { x -= BG.w[i]; if (x < 0) return i; } return 0; }
   function bgPair(a, b) { return bgOK(a, b) ? b : bgOK(b, a) ? a : -1; } // merged piece takes the recipient's group; -1 = incompatible
   var FACES = ART.map(function (s) { var f = [], re = /translate\(([\d.]+) ([\d.]+)\) scale\(([\d.]+)\)/g, m; while ((m = re.exec(s))) f.push([+m[1], +m[2], +m[3]]); return f; });
@@ -1326,12 +1363,13 @@
   }
   function openMore() {
     var o = overlay("mrg-more-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-mm-h"><h2 id="mrg-mm-h">' + esc(K.GOALW) + "</h2>" + goalsHTML() +
-      '<button type="button" class="mrg-mm-btn" id="mrg-mm-wards">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + " (" + wardsCleared() + "/10)</button>" +
+      '<button type="button" class="mrg-mm-btn" id="mrg-mm-wards">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + " (" + wardsCleared() + "/" + WARDS.length + ')</button><button type="button" class="mrg-mm-btn" id="mrg-mm-zen">🧘 Zen mode</button>' +
       '<button type="button" class="mrg-mm-btn" id="mrg-mm-book">📖 Collection book</button>' + setsHTML() +
       '<label class="mrg-mm-tog"><input type="checkbox" id="mrg-mm-learn"' + (LEARN ? " checked" : "") + "> <span><b>Learn mode</b><br>Names on pieces and a fact with each merge. Doesn’t change scoring.</span></label>" +
       '<button type="button" class="mrg-help-go" data-close>Done</button></div>');
     o.querySelector("#mrg-mm-book").onclick = function () { o.remove(); openBook(); };
     o.querySelector("#mrg-mm-wards").onclick = function () { o.remove(); openWards(); };
+    o.querySelector("#mrg-mm-zen").onclick = function () { o.remove(); startZen(); };
     Array.prototype.forEach.call(o.querySelectorAll("[data-set]"), function (b) { b.onclick = function () { put(SETKEY, b.getAttribute("data-set")); o.remove(); toast(b.getAttribute("data-set") ? "Set on. It shows from your next game." : "Sets off."); }; });
     o.querySelector("#mrg-mm-learn").onchange = function () { setLearn(this.checked); };
   }
@@ -1389,12 +1427,12 @@
   // Stronger = a wider danger zone around the bug, and last-line drugs evolve it twice. Block them with organs so they land far away.
   var ABX = NORMIE ? [
     { n: "Small sponge", s: "S", c: "#5BAA4A", reach: 30, evo: 1, pts: 10 },
-    { n: "Big sponge", s: "B", c: "#E0A030", reach: 70, evo: 1, pts: 20 },
-    { n: "Mega sponge", s: "M", c: "#D2384A", reach: 110, evo: 2, pts: 30 }
+    { n: "Big sponge", s: "B", c: "#E0A030", reach: 55, evo: 1, pts: 20 },
+    { n: "Mega sponge", s: "M", c: "#D2384A", reach: 85, evo: 2, pts: 30 }
   ] : [
     { n: "Narrow-spectrum", s: "N", c: "#5BAA4A", reach: 30, evo: 1, pts: 10, f: "Narrow-spectrum (like flucloxacillin): kills a few bugs, least resistance." },
-    { n: "Broad-spectrum", s: "B", c: "#E0A030", reach: 70, evo: 1, pts: 20, f: "Broad-spectrum (like amoxicillin-clavulanate): kills many bugs, breeds more resistance." },
-    { n: "Last-line", s: "L", c: "#D2384A", reach: 110, evo: 2, pts: 30, f: "Last-line (like a carbapenem): kept for emergencies. Overuse breeds the scariest bugs." }
+    { n: "Broad-spectrum", s: "B", c: "#E0A030", reach: 55, evo: 1, pts: 20, f: "Broad-spectrum (like amoxicillin-clavulanate): kills many bugs, breeds more resistance." },
+    { n: "Last-line", s: "L", c: "#D2384A", reach: 85, evo: 2, pts: 30, f: "Last-line (like a carbapenem): kept for emergencies. Overuse breeds the scariest bugs." }
   ];
   function abxPick(w) { var m = w && w.st ? [0.35, 0.4, 0.25] : [0.6, 0.3, 0.1], x = Math.random(); return x < m[0] ? 0 : x < m[0] + m[1] ? 1 : 2; }
   function abxSky(b) { // count down; warn 1 s ahead at the landing column; then drop one from the top
@@ -1453,7 +1491,7 @@
     b.x0 = Math.max(lim[0], Math.min(lim[1], b.x0 + dir * 24)); // shoved away from the merge
     floatTxt(b.body.position.x, b.body.position.y - b.r - 10, (pinned ? "Pinned! " : "") + "−" + dmg); shakeBoard(1); sfx("pop", 6); buzz(20);
     if (b.hp <= 0) {
-      b.dead = true; C.remove(engine.world, b.body); poof(b.body.position.x, b.body.position.y, b.r); confetti(); sfx("big");
+      kidsClear(); b.dead = true; C.remove(engine.world, b.body); poof(b.body.position.x, b.body.position.y, b.r); confetti(); sfx("big");
       var pts = 50 * b.max + (b.st > (WARDS[WARD].st || 0) ? 0 : 200); score += pts; TL.merge += pts; floatTxt(W / 2, H / 2, "+" + pts); hud();
       toastBig(NORMIE ? "KRAKEN DOWN!" : BSTAGE[b.st].n.toUpperCase() + " BEATEN!"); setTimeout(wardWin, 900);
     } else if (b.hp <= b.max / 2 && !b.half) { b.half = true; toast(NORMIE ? "The kraken is sulking. Keep going!" : "The superbug is weakening. Keep going!"); }
@@ -1463,8 +1501,58 @@
     b.ph += 1; abxSky(b); var nx = b.x0 + Math.sin(b.ph / Math.max(120, 240 - b.st * 30)) * B_SWAY;
     Bd.setPosition(b.body, { x: nx, y: H - b.r - 2 });
     var every = Math.max(240, (b.max >= 16 ? 420 : 600) - b.st * 60);
-    if (b.ph % every === 0) { var o = add(Math.min(b.st, 2), nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - b.r - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "cough!"); }
+    var wk = WARDS[WARD] || {};
+    if (b.ph % every === 0) {
+      if (wk.kids) kidSpawn(b, nx, wk.kids); // 28 Nov 2026: baby bugs instead of coughed-up organs
+      else { var o = add(Math.min(b.st, 2), nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - b.r - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "cough!"); }
+    }
+    if (b.ph % 20 === 0 && b.kids && b.kids.length) kidEat(b, wk.eat || 1);
     if (b.ph % 20 === 0) { var now = performance.now(); pieces().forEach(function (q) { if (q.lv === CURE && !q.gone && q.fresh && now - q.fresh > 2200 && Math.abs(q.velocity.y) < 0.6) { q.gone = true; merges.push([q, q, "cure"]); } }); }
+  }
+  // ---------- baby bugs (28 Nov 2026): block the pile, eat small pieces, popped by merges next to them ----------
+  var KID_R = 13, KID_MAX = 21;
+  function kidSpawn(b, nx, cap) {
+    b.kids = b.kids || []; if (b.kids.length >= cap) return;
+    var k = B.circle(nx + (Math.random() < 0.5 ? -1 : 1) * 24, b.body.position.y - b.r - 18, KID_R, { restitution: 0.2, friction: 0.3, density: 0.0016, label: "kid" });
+    k.kr = KID_R; k.eatT = steps + 240; k.born = 0; Bd.setVelocity(k, { x: (Math.random() - 0.5) * 4, y: -6.5 }); C.add(engine.world, k); b.kids.push(k);
+    floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "pop!"); sfx("germ");
+    if (!b.kidT) { b.kidT = 1; toast(NORMIE ? "A baby kraken! It gobbles small creatures. Merge next to it to pop it." : "A baby bug! It eats small organs. Merge next to it to pop it."); }
+  }
+  function kidEat(b, maxLv) {
+    var all = pieces();
+    b.kids.forEach(function (k) {
+      if (steps < k.eatT) return;
+      for (var i = 0; i < all.length; i++) {
+        var q = all[i]; if (q.gone || q.lv > maxLv || q.lv >= O.length) continue;
+        var dx = q.position.x - k.position.x, dy = q.position.y - k.position.y, r = rad(q) + k.kr + 5;
+        if (dx * dx + dy * dy > r * r) continue;
+        q.gone = true; if (q.inf) setInf(q, false); C.remove(engine.world, q); poof(q.position.x, q.position.y, rad(q));
+        var nr = Math.min(KID_MAX, k.kr + 2.5); Bd.scale(k, nr / k.kr, nr / k.kr); k.kr = nr; k.eatT = steps + 300;
+        floatTxt(k.position.x, k.position.y - k.kr - 8, NORMIE ? "gulp!" : "chomp!"); sfx("pop", 1);
+        break;
+      }
+    });
+  }
+  function kidHit(x, y, n) {
+    var b = BOSS; if (!b || !b.kids || !b.kids.length) return;
+    var reach = info(Math.min(n, O.length - 1)).r + 24;
+    b.kids = b.kids.filter(function (k) {
+      var d = Math.hypot(x - k.position.x, y - k.position.y); if (d > reach + k.kr) return true;
+      C.remove(engine.world, k); poof(k.position.x, k.position.y, k.kr); score += 15; TL.merge += 15; floatTxt(k.position.x, k.position.y - 10, "+15"); return false;
+    });
+    hud();
+  }
+  function kidsClear() { var b = BOSS; if (!b || !b.kids) return; b.kids.forEach(function (k) { C.remove(engine.world, k); poof(k.position.x, k.position.y, k.kr); }); b.kids = []; }
+  function kidsDraw(b, now) {
+    if (!b.kids) return;
+    b.kids.forEach(function (k) {
+      var x = k.position.x, y = k.position.y, r = k.kr, wob = quiet() ? 0 : Math.sin(now / 120 + k.id) * 0.08;
+      ctx.save(); ctx.translate(x, y); ctx.rotate(wob); ctx.lineWidth = 2; ctx.strokeStyle = "#2A1E3D"; ctx.fillStyle = BSTAGE[b.st].c;
+      ctx.beginPath(); for (var i = 0; i < 16; i++) { var a = i * Math.PI / 8, rr = i % 2 ? r * 0.82 : r * 1.12; ctx.lineTo(Math.cos(a) * rr, Math.sin(a) * rr); } ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.fillStyle = "#FFFFFF"; ctx.beginPath(); ctx.arc(-r * 0.32, -r * 0.12, r * 0.26, 0, 7); ctx.arc(r * 0.32, -r * 0.12, r * 0.26, 0, 7); ctx.fill();
+      ctx.fillStyle = "#2A1E3D"; ctx.beginPath(); ctx.arc(-r * 0.28, -r * 0.08, r * 0.13, 0, 7); ctx.arc(r * 0.36, -r * 0.08, r * 0.13, 0, 7); ctx.fill();
+      ctx.beginPath(); ctx.arc(0, r * 0.3, r * 0.22, 0, Math.PI); ctx.fill(); ctx.restore();
+    });
   }
   function bossDraw(now) {
     var b = BOSS; if (!b || b.dead) return;
@@ -1475,6 +1563,7 @@
       ctx.fillStyle = wc; ctx.beginPath(); ctx.arc(b.wx, 16, 12, 0, Math.PI * 2); ctx.fill();
       ctx.fillStyle = "#FFFFFF"; ctx.font = "700 14px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(ABX[b.wk].s, b.wx, 17); ctx.restore();
     }
+    kidsDraw(b, now);
     var R0 = b.r, x = b.body.position.x, y = b.body.position.y, hurt = now - b.hitT < 250, evo = now - b.evoT < 600, k = 1 + (0.03 + b.st * 0.012) * Math.sin(now / Math.max(120, 260 - b.st * 35));
     ctx.save(); ctx.translate(x + (hurt || evo ? Math.sin(now / 15) * (evo ? 6 : 3) : 0), y); ctx.scale(k, 1 / k);
     var sc = R0 / BOSS_R; ctx.scale(sc, sc);
@@ -1507,13 +1596,21 @@
       clearInterval(WT); btn.textContent = label; fn();
     }, 1000);
   }
+  var STARKEY = "mrg-wstars-" + (NORMIE ? "sea" : "med");
+  function wardStars() { // 28 Nov 2026: 3 stars with 40%+ of drops (or time) left, 2 with 20%+, else 1
+    var w = WARDS[WARD], f = w.time ? timeLeft() / w.time : w.dl ? dropsLeft() / w.dl : 1;
+    return f >= 0.4 ? 3 : f >= 0.2 ? 2 : 1;
+  }
+  function starsOf(i) { return (load(STARKEY, {}) || {})[i] || 0; }
+  function starTxt(n) { return "★★★".slice(0, n) + "☆☆☆".slice(0, 3 - n); }
   function wardWin() {
     if (WARD === null || wardWon) return; wardWon = true; over = true; arm = false; tbarUI();
+    var stz = wardStars(), sall = load(STARKEY, {}) || {}, sbest = Math.max(stz, sall[WARD] || 0); sall[WARD] = sbest; put(STARKEY, sall);
     var i = WARD, prev = wardsCleared(), newly = i + 1 > prev; if (newly) put(WARDKEY, { n: i + 1 });
     var w = WARDS[i], unl = newly && w.set && K.SKIN[w.set] ? K.SKIN[w.set] : null;
     confetti(); sfx("target"); buzz([20, 30, 20, 30]);
     var last = i === WARDS.length - 1;
-    $("over").innerHTML = '<div class="ovcard"><p class="best">' + (last ? "🏆 All 10 wards cleared!" : "✅ Ward " + (i + 1) + " cleared") + "</p><b>" + esc(wn(w)) + "</b><span>" + fmt(score) + " points</span>" +
+    $("over").innerHTML = '<div class="ovcard"><p class="best">' + (last ? "🏆 All " + WARDS.length + " wards cleared!" : "✅ Ward " + (i + 1) + " cleared") + "</p><b>" + esc(wn(w)) + '</b><span class="wstars" aria-label="' + stz + ' of 3 stars">' + starTxt(stz) + "</span><span>" + fmt(score) + " points" + (stz < 3 ? " · " + (stz === 2 ? "Finish with 40% left for 3 stars" : "Finish with 20% left for 2 stars") : "") + "</span>" +
       (unl ? "<span>🎁 New set unlocked: " + esc(unl.n) + ". Turn it on in More.</span>" : "") +
       '<div class="ovbtns">' + (last ? "" : '<button class="btn solid" type="button" id="mrg-wnext">Next ward</button>') + '<button class="btn" type="button" id="mrg-wall">All wards</button></div></div>';
     $("over").hidden = false;
@@ -1522,32 +1619,39 @@
   }
   function wardLose() {
     over = true; arm = false; tbarUI(); sfx("over"); var i = WARD;
-    $("over").innerHTML = '<div class="ovcard"><b>Ward ' + (i + 1) + " not cleared</b><span>" + (outOfDrops ? "Out of drops. " : "") + esc(wardGoal(WARDS[i])) + " · " + fmt(score) + " points</span>" +
+    $("over").innerHTML = '<div class="ovcard"><b>Ward ' + (i + 1) + " not cleared</b><span>" + (outOfTime ? "Out of time. " : outOfDrops ? "Out of drops. " : "") + esc(wardGoal(WARDS[i])) + " · " + fmt(score) + " points</span>" +
       '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-wagain">Try again</button><button class="btn" type="button" id="mrg-wall">All wards</button></div><span class="ovnote">Ward rounds never touch your daily run</span></div>';
     $("over").hidden = false;
     $("wagain").onclick = function () { startWard(i); };
     $("wall").onclick = openWards;
   }
   function startWard(i) {
-    clearInterval(WT); WARD = i; newRun(true); $("result").hidden = true;
+    clearInterval(WT); WARD = i; ZEN = false; outOfTime = false; lastTL = -1; newRun(true); $("result").hidden = true;
     var w = WARDS[i], tw = wardTwist(w), d0 = w.d ? w.d[NORMIE ? 1 : 0] : "";
     toast("Ward " + (i + 1) + ": " + wn(w) + " · " + wardGoal(w));
-    var o = overlay("mrg-ward-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-wd-h"><p class="mrg-mm-note">' + (NORMIE ? "Dive site " : "Ward ") + (i + 1) + ' of 10</p><h2 id="mrg-wd-h">' + esc(wn(w)) + "</h2>" +
+    var o = overlay("mrg-ward-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-wd-h"><p class="mrg-mm-note">' + (NORMIE ? "Dive site " : "Ward ") + (i + 1) + " of " + WARDS.length + '</p><h2 id="mrg-wd-h">' + esc(wn(w)) + "</h2>" +
       "<p><b>Goal:</b> " + esc(wardGoal(w)) + (w.boss ? " (" + w.boss + " hits)" : "") + "</p>" + (d0 ? "<p>" + esc(d0) + "</p>" : "") + (tw ? "<p><b>Twist:</b> " + esc(tw) + "</p>" : "<p><b>Twist:</b> none. Enjoy it.</p>") +
       '<button type="button" class="mrg-help-go" data-close>Start</button></div>');
     try { if (desk()) root.scrollIntoView({ behavior: "smooth", block: "start" }); else focusBoard(); } catch (e) {}
     var sb = o.querySelector("[data-close]"); autoGo(sb, "Start", function () { if (document.body.contains(o)) sb.click(); });
     return o;
   }
+  function startZen() { // 28 Nov 2026: no line, no score, no twists; just merging and facts
+    clearInterval(WT); WARD = null; ZEN = true; newRun(true); $("result").hidden = true;
+    $("mode").innerHTML = "🧘 Zen mode: no line, no score. Just merge and learn. <button type=\"button\" class=\"lnk\" id=\"mrg-zen-x\">Back to today’s run</button>";
+    $("zen-x").onclick = function () { show(day); };
+    toast(NORMIE ? "Zen mode. Float about." : "Zen mode. No line, no score."); focusBoard(); hud();
+  }
   function openWards() {
     var c = wardsCleared();
     var rows = WARDS.map(function (w, i) {
       var lock = i > c, done = i < c;
-      return '<button type="button" class="mrg-mm-btn mrg-ward' + (lock ? " locked" : "") + '" data-w="' + i + '"' + (lock ? " disabled" : "") + ">" + (done ? "✅" : lock ? "🔒" : w.boss ? "👾" : "▶️") + " " + (i + 1) + ". " + esc(wn(w)) +
+      var sn = starsOf(i);
+      return '<button type="button" class="mrg-mm-btn mrg-ward' + (lock ? " locked" : "") + '" data-w="' + i + '"' + (lock ? " disabled" : "") + ">" + (done ? "✅" : lock ? "🔒" : w.boss ? "👾" : "▶️") + " " + (i + 1) + ". " + esc(wn(w)) + (done || sn ? ' <span class="wst">' + starTxt(sn) + "</span>" : "") +
         '<small>' + esc(wardGoal(w)) + (w.set ? " · unlocks a set" : "") + "</small></button>";
     }).join("");
     var o = overlay("mrg-wards-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-ws-h"><h2 id="mrg-ws-h">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + "</h2>" +
-      '<p class="mrg-mm-note">Ten wards, each with a goal and a twist. Clear one to open the next. Wards 5 and 10 have a boss. Practice runs only: your daily is never touched.</p>' + rows +
+      '<p class="mrg-mm-note">' + WARDS.length + " wards, each with a goal and a twist. Clear one to open the next. Wards 5, 10, 15 and 20 have a boss. Earn up to 3 stars by finishing with drops (or time) to spare. Practice runs only: your daily is never touched." + (function () { var t = 0; WARDS.forEach(function (w, j) { t += starsOf(j); }); return t ? " <b>" + t + "/" + WARDS.length * 3 + " ★</b>" : ""; })() + "</p>" + rows +
       (WARD !== null ? '<button type="button" class="mrg-mm-btn" id="mrg-wdaily">↩ Back to today’s run</button>' : "") + '<button type="button" class="mrg-help-go" data-close>Close</button></div>');
     Array.prototype.forEach.call(o.querySelectorAll("[data-w]"), function (b) { b.onclick = function () { o.remove(); startWard(+b.getAttribute("data-w")); }; });
     if (o.querySelector("#mrg-wdaily")) o.querySelector("#mrg-wdaily").onclick = function () { o.remove(); show(day); };
@@ -1812,7 +1916,7 @@
 
   // ---------- days ----------
   function show(d) {
-    WARD = null; day = d; KEY = "mrg-day-" + MK + day; st = load(KEY, { done: false });
+    WARD = null; ZEN = false; day = d; KEY = "mrg-day-" + MK + day; st = load(KEY, { done: false });
     $("eyebrow").textContent = (isLive() ? "Mergeon" : "Archive") + " · #" + num(day) + " · " + nice(day);
     if (st.done) renderResult(); else $("result").hidden = true;
     newRun(st.done);

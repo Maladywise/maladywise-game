@@ -211,3 +211,10 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 #mrg .bgkey .bgr{display:inline-flex;align-items:center;gap:4px;padding:2px 6px 2px 2px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
 #mrg .bgkey .bgr i{font-style:normal;font-weight:700;color:#fff;padding:1px 6px;border-radius:999px;font-size:11px}
 #mrg .bgkey .bgr.on{border-color:currentColor;color:var(--ink,inherit);font-weight:700}
+/* 28 Nov 2026: fact card lives over the tools row, not the board; ward stars; zen link */
+#mrg .tbar{position:relative}
+#mrg .tbar .fact{top:-4px;left:0;right:0;z-index:3;min-height:100%}
+#mrg .ovcard .wstars{font-size:26px;letter-spacing:3px;color:#F5B83D;line-height:1}
+#mrg-wards-ov .wst{color:#F5B83D;letter-spacing:1px;font-size:.92em;margin-left:4px}
+#mrg .note .lnk{background:none;border:0;padding:0;font:inherit;color:var(--accent,#7C5CC4);text-decoration:underline;cursor:pointer}
+#mrg .tbar .fact{font-size:11.5px;padding:4px 8px}#mrg .tbar .fact b{font-size:11.5px}
