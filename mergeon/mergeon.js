@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "31";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "32";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -335,7 +335,7 @@
     var o = document.getElementById("mrg-help-ov"); if (o) o.remove();
     o = document.createElement("div"); o.id = "mrg-help-ov"; o.className = "mrg-help-ov"; o.innerHTML = helpHTML(); document.body.appendChild(o);
     var close = function () { o.remove(); try { localStorage.setItem("mrg-help-seen", "1"); } catch (e) {} };
-    o.addEventListener("click", function (e) { var hw = e.target.closest && e.target.closest("#mrg-help-wards"); if (hw) { close(); openWards(); return; } if (e.target === o || e.target.id === "mrg-help-go") close(); });
+    o.addEventListener("click", function (e) { var hw = e.target.closest && e.target.closest("#mrg-help-wards"); if (hw) { close(); openWards(); return; } if (e.target === o || e.target.id === "mrg-help-go") { close(); if (e.target.id === "mrg-help-go") setTimeout(focusBoard, 60); } });
     document.addEventListener("keydown", function k(e) { if (e.key === "Escape") { close(); document.removeEventListener("keydown", k); } });
     var b = document.getElementById("mrg-help-go"); if (b) b.focus();
     var lt = document.getElementById("mrg-help-learn"); if (lt) lt.onchange = function () { setLearn(this.checked); };
@@ -757,7 +757,9 @@
     }
     var w = b.clientWidth || 360;
     // fit the whole game on screen: board height limited by the viewport (leave room for the rows under the board)
-    var vh = window.innerHeight || 700, top0 = b.getBoundingClientRect().top + (window.pageYOffset || 0), below = 96;
+    // 28 Nov 2026: size for the view once the page scrolls the score bar up under the sticky site bar (focusBoard), not from the top of the page
+    var vh = window.innerHeight || 700, below = 96, top0 = b.getBoundingClientRect().top + (window.pageYOffset || 0);
+    try { var mb = root.querySelector(".mbar").getBoundingClientRect(), hb = document.querySelector("header.bar, .bar"), hh = hb ? hb.getBoundingClientRect().height : 0; top0 = hh + 6 + (b.getBoundingClientRect().top - mb.top); } catch (e) {}
     try { var cb = $("chain").getBoundingClientRect(), bb = b.getBoundingClientRect(); if (cb.height) below = cb.bottom - bb.bottom + 12; } catch (e) {}
     var room = vh - top0 - below;
     if (room > 200 && w * H / W > room) { w = Math.floor(room * W / H); b.style.maxWidth = (w + 4) + "px"; }
@@ -1246,7 +1248,13 @@
   // collection cards
   function unlockCard(key, name) { if (coll[key]) return; coll[key] = 1; put(CKEY, coll); if (featUI()) setTimeout(function () { toast("📖 New card: " + name); }, 1200); }
   function specFact(key, f, lv, badge) { factOnce(key, { pic: pic(lv, 32), t: f.t, x: f.x }); }
+  function focusBoard() { // phones: bring the score bar, board and tools into view together
+    if (desk()) return;
+    try { var mb = root.querySelector(".mbar").getBoundingClientRect(), hb = document.querySelector("header.bar, .bar"), hh = hb ? hb.getBoundingClientRect().height : 0;
+      if (Math.abs(mb.top - hh - 6) > 8) window.scrollTo({ top: (window.pageYOffset || 0) + mb.top - hh - 6, behavior: quiet() ? "auto" : "smooth" }); } catch (e) {}
+  }
   function onFirstDrop() {
+    focusBoard();
     if (SPEC[SP]) { specFact("f-" + SP, SPEC[SP].fact, SP === "blood" ? 1 : SP === "micro" ? O.length - 1 : 8); if (SP !== "blood") unlockCard(SP, SPEC[SP].n); }
     if (SKIN && K.SKIN[SKIN]) unlockCard("s-" + SKIN, K.SKIN[SKIN].n);
   }
@@ -1527,7 +1535,7 @@
     var o = overlay("mrg-ward-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-wd-h"><p class="mrg-mm-note">' + (NORMIE ? "Dive site " : "Ward ") + (i + 1) + ' of 10</p><h2 id="mrg-wd-h">' + esc(wn(w)) + "</h2>" +
       "<p><b>Goal:</b> " + esc(wardGoal(w)) + (w.boss ? " (" + w.boss + " hits)" : "") + "</p>" + (d0 ? "<p>" + esc(d0) + "</p>" : "") + (tw ? "<p><b>Twist:</b> " + esc(tw) + "</p>" : "<p><b>Twist:</b> none. Enjoy it.</p>") +
       '<button type="button" class="mrg-help-go" data-close>Start</button></div>');
-    try { root.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (e) {}
+    try { if (desk()) root.scrollIntoView({ behavior: "smooth", block: "start" }); else focusBoard(); } catch (e) {}
     var sb = o.querySelector("[data-close]"); autoGo(sb, "Start", function () { if (document.body.contains(o)) sb.click(); });
     return o;
   }
