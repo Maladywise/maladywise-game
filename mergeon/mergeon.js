@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "24";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "25";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -607,7 +607,6 @@
       var wl = dropsLeft(); wardNote(); hud();
       if (wl === 10 || wl === 5) toast(wl + " drops left!");
       if (wl === 0) { outOfDrops = true; setTimeout(function () { if (!wardWon && !over) { toast("Out of drops."); setTimeout(function () { if (!wardWon && !over) wardLose(); }, 900); } }, 2600); }
-      var ab = WARDS[WARD].abx; if (ab && BOSS && !BOSS.dead && drops % ab === ab - 1) { nxt = CURE; hud(); toast(NORMIE ? "Sponge next. Keep it away from the kraken!" : "Antibiotic next. Keep it away from the superbug!"); }
     }
     if (OUT && (drops === 15 || (drops > 15 && (drops - 15) % 20 === 0))) infect(o);
   }
@@ -838,6 +837,7 @@
       organ(o.lv, o.position.x + jx, o.position.y, o.angle + ja, 1, o.off, (o.sw || 1) * js, o);
       tags(o.lv, o.bg, o.position.x, o.position.y, rad(o));
       if (o.lv >= O.length) aura(o.lv, o.position.x, o.position.y, now);
+      if (o.ab !== undefined) abxDraw(o, now);
       if (o.inf) germ(o);
       if (arm === "cut" || (arm === "rx" && o.inf)) { ctx.save(); ctx.strokeStyle = arm === "rx" ? "rgba(47,125,74,.8)" : "rgba(208,87,62,.55)"; ctx.lineWidth = arm === "rx" ? 2.5 : 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.arc(o.position.x, o.position.y, rad(o) * (arm === "rx" ? 1.12 : 0.95), 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
     });
@@ -983,12 +983,12 @@
     { n: ["Paediatrics", "Splash park"], lv: 5, dl: 28, mut: "bouncy" },
     { n: ["Night shift", "Midnight reef"], lv: 6, dl: 40, mut: "lights", set: "hall" },
     { n: ["Respiratory", "Windy bay"], lv: 6, dl: 38, mut: "gust" },
-    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics make it evolve, so drop them far away.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges feed it, so drop them far away."] },
+    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics fall from the sky: block them with organs so they land far from it. Green narrow-spectrum is mild, red last-line evolves it twice.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges fall from the sky: block them so they land far from it. Red mega sponges feed it twice."] },
     { n: ["Cardiology", "The current"], lv: 7, dl: 50, mut: "flow", set: "easter" },
     { n: ["Space medicine", "Moon pool"], lv: 7, dl: 50, sp: "micro" },
     { n: ["Blood bank", "Potluck"], lv: 7, dl: 48, sp: "blood" },
     { n: ["ICU", "Storm deck"], lv: 8, dl: 70, mut: "quake", set: "xmas" },
-    { n: ["The final round", "The deep"], boss: 16, st: 1, dl: 80, abx: 6, mut: "heavy", d: ["It's back as MRSA, on a heavy day. Every antibiotic near it turns it into something worse: VRE, then CRE.", "The kraken is back, crosser, on a heavy day. Every sponge near it makes it bigger and angrier."] }
+    { n: ["The final round", "The deep"], boss: 16, st: 1, dl: 80, abx: 6, mut: "heavy", d: ["It's back as MRSA, on a heavy day. More last-line antibiotics fall, and each near it turns it into something worse: VRE, then CRE.", "The kraken is back, crosser, on a heavy day. More mega sponges fall, and each near it makes it bigger and angrier."] }
   ];
   var WARDKEY = "mrg-wards-" + (NORMIE ? "sea" : "med"), SETKEY = "mrg-set-" + (NORMIE ? "sea" : "med"), WARD = null, BOSS = null, wardWon = false;
   function wardsCleared() { return load(WARDKEY, { n: 0 }).n || 0; }
@@ -1364,6 +1364,39 @@
     { n: "Pan-resistant", c: "#7A1F3D", f: "Pan-resistant: almost nothing works. Prevention and stewardship are the cure." }
   ];
   var B_SWAY = 40;
+  // 28 Nov 2026: antibiotics fall from the sky at random spots (the player no longer drops them), in 3 strengths.
+  // Stronger = a wider danger zone around the bug, and last-line drugs evolve it twice. Block them with organs so they land far away.
+  var ABX = NORMIE ? [
+    { n: "Small sponge", s: "S", c: "#5BAA4A", reach: 30, evo: 1, pts: 10 },
+    { n: "Big sponge", s: "B", c: "#E0A030", reach: 70, evo: 1, pts: 20 },
+    { n: "Mega sponge", s: "M", c: "#D2384A", reach: 110, evo: 2, pts: 30 }
+  ] : [
+    { n: "Narrow-spectrum", s: "N", c: "#5BAA4A", reach: 30, evo: 1, pts: 10, f: "Narrow-spectrum (like flucloxacillin): kills a few bugs, least resistance." },
+    { n: "Broad-spectrum", s: "B", c: "#E0A030", reach: 70, evo: 1, pts: 20, f: "Broad-spectrum (like amoxicillin-clavulanate): kills many bugs, breeds more resistance." },
+    { n: "Last-line", s: "L", c: "#D2384A", reach: 110, evo: 2, pts: 30, f: "Last-line (like a carbapenem): kept for emergencies. Overuse breeds the scariest bugs." }
+  ];
+  function abxPick(w) { var m = w && w.st ? [0.35, 0.4, 0.25] : [0.6, 0.3, 0.1], x = Math.random(); return x < m[0] ? 0 : x < m[0] + m[1] ? 1 : 2; }
+  function abxSky(b) { // count down; warn 1 s ahead at the landing column; then drop one from the top
+    if (!drops) return; // nothing falls until the player starts
+    var w = WARDS[WARD] || {}, ev = (w.abx || 8) * 75;
+    if (b.abxT === undefined) { b.abxT = Math.round(ev * 1.3); }
+    b.abxT--;
+    if (b.abxT === 60) { b.wk = abxPick(w); b.wx = PO.r + 6 + Math.random() * (W - 2 * PO.r - 12); sfx("drop"); }
+    if (b.abxT <= 0) {
+      var o = add(CURE, b.wx, PO.r + 4); o.ab = b.wk; o.fresh = performance.now(); Bd.setVelocity(o, { x: 0, y: 2 });
+      if (!b.seen) b.seen = {};
+      if (!b.seen[b.wk]) { b.seen[b.wk] = 1; toast(NORMIE ? ABX[b.wk].n + " falling! Keep it away from the kraken." : ABX[b.wk].f); }
+      b.wk = undefined; b.abxT = Math.round(ev * (0.75 + Math.random() * 0.5));
+    }
+  }
+  function abxDraw(o, now) { // coloured ring and a strength letter on a falling antibiotic
+    var k = ABX[o.ab], r = rad(o), x = o.position.x, y = o.position.y;
+    ctx.save(); ctx.lineWidth = 4; ctx.strokeStyle = k.c; ctx.beginPath(); ctx.arc(x, y, r + 3, 0, Math.PI * 2); ctx.stroke();
+    var bx = x + r * 0.62, by = y - r * 0.62, s = 9;
+    ctx.fillStyle = k.c; ctx.strokeStyle = "#FFFFFF"; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.arc(bx, by, s, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = "#FFFFFF"; ctx.font = "700 11px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(k.s, bx, by + 0.5);
+    ctx.restore();
+  }
   function bossMake(hp, stage) {
     var r = BOSS_R + 10 * stage;
     var o = B.circle(W / 2, H - r - 2, r, { isStatic: true, friction: 0.3, restitution: 0.1, label: "boss" });
@@ -1385,8 +1418,9 @@
     var b = BOSS, x = c.position.x, y = c.position.y;
     C.remove(engine.world, c); poof(x, y, PO.r);
     var d = Math.hypot(x - b.body.position.x, y - b.body.position.y);
-    if (d <= b.r + PO.r + 40) bossEvolve();
-    else { score += 20; TL.cure += 20; floatTxt(x, y - 10, "+20"); toast(NORMIE ? "Sponge kept clear. Nice." : "Good stewardship: no antibiotic near the bug. +20"); sfx("chime"); hud(); }
+    var k = ABX[c.ab === undefined ? 1 : c.ab];
+    if (d <= b.r + PO.r + k.reach) { for (var i = 0; i < k.evo; i++) bossEvolve(); }
+    else { score += k.pts; TL.cure += k.pts; floatTxt(x, y - 10, "+" + k.pts); toast(NORMIE ? "Sponge kept clear. Nice." : "Good stewardship: no antibiotic near the bug. +" + k.pts); sfx("chime"); hud(); }
   }
   function bossHit(x, y, n) {
     var b = BOSS; if (!b || b.dead) return;
@@ -1405,7 +1439,7 @@
   }
   function bossTick() { // once per physics step: a slow sway; it coughs out pieces (bigger and more often as it evolves); stray antibiotics settle
     var b = BOSS; if (!b || b.dead || over) return;
-    b.ph += 1; var nx = b.x0 + Math.sin(b.ph / Math.max(120, 240 - b.st * 30)) * B_SWAY;
+    b.ph += 1; abxSky(b); var nx = b.x0 + Math.sin(b.ph / Math.max(120, 240 - b.st * 30)) * B_SWAY;
     Bd.setPosition(b.body, { x: nx, y: H - b.r - 2 });
     var every = Math.max(240, (b.max >= 16 ? 420 : 600) - b.st * 60);
     if (b.ph % every === 0) { var o = add(Math.min(b.st, 2), nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - b.r - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "cough!"); }
@@ -1413,6 +1447,13 @@
   }
   function bossDraw(now) {
     var b = BOSS; if (!b || b.dead) return;
+    if (b.wk !== undefined) { // incoming antibiotic: a blinking column and badge where it will fall
+      var wc = ABX[b.wk].c, on = quiet() || Math.floor(now / 160) % 2;
+      ctx.save(); ctx.globalAlpha = on ? 0.9 : 0.35; ctx.strokeStyle = wc; ctx.lineWidth = 3; ctx.setLineDash([8, 8]);
+      ctx.beginPath(); ctx.moveTo(b.wx, 6); ctx.lineTo(b.wx, 90); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle = wc; ctx.beginPath(); ctx.arc(b.wx, 16, 12, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = "#FFFFFF"; ctx.font = "700 14px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(ABX[b.wk].s, b.wx, 17); ctx.restore();
+    }
     var R0 = b.r, x = b.body.position.x, y = b.body.position.y, hurt = now - b.hitT < 250, evo = now - b.evoT < 600, k = 1 + (0.03 + b.st * 0.012) * Math.sin(now / Math.max(120, 260 - b.st * 35));
     ctx.save(); ctx.translate(x + (hurt || evo ? Math.sin(now / 15) * (evo ? 6 : 3) : 0), y); ctx.scale(k, 1 / k);
     var sc = R0 / BOSS_R; ctx.scale(sc, sc);
@@ -1764,7 +1805,7 @@
   if (DEBUG) { // test hooks (?debug=1)
     var X = window.MW_mrg;
     X.spawn = function (lv, x, y) { return add(lv, x, y).id; };
-    X.ward = startWard; X.boss = function () { return BOSS ? { hp: BOSS.hp, max: BOSS.max, st: BOSS.st, r: BOSS.r, x0: Math.round(BOSS.x0), x: Math.round(BOSS.body.position.x), dead: BOSS.dead } : null; }; X.radii = function () { return O.map(function (q) { return q.r; }); };
+    X.ward = startWard; X.abx = function () { return BOSS ? { t: BOSS.abxT, wk: BOSS.wk } : null; }; X.abxNow = function () { if (BOSS) BOSS.abxT = 61; }; X.boss = function () { return BOSS ? { hp: BOSS.hp, max: BOSS.max, st: BOSS.st, r: BOSS.r, x0: Math.round(BOSS.x0), x: Math.round(BOSS.body.position.x), dead: BOSS.dead } : null; }; X.radii = function () { return O.map(function (q) { return q.r; }); };
     X.setCur = function (lv) { cur = lv; hud(); };
     X.cut = function (x, y) { return cutAt(x, y); };
     X.shake = doShake; X.end = end; X.sfx = sfxLog; X.WILD = WILD; X.CURE = CURE; X.target = target;
