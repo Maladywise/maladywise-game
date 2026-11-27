@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "25";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "26";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1476,6 +1476,16 @@
     ctx.strokeText(BSTAGE[b.st].n, x, y - R0 - 32); ctx.fillText(BSTAGE[b.st].n, x, y - R0 - 32); ctx.restore();
   }
   // ---------- ward win / lose, and the ward screens ----------
+  // 28 Nov 2026: ward intro starts the game, and a cleared ward moves to the next one, after a 5 s countdown on the button
+  var WT = null;
+  function autoGo(btn, label, fn) {
+    clearInterval(WT); if (!btn) return; var n = 5; btn.textContent = label + " (" + n + ")";
+    WT = setInterval(function () {
+      if (!document.body.contains(btn)) { clearInterval(WT); return; }
+      n--; if (n > 0) { btn.textContent = label + " (" + n + ")"; return; }
+      clearInterval(WT); btn.textContent = label; fn();
+    }, 1000);
+  }
   function wardWin() {
     if (WARD === null || wardWon) return; wardWon = true; over = true; arm = false; tbarUI();
     var i = WARD, prev = wardsCleared(), newly = i + 1 > prev; if (newly) put(WARDKEY, { n: i + 1 });
@@ -1486,8 +1496,8 @@
       (unl ? "<span>🎁 New set unlocked: " + esc(unl.n) + ". Turn it on in More.</span>" : "") +
       '<div class="ovbtns">' + (last ? "" : '<button class="btn solid" type="button" id="mrg-wnext">Next ward</button>') + '<button class="btn" type="button" id="mrg-wall">All wards</button></div></div>';
     $("over").hidden = false;
-    if ($("wnext")) $("wnext").onclick = function () { startWard(i + 1); };
-    $("wall").onclick = openWards;
+    if ($("wnext")) { $("wnext").onclick = function () { clearInterval(WT); startWard(i + 1); }; autoGo($("wnext"), "Next ward", function () { if (!$("over").hidden) startWard(i + 1); }); }
+    $("wall").onclick = function () { clearInterval(WT); openWards(); };
   }
   function wardLose() {
     over = true; arm = false; tbarUI(); sfx("over"); var i = WARD;
@@ -1498,13 +1508,14 @@
     $("wall").onclick = openWards;
   }
   function startWard(i) {
-    WARD = i; newRun(true); $("result").hidden = true;
+    clearInterval(WT); WARD = i; newRun(true); $("result").hidden = true;
     var w = WARDS[i], tw = wardTwist(w), d0 = w.d ? w.d[NORMIE ? 1 : 0] : "";
     toast("Ward " + (i + 1) + ": " + wn(w) + " · " + wardGoal(w));
     var o = overlay("mrg-ward-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-wd-h"><p class="mrg-mm-note">' + (NORMIE ? "Dive site " : "Ward ") + (i + 1) + ' of 10</p><h2 id="mrg-wd-h">' + esc(wn(w)) + "</h2>" +
       "<p><b>Goal:</b> " + esc(wardGoal(w)) + (w.boss ? " (" + w.boss + " hits)" : "") + "</p>" + (d0 ? "<p>" + esc(d0) + "</p>" : "") + (tw ? "<p><b>Twist:</b> " + esc(tw) + "</p>" : "<p><b>Twist:</b> none. Enjoy it.</p>") +
       '<button type="button" class="mrg-help-go" data-close>Start</button></div>');
     try { root.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (e) {}
+    var sb = o.querySelector("[data-close]"); autoGo(sb, "Start", function () { if (document.body.contains(o)) sb.click(); });
     return o;
   }
   function openWards() {
@@ -1805,7 +1816,7 @@
   if (DEBUG) { // test hooks (?debug=1)
     var X = window.MW_mrg;
     X.spawn = function (lv, x, y) { return add(lv, x, y).id; };
-    X.ward = startWard; X.abx = function () { return BOSS ? { t: BOSS.abxT, wk: BOSS.wk } : null; }; X.abxNow = function () { if (BOSS) BOSS.abxT = 61; }; X.boss = function () { return BOSS ? { hp: BOSS.hp, max: BOSS.max, st: BOSS.st, r: BOSS.r, x0: Math.round(BOSS.x0), x: Math.round(BOSS.body.position.x), dead: BOSS.dead } : null; }; X.radii = function () { return O.map(function (q) { return q.r; }); };
+    X.ward = startWard; X.win = wardWin; X.abx = function () { return BOSS ? { t: BOSS.abxT, wk: BOSS.wk } : null; }; X.abxNow = function () { if (BOSS) BOSS.abxT = 61; }; X.boss = function () { return BOSS ? { hp: BOSS.hp, max: BOSS.max, st: BOSS.st, r: BOSS.r, x0: Math.round(BOSS.x0), x: Math.round(BOSS.body.position.x), dead: BOSS.dead } : null; }; X.radii = function () { return O.map(function (q) { return q.r; }); };
     X.setCur = function (lv) { cur = lv; hud(); };
     X.cut = function (x, y) { return cutAt(x, y); };
     X.shake = doShake; X.end = end; X.sfx = sfxLog; X.WILD = WILD; X.CURE = CURE; X.target = target;
