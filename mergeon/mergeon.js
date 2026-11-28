@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "33";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "35";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -518,6 +518,7 @@
       var a = p.bodyA, b = p.bodyB;
       if (BOSS && !BOSS.dead && (a.label === "boss" || b.label === "boss")) { var q = a.label === "boss" ? b : a; if (q.lv === CURE && !q.gone) { q.gone = true; merges.push([q, q, "cure"]); } return; }
       if (a.lv === undefined || b.lv === undefined || a.gone || b.gone) return;
+      if ((a.lv === CURE && a.ab !== undefined) || (b.lv === CURE && b.ab !== undefined)) return; // 28 Nov 2026: sky antibiotics stay until they touch the bug or a merge bins them
       if (a.lv === CURE || b.lv === CURE) { var c = a.lv === CURE ? a : b; c.gone = true; merges.push([c, c, "cure"]); return; }
       if (a.inf || b.inf) return; // infected pieces can't merge
       if (a.lv === WILD || b.lv === WILD) { if (a.lv === b.lv) return; a.gone = b.gone = true; merges.push(a.lv === WILD ? [b, a, "wild"] : [a, b, "wild"]); return; }
@@ -562,7 +563,7 @@
       var L = Math.min(n, O.length - 1);
       madeN[n] = (madeN[n] || 0) + 1; nMerge++; if (!big) learnFact(n); if (mut("slowmo")) slowN = 24;
       hidMerge(x, y, n);
-      if (BOSS) { kidHit(x, y, n); bossHit(x, y, n); }
+      if (BOSS) { kidHit(x, y, n); abxHit(x, y, n); bossHit(x, y, n); }
       burst(x, y, L); floatTxt(x, y - 12, "+" + pts);
       if (!big) sfx("pop", L);
       if (L >= 7) { shakeBoard(L >= 9 ? 2 : 1); buzz(L >= 9 ? [30, 40, 30] : 25); }
@@ -1007,7 +1008,7 @@
     { n: ["Paediatrics", "Splash park"], lv: 5, dl: 28, mut: "bouncy" },
     { n: ["Night shift", "Midnight reef"], lv: 6, dl: 40, mut: "lights", set: "hall" },
     { n: ["Respiratory", "Windy bay"], lv: 6, dl: 38, mut: "gust" },
-    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, kids: 3, eat: 1, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics fall from the sky: block them with organs so they land far from it. Green narrow-spectrum is mild, red last-line evolves it twice.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges fall from the sky: block them so they land far from it. Red mega sponges feed it twice."] },
+    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, kids: 3, eat: 1, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics fall from the sky and stay put. If one touches the bug, it evolves (red last-line: twice). Merge next to them to bin them.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges fall from the sky and stay put. If one touches the kraken, it grows (red mega sponges: twice). Merge next to them to bin them."] },
     { n: ["Cardiology", "The current"], lv: 7, dl: 50, mut: "flow", set: "easter" },
     { n: ["Space medicine", "Moon pool"], lv: 7, dl: 50, sp: "micro" },
     { n: ["Blood bank", "Potluck"], lv: 7, dl: 48, sp: "blood" },
@@ -1018,12 +1019,12 @@
     { n: ["Emergency", "Shipwreck cove"], lv: 7, dl: 50, mut: ["bouncy", "narrow"] },
     { n: ["Neonatal ICU", "Tiny tide pools"], lv: 8, dl: 60, mini: true, mut: "slippery", set: "hall" },
     { n: ["Gastroenterology", "Murky lagoon"], lv: 7, dl: 50, mut: ["acid", "water"] },
-    { n: ["Outbreak ward", "Kraken’s nest"], boss: 24, st: 0, dl: 70, abx: 7, kids: 4, eat: 2, mut: "slippery", d: ["The superbug is breeding. Baby bugs pop out and eat small organs, and pile up in your way. Merge next to them to pop them.", "The kraken is breeding. Baby krakens pop out and gobble small creatures. Merge next to them to pop them."] },
+    { n: ["Outbreak ward", "Kraken’s nest"], boss: 24, st: 0, dl: 70, abx: 7, kids: 4, eat: 2, mut: "slippery", d: ["The superbug is breeding. Baby bugs pop out, infect organs smaller than them and grow. Merge next to them to pop them.", "The kraken is breeding. Baby krakens pop out and gobble small creatures. Merge next to them to pop them."] },
     { n: ["Day surgery", "Shallow reef"], lv: 7, dl: 50, line: 170 },
     { n: ["Triage", "Rescue race"], lv: 7, time: 120, d: ["Patients are piling up. Make a Heart before the clock runs out.", "The tide is turning. Make a turtle before the clock runs out."] },
     { n: ["Rehab", "Sticky shallows"], lv: 8, dl: 65, mut: ["jelly", "tilt"], set: "easter" },
     { n: ["Space station", "Upside-down moon"], lv: 8, dl: 60, flip: true, sp: "micro" },
-    { n: ["Superbug HQ", "Kraken’s lair"], boss: 34, st: 2, dl: 90, abx: 5, kids: 6, eat: 3, mut: "quake", set: "xmas", d: ["The final boss starts as VRE, on a shaky ward. Baby bugs eat anything up to a gallbladder, and last-line antibiotics keep falling.", "The kraken king starts crosser than ever. Baby krakens gobble anything up to a crab, and mega sponges keep falling."] }
+    { n: ["Superbug HQ", "Kraken’s lair"], boss: 34, st: 2, dl: 90, abx: 5, kids: 6, eat: 3, mut: "quake", set: "xmas", d: ["The final boss starts as VRE, on a shaky ward. Six baby bugs, and last-line antibiotics keep falling.", "The kraken king starts crosser than ever. Six baby krakens, and mega sponges keep falling."] }
   ];
   var WARDKEY = "mrg-wards-" + (NORMIE ? "sea" : "med"), SETKEY = "mrg-set-" + (NORMIE ? "sea" : "med"), WARD = null, BOSS = null, wardWon = false;
   function wardsCleared() { return load(WARDKEY, { n: 0 }).n || 0; }
@@ -1038,7 +1039,7 @@
     if (w.mini) t.push(NORMIE ? "🔬 Tiny: everything is smaller." : "🔬 Tiny patients: every piece is smaller.");
     if (w.line) t.push("📉 Low ceiling: the danger line is much lower.");
     if (w.time) t.push("⏱️ Against the clock: no drop limit, just " + (w.time / 60) + " minutes.");
-    if (w.kids) t.push(NORMIE ? "🐙 Baby krakens pop out and gobble small creatures. Merge next to them to pop them." : "🦠 Baby bugs pop out and eat small organs. Merge next to them to pop them.");
+    if (w.kids) t.push(NORMIE ? "🐙 The kraken grabs touching creatures, and baby krakens grab smaller ones. Merge next to a grabbed creature to save it, or next to a baby to pop it." : "🦠 The superbug infects touching organs, and baby bugs infect organs smaller than them. Merge next to an infected organ to save it, or next to a baby to pop it.");
     return t.join(" ");
   }
   function wardGoal(w) { return (w.boss ? (NORMIE ? "Beat the kraken" : "Beat the superbug") : "Make " + aName(w.lv)) + (w.time ? " in " + (w.time / 60) + " minutes" : w.dl ? " in " + w.dl + " drops" : ""); }
@@ -1440,9 +1441,11 @@
     var w = WARDS[WARD] || {}, ev = (w.abx || 8) * 75;
     if (b.abxT === undefined) { b.abxT = Math.round(ev * 1.3); }
     b.abxT--;
+    if (b.abxT === 61 && pieces().filter(function (q) { return q.lv === CURE && q.ab !== undefined && !q.gone; }).length >= 4) b.abxT = 200;
     if (b.abxT === 60) { b.wk = abxPick(w); b.wx = PO.r + 6 + Math.random() * (W - 2 * PO.r - 12); sfx("drop"); }
     if (b.abxT <= 0) {
       var o = add(CURE, b.wx, PO.r + 4); o.ab = b.wk; o.fresh = performance.now(); Bd.setVelocity(o, { x: 0, y: 2 });
+      Bd.setInertia(o, Infinity); o.friction = 1; o.frictionStatic = 3; o.restitution = 0; // lands and stays put: no rolling into the bug
       if (!b.seen) b.seen = {};
       if (!b.seen[b.wk]) { b.seen[b.wk] = 1; toast(NORMIE ? ABX[b.wk].n + " falling! Keep it away from the kraken." : ABX[b.wk].f); }
       b.wk = undefined; b.abxT = Math.round(ev * (0.75 + Math.random() * 0.5));
@@ -1506,43 +1509,62 @@
       if (wk.kids) kidSpawn(b, nx, wk.kids); // 28 Nov 2026: baby bugs instead of coughed-up organs
       else { var o = add(Math.min(b.st, 2), nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - b.r - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "cough!"); }
     }
-    if (b.ph % 20 === 0 && b.kids && b.kids.length) kidEat(b, wk.eat || 1);
-    if (b.ph % 20 === 0) { var now = performance.now(); pieces().forEach(function (q) { if (q.lv === CURE && !q.gone && q.fresh && now - q.fresh > 2200 && Math.abs(q.velocity.y) < 0.6) { q.gone = true; merges.push([q, q, "cure"]); } }); }
+    if (b.ph % 20 === 0) { bossInfect(b); if (b.kids && b.kids.length) kidInfect(b); }
+    if (b.ph % 20 === 0) { var now = performance.now(); pieces().forEach(function (q) { if (q.lv === CURE && q.ab === undefined && !q.gone && q.fresh && now - q.fresh > 2200 && Math.abs(q.velocity.y) < 0.6) { q.gone = true; merges.push([q, q, "cure"]); } }); }
   }
   // ---------- baby bugs (28 Nov 2026): block the pile, eat small pieces, popped by merges next to them ----------
-  var KID_R = 13, KID_MAX = 21;
+  var KID_R = 18, KID_MAX = 30, B_INF = 360, K_INF = 300; // 28 Nov 2026: infections take 6 s (boss) or 5 s (baby) to kill an organ
+  function killVic(q) { setInf(q, false); q.gone = true; C.remove(engine.world, q); poof(q.position.x, q.position.y, rad(q)); sfx("pop", 1); }
+  function near(q, body, r, pad) { var dx = q.position.x - body.position.x, dy = q.position.y - body.position.y, d = rad(q) + r + pad; return dx * dx + dy * dy <= d * d; }
+  function bossInfect(b) { // the superbug infects one touching organ at a time; if it isn't saved in time it dies and the bug heals
+    var v = b.vic;
+    if (v && (v.gone || !v.inf)) { b.vic = v = null; }
+    if (v) { if (steps - v.infS >= B_INF) { killVic(v); b.vic = null; var g = 2; b.hp = Math.min(b.max, b.hp + g); floatTxt(b.body.position.x, b.body.position.y - b.r - 18, "+" + g + " ❤"); toast(NORMIE ? "The kraken ate it and healed." : "The organ died. The superbug healed."); hud(); } return; }
+    var c = pieces().filter(function (q) { return !q.gone && !q.inf && q.lv < O.length && near(q, b.body, b.r, 8); });
+    if (!c.length) return;
+    v = c[Math.floor(Math.random() * c.length)]; setInf(v, true); v.byBug = 1; b.vic = v;
+    if (!b.infT) { b.infT = 1; toast(NORMIE ? "The kraken grabbed a creature! Merge next to it in time to save it." : "The superbug infected an organ! Merge next to it within 6 seconds to save it."); }
+  }
+  function kidInfect(b) { // baby bugs do the same, but only to organs smaller than themselves, and grow when one dies
+    b.kids.forEach(function (k) {
+      var v = k.vic;
+      if (v && (v.gone || !v.inf)) { k.vic = v = null; }
+      if (v) {
+        if (steps - v.infS >= K_INF) { killVic(v); k.vic = null; var nr = Math.min(KID_MAX, k.kr + 2.5); Bd.scale(k, nr / k.kr, nr / k.kr); k.kr = nr; floatTxt(k.position.x, k.position.y - k.kr - 8, NORMIE ? "gulp!" : "chomp!"); }
+        return;
+      }
+      var all = pieces();
+      for (var i = 0; i < all.length; i++) { var q = all[i]; if (q.gone || q.inf || q.lv >= O.length || rad(q) >= k.kr || !near(q, k, k.kr, 5)) continue; setInf(q, true); q.byBug = 1; k.vic = q; break; }
+    });
+  }
   function kidSpawn(b, nx, cap) {
     b.kids = b.kids || []; if (b.kids.length >= cap) return;
     var k = B.circle(nx + (Math.random() < 0.5 ? -1 : 1) * 24, b.body.position.y - b.r - 18, KID_R, { restitution: 0.2, friction: 0.3, density: 0.0016, label: "kid" });
     k.kr = KID_R; k.eatT = steps + 240; k.born = 0; Bd.setVelocity(k, { x: (Math.random() - 0.5) * 4, y: -6.5 }); C.add(engine.world, k); b.kids.push(k);
     floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "pop!"); sfx("germ");
-    if (!b.kidT) { b.kidT = 1; toast(NORMIE ? "A baby kraken! It gobbles small creatures. Merge next to it to pop it." : "A baby bug! It eats small organs. Merge next to it to pop it."); }
-  }
-  function kidEat(b, maxLv) {
-    var all = pieces();
-    b.kids.forEach(function (k) {
-      if (steps < k.eatT) return;
-      for (var i = 0; i < all.length; i++) {
-        var q = all[i]; if (q.gone || q.lv > maxLv || q.lv >= O.length) continue;
-        var dx = q.position.x - k.position.x, dy = q.position.y - k.position.y, r = rad(q) + k.kr + 5;
-        if (dx * dx + dy * dy > r * r) continue;
-        q.gone = true; if (q.inf) setInf(q, false); C.remove(engine.world, q); poof(q.position.x, q.position.y, rad(q));
-        var nr = Math.min(KID_MAX, k.kr + 2.5); Bd.scale(k, nr / k.kr, nr / k.kr); k.kr = nr; k.eatT = steps + 300;
-        floatTxt(k.position.x, k.position.y - k.kr - 8, NORMIE ? "gulp!" : "chomp!"); sfx("pop", 1);
-        break;
-      }
-    });
+    if (!b.kidT) { b.kidT = 1; toast(NORMIE ? "A baby kraken! It grabs smaller creatures. Merge next to it to pop it." : "A baby bug! It infects smaller organs. Merge next to it to pop it."); }
   }
   function kidHit(x, y, n) {
     var b = BOSS; if (!b || !b.kids || !b.kids.length) return;
     var reach = info(Math.min(n, O.length - 1)).r + 24;
     b.kids = b.kids.filter(function (k) {
       var d = Math.hypot(x - k.position.x, y - k.position.y); if (d > reach + k.kr) return true;
-      C.remove(engine.world, k); poof(k.position.x, k.position.y, k.kr); score += 15; TL.merge += 15; floatTxt(k.position.x, k.position.y - 10, "+15"); return false;
+      if (k.vic && k.vic.inf && !k.vic.gone) setInf(k.vic, false); C.remove(engine.world, k); poof(k.position.x, k.position.y, k.kr); score += 15; TL.merge += 15; floatTxt(k.position.x, k.position.y - 10, "+15"); return false;
     });
     hud();
   }
-  function kidsClear() { var b = BOSS; if (!b || !b.kids) return; b.kids.forEach(function (k) { C.remove(engine.world, k); poof(k.position.x, k.position.y, k.kr); }); b.kids = []; }
+  function abxHit(x, y, n) {
+    var reach = info(Math.min(n, O.length - 1)).r + 20;
+    pieces().forEach(function (q) {
+      if (q.lv !== CURE || q.ab === undefined || q.gone) return;
+      if (Math.hypot(x - q.position.x, y - q.position.y) > reach + rad(q)) return;
+      var k = ABX[q.ab]; q.gone = true; C.remove(engine.world, q); poof(q.position.x, q.position.y, rad(q));
+      score += k.pts; TL.cure += k.pts; floatTxt(q.position.x, q.position.y - 10, (NORMIE ? "Binned +" : "Binned +") + k.pts);
+      if (!BOSS.binT) { BOSS.binT = 1; toast(NORMIE ? "Sponge binned. Merge next to them to clear them." : "Antibiotic binned. Merge next to one to clear it before it reaches the bug."); }
+    });
+    hud();
+  }
+  function kidsClear() { var b = BOSS; if (!b) return; if (b.vic && b.vic.inf && !b.vic.gone) setInf(b.vic, false); b.vic = null; if (!b.kids) return; b.kids.forEach(function (k) { if (k.vic && k.vic.inf && !k.vic.gone) setInf(k.vic, false); C.remove(engine.world, k); poof(k.position.x, k.position.y, k.kr); }); b.kids = []; }
   function kidsDraw(b, now) {
     if (!b.kids) return;
     b.kids.forEach(function (k) {
