@@ -1,5 +1,5 @@
 /* Wordemic: guess the five-letter medical word in six tries.
-   Long Friday: Fridays use a longer word (7 to 15 letters, hard cap 15). The engine reads the length from the answer
+   Long Friday: Fridays use a longer word (7 to 10 letters, hard cap 10 since 29 Nov 2026). The engine reads the length from the answer
    (tries: 5 letters 6, 6-9 letters 7, 10-13 letters 8, 14-15 letters 9; anything over 15 would wrap onto two lines, but answers are capped at 15)
    and loads words.txt (5) or wordsN.txt (other lengths; no list = any letters accepted).
    Puzzles in puzzles/YYYY-MM.json (date, number, difficulty, word, definition). */

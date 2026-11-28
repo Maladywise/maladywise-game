@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
-"""Wordemic puzzle check: every answer is 5–15 letters, A–Z only, and its length has a guess list
+"""Wordemic puzzle check: every answer is 5–10 letters, A–Z only, and its length has a guess list
 (words.txt for 5, wordsN.txt otherwise) containing the answer. Longer than 15 is never allowed: there
 are almost no real words that long, so players couldn't type any guess except the answer itself."""
 import glob, json, os, sys
 D = os.path.dirname(os.path.abspath(__file__))
-MAXLEN, bad = 15, []
+MAXLEN, bad = 10, []  # 29 Nov 2026: max 10 letters (was 15)
 lists = {}
 def words(n):
     if n not in lists:
         p = os.path.join(D, "words.txt" if n == 5 else "words%d.txt" % n)
         lists[n] = set(open(p).read().split()) if os.path.exists(p) else None
     return lists[n]
+import datetime
+TODAY = datetime.date.today().isoformat()
 for f in sorted(glob.glob(os.path.join(D, "puzzles", "**", "*.json"), recursive=True)):
+    if os.sep + "normie" + os.sep in f: continue  # Normie mode is off
+
     data = json.load(open(f, encoding="utf-8"))
     items = data if isinstance(data, list) else data.get("puzzles", [])
     for p in items:
+        if p.get("date") and p["date"] < TODAY: continue  # past puzzles stay as they were
         w = (p.get("word") or "").strip()
         tag = "%s %s %s" % (os.path.relpath(f, D), p.get("date", "reserve"), w)
         if not w.isalpha() or not w.isascii(): bad.append(tag + ": letters A–Z only"); continue
