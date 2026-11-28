@@ -328,7 +328,7 @@
   }
   // That weekday's specials (STYLE.md schedule): Mon Morphemia Max + Arrhythmix; Tue Glimpsathon + Super Comorbix; Wed Super Zebritis;
   // Thu Long Linkase + Arrhythmix; Fri Sudokrine 9x9 (Wordemic Long is already slot 2); Sat Sensitosis Saturday + Cryptoplexy; Sun Anatomegaly Full Body + Grand Rounds.
-  var DAY3 = [["labelosis", "grandrounds"], ["morphemia", "arrhythmix"], ["glimpsis", "comorbix"], ["zebritis"], ["linkase", "arrhythmix"], ["sudokrine"], ["sensitosis", "cryptogenic"]];
+  var DAY3 = [["labelosis", "grandrounds"], ["morphemia", "arrhythmix"], ["glimpsis", "comorbix"], ["zebritis"], ["linkase", "arrhythmix"], ["panelysis"], ["sensitosis", "cryptogenic"]]; // Fri was Sudokrine (moved to Labs 29 Nov 2026)
   function startIds() {
     var out = [], G = window.MW_GAMES || [];
     function byId(id) { return G.filter(function (x) { return x.id === id; })[0]; }
@@ -1400,8 +1400,8 @@
     if (!BETA) return;
     var path = location.pathname;
     // new games still in testing; each drops its Beta tag on its launch day (local date)
-    var LAUNCH = { nomulous: "", toxiquest: "", stackulus: "", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" };
-    var gm = path.match(/^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest|stackulus)\//), dn = new Date();
+    var LAUNCH = { nomulous: "", toxiquest: "", stackulus: "", sudokrine: "", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" };
+    var gm = path.match(/^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest|stackulus|sudokrine)\//), dn = new Date();
     var today = dn.getFullYear() + "-" + ("0" + (dn.getMonth() + 1)).slice(-2) + "-" + ("0" + dn.getDate()).slice(-2);
     var betaGame = !!gm && !(LAUNCH[gm[1]] && today >= LAUNCH[gm[1]]);
     if (gm && !betaGame) return; // launched: no Beta tag
@@ -1813,16 +1813,17 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
       box.hidden = false;
     }
     function gpsBanner() {
-      return NORMIE ? "" : '<a class="gps-b" href="/gp-school/"><img src="/assets/mascots/morphemia.svg" alt="" width="64" height="64"><span><span class="rd-k">For doctors and students</span><b>GP School</b><small>Free, game-style GP training. Real-world patients, results and billing, with new cases every month.</small><span class="gps-go">Start your shift ›</span></span></a>';
+      return NORMIE ? "" : '<a class="gps-b" href="/gp-school/"><img src="/assets/mascots/gpschool.svg" alt="" width="64" height="64"><span><span class="rd-k">For doctors and students</span><b>GP School</b><small>Free, game-style GP training. Real-world patients, results and billing, with new cases every month.</small><span class="gps-go">Start your shift ›</span></span></a>';
     }
 
     function relToday(g) { // a weekly game's release day (same test as order())
       var DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
       return !!(g.live && g.relday && (DAYS[g.relday] === dw || g.relday.indexOf(["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][dw]) >= 0)); // "Mon & Thu" too
     }
+    var LAB_G = { sudokrine: 1 }; // daily games moved to Labs (Beta): listed there, not in the game tiles
     function order() {
       var ORD = window.MW_ORDER || [], DAYS = { Thursdays: 4, Saturdays: 6, Sundays: 0 }, dw = new Date(dayNum(sydToday()) * 864e5).getUTCDay();
-      return MW_GAMES.filter(inMode).map(function (g, i) {
+      return MW_GAMES.filter(inMode).filter(function (g) { return !LAB_G[g.id]; }).map(function (g, i) {
         var st = g.live ? readStats(g) : null, k = ORD.indexOf(g.id); k = k < 0 ? 100 + i : k;
         if (relToday(g)) k = 0.5; // release day: right after Dxtective (incl. "Mon & Thu" for Arrhythmix)
         return { g: g, i: k, d: st && st.done ? 1 : 0, m: inMode(g) ? 0 : 1 };
@@ -1922,7 +1923,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + hiddenSec() + gpsBanner() + homeBottom() + modeCta() + nlSlim() +
+        tiles(t3.map(function (o) { return o.g.id; })) + hiddenSec() + homeBottom() + gpsBanner() + modeCta() + nlSlim() +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));
@@ -2187,6 +2188,25 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     }
     // Tagline (Nov 2026: "Curiosity is contagious.", replacing "Think like a doctor.")
     if (!f.querySelector(".ft-tag")) f.insertAdjacentHTML("afterbegin", '<p class="ft-tag"><b>Malady Wise</b> · Curiosity is contagious.</p>');
+    // 29 Nov 2026 tidy-up: brand + follow on one row, links in three labelled columns, one legal bar, then the acknowledgement
+    if (!f.classList.contains("mwf")) {
+      f.classList.add("mwf");
+      var tag = f.querySelector(".ft-tag"), soc = f.querySelector(".soc");
+      if (tag || soc) { var top = document.createElement("div"); top.className = "mwf-top"; if (tag) top.appendChild(tag); if (soc) top.appendChild(soc); f.insertBefore(top, f.firstChild); }
+      var nav = f.querySelector(".static-nav");
+      if (nav) {
+        var A = {}; [].forEach.call(nav.querySelectorAll("a"), function (x) { A[x.getAttribute("href")] = x; });
+        var G = [["Play", ["/medical-games/", "/quizzes/", "/days/"]], ["Health info", ["/conditions/", "/medicines/", "/blood-tests/", "/exercises/"]], ["For doctors", ["/tools/", "/specialists/", "/gp-school/"]]];
+        var cols = document.createElement("nav"); cols.className = "mwf-cols"; cols.setAttribute("aria-label", "Site");
+        cols.innerHTML = G.map(function (g) {
+          return '<div class="mwf-col"><b>' + g[0] + "</b>" + g[1].map(function (h) {
+            var x = A[h], t = x ? x.textContent : h === "/gp-school/" ? "GP School" : ""; if (h === "/medical-games/") t = "Puzzles";
+            return t ? '<a href="' + h + '">' + t + "</a>" : "";
+          }).join("") + "</div>";
+        }).join("");
+        nav.parentNode.replaceChild(cols, nav);
+      }
+    }
     // Acknowledgement of Country (Newcastle: Awabakal and Worimi peoples).
     if (!f.querySelector(".ft-ack")) f.insertAdjacentHTML("beforeend", '<p class="ft-ack">Malady Wise is made in Newcastle, on the land of the Awabakal and Worimi peoples. We acknowledge them as the Traditional Custodians and pay our respects to Elders past and present.</p>');
   }
