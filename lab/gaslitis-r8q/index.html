@@ -81,6 +81,14 @@
 #lb-game .o{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:14px 16px;font:600 16px/1.35 var(--body);text-align:left;cursor:pointer}
 #lb-game .o:hover,#lb-game .o:focus-visible{border-color:var(--ink)}
 #lb-game .flip summary{cursor:pointer}
+#lb-game .bt{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.1)}
+#lb-game .bt p{margin:6px 0 0;font-size:14.5px;line-height:1.5}
+#lb-game .bt .also{opacity:.9;font-size:13.5px}
+#lb-game .lessons{line-height:1.5}
+#lb-game .lessons li{margin:0 0 6px}
+#lb-game .guide{margin:18px 0 0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+#lb-game .guide summary{cursor:pointer}
+#lb-game .guide p{font-size:14px;line-height:1.5;margin:8px 0 0}
 #lb-game .how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
 @media (prefers-reduced-motion:reduce){#lb-game{--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;--dot:#F2B544;--plum:#7A2E5C;--teal:#0F5C4A;--on:#fff;--bad:#B3261E;--display:var(--title,Georgia,serif);--paper:var(--card)}
 #lb-game .c,#lb-game .track i{transition:none}
@@ -102,6 +110,7 @@
   </section>
   <section class="lb-game" id="lb-game" hidden>
 <div id="app"></div>
+<details class="guide"><summary><b>Bias guide:</b> the ten shortcuts in this game</summary><div id="bguide"></div></details>
 <p class="how"><b>How to play:</b> eight patients. For each one, pick what you'd say. Two of the three options are shortcuts that real patients report hearing. Then see what was really going on.</p>
 
   </section>
@@ -117,16 +126,16 @@ document.getElementById("lb-play").onclick=function(){document.getElementById("l
 (function(){
 // Bias types (card colour) and the harm each tends to cause
 var B={
- psych:{n:"Psychologising",c:"#4A3480"},
- anchor:{n:"Anchoring",c:"#2F5D8A"},
- age:{n:"Ageism",c:"#8A5A00"},
- weight:{n:"Weight bias",c:"#7A3B2E"},
- stigma:{n:"Addiction stigma",c:"#5B4A2E"},
- shadow:{n:"Diagnostic overshadowing",c:"#4A5A2E"},
- race:{n:"Racial bias",c:"#6B2A4E"},
- gender:{n:"Gender bias",c:"#8A2E5C"},
- rush:{n:"Time pressure",c:"#3E4A5C"},
- expert:{n:"Dismissing the patient's knowledge",c:"#2E5C55"}
+ psych:{n:"Psychologising",c:"#4A3480",d:"Putting physical symptoms down to stress or anxiety before physical causes have been ruled out.",fix:"Rule out the physical first. Anxiety is a diagnosis you reach after the work-up, not a default."},
+ anchor:{n:"Anchoring",c:"#2F5D8A",d:"Sticking with a first impression or an old diagnosis even when new information doesn\u2019t fit.",fix:"Ask \u2018What else could this be?\u2019 and \u2018What doesn\u2019t fit?\u2019 A patient who comes back is new information."},
+ age:{n:"Ageism",c:"#8A5A00",d:"Assuming new symptoms are just normal ageing, or that older people won\u2019t benefit from tests or treatment.",fix:"Nothing new is \u2018just age\u2019. Compare with their own baseline and ask the family what has changed."},
+ weight:{n:"Weight bias",c:"#7A3B2E",d:"Blaming symptoms on weight and examining or investigating less in people in larger bodies.",fix:"Examine fully, with the right-sized equipment. Investigate the symptom as you would in anyone else."},
+ stigma:{n:"Addiction stigma",c:"#5B4A2E",d:"Assuming someone who uses alcohol or drugs is intoxicated or drug-seeking, so their symptoms aren\u2019t taken seriously.",fix:"Assess pain and neurology on what you find. Rule out head injury, low blood sugar and infection before calling it intoxication."},
+ shadow:{n:"Diagnostic overshadowing",c:"#4A5A2E",d:"Putting physical symptoms down to someone\u2019s mental illness, disability or existing condition.",fix:"Ask \u2018Would I investigate this in someone without that diagnosis?\u2019 If yes, do it."},
+ race:{n:"Racial bias",c:"#6B2A4E",d:"Under-recognising pain and symptoms in people of colour, sometimes from false beliefs about biological differences.",fix:"Use the same pain scores and treatment thresholds for everyone, and learn how signs like rashes, jaundice and cyanosis look on darker skin."},
+ gender:{n:"Gender bias",c:"#8A2E5C",d:"Labelling women\u2019s symptoms emotional or hormonal, or telling men their symptoms are nothing to worry about.",fix:"Ask \u2018Would I take this more seriously in someone of another gender?\u2019"},
+ rush:{n:"Time pressure",c:"#3E4A5C",d:"Closing the consult early because the waiting room is full, before the diagnosis is clear.",fix:"If you can\u2019t finish, safety-net properly: what to watch for, when to come back, and book the follow-up yourself."},
+ expert:{n:"Dismissing the patient\u2019s knowledge",c:"#2E5C55",d:"Ignoring what the patient knows about their own body, condition or research.",fix:"Ask \u2018What are you worried this is?\u2019 People often know when something is different."}
 };
 var H={delay:"Delayed diagnosis",pain:"Untreated pain",trust:"Lost trust",label:"Label sticks for years",danger:"Dangerous deterioration"};
 // Each patient: tone = skin colour, hair, gender for the face; bias = cards that fit this patient
@@ -222,10 +231,13 @@ function pick(ix){
  var c=S.opts[ix],p=S.order[S.i],ok=!!c.work;
  if(ok)S.found++;else S.bias[c.b]=(S.bias[c.b]||0)+1;
  var bias=ok?"":'<p class="used">You said: <b>'+esc(c.t)+'</b><br>That\u2019s <b>'+B[c.b].n.toLowerCase()+"</b>.</p><p><i>"+esc(c.r)+"</i> "+esc(p.harm)+"</p>";
+ var other=S.opts.filter(function(o){return !o.work&&o!==c});
+ var learn=ok?'<div class="bt"><span class="k">Shortcuts you avoided</span>'+S.opts.filter(function(o){return !o.work}).map(function(o){return "<p><b>"+B[o.b].n+":</b> \u201c"+esc(o.t.replace(/^"|"$/g,""))+"\u201d "+esc(B[o.b].d)+"</p>"}).join("")+"</div>"
+  :'<div class="bt"><span class="k">The bias: '+B[c.b].n+"</span><p>"+esc(B[c.b].d)+'</p><p><b>How to avoid it:</b> '+esc(B[c.b].fix)+"</p>"+(other.length?'<p class="also">The other shortcut was <b>'+B[other[0].b].n.toLowerCase()+"</b>: "+esc(B[other[0].b].d)+"</p>":"")+"</div>";
  app.innerHTML='<div class="rv'+(ok?"":" miss")+'"><div class="rv-h">'+face(p,0,ok?"ok":"down")+'<div><span class="k">'+(ok?"You found it":"You missed it")+'</span><h2>'+esc(p.dx)+"</h2></div></div>"+bias+
- "<p><b>"+(ok?"What you did:":"What would have caught it:")+"</b> "+esc(p.test)+"</p>"+
+ "<p><b>"+(ok?"What you did:":"What would have caught it:")+"</b> "+esc(p.test)+"</p>"+learn+
  '<p class="tip"><b>💡</b> '+esc(p.tip)+"</p>"+
- '<details class="flip"><summary class="k">The evidence</summary><p style="margin:6px 0">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></details></div>"+
+ '<div class="flip"><span class="k">Who gets dismissed: the evidence</span><p style="margin:6px 0">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></div></div>"+
  '<button class="go" id="nx">'+(S.i<P.length-1?"Next patient":"See how you did")+"</button>";
  document.getElementById("nx").onclick=function(){S.i++;S.i<P.length?round():end()};
  window.scrollTo({top:app.getBoundingClientRect().top+window.scrollY-70,behavior:"smooth"});
@@ -234,11 +246,13 @@ function end(){
  var n=S.found,k=Object.keys(S.bias).sort(function(a,b){return S.bias[b]-S.bias[a]});
  var rank=n===P.length?"Actual doctor":n>=6?"Mostly a doctor":n>=3?"Registrar of Reassurance":"Senior Consultant in Dismissal";
  app.innerHTML='<div class="end"><span class="k">Your clinic</span><h2>'+rank+"</h2><p><b>"+n+" of "+P.length+"</b> diagnoses found.</p>"+
- (k.length?"<h3>Your shortcuts</h3><ul>"+k.map(function(x){return "<li>"+B[x].n+(S.bias[x]>1?" ×"+S.bias[x]:"")+"</li>"}).join("")+"</ul>":"<p>No shortcuts taken. Impressive.</p>")+
+ (k.length?"<h3>Your shortcuts, and how to avoid them</h3><ul class=\"lessons\">"+k.map(function(x){return "<li><b>"+B[x].n+(S.bias[x]>1?" ×"+S.bias[x]:"")+":</b> "+esc(B[x].fix)+"</li>"}).join("")+"</ul>":"<p>No shortcuts taken. Impressive.</p>")+
+ "<h3>Three habits that catch most of these</h3><ul class=\"lessons\"><li><b>Ask what else it could be</b> before you settle on an answer.</li><li><b>Examine and test as you would anyone else</b>, whatever their age, size, history or diagnosis.</li><li><b>Ask what the patient is worried it is</b>, and safety-net with clear reasons to come back.</li></ul>"+
  "<p>Every line here is something real patients report hearing. Bias hits anyone: older people, larger bodies, people with mental illness or addiction, people of colour, women, and men told they\u2019re \u2018just stressed\u2019.</p>"+
  '<p><a href="/gp-school/">Train your blind spots in GP School</a></p><button class="go" id="again">Play again</button></div>';
  document.getElementById("again").onclick=function(){start()};
 }
+(function(){var g=document.getElementById("bguide");if(g)g.innerHTML=Object.keys(B).map(function(x){return "<p><b>"+B[x].n+":</b> "+esc(B[x].d)+" <i>"+esc(B[x].fix)+"</i></p>"}).join("")})();
 window.LB_start=function(){if(S.i<0)start()};
 })();
 
