@@ -44,13 +44,15 @@
 .tally li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;font-size:14px}
 .tally li span{color:var(--muted)}
 .end a{color:var(--muted);font-weight:600}
+.opts{display:grid;gap:10px}.o{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:14px 16px;font:600 16px/1.35 var(--body);text-align:left;cursor:pointer}.o:hover,.o:focus-visible{border-color:var(--ink)}
+.flip summary{cursor:pointer}
 .how{font-size:14px;color:var(--muted);line-height:1.5;margin:18px 0 0}
 @media (prefers-reduced-motion:reduce){.c,.track i{transition:none}.face.shake{animation:none}}
 </style>
 </head>
 <body>
 <div id="app"></div>
-<p class="how"><b>How to play:</b> 25 seconds per patient. Play up to 3 cards. Every dismissal card is a type of bias, and each one makes the patient more upset and less likely to come back. Drain their confidence and they leave. Run out of time and they're rushed out. Or play the green card and do the work. Each reveal shows the diagnosis, the harm, and the evidence on who usually gets dismissed.</p>
+<p class="how"><b>How to play:</b> eight patients. For each one, pick what you'd say. Two of the three options are shortcuts that real patients report hearing. Then see what was really going on.</p>
 <script>
 (function(){
 // Bias types (card colour) and the harm each tends to cause
@@ -128,11 +130,10 @@ var D=[
  {b:"expert",t:"\"Dr Google isn't a medical degree.\"",h:"trust",p:4,ang:2,min:3,r:"\"I just wanted to ask about it.\""},
  {b:"expert",t:"\"I think I know what's going on here.\"",h:"trust",p:3,ang:2,min:3,r:"\"Can I finish what I was saying?\""}
 ];
-var TLIM=25,MOODS=["Hopeful","Worried","Frustrated","Angry","Furious"];
+var MOODS=["Hopeful","Worried","Frustrated","Angry","Furious"];
 var app=document.getElementById("app"),S={i:-1};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
-function dots(n){var h="";for(var i=0;i<n;i++)h+="<i></i>";return '<span class="m" aria-label="Dismissal power '+n+'">'+h+"</span>"}
 // Face: mood 0 calm .. 4 furious; state "ok" relieved, "down" collapsed
 function face(p,mood,state){
  var sk=p.tone,hr=p.hair,cheek=mood>=3?"#E0533D":"#F29A9A",red=mood>=3?.55:mood>=2?.3:0;
@@ -146,57 +147,36 @@ function face(p,mood,state){
  var tilt=state==="down"?' transform="rotate(80 50 54)"':"";
  return '<svg class="face" viewBox="0 0 100 100" role="img" aria-label="'+(state==="down"?"Collapsed":state==="ok"?"Relieved":MOODS[mood])+'"><g'+tilt+'><circle cx="50" cy="54" r="32" fill="'+sk+'"/><circle cx="50" cy="54" r="32" fill="#E0533D" opacity="'+(state?0:red*.35)+'"/>'+hair+brow+eyes+'<ellipse cx="30" cy="62" rx="5" ry="3" fill="'+cheek+'" opacity=".55"/><ellipse cx="70" cy="62" rx="5" ry="3" fill="'+cheek+'" opacity=".55"/>'+mouth+sweat+'</g>'+steam+(state==="down"?'<text x="50" y="96" text-anchor="middle" font-size="11" fill="#B3261E" font-weight="700">🚑</text>':"")+"</svg>";
 }
-function start(){S={i:0,gas:0,min:0,saved:0,missed:0,bias:{},harm:{},labelled:0};round()}
+// 29 Nov 2026 simplified: one patient, three things you could say, one tap, then the reveal. No timer, meters or hands of cards.
+function start(){S={i:0,found:0,bias:{}};S.order=shuffle(P);round()}
 function round(){
- var p=P[S.i];S.c=p.conf;S.ang=0;S.left=3;S.reply="";S.used=[];
- var fit=shuffle(D.filter(function(c){return p.fit.indexOf(c.b)>=0})).slice(0,3),rest=shuffle(D.filter(function(c){return fit.indexOf(c)<0})).slice(0,2);
- S.hand=shuffle(fit.concat(rest));S.hand.splice(Math.floor(Math.random()*6),0,{work:1,t:p.work,min:8});
- S.played={};S.t=TLIM;clearInterval(S.tm);
- S.tm=setInterval(function(){S.t--;var e=document.getElementById("tmr");if(e){e.textContent="⏰ "+Math.max(0,S.t)+"s";e.classList.toggle("hot",S.t<=8);}if(S.t<=0){S.missed++;tally({b:"rush",h:"danger"});reveal(false,"The waiting room overflowed, so you rushed them out.");}},1000);
- draw();
+ var p=S.order[S.i],seen={},two=[];
+ shuffle(D.filter(function(c){return p.fit.indexOf(c.b)>=0})).forEach(function(c){if(two.length<2&&!seen[c.b]){seen[c.b]=1;two.push(c)}});
+ S.opts=shuffle(two.concat([{work:1,t:p.work}]));
+ app.innerHTML='<div class="bar"><span class="gpill">Patient '+(S.i+1)+" of "+P.length+'</span><span class="gpill">✅ Found '+S.found+"</span></div>"+
+ '<div class="pt"><div class="pt-h">'+face(p,0)+'<div><div class="t">'+esc(p.n)+", "+p.a+'</div><div style="font-size:13px;color:var(--muted)">'+esc(p.job)+'</div></div></div><p class="say">'+esc(p.say)+"</p></div>"+
+ '<div class="hand-h"><b>What do you say?</b></div><div class="opts">'+S.opts.map(function(c,ix){return '<button class="o" data-i="'+ix+'">'+esc(c.t)+"</button>"}).join("")+"</div>";
+ app.querySelectorAll(".o").forEach(function(b){b.onclick=function(){pick(+b.getAttribute("data-i"))}});
 }
-function bar(){return '<div class="bar"><span class="gpill">Patient '+(S.i+1)+" of "+P.length+"</span>"+(S.t>0?'<span class="gpill tm" id="tmr">⏰ '+S.t+"s</span>":"")+'<span class="gpill">🕯️ Bias '+S.gas+'</span><span class="gpill">⏱️ '+S.min+" min saved</span></div>"}
-function draw(shake){
- var p=P[S.i],pct=Math.max(0,S.c)/p.conf*100,md=Math.min(4,S.ang);
- app.innerHTML=bar()+'<div class="pt"><span class="k">Patient</span><div class="pt-h">'+face(p,md).replace('class="face"','class="face'+(shake?" shake":"")+'"')+'<div><div class="t">'+esc(p.n)+", "+p.a+'</div><div style="font-size:13px;color:var(--muted)">'+esc(p.job)+(S.labelled?" · notes say “anxious”":"")+'</div><div class="mood" style="color:'+["#0F6B4F","#8A6A00","#B85C00","#B3261E","#8A0F0F"][md]+'">'+MOODS[md]+"</div></div></div>"+
- '<p class="say">'+esc(p.say)+'</p><div class="meter"><span>Confidence something is wrong</span><span>'+Math.max(0,S.c)+"/"+p.conf+'</span></div><div class="track"><i style="width:'+pct+'%"></i></div>'+
- (S.reply?'<div class="reply">'+esc(S.reply)+"</div>":"")+"</div>"+
- '<div class="hand-h"><b>Your hand</b><span>'+S.left+" card"+(S.left===1?"":"s")+' left</span></div><div class="hand">'+
- S.hand.map(function(c,ix){
-  if(c.work)return '<button class="c" style="--cc:#0F5C4A" data-i="'+ix+'"'+(S.played[ix]?" disabled":"")+'><span class="k">Do the work</span><span class="ct">'+esc(c.t)+'</span><span class="cs">Costs '+c.min+' min · finds the answer</span></button>';
-  var bb=B[c.b];return '<button class="c" style="--cc:'+bb.c+'" data-i="'+ix+'"'+(S.played[ix]?" disabled":"")+'><span class="k">'+bb.n+'</span><span class="ct">'+esc(c.t)+'</span><span class="hm">Harm: '+H[c.h]+'</span><span class="cs">'+dots(c.p)+" Saves "+c.min+" min</span></button>";
- }).join("")+"</div>";
- app.querySelectorAll(".c").forEach(function(b){b.onclick=function(){play(+b.getAttribute("data-i"))}});
-}
-function tally(c){S.bias[c.b]=(S.bias[c.b]||0)+1;S.harm[c.h]=(S.harm[c.h]||0)+1}
-function play(ix){
- var c=S.hand[ix];S.played[ix]=1;
- if(c.work){S.min-=c.min;S.saved++;return reveal(true)}
- S.used.push(c);tally(c);
- S.c-=c.p+(S.labelled?1:0);S.ang+=c.ang;S.gas+=c.p;S.min+=c.min;S.left--;S.reply=c.r;if(c.lab)S.labelled=1;
- if(S.c<=0){S.missed++;return reveal(false,"They leave, apologising for wasting your time.")}
- if(S.left<=0){S.missed++;return reveal(false,S.ang>=3?"They storm out and won't come back to this clinic.":"Still worried, they book a second opinion elsewhere.")}
- draw(true);
-}
-function reveal(ok,why){
- clearInterval(S.tm);S.t=0;
- var p=P[S.i];
- var used=S.used.length?'<p class="used">You used: '+S.used.map(function(c){return "<b>"+B[c.b].n+"</b> ("+H[c.h].toLowerCase()+")"}).join(", ")+"</p>":"";
- app.innerHTML=bar()+'<div class="rv'+(ok?"":" miss")+'"><div class="rv-h">'+face(p,0,ok?"ok":"down")+'<div><span class="k">'+(ok?"You did the work":"The reveal")+'</span><h2>'+esc(p.dx)+"</h2></div></div>"+
- (ok?"<p>Found it. "+esc(p.test)+"</p>":"<p>"+esc(why)+" "+esc(p.harm)+"</p>"+used+"<p><b>What would have caught it:</b> "+esc(p.test)+"</p>")+
- '<div class="flip"><span class="k">The evidence</span><p style="margin:4px 0 6px">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></div>"+'<p class="tip"><b>💡 Teaching point:</b> '+esc(p.tip)+"</p></div>"+
- '<button class="go" id="nx">'+(S.i<P.length-1?"Next patient":"See your report")+"</button>";
+function pick(ix){
+ var c=S.opts[ix],p=S.order[S.i],ok=!!c.work;
+ if(ok)S.found++;else S.bias[c.b]=(S.bias[c.b]||0)+1;
+ var bias=ok?"":'<p class="used">You said: <b>'+esc(c.t)+'</b><br>That\u2019s <b>'+B[c.b].n.toLowerCase()+"</b>.</p><p><i>"+esc(c.r)+"</i> "+esc(p.harm)+"</p>";
+ app.innerHTML='<div class="rv'+(ok?"":" miss")+'"><div class="rv-h">'+face(p,0,ok?"ok":"down")+'<div><span class="k">'+(ok?"You found it":"You missed it")+'</span><h2>'+esc(p.dx)+"</h2></div></div>"+bias+
+ "<p><b>"+(ok?"What you did:":"What would have caught it:")+"</b> "+esc(p.test)+"</p>"+
+ '<p class="tip"><b>💡</b> '+esc(p.tip)+"</p>"+
+ '<details class="flip"><summary class="k">The evidence</summary><p style="margin:6px 0">'+esc(p.flip)+'</p><small>Source: <a href="'+p.src[1]+'" rel="noopener" target="_blank">'+esc(p.src[0])+"</a></small></details></div>"+
+ '<button class="go" id="nx">'+(S.i<P.length-1?"Next patient":"See how you did")+"</button>";
  document.getElementById("nx").onclick=function(){S.i++;S.i<P.length?round():end()};
  window.scrollTo({top:app.getBoundingClientRect().top+window.scrollY-70,behavior:"smooth"});
 }
-function list(o,names){var k=Object.keys(o).sort(function(a,b){return o[b]-o[a]});return k.length?'<ul class="tally">'+k.map(function(x){return "<li><b>"+names(x)+"</b><span>"+o[x]+"×</span></li>"}).join("")+"</ul>":"<p>None. Impressive.</p>"}
 function end(){
- var rank=S.missed>=6?"Senior Consultant in Dismissal":S.missed>=3?"Registrar of Reassurance":S.missed>=1?"Mostly a doctor":"Actual doctor";
- app.innerHTML='<div class="end"><span class="k">Your clinic report</span><h2>'+rank+'</h2><ul><li><b>Diagnoses found:</b> '+S.saved+" of "+P.length+"</li><li><b>Missed:</b> "+S.missed+"</li><li><b>Bias points:</b> "+S.gas+"</li><li><b>Time saved:</b> "+S.min+" min</li></ul>"+
- "<h3>Biases you used</h3>"+list(S.bias,function(x){return B[x].n})+"<h3>Harms caused</h3>"+list(S.harm,function(x){return H[x]})+
- "<p>Every line in this deck is something real patients report hearing. Bias hits anyone: older people, larger bodies, people with mental illness or addiction, people of colour, women, and men who are told they're ‘just stressed’.</p>"+
- '<p><a href="/gp-school/">Train your blind spots in GP School</a> · <a href="/atypical-presentations/">Atypical presentations</a></p>'+
- '<button class="go" id="again">Play again</button></div>';
+ var n=S.found,k=Object.keys(S.bias).sort(function(a,b){return S.bias[b]-S.bias[a]});
+ var rank=n===P.length?"Actual doctor":n>=6?"Mostly a doctor":n>=3?"Registrar of Reassurance":"Senior Consultant in Dismissal";
+ app.innerHTML='<div class="end"><span class="k">Your clinic</span><h2>'+rank+"</h2><p><b>"+n+" of "+P.length+"</b> diagnoses found.</p>"+
+ (k.length?"<h3>Your shortcuts</h3><ul>"+k.map(function(x){return "<li>"+B[x].n+(S.bias[x]>1?" ×"+S.bias[x]:"")+"</li>"}).join("")+"</ul>":"<p>No shortcuts taken. Impressive.</p>")+
+ "<p>Every line here is something real patients report hearing. Bias hits anyone: older people, larger bodies, people with mental illness or addiction, people of colour, women, and men told they\u2019re \u2018just stressed\u2019.</p>"+
+ '<p><a href="/gp-school/">Train your blind spots in GP School</a></p><button class="go" id="again">Play again</button></div>';
  document.getElementById("again").onclick=function(){start()};
 }
 window.LB_start=function(){if(S.i<0)start()};

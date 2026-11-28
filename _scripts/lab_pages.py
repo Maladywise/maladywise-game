@@ -36,7 +36,7 @@ GAMES = [
       masc="Ivo the sceptical owl, who wants to see the evidence", small="<i>Ivo trusts randomised trials, not vibes.</i>", path="lab/bunkemia/"),
  dict(slug="gaslitis", title="Gaslitis: Dismiss the Patient, See What You Missed", desc="A role-reversal teaching game: play the dismissive doctor, then see the diagnosis you missed and who usually hears those lines.",
       a="#7A2E5C", b="#4A1A38", kick="🧪 Labs beta · Role reversal", h1="Gaslitis",
-      lede="You're the doctor, and every shortcut is a bias. Dismiss eight patients, watch how they react, then see what you missed.",
+      lede="You're the doctor. Eight patients, three things you could say. Two are shortcuts. See what each one costs.",
       masc="Flick the gas lamp, who knows exactly what gaslighting looks like", small="<i>Ageism, weight bias, stigma, overshadowing, racial and gender bias. Every line is something real patients report hearing.</i>", path="lab/gaslitis-r8q/"),
 ]
 VOTE_CSS = (".lb-vote{margin:18px auto 0;max-width:520px;text-align:center;padding:14px;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}"
