@@ -297,6 +297,19 @@ def g_mergeon():
     return svg("".join(b))
 
 
+def g_toxiquest():
+    # a corked poison bottle with a skull-free label, three suspect leaves and a magnifier
+    b = ['<path d="M150 40h40v34l38 52v84a18 18 0 0 1-18 18h-80a18 18 0 0 1-18-18v-84l38-52z" fill="#CDEBC4" stroke="%s" stroke-width="4" stroke-linejoin="round"/>' % INK,
+         '<path d="M118 160h104v50a18 18 0 0 1-18 18h-68a18 18 0 0 1-18-18z" fill="%s" opacity=".85"/>' % GRN,
+         '<rect x="144" y="22" width="52" height="24" rx="6" fill="#B5764A" stroke="%s" stroke-width="3"/>' % INK,
+         '<rect x="132" y="120" width="76" height="34" rx="8" fill="#FFFFFF" stroke="%s" stroke-width="3"/>' % INK,
+         '<text x="170" y="143" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="18" fill="%s">?</text>' % PUR,
+         '<path d="M40 210q20-40 50-30q-10 30-50 30z" fill="#7CC36A" stroke="%s" stroke-width="3"/>' % INK,
+         '<path d="M262 70q30-6 40 22q-30 6-40-22z" fill="#7CC36A" stroke="%s" stroke-width="3"/>' % INK,
+         '<circle cx="270" cy="180" r="24" fill="#FFFFFF" stroke="%s" stroke-width="5"/><path d="M287 197l22 22" stroke="%s" stroke-width="7" stroke-linecap="round"/>' % (PUR, PUR)]
+    return svg("".join(b))
+
+
 def g_basil():
     return svg('<rect x="20" y="150" width="300" height="20" rx="6" fill="#C9B8EA" stroke="%s" stroke-width="3"/>'
                '<rect x="34" y="170" width="272" height="64" fill="#E8E2F0" stroke="%s" stroke-width="3"/>'
@@ -383,7 +396,7 @@ CARDS = [
         file="assets/share.png", foot="New puzzles every day. Always free.", big=True,
         urls=["/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/rare-conditions/"]),
     hub("medical-games", "/medical-games/", "Medical games and quizzes", "All the puzzles",
-        "Daily puzzles, practice quizzes and arcade games.",
+        "Daily puzzles, practice quizzes and bonus games.",
         ["mascots/dx.svg", "mascots/wordemic.svg", "mascots/triviosis.svg", "mascots/opacitis.svg?v=2", "mascots/arrhythmix.svg", "mascots/gridectomy.svg"],
         foot="All free, no sign-up"),
     hub("arcade", "/arcade/", "Arcade games", "Bonus arcade",
@@ -400,7 +413,7 @@ CARDS = [
         "Plain-English fact sheets, overseen by an Australian GP.",
         ["days/stethoscope.svg", "days/heart-calm.svg", "days/brain.svg", "days/lupus-butterfly.svg", "days/tess-bone.svg", "svg:T_DOC"]),
     hub("weird", "/weird/", "Weird and wonderful", "Odd corners",
-        "Word of the week, strange history and medicine's oddest trivia.",
+        "Strange history, odd cases and medicine's weirdest trivia.",
         ["days/zebra-rare.svg", "mascots/zebritis.svg", "days/owl.svg", "mascots/triviosis.svg", "days/star.svg", "mascots/glimpsis.svg"],
         foot="Free · no sign-up"),
     hub("words", "/words/", "Medical word of the week", "Word of the week",
@@ -454,7 +467,7 @@ CARDS = [
     game("linkase", "Linkase", "Word chain", "Each word links to the next. Fill the chain.", ["mascots/linkase.svg"], g_linkase(), "linkase", extra_urls=archives("linkase")),
     game("zebritis", "Zebritis", "Rarest answer wins", "Name a correct answer. Rare zebras score big.", ["mascots/zebritis.svg"], g_zebritis(), "zebritis", extra_urls=archives("zebritis")),
     game("gridectomy", "Gridectomy", "Mini crossword", "A five-by-five medical mini crossword.", ["mascots/gridectomy.svg"], g_gridectomy(), "gridectomy", extra_urls=archives("gridectomy")),
-    game("sudokrine", "Sudokrine", "Word sudoku", "Medical sudoku with a hidden word.", ["mascots/sudokrine.svg"], g_sudokrine(), "sudokrine", extra_urls=archives("sudokrine")),
+    game("sudokrine", "Sudokrine", "Labs · Beta", "Medical sudoku with a hidden word.", ["mascots/sudokrine.svg"], g_sudokrine(), "sudokrine", extra_urls=archives("sudokrine")),
     game("suturix", "Suturix", "Word search", "Find the theme words and the spangram.", ["mascots/suturix.svg"], g_suturix(), "suturix", extra_urls=archives("suturix")),
     game("morphemia", "Morphemia", "Word-building game", "Seven letters. Medical words score double.", ["mascots/morphemia.svg"], g_morphemia(), "morphemia", extra_urls=archives("morphemia")),
     game("arrhythmix", "Arrhythmix", "ECG game", "Read the ECG. Name the rhythm in three tries.", ["mascots/arrhythmix.svg"], g_arrhythmix(), "arrhythmix",
@@ -465,11 +478,12 @@ CARDS = [
          foot="Free · new crossword every Saturday", extra_urls=archives("cryptoplexy")),
     game("grandrounds", "Grand Rounds", "Hard trivia", "Twenty hard medical questions. No multiple choice.", ["mascots/grandrounds.svg"], g_grandrounds(), "grand-rounds",
          foot="Free · new quiz every Sunday", extra_urls=archives("grand-rounds")),
-    game("stackulus", "Stackulus", "Arcade game", "Organs are falling. Stack them, clear the ward.", ["mascots/stackulus.svg"], g_stackulus(), "stackulus",
+    game("stackulus", "Stackulus", "Labs · Beta", "Organs are falling. Stack them, clear the ward.", ["mascots/stackulus.svg"], g_stackulus(), "stackulus",
          foot="Free · daily challenge and world board"),
-    game("mergeon", "Mergeon", "Arcade game", "Drop, match and merge from microbe to brain.", ["mascots/mergeon.svg"], g_mergeon(), "mergeon",
+    game("mergeon", "Mergeon", "Organ merge game", "Drop, match and merge from microbe to brain.", ["mascots/mergeon.svg"], g_mergeon(), "mergeon",
          foot="Free · same drops for everyone, every day"),
-    game("basil", "Basil + Clover", "Cat arcade game", "Kick it off the bench. Survive the vet.", ["mascots/basil.svg", "mascots/clover.svg"], g_basil(), "basil-clover",
+    game("toxiquest", "Toxiquest", "Toxicology December", "One poisoning mystery a day. Name the culprit, learn the antidote.", ["mascots/allergy.svg"], g_toxiquest(), "toxiquest", foot="Free · a new case every day in December"),
+    game("basil", "Basil + Clover", "Cat chaos game", "Kick it off the bench. Survive the vet.", ["mascots/basil.svg", "mascots/clover.svg"], g_basil(), "basil-clover",
          foot="Free · play any time"),
 ]
 BY_URL = {u: c for c in CARDS for u in c["urls"]}
