@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "45";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "46";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -482,7 +482,7 @@
     chain = 0; lastMT = -1e9; bestChain = 1; tgt = target(day); tgtHit = false; wildUsed = false;
     // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
     SP = special(day); MUT = mutation(day); SKIN = skinOf(day) || chosenSet(); GOALS = goalsFor(day); gDone = [false, false, false];
-    BOSS = null; DYING = []; curVax = nxtVax = false; vaxBest = 0; wardWon = false; outOfDrops = false;
+    BOSS = null; DYING = []; curVax = nxtVax = false; vaxBest = 0; wardWon = false; outOfDrops = false; graceS = 0;
     MUT2 = null; LINE = 96;
     if (WARD !== null) { var WW = WARDS[WARD], wm = [].concat(WW.mut || []); SP = WW.sp || ""; MUT = wm[0] ? mutById(wm[0]) : null; MUT2 = wm[1] ? mutById(wm[1]) : null; GOALS = null; OUT = false; RX = false; tgt = WW.lv || -1;
       if (WW.line) LINE = WW.line;
@@ -622,7 +622,14 @@
     if (WARD !== null) {
       var wl = dropsLeft(); wardNote(); hud();
       if (wl === 10 || wl === 5) toast(wl + " drops left!");
-      if (wl === 0) { outOfDrops = true; setTimeout(function () { if (!wardWon && !over) { toast("Out of drops."); setTimeout(function () { if (!wardWon && !over) wardLose(); }, 900); } }, 2600); }
+      if (wl === 0) { // 28 Nov 2026: 5 seconds' grace after the last drop for a last-gasp chain
+        outOfDrops = true; toast(NORMIE ? "Last drop! 5 seconds for a miracle…" : "Last drop! 5 seconds for a miracle…");
+        graceS = 5; hud(); var gt = setInterval(function () {
+          if (wardWon || over || !outOfDrops) { clearInterval(gt); return; }
+          graceS--; hud();
+          if (graceS <= 0) { clearInterval(gt); toast("Out of drops."); setTimeout(function () { if (!wardWon && !over) wardLose(); }, 600); }
+        }, 1000);
+      }
     }
     if (OUT && (drops === 15 || (drops > 15 && (drops - 15) % 20 === 0))) infect(o);
   }
@@ -929,7 +936,7 @@
     var dl = dropsLeft(), tl = timeLeft(), tb = $("top").parentNode;
     tb.classList.toggle("dl", dl >= 0 || tl >= 0); tb.classList.toggle("dl-low", (dl >= 0 && dl <= 5) || (tl >= 0 && tl <= 15));
     tb.querySelector(".lab").textContent = tl >= 0 ? "Time left" : dl >= 0 ? "Drops left" : K.top;
-    $("top").innerHTML = tl >= 0 ? mmss(tl) : dl >= 0 ? String(dl) : top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
+    $("top").innerHTML = tl >= 0 ? mmss(tl) : dl >= 0 ? (dl === 0 && graceS > 0 ? "⏳ " + graceS + "s" : String(dl)) : top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
     if (ZEN) $("score").textContent = "🧘";
     $("next").innerHTML = (nxtVax ? '<span style="font-size:24px;line-height:26px">' + VAX.e + "</span>" : pic(nxt, 26)) + (PREV ? pic(nx2, 18) : "") + (SP === "blood" && nxt < O.length ? '<small class="bgt" style="background:' + BG.col[nxtG] + '">' + BG.names[nxtG] + "</small>" : "");
   }
@@ -1083,7 +1090,7 @@
   function mmss(t) { return Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); }
   function dropsLeft() { return WARD !== null && WARDS[WARD].dl ? Math.max(0, WARDS[WARD].dl - drops) : -1; }
   function wardNote() { if (WARD === null) return; var w = WARDS[WARD], l = dropsLeft(), t = timeLeft(); $("mode").textContent = "Ward " + (WARD + 1) + ": " + wn(w) + " · " + wardGoal(w) + (t >= 0 ? " · " + mmss(t) + " left" : l >= 0 ? " · " + l + " drops left" : ""); }
-  var outOfDrops = false;
+  var outOfDrops = false, graceS = 0;
   // head to head: ?vs=<score> (with ?date=) is a friend's challenge on that day's run
   var VS = (function () { var m = /[?&]vs=(\d{1,7})\b/.exec(location.search); return m ? +m[1] : null; })();
   var brnd, qrnd, drnd, hrnd, curG = 0, nxtG = 0, driftA = 0, driftP = 1200, driftPh = 0, lastQT = 0, lastNoT = 0, noPairs = {}, sparks = [], hidRun = { sp: {}, tc: 0 };
