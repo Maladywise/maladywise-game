@@ -1400,7 +1400,7 @@
     if (!BETA) return;
     var path = location.pathname;
     // new games still in testing; each drops its Beta tag on its launch day (local date)
-    var LAUNCH = { nomulous: "", toxiquest: "", stackulus: "", sudokrine: "", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" };
+    var LAUNCH = { nomulous: "", toxiquest: "2026-12-01", stackulus: "", sudokrine: "", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" };
     var gm = path.match(/^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest|stackulus|sudokrine)\//), dn = new Date();
     var today = dn.getFullYear() + "-" + ("0" + (dn.getMonth() + 1)).slice(-2) + "-" + ("0" + dn.getDate()).slice(-2);
     var betaGame = !!gm && !(LAUNCH[gm[1]] && today >= LAUNCH[gm[1]]);
@@ -1752,7 +1752,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         ["lunicorn", "Lunicorn", '<img src="/assets/mascots/zebritis.svg" alt="" width="44" height="44" data-nolink>', "Full-moon days", "#5B3A8E", "#C9A3DD", "Ziggy’s colours"],
         ["toxiquest", "Toxiquest", '<img src="/assets/mascots/allergy.svg" alt="" width="44" height="44" data-nolink>', "From 1 December", "#2E6B3A", "#8FD18A", "Poison mysteries"],
         ["dxtective-gauntlet", "Dx Gauntlet", '<img src="/assets/mascots/sherlock.svg" alt="" width="44" height="44" data-nolink>', "Sundays only", "#4A3480", "#B9A6E8", "Ten cases, no slips"]];
-    function launched(id) { var L = { fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" }[id], d = new Date(); return !!L && d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) >= L; }
+    function launched(id) { var L = { toxiquest: "2026-12-01", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" }[id], d = new Date(); return !!L && d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) >= L; }
     function timedList(openOnes) { if (NORMIE) return []; var o = hiddenOpen(); return TIMED.filter(function (h) { return !!o[h[0]] === openOnes; }); }
     function timedTile(h, on, done, chip) {
       var dk = root.getAttribute("data-theme") === "dark", inner = '<span class="tl-ic">' + h[2] + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + "</span><b>" + h[1] + (h[0] === "dxtective-gauntlet" || launched(h[0]) ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + (on ? h[6] : h[3]) + "</small>" + (chip || "") + (on ? "" : '<span class="tl-stamp">Hidden</span>');
