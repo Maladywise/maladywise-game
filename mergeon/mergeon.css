@@ -229,3 +229,13 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 #mrg .skins .sk.on{border-color:var(--ink,#2A1E3D);background:var(--ink,#2A1E3D);color:#fff}
 #mrg .skins .sk.lk{opacity:.55}
 #mrg.desk .skins{grid-column:2;grid-row:6;align-self:start;justify-content:flex-start;margin-top:10px}
+/* 28 Nov 2026: miracle win after a lost ward */
+#mrg .ovcard.miracle{border:2px solid #F5B83D;box-shadow:0 0 0 4px color-mix(in srgb,#F5B83D 25%,transparent),0 12px 30px rgba(0,0,0,.18)}
+#mrg .mir{display:flex;flex-direction:column;align-items:center;gap:4px;margin-bottom:6px}
+#mrg .mir b{font-size:20px;color:#C2410C}
+#mrg .mir span{font-size:13px;max-width:280px}
+#mrg .mir .mir-m{display:inline-block;animation:mrgdance .7s ease-in-out infinite;transform-origin:50% 100%}
+#mrg .mir .mir-m img{width:72px;height:72px}
+@keyframes mrgdance{0%,100%{transform:rotate(-10deg) translateY(0)}25%{transform:rotate(0) translateY(-10px) scale(1.06)}50%{transform:rotate(10deg) translateY(0)}75%{transform:rotate(0) translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){#mrg .mir .mir-m{animation:none}}
+#mrg .ovcard .mir-wait{font-style:italic}

@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "46";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "47";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -741,7 +741,8 @@
     if (!lastT) lastT = t;
     var dt = Math.min(100, t - lastT); lastT = t;
     var danger = 0, now = performance.now();
-    if (!over) {
+    if (limbo && (now > limbo || wardWon)) limbo = 0;
+    if (!over || limbo) {
       acc += dt;
       while (acc >= 1000 / 60) {
         if (SP === "micro") engine.gravity.x = driftA * Math.sin(steps / driftP * Math.PI * 2 + driftPh); // a gentle seeded drift
@@ -753,7 +754,7 @@
         if (MUT) envTick();
         if (SP === "sick") sickTick(); if (DRAIN && infN) drainTick(); if (SP === "micro" && steps === 10800) hidTick();
       }
-      danger = checkOver(now);
+      danger = over ? 0 : checkOver(now);
       if (JUICE && !over) clutch(danger, now);
       // danger tension: a heartbeat (Normie: a sonar ping) that speeds up the longer a piece sits over the line
       if (danger && !over) { if (now >= nextBeat) { sfx(NORMIE ? "sonar" : "beat"); nextBeat = now + (NORMIE ? 1100 - 650 * Math.min(1, danger) : 900 - 560 * Math.min(1, danger)); } }
@@ -1090,7 +1091,18 @@
   function mmss(t) { return Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); }
   function dropsLeft() { return WARD !== null && WARDS[WARD].dl ? Math.max(0, WARDS[WARD].dl - drops) : -1; }
   function wardNote() { if (WARD === null) return; var w = WARDS[WARD], l = dropsLeft(), t = timeLeft(); $("mode").textContent = "Ward " + (WARD + 1) + ": " + wn(w) + " · " + wardGoal(w) + (t >= 0 ? " · " + mmss(t) + " left" : l >= 0 ? " · " + l + " drops left" : ""); }
-  var outOfDrops = false, graceS = 0;
+  var outOfDrops = false, graceS = 0, limbo = 0; // limbo: after a ward is lost the board keeps moving for 25 s, in case of a miracle
+  var MIRACLE = NORMIE ? [
+    { t: "🌊 A freak wave!", d: "A wave rolled in and finished the job for you.", lv: 6 },
+    { t: "🐬 A dolphin helped!", d: "A passing dolphin nudged the last piece into place.", lv: 7 },
+    { t: "🍀 Lucky current", d: "The tide turned at the very last second.", lv: 5 }
+  ] : [
+    { t: "💉 IM adrenaline!", d: "0.5 mg into the outer thigh, and the patient sat bolt upright.", lv: 7 },
+    { t: "⚡ Successful defib!", d: "Shockable rhythm, one shock, back in sinus rhythm.", lv: 7 },
+    { t: "😳 Accidentally pronounced dead", d: "Lazarus phenomenon: very rarely, circulation returns on its own minutes after CPR stops. Always wait and recheck.", lv: 10 },
+    { t: "🍬 It was just a hypo", d: "Glucose 1.9. One tube of glucose gel later: wide awake and apologetic.", lv: 10 },
+    { t: "💧 Just needed fluids", d: "Two litres of saline later, the patient asked for a sandwich.", lv: 2 }
+  ];
   // head to head: ?vs=<score> (with ?date=) is a friend's challenge on that day's run
   var VS = (function () { var m = /[?&]vs=(\d{1,7})\b/.exec(location.search); return m ? +m[1] : null; })();
   var brnd, qrnd, drnd, hrnd, curG = 0, nxtG = 0, driftA = 0, driftP = 1200, driftPh = 0, lastQT = 0, lastNoT = 0, noPairs = {}, sparks = [], hidRun = { sp: {}, tc: 0 };
@@ -1562,8 +1574,8 @@
     } else if (b.hp <= b.max / 2 && !b.half) { b.half = true; toast(NORMIE ? "The kraken is sulking. Keep going!" : "The superbug is weakening. Keep going!"); }
   }
   function bossTick() { // once per physics step: a slow sway; it coughs out pieces (bigger and more often as it evolves); stray antibiotics settle
-    var b = BOSS; if (!b || b.dead || over) return;
-    b.ph += 1; abxSky(b); var nx = b.x0 + Math.sin(b.ph / Math.max(120, 240 - b.st * 30)) * B_SWAY;
+    var b = BOSS; if (!b || b.dead || (over && !limbo)) return;
+    b.ph += 1; if (!over) abxSky(b); var nx = b.x0 + Math.sin(b.ph / Math.max(120, 240 - b.st * 30)) * B_SWAY;
     Bd.setPosition(b.body, { x: nx, y: H - b.r - 2 });
     var every = Math.max(240, (b.max >= 16 ? 420 : 600) - b.st * 60);
     var wk = WARDS[WARD] || {};
@@ -1719,23 +1731,29 @@
   function starsOf(i) { return (load(STARKEY, {}) || {})[i] || 0; }
   function starTxt(n) { return "★★★".slice(0, n) + "☆☆☆".slice(0, 3 - n); }
   function wardWin() {
-    if (WARD === null || wardWon) return; wardWon = true; over = true; arm = false; tbarUI();
+    if (WARD === null || wardWon) return; var miracle = !!limbo; limbo = 0; wardWon = true; over = true; arm = false; tbarUI();
     var stz = wardStars(), sall = load(STARKEY, {}) || {}, sbest = Math.max(stz, sall[WARD] || 0); sall[WARD] = sbest; put(STARKEY, sall);
     var i = WARD, prev = wardsCleared(), newly = i + 1 > prev; if (newly) put(WARDKEY, { n: i + 1 });
     var w = WARDS[i], unl = newly && w.set && K.SKIN[w.set] ? K.SKIN[w.set] : null;
     confetti(); sfx("target"); buzz([20, 30, 20, 30]);
     var last = i === WARDS.length - 1;
     $("over").innerHTML = '<div class="ovcard"><p class="best">' + (last ? "🏆 All " + WARDS.length + " wards cleared!" : "✅ Ward " + (i + 1) + " cleared") + "</p><b>" + esc(wn(w)) + '</b><span class="wstars" aria-label="' + stz + ' of 3 stars">' + starTxt(stz) + "</span><span>" + fmt(score) + " points" + (stz < 3 ? " · " + (stz === 2 ? "Finish with 40% left for 3 stars" : "Finish with 20% left for 2 stars") : "") + "</span>" +
-      (unl ? "<span>🎁 New set unlocked: " + esc(unl.n) + ". Turn it on in More.</span>" : "") +
+      (unl ? "<span>🎁 New set unlocked: " + esc(unl.n) + ". Pick it under Skins.</span>" : "") +
       '<div class="ovbtns">' + (last ? "" : '<button class="btn solid" type="button" id="mrg-wnext">Next ward</button>') + '<button class="btn" type="button" id="mrg-wall">All wards</button><a class="btn mrg-home" href="/">🏠 Home</a></div></div>';
     $("over").hidden = false;
+    if (miracle) { // 28 Nov 2026: won after the loss screen: a last-gasp save
+      var sc = MIRACLE[Math.floor(Math.random() * MIRACLE.length)];
+      $("over").querySelector(".ovcard").classList.add("miracle");
+      $("over").querySelector(".ovcard").insertAdjacentHTML("afterbegin", '<div class="mir"><span class="mir-m">' + pic(Math.min(sc.lv, O.length - 1), 72) + '</span><b>' + esc(sc.t) + "</b><span>" + esc(sc.d) + "</span></div>");
+      toastBig(NORMIE ? "SAVED!" : "MIRACLE!"); setTimeout(confetti, 500); sfx("big"); buzz([40, 40, 40, 40, 80]);
+    }
     if ($("wnext")) { $("wnext").onclick = function () { clearInterval(WT); startWard(i + 1); }; autoGo($("wnext"), "Next ward", function () { if (!$("over").hidden) startWard(i + 1); }); }
     $("wall").onclick = function () { clearInterval(WT); openWards(); };
   }
   function wardLose() {
-    over = true; arm = false; tbarUI(); sfx("over"); var i = WARD;
+    over = true; arm = false; tbarUI(); sfx("over"); var i = WARD; limbo = performance.now() + 25000;
     $("over").innerHTML = '<div class="ovcard"><b>Ward ' + (i + 1) + " not cleared</b><span>" + (outOfTime ? "Out of time. " : outOfDrops ? "Out of drops. " : "") + esc(wardGoal(WARDS[i])) + " · " + fmt(score) + " points</span>" +
-      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-wagain">Try again</button><button class="btn" type="button" id="mrg-wall">All wards</button><a class="btn mrg-home" href="/">🏠 Home</a></div><span class="ovnote">Ward rounds never touch your daily run</span></div>';
+      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-wagain">Try again</button><button class="btn" type="button" id="mrg-wall">All wards</button><a class="btn mrg-home" href="/">🏠 Home</a></div><span class="ovnote mir-wait">🤞 The pieces are still settling. A miracle could still happen…</span><span class="ovnote">Ward rounds never touch your daily run</span></div>';
     $("over").hidden = false;
     $("wagain").onclick = function () { startWard(i); };
     $("wall").onclick = openWards;
@@ -2083,7 +2101,7 @@
   if (DEBUG) { // test hooks (?debug=1)
     var X = window.MW_mrg;
     X.spawn = function (lv, x, y) { return add(lv, x, y).id; };
-    X.ward = startWard; X.win = wardWin; X.abx = function () { return BOSS ? { t: BOSS.abxT, wk: BOSS.wk } : null; }; X.abxNow = function () { if (BOSS) BOSS.abxT = 61; }; X.boss = function () { return BOSS ? { hp: BOSS.hp, max: BOSS.max, st: BOSS.st, r: BOSS.r, x0: Math.round(BOSS.x0), x: Math.round(BOSS.body.position.x), dead: BOSS.dead } : null; }; X.radii = function () { return O.map(function (q) { return q.r; }); };
+    X.ward = startWard; X.win = wardWin; X.lose = wardLose; X.limbo = function () { return limbo; }; X.abx = function () { return BOSS ? { t: BOSS.abxT, wk: BOSS.wk } : null; }; X.abxNow = function () { if (BOSS) BOSS.abxT = 61; }; X.boss = function () { return BOSS ? { hp: BOSS.hp, max: BOSS.max, st: BOSS.st, r: BOSS.r, x0: Math.round(BOSS.x0), x: Math.round(BOSS.body.position.x), dead: BOSS.dead } : null; }; X.radii = function () { return O.map(function (q) { return q.r; }); };
     X.setCur = function (lv) { cur = lv; hud(); };
     X.cut = function (x, y) { return cutAt(x, y); };
     X.shake = doShake; X.end = end; X.sfx = sfxLog; X.WILD = WILD; X.CURE = CURE; X.target = target;
