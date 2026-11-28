@@ -318,7 +318,7 @@
   function specialNow() {
     if (NORMIE) return null;
     var n = new Date(), TDAY = n.getFullYear() + "-" + (n.getMonth() + 1) + "-" + n.getDate(), fm = new Date(typeof mwFullNear === "function" ? mwFullNear(n.getTime()) : 0);
-    var open = { lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11, fridaemia: n.getDay() === 5, "dxtective-gauntlet": n.getDay() === 0 };
+    var open = { lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11, fridaemia: n.getDay() === 5 && n >= new Date(2026, 11, 11), "dxtective-gauntlet": n.getDay() === 0 };
     var h = SPECIAL3.filter(function (x) { return open[x[0]]; })[0];
     return h ? timedG(h) : null;
   }
@@ -1744,7 +1744,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function hiddenOpen() {
       var n = new Date(), fm = new Date(mwFullNear(n.getTime()));
       var TDAY = n.getFullYear() + "-" + (n.getMonth() + 1) + "-" + n.getDate();
-      return { triagic: get("mw-open-quiet", "") === TDAY || n.getHours() >= 16, fridaemia: n.getDay() === 5, lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11, "dxtective-gauntlet": n.getDay() === 0 };
+      return { triagic: get("mw-open-quiet", "") === TDAY || n.getHours() >= 16, fridaemia: n.getDay() === 5 && n >= new Date(2026, 11, 11), lunicorn: get("mw-open-lunar", "") === TDAY || fm.toDateString() === n.toDateString(), toxiquest: !!get("mw-secret-toxic", 0) || n.getMonth() === 11, "dxtective-gauntlet": n.getDay() === 0 };
     }
     // Open timed games go first in the grid; closed (stamped Hidden) ones go last.
     var TIMED = [["triagic", "Triagic", '<img src="/assets/mascots/triagic.svg" alt="" width="44" height="44" data-nolink>', "4pm to midnight", "#B3261E", "#FF8A80", "Fast ED triage"],

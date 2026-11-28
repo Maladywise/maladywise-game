@@ -172,8 +172,8 @@
     var q = new URLSearchParams(location.search).get("t"); // testing: ?t=open
     return q === "open" ? (function () { var d = new Date(); while (d.getDay() !== 5) d.setDate(d.getDate() - 1); d.setHours(17, 0, 0, 0); return d; })() : new Date();
   }
-  function isOpen(d) { return d.getDay() === 5; }
-  function nextOpen(d) { var n = new Date(d); n.setSeconds(0, 0); for (var i = 0; i < 8; i++) { var c = new Date(n); c.setDate(n.getDate() + i); c.setHours(0, 0, 0, 0); if (c.getDay() === 5 && c > d) return c; } return null; }
+  function isOpen(d) { return d.getDay() === 5 && (d >= new Date(2026, 11, 11) || /t=open/.test(location.search)); } // launches Fri 11 Dec 2026
+  function nextOpen(d) { var n = new Date(d); n.setSeconds(0, 0); for (var i = 0; i < 21; i++) { var c = new Date(n); c.setDate(n.getDate() + i); c.setHours(0, 0, 0, 0); if (c.getDay() === 5 && c > d && c >= new Date(2026, 11, 11)) return c; } return null; }
   var T = now(), WK = G.week(T), r = G.rng("fridaemia-" + WK);
   // Fixed order (22 Nov 2026): each result is used once before any repeats. Results are dealt ED / call / Monday in turn,
   // so every week gets a mix; the 20-week cycle restarts after the whole bank is used. Append new rows at the end of POOL.
