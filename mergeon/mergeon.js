@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "40";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "41";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1693,7 +1693,7 @@
     var last = i === WARDS.length - 1;
     $("over").innerHTML = '<div class="ovcard"><p class="best">' + (last ? "🏆 All " + WARDS.length + " wards cleared!" : "✅ Ward " + (i + 1) + " cleared") + "</p><b>" + esc(wn(w)) + '</b><span class="wstars" aria-label="' + stz + ' of 3 stars">' + starTxt(stz) + "</span><span>" + fmt(score) + " points" + (stz < 3 ? " · " + (stz === 2 ? "Finish with 40% left for 3 stars" : "Finish with 20% left for 2 stars") : "") + "</span>" +
       (unl ? "<span>🎁 New set unlocked: " + esc(unl.n) + ". Turn it on in More.</span>" : "") +
-      '<div class="ovbtns">' + (last ? "" : '<button class="btn solid" type="button" id="mrg-wnext">Next ward</button>') + '<button class="btn" type="button" id="mrg-wall">All wards</button></div></div>';
+      '<div class="ovbtns">' + (last ? "" : '<button class="btn solid" type="button" id="mrg-wnext">Next ward</button>') + '<button class="btn" type="button" id="mrg-wall">All wards</button><a class="btn mrg-home" href="/">🏠 Home</a></div></div>';
     $("over").hidden = false;
     if ($("wnext")) { $("wnext").onclick = function () { clearInterval(WT); startWard(i + 1); }; autoGo($("wnext"), "Next ward", function () { if (!$("over").hidden) startWard(i + 1); }); }
     $("wall").onclick = function () { clearInterval(WT); openWards(); };
@@ -1701,7 +1701,7 @@
   function wardLose() {
     over = true; arm = false; tbarUI(); sfx("over"); var i = WARD;
     $("over").innerHTML = '<div class="ovcard"><b>Ward ' + (i + 1) + " not cleared</b><span>" + (outOfTime ? "Out of time. " : outOfDrops ? "Out of drops. " : "") + esc(wardGoal(WARDS[i])) + " · " + fmt(score) + " points</span>" +
-      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-wagain">Try again</button><button class="btn" type="button" id="mrg-wall">All wards</button></div><span class="ovnote">Ward rounds never touch your daily run</span></div>';
+      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-wagain">Try again</button><button class="btn" type="button" id="mrg-wall">All wards</button><a class="btn mrg-home" href="/">🏠 Home</a></div><span class="ovnote">Ward rounds never touch your daily run</span></div>';
     $("over").hidden = false;
     $("wagain").onclick = function () { startWard(i); };
     $("wall").onclick = openWards;
@@ -1773,7 +1773,7 @@
       "<b>" + (finished ? (NORMIE ? "🐋 Whale of a run!" : "🎉 Discharged!") + "</b><span>Top piece made: +" + fmt(FIN_BONUS) + " bonus</span><span>" : "Game over</b><span>") + fmt(score) + " points · " + (top >= 0 ? pic(top, 22) + " " + O[top].n : "") + "</span>" +
       (OUT ? "<span>" + OUTK.cleared + ": " + infCleared + (RX ? " (" + RXK.resWord + ": " + resCleared + ")" : "") + "</span>" : "") +
       (DRAIN && (OUT || drained) ? "<span>" + (NORMIE ? "Points lost to oil" : "Points lost to infection") + ": " + fmt(drained) + "</span>" : "") +
-      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-ovagain">Play again</button><button class="btn" type="button" id="mrg-ovres">' + (practice ? "Results" : "Share result") + "</button></div>" +
+      '<div class="ovbtns"><button class="btn solid" type="button" id="mrg-ovagain">Play again</button><button class="btn" type="button" id="mrg-ovres">' + (practice ? "Results" : "Share result") + '</button><a class="btn mrg-home" href="/">🏠 Home</a></div>' +
       (featUI() ? '<button class="btn" type="button" id="mrg-ovwards" style="margin-top:8px">🏥 ' + (NORMIE ? "Dive sites" : "Ward rounds") + "</button>" : "") +
       (practice ? "" : '<span class="ovnote">Next games are practice</span>') + "</div>";
     ov.hidden = false;
@@ -1852,7 +1852,7 @@
       (st.tally ? tallyHTML(st.tally, s) : "") +
       (st.goals && goalsFor(day) ? '<p class="note">' + esc(K.GOALW) + ": " + goalsFor(day).map(function (g, i) { return (st.goals[i] ? "✅ " : "⬜ ") + esc(g.t); }).join(" · ") + "</p>" : "") +
       '<div class="stats"><div><b>' + stats.played + '</b><span>Played</span></div><div><b>' + pct + '</b><span>' + K.win + '</span></div><div><b>' + stats.streak + '</b><span>Streak</span></div><div><b>' + fmt(stats.hi || 0) + "</b><span>High score</span></div></div>" +
-      '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn solid" type="button" id="mrg-again">Play again</button><span class="again-note">Practice game, doesn’t count</span></div>';
+      '<pre id="mrg-share">' + esc(share) + '</pre><div class="btns"><button class="btn solid" type="button" id="mrg-copy">Copy result</button><button class="btn solid" type="button" id="mrg-again">Play again</button><a class="btn mrg-home" href="/">🏠 Home</a><span class="again-note">Practice game, doesn’t count</span></div>';
     if (!practiceScore && practiceScore !== 0) vsUI(r, s);
     r.appendChild(lbBox); lbRender();
     if (st.tally && tallyAnim) { tallyAnim = false; tallyRun(st.tally); }

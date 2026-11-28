@@ -221,3 +221,4 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 /* 28 Nov 2026: drops/time left centred, and the red pulse grows from the centre */
 #mrg .mbar .dl,#mrg .mbar .dl-low{text-align:center}
 #mrg .mbar .dl b{display:block;text-align:center;transform-origin:50% 50%}
+#mrg a.btn.mrg-home{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
