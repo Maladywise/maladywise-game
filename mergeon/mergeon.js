@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "39";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "40";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1440,7 +1440,7 @@
   function band(tp) { return tp >= 10 ? 0 : tp >= 9 ? 1 : tp >= 8 ? 2 : tp >= 7 ? 3 : 4; }
   function gridOf(tp) { return O.map(function (o, i) { return i <= tp ? o.e : "⬜"; }).join(""); }
   // ---------- the boss (wards 5 and 10): sits on the floor, can't be merged, worn down by merges right next to it ----------
-  var BOSS_R = 29; // 28 Nov 2026: starts half the size (was 58); still grows 10 per stage
+  var BOSS_R = 44; // 28 Nov 2026: 44 (was 58, then 29); still grows 10 per stage
   // 27 Nov 2026: the superbug evolves. Every antibiotic that lands near it (or on it) makes it a scarier bug: bigger, tougher, angrier.
   // Merges next to it hurt it and shove it away; pinned against a wall it takes double damage.
   var BSTAGE = NORMIE ? [
