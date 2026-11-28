@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "47";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "48";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1960,7 +1960,9 @@
     '<form class="lbform" hidden><input maxlength="14" autocomplete="nickname" placeholder="Nickname (not your real name)" aria-label="Nickname for the world board (not your real name)"><button class="btn solid" type="submit">Post score</button></form><ol></ol><p class="note"></p>';
   var lbQ = function (s) { return lbBox.querySelector(s); };
   function pid() { var p = load("mrg-pid", null); if (!p || p.length < 8) { p = (Math.random().toString(36) + Math.random().toString(36)).replace(/[^a-z0-9]/g, "").slice(0, 12); put("mrg-pid", p); } return p; }
-  function lbCan() { return MLB && st && st.done && isLive() && !st.posted && st.score > 0; }
+  function lbCan() { return MLB && st && st.done && isLive() && (!st.posted || st.auto) && st.score > 0; }
+  // 28 Nov 2026: every finished daily posts automatically, under the player's saved name or a random "Mystery <animal>"; they can rename after
+  function anonName() { var A = ["otter", "owl", "fox", "panda", "heron", "lynx", "gecko", "puffin", "tapir", "yak", "badger", "falcon"]; return "Mystery " + A[Math.floor(Math.random() * A.length)]; }
   function lbGot(k, j) {
     var ok = !!(j && Array.isArray(j.rows) && j.board === k);
     if (j && !ok) MLB = false; // the server doesn't know Mergeon's boards (yet, or any more)
@@ -1973,9 +1975,9 @@
       if (j && j.board === BD && Array.isArray(j.rows)) { MLB = true; lbs[BD] = j.rows; lbFetch(BA); lbRender(); }
     }).catch(function () {});
   }
-  function lbPost(n) {
+  function lbPost(n, auto) {
     if (!lbCan()) return;
-    st.posted = true; put(KEY, st); put("mrg-name", n);
+    st.posted = true; st.auto = !!auto; put(KEY, st); if (!auto) put("mrg-name", n); else st.anon = n;
     [BD, BA].forEach(function (k) {
       lbs[k] = "wait";
       var u = LB + "/score?b=" + k + "&id=" + pid() + "&n=" + encodeURIComponent(n) + "&s=" + Math.round(st.score) + "&r=" + Math.max(0, Math.min(10, st.top));
@@ -1985,10 +1987,13 @@
   }
   function lbRender() {
     if (!MLB || !isLive() || !st || !st.done) { lbBox.hidden = true; return; }
+    if (lbCan() && !st.posted) { var sv = load("mrg-name", null); lbPost(sv || anonName(), !sv); return; }
     lbBox.hidden = false;
     Array.prototype.forEach.call(lbBox.querySelectorAll(".lbtabs button"), function (b) { var on = b.getAttribute("data-b") === lbTab; b.classList.toggle("on", on); b.setAttribute("aria-selected", on ? "true" : "false"); });
     var f = lbQ(".lbform"), inp = lbQ("input"); f.hidden = !lbCan();
-    if (!f.hidden && !inp.value) inp.value = load("mrg-name", null) || load("mw-organdrop-name", null) || load("mw-basil-name", null) || "";
+    if (!f.hidden && !inp.value) inp.value = load("mw-organdrop-name", null) || load("mw-basil-name", null) || "";
+    lbQ(".lbform button").textContent = st.auto ? "Rename" : "Post score";
+    if (!f.hidden && st.anon) inp.placeholder = "Posted as " + st.anon + ". Your nickname?";
     var rows = lbs[lbTab], el = lbQ("ol"), note = lbQ(".note");
     note.textContent = "";
     if (rows == null || rows === "wait") { el.innerHTML = '<li class="none">Loading…</li>'; if (rows == null) lbFetch(lbTab); return; }
