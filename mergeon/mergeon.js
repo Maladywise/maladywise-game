@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "49";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "50";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -960,8 +960,8 @@
   function tbarUI() {
     var t = $("tgt"), on = tgt >= 0, html = "";
     if (OUT) html += '<span class="ob"' + (RX ? ' title="' + esc(RXK.tip.join("\n")) + '"' : "") + ">" + OUTK.badge + "</span> ";
-    if (on) html += tgtHit ? '<span class="hit">⭐ Target hit: ' + esc(O[tgt].n) + (practice ? " (practice)" : "") + "</span>"
-      : "🎯 " + (practice ? "Practice: make " : "Make ") + esc(aName(tgt));
+    if (on) html += tgtHit ? '<span class="hit">⭐ ' + esc(O[tgt].n) + "</span>" // 28 Nov 2026: shorter target labels
+      : "🎯 " + esc(O[tgt].n);
     if (GOALS) { var gn = practice ? 0 : gDone.filter(Boolean).length; html = '<button type="button" class="gl" id="mrg-gl" aria-label="' + esc(K.GOALW) + " goals: " + gn + ' of 3 done">📋 ' + gn + "/3</button> " + html; }
     t.innerHTML = html; if ($("gl")) $("gl").onclick = openMore; t.title = on ? "Today’s target: make " + aName(tgt) + (RX ? "\n" + RXK.tip.join("\n") : "") : "";
     $("tools").hidden = !NEW;
