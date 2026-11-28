@@ -30,7 +30,7 @@
 @media (prefers-color-scheme:dark){#lb-game{--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;--dot:#F2B544;--plum:#7A2E5C;--teal:#0F5C4A;--on:#fff;--bad:#B3261E;--display:var(--title,Georgia,serif);--paper:var(--card)}
 }
 #lb-game .back a{color:var(--muted)}
-#lb-game .bar{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px;font-size:14px;font-weight:600}
+#lb-game .lbar{display:flex;justify-content:space-between;align-items:center;margin:0 0 10px;font-size:14px;font-weight:600}
 #lb-game .dots{display:flex;gap:6px}
 #lb-game .dots i{width:12px;height:12px;border-radius:50%;background:var(--line)}
 #lb-game .dots i.ok{background:var(--true)}
@@ -50,6 +50,8 @@
 #lb-game .verdict{margin:12px 0 0;border-radius:16px;padding:14px 16px;color:#fff}
 #lb-game .verdict.t{background:var(--true)}
 #lb-game .verdict.f{background:var(--false)}
+#lb-game .verdict .you{display:block;font:800 24px/1.2 var(--body);background:#fff;color:#1F6B45;border-radius:14px;padding:12px 16px;margin:0 0 12px;opacity:1;text-align:center}
+#lb-game .verdict .you.no{color:#B3261E}
 #lb-game .verdict b{display:block;font:700 20px var(--display);margin-bottom:4px}
 #lb-game .verdict p{margin:0 0 6px;line-height:1.5;font-size:15px}
 #lb-game .verdict a{color:#fff;font-size:13px}
@@ -105,7 +107,7 @@ function start(r){S={r:r,i:0,res:[],q:seedShuffle(R[r],r*7+3)};ask()}
 function dots(){return '<div class="dots">'+S.q.map(function(_,k){var c=k<S.res.length?(S.res[k]?"ok":"no"):(k===S.i?"now":"");return '<i class="'+c+'"></i>'}).join("")+"</div>"}
 function ask(){
  var c=S.q[S.i],left=TIME;
- app.innerHTML='<div class="bar"><span>Round '+(S.r+1)+' · Claim '+(S.i+1)+' of 5</span>'+dots()+'</div><div class="card"><span class="kind">'+c[0]+'</span><p class="claim">'+esc(c[1])+'</p><div class="timer"><i id="tb"></i></div></div><div class="btns"><button class="b t" id="bt">True</button><button class="b f" id="bf">False</button></div><div id="v"></div>';
+ app.innerHTML='<div class="lbar"><span>Round '+(S.r+1)+' · Claim '+(S.i+1)+' of 5</span>'+dots()+'</div><div class="card"><span class="kind">'+c[0]+'</span><p class="claim">'+esc(c[1])+'</p><div class="timer"><i id="tb"></i></div></div><div class="btns"><button class="b t" id="bt">True</button><button class="b f" id="bf">False</button></div><div id="v"></div>';
  var tb=document.getElementById("tb");
  requestAnimationFrame(function(){tb.style.transform="scaleX("+((left-1)/TIME)+")"});
  clearInterval(timer);timer=setInterval(function(){left--;tb.style.transform="scaleX("+(Math.max(0,left-1)/TIME)+")";if(left<=0)answer(null)},1000);
@@ -114,7 +116,7 @@ function ask(){
 function answer(a){
  clearInterval(timer);var c=S.q[S.i],ok=a===c[2];S.res.push(ok);
  document.getElementById("bt").disabled=document.getElementById("bf").disabled=true;
- document.getElementById("v").innerHTML='<div class="verdict '+(c[2]?"t":"f")+'"><div class="you">'+(a===null?"⏱️ Too slow":ok?"✅ You got it":"❌ Not this time")+'</div><b>'+esc(c[3])+'</b><p>'+esc(c[4])+'</p><a href="'+c[6]+'" target="_blank" rel="noopener">Source: '+esc(c[5])+'</a></div><button class="go" id="nx">'+(S.i<4?"Next claim":"See your score")+"</button>";
+ document.getElementById("v").innerHTML='<div class="verdict '+(c[2]?"t":"f")+'"><div class="you'+(ok?"":" no")+'">'+(a===null?"⏱️ Too slow":ok?"✅ You got it!":"❌ Not this time")+'</div><b>'+esc(c[3])+'</b><p>'+esc(c[4])+'</p><a href="'+c[6]+'" target="_blank" rel="noopener">Source: '+esc(c[5])+'</a></div><button class="go" id="nx">'+(S.i<4?"Next claim":"See your score")+"</button>";
  document.querySelector(".bar .dots").outerHTML=dots();
  var nx=document.getElementById("nx");nx.focus();nx.onclick=function(){S.i++;S.i<5?ask():end()};
 }

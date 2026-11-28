@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="/assets/mg.css?v=3">
 <style>:root{--mg-a:#7A2E5C;--mg-b:#4A1A38;--mg-hi:#FFE08A}
 #lb-game{--true:#0F6B4F;--false:#A3302A;--gold:#F2B544;--dot:#F2B544;--plum:#7A2E5C;--teal:#0F5C4A;--on:#fff;--bad:#B3261E;--display:var(--title,Georgia,serif);--paper:var(--card)}
-#lb-game .bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+#lb-game .lbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
 #lb-game .gpill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600}
 #lb-game .gpill.tm{font-variant-numeric:tabular-nums}
 #lb-game .gpill.tm.hot{background:#B3261E;color:#fff;border-color:#B3261E}
@@ -213,7 +213,7 @@ function round(){
  var p=S.order[S.i],seen={},two=[];
  shuffle(D.filter(function(c){return p.fit.indexOf(c.b)>=0})).forEach(function(c){if(two.length<2&&!seen[c.b]){seen[c.b]=1;two.push(c)}});
  S.opts=shuffle(two.concat([{work:1,t:p.work}]));
- app.innerHTML='<div class="bar"><span class="gpill">Patient '+(S.i+1)+" of "+P.length+'</span><span class="gpill">✅ Found '+S.found+"</span></div>"+
+ app.innerHTML='<div class="lbar"><span class="gpill">Patient '+(S.i+1)+" of "+P.length+'</span><span class="gpill">✅ Found '+S.found+"</span></div>"+
  '<div class="pt"><div class="pt-h">'+face(p,0)+'<div><div class="t">'+esc(p.n)+", "+p.a+'</div><div style="font-size:13px;color:var(--muted)">'+esc(p.job)+'</div></div></div><p class="say">'+esc(p.say)+"</p></div>"+
  '<div class="hand-h"><b>What do you say?</b></div><div class="opts">'+S.opts.map(function(c,ix){return '<button class="o" data-i="'+ix+'">'+esc(c.t)+"</button>"}).join("")+"</div>";
  app.querySelectorAll(".o").forEach(function(b){b.onclick=function(){pick(+b.getAttribute("data-i"))}});
