@@ -1361,8 +1361,19 @@
   "difficulty": "Genius",
   "groups": [
    {
-    "label": "Conjoined twin types",
+    "label": "Syndromes named after a pair of doctors",
     "level": 1,
+    "words": [
+     "LOEYS-DIETZ",
+     "ZOLLINGER-ELLISON",
+     "OSGOOD-SCHLATTER",
+     "BUDD-CHIARI"
+    ],
+    "info": "Two names each. Loeys–Dietz (2005): twisty arteries and aortic aneurysms. Zollinger–Ellison (1955): gastrin-making tumours and stubborn ulcers. Osgood–Schlatter (1903): a sore bump below the knee in active teens. Budd–Chiari: blocked hepatic veins."
+   },
+   {
+    "label": "Joined at the chest, belly, head or buttocks",
+    "level": 2,
     "words": [
      "THORACOPAGUS",
      "OMPHALOPAGUS",
@@ -1373,7 +1384,7 @@
    },
    {
     "label": "Kinds of twin pregnancy",
-    "level": 2,
+    "level": 3,
     "words": [
      "DIDI",
      "MODI",
@@ -1381,17 +1392,6 @@
      "DIZYGOTIC"
     ],
     "info": "Didi = two placentas, two sacs. Modi = one placenta, two sacs. Momo = one of each (cord entanglement risk). Dizygotic = non-identical, from two eggs."
-   },
-   {
-    "label": "Monochorionic twin complications",
-    "level": 3,
-    "words": [
-     "TTTS",
-     "TAPS",
-     "SIUGR",
-     "ACARDIAC"
-    ],
-    "info": "TTTS = twin-twin transfusion. TAPS = twin anaemia-polycythaemia. sIUGR = selective growth restriction. Acardiac twin = TRAP sequence. All need a shared placenta."
    },
    {
     "label": "Twins: whole words saying the same bit twice",
