@@ -42,14 +42,14 @@ window.MW_HOME = {
     { id: "spot", t: "Spot it", d: "Look closely. Then look again.", games: ["panelysis", "glimpsis", "opacitis", "labelosis"] },
     { id: "think", t: "Work it out", tn: "Think it through", d: "Reasoning, minus the paperwork.", dn: "Logic, trivia and lucky guesses.", games: ["dx", "sensitosis", "zebritis", "triviosis"] },
     { id: "weekly", t: "Weekly", d: "Bigger puzzles, fewer days.", games: ["grandrounds", "cryptogenic"] },
-    { id: "bonus", t: "Extra credit", d: "ECGs, sudoku and long words.", dn: "Sudoku, long words and charts.", games: ["arrhythmix", "morphemia", "sudokrine"] },
-    { id: "arcade", t: "Arcade", d: "Bonus games. Play all day.", games: [], arcade: true }
+    { id: "bonus", t: "Extra credit", d: "ECGs, sudoku and long words.", dn: "Sudoku, long words and charts.", games: ["arrhythmix", "morphemia", "sudokrine"] }
   ],
   sections: [
     { id: "labs", title: "🧪 Labs", note: "Beta games and ideas. <a href=\"#\" onclick=\"MW_report('idea');return false\">Tell us what you think</a>",
       items: [
         { href: "/lab/bunkemia/", tag: "Beta", title: "Bunkemia", ic: "/assets/mascots/bunkemia.svg?v=1", k: "Myth or medicine", ac: "#2F4E6B", text: "Myth or medicine? Clinical claims judged on the trial evidence." },
         { href: "/lab/gaslitis-r8q/", tag: "Beta", title: "Gaslitis", ic: "/assets/mascots/gaslitis.svg?v=1", k: "Spot the bias", ac: "#B7791F", text: "Every shortcut is a bias. Dismiss eight patients and see what you missed." },
+        { href: "/stackulus/", tag: "Beta", title: "Stackulus", ic: "/assets/mascots/stackulus.svg?v=1", k: "Block stacker", ac: "#7A4A92", text: "Falling organs. Clear the rows." },
         { href: "/nomulous/", tag: "Daily", title: "Nomulous", ic: "/assets/mascots/nomulous.svg?v=1", k: "Name the eponym", ac: "#4A3480", text: "Name the eponym. One medical namesake a day." }
       ] }
   ]

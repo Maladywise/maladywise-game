@@ -76,7 +76,7 @@
   }
   window.MW_setMode = function (m) { if (NORMIE_FROZEN && m === "normie") return; setMode(m); };
   // arcade games (no daily puzzles): [path, name, mascot, tag line, accent, dark accent]. Home cards + "More games" box.
-  var ARCADE = [["basil-clover", "Basil + Clover", "basil", "Basil kicks. Clover eats. Nothing is safe.", "#2B5E80", "#8EB8E8"], ["stackulus", "Stackulus", "stackulus", "Falling organs. Clear the rows.", "#7A4A92", "#C9A3DD"], ["mergeon", "Mergeon", "mergeon", "Merge microbes all the way up to a brain.", "#5E7A2E", "#A8C77A"]];
+  var ARCADE = [["basil-clover", "Basil + Clover", "basil", "Basil kicks. Clover eats. Nothing is safe.", "#2B5E80", "#8EB8E8"], ["mergeon", "Mergeon", "mergeon", "Merge microbes all the way up to a brain.", "#5E7A2E", "#A8C77A"]];
   // Mascot image: in Normie mode, games with normieMascot use the "day off" outfit (falls back to the normal one if missing).
   // Mascot emotions (assets/mascots/poses/<id>-<pose>.svg, made by _scripts/mascot_poses/poses.py) and signature moves (shell.css .mm-*).
   var POSED = ["allergy","arrhythmix","basil","comorbix","cryptogenic","dactylosis","deepdives","dental","dx","emergency","exercises","glimpsis","gphub","gpschool","grandrounds","gridectomy","immunisation","labelosis","layla","linkase","medicines","menshealth","mentalhealth","mergeon","morphemia","mythbusting","neurology","normie/comorbix","normie/cryptogenic","normie/dactylosis","normie/dx","normie/grandrounds","normie/gridectomy","normie/linkase","normie/morphemia","normie/norm","normie/suturix","normie/triviosis","normie/wordemic","normie/zebritis","nutrition","opacitis","ortho","panelysis","patients","pregnancy","research","satire","sensitosis","specialists","stackulus","stats","sudokrine","suturix","travel","triviosis","wordemic","zebritis"], MOVES = {"dx":"sleuth","wordemic":"multiply","comorbix":"sort","morphemia":"waggle","linkase":"slither","gridectomy":"slowmo","suturix":"abseil","triviosis":"headbang","zebritis":"prance","cryptogenic":"pounce","grandrounds":"flip","panelysis":"cape","arrhythmix":"drum","sudokrine":"owl","glimpsis":"camo","opacitis":"float","labelosis":"swim","sensitosis":"lookout","stackulus":"stomp","mergeon":"think","deepdives":"dive","dactylosis":"wiggle"}, PROPS = {"dx":"🔍","wordemic":"🔤","comorbix":"🗂️","morphemia":"🍯","linkase":"🔗","gridectomy":"☕","suturix":"🧵","triviosis":"💬","zebritis":"✨","cryptogenic":"🖊️","grandrounds":"🦇","panelysis":"🩸","arrhythmix":"🎵","sudokrine":"🌙","glimpsis":"👀","opacitis":"🫧","labelosis":"🏷️","sensitosis":"🔭","stackulus":"🧱","mergeon":"💡","deepdives":"🪨","dactylosis":"✋"}; // 26 Nov 2026: every mascot gets its own move and a little prop burst
@@ -1400,8 +1400,8 @@
     if (!BETA) return;
     var path = location.pathname;
     // new games still in testing; each drops its Beta tag on its launch day (local date)
-    var LAUNCH = { nomulous: "", toxiquest: "", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" };
-    var gm = path.match(/^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest)\//), dn = new Date();
+    var LAUNCH = { nomulous: "", toxiquest: "", stackulus: "", fridaemia: "2026-12-11", lunicorn: "2026-12-24", triagic: "2027-01-11" };
+    var gm = path.match(/^\/(nomulous|triagic|lunicorn|fridaemia|toxiquest|stackulus)\//), dn = new Date();
     var today = dn.getFullYear() + "-" + ("0" + (dn.getMonth() + 1)).slice(-2) + "-" + ("0" + dn.getDate()).slice(-2);
     var betaGame = !!gm && !(LAUNCH[gm[1]] && today >= LAUNCH[gm[1]]);
     if (gm && !betaGame) return; // launched: no Beta tag
@@ -1705,11 +1705,11 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         }).join("") + hiddenTiles(false) + "</div></section>"; // closed timed games sit at the end with their HIDDEN stamp (24 Nov 2026)
     }
     // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
-    var EXTRA = []; // Nomulous moved to Labs (26 Nov 2026)
-    function extraList(hid, hiddenOnes) { return NORMIE ? [] : EXTRA.filter(function (x) { return (hid.indexOf(x[0]) > -1) === hiddenOnes; }); }
+    var EXTRA = [["mergeon", "Mergeon", "mergeon", "Merge all day", "#5E7A2E", "#A8C77A", "all"], ["basil-clover", "Basil + Clover", "basil", "Cat chaos", "#2B5E80", "#8EB8E8", "all"]]; // 29 Nov 2026: arcade games are normal tiles now (Nomulous moved to Labs 26 Nov)
+    function extraList(hid, hiddenOnes) { return EXTRA.filter(function (x) { if (NORMIE && x[6] !== "all") return false; return (hid.indexOf(x[0]) > -1) === hiddenOnes; }); }
     function extraTile(x, hiddenOnes, done, chip) {
       var dk = root.getAttribute("data-theme") === "dark";
-      return '<a class="tl' + (done ? " done" : "") + '" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink>' + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + '</span><b>' + x[1] + ' <i class="mw-beta">Beta</i></b><small>' + x[3] + "</small>" + (chip || "") +
+      return '<a class="tl' + (done ? " done" : "") + '" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink>' + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + '</span><b>' + x[1] + (x[6] === "all" ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + x[3] + "</small>" + (chip || "") +
         (hiddenOnes ? '<span class="tl-unhide" role="button" data-tl="show" data-id="' + x[0] + '">Show</span>' : "") + "</a>";
     }
     function extraTiles(hid, hiddenOnes) {
@@ -1922,7 +1922,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + arcadeRow() + hiddenSec() + gpsBanner() + readsSlot() + house() + homeBottom() + modeCta() + nlSlim() +
+        tiles(t3.map(function (o) { return o.g.id; })) + hiddenSec() + gpsBanner() + readsSlot() + house() + homeBottom() + modeCta() + nlSlim() +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));
