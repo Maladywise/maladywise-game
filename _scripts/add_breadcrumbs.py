@@ -146,9 +146,7 @@ def trail(rel_dir):
         return None
     items = [HOME]
     top = parts[0]
-    if top in ARCADE:
-        items.append((SECTIONS["arcade"], "/arcade/"))
-    elif top in QUIZZES or (top not in SECTIONS and is_game(top)):
+    if top in ARCADE or top in QUIZZES or (top not in SECTIONS and is_game(top)):
         items.append((SECTIONS["medical-games"], "/medical-games/"))
     for i in range(len(parts)):
         d = "/".join(parts[: i + 1])

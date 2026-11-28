@@ -67,7 +67,7 @@ LABELS = {
 }
 # Pages for doctors, curious minds and practice quizzes (their section is "extra"; og_cards.py uses sections).
 EXTRA = ["/gp-school/", "/rare-conditions/", "/mbs-billing/", "/medical-specialty-quiz/", "/medical-terminology-quiz/",
-         "/anatomy-quiz/", "/ecg-quiz/", "/x-ray-quiz/", "/weird/", "/normie/", "/mental-health-check/", "/days/", "/arcade/"]
+         "/anatomy-quiz/", "/ecg-quiz/", "/x-ray-quiz/", "/weird/", "/normie/", "/mental-health-check/", "/days/"]
 HUBS = {"/patients/", "/algorithms/", "/doctors/", "/conditions/", "/medicines/", "/blood-tests/", "/glp-1/", "/exercises/", "/tools/", "/compare/", "/deep-dives/",
         "/specialists/", "/zebra-mail/", "/medical-games/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/sponsorship/",
         "/fact-sheets/", "/cases/", "/words/", "/reads/", "/news/", "/"}
