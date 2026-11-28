@@ -218,3 +218,6 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 #mrg-wards-ov .wst{color:#F5B83D;letter-spacing:1px;font-size:.92em;margin-left:4px}
 #mrg .note .lnk{background:none;border:0;padding:0;font:inherit;color:var(--accent,#7C5CC4);text-decoration:underline;cursor:pointer}
 #mrg .tbar .fact{font-size:11.5px;padding:4px 8px}#mrg .tbar .fact b{font-size:11.5px}
+/* 28 Nov 2026: drops/time left centred, and the red pulse grows from the centre */
+#mrg .mbar .dl,#mrg .mbar .dl-low{text-align:center}
+#mrg .mbar .dl b{display:block;text-align:center;transform-origin:50% 50%}

@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "36";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "38";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -478,7 +478,7 @@
     chain = 0; lastMT = -1e9; bestChain = 1; tgt = target(day); tgtHit = false; wildUsed = false;
     // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
     SP = special(day); MUT = mutation(day); SKIN = skinOf(day) || chosenSet(); GOALS = goalsFor(day); gDone = [false, false, false];
-    BOSS = null; DYING = []; wardWon = false; outOfDrops = false;
+    BOSS = null; DYING = []; curVax = nxtVax = false; vaxBest = 0; wardWon = false; outOfDrops = false;
     MUT2 = null; LINE = 96;
     if (WARD !== null) { var WW = WARDS[WARD], wm = [].concat(WW.mut || []); SP = WW.sp || ""; MUT = wm[0] ? mutById(wm[0]) : null; MUT2 = wm[1] ? mutById(wm[1]) : null; GOALS = null; OUT = false; RX = false; tgt = WW.lv || -1;
       if (WW.line) LINE = WW.line;
@@ -518,7 +518,8 @@
       var a = p.bodyA, b = p.bodyB;
       if (BOSS && !BOSS.dead && (a.label === "boss" || b.label === "boss")) { var q = a.label === "boss" ? b : a; if (q.lv === CURE && !q.gone) { q.gone = true; merges.push([q, q, "cure"]); } return; }
       if (a.lv === undefined || b.lv === undefined || a.gone || b.gone) return;
-      if ((a.lv === CURE && a.ab !== undefined) || (b.lv === CURE && b.ab !== undefined)) return; // 28 Nov 2026: sky antibiotics stay until they touch the bug or a merge bins them
+      if ((a.lv === CURE && a.ab !== undefined) || (b.lv === CURE && b.ab !== undefined)) return;
+      if ((a.lv === CURE && a.vax) || (b.lv === CURE && b.vax)) { var vv = a.vax ? a : b; if (!vv.gone) { vv.gone = true; merges.push([vv, vv, "cure"]); } return; } // 28 Nov 2026: sky antibiotics stay until they touch the bug or a merge bins them
       if (a.lv === CURE || b.lv === CURE) { var c = a.lv === CURE ? a : b; c.gone = true; merges.push([c, c, "cure"]); return; }
       if (a.inf || b.inf) return; // infected pieces can't merge
       if (a.lv === WILD || b.lv === WILD) { if (a.lv === b.lv) return; a.gone = b.gone = true; merges.push(a.lv === WILD ? [b, a, "wild"] : [a, b, "wild"]); return; }
@@ -563,7 +564,7 @@
       var L = Math.min(n, O.length - 1);
       madeN[n] = (madeN[n] || 0) + 1; nMerge++; if (!big) learnFact(n); if (mut("slowmo")) slowN = 24;
       hidMerge(x, y, n);
-      if (BOSS) { kidHit(x, y, n); abxHit(x, y, n); bossHit(x, y, n); }
+      if (BOSS) { kidHit(x, y, n); abxHit(x, y, n); bossHit(x, y, n); vaxEarn(n); }
       burst(x, y, L); floatTxt(x, y - 12, "+" + pts);
       if (!big) sfx("pop", L);
       if (L >= 7) { shakeBoard(L >= 9 ? 2 : 1); buzz(L >= 9 ? [30, 40, 30] : 25); }
@@ -587,11 +588,13 @@
   function add(lv, x, y) {
     var rs = 0.1, fr = 0.12, fa = 0.004, fs = 0.5;
     if (SP === "micro") { rs = 0.05; fa = 0.002; }
-    if (mut("bouncy")) rs = 0.8; // 28 Nov 2026: twice the bounce height (was 0.55) if (mut("slippery")) { fr = 0.004; fs = 0.05; } if (mut("heavy")) { rs = 0; fa = 0.002; }
+    if (mut("bouncy")) rs = 0.8; /* 28 Nov 2026: twice the bounce height (was 0.55) */ if (mut("slippery")) { fr = 0.004; fs = 0.05; } if (mut("heavy")) { rs = 0; fa = 0.002; }
     if (mut("water")) fa = 0.05; if (mut("jelly")) { rs = 0; fr = 1; fs = 2; fa = 0.03; }
     if (SP === "sick" && lv < O.length && QUIRK[lv] === "slip") fr = 0.03;
     var r = info(lv).r, opt = { restitution: rs, friction: fr, frictionStatic: fs, frictionAir: fa, density: 0.0012 + (lv < O.length ? lv : 0) * 0.0002, slop: 0.01 }, o = null, off = { x: 0, y: 0 };
-    if (HULL[lv]) try {
+    if (WARD !== null && WARDS[WARD].box && lv < O.length) { // 28 Nov 2026: pathology lab, organs in rectangular specimen jars
+      o = B.rectangle(x, y, r * 1.7, r * 2.1, Object.assign({ chamfer: { radius: r * 0.28 } }, opt)); o.box = 1;
+    } else if (HULL[lv]) try {
       var vs = HULL[lv].map(function (q) { return { x: (q[0] - 50) * r / 50, y: (q[1] - 50) * r / 50 }; });
       var c = M.Vertices.centre(vs); off = { x: -c.x, y: -c.y };
       o = B.fromVertices(x, y, [vs], opt);
@@ -602,11 +605,12 @@
   function drop() {
     if (!canDrop || over || arm || outOfDrops) return;
     var r = info(cur).r, x = aimClamp(r);
-    var o = add(cur, x, DROP_Y); o.fresh = performance.now();
+    var o = add(cur, x, DROP_Y); o.fresh = performance.now(); if (curVax) { o.vax = true; curVax = false; }
     if (SP === "blood") { o.bg = curG; curG = nxtG; nxtG = drawG(); }
     collect(cur);
     if (cur < O.length && cur > top) top = cur;
     if (PREV) { cur = nxt; nxt = nx2; nx2 = roll(nxt); } else { cur = nxt; nxt = roll(cur); }
+    curVax = nxtVax; nxtVax = false;
     canDrop = false; hud(); sfx("drop");
     setTimeout(function () { canDrop = true; }, 260);
     drops++; if (drops === 1) onFirstDrop(); hidTick(); if (DEBUG) dropLog.push(o.lv);
@@ -789,6 +793,14 @@
     ctx.strokeStyle = lv === WILD ? "hsl(" + (quiet() ? 280 : (now / 8) % 360) + ",80%,60%)" : (NORMIE ? "#E0B22E" : "#EF4B4B");
     ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
   }
+  function jarDraw(o, dark) { // glass jar with a lid, drawn behind the organ
+    var r = info(o.lv).r, w = r * 1.7, h = r * 2.1, c = r * 0.28;
+    ctx.save(); ctx.translate(o.position.x, o.position.y); ctx.rotate(o.angle);
+    ctx.fillStyle = dark ? "rgba(170,210,230,.16)" : "rgba(190,225,240,.55)"; ctx.strokeStyle = dark ? "rgba(200,230,245,.6)" : "rgba(90,140,170,.7)"; ctx.lineWidth = 2;
+    ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(-w / 2, -h / 2, w, h, c); else ctx.rect(-w / 2, -h / 2, w, h); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = dark ? "#8A7BB0" : "#6B5A93"; ctx.fillRect(-w * 0.42, -h / 2 - 1, w * 0.84, Math.max(4, h * 0.09));
+    ctx.restore();
+  }
   function germ(o) { // infected look: tint + a small badge (Medical: a spiky germ; Normie: an oil drop)
     var r = rad(o), x = o.position.x, y = o.position.y;
     if (RX) { // countdown arc to resistance; resistant = dark, thick ring and a shield ("R" in Medical)
@@ -829,8 +841,10 @@
     ctx.beginPath(); ctx.moveTo(0, LINE); ctx.lineTo(W, LINE); ctx.stroke(); ctx.restore();
     if (!over && engine) {
       var r = info(cur).r, x = aimClamp(r);
+      if (WARD !== null && WARDS[WARD].box && cur < O.length) jarDraw({ position: { x: x, y: DROP_Y }, angle: 0, lv: cur }, dark);
       if (canDrop && !arm) { ctx.save(); ctx.strokeStyle = dark ? "rgba(180,168,207,.35)" : "rgba(107,90,147,.25)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x, DROP_Y + r); ctx.lineTo(x, H); ctx.stroke(); ctx.restore(); }
       organ(cur, x, DROP_Y, 0, 1, null, 1, null); // always full opacity: no blink after a drop
+      if (curVax) vaxDraw(x, DROP_Y, r);
       if (cur >= O.length) aura(cur, x, DROP_Y, now);
       tags(cur, SP === "blood" ? curG : undefined, x, DROP_Y, r);
     }
@@ -851,10 +865,12 @@
       }
       var jx = 0, ja = 0, js = 1;
       if (SP === "sick" && o.lv < O.length && !quiet()) { if (QUIRK[o.lv] === "fib") { ja = 0.05 * Math.sin(now / 32); js = 1 + 0.03 * Math.sin(now / 21); } if (o.shiv > steps) jx = 1.6 * Math.sin(now / 16); if (o.rat > steps) jx = 1.2 * Math.sin(now / 12); if (QUIRK[o.lv] === "sway") ja = 0.06 * Math.sin(now / 400); }
+      if (o.box) jarDraw(o, dark);
       organ(o.lv, o.position.x + jx, o.position.y, o.angle + ja, 1, o.off, (o.sw || 1) * js, o);
       tags(o.lv, o.bg, o.position.x, o.position.y, rad(o));
       if (o.lv >= O.length) aura(o.lv, o.position.x, o.position.y, now);
       if (o.ab !== undefined) abxDraw(o, now);
+      if (o.vax) vaxDraw(o.position.x, o.position.y, rad(o));
       if (o.inf) germ(o);
       if (arm === "cut" || (arm === "rx" && o.inf)) { ctx.save(); ctx.strokeStyle = arm === "rx" ? "rgba(47,125,74,.8)" : "rgba(208,87,62,.55)"; ctx.lineWidth = arm === "rx" ? 2.5 : 2; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.arc(o.position.x, o.position.y, rad(o) * (arm === "rx" ? 1.12 : 0.95), 0, Math.PI * 2); ctx.stroke(); ctx.restore(); }
     });
@@ -910,7 +926,7 @@
     tb.querySelector(".lab").textContent = tl >= 0 ? "Time left" : dl >= 0 ? "Drops left" : K.top;
     $("top").innerHTML = tl >= 0 ? mmss(tl) : dl >= 0 ? String(dl) : top >= 0 ? pic(top, 22) + " " + O[top].n : "–";
     if (ZEN) $("score").textContent = "🧘";
-    $("next").innerHTML = pic(nxt, 26) + (PREV ? pic(nx2, 18) : "") + (SP === "blood" && nxt < O.length ? '<small class="bgt" style="background:' + BG.col[nxtG] + '">' + BG.names[nxtG] + "</small>" : "");
+    $("next").innerHTML = (nxtVax ? '<span style="font-size:24px;line-height:26px">' + VAX.e + "</span>" : pic(nxt, 26)) + (PREV ? pic(nx2, 18) : "") + (SP === "blood" && nxt < O.length ? '<small class="bgt" style="background:' + BG.col[nxtG] + '">' + BG.names[nxtG] + "</small>" : "");
   }
   function toast(m) {
     var t = $("toast"); t.textContent = m; t.hidden = false; t.classList.remove("on"); void t.offsetWidth; t.classList.add("on");
@@ -1003,6 +1019,7 @@
   // ---------- weekly features: runtime ----------
   var BG = K.BG, SPEC = K.SPEC, HID = K.HID, NARROW = 48; // 28 Nov 2026: twice as tight (was 24)
   var ernd = Math.random, TILT = 1, FLOW = 1, envFx = [], lights = [];
+  var VAX = { n: NORMIE ? "Calm potion" : "Vaccine", e: NORMIE ? "🫧" : "💉", c: "#3B82C4" }, curVax = false, nxtVax = false, vaxBest = 0;
   var ZEN = false, MUT2 = null, FLIPR = [60, 54, 48, 43, 38, 33, 29, 25, 22, 19, 16]; // 28 Nov 2026: zen mode, a second ward twist, flipped sizes
   var SP = "", MUT = null, SKIN = "", GOALS = null, gDone = [], madeN = [], nMerge = 0, mixN = 0, tootN = 0, slowN = 0, PREV = false, nx2 = -1;
   // ---------- Ward rounds: a 10-ward campaign (Nov 2026). Each ward has a target piece and a twist; wards 5 and 10 have a boss. ----------
@@ -1028,7 +1045,7 @@
     { n: ["Outbreak ward", "Kraken’s nest"], boss: 24, st: 0, dl: 70, abx: 7, kids: 4, eat: 2, mut: "slippery", d: ["The superbug is breeding. Baby bugs pop out, infect organs smaller than them and grow. Merge next to them to pop them.", "The kraken is breeding. Baby krakens pop out and gobble small creatures. Merge next to them to pop them."] },
     { n: ["Day surgery", "Shallow reef"], lv: 7, dl: 50, line: 170 },
     { n: ["Triage", "Rescue race"], lv: 7, time: 120, d: ["Patients are piling up. Make a Heart before the clock runs out.", "The tide is turning. Make a turtle before the clock runs out."] },
-    { n: ["Rehab", "Sticky shallows"], lv: 8, dl: 65, mut: ["jelly", "tilt"], set: "easter" },
+    { n: ["Pathology lab", "Shipping yard"], lv: 8, dl: 65, box: true, set: "easter", d: ["Every organ comes in a rectangular specimen jar. Jars stack like bricks and don’t roll into gaps.", "Every creature comes in a rectangular crate. Crates stack like bricks and don’t roll into gaps."] },
     { n: ["Space station", "Upside-down moon"], lv: 8, dl: 60, flip: true, sp: "micro" },
     { n: ["Superbug HQ", "Kraken’s lair"], boss: 34, st: 2, dl: 90, abx: 5, kids: 6, eat: 3, mut: "quake", set: "xmas", d: ["The final boss starts as VRE, on a shaky ward. Six baby bugs, and last-line antibiotics keep falling.", "The kraken king starts crosser than ever. Six baby krakens, and mega sponges keep falling."] }
   ];
@@ -1043,8 +1060,10 @@
     if (w.sp && SPEC[w.sp]) t.push(SPEC[w.sp].e + " " + SPEC[w.sp].short + ": " + SPEC[w.sp].line);
     if (w.flip) t.push(NORMIE ? "🙃 Topsy-turvy: plankton are huge and whales are tiny." : "🙃 Upside down: microbes are huge and the brain is tiny.");
     if (w.mini) t.push(NORMIE ? "🔬 Tiny: everything is smaller." : "🔬 Tiny patients: every piece is smaller.");
+    if (w.box) t.push(NORMIE ? "📦 Crates: everything is a rectangle." : "🧪 Specimen jars: every organ is a rectangle.");
     if (w.line) t.push("📉 Low ceiling: the danger line is much lower.");
     if (w.time) t.push("⏱️ Against the clock: no drop limit, just " + (w.time / 60) + " minutes.");
+    if (w.boss) t.push(NORMIE ? "🫧 Make a turtle or bigger to earn a calm potion, then land it on the kraken." : "💉 Make a Bladder or bigger to earn a vaccine, then land it on the superbug to knock it back a stage.");
     if (w.kids) t.push(NORMIE ? "🐙 The kraken grabs touching creatures, and baby krakens grab smaller ones. Merge next to a grabbed creature to save it, or next to a baby to pop it." : "🦠 The superbug infects touching organs, and baby bugs infect organs smaller than them. Merge next to an infected organ to save it, or next to a baby to pop it.");
     return t.join(" ");
   }
@@ -1486,9 +1505,29 @@
     var b = BOSS, x = c.position.x, y = c.position.y;
     C.remove(engine.world, c); poof(x, y, PO.r);
     var d = Math.hypot(x - b.body.position.x, y - b.body.position.y);
+    if (c.vax) { if (d <= b.r + PO.r + 40) bossDevolve(); else { floatTxt(x, y - 10, NORMIE ? "Missed!" : "Missed!"); toast(NORMIE ? "Calm potion missed. Aim it right on the kraken." : "Vaccine missed. Aim it right on the superbug."); } return; }
     var k = ABX[c.ab === undefined ? 1 : c.ab];
     if (d <= b.r + PO.r + k.reach) { for (var i = 0; i < k.evo; i++) bossEvolve(); }
     else { score += k.pts; TL.cure += k.pts; floatTxt(x, y - 10, "+" + k.pts); toast(NORMIE ? "Sponge kept clear. Nice." : "Good stewardship: no antibiotic near the bug. +" + k.pts); sfx("chime"); hud(); }
+  }
+  function bossDevolve() { // 28 Nov 2026: a vaccine knocks the bug back a stage (or hurts it at MSSA)
+    var b = BOSS; if (!b || b.dead) return;
+    if (b.st > 0) {
+      var nr = b.r - 10; Bd.scale(b.body, nr / b.r, nr / b.r); b.r = nr; b.st--; b.max = Math.max(4, b.max - 4); b.hp = Math.min(b.max, Math.max(1, b.hp - 4));
+      Bd.setPosition(b.body, { x: b.body.position.x, y: H - b.r - 2 });
+      toast(NORMIE ? "Calm potion! The kraken shrinks." : "Vaccinated! Back to " + BSTAGE[b.st].n + ". Vaccines prevent infections, so fewer antibiotics are needed.");
+    } else { b.hp = Math.max(1, b.hp - 4); toast(NORMIE ? "Calm potion! −4 health." : "Vaccinated! −4 health. Prevention beats cure."); }
+    floatTxt(b.body.position.x, b.body.position.y - b.r - 14, "💉 −4"); score += 40; TL.cure += 40; burst(b.body.position.x, b.body.position.y, 5); sfx("chime"); hud();
+  }
+  function vaxEarn(n) { // making a Bladder or bigger in a boss ward earns a vaccine as your next drop (one at a time)
+    if (!BOSS || BOSS.dead || curVax || nxtVax || n < 5 || n >= O.length || (vaxBest && drops - vaxBest < 8)) return; // at most one per 8 drops
+    vaxBest = drops; nxtVax = true; nxt = CURE; hud();
+    toast(NORMIE ? "🫧 Calm potion earned! It’s your next drop. Land it on the kraken." : "💉 Vaccine earned! It’s your next drop. Land it right on the superbug to knock it back a stage.");
+  }
+  function vaxDraw(x, y, r) {
+    ctx.save(); ctx.lineWidth = 4; ctx.strokeStyle = VAX.c; ctx.beginPath(); ctx.arc(x, y, r + 3, 0, Math.PI * 2); ctx.stroke();
+    ctx.font = Math.round(r * 1.3) + "px system-ui,sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillStyle = "#FFFFFF"; ctx.beginPath(); ctx.arc(x, y, r * 0.95, 0, Math.PI * 2); ctx.fill();
+    ctx.fillText(VAX.e, x, y + 1); ctx.restore();
   }
   function bossHit(x, y, n) {
     var b = BOSS; if (!b || b.dead) return;
