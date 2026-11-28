@@ -1504,7 +1504,7 @@
     var ARC = !g && /^\/(stackulus|mergeon|basil-clover)\//.test(location.pathname); // arcade games get the same back-arrow bar as the daily games
     var sub = window.MW_HOME ? "" : "<span>" + MW_SITE.sub + "</span>";
     var bar = el('<header class="bar"><div class="bar-in">' +
-      (g || ARC ? '<a class="back" href="' + (g ? "../" : "/") + '" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + "</span>" + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
+      (g || ARC ? '<a class="back" href="' + (g ? "../" : "/") + '" aria-label="Back to ' + MW_SITE.name + '">' + I.back + '<span class="back-t">' + MW_SITE.name + '</span><span class="back-mw" aria-hidden="true">MW</span>' + season() + "</a>" : '<a class="logo" href="' + (home || "./") + '">' + MW_SITE.name + season() + sub + "</a>") +
       '<nav class="tools" aria-label="Tools">' + modeSwitch() +
       (!g && window.MW_HOME ? '<div class="navwrap" id="mw-nav"><button type="button" class="nav-search" data-a="search">' + I.search + '<span>Search the site</span></button>' + navHTML() +
         '<a class="subpill" href="#newsletter" data-a="sub">Subscribe</a></div><button class="icon-btn burger" data-a="menu" aria-label="Menu" aria-expanded="false" aria-controls="mw-nav">' + I.menu + "</button>" : "") +

@@ -1801,3 +1801,6 @@ footer.site.mwf .ft-ack{margin:12px 0 0;max-width:none;font-size:11.5px;text-ali
   footer.site.mwf .ft-links{justify-content:flex-start}
 }
 footer.site.mwf .ft-links>*+*::before{content:none!important}footer.site.mwf .mwf-top,footer.site.mwf .mwf-cols,footer.site.mwf .ft-base,footer.site.mwf .ft-ack{padding-left:4px;padding-right:4px}
+/* 29 Nov 2026: phones show "MW" next to the back arrow on game pages (the full name is hidden there) */
+.bar .back .back-mw{display:none}
+@media (max-width:520px){ .bar .back .back-mw{display:inline;font-family:var(--title);font-weight:700;font-size:20px;letter-spacing:.01em;color:var(--brand);margin-right:2px} }
