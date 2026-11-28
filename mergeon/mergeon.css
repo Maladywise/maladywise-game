@@ -239,3 +239,21 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 @keyframes mrgdance{0%,100%{transform:rotate(-10deg) translateY(0)}25%{transform:rotate(0) translateY(-10px) scale(1.06)}50%{transform:rotate(10deg) translateY(0)}75%{transform:rotate(0) translateY(-6px)}}
 @media (prefers-reduced-motion:reduce){#mrg .mir .mir-m{animation:none}}
 #mrg .ovcard .mir-wait{font-style:italic}
+/* 28 Nov 2026: high scores overlay (lives outside #mrg) and today's top 3 under the board */
+#mrg-lb-ov .lb{display:grid;gap:8px;text-align:left;margin:4px 0 12px}
+#mrg-lb-ov .lbtabs{display:flex;gap:6px;justify-content:center}
+#mrg-lb-ov .lbtabs button{font:600 13px var(--body,Poppins,sans-serif);padding:6px 12px;border-radius:999px;border:1px solid var(--line,#ddd);background:transparent;color:var(--muted,#6b5a93);cursor:pointer}
+#mrg-lb-ov .lbtabs button.on{background:var(--ink,#2B2340);color:#fff;border-color:var(--ink,#2B2340)}
+#mrg-lb-ov ol,#mrg .top3 ol{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+#mrg-lb-ov li,#mrg .top3 li{display:flex;align-items:center;gap:8px;font-size:14px;padding:4px 8px;border-radius:8px;background:var(--soft,#F3EFF9)}
+#mrg-lb-ov li.me,#mrg .top3 li.me{outline:2px solid var(--accent,#7C5CC4)}
+#mrg-lb-ov li.none,#mrg .top3 li.none{background:none;justify-content:center;color:var(--muted,#6b5a93)}
+#mrg-lb-ov .rk,#mrg .top3 .rk{width:20px;font-weight:700;color:var(--muted,#6b5a93)}
+#mrg-lb-ov .nm,#mrg .top3 .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#mrg-lb-ov .sc,#mrg .top3 .sc{font-weight:700;font-variant-numeric:tabular-nums}
+#mrg-lb-ov .note{font-size:12px;color:var(--muted,#6b5a93);text-align:center;margin:2px 0 0}
+#mrg .top3{max-width:360px;margin:8px auto 0;display:grid;gap:6px}
+#mrg .top3 .t3h{display:flex;justify-content:space-between;align-items:center;background:none;border:0;padding:0 2px;font:700 13px var(--body);color:inherit;cursor:pointer}
+#mrg .top3 .t3h small{font-weight:600;color:var(--accent,#7C5CC4);text-decoration:underline}
+#mrg.desk .top3{grid-column:2;grid-row:6;align-self:start;margin:10px 0 0}
+#mrg.desk .skins{grid-row:7}

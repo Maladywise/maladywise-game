@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "48";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "49";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -299,8 +299,9 @@
     ' <div class="bgkey" id="mrg-bgkey" hidden></div>' +
     ' <div class="mbar"><div><span class="lab">Score</span><b id="mrg-score">0</b></div><div><span class="lab">' + K.top + '</span><b id="mrg-top">–</b></div><div class="nx"><span class="lab">Next</span><b id="mrg-next">–</b></div></div>' +
     ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="learn" id="mrg-learn" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
-    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button><button type="button" class="tool" id="mrg-wards" hidden>🏥 Wards</button></span><div class="fact" id="mrg-fact" role="status" hidden></div></div>' +
+    ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button><button type="button" class="tool" id="mrg-wards" hidden>🏥 Wards</button><button type="button" class="tool" id="mrg-scores">🏆 Scores</button></span><div class="fact" id="mrg-fact" role="status" hidden></div></div>' +
     ' <div class="chain" id="mrg-chain"></div>' +
+    ' <div class="top3" id="mrg-top3" hidden></div>' +
     ' <div class="skins" id="mrg-skins" role="group" aria-label="Skins"></div>' +
     ' <p class="note" id="mrg-mode"></p>' +
     ' <div class="result" id="mrg-result" hidden></div>' +
@@ -1158,7 +1159,7 @@
     if (SP === "mut" && MUT) h = MUT.e + " " + (isLive() ? "Today’s mutation" : "Mutation") + ": <b>" + esc(MUT.n[L]) + "</b>. " + esc(MUT.d[L]);
     else if (SPEC[SP]) h = SPEC[SP].e + " <b>" + esc(SPEC[SP].n) + "</b>: " + esc(SPEC[SP].line);
     t.innerHTML = h; t.hidden = !h;
-    $("more").hidden = !featUI(); bgKeyUI(); skinsUI();
+    $("more").hidden = !featUI(); bgKeyUI(); skinsUI(); top3UI();
   }
   // Sick Day Friday (Normie: Grumpy Friday): gentle, seeded quirks (qrnd only)
   function sickTick() {
@@ -1341,7 +1342,7 @@
       if (Math.abs(mb.top - hh - 6) > 8) window.scrollTo({ top: (window.pageYOffset || 0) + mb.top - hh - 6, behavior: quiet() ? "auto" : "smooth" }); } catch (e) {}
   }
   function onFirstDrop() {
-    focusBoard();
+    focusBoard(); if ($("top3")) $("top3").hidden = true;
     if (SPEC[SP]) { specFact("f-" + SP, SPEC[SP].fact, SP === "blood" ? 1 : SP === "micro" ? O.length - 1 : 8); if (SP !== "blood") unlockCard(SP, SPEC[SP].n); }
     if (SKIN && K.SKIN[SKIN]) unlockCard("s-" + SKIN, K.SKIN[SKIN].n);
   }
@@ -1969,10 +1970,38 @@
     lbs[k] = ok ? j.rows : "err"; lbRender();
   }
   function lbFetch(k) { if (!window.fetch) return; lbs[k] = "wait"; fetch(LB + "/top?b=" + k + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbGot(k, j); }).catch(function () { lbGot(k, null); }); }
+  // 28 Nov 2026: scores one tap away (any time), and today's top 3 under the board before the first drop
+  function lbRows(rows) {
+    if (rows == null || rows === "wait") return '<li class="none">Loading…</li>';
+    if (rows === "err" || !Array.isArray(rows)) return '<li class="none">The leaderboard is on a break. Try again later.</li>';
+    if (!rows.length) return '<li class="none">No scores yet today. Be the first.</li>';
+    return rows.map(function (r, i) { var lv = Math.max(0, Math.min(10, r.r | 0)); return "<li" + (r.me ? ' class="me"' : "") + '><span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.n) + "</span>" + pic(lv, 20) + '<span class="sc">' + fmt(r.s) + "</span></li>"; }).join("");
+  }
+  function top3UI() {
+    var el = $("top3"); if (!el) return;
+    var rows = lbs[BD], show0 = MLB && WARD === null && !ZEN && !drops && !over && Array.isArray(rows) && rows.length;
+    el.hidden = !show0; if (!show0) return;
+    el.innerHTML = '<button type="button" class="t3h">🏆 Today’s top 3 <small>See all</small></button><ol>' + lbRows(rows.slice(0, 3)) + "</ol>";
+    el.querySelector(".t3h").onclick = openScores;
+  }
+  function openScores() {
+    var tab = BD;
+    var o = overlay("mrg-lb-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-lb-h"><h2 id="mrg-lb-h">🏆 ' + (NORMIE ? "Top divers" : "High scores") + '</h2>' +
+      '<div class="lb"><div class="lbtabs" role="tablist"><button type="button" data-b="' + BD + '">Today’s top 10</button><button type="button" data-b="' + BA + '">All-time</button></div><ol></ol>' +
+      '<p class="note">Daily runs only, Sydney time. Finish today’s daily to get on the board.</p></div><button type="button" class="mrg-help-go" data-close>Close</button></div>');
+    function draw() {
+      Array.prototype.forEach.call(o.querySelectorAll(".lbtabs button"), function (b) { b.classList.toggle("on", b.getAttribute("data-b") === tab); });
+      o.querySelector("ol").innerHTML = lbRows(lbs[tab]);
+    }
+    function get(k) { if (!window.fetch) { lbs[k] = "err"; draw(); return; } fetch(LB + "/top?b=" + k + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) { lbs[k] = j && j.board === k && Array.isArray(j.rows) ? j.rows : "err"; if (lbs[k] !== "err") MLB = true; draw(); top3UI(); }).catch(function () { lbs[k] = "err"; draw(); }); }
+    o.querySelector(".lbtabs").addEventListener("click", function (e) { var b = e.target.closest("button"); if (!b) return; tab = b.getAttribute("data-b"); draw(); if (lbs[tab] == null || lbs[tab] === "err") { lbs[tab] = "wait"; draw(); get(tab); } });
+    lbs[BD] = lbs[BD] || "wait"; draw(); get(BD); get(BA);
+  }
+  $("scores").onclick = function () { openScores(); this.blur(); };
   function lbProbe() {
     if (!window.fetch || PREVIEW) return;
     fetch(LB + "/top?b=" + BD + "&id=" + pid(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
-      if (j && j.board === BD && Array.isArray(j.rows)) { MLB = true; lbs[BD] = j.rows; lbFetch(BA); lbRender(); }
+      if (j && j.board === BD && Array.isArray(j.rows)) { MLB = true; lbs[BD] = j.rows; lbFetch(BA); lbRender(); top3UI(); }
     }).catch(function () {});
   }
   function lbPost(n, auto) {
