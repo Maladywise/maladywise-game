@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "43";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "44";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -525,7 +525,8 @@
       if ((a.lv === CURE && a.ab !== undefined) || (b.lv === CURE && b.ab !== undefined)) return;
       if ((a.lv === CURE && a.vax) || (b.lv === CURE && b.vax)) { var vv = a.vax ? a : b; if (!vv.gone) { vv.gone = true; merges.push([vv, vv, "cure"]); } return; } // 28 Nov 2026: sky antibiotics stay until they touch the bug or a merge bins them
       if (a.lv === CURE || b.lv === CURE) { var c = a.lv === CURE ? a : b; c.gone = true; merges.push([c, c, "cure"]); return; }
-      if (a.inf || b.inf) return; // infected pieces can't merge
+      if ((a.inf && !a.byBug) || (b.inf && !b.byBug)) return; // infected pieces can't merge (outbreak); organs the superbug infected still can, 28 Nov 2026
+      if (a.inf) setInf(a, false); if (b.inf) setInf(b, false);
       if (a.lv === WILD || b.lv === WILD) { if (a.lv === b.lv) return; a.gone = b.gone = true; merges.push(a.lv === WILD ? [b, a, "wild"] : [a, b, "wild"]); return; }
       if (a.lv !== b.lv) return;
       var g;
@@ -1510,7 +1511,11 @@
     var b = BOSS, x = c.position.x, y = c.position.y;
     C.remove(engine.world, c); poof(x, y, PO.r);
     var d = Math.hypot(x - b.body.position.x, y - b.body.position.y);
-    if (c.vax) { if (d <= b.r + PO.r + 40) bossDevolve(); else { floatTxt(x, y - 10, NORMIE ? "Missed!" : "Missed!"); toast(NORMIE ? "Calm potion missed. Aim it right on the kraken." : "Vaccine missed. Aim it right on the superbug."); } return; }
+    if (c.vax) {
+      if (d <= b.r + PO.r + 40) { bossDevolve(); return; }
+      var healed = 0; pieces().forEach(function (q) { if (q.inf && q.byBug && Math.hypot(q.position.x - x, q.position.y - y) <= rad(q) + PO.r + 14) { setInf(q, false); healed++; burst(q.position.x, q.position.y, 3); } });
+      if (healed) { score += 30 * healed; TL.cure += 30 * healed; floatTxt(x, y - 10, (NORMIE ? "Saved" : "Healed") + " +" + 30 * healed); toast(NORMIE ? "Calm potion saved it!" : "The vaccine helped this organ fight it off."); sfx("chime"); hud(); return; }
+      { floatTxt(x, y - 10, NORMIE ? "Missed!" : "Missed!"); toast(NORMIE ? "Calm potion missed. Aim it right on the kraken." : "Vaccine missed. Aim it right on the superbug."); } return; }
     var k = ABX[c.ab === undefined ? 1 : c.ab];
     if (d <= b.r + PO.r + k.reach) { for (var i = 0; i < k.evo; i++) bossEvolve(); }
     else { score += k.pts; TL.cure += k.pts; floatTxt(x, y - 10, "+" + k.pts); toast(NORMIE ? "Sponge kept clear. Nice." : "Good stewardship: no antibiotic near the bug. +" + k.pts); sfx("chime"); hud(); }
@@ -1559,7 +1564,7 @@
       if (wk.kids) kidSpawn(b, nx, wk.kids); // 28 Nov 2026: baby bugs instead of coughed-up organs
       else { var o = add(Math.min(b.st, 2), nx + (Math.random() < 0.5 ? -1 : 1) * 20, b.body.position.y - b.r - 20); Bd.setVelocity(o, { x: (Math.random() - 0.5) * 3, y: -6 }); o.fresh = performance.now(); floatTxt(nx, b.body.position.y - b.r - 30, NORMIE ? "blub!" : "cough!"); }
     }
-    if (b.ph % 20 === 0) { bossInfect(b); if (b.kids && b.kids.length) kidInfect(b); }
+    if (b.ph % 20 === 0) { abxHeal(); bossInfect(b); if (b.kids && b.kids.length) kidInfect(b); }
     if (b.ph % 20 === 0) { var now = performance.now(); pieces().forEach(function (q) { if (q.lv === CURE && q.ab === undefined && !q.gone && q.fresh && now - q.fresh > 2200 && Math.abs(q.velocity.y) < 0.6) { q.gone = true; merges.push([q, q, "cure"]); } }); }
   }
   // ---------- baby bugs (28 Nov 2026): block the pile, eat small pieces, popped by merges next to them ----------
@@ -1576,6 +1581,18 @@
     });
   }
   function near(q, body, r, pad) { var dx = q.position.x - body.position.x, dy = q.position.y - body.position.y, d = rad(q) + r + pad; return dx * dx + dy * dy <= d * d; }
+  function abxHeal() { // a sky antibiotic touching an infected organ cures it and is used up
+    var all = pieces(), ab = all.filter(function (q) { return q.lv === CURE && q.ab !== undefined && !q.gone; });
+    if (!ab.length) return;
+    all.forEach(function (q) {
+      if (!q.inf || !q.byBug || q.gone) return;
+      for (var i = 0; i < ab.length; i++) { var c = ab[i]; if (c.gone || Math.hypot(q.position.x - c.position.x, q.position.y - c.position.y) > rad(q) + rad(c) + 6) continue;
+        setInf(q, false); c.gone = true; C.remove(engine.world, c); poof(c.position.x, c.position.y, rad(c)); burst(q.position.x, q.position.y, 3);
+        floatTxt(q.position.x, q.position.y - rad(q) - 8, NORMIE ? "Saved!" : "Treated!"); score += 20; TL.cure += 20; sfx("chime");
+        if (!abxHeal.t) { abxHeal.t = 1; toast(NORMIE ? "The sponge saved it! Sponges rescue grabbed creatures." : "Treated! An antibiotic touching an infected organ cures it. That’s what they’re for."); }
+        break; }
+    });
+  }
   function bossInfect(b) { // the superbug infects one touching organ at a time; if it isn't saved in time it dies and the bug heals
     var v = b.vic;
     if (v && (v.gone || !v.inf)) { b.vic = v = null; }
@@ -1583,7 +1600,7 @@
     var c = pieces().filter(function (q) { return !q.gone && !q.inf && q.lv < O.length && near(q, b.body, b.r, 8); });
     if (!c.length) return;
     v = c[Math.floor(Math.random() * c.length)]; setInf(v, true); v.byBug = 1; b.vic = v;
-    if (!b.infT) { b.infT = 1; toast(NORMIE ? "The kraken grabbed a creature! Merge next to it in time to save it." : "The superbug infected an organ! Merge next to it within 6 seconds to save it."); }
+    if (!b.infT) { b.infT = 1; toast(NORMIE ? "The kraken grabbed a creature! Merge next to it in time to save it." : "The superbug infected an organ! Save it within 6 seconds: merge it with its twin, merge next to it, or let an antibiotic or vaccine touch it."); }
   }
   function kidInfect(b) { // baby bugs do the same, but only to organs smaller than themselves, and grow when one dies
     b.kids.forEach(function (k) {
