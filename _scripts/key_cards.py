@@ -310,6 +310,56 @@ def g_toxiquest():
     return svg("".join(b))
 
 
+def g_nomulous():
+    b = ['<rect x="60" y="50" width="220" height="150" rx="14" fill="#FFFFFF" stroke="%s" stroke-width="4"/>' % INK,
+         '<text x="170" y="112" text-anchor="middle" font-family="Lora" font-weight="700" font-size="30" fill="%s">___\u2019s sign</text>' % PUR,
+         '<rect x="95" y="140" width="150" height="14" rx="7" fill="%s"/><rect x="115" y="164" width="110" height="12" rx="6" fill="%s"/>' % (LIL, LIL)]
+    return svg("".join(b))
+
+
+def g_bunkemia():
+    b = ['<rect x="40" y="70" width="120" height="110" rx="16" fill="#FDE2E4" stroke="%s" stroke-width="4"/>' % INK,
+         '<text x="100" y="138" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="28" fill="#C0392B">MYTH</text>',
+         '<rect x="180" y="70" width="120" height="110" rx="16" fill="#DDF3E6" stroke="%s" stroke-width="4"/>' % INK,
+         '<text x="240" y="132" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="22" fill="#1E7B4F">MEDICINE</text>',
+         '<circle cx="170" cy="210" r="18" fill="%s"/><text x="170" y="217" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="18" fill="#FFFFFF">?</text>' % PUR]
+    return svg("".join(b))
+
+
+def g_gaslitis():
+    b = ['<path d="M60 60h170a20 20 0 0 1 20 20v60a20 20 0 0 1-20 20h-110l-30 26v-26h-30a20 20 0 0 1-20-20v-60a20 20 0 0 1 20-20z" fill="#FFFFFF" stroke="%s" stroke-width="4"/>' % INK,
+         '<text x="145" y="105" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="20" fill="%s">It\u2019s probably</text>' % INK,
+         '<text x="145" y="135" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="20" fill="%s">just stress.</text>' % INK,
+         '<path d="M70 70L240 150" stroke="#C0392B" stroke-width="6" stroke-linecap="round"/>',
+         '<circle cx="270" cy="200" r="24" fill="#FFFFFF" stroke="%s" stroke-width="5"/><path d="M287 217l20 20" stroke="%s" stroke-width="7" stroke-linecap="round"/>' % (PUR, PUR)]
+    return svg("".join(b))
+
+
+def g_fridaemia():
+    b = ['<circle cx="100" cy="125" r="62" fill="#FFFFFF" stroke="%s" stroke-width="5"/><path d="M100 125V82M100 125l-26 22" stroke="%s" stroke-width="6" stroke-linecap="round"/>' % (INK, INK),
+         '<text x="100" y="215" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="20" fill="%s">FRI 5:00</text>' % PUR]
+    for i, c in enumerate(("#E0566B", YEL, GRN)):
+        y = 60 + i * 52
+        b.append('<rect x="188" y="%d" width="120" height="40" rx="8" fill="#FFFFFF" stroke="%s" stroke-width="3"/><circle cx="208" cy="%d" r="8" fill="%s"/><rect x="224" y="%d" width="70" height="10" rx="5" fill="%s"/>' % (y, INK, y + 20, c, y + 15, LIL))
+    return svg("".join(b))
+
+
+def g_lunicorn():
+    b = ['<circle cx="170" cy="120" r="80" fill="#FFF6D6" stroke="%s" stroke-width="4"/>' % INK,
+         '<circle cx="140" cy="100" r="12" fill="#F1E3A8"/><circle cx="196" cy="140" r="16" fill="#F1E3A8"/><circle cx="160" cy="160" r="8" fill="#F1E3A8"/>']
+    for i, c in enumerate(("#E0566B", "#F2994A", YEL, GRN, "#5EC8F2", "#9B7BE0")):
+        b.append('<path d="M%d 236q60-56 120 0" fill="none" stroke="%s" stroke-width="6"/>' % (110 - i * 7 + 0, c) if False else '<path d="M%d 240a%d %d 0 0 1 %d 0" fill="none" stroke="%s" stroke-width="6"/>' % (60 + i * 8, 110 - i * 8, 70 - i * 6, 2 * (110 - i * 8), c))
+    return svg("".join(b))
+
+
+def g_triagic():
+    b = []
+    for i, (lab, c) in enumerate((("1", "#C0392B"), ("2", "#F2994A"), ("3", YEL), ("4", GRN), ("5", "#5EC8F2"))):
+        b.append('<rect x="%d" y="80" width="50" height="90" rx="10" fill="%s" stroke="%s" stroke-width="3"/><text x="%d" y="138" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="30" fill="%s">%s</text>' % (35 + i * 56, c, INK, 60 + i * 56, INK, lab))
+    b.append('<text x="170" y="210" text-anchor="middle" font-family="Poppins" font-weight="700" font-size="20" fill="%s">ATS 1\u20135 \u00b7 beat the clock</text>' % PUR)
+    return svg("".join(b))
+
+
 def g_basil():
     return svg('<rect x="20" y="150" width="300" height="20" rx="6" fill="#C9B8EA" stroke="%s" stroke-width="3"/>'
                '<rect x="34" y="170" width="272" height="64" fill="#E8E2F0" stroke="%s" stroke-width="3"/>'
@@ -482,6 +532,12 @@ CARDS = [
          foot="Free · daily challenge and world board"),
     game("mergeon", "Mergeon", "Organ merge game", "Drop, match and merge from microbe to brain.", ["mascots/mergeon.svg"], g_mergeon(), "mergeon",
          foot="Free · same drops for everyone, every day"),
+    game("nomulous", "Nomulous", "Labs · Beta", "Name the medical eponym. Five a day, with the history.", ["mascots/nomulous.svg"], g_nomulous(), "nomulous"),
+    game("bunkemia", "Bunkemia", "Labs · Beta", "Myth or medicine? Clinical claims judged on the evidence.", ["mascots/bunkemia.svg"], g_bunkemia(), "lab/bunkemia", foot="Free · five claims a game"),
+    game("gaslitis", "Gaslitis", "Labs · Beta", "Dismiss eight patients. See what you missed.", ["mascots/gaslitis.svg"], g_gaslitis(), "lab/gaslitis-r8q", foot="Free · a teaching game on bias"),
+    game("fridaemia", "Fridaemia", "Fridays only", "Eight results land at 5pm Friday. ED now, call today, or Monday?", ["mascots/layla.svg"], g_fridaemia(), "fridaemia", foot="Free · open every Friday"),
+    game("lunicorn", "Lunicorn", "Full moon only", "Ziggy only comes out under a full moon.", ["mascots/zebritis.svg"], g_lunicorn(), "lunicorn", foot="Free · a secret game"),
+    game("triagic", "Triagic", "Fast triage", "The waiting room is filling. Triage fast, catch the sneaky ones.", ["mascots/triagic.svg"], g_triagic(), "triagic", foot="Free · open 4pm to midnight"),
     game("toxiquest", "Toxiquest", "Toxicology December", "One poisoning mystery a day. Name the culprit, learn the antidote.", ["mascots/allergy.svg"], g_toxiquest(), "toxiquest", foot="Free · a new case every day in December"),
     game("basil", "Basil + Clover", "Cat chaos game", "Kick it off the bench. Survive the vet.", ["mascots/basil.svg", "mascots/clover.svg"], g_basil(), "basil-clover",
          foot="Free · play any time"),

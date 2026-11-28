@@ -63,6 +63,12 @@ for G in GAMES:
     h = re.sub(r"<style>:root\{--mg-a.*?</style>", "<style>:root{--mg-a:%s;--mg-b:%s;--mg-hi:#FFE08A}\n%s\n%s</style>" % (G["a"], G["b"], css, VOTE_CSS), h, count=1, flags=re.S)
     h = re.sub(r'<style>\.nm-rv.*?</style>\n?', "", h, flags=re.S)
     h = re.sub(r'<meta property="og:[^>]*>\n?|<meta name="twitter:[^>]*>\n?', "", h)
+    # share card from key_cards.py (29 Nov 2026), so links show a picture even though the page is noindex
+    og = ('<meta property="og:type" content="website"><meta property="og:site_name" content="Malady Wise"><meta property="og:url" content="https://maladywise.com/%s">\n'
+          '<meta property="og:title" content="%s | Malady Wise"><meta property="og:description" content="%s">\n'
+          '<meta property="og:image" content="https://maladywise.com/assets/og/%s.png?v=1"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">\n'
+          '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://maladywise.com/assets/og/%s.png?v=1">\n') % (G["path"], G["title"], G["desc"], G["slug"], G["slug"])
+    h = h.replace("</title>\n", "</title>\n" + og, 1)
     main = ('<main class="wrap mg-page">\n  <section class="mg-intro" id="lb-intro">\n'
             '    <img class="mg-masc" src="/assets/mascots/%s.svg" alt="%s" width="104" height="104">\n'
             '    <p class="mg-kick">%s</p>\n    <h1>%s</h1>\n    <p class="mg-lede">%s</p>\n'
