@@ -1922,7 +1922,7 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
     function draw() {
       var t3 = startList();
       main.innerHTML = homeTop() + '<div id="mw-hday" class="hday-slot"></div>' + healthLinks() + todays3(t3) + progress() +
-        tiles(t3.map(function (o) { return o.g.id; })) + hiddenSec() + gpsBanner() + readsSlot() + house() + homeBottom() + modeCta() + nlSlim() +
+        tiles(t3.map(function (o) { return o.g.id; })) + hiddenSec() + gpsBanner() + homeBottom() + modeCta() + nlSlim() +
         '<footer class="site"><p class="ft-base"><span class="ft-note">' + MW_SITE.footer + '</span> <span class="ft-links"><a href="/about/">About</a> <a href="/disclaimer/">Disclaimer</a> <a href="/privacy/">Privacy</a> <a href="/contact/">Contact</a></span></p></footer>';
       if (allg && !NORMIE) {
         main.insertBefore(allg, main.querySelector("footer.site"));
