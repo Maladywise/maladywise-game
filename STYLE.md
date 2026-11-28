@@ -163,6 +163,8 @@ Every scheduled task and puzzle writer must read and follow this file. It overri
 - When a human character's gender is a free choice (vets, doctors, nurses, bosses, staff, narrators, example clinicians), default to female. E.g. Dr Pokesworth, the Basil + Clover vet, is drawn as a woman, but the wording stays gender-neutral ("the vet", no he/she). Keep a natural mix in fictional patient cases.
 
 ## X posts: USEFUL TEACHING, SELF-CONTAINED (27 Nov 2026, owner's decision; overrides EVERY older X section below and every task prompt where they conflict)
+
+**Daily 9am MCQ (29 Nov 2026, after a 72K-view example):** one clinical question with four options A to D, no hints in the wording, plausible distractors. Second post in the thread: "Answer: X) …", then 2-3 lines on why, the trap, and the practical next step. No link, no image. Topics: high-yield GP pearls (bloods, drug interactions, red flags, ECG, vaccines).
 - Purpose: X is for genuinely useful puzzles, information and teaching, NOT for driving site traffic. Every post must be complete on X: the answer, the teaching point and a one-line source live in the post or its first reply. A site link is optional, only ever in the LAST post of a thread, and never in post 1 or 2.
 - Volume: 1–2 posts a day, no filler. At most 2 teaching threads a week.
 - Daily rhythm:
