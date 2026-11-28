@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "35";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "36";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -478,7 +478,7 @@
     chain = 0; lastMT = -1e9; bestChain = 1; tgt = target(day); tgtHit = false; wildUsed = false;
     // weekly features (from 16 Nov 2026): each random feature has its own PRNG from seed2; none touch rnd
     SP = special(day); MUT = mutation(day); SKIN = skinOf(day) || chosenSet(); GOALS = goalsFor(day); gDone = [false, false, false];
-    BOSS = null; wardWon = false; outOfDrops = false;
+    BOSS = null; DYING = []; wardWon = false; outOfDrops = false;
     MUT2 = null; LINE = 96;
     if (WARD !== null) { var WW = WARDS[WARD], wm = [].concat(WW.mut || []); SP = WW.sp || ""; MUT = wm[0] ? mutById(wm[0]) : null; MUT2 = wm[1] ? mutById(wm[1]) : null; GOALS = null; OUT = false; RX = false; tgt = WW.lv || -1;
       if (WW.line) LINE = WW.line;
@@ -796,6 +796,12 @@
       if (o.res) { ctx.lineWidth = 5; ctx.strokeStyle = NORMIE ? "#120E1C" : "#4A1030"; ctx.beginPath(); ctx.arc(x, y, r + 3, 0, Math.PI * 2); ctx.stroke(); }
       else { var k = Math.min(1, (steps - (o.infS || 0)) / RX_RES); ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.strokeStyle = k > 0.7 ? "#D0573E" : "#E0A030"; ctx.beginPath(); ctx.arc(x, y, r + 2.5, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - k)); ctx.stroke(); }
       ctx.restore();
+    }
+    if (o.byBug && BOSS) { // 28 Nov 2026: slowly turns the bug's colour as the infection takes hold, with a countdown ring
+      var kk = Math.min(1, (steps - (o.infS || 0)) / (o.byBug === 2 ? K_INF : B_INF)), bc = BSTAGE[BOSS.st].c;
+      ctx.save(); ctx.globalAlpha = 0.15 + 0.7 * kk; ctx.fillStyle = bc; ctx.beginPath(); ctx.arc(x, y, r * 0.95, 0, Math.PI * 2); ctx.fill();
+      ctx.globalAlpha = 1; ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.strokeStyle = bc; ctx.beginPath(); ctx.arc(x, y, r + 3, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (1 - kk)); ctx.stroke(); ctx.restore();
+      return;
     }
     ctx.save(); ctx.fillStyle = OUTK.tint; ctx.beginPath(); ctx.arc(x, y, r * 0.92, 0, Math.PI * 2); ctx.fill();
     var bx = x + r * 0.55, by = y - r * 0.55, s = Math.max(8, Math.min(14, r * 0.3));
@@ -1411,7 +1417,7 @@
   function band(tp) { return tp >= 10 ? 0 : tp >= 9 ? 1 : tp >= 8 ? 2 : tp >= 7 ? 3 : 4; }
   function gridOf(tp) { return O.map(function (o, i) { return i <= tp ? o.e : "⬜"; }).join(""); }
   // ---------- the boss (wards 5 and 10): sits on the floor, can't be merged, worn down by merges right next to it ----------
-  var BOSS_R = 58;
+  var BOSS_R = 29; // 28 Nov 2026: starts half the size (was 58); still grows 10 per stage
   // 27 Nov 2026: the superbug evolves. Every antibiotic that lands near it (or on it) makes it a scarier bug: bigger, tougher, angrier.
   // Merges next to it hurt it and shove it away; pinned against a wall it takes double damage.
   var BSTAGE = NORMIE ? [
@@ -1514,7 +1520,17 @@
   }
   // ---------- baby bugs (28 Nov 2026): block the pile, eat small pieces, popped by merges next to them ----------
   var KID_R = 18, KID_MAX = 30, B_INF = 360, K_INF = 300; // 28 Nov 2026: infections take 6 s (boss) or 5 s (baby) to kill an organ
-  function killVic(q) { setInf(q, false); q.gone = true; C.remove(engine.world, q); poof(q.position.x, q.position.y, rad(q)); sfx("pop", 1); }
+  var DYING = [];
+  function killVic(q) { setInf(q, false); q.gone = true; C.remove(engine.world, q); DYING.push({ q: q, x: q.position.x, y: q.position.y, a: q.angle, r: rad(q), t0: performance.now(), c: BOSS ? BSTAGE[BOSS.st].c : "#7A2E4A" }); sfx("pop", 1); }
+  function dyingDraw(now) { // the dead organ, fully bug-coloured, shrinks to nothing over half a second
+    DYING = DYING.filter(function (d) {
+      var k = (now - d.t0) / 550; if (k >= 1) { poof(d.x, d.y, d.r * 0.4); return false; }
+      var s = 1 - k * k;
+      ctx.save(); ctx.translate(d.x, d.y); ctx.scale(s, s); organ(d.q.lv, 0, 0, d.a, 1, d.q.off, d.q.sw, d.q);
+      ctx.globalAlpha = 0.85; ctx.fillStyle = d.c; ctx.beginPath(); ctx.arc(0, 0, d.r * 0.95, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+      return true;
+    });
+  }
   function near(q, body, r, pad) { var dx = q.position.x - body.position.x, dy = q.position.y - body.position.y, d = rad(q) + r + pad; return dx * dx + dy * dy <= d * d; }
   function bossInfect(b) { // the superbug infects one touching organ at a time; if it isn't saved in time it dies and the bug heals
     var v = b.vic;
@@ -1534,7 +1550,7 @@
         return;
       }
       var all = pieces();
-      for (var i = 0; i < all.length; i++) { var q = all[i]; if (q.gone || q.inf || q.lv >= O.length || rad(q) >= k.kr || !near(q, k, k.kr, 5)) continue; setInf(q, true); q.byBug = 1; k.vic = q; break; }
+      for (var i = 0; i < all.length; i++) { var q = all[i]; if (q.gone || q.inf || q.lv >= O.length || rad(q) >= k.kr || !near(q, k, k.kr, 5)) continue; setInf(q, true); q.byBug = 2; k.vic = q; break; }
     });
   }
   function kidSpawn(b, nx, cap) {
@@ -1585,7 +1601,7 @@
       ctx.fillStyle = wc; ctx.beginPath(); ctx.arc(b.wx, 16, 12, 0, Math.PI * 2); ctx.fill();
       ctx.fillStyle = "#FFFFFF"; ctx.font = "700 14px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(ABX[b.wk].s, b.wx, 17); ctx.restore();
     }
-    kidsDraw(b, now);
+    kidsDraw(b, now); dyingDraw(now);
     var R0 = b.r, x = b.body.position.x, y = b.body.position.y, hurt = now - b.hitT < 250, evo = now - b.evoT < 600, k = 1 + (0.03 + b.st * 0.012) * Math.sin(now / Math.max(120, 260 - b.st * 35));
     ctx.save(); ctx.translate(x + (hurt || evo ? Math.sin(now / 15) * (evo ? 6 : 3) : 0), y); ctx.scale(k, 1 / k);
     var sc = R0 / BOSS_R; ctx.scale(sc, sc);
