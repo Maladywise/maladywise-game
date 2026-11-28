@@ -1705,11 +1705,11 @@ function arcadeCards() { // the three arcade games, one card each (own "Arcade" 
         }).join("") + hiddenTiles(false) + "</div></section>"; // closed timed games sit at the end with their HIDDEN stamp (24 Nov 2026)
     }
     // Daily games that aren't in MW_GAMES yet (Medical only). Shown at the end of the grid; can be hidden like the rest.
-    var EXTRA = [["mergeon", "Mergeon", "mergeon", "Merge all day", "#5E7A2E", "#A8C77A", "all"], ["basil-clover", "Basil + Clover", "basil", "Cat chaos", "#2B5E80", "#8EB8E8", "all"]]; // 29 Nov 2026: arcade games are normal tiles now (Nomulous moved to Labs 26 Nov)
+    var EXTRA = [["mergeon", "Mergeon", "mergeon", "Organ merge game", "#5E7A2E", "#A8C77A", "all", "Sea creature merge game"], ["basil-clover", "Basil + Clover", "basil", "Cat chaos", "#2B5E80", "#8EB8E8", "all"]]; // 29 Nov 2026: arcade games are normal tiles now (Nomulous moved to Labs 26 Nov)
     function extraList(hid, hiddenOnes) { return EXTRA.filter(function (x) { if (NORMIE && x[6] !== "all") return false; return (hid.indexOf(x[0]) > -1) === hiddenOnes; }); }
     function extraTile(x, hiddenOnes, done, chip) {
       var dk = root.getAttribute("data-theme") === "dark";
-      return '<a class="tl' + (done ? " done" : "") + '" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink>' + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + '</span><b>' + x[1] + (x[6] === "all" ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + x[3] + "</small>" + (chip || "") +
+      return '<a class="tl' + (done ? " done" : "") + '" ' + (hiddenOnes ? "" : 'data-h="1" ') + 'data-g="' + x[0] + '" href="/' + x[0] + '/" style="--accent:' + (dk ? x[5] : x[4]) + '"><span class="tl-ic"><img src="/assets/mascots/' + x[2] + '.svg" alt="" width="46" height="46" data-nolink>' + (done ? '<span class="tick" aria-label="Done today">\u2713</span>' : "") + '</span><b>' + x[1] + (x[6] === "all" ? "" : ' <i class="mw-beta">Beta</i>') + "</b><small>" + ((NORMIE && x[7]) || x[3]) + "</small>" + (chip || "") +
         (hiddenOnes ? '<span class="tl-unhide" role="button" data-tl="show" data-id="' + x[0] + '">Show</span>' : "") + "</a>";
     }
     function extraTiles(hid, hiddenOnes) {
