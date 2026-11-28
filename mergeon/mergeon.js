@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "41";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "42";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -301,6 +301,7 @@
     ' <div class="board" id="mrg-board"><canvas id="mrg-cv" aria-label="Mergeon board. Move to aim, tap or press space to drop."></canvas><div class="toast" id="mrg-toast" hidden></div><div class="combo" id="mrg-combo" hidden></div><div class="learn" id="mrg-learn" role="status" hidden></div><div class="over" id="mrg-over" hidden></div></div>' +
     ' <div class="tbar" id="mrg-tbar"><span class="tgt" id="mrg-tgt"></span><span class="tools" id="mrg-tools"><button type="button" class="tool" id="mrg-cut"></button><button type="button" class="tool rx" id="mrg-rx" hidden></button><button type="button" class="tool" id="mrg-shake">Shake</button><button type="button" class="tool" id="mrg-wards" hidden>🏥 Wards</button></span><div class="fact" id="mrg-fact" role="status" hidden></div></div>' +
     ' <div class="chain" id="mrg-chain"></div>' +
+    ' <div class="skins" id="mrg-skins" role="group" aria-label="Skins"></div>' +
     ' <p class="note" id="mrg-mode"></p>' +
     ' <div class="result" id="mrg-result" hidden></div>' +
     ' <p class="note" id="mrg-nextday" hidden></p>' + // hidden 28 Nov 2026
@@ -1137,7 +1138,7 @@
     if (SP === "mut" && MUT) h = MUT.e + " " + (isLive() ? "Today’s mutation" : "Mutation") + ": <b>" + esc(MUT.n[L]) + "</b>. " + esc(MUT.d[L]);
     else if (SPEC[SP]) h = SPEC[SP].e + " <b>" + esc(SPEC[SP].n) + "</b>: " + esc(SPEC[SP].line);
     t.innerHTML = h; t.hidden = !h;
-    $("more").hidden = !featUI(); bgKeyUI();
+    $("more").hidden = !featUI(); bgKeyUI(); skinsUI();
   }
   // Sick Day Friday (Normie: Grumpy Friday): gentle, seeded quirks (qrnd only)
   function sickTick() {
@@ -1736,6 +1737,32 @@
       (WARD !== null ? '<button type="button" class="mrg-mm-btn" id="mrg-wdaily">↩ Back to today’s run</button>' : "") + '<button type="button" class="mrg-help-go" data-close>Close</button></div>');
     Array.prototype.forEach.call(o.querySelectorAll("[data-w]"), function (b) { b.onclick = function () { o.remove(); startWard(+b.getAttribute("data-w")); }; });
     if (o.querySelector("#mrg-wdaily")) o.querySelector("#mrg-wdaily").onclick = function () { o.remove(); show(day); };
+  }
+  // 28 Nov 2026: skin picker under the chain (side column on desktop). Costume sets unlock from wards 3, 6 and 9; ocean is free (Medical only, reloads).
+  var SKIN_UNL = { hall: 3, easter: 6, xmas: 9 };
+  function skinsUI() {
+    var el = $("skins"); if (!el) return;
+    var own = setsOwned(), cur0 = load(SETKEY, ""), L = NORMIE ? { hall: "Zombie", easter: "Easter", xmas: "Christmas" } : { hall: "Zombie", easter: "Easter", xmas: "Christmas" };
+    var h = '<span class="sk-lab">Skins</span><button type="button" class="sk' + (!cur0 && !OCEAN ? " on" : "") + '" data-sk="">' + (NORMIE ? "🐠 Plain" : "🫀 Organs") + "</button>";
+    ["xmas", "easter", "hall"].forEach(function (k) {
+      var lock = !own[k];
+      h += '<button type="button" class="sk' + (cur0 === k ? " on" : "") + (lock ? " lk" : "") + '" data-sk="' + k + '"' + (lock ? ' title="Clear ward ' + SKIN_UNL[k] + ' to unlock"' : "") + ">" + (lock ? "🔒" : K.SKIN[k].e) + " " + L[k] + "</button>";
+    });
+    if (!NORMIE) h += '<button type="button" class="sk' + (OCEAN ? " on" : "") + '" data-sk="ocean">🌊 Ocean</button>';
+    el.innerHTML = h;
+    Array.prototype.forEach.call(el.querySelectorAll("[data-sk]"), function (b) {
+      b.onclick = function () {
+        var k = b.getAttribute("data-sk");
+        if (b.classList.contains("lk")) { toast("Clear ward " + SKIN_UNL[k] + " to unlock the " + L[k] + " skin."); return; }
+        if (k === "ocean" || (k === "" && OCEAN)) { // ocean swaps the whole art set, so it needs a reload
+          try { localStorage.setItem("mrg-ocean", k === "ocean" ? "1" : "0"); } catch (e) {}
+          if (k === "ocean") put(SETKEY, "");
+          if (drops && !over) { toast(k === "ocean" ? "Ocean skin starts next time you open Mergeon." : "Organs come back next time you open Mergeon."); skinsUI(); return; }
+          location.reload(); return;
+        }
+        put(SETKEY, k); SKIN = k || (WARD === null && !ZEN ? skinOf(day) || "" : ""); skinsUI();
+      };
+    });
   }
   function oceanBtn() { return NORMIE ? "" : '<button type="button" class="mrg-mm-btn' + (OCEAN ? " on" : "") + '" id="mrg-mm-ocean">🌊 Ocean skin: ' + (OCEAN ? "on (tap for organs)" : "off (tap for sea creatures)") + "</button>"; }
   function setsHTML() {
