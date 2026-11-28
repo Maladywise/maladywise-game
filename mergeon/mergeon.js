@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "38";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "39";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -269,6 +269,9 @@
   MED.FULL = { n: "Full Anatomy", d: "You found every hidden organ." }; SEA.FULL = { n: "Full Treasure Hunt", d: "You found every hidden treasure." };
   MED.HIDW = "Hidden organ"; SEA.HIDW = "Hidden treasure";
 
+  // 28 Nov 2026: optional ocean skin in Medical mode: sea creatures' art, names and facts; Medical rules (wards, superbug) stay. Normie itself is unchanged.
+  var OCEAN = !NORMIE && (function () { try { return localStorage.getItem("mrg-ocean") === "1"; } catch (e) { return false; } })();
+  if (OCEAN) ["O", "ART", "HULL", "FACTS", "W", "WART", "WFACT", "top"].forEach(function (k) { if (SEA[k]) MED[k] = SEA[k]; });
   var K = NORMIE ? SEA : MED, O = K.O, ART = K.ART, HULL = K.HULL, SASS = K.SASS, POPS = K.POPS, DIST = K.DIST, OUTK = K.OUT;
   var WILD = O.length, CURE = O.length + 1, WO = K.W, PO = OUTK.P; // special pieces live after the chain: wild (stem cell / pearl) and cure (antibiotic / sponge)
   function info(lv) { return lv === WILD ? WO : lv === CURE ? PO : O[lv]; }
@@ -1396,6 +1399,7 @@
     o.querySelector("#mrg-mm-book").onclick = function () { o.remove(); openBook(); };
     o.querySelector("#mrg-mm-wards").onclick = function () { o.remove(); openWards(); };
     o.querySelector("#mrg-mm-zen").onclick = function () { o.remove(); startZen(); };
+    var ob = o.querySelector("#mrg-mm-ocean"); if (ob) ob.onclick = function () { try { localStorage.setItem("mrg-ocean", OCEAN ? "0" : "1"); } catch (e) {} location.reload(); };
     Array.prototype.forEach.call(o.querySelectorAll("[data-set]"), function (b) { b.onclick = function () { put(SETKEY, b.getAttribute("data-set")); o.remove(); toast(b.getAttribute("data-set") ? "Set on. It shows from your next game." : "Sets off."); }; });
     o.querySelector("#mrg-mm-learn").onchange = function () { setLearn(this.checked); };
   }
@@ -1733,10 +1737,11 @@
     Array.prototype.forEach.call(o.querySelectorAll("[data-w]"), function (b) { b.onclick = function () { o.remove(); startWard(+b.getAttribute("data-w")); }; });
     if (o.querySelector("#mrg-wdaily")) o.querySelector("#mrg-wdaily").onclick = function () { o.remove(); show(day); };
   }
+  function oceanBtn() { return NORMIE ? "" : '<button type="button" class="mrg-mm-btn' + (OCEAN ? " on" : "") + '" id="mrg-mm-ocean">🌊 Ocean skin: ' + (OCEAN ? "on (tap for organs)" : "off (tap for sea creatures)") + "</button>"; }
   function setsHTML() {
     var own = setsOwned(), cur0 = load(SETKEY, ""), keys = ["hall", "easter", "xmas"].filter(function (k) { return own[k]; });
-    if (!keys.length) return '<p class="mrg-mm-note">🎁 Organ sets: clear wards 3, 6 and 9 to unlock costume sets for your pieces.</p>';
-    return '<p class="mrg-mm-note"><b>🎁 Your sets</b> (looks only, any day without a seasonal costume)</p><div class="mrg-sets">' +
+    if (!keys.length) return oceanBtn() + '<p class="mrg-mm-note">🎁 Organ sets: clear wards 3, 6 and 9 to unlock costume sets for your pieces.</p>';
+    return oceanBtn() + '<p class="mrg-mm-note"><b>🎁 Your sets</b> (looks only, any day without a seasonal costume)</p><div class="mrg-sets">' +
       '<button type="button" class="mrg-mm-btn' + (!cur0 ? " on" : "") + '" data-set="">None</button>' +
       keys.map(function (k) { return '<button type="button" class="mrg-mm-btn' + (cur0 === k ? " on" : "") + '" data-set="' + k + '">' + K.SKIN[k].e + " " + esc(K.SKIN[k].n) + "</button>"; }).join("") + "</div>";
   }
