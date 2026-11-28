@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "44";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "45";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1570,7 +1570,16 @@
   // ---------- baby bugs (28 Nov 2026): block the pile, eat small pieces, popped by merges next to them ----------
   var KID_R = 18, KID_MAX = 30, B_INF = 360, K_INF = 300; // 28 Nov 2026: infections take 6 s (boss) or 5 s (baby) to kill an organ
   var DYING = [];
-  function killVic(q) { setInf(q, false); q.gone = true; C.remove(engine.world, q); DYING.push({ q: q, x: q.position.x, y: q.position.y, a: q.angle, r: rad(q), t0: performance.now(), c: BOSS ? BSTAGE[BOSS.st].c : "#7A2E4A" }); sfx("pop", 1); }
+  function burstKids(q) { // 28 Nov 2026: a dead infected organ bursts into baby bugs, more for bigger organs (1, 2 or 3)
+    var b = BOSS; if (!b || b.dead) return;
+    var n = q.lv <= 2 ? 1 : q.lv <= 5 ? 2 : 3, cap = ((WARDS[WARD] || {}).kids || 3) + 2; b.kids = b.kids || [];
+    for (var i = 0; i < n && b.kids.length < cap; i++) {
+      var k = B.circle(q.position.x + (i - (n - 1) / 2) * 16, q.position.y - 4, KID_R, { restitution: 0.2, friction: 0.3, density: 0.0016, label: "kid" });
+      k.kr = KID_R; Bd.setVelocity(k, { x: (i - (n - 1) / 2) * 2.5, y: -4 }); C.add(engine.world, k); b.kids.push(k);
+    }
+    if (!b.burstT) { b.burstT = 1; toast(NORMIE ? "It burst into baby krakens! Bigger creatures make more." : "It burst into baby bugs! Bigger organs release more. Save infected organs in time."); }
+  }
+  function killVic(q) { burstKids(q); setInf(q, false); q.gone = true; C.remove(engine.world, q); DYING.push({ q: q, x: q.position.x, y: q.position.y, a: q.angle, r: rad(q), t0: performance.now(), c: BOSS ? BSTAGE[BOSS.st].c : "#7A2E4A" }); sfx("pop", 1); }
   function dyingDraw(now) { // the dead organ, fully bug-coloured, shrinks to nothing over half a second
     DYING = DYING.filter(function (d) {
       var k = (now - d.t0) / 550; if (k >= 1) { poof(d.x, d.y, d.r * 0.4); return false; }
