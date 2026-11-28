@@ -1307,7 +1307,7 @@
   // flags: "soft" = sky events (moons, solstices) may replace it; "au" = Australian visitors only.
   var SEASONS = [
     ["10-24", "10-31", "halloween", "Happy Halloween"],
-    ["11-13", "11-19", "movember", "Movember: grow a mo for men\u2019s health", "soft"], // 29 Nov 2026: one week, ending on International Men's Day (was all November)
+    ["11-01", "11-30", "movember", "Movember: grow a mo for men\u2019s health", "soft"],
     ["11-01", "11-02", "muertos", "D\u00eda de Muertos (Mexico)"],
     ["2026-11-03", "", "melbcup", "Melbourne Cup. Think horses."], ["2027-11-02", "", "melbcup", "Melbourne Cup. Think horses."], ["2028-11-07", "", "melbcup", "Melbourne Cup. Think horses."],
     ["12-01", "12-20", "christmas", "Merry Christmas", "soft"], ["12-21", "12-26", "christmas", "Merry Christmas"],
