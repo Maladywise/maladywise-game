@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "42";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "43";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -1046,7 +1046,7 @@
     { n: ["Emergency", "Shipwreck cove"], lv: 7, dl: 50, mut: ["bouncy", "narrow"] },
     { n: ["Neonatal ICU", "Tiny tide pools"], lv: 8, dl: 60, mini: true, mut: "slippery", set: "hall" },
     { n: ["Gastroenterology", "Murky lagoon"], lv: 7, dl: 50, mut: ["acid", "water"] },
-    { n: ["Outbreak ward", "Kraken’s nest"], boss: 24, st: 0, dl: 70, abx: 7, kids: 4, eat: 2, mut: "slippery", d: ["The superbug is breeding. Baby bugs pop out, infect organs smaller than them and grow. Merge next to them to pop them.", "The kraken is breeding. Baby krakens pop out and gobble small creatures. Merge next to them to pop them."] },
+    { n: ["Outbreak ward", "Kraken’s nest"], boss: 24, st: 0, dl: 80, abx: 7, kids: 4, eat: 2, mut: "slippery", d: ["The superbug is breeding. Baby bugs pop out, infect organs smaller than them and grow. Merge next to them to pop them.", "The kraken is breeding. Baby krakens pop out and gobble small creatures. Merge next to them to pop them."] },
     { n: ["Day surgery", "Shallow reef"], lv: 7, dl: 50, line: 170 },
     { n: ["Triage", "Rescue race"], lv: 7, time: 120, d: ["Patients are piling up. Make a Heart before the clock runs out.", "The tide is turning. Make a turtle before the clock runs out."] },
     { n: ["Pathology lab", "Shipping yard"], lv: 8, dl: 65, box: true, set: "easter", d: ["Every organ comes in a rectangular specimen jar. Jars stack like bricks and don’t roll into gaps.", "Every creature comes in a rectangular crate. Crates stack like bricks and don’t roll into gaps."] },
@@ -1525,7 +1525,7 @@
     floatTxt(b.body.position.x, b.body.position.y - b.r - 14, "💉 −4"); score += 40; TL.cure += 40; burst(b.body.position.x, b.body.position.y, 5); sfx("chime"); hud();
   }
   function vaxEarn(n) { // making a Bladder or bigger in a boss ward earns a vaccine as your next drop (one at a time)
-    if (!BOSS || BOSS.dead || curVax || nxtVax || n < 5 || n >= O.length || (vaxBest && drops - vaxBest < 8)) return; // at most one per 8 drops
+    if (!BOSS || BOSS.dead || curVax || nxtVax || n < 5 || n >= O.length || (vaxBest && drops - vaxBest < 6)) return; // at most one per 6 drops
     vaxBest = drops; nxtVax = true; nxt = CURE; hud();
     toast(NORMIE ? "🫧 Calm potion earned! It’s your next drop. Land it on the kraken." : "💉 Vaccine earned! It’s your next drop. Land it right on the superbug to knock it back a stage.");
   }
@@ -1579,7 +1579,7 @@
   function bossInfect(b) { // the superbug infects one touching organ at a time; if it isn't saved in time it dies and the bug heals
     var v = b.vic;
     if (v && (v.gone || !v.inf)) { b.vic = v = null; }
-    if (v) { if (steps - v.infS >= B_INF) { killVic(v); b.vic = null; var g = 2; b.hp = Math.min(b.max, b.hp + g); floatTxt(b.body.position.x, b.body.position.y - b.r - 18, "+" + g + " ❤"); toast(NORMIE ? "The kraken ate it and healed." : "The organ died. The superbug healed."); hud(); } return; }
+    if (v) { if (steps - v.infS >= B_INF) { killVic(v); b.vic = null; var g = 1; b.hp = Math.min(b.max, b.hp + g); floatTxt(b.body.position.x, b.body.position.y - b.r - 18, "+" + g + " ❤"); toast(NORMIE ? "The kraken ate it and healed." : "The organ died. The superbug healed."); hud(); } return; }
     var c = pieces().filter(function (q) { return !q.gone && !q.inf && q.lv < O.length && near(q, b.body, b.r, 8); });
     if (!c.length) return;
     v = c[Math.floor(Math.random() * c.length)]; setInf(v, true); v.byBug = 1; b.vic = v;
