@@ -257,3 +257,11 @@ html[data-theme="dark"] .mrg-book,html[data-theme="dark"] .mrg-mm{--muted:#B4A8C
 #mrg .top3 .t3h small{font-weight:600;color:var(--accent,#7C5CC4);text-decoration:underline}
 #mrg.desk .top3{grid-column:2;grid-row:6;align-self:start;margin:10px 0 0}
 #mrg.desk .skins{grid-row:7}
+/* 28 Nov 2026 play test: phones put the goals/target on their own centred line above the tools; desktop keeps top 3 at the top of the side gap and skins at its foot */
+@media (max-width:699px){
+  #mrg:not(.desk) .tbar{flex-wrap:wrap;justify-content:center;row-gap:6px}
+  #mrg:not(.desk) .tbar .tgt{flex-basis:100%;display:flex;justify-content:center;align-items:center;gap:8px;-webkit-line-clamp:unset;text-align:center}
+  #mrg:not(.desk) .tbar .tgt br{display:none}
+}
+#mrg.desk .top3{grid-row:6;align-self:start}
+#mrg.desk .skins{grid-row:6;align-self:end;margin:0}

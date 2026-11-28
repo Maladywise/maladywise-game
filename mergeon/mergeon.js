@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "50";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "51";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -784,7 +784,8 @@
     var w = b.clientWidth || 360;
     // fit the whole game on screen: board height limited by the viewport (leave room for the rows under the board)
     // 28 Nov 2026: size for the view once the page scrolls the score bar up under the sticky site bar (focusBoard), not from the top of the page
-    var vh = window.innerHeight || 700, below = 96, top0 = b.getBoundingClientRect().top + (window.pageYOffset || 0);
+    var tbH = $("tbar") ? $("tbar").offsetHeight : 40, chH = $("chain") ? $("chain").offsetHeight : 40;
+    var vh = window.innerHeight || 700, below = desk() ? 96 : Math.max(96, tbH + chH + 24), top0 = b.getBoundingClientRect().top + (window.pageYOffset || 0);
     try { var mb = root.querySelector(".mbar").getBoundingClientRect(), hb = document.querySelector("header.bar, .bar"), hh = hb ? hb.getBoundingClientRect().height : 0; top0 = hh + 6 + (b.getBoundingClientRect().top - mb.top); } catch (e) {}
     try { var cb = $("chain").getBoundingClientRect(), bb = b.getBoundingClientRect(); if (cb.height) below = cb.bottom - bb.bottom + 12; } catch (e) {}
     var room = vh - top0 - below;
@@ -1045,12 +1046,12 @@
     { n: ["Paediatrics", "Splash park"], lv: 5, dl: 28, mut: "bouncy" },
     { n: ["Night shift", "Midnight reef"], lv: 6, dl: 40, mut: "lights", set: "hall" },
     { n: ["Respiratory", "Windy bay"], lv: 6, dl: 38, mut: "gust" },
-    { n: ["Isolation ward", "The wreck"], boss: 10, st: 0, dl: 60, abx: 8, kids: 3, eat: 1, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics fall from the sky and stay put. If one touches the bug, it evolves (red last-line: twice). Merge next to them to bin them.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges fall from the sky and stay put. If one touches the kraken, it grows (red mega sponges: twice). Merge next to them to bin them."] },
+    { n: ["Isolation ward", "The wreck"], boss: 14, st: 0, dl: 60, abx: 8, kids: 3, eat: 1, d: ["A superbug has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Antibiotics fall from the sky and stay put. If one touches the bug, it evolves (red last-line: twice). Merge next to them to bin them.", "A grumpy kraken has moved in. Merge next to it to hurt it and shove it. Pin it against a wall for double damage. Sponges fall from the sky and stay put. If one touches the kraken, it grows (red mega sponges: twice). Merge next to them to bin them."] },
     { n: ["Cardiology", "The current"], lv: 7, dl: 50, mut: "flow", set: "easter" },
     { n: ["Space medicine", "Moon pool"], lv: 7, dl: 50, sp: "micro" },
     { n: ["Blood bank", "Potluck"], lv: 7, dl: 48, sp: "blood" },
     { n: ["ICU", "Storm deck"], lv: 8, dl: 70, mut: "quake", set: "xmas" },
-    { n: ["The final round", "The deep"], boss: 16, st: 1, dl: 80, abx: 6, kids: 4, eat: 2, mut: "heavy", d: ["It's back as MRSA, on a heavy day. More last-line antibiotics fall, and each near it turns it into something worse: VRE, then CRE.", "The kraken is back, crosser, on a heavy day. More mega sponges fall, and each near it makes it bigger and angrier."] },
+    { n: ["The final round", "The deep"], boss: 22, st: 1, dl: 80, abx: 6, kids: 4, eat: 2, mut: "heavy", d: ["It's back as MRSA, on a heavy day. More last-line antibiotics fall, and each near it turns it into something worse: VRE, then CRE.", "The kraken is back, crosser, on a heavy day. More mega sponges fall, and each near it makes it bigger and angrier."] },
     // 28 Nov 2026: wards 11-20, two twists at once, and new ward types (flip, mini, low line, timer)
     { n: ["Upside down", "Topsy-turvy"], lv: 8, dl: 60, flip: true, d: ["Everything’s flipped. Microbes are huge and the brain is tiny, so every merge frees up room.", "Everything’s flipped. Plankton are huge and whales are tiny, so every merge frees up room."] },
     { n: ["Emergency", "Shipwreck cove"], lv: 7, dl: 50, mut: ["bouncy", "narrow"] },
@@ -1128,7 +1129,7 @@
     ctx.fillStyle = feverS > 0 ? "hsl(" + (quiet() ? 45 : 40 + 15 * Math.sin(now / 90)) + ",95%,55%)" : "#D9415E"; ctx.fillRect(0, 0, W * fr, 5);
     if (feverS > 0) { // gold sparkle border
       ctx.lineWidth = 6; ctx.strokeStyle = "rgba(245,200,66,.85)"; ctx.setLineDash([14, 8]); ctx.lineDashOffset = quiet() ? 0 : -now / 25; ctx.strokeRect(3, 3, W - 6, H - 6); ctx.setLineDash([]);
-      ctx.fillStyle = "#B8860B"; ctx.font = "800 15px Poppins,system-ui,sans-serif"; ctx.textAlign = "right"; ctx.fillText("FEVER ×2 · " + Math.ceil(feverS / 60) + "s", W - 12, 24);
+      ctx.fillStyle = "#B8860B"; ctx.font = "800 15px Poppins,system-ui,sans-serif"; ctx.textAlign = "right"; ctx.fillText("FEVER ×2 · " + Math.ceil(feverS / 60) + "s", W - 12, LINE + 20);
       if (!quiet() && Math.random() < 0.35) { var e = Math.random() * 4 | 0, px = e < 2 ? Math.random() * W : (e === 2 ? 4 : W - 4), py = e < 2 ? (e ? H - 4 : 4) : Math.random() * H; parts.push({ k: "s", x: px, y: py, vx: (Math.random() - 0.5), vy: (Math.random() - 0.5), g: 0, t: 0, max: 500, c: "#F5C842", sz: 3 + Math.random() * 3 }); }
     }
     ctx.restore();
@@ -1766,7 +1767,7 @@
     var o = overlay("mrg-ward-ov", '<div class="mrg-help-card mrg-mm" role="dialog" aria-modal="true" aria-labelledby="mrg-wd-h"><p class="mrg-mm-note">' + (NORMIE ? "Dive site " : "Ward ") + (i + 1) + " of " + WARDS.length + '</p><h2 id="mrg-wd-h">' + esc(wn(w)) + "</h2>" +
       "<p><b>Goal:</b> " + esc(wardGoal(w)) + (w.boss ? " (" + w.boss + " hits)" : "") + "</p>" + (d0 ? "<p>" + esc(d0) + "</p>" : "") + (tw ? "<p><b>Twist:</b> " + esc(tw) + "</p>" : "<p><b>Twist:</b> none. Enjoy it.</p>") +
       '<button type="button" class="mrg-help-go" data-close>Start</button></div>');
-    try { if (desk()) root.scrollIntoView({ behavior: "smooth", block: "start" }); else focusBoard(); } catch (e) {}
+    try { if (desk()) { var rt = root.getBoundingClientRect().top, hb0 = document.querySelector("header.bar, .bar"), hh0 = hb0 ? hb0.getBoundingClientRect().height : 0; if (rt < hh0 + 4 || rt > window.innerHeight * 0.4) window.scrollTo({ top: Math.max(0, (window.pageYOffset || 0) + rt - hh0 - 12), behavior: "smooth" }); } else focusBoard(); } catch (e) {}
     var sb = o.querySelector("[data-close]"); autoGo(sb, "Start", function () { if (document.body.contains(o)) sb.click(); });
     return o;
   }
