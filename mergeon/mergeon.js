@@ -12,7 +12,7 @@
    (brnd groups, qrnd quirks, drnd drift, hrnd hidden finds, xrnd drain); nothing new draws from rnd. */
 (function () {
   "use strict";
-  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "51";
+  var script = document.currentScript, BASE = new URL(".", script.src).href, BUILD = "52";
   var root = document.getElementById("mrg");
   if (!document.querySelector("link[data-mrg]")) {
     var l = document.createElement("link"); l.rel = "stylesheet"; l.href = BASE + "mergeon.css?v=" + BUILD; l.setAttribute("data-mrg", ""); document.head.appendChild(l);
@@ -571,11 +571,12 @@
       madeN[n] = (madeN[n] || 0) + 1; nMerge++; if (!big) learnFact(n); if (mut("slowmo")) slowN = 24;
       hidMerge(x, y, n);
       if (BOSS) { kidHit(x, y, n); abxHit(x, y, n); bossHit(x, y, n); vaxEarn(n); }
-      burst(x, y, L); floatTxt(x, y - 12, "+" + pts);
+      burst(x, y, L); chainFloat(x, y, pts, chain);
       if (!big) sfx("pop", L);
       if (L >= 7) { shakeBoard(L >= 9 ? 2 : 1); buzz(L >= 9 ? [30, 40, 30] : 25); }
-      if (chain > 1) { var bonus = NEW ? pts * (chain - 1) * (mut("double") ? 2 : 1) : 0; score += bonus; TL.combo += bonus; combo(chain, bonus); if (JUICE) juiceChain(x, y, chain); }
-      if (JUICE && feverS > 0) { var fx = pts + (chain > 1 && NEW ? pts * (chain - 1) * (mut("double") ? 2 : 1) : 0); score += fx; TL.fever += fx; } // Fever doubles this merge's points
+      var cmul = Math.min(chain - 1, 4) * 0.5; // 28 Nov 2026: chains were ~86% of a daily score
+      if (chain > 1) { var bonus = NEW ? Math.round(pts * cmul * (mut("double") ? 2 : 1)) : 0; score += bonus; TL.combo += bonus; combo(chain, bonus); if (JUICE) juiceChain(x, y, chain); }
+      if (JUICE && feverS > 0) { var fx = pts + (chain > 1 && NEW ? Math.round(pts * cmul * (mut("double") ? 2 : 1)) : 0); score += fx; TL.fever += fx; } // Fever doubles this merge's points
       if (JUICE && chain >= 3 && feverS <= 0) { meter = Math.min(METER, meter + 1); if (meter >= METER) startFever(); }
     });
     if (merges.length) { hud(); goalTick(false); }
@@ -1002,7 +1003,7 @@
     else if (lv === "rx") { factOn = true; f.innerHTML = pic(CURE, 32) + "<div><b>" + esc(RXK.first) + "</b><span>" + esc(RXK.fact) + "</span></div>"; }
     else { var tx = lv === WILD ? K.WFACT : lv === CURE ? OUTK.fact : K.FACTS[lv]; factOn = true; f.innerHTML = pic(lv, 32) + "<div><b>New: " + esc(info(lv).n) + (featUI() ? " 📖" : "") + "</b><span>" + esc(tx) + "</span></div>"; }
     f.hidden = false; f.classList.remove("on"); void f.offsetWidth; f.classList.add("on"); sfx("chime");
-    factT = setTimeout(nextFact, 3000);
+    factT = setTimeout(nextFact, 2200);
   }
   function factOnce(k, obj) { if (coll[k]) return; coll[k] = 1; put(CKEY, coll); factQ.push(obj || k); if (!factOn) nextFact(); } // once per device
   $("fact").addEventListener("pointerdown", function (e) { e.stopPropagation(); e.preventDefault(); nextFact(); });
@@ -1111,8 +1112,14 @@
   var LEARN = false, learnT, learnI = {};
   // items 12-15 (from 16 Nov 2026): combo meter + Fever, rising combo notes, clutch saves, end-of-game tally. Cosmetic randomness only (particles).
   var JUICE = false, METER = 8, FEVER_STEPS = 600, meter = 0, feverS = 0, dangerT = 0, lastSave = -1e9, saves = 0, TL = {};
-  function juiceChain(x, y, n) { // "×n" at the merge point, growing with the chain; shake and sparkle escalate (none when reduced motion)
-    parts.push({ k: "t", x: x, y: y - 26, vx: 0, vy: -0.9, g: 0, t: 0, max: 900, c: "#D9415E", txt: "×" + n, big: Math.min(34, 18 + n * 3), gold: true });
+  var chainP = null, chainSum = 0;
+  function chainFloat(x, y, pts, n) { // a chain keeps one label that follows the latest merge: "×5 +320"
+    if (n > 1 && chainP && chainP.t < chainP.max) { chainSum += pts; chainP.txt = "×" + n + "  +" + fmt(chainSum); chainP.x = x; chainP.y = y - 26; chainP.t = 0; chainP.big = Math.min(30, 16 + n * 2); return; }
+    chainSum = pts; chainP = { k: "t", x: x, y: y - 12, vx: 0, vy: -0.6, g: 0, t: 0, max: 900, c: "#3A2A55", txt: "+" + pts }; parts.push(chainP);
+    if (n > 1) { chainP.c = "#D9415E"; chainP.gold = true; }
+  }
+  function juiceChain(x, y, n) { // shake and sparkle escalate with the chain (none when reduced motion); the label is chainFloat's
+    if (chainP) { chainP.c = "#D9415E"; chainP.gold = true; }
     burst(x, y, Math.min(10, 2 + n * 1.5)); if (n >= 3) shakeBoard(n >= 5 ? 2 : 1);
   }
   function startFever() { feverS = FEVER_STEPS; meter = METER; toastBig("FEVER! ×2"); sfx("big"); buzz([20, 30, 20, 30, 20]); }
@@ -1709,10 +1716,13 @@
     ctx.beginPath(); if (b.st >= 2 && !hurt) { ctx.moveTo(-16, 20); ctx.lineTo(-8, 14); ctx.lineTo(0, 20); ctx.lineTo(8, 14); ctx.lineTo(16, 20); } else { ctx.moveTo(-16, 18); ctx.quadraticCurveTo(0, hurt ? 26 : 8, 16, 18); } ctx.stroke();
     ctx.restore();
     // name + HP bar
-    var w = 110, f = b.hp / b.max; ctx.save(); ctx.fillStyle = "rgba(42,30,61,.75)"; ctx.fillRect(x - w / 2 - 2, y - R0 - 26, w + 4, 12);
-    ctx.fillStyle = f > 0.5 ? "#E65C86" : "#F5A623"; ctx.fillRect(x - w / 2, y - R0 - 24, w * f, 8);
-    ctx.font = "700 12px Poppins,system-ui,sans-serif"; ctx.textAlign = "center"; ctx.lineWidth = 3; ctx.strokeStyle = "rgba(255,255,255,.9)"; ctx.fillStyle = "#2A1E3D";
-    ctx.strokeText(BSTAGE[b.st].n, x, y - R0 - 32); ctx.fillText(BSTAGE[b.st].n, x, y - R0 - 32); ctx.restore();
+    var w = 120, f = b.hp / b.max, hx = 12, hy = LINE + 10; ctx.save();
+    ctx.font = "700 12px Poppins,system-ui,sans-serif"; ctx.textAlign = "left"; ctx.textBaseline = "middle"; ctx.lineWidth = 3; ctx.strokeStyle = "rgba(255,255,255,.9)"; ctx.fillStyle = BSTAGE[b.st].c;
+    var lab = (NORMIE ? "🐙 " : "🦠 ") + BSTAGE[b.st].n; ctx.strokeText(lab, hx, hy + 2); ctx.fillText(lab, hx, hy + 2);
+    var lw = ctx.measureText(lab).width + 8;
+    ctx.fillStyle = "rgba(42,30,61,.75)"; ctx.fillRect(hx + lw - 2, hy - 4, w + 4, 12);
+    ctx.fillStyle = f > 0.5 ? "#E65C86" : "#F5A623"; ctx.fillRect(hx + lw, hy - 2, w * f, 8);
+    ctx.fillStyle = "#2A1E3D"; ctx.strokeText(b.hp + "/" + b.max, hx + lw + w + 10, hy + 2); ctx.fillText(b.hp + "/" + b.max, hx + lw + w + 10, hy + 2); ctx.restore();
   }
   // ---------- ward win / lose, and the ward screens ----------
   // 28 Nov 2026: ward intro starts the game, and a cleared ward moves to the next one, after a 5 s countdown on the button
