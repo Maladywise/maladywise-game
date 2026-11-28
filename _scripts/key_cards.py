@@ -376,11 +376,11 @@ def archives(path):
 
 
 CARDS = [
-    hub("home", "/", "18 free daily medical puzzles", "Curiosity is contagious",
+    hub("home", "/", "Free daily medical puzzles", "Curiosity is contagious",
         "Diagnose, read the ECG, name the scan, crack the cryptic.",
         ["mascots/dx.svg", "mascots/wordemic.svg", "mascots/comorbix.svg", "mascots/opacitis.svg?v=2", "mascots/arrhythmix.svg",
          "mascots/triviosis.svg", "mascots/cryptogenic.svg", "mascots/panelysis.svg", "mascots/zebritis.svg"],
-        file="assets/share.png", foot="Plus a Normie mode for everyone else", big=True,
+        file="assets/share.png", foot="New puzzles every day. Always free.", big=True,
         urls=["/", "/about/", "/contact/", "/privacy/", "/disclaimer/", "/rare-conditions/"]),
     hub("medical-games", "/medical-games/", "Medical games and quizzes", "All the puzzles",
         "Daily puzzles, practice quizzes and arcade games.",
